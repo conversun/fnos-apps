@@ -4,7 +4,7 @@
         {
             "title": "qBittorrent",
             "desc": "qBittorrent Web UI",
-            "icon": "images/qbittorrent-{0}.png",
+            "icon": "images/{0}.png",
             "type": "url",
             "port": "8085",
             "protocol": "http",
