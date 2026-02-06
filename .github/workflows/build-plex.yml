@@ -36,7 +36,7 @@ jobs:
             VERSION="${{ github.event.inputs.version }}"
             REVISION="${{ github.event.inputs.revision }}"
           else
-            VERSION=$(curl -s https://plex.tv/api/downloads/5.json | jq -r '.computer.Linux.releases[0].version')
+            VERSION=$(curl -s https://plex.tv/api/downloads/5.json | jq -r '.computer.Linux.version' | cut -d'-' -f1)
             REVISION=""
           fi
 
