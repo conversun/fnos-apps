@@ -1,5 +1,8 @@
 name: Build qBittorrent fnOS Package
 
+permissions:
+  contents: write
+
 on:
   push:
     paths:
@@ -10,92 +13,142 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Version to build'
-        required: true
-      revision:
-        description: 'Revision number'
+        description: 'Version (leave empty for latest)'
         required: false
-
-permissions:
-  contents: write
+        default: ''
+      revision:
+        description: 'Revision suffix (e.g., r2 for re-release, leave empty for auto)'
+        required: false
+        default: ''
 
 jobs:
   check-version:
     runs-on: ubuntu-latest
     outputs:
       version: ${{ steps.version.outputs.version }}
-      release_tag: ${{ steps.version.outputs.release_tag }}
-      revision: ${{ steps.version.outputs.revision }}
-      should_build: ${{ steps.version.outputs.should_build }}
+      release_tag: ${{ steps.check.outputs.release_tag }}
+      upstream_tag: ${{ steps.version.outputs.upstream_tag }}
+      should_build: ${{ steps.check.outputs.should_build }}
+    
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Get latest qBittorrent version
+      - name: Get Latest Version
         id: version
         run: |
+          UPSTREAM_TAG=$(curl -sL "https://api.github.com/repos/userdocs/qbittorrent-nox-static/releases/latest" | \
+            grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+          
           if [ -n "${{ github.event.inputs.version }}" ]; then
             VERSION="${{ github.event.inputs.version }}"
-            REVISION="${{ github.event.inputs.revision }}"
-            RELEASE_TAG=$(curl -s https://api.github.com/repos/userdocs/qbittorrent-nox-static/releases | jq -r "[.[].tag_name | select(startswith(\"release-${VERSION}\"))][0]")
           else
-            RELEASE_TAG=$(curl -s https://api.github.com/repos/userdocs/qbittorrent-nox-static/releases/latest | jq -r '.tag_name')
-            VERSION=$(echo "$RELEASE_TAG" | sed -n 's/^release-\([^_]*\).*/\1/p')
-            REVISION=""
+            VERSION=$(echo "$UPSTREAM_TAG" | sed -E 's/release-([0-9]+\.[0-9]+\.[0-9]+)_.*/\1/')
           fi
+          
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "upstream_tag=$UPSTREAM_TAG" >> $GITHUB_OUTPUT
+          echo "Detected version: $VERSION"
+          echo "Upstream tag: $UPSTREAM_TAG"
 
-          TAG_PREFIX="qbittorrent/v${VERSION}"
-          EXISTING_TAG=$(git tag -l "${TAG_PREFIX}*" | sort -V | tail -1)
-
-          if [ -z "$EXISTING_TAG" ]; then
-            FINAL_TAG="${TAG_PREFIX}"
-            SHOULD_BUILD="true"
+      - name: Check Release and Determine Tag
+        id: check
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          REVISION="${{ github.event.inputs.revision }}"
+          
+          if [ -n "$REVISION" ]; then
+            RELEASE_TAG="qbittorrent/v${VERSION}-${REVISION}"
+            echo "Manual revision specified: $RELEASE_TAG"
           else
-            REVISION_NUM=$(echo "$EXISTING_TAG" | grep -oP '(?<=-r)\d+$' || echo "0")
-            NEW_REVISION=$((REVISION_NUM + 1))
-            FINAL_TAG="${TAG_PREFIX}-r${NEW_REVISION}"
-            SHOULD_BUILD="true"
+            if gh release view "qbittorrent/v${VERSION}" &>/dev/null; then
+              HIGHEST_REV=$(gh release list --limit 100 | grep "qbittorrent/v${VERSION}" | \
+                sed -n 's/.*qbittorrent\/v'"${VERSION}"'-r\([0-9]*\).*/\1/p' | sort -n | tail -1)
+              
+              if [ -n "$HIGHEST_REV" ]; then
+                NEXT_REV=$((HIGHEST_REV + 1))
+                RELEASE_TAG="qbittorrent/v${VERSION}-r${NEXT_REV}"
+              else
+                RELEASE_TAG="qbittorrent/v${VERSION}-r2"
+              fi
+              echo "Version exists, using revision: $RELEASE_TAG"
+            else
+              RELEASE_TAG="qbittorrent/v${VERSION}"
+              echo "New version: $RELEASE_TAG"
+            fi
           fi
-
-          echo "version=${VERSION}" >> $GITHUB_OUTPUT
-          echo "release_tag=${RELEASE_TAG}" >> $GITHUB_OUTPUT
-          echo "revision=${FINAL_TAG}" >> $GITHUB_OUTPUT
-          echo "should_build=${SHOULD_BUILD}" >> $GITHUB_OUTPUT
+          
+          if gh release view "$RELEASE_TAG" &>/dev/null; then
+            echo "should_build=false" >> $GITHUB_OUTPUT
+            echo "Release $RELEASE_TAG already exists, skipping"
+          else
+            echo "should_build=true" >> $GITHUB_OUTPUT
+          fi
+          
+          echo "release_tag=$RELEASE_TAG" >> $GITHUB_OUTPUT
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   build:
     needs: check-version
     if: needs.check-version.outputs.should_build == 'true'
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: true
       matrix:
+        arch: [x86, arm]
         include:
           - arch: x86
-            asset_prefix: x86_64
+            binary_prefix: x86_64
             manifest_platform: x86
           - arch: arm
-            asset_prefix: aarch64
+            binary_prefix: aarch64
             manifest_platform: arm
+    
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Download qBittorrent binary
+      - name: Build Package
         run: |
-          RELEASE_TAG="${{ needs.check-version.outputs.release_tag }}"
-          wget -O qbittorrent-nox "https://github.com/userdocs/qbittorrent-nox-static/releases/download/${RELEASE_TAG}/${{ matrix.asset_prefix }}-qbittorrent-nox"
+          VERSION="${{ needs.check-version.outputs.version }}"
+          UPSTREAM_TAG="${{ needs.check-version.outputs.upstream_tag }}"
+          ARCH="${{ matrix.arch }}"
+          BINARY_PREFIX="${{ matrix.binary_prefix }}"
+          MANIFEST_PLATFORM="${{ matrix.manifest_platform }}"
+          
+          echo "==> Building for $ARCH (binary prefix: $BINARY_PREFIX)"
+          
+          DOWNLOAD_URL="https://github.com/userdocs/qbittorrent-nox-static/releases/download/${UPSTREAM_TAG}/${BINARY_PREFIX}-qbittorrent-nox"
+          
+          echo "==> Downloading qbittorrent-nox $VERSION ($ARCH)"
+          curl -L -o qbittorrent-nox "$DOWNLOAD_URL"
           chmod +x qbittorrent-nox
-
-      - name: Download GeoDB
-        run: |
-          mkdir -p geodata
-          YEAR_MONTH=$(date +%Y%m)
-          wget -O geodata/geoip.dat "https://github.com/Loyalsoldier/geoip/releases/download/${YEAR_MONTH}/geoip.dat" || {
-            YEAR_MONTH=$(date -d "1 month ago" +%Y%m 2>/dev/null || date -v-1m +%Y%m)
-            wget -O geodata/geoip.dat "https://github.com/Loyalsoldier/geoip/releases/download/${YEAR_MONTH}/geoip.dat"
-          }
-
-      - name: Create qBittorrent config
-        run: |
-          mkdir -p qb_config
-          cat > qb_config/qBittorrent.conf << 'EOF'
+          ls -lh qbittorrent-nox
+          
+          echo "==> Downloading GeoDB"
+          YEAR_MONTH=$(date +%Y-%m)
+          GEODB_URL="https://download.db-ip.com/free/dbip-country-lite-${YEAR_MONTH}.mmdb.gz"
+          mkdir -p GeoDB
+          if curl -L -f -o GeoDB/dbip-country-lite.mmdb.gz "$GEODB_URL"; then
+            gunzip -f GeoDB/dbip-country-lite.mmdb.gz
+            ls -lh GeoDB/
+          else
+            echo "Current month GeoDB not available, trying previous month..."
+            YEAR_MONTH=$(date -d "1 month ago" +%Y-%m)
+            GEODB_URL="https://download.db-ip.com/free/dbip-country-lite-${YEAR_MONTH}.mmdb.gz"
+            curl -L -f -o GeoDB/dbip-country-lite.mmdb.gz "$GEODB_URL" && gunzip -f GeoDB/dbip-country-lite.mmdb.gz || echo "GeoDB download failed, skipping"
+          fi
+          
+          echo "==> Building app.tgz"
+          mkdir -p app_root/bin app_root/ui/images app_root/var/qBittorrent/config app_root/var/qBittorrent/data/GeoDB
+          
+          cp qbittorrent-nox app_root/bin/qbittorrent-nox
+          chmod +x app_root/bin/qbittorrent-nox
+          
+          cp -a apps/qbittorrent/fnos/ui/* app_root/ui/ 2>/dev/null || true
+          cp -a GeoDB/* app_root/var/qBittorrent/data/GeoDB/ 2>/dev/null || true
+          cat << 'QBCONF' | sed 's/^ *//' > app_root/var/qBittorrent/config/qBittorrent.conf
           [LegalNotice]
           Accepted=true
 
@@ -118,61 +171,90 @@ jobs:
           WebUI\CSRFProtection=false
           WebUI\ClickjackingProtection=false
           WebUI\HostHeaderValidation=false
-          EOF
+          QBCONF
+          
+          cd app_root && tar -czf ../app.tgz . && cd ..
+          ls -lh app.tgz
+          
+          echo "==> Building fpk"
+          CHECKSUM=$(md5sum app.tgz | cut -d' ' -f1)
+          
+          cp apps/qbittorrent/fnos/manifest apps/qbittorrent/fnos/manifest.bak
+          sed -i "s/^version.*/version         = ${VERSION}/" apps/qbittorrent/fnos/manifest
+          sed -i "s/^checksum.*/checksum        = ${CHECKSUM}/" apps/qbittorrent/fnos/manifest
+          
+          if ! grep -q "^platform" apps/qbittorrent/fnos/manifest; then
+            echo "platform        = ${MANIFEST_PLATFORM}" >> apps/qbittorrent/fnos/manifest
+          else
+            sed -i "s/^platform.*/platform        = ${MANIFEST_PLATFORM}/" apps/qbittorrent/fnos/manifest
+          fi
+          
+          mkdir -p package
+          mv app.tgz package/
+          cp -a shared/cmd package/
+          [ -d apps/qbittorrent/fnos/cmd ] && cp -a apps/qbittorrent/fnos/cmd/* package/cmd/
+          cp -a apps/qbittorrent/fnos/config package/
+          [ -d shared/wizard ] && cp -a shared/wizard package/
+          [ -d apps/qbittorrent/fnos/wizard ] && cp -a apps/qbittorrent/fnos/wizard package/
+          cp apps/qbittorrent/fnos/*.sc package/ 2>/dev/null || true
+          cp apps/qbittorrent/fnos/ICON*.PNG package/ 2>/dev/null || true
+          [ -d apps/qbittorrent/fnos/ui ] && cp -a apps/qbittorrent/fnos/ui package/
+          cp apps/qbittorrent/fnos/manifest package/
+          
+          cd package && tar -czf ../qBittorrent_${VERSION}_${ARCH}.fpk * && cd ..
+          
+          echo "==> Done"
+          ls -lh qBittorrent_${VERSION}_${ARCH}.fpk
 
-      - name: Build app_root
-        run: |
-          mkdir -p app_root/bin
-          cp qbittorrent-nox app_root/bin/
-          mkdir -p app_root/geodata
-          cp -r geodata/* app_root/geodata/
-          mkdir -p app_root/config
-          cp qb_config/qBittorrent.conf app_root/config/
-
-      - name: Create app.tgz
-        run: |
-          tar -czf app.tgz -C app_root .
-
-      - name: Build FPK
-        run: |
-          ./scripts/build-fpk.sh apps/qbittorrent app.tgz "${{ needs.check-version.outputs.version }}" "${{ matrix.manifest_platform }}"
-
-      - name: Upload artifact
+      - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: qbittorrent-fpk-${{ matrix.arch }}
-          path: qBittorrent_*.fpk
+          name: fpk-${{ matrix.arch }}
+          path: qBittorrent_${{ needs.check-version.outputs.version }}_${{ matrix.arch }}.fpk
+          retention-days: 1
 
   release:
     needs: [check-version, build]
     runs-on: ubuntu-latest
+    
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Download artifacts
+      - name: Download All Artifacts
         uses: actions/download-artifact@v4
         with:
           path: artifacts
 
-      - name: Create release
+      - name: Create Release
         run: |
           VERSION="${{ needs.check-version.outputs.version }}"
-          TAG="${{ needs.check-version.outputs.revision }}"
+          UPSTREAM_TAG="${{ needs.check-version.outputs.upstream_tag }}"
+          RELEASE_TAG="${{ needs.check-version.outputs.release_tag }}"
+          
+          echo "==> Creating release $RELEASE_TAG"
+          ls -la artifacts/*/
+          
+          if [[ "$RELEASE_TAG" == *"-r"* ]]; then
+            REVISION_NOTE="
+          - **打包修订**: ${RELEASE_TAG##*-}"
+          else
+            REVISION_NOTE=""
+          fi
+          
+          gh release create "$RELEASE_TAG" \
+            --title "qBittorrent ${VERSION} for fnOS" \
+            --notes "自动构建的 fnOS 安装包
 
-          RELEASE_NOTES="qBittorrent fnOS Package v${VERSION}
+          - 基于 [qbittorrent-nox-static ${UPSTREAM_TAG}](https://github.com/userdocs/qbittorrent-nox-static/releases/tag/${UPSTREAM_TAG})
+          - 平台: fnOS
+          - 默认用户: admin
+          - 默认密码: adminadmin (请登录后修改)${REVISION_NOTE}
 
-          Default credentials:
-          - Username: admin
-          - Password: adminadmin
-
-          Mirror links:
-          - x86: https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${TAG}/qBittorrent_${VERSION}_x86.fpk
-          - ARM: https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${TAG}/qBittorrent_${VERSION}_arm.fpk"
-
-          gh release create "$TAG" \
-            --title "qBittorrent v${VERSION}" \
-            --notes "$RELEASE_NOTES" \
-            artifacts/qbittorrent-fpk-x86/*.fpk \
-            artifacts/qbittorrent-fpk-arm/*.fpk
+          **国内镜像**:
+          - [qBittorrent_${VERSION}_x86.fpk](https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${RELEASE_TAG}/qBittorrent_${VERSION}_x86.fpk)
+          - [qBittorrent_${VERSION}_arm.fpk](https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${RELEASE_TAG}/qBittorrent_${VERSION}_arm.fpk)" \
+            artifacts/fpk-x86/*.fpk \
+            artifacts/fpk-arm/*.fpk
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
