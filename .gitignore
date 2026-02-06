@@ -10,3 +10,4 @@ apps/*/qBittorrent_*
 
 # macOS
 .DS_Store
+icons/**
