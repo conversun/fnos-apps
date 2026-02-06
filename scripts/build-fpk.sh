@@ -80,7 +80,12 @@ cp "$APP_DIR"/fnos/*.sc "$PKG_DIR/" 2>/dev/null || true
 # 7. Copy icons
 cp "$APP_DIR"/fnos/ICON*.PNG "$PKG_DIR/" 2>/dev/null || true
 
-# 8. Build manifest
+# 8. Copy ui/
+if [ -d "$APP_DIR/fnos/ui" ]; then
+    cp -a "$APP_DIR/fnos/ui" "$PKG_DIR/"
+fi
+
+# 9. Build manifest
 cp "$APP_DIR/fnos/manifest" "$PKG_DIR/manifest"
 
 if [ -n "$VERSION" ]; then

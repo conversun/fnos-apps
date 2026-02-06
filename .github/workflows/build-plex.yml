@@ -136,6 +136,7 @@ jobs:
           
           cp apps/plex/fnos/bin/plex-server app_root/bin/
           chmod +x app_root/bin/plex-server
+          cp -a apps/plex/fnos/ui/* app_root/ui/ 2>/dev/null || true
           
           cd app_root && tar -czf ../app.tgz . && cd ..
           ls -lh app.tgz
