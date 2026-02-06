@@ -1,4 +1,4 @@
-appname         = nginx
+appname         = nginxserver
 version         = 1.28.2
 display_name    = Nginx
 platform        = x86
@@ -7,7 +7,7 @@ maintainer_url  = https://nginx.org
 distributor     = conversun
 distributor_url = https://github.com/conversun/fnos-apps
 desktop_uidir   = ui
-desktop_applaunchname = nginx.Application
+desktop_applaunchname = nginxserver.Application
 service_port    = 8888
 desc            = Nginx是一个高性能的HTTP和反向代理服务器，也是一个IMAP/POP3/SMTP代理服务器。
 source          = thirdparty

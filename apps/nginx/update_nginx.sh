@@ -154,7 +154,7 @@ update_manifest() {
 }
 
 build_fpk() {
-    local fpk_name="nginx_${NGINX_VERSION}_${ARCH}.fpk"
+    local fpk_name="nginxserver_${NGINX_VERSION}_${ARCH}.fpk"
     info "打包 $fpk_name..."
     
     local shared_dir="$SCRIPT_DIR/../../shared"

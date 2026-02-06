@@ -1,4 +1,4 @@
-[nginx]
+[nginxserver]
 title="Nginx"
 desc="Nginx Web Server"
 port_forward="yes"

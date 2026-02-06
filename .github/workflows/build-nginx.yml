@@ -176,16 +176,16 @@ jobs:
             sed -i "s/^platform.*/platform        = ${MANIFEST_PLATFORM}/" package/manifest
           fi
           
-          cd package && tar -czf ../nginx_${VERSION}_${ARCH}.fpk * && cd ..
+          cd package && tar -czf ../nginxserver_${VERSION}_${ARCH}.fpk * && cd ..
           
           echo "==> 完成"
-          ls -lh nginx_${VERSION}_${ARCH}.fpk
+          ls -lh nginxserver_${VERSION}_${ARCH}.fpk
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
           name: fpk-${{ matrix.arch }}
-          path: nginx_${{ needs.check-version.outputs.version }}_${{ matrix.arch }}.fpk
+          path: nginxserver_${{ needs.check-version.outputs.version }}_${{ matrix.arch }}.fpk
           retention-days: 1
 
   release:
@@ -224,8 +224,8 @@ jobs:
           - 平台: fnOS${REVISION_NOTE}
 
           **国内镜像**:
-          - [nginx_${VERSION}_x86.fpk](https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${RELEASE_TAG}/nginx_${VERSION}_x86.fpk)
-          - [nginx_${VERSION}_arm.fpk](https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${RELEASE_TAG}/nginx_${VERSION}_arm.fpk)" \
+          - [nginxserver_${VERSION}_x86.fpk](https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${RELEASE_TAG}/nginxserver_${VERSION}_x86.fpk)
+          - [nginxserver_${VERSION}_arm.fpk](https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${RELEASE_TAG}/nginxserver_${VERSION}_arm.fpk)" \
             artifacts/fpk-x86/*.fpk \
             artifacts/fpk-arm/*.fpk
         env:

@@ -1,14 +1,14 @@
 {
     "port-config": {
-        "protocol-file": "nginx.sc"
+        "protocol-file": "nginxserver.sc"
     },
     "data-share": {
         "shares": [
             {
-                "name": "nginx-web",
+                "name": "nginxserver",
                 "permission": {
                     "rw": [
-                        "nginx-web"
+                        "nginxserver"
                     ]
                 }
             }

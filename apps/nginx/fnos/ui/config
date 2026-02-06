@@ -1,6 +1,6 @@
 {
     ".url": {
-        "nginx.Application": 
+        "nginxserver.Application": 
         {
             "title": "Nginx",
             "desc": "Nginx Web Server",
