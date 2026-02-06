@@ -143,6 +143,7 @@ jobs:
           chmod +x "$dst/sbin/nginx"
           
           cp -a extracted/etc/nginx/* "$dst/conf/" 2>/dev/null || true
+          find "$dst/conf/" -type l -delete
           cp -a extracted/usr/share/nginx/html/* "$dst/html/" 2>/dev/null || true
           [ -d extracted/usr/lib ] && cp -a extracted/usr/lib/* "$dst/lib/" 2>/dev/null || true
           

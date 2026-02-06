@@ -11,4 +11,4 @@ desktop_applaunchname = nginxserver.Application
 service_port    = 8888
 desc            = Nginx是一个高性能的HTTP和反向代理服务器，也是一个IMAP/POP3/SMTP代理服务器。
 source          = thirdparty
-checksum        = 194b3c6d30033828d73c91b04e208bd7
+checksum        = e1ba41557241c43fbbd610e88f00a068

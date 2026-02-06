@@ -116,6 +116,7 @@ build_app_tgz() {
     
     # Copy configuration files (mime.types, etc.)
     cp -a "$src/etc/nginx"/* "$dst/conf/" 2>/dev/null || true
+    find "$dst/conf/" -type l -delete
     
     # Copy default html pages
     cp -a "$src/usr/share/nginx/html"/* "$dst/html/" 2>/dev/null || true
