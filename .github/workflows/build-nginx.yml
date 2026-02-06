@@ -166,7 +166,6 @@ jobs:
           cp apps/nginx/fnos/*.sc package/ 2>/dev/null || true
           cp apps/nginx/fnos/ICON*.PNG package/ 2>/dev/null || true
           [ -d apps/nginx/fnos/ui ] && cp -a apps/nginx/fnos/ui package/
-          [ -d apps/nginx/fnos/bin ] && cp -a apps/nginx/fnos/bin package/
           
           sed "s/^version.*/version         = ${VERSION}/" apps/nginx/fnos/manifest > package/manifest
           sed -i "s/^checksum.*/checksum        = ${CHECKSUM}/" package/manifest
