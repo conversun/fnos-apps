@@ -8,11 +8,11 @@ TEE="/usr/bin/tee -a"
 RSYNC="/bin/rsync -avh"
 TAR="/bin/tar"
 
-INST_ETC="${TRIM_PKGETC}"
+INST_ETC="/var/apps/${TRIM_APPNAME}/etc"
 INST_VARIABLES="${INST_ETC}/installer-variables"
 INST_LOG="/var/log/apps/${TRIM_APPNAME}.log"
 
-FWPORTS_FILE="${TRIM_PKGETC}/${TRIM_APPNAME}.sc"
+FWPORTS_FILE="/var/apps/${TRIM_APPNAME}/etc/${TRIM_APPNAME}.sc"
 SHARE_PATH="/var/apps/${TRIM_APPNAME}/shares/${TRIM_APPNAME}"
 
 LOG_FILE="${TRIM_PKGVAR}/${TRIM_APPNAME}.log"
@@ -30,9 +30,11 @@ DNAME="${TRIM_APPNAME}"
 
 SVC_NO_REDIRECT=""
 
-OUT="${LOG_FILE}"
+OUT=/dev/null
 if [ -n "${SVC_NO_REDIRECT}" ]; then
   OUT="/dev/null"
+else
+  OUT="${LOG_FILE}"
 fi
 
 validate_preinst()
@@ -80,7 +82,7 @@ check_docker()
 {
 	FILE_PATH="${TRIM_APPDEST}/app/docker-compose.yaml"
 	if [ -f "$FILE_PATH" ]; then
-		DOCKER_NAME=$(grep "container_name" "$FILE_PATH" | awk -F ':' '{print $2}' | xargs)
+		DOCKER_NAME=$(cat $FILE_PATH | grep "container_name" | awk -F ':' '{print $2}' | xargs)
 		echo "DOCKER_NAME is set to: $DOCKER_NAME"
 	fi
 }
@@ -106,12 +108,12 @@ call_func ()
     if type "${FUNC}" 2>/dev/null | grep -q 'function' 2>/dev/null; then
 		if [ -n "${LOG}" ]; then
 			install_log "Begin ${FUNC}"
-			eval "${FUNC}" 2>&1 | ${LOG}
+			eval ${FUNC} 2>&1 | ${LOG}
 			install_log "End ${FUNC}"
 		else
-			echo "Begin ${FUNC}" >> "${LOG_FILE}"
-			eval "${FUNC}"       >> "${LOG_FILE}"
-			echo "End ${FUNC}"   >> "${LOG_FILE}"
+			echo "Begin ${FUNC}" >> ${LOG_FILE}
+			eval ${FUNC}         >> ${LOG_FILE}
+			echo "End ${FUNC}"   >> ${LOG_FILE}
 		fi
     fi
 }
@@ -120,8 +122,8 @@ get_key_value()
 {
         CONFIG_FILE=$1
         KEY=$2
-        value=$(grep -F "${KEY}" "$CONFIG_FILE" | awk -F "=" '{print $2}' | tr -d ' ' | tr -d '"')
-        echo "$value"
+        value=$(cat $CONFIG_FILE | grep -F "${KEY}" | awk -F "=" '{print $2}' | tr -d ' ' | tr -d '"')
+        echo $value
 }
 
 log_step ()
@@ -131,10 +133,10 @@ log_step ()
 
 initialize_variables ()
 {
-    if [ -n "${USER}" ] && [ -z "${USER_DESC}" ]; then
+    if [ -n "${USER}" -a -z "${USER_DESC}" ]; then
         USER_DESC="User running ${TRIM_APPNAME}"
     fi
-    if [ -n "${GROUP}" ] && [ -z "${GROUP_DESC}" ]; then
+    if [ -n "${GROUP}" -a -z "${GROUP_DESC}" ]; then
         GROUP_DESC="${TRIM_APPNAME} Package Group"
     fi
     if [ -n "${SHARE_PATH}" ]; then
@@ -148,11 +150,11 @@ initialize_variables ()
 
 load_variables_from_file ()
 {
-   if [ -n "$1" ] && [ -r "$1" ]; then
+   if [ -n "$1" -a -r "$1" ]; then
       while read -r _line; do
-        if [ "$(echo "${_line}" | grep -v "^[[:space:]]*#")" != "" ]; then
-           _key="$(echo "${_line}" | cut --fields=1 --delimiter==)"
-           _value="$(echo "${_line}" | cut --fields=2- --delimiter==)"
+        if [ "$(echo ${_line} | grep -v ^[/s]*#)" != "" ]; then
+           _key="$(echo ${_line} | cut --fields=1 --delimiter==)"
+           _value="$(echo ${_line} | cut --fields=2- --delimiter==)"
            export "${_key}=${_value}"
         fi
       done < "$1"
@@ -165,22 +167,22 @@ save_wizard_variables ()
         $RM "${INST_VARIABLES}"
     fi
     if [ -n "${GROUP}" ]; then
-        echo "GROUP=${GROUP}" >> "${INST_VARIABLES}"
+        echo "GROUP=${GROUP}" >> ${INST_VARIABLES}
     fi
     if [ -n "${SHARE_PATH}" ]; then
-        echo "SHARE_PATH=${SHARE_PATH}" >> "${INST_VARIABLES}"
+        echo "SHARE_PATH=${SHARE_PATH}" >> ${INST_VARIABLES}
     fi
 }
 
 sync_var_folder () {
-    if [ -d "${TRIM_APPDEST}/var" ] && [ "$(ls -A "${TRIM_APPDEST}/var" 2>/dev/null)" ]; then
+    if [ -d ${TRIM_APPDEST}/var -a "$(ls -A ${TRIM_APPDEST}/var 2>/dev/null)" ]; then
         echo "Install files from var folder"
         echo "$RSYNC --ignore-existing --remove-source-files ${TRIM_APPDEST}/var/ ${TRIM_PKGVAR}"
-        $RSYNC --ignore-existing --remove-source-files "${TRIM_APPDEST}/var/" "${TRIM_PKGVAR}"
-        find "${TRIM_APPDEST}/var" -type f -exec sh -c 'x="{}"; mv "$x" "${x}.new"' \;
+        $RSYNC --ignore-existing --remove-source-files ${TRIM_APPDEST}/var/ ${TRIM_PKGVAR}
+        find ${TRIM_APPDEST}/var -type f -exec sh -c 'x="{}"; mv "$x" "${x}.new"' \;
         echo "$RSYNC --remove-source-files ${TRIM_APPDEST}/var/ ${TRIM_PKGVAR}"
-        $RSYNC --remove-source-files "${TRIM_APPDEST}/var/" "${TRIM_PKGVAR}"
-        $RM "${TRIM_APPDEST}/var"
+        $RSYNC --remove-source-files ${TRIM_APPDEST}/var/ ${TRIM_PKGVAR}
+        $RM ${TRIM_APPDEST}/var
     fi
 }
 
@@ -199,7 +201,7 @@ install_callback ()
     sync_var_folder
     call_func "service_postinst" install_log
     if [ -n "${LOG_FILE}" ]; then
-        echo "Installation log: ${INST_LOG}" >> "${LOG_FILE}"
+        echo "Installation log: ${INST_LOG}" >> ${LOG_FILE}
     fi
     exit 0
 }
@@ -217,14 +219,14 @@ uninstall_callback ()
     call_func "service_postuninst" install_log
     if [ "$wizard_delete_data" = "true" ]; then
         echo "Removing files..." | install_log
-        if [ -n "${TRIM_PKGHOME}" ] && [ -d "${TRIM_PKGHOME}" ] && [ "$(ls -A "${TRIM_PKGHOME}" 2>/dev/null)" != "" ]; then
-            find "${TRIM_PKGHOME}" -mindepth 1 -delete -print | install_log
+        if [ "$(ls -A ${TRIM_PKGHOME})" != "" ]; then
+            find ${TRIM_PKGHOME} -mindepth 1 -delete -print | install_log
         fi
-        if [ -n "${TRIM_PKGVAR}" ] && [ -d "${TRIM_PKGVAR}" ] && [ "$(ls -A "${TRIM_PKGVAR}" 2>/dev/null)" != "" ]; then
-            find "${TRIM_PKGVAR}" -mindepth 1 -delete -print | install_log
+        if [ "$(ls -A ${TRIM_PKGVAR})" != "" ]; then
+            find ${TRIM_PKGVAR} -mindepth 1 -delete -print | install_log
         fi
-        if [ -n "${TRIM_PKGETC}" ] && [ -d "${TRIM_PKGETC}" ] && [ "$(ls -A "${TRIM_PKGETC}" 2>/dev/null)" != "" ]; then
-            find "${TRIM_PKGETC}" -mindepth 1 -delete -print | install_log
+        if [ "$(ls -A /var/apps/${TRIM_APPNAME}/etc)" != "" ]; then
+            find /var/apps/${TRIM_APPNAME}/etc -mindepth 1 -delete -print | install_log
         fi
     fi
     exit 0
@@ -256,9 +258,9 @@ start_daemon ()
     i=0
     if [ -z "${SVC_QUIET}" ]; then
         if [ -z "${SVC_KEEP_LOG}" ]; then
-            date > "${LOG_FILE}"
+            date > ${LOG_FILE}
         else
-            date >> "${LOG_FILE}"
+            date >> ${LOG_FILE}
         fi
     fi
     call_func "service_prestart"
@@ -266,19 +268,19 @@ start_daemon ()
     do
         i=$((i + 1))
         if [ -z "${SVC_QUIET}" ]; then
-            echo "Starting ${DNAME} command ${service}" >> "${LOG_FILE}"
+            echo "Starting ${DNAME} command ${service}" >> ${LOG_FILE}
         fi
         if [ -n "${service}" ]; then 
             if [ -n "${SVC_CWD}" ]; then
-                cd "${SVC_CWD}" || exit 1
+                cd ${SVC_CWD}
             fi
             if [ -z "${SVC_BACKGROUND}" ]; then
-                ${service} >> "${OUT}" 2>&1
+                ${service} >> ${OUT} 2>&1
             else
-                ${service} >> "${OUT}" 2>&1 &
+                ${service} >> ${OUT} 2>&1 &
             fi    
-            if [ -n "${SVC_WRITE_PID}" ] && [ -n "${SVC_BACKGROUND}" ] && [ -n "${PID_FILE}" ]; then
-                 [ $i -eq 1 ] && printf "%s" "$!" > "${PID_FILE}" || printf "\n%s" "$!" >> "${PID_FILE}"
+            if [ -n "${SVC_WRITE_PID}" -a -n "${SVC_BACKGROUND}" -a -n "${PID_FILE}" ]; then
+                 [ $i -eq 1 ] && printf "%s" "$!" > ${PID_FILE} || printf "\n%s" "$!" >> ${PID_FILE}
             else
                 wait_for_status 0 ${SVC_WAIT_TIMEOUT:=20}
             fi
@@ -292,18 +294,18 @@ stop_daemon ()
         echo "DOCKER_NAME is set to '$DOCKER_NAME', exiting function."
         return
     fi
-    if [ -n "${PID_FILE}" ] && [ -r "${PID_FILE}" ]; then
+    if [ -n "${PID_FILE}" -a -r "${PID_FILE}" ]; then
         for pid in $(cat "${PID_FILE}")
         do
             if [ -z "$pid" ]; then
               continue
             fi
             if [ -z "${SVC_QUIET}" ]; then
-                date >> "${LOG_FILE}"
-                echo "Stopping ${DNAME} service : $(ps -p "${pid}" -o comm=) (${pid})" >> "${LOG_FILE}"
+                date >> ${LOG_FILE}
+                echo "Stopping ${DNAME} service : $(ps -p${pid} -o comm=) (${pid})" >> ${LOG_FILE}
             fi
-            kill -TERM "${pid}" >> "${LOG_FILE}" 2>&1
-            wait_for_status 1 ${SVC_WAIT_TIMEOUT:=20} "${pid}" || kill -KILL "${pid}" >> "${LOG_FILE}" 2>&1
+            kill -TERM ${pid} >> ${LOG_FILE} 2>&1
+            wait_for_status 1 ${SVC_WAIT_TIMEOUT:=20} ${pid} || kill -KILL ${pid} >> ${LOG_FILE} 2>&1
         done
         if [ -f "${PID_FILE}" ]; then
             rm -f "${PID_FILE}" > /dev/null
@@ -315,11 +317,11 @@ stop_daemon ()
 daemon_status ()
 {
 	if [ -n "$DOCKER_NAME" ]; then
-        docker inspect "$DOCKER_NAME" | grep -q "\"Status\": \"running\"," || exit 1
+        docker inspect $DOCKER_NAME | grep -q "\"Status\": \"running\"," || exit 1
         return
     fi	
     status=0
-    [ -z "${1}" ] && pid_list=$(cat "${PID_FILE}" 2>/dev/null) || pid_list=${1}
+    [ -z "${1}" ] && pid_list=$(cat ${PID_FILE} 2>/dev/null) || pid_list=${1}
     if [ -n "${pid_list}" ]; then
         for pid in ${pid_list}
         do

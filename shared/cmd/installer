@@ -1,18 +1,20 @@
 #!/bin/bash
 
 INST_LOG="/var/log/apps/${TRIM_APPNAME}.log"
-FWPORTS_FILE="${TRIM_PKGETC}/${TRIM_APPNAME}.sc"
+FWPORTS_FILE="/var/apps/${TRIM_APPNAME}/etc/${TRIM_APPNAME}.sc"
 TMP_DIR="${TRIM_TEMP_UPGRADE_FOLDER}"
 
-COMMON="$(dirname "$0")/common"
+COMMON=$(dirname $0)"/common"
+echo ${COMMON}
 if [ -r "${COMMON}" ]; then
     . "${COMMON}"
 fi
 
-SVC_SETUP="$(dirname "$0")/service-setup"
+SVC_SETUP=$(dirname $0)"/service-setup"
+echo ${SVC_SETUP}
 if [ -r "${SVC_SETUP}" ]; then
     . "${SVC_SETUP}"
 fi
 
-load_variables_from_file "${INST_VARIABLES}"
+load_variables_from_file ${INST_VARIABLES}
 call_func "initialize_variables" install_log

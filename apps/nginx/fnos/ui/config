@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "nginx.Application": 
+        {
+            "title": "Nginx",
+            "desc": "Nginx Web Server",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "8888",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

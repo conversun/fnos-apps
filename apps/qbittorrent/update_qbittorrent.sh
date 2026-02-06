@@ -162,12 +162,28 @@ build_fpk() {
     local fpk_name="qbittorrent_${QB_VERSION}_${ARCH}.fpk"
     info "打包 $fpk_name..."
     
-    mkdir -p "$WORK_DIR/package"
+    local shared_dir="$SCRIPT_DIR/../../shared"
+    
+    mkdir -p "$WORK_DIR/package/cmd"
     
     cp "$WORK_DIR/app.tgz" "$WORK_DIR/package/"
-    cp -a "$PKG_DIR/cmd" "$WORK_DIR/package/"
+    
+    for f in "$shared_dir"/cmd/*; do
+        case "$(basename "$f")" in
+            *.md|*.MD) continue ;;
+        esac
+        cp "$f" "$WORK_DIR/package/cmd/"
+    done
+    [ -d "$PKG_DIR/cmd" ] && cp -a "$PKG_DIR"/cmd/* "$WORK_DIR/package/cmd/" 2>/dev/null || true
+    
     cp -a "$PKG_DIR/config" "$WORK_DIR/package/"
-    cp -a "$PKG_DIR/wizard" "$WORK_DIR/package/"
+    
+    if [ -d "$PKG_DIR/wizard" ]; then
+        cp -a "$PKG_DIR/wizard" "$WORK_DIR/package/"
+    elif [ -d "$shared_dir/wizard" ]; then
+        cp -a "$shared_dir/wizard" "$WORK_DIR/package/"
+    fi
+    
     cp "$PKG_DIR"/*.sc "$WORK_DIR/package/" 2>/dev/null || true
     cp "$PKG_DIR"/ICON*.PNG "$WORK_DIR/package/"
     cp "$PKG_DIR/manifest" "$WORK_DIR/package/"

@@ -1,6 +1,6 @@
 #!/bin/sh
 APP_NAME=plexmediaserver
-APP_DIR="${TRIM_APPDEST}"
+APP_DIR=/var/apps/plexmediaserver/target
 APP_DATA_DIR=$1
 PID_FILE="$APP_DATA_DIR"/$APP_NAME.pid
 

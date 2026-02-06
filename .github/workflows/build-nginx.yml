@@ -1,4 +1,4 @@
-name: Build Emby fnOS Package
+name: Build Nginx fnOS Package
 
 permissions:
   contents: write
@@ -6,7 +6,7 @@ permissions:
 on:
   push:
     paths:
-      - 'apps/emby/**'
+      - 'apps/nginx/**'
       - 'shared/**'
     paths-ignore:
       - '**/*.md'
@@ -38,13 +38,17 @@ jobs:
       - name: Get Latest Version
         id: version
         run: |
+          CODENAME="bookworm"
+          
           if [ -n "${{ github.event.inputs.version }}" ]; then
             VERSION="${{ github.event.inputs.version }}"
           else
-            VERSION=$(curl -sL "https://github.com/MediaBrowser/Emby.Releases/releases" | \
-              grep -oE '(releases/tag/[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+[^"]*|Latest)' | \
-              grep -B1 "^Latest$" | head -1 | sed 's|releases/tag/||')
+            VERSION=$(curl -sL "https://nginx.org/packages/debian/pool/nginx/n/nginx/" | \
+              grep -oE "nginx_[0-9]+\.[0-9]+\.[0-9]+-[0-9]+~${CODENAME}_amd64\.deb" | \
+              sed -E 's/nginx_([0-9]+\.[0-9]+\.[0-9]+)-.*/\1/' | \
+              sort -V | tail -1)
           fi
+          
           echo "version=$VERSION" >> $GITHUB_OUTPUT
           echo "检测到版本: $VERSION"
 
@@ -55,22 +59,22 @@ jobs:
           REVISION="${{ github.event.inputs.revision }}"
           
           if [ -n "$REVISION" ]; then
-            RELEASE_TAG="emby/v${VERSION}-${REVISION}"
+            RELEASE_TAG="nginx/v${VERSION}-${REVISION}"
             echo "手动指定修订: $RELEASE_TAG"
           else
-            if gh release view "emby/v${VERSION}" &>/dev/null; then
-              HIGHEST_REV=$(gh release list --limit 100 | grep "emby/v${VERSION}" | \
-                sed -n 's/.*emby\/v'"${VERSION}"'-r\([0-9]*\).*/\1/p' | sort -n | tail -1)
+            if gh release view "nginx/v${VERSION}" &>/dev/null; then
+              HIGHEST_REV=$(gh release list --limit 100 | grep "nginx/v${VERSION}" | \
+                sed -n 's/.*nginx\/v'"${VERSION}"'-r\([0-9]*\).*/\1/p' | sort -n | tail -1)
               
               if [ -n "$HIGHEST_REV" ]; then
                 NEXT_REV=$((HIGHEST_REV + 1))
-                RELEASE_TAG="emby/v${VERSION}-r${NEXT_REV}"
+                RELEASE_TAG="nginx/v${VERSION}-r${NEXT_REV}"
               else
-                RELEASE_TAG="emby/v${VERSION}-r2"
+                RELEASE_TAG="nginx/v${VERSION}-r2"
               fi
               echo "版本已存在，使用修订: $RELEASE_TAG"
             else
-              RELEASE_TAG="emby/v${VERSION}"
+              RELEASE_TAG="nginx/v${VERSION}"
               echo "新版本: $RELEASE_TAG"
             fi
           fi
@@ -112,32 +116,40 @@ jobs:
           ARCH="${{ matrix.arch }}"
           DEB_ARCH="${{ matrix.deb_arch }}"
           MANIFEST_PLATFORM="${{ matrix.manifest_platform }}"
+          CODENAME="bookworm"
           
           echo "==> 构建 $ARCH 版本 (deb arch: $DEB_ARCH)"
           
-          echo "==> 下载 Emby Server $VERSION ($ARCH)"
-          curl -L -o emby.deb "https://github.com/MediaBrowser/Emby.Releases/releases/download/${VERSION}/emby-server-deb_${VERSION}_${DEB_ARCH}.deb"
-          ls -lh emby.deb
+          echo "==> 下载 Nginx $VERSION ($ARCH)"
+          curl -L -o nginx.deb "https://nginx.org/packages/debian/pool/nginx/n/nginx/nginx_${VERSION}-1~${CODENAME}_${DEB_ARCH}.deb"
+          ls -lh nginx.deb
           
           echo "==> 解压 deb"
-          ar -x emby.deb
+          ar -x nginx.deb
           mkdir -p extracted
-          tar -xf data.tar.xz -C extracted
+          if [ -f data.tar.zst ]; then
+            apt-get update -qq && apt-get install -y -qq zstd >/dev/null 2>&1
+            tar --zstd -xf data.tar.zst -C extracted
+          elif [ -f data.tar.xz ]; then
+            tar -xf data.tar.xz -C extracted
+          elif [ -f data.tar.gz ]; then
+            tar -xf data.tar.gz -C extracted
+          fi
           
           echo "==> 构建 app.tgz"
-          src=extracted/opt/emby-server
           dst=app_root
-          mkdir -p "$dst"
-          for dir in bin etc extra lib licenses share system; do
-            [ -d "$src/$dir" ] && cp -r "$src/$dir" "$dst/"
-          done
-          mkdir -p "$dst/config" "$dst/ui/images"
+          mkdir -p "$dst/sbin" "$dst/conf" "$dst/html" "$dst/lib" "$dst/bin" "$dst/ui/images"
           
-          cp apps/emby/fnos/EmbyServer.sc "$dst/"
-          cp apps/emby/fnos/config/* "$dst/config/"
-          cp -a apps/emby/fnos/ui/* "$dst/ui/"
-          cp apps/emby/fnos/bin/emby-server "$dst/bin/emby-server"
-          chmod +x "$dst/bin/emby-server"
+          cp extracted/usr/sbin/nginx "$dst/sbin/"
+          chmod +x "$dst/sbin/nginx"
+          
+          cp -a extracted/etc/nginx/* "$dst/conf/" 2>/dev/null || true
+          cp -a extracted/usr/share/nginx/html/* "$dst/html/" 2>/dev/null || true
+          [ -d extracted/usr/lib ] && cp -a extracted/usr/lib/* "$dst/lib/" 2>/dev/null || true
+          
+          cp apps/nginx/fnos/bin/nginx-server "$dst/bin/nginx-server"
+          chmod +x "$dst/bin/nginx-server"
+          cp -a apps/nginx/fnos/ui/* "$dst/ui/" 2>/dev/null || true
           
           cd app_root && tar -czf ../app.tgz . && cd ..
           ls -lh app.tgz
@@ -148,13 +160,16 @@ jobs:
           mkdir -p package
           mv app.tgz package/
           cp -a shared/cmd package/
-          [ -d apps/emby/fnos/cmd ] && cp -a apps/emby/fnos/cmd/* package/cmd/
-          cp -a apps/emby/fnos/config package/
+          [ -d apps/nginx/fnos/cmd ] && cp -a apps/nginx/fnos/cmd/* package/cmd/
+          cp -a apps/nginx/fnos/config package/
           [ -d shared/wizard ] && cp -a shared/wizard package/
-          [ -d apps/emby/fnos/wizard ] && cp -a apps/emby/fnos/wizard package/
-          cp apps/emby/fnos/ICON*.PNG package/ 2>/dev/null || true
+          [ -d apps/nginx/fnos/wizard ] && cp -a apps/nginx/fnos/wizard package/
+          cp apps/nginx/fnos/*.sc package/ 2>/dev/null || true
+          cp apps/nginx/fnos/ICON*.PNG package/ 2>/dev/null || true
+          [ -d apps/nginx/fnos/ui ] && cp -a apps/nginx/fnos/ui package/
+          [ -d apps/nginx/fnos/bin ] && cp -a apps/nginx/fnos/bin package/
           
-          sed "s/^version.*/version         = ${VERSION}/" apps/emby/fnos/manifest > package/manifest
+          sed "s/^version.*/version         = ${VERSION}/" apps/nginx/fnos/manifest > package/manifest
           sed -i "s/^checksum.*/checksum        = ${CHECKSUM}/" package/manifest
           
           if ! grep -q "^platform" package/manifest; then
@@ -163,16 +178,16 @@ jobs:
             sed -i "s/^platform.*/platform        = ${MANIFEST_PLATFORM}/" package/manifest
           fi
           
-          cd package && tar -czf ../embyserver_${VERSION}_${ARCH}.fpk * && cd ..
+          cd package && tar -czf ../nginx_${VERSION}_${ARCH}.fpk * && cd ..
           
           echo "==> 完成"
-          ls -lh embyserver_${VERSION}_${ARCH}.fpk
+          ls -lh nginx_${VERSION}_${ARCH}.fpk
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
           name: fpk-${{ matrix.arch }}
-          path: embyserver_${{ needs.check-version.outputs.version }}_${{ matrix.arch }}.fpk
+          path: nginx_${{ needs.check-version.outputs.version }}_${{ matrix.arch }}.fpk
           retention-days: 1
 
   release:
@@ -204,15 +219,15 @@ jobs:
           fi
           
           gh release create "$RELEASE_TAG" \
-            --title "Emby Server ${VERSION} for fnOS" \
+            --title "Nginx ${VERSION} for fnOS" \
             --notes "自动构建的 fnOS 安装包
 
-          - 基于 [Emby Server ${VERSION}](https://github.com/MediaBrowser/Emby.Releases/releases/tag/${VERSION})
+          - 基于 [Nginx ${VERSION}](https://nginx.org/) 官方 Debian 包
           - 平台: fnOS${REVISION_NOTE}
 
           **国内镜像**:
-          - [embyserver_${VERSION}_x86.fpk](https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${RELEASE_TAG}/embyserver_${VERSION}_x86.fpk)
-          - [embyserver_${VERSION}_arm.fpk](https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${RELEASE_TAG}/embyserver_${VERSION}_arm.fpk)" \
+          - [nginx_${VERSION}_x86.fpk](https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${RELEASE_TAG}/nginx_${VERSION}_x86.fpk)
+          - [nginx_${VERSION}_arm.fpk](https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${RELEASE_TAG}/nginx_${VERSION}_arm.fpk)" \
             artifacts/fpk-x86/*.fpk \
             artifacts/fpk-arm/*.fpk
         env:

@@ -1,0 +1,19 @@
+{
+    "port-config": {
+        "protocol-file": "nginx.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "nginx",
+                "permission": {
+                    "rw": [
+                        "nginx"
+                    ]
+                }
+            }
+        ]
+    },
+    "systemd-unit": {
+    }
+}

@@ -200,7 +200,6 @@ jobs:
           [ -d apps/qbittorrent/fnos/wizard ] && cp -a apps/qbittorrent/fnos/wizard package/
           cp apps/qbittorrent/fnos/*.sc package/ 2>/dev/null || true
           cp apps/qbittorrent/fnos/ICON*.PNG package/ 2>/dev/null || true
-          [ -d apps/qbittorrent/fnos/ui ] && cp -a apps/qbittorrent/fnos/ui package/
           cp apps/qbittorrent/fnos/manifest package/
           
           cd package && tar -czf ../qBittorrent_${VERSION}_${ARCH}.fpk * && cd ..

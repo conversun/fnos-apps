@@ -1,0 +1,25 @@
+[{
+  "stepTitle": "卸载套件",
+  "items": [
+    {
+    "type": "tips",
+    "helpText": "保留或删除套件设置。"
+	},
+    {
+	  "type":"radio",
+      "field": "wizard_delete_data",
+      "label": "仅卸载，保留现有文件以备将来重新安装。",
+      "initValue": "false",
+	  "options":[
+	    {
+                 "label": "保留现有文件",
+                    "value": "false"
+                },
+                {
+                    "label": "清除所有套件数据文件（不可恢复）！！！",
+                    "value": "true"
+                }
+	  ]
+    }
+	]
+}]

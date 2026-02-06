@@ -3,9 +3,12 @@ set -e
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PKG_DIR="$SCRIPT_DIR/fnos"
-WORK_DIR="/tmp/plex_update_$$"
-PLEX_VERSION="${PLEX_VERSION:-latest}"
+WORK_DIR="/tmp/nginx_update_$$"
+NGINX_VERSION="${NGINX_VERSION:-latest}"
 ARCH="${ARCH:-}"
+
+# fnOS is Debian bookworm-based
+CODENAME="bookworm"
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -36,14 +39,13 @@ detect_arch() {
         info "Auto-detected architecture: $ARCH"
     fi
     
-    # Set architecture-specific variables
     case "$ARCH" in
         x86)
-            PLEX_BUILD="linux-x86_64"
+            DEB_ARCH="amd64"
             MANIFEST_PLATFORM="x86"
             ;;
         arm)
-            PLEX_BUILD="linux-aarch64"
+            DEB_ARCH="arm64"
             MANIFEST_PLATFORM="arm"
             ;;
         *)
@@ -51,75 +53,84 @@ detect_arch() {
             ;;
     esac
     
-    info "Plex build type: $PLEX_BUILD"
+    info "Deb arch: $DEB_ARCH"
     info "Manifest platform: $MANIFEST_PLATFORM"
 }
 
 get_latest_version() {
     info "获取最新版本信息..."
     
-    local api_response=$(curl -sL "https://plex.tv/api/downloads/5.json" 2>/dev/null)
-    
-    if [ "$PLEX_VERSION" = "latest" ]; then
-        PLEX_VERSION=$(echo "$api_response" | grep -o '"version":"[^"]*"' | head -1 | sed 's/"version":"//;s/"//' | cut -d'-' -f1)
+    if [ "$NGINX_VERSION" = "latest" ]; then
+        # Parse nginx.org stable package pool for latest version
+        NGINX_VERSION=$(curl -sL "https://nginx.org/packages/debian/pool/nginx/n/nginx/" 2>/dev/null | \
+            grep -oE "nginx_[0-9]+\.[0-9]+\.[0-9]+-[0-9]+~${CODENAME}_amd64\.deb" | \
+            sed -E 's/nginx_([0-9]+\.[0-9]+\.[0-9]+)-.*/\1/' | \
+            sort -V | tail -1)
     fi
     
-    [ -z "$PLEX_VERSION" ] && error "无法获取版本信息，请手动指定: $0 1.42.2.10156"
+    [ -z "$NGINX_VERSION" ] && error "无法获取版本信息，请手动指定: $0 1.28.2"
     
-    info "目标版本: $PLEX_VERSION"
-}
-
-get_download_url() {
-    local api_response=$(curl -sL "https://plex.tv/api/downloads/5.json" 2>/dev/null)
-    
-    # 使用 jq 查找对应架构的下载链接
-    if command -v jq &>/dev/null; then
-        DOWNLOAD_URL=$(echo "$api_response" | jq -r ".computer.Linux.releases[] | select(.build == \"$PLEX_BUILD\" and .distro == \"debian\") | .url")
-    else
-        # Fallback: 使用 grep 查找
-        case "$PLEX_BUILD" in
-            linux-x86_64)
-                DOWNLOAD_URL=$(echo "$api_response" | grep -o '"build":"linux-x86_64","distro":"debian","url":"[^"]*"' | head -1 | sed 's/.*"url":"//;s/"$//')
-                ;;
-            linux-aarch64)
-                DOWNLOAD_URL=$(echo "$api_response" | grep -o '"build":"linux-aarch64","distro":"debian","url":"[^"]*"' | head -1 | sed 's/.*"url":"//;s/"$//')
-                ;;
-        esac
-    fi
-    
-    [ -z "$DOWNLOAD_URL" ] && error "无法获取 $ARCH 架构的下载链接"
-    info "下载链接: $DOWNLOAD_URL"
+    info "目标版本: $NGINX_VERSION"
 }
 
 download_deb() {
-    info "下载 Plex Media Server ($ARCH)..."
+    local deb_url="https://nginx.org/packages/debian/pool/nginx/n/nginx/nginx_${NGINX_VERSION}-1~${CODENAME}_${DEB_ARCH}.deb"
+    
+    info "下载 ($ARCH): $deb_url"
     mkdir -p "$WORK_DIR"
     
-    curl -L -f -o "$WORK_DIR/plex.deb" "$DOWNLOAD_URL" || error "下载失败"
-    info "下载完成: $(du -h "$WORK_DIR/plex.deb" | cut -f1)"
+    curl -L -f -o "$WORK_DIR/nginx.deb" "$deb_url" || error "下载失败"
+    info "下载完成: $(du -h "$WORK_DIR/nginx.deb" | cut -f1)"
 }
 
 extract_deb() {
     info "解压 deb 包..."
     cd "$WORK_DIR"
-    ar -x plex.deb
+    ar -x nginx.deb
     mkdir -p extracted
-    tar -xf data.tar.xz -C extracted
-    [ -d "extracted/usr/lib/plexmediaserver" ] || error "deb 包结构异常"
+    
+    # nginx .deb uses data.tar.zst or data.tar.xz depending on version
+    if [ -f data.tar.zst ]; then
+        tar --zstd -xf data.tar.zst -C extracted
+    elif [ -f data.tar.xz ]; then
+        tar -xf data.tar.xz -C extracted
+    elif [ -f data.tar.gz ]; then
+        tar -xf data.tar.gz -C extracted
+    else
+        error "deb 包结构异常：找不到 data.tar.*"
+    fi
+    
+    [ -d "extracted/usr/sbin" ] || error "deb 包结构异常：找不到 /usr/sbin"
 }
 
 build_app_tgz() {
     info "构建 app.tgz..."
     
-    local src="$WORK_DIR/extracted/usr/lib/plexmediaserver"
+    local src="$WORK_DIR/extracted"
     local dst="$WORK_DIR/app_root"
-    mkdir -p "$dst/bin" "$dst/lib" "$dst/ui/images"
+    mkdir -p "$dst/sbin" "$dst/conf" "$dst/html" "$dst/lib" "$dst/ui/images"
     
-    cp -a "$src"/* "$dst/"
-    cp "$PKG_DIR/bin/plex-server" "$dst/bin/"
-    chmod +x "$dst/bin/plex-server"
+    # Copy nginx binary
+    cp "$src/usr/sbin/nginx" "$dst/sbin/"
+    chmod +x "$dst/sbin/nginx"
     
-    cp -a "$PKG_DIR/ui"/* "$dst/ui/"
+    # Copy configuration files (mime.types, etc.)
+    cp -a "$src/etc/nginx"/* "$dst/conf/" 2>/dev/null || true
+    
+    # Copy default html pages
+    cp -a "$src/usr/share/nginx/html"/* "$dst/html/" 2>/dev/null || true
+    
+    # Copy libraries if any
+    [ -d "$src/usr/lib" ] && cp -a "$src/usr/lib"/* "$dst/lib/" 2>/dev/null || true
+    
+    # Copy launcher script and UI assets
+    cp "$PKG_DIR/bin/nginx-server" "$dst/bin/" 2>/dev/null || {
+        mkdir -p "$dst/bin"
+        cp "$PKG_DIR/bin/nginx-server" "$dst/bin/"
+    }
+    chmod +x "$dst/bin/nginx-server"
+    
+    cp -a "$PKG_DIR/ui"/* "$dst/ui/" 2>/dev/null || true
     
     cd "$dst"
     tar -czf "$WORK_DIR/app.tgz" .
@@ -130,40 +141,30 @@ update_manifest() {
     info "更新 manifest..."
     local checksum=$(md5 -q "$WORK_DIR/app.tgz" 2>/dev/null || md5sum "$WORK_DIR/app.tgz" | cut -d' ' -f1)
     
-    sed -i.tmp "s/^version.*=.*/version         = ${PLEX_VERSION}/" "$PKG_DIR/manifest"
-    sed -i.tmp "s/^platform.*=.*/platform        = ${MANIFEST_PLATFORM}/" "$PKG_DIR/manifest"
+    sed -i.tmp "s/^version.*=.*/version         = ${NGINX_VERSION}/" "$PKG_DIR/manifest"
     sed -i.tmp "s/^checksum.*=.*/checksum        = ${checksum}/" "$PKG_DIR/manifest"
+    
+    if ! grep -q "^platform" "$PKG_DIR/manifest"; then
+        echo "platform        = ${MANIFEST_PLATFORM}" >> "$PKG_DIR/manifest"
+    else
+        sed -i.tmp "s/^platform.*=.*/platform        = ${MANIFEST_PLATFORM}/" "$PKG_DIR/manifest"
+    fi
+    
     rm -f "$PKG_DIR/manifest.tmp"
 }
 
 build_fpk() {
-    local fpk_name="plexmediaserver_${PLEX_VERSION}_${ARCH}.fpk"
+    local fpk_name="nginx_${NGINX_VERSION}_${ARCH}.fpk"
     info "打包 $fpk_name..."
     
-    local shared_dir="$SCRIPT_DIR/../../shared"
-    
-    mkdir -p "$WORK_DIR/package/cmd"
+    mkdir -p "$WORK_DIR/package"
     
     cp "$WORK_DIR/app.tgz" "$WORK_DIR/package/"
-    
-    for f in "$shared_dir"/cmd/*; do
-        case "$(basename "$f")" in
-            *.md|*.MD) continue ;;
-        esac
-        cp "$f" "$WORK_DIR/package/cmd/"
-    done
-    [ -d "$PKG_DIR/cmd" ] && cp -a "$PKG_DIR"/cmd/* "$WORK_DIR/package/cmd/" 2>/dev/null || true
-    
-    cp -a "$PKG_DIR/config" "$WORK_DIR/package/"
-    
-    if [ -d "$PKG_DIR/wizard" ]; then
-        cp -a "$PKG_DIR/wizard" "$WORK_DIR/package/"
-    elif [ -d "$shared_dir/wizard" ]; then
-        cp -a "$shared_dir/wizard" "$WORK_DIR/package/"
-    fi
-    
+    cp -a "$PKG_DIR/cmd" "$WORK_DIR/package/" 2>/dev/null || true
+    cp -a "$PKG_DIR/config" "$WORK_DIR/package/" 2>/dev/null || true
+    cp -a "$PKG_DIR/wizard" "$WORK_DIR/package/" 2>/dev/null || true
     cp "$PKG_DIR"/*.sc "$WORK_DIR/package/" 2>/dev/null || true
-    cp "$PKG_DIR"/ICON*.PNG "$WORK_DIR/package/"
+    cp "$PKG_DIR"/ICON*.PNG "$WORK_DIR/package/" 2>/dev/null || true
     cp "$PKG_DIR/manifest" "$WORK_DIR/package/"
     
     cd "$WORK_DIR/package"
@@ -183,12 +184,12 @@ show_help() {
 示例:
   $0                        # 最新稳定版，自动检测架构
   $0 --arch arm             # 最新版本，ARM 架构
-  $0 --arch x86 1.42.2.10156  # 指定版本，x86 架构
-  $0 1.42.2.10156           # 指定版本，自动检测架构
+  $0 --arch x86 1.28.2      # 指定版本，x86 架构
+  $0 1.28.2                 # 指定版本，自动检测架构
 
 环境变量:
   ARCH              目标架构 (x86 或 arm)
-  PLEX_VERSION      Plex 版本号
+  NGINX_VERSION     Nginx 版本号
 
 支持的架构:
   x86 (x86_64)      Intel/AMD 64位处理器
@@ -215,7 +216,7 @@ parse_args() {
                 error "未知选项: $1"
                 ;;
             *)
-                PLEX_VERSION="$1"
+                NGINX_VERSION="$1"
                 shift
                 ;;
         esac
@@ -226,7 +227,7 @@ main() {
     parse_args "$@"
     
     echo "========================================"
-    echo "  Plex Media Server fnOS Package Builder"
+    echo "  Nginx fnOS Package Builder"
     echo "========================================"
     echo
     
@@ -242,9 +243,8 @@ main() {
     info "当前版本: $current_version"
     
     get_latest_version
-    get_download_url
     
-    if [ "$current_version" = "$PLEX_VERSION" ]; then
+    if [ "$current_version" = "$NGINX_VERSION" ]; then
         warn "已是最新版本"
         read -p "强制重新构建? [y/N] " -n 1 -r; echo
         [[ ! $REPLY =~ ^[Yy]$ ]] && exit 0
@@ -257,7 +257,7 @@ main() {
     build_fpk
     
     echo
-    info "完成: $current_version -> $PLEX_VERSION ($ARCH)"
+    info "完成: $current_version -> $NGINX_VERSION ($ARCH)"
 }
 
 main "$@"

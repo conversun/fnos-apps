@@ -49,8 +49,13 @@ mkdir -p "$PKG_DIR/cmd"
 # 1. Copy app.tgz
 cp "$APP_TGZ" "$PKG_DIR/app.tgz"
 
-# 2. Copy shared framework cmd/*
-cp "$SHARED_DIR"/cmd/* "$PKG_DIR/cmd/"
+# 2. Copy shared framework cmd/* (exclude non-script files)
+for f in "$SHARED_DIR"/cmd/*; do
+    case "$(basename "$f")" in
+        *.md|*.MD) continue ;;
+    esac
+    cp "$f" "$PKG_DIR/cmd/"
+done
 
 # 3. Overlay app-specific cmd/* (overrides shared files)
 if [ -d "$APP_DIR/fnos/cmd" ]; then
@@ -75,17 +80,7 @@ cp "$APP_DIR"/fnos/*.sc "$PKG_DIR/" 2>/dev/null || true
 # 7. Copy icons
 cp "$APP_DIR"/fnos/ICON*.PNG "$PKG_DIR/" 2>/dev/null || true
 
-# 8. Copy ui/ (desktop entry + images)
-if [ -d "$APP_DIR/fnos/ui" ]; then
-    cp -a "$APP_DIR/fnos/ui" "$PKG_DIR/"
-fi
-
-# 9. Copy bin/ (service launcher scripts, e.g. plex-server, emby-server)
-if [ -d "$APP_DIR/fnos/bin" ]; then
-    cp -a "$APP_DIR/fnos/bin" "$PKG_DIR/"
-fi
-
-# 10. Build manifest
+# 8. Build manifest
 cp "$APP_DIR/fnos/manifest" "$PKG_DIR/manifest"
 
 if [ -n "$VERSION" ]; then

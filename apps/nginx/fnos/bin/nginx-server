@@ -1,0 +1,68 @@
+#!/bin/sh
+APP_NAME=nginx
+APP_DIR="${TRIM_APPDEST}"
+APP_DATA_DIR=$1
+
+NGINX_CONF="${APP_DATA_DIR}/nginx.conf"
+NGINX_LOG_DIR="${APP_DATA_DIR}/logs"
+NGINX_TEMP_DIR="${APP_DATA_DIR}/tmp"
+
+# Ensure directories exist
+mkdir -p "$NGINX_LOG_DIR"
+mkdir -p "$NGINX_TEMP_DIR"
+mkdir -p "$APP_DATA_DIR/html"
+
+# Generate default config if not exists
+if [ ! -f "$NGINX_CONF" ]; then
+    cat > "$NGINX_CONF" << CONF
+worker_processes auto;
+pid ${APP_DATA_DIR}/nginx.pid;
+error_log ${NGINX_LOG_DIR}/error.log;
+
+events {
+    worker_connections 1024;
+}
+
+http {
+    include       ${APP_DIR}/conf/mime.types;
+    default_type  application/octet-stream;
+
+    access_log ${NGINX_LOG_DIR}/access.log;
+
+    sendfile        on;
+    keepalive_timeout  65;
+
+    client_body_temp_path ${NGINX_TEMP_DIR}/client_body;
+    proxy_temp_path       ${NGINX_TEMP_DIR}/proxy;
+    fastcgi_temp_path     ${NGINX_TEMP_DIR}/fastcgi;
+    uwsgi_temp_path       ${NGINX_TEMP_DIR}/uwsgi;
+    scgi_temp_path        ${NGINX_TEMP_DIR}/scgi;
+
+    server {
+        listen       8888;
+        server_name  localhost;
+
+        location / {
+            root   ${APP_DATA_DIR}/html;
+            index  index.html index.htm;
+        }
+
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   ${APP_DATA_DIR}/html;
+        }
+    }
+}
+CONF
+fi
+
+# Copy default html if not exists
+if [ ! -f "$APP_DATA_DIR/html/index.html" ]; then
+    cp -a "$APP_DIR/html"/* "$APP_DATA_DIR/html/" 2>/dev/null || true
+fi
+
+export LD_LIBRARY_PATH=$APP_DIR/lib:$LD_LIBRARY_PATH
+export PATH=$APP_DIR/sbin:$PATH
+
+cd $APP_DIR || exit 1
+exec ./sbin/nginx -c "$NGINX_CONF" -g "daemon off;"

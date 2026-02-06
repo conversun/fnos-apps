@@ -157,8 +157,6 @@ jobs:
           [ -d apps/plex/fnos/wizard ] && cp -a apps/plex/fnos/wizard package/
           cp apps/plex/fnos/*.sc package/ 2>/dev/null || true
           cp apps/plex/fnos/ICON*.PNG package/ 2>/dev/null || true
-          [ -d apps/plex/fnos/ui ] && cp -a apps/plex/fnos/ui package/
-          [ -d apps/plex/fnos/bin ] && cp -a apps/plex/fnos/bin package/
           cp apps/plex/fnos/manifest package/
           
           cd package && tar -czf ../plexmediaserver_${VERSION}_${ARCH}.fpk * && cd ..
