@@ -8,8 +8,7 @@ on:
     paths:
       - 'apps/plex/**'
       - 'shared/**'
-    paths-ignore:
-      - '**/*.md'
+      - '!**/*.md'
   schedule:
     - cron: '0 8 * * *'
   workflow_dispatch:
