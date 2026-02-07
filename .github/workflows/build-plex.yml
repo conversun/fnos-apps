@@ -56,26 +56,29 @@ jobs:
           VERSION="${{ steps.version.outputs.version }}"
           REVISION="${{ github.event.inputs.revision }}"
           
-          if [ -n "$REVISION" ]; then
-            RELEASE_TAG="plex/v${VERSION}-${REVISION}"
-            echo "Manual revision specified: $RELEASE_TAG"
-          else
-            if gh release view "plex/v${VERSION}" &>/dev/null; then
-              HIGHEST_REV=$(gh release list --limit 100 | grep "plex/v${VERSION}" | \
-                sed -n 's/.*plex\/v'"${VERSION}"'-r\([0-9]*\).*/\1/p' | sort -n | tail -1)
-              
-              if [ -n "$HIGHEST_REV" ]; then
-                NEXT_REV=$((HIGHEST_REV + 1))
-                RELEASE_TAG="plex/v${VERSION}-r${NEXT_REV}"
-              else
-                RELEASE_TAG="plex/v${VERSION}-r2"
-              fi
-              echo "Version exists, using revision: $RELEASE_TAG"
-            else
-              RELEASE_TAG="plex/v${VERSION}"
-              echo "New version: $RELEASE_TAG"
-            fi
-          fi
+           if [ -n "$REVISION" ]; then
+             RELEASE_TAG="plex/v${VERSION}-${REVISION}"
+             echo "Manual revision specified: $RELEASE_TAG"
+           elif [ "${{ github.event_name }}" = "schedule" ]; then
+             RELEASE_TAG="plex/v${VERSION}"
+             echo "Scheduled run: using base tag $RELEASE_TAG"
+           else
+             if gh release view "plex/v${VERSION}" &>/dev/null; then
+               HIGHEST_REV=$(gh release list --limit 100 | grep "plex/v${VERSION}" | \
+                 sed -n 's/.*plex\/v'"${VERSION}"'-r\([0-9]*\).*/\1/p' | sort -n | tail -1)
+               
+               if [ -n "$HIGHEST_REV" ]; then
+                 NEXT_REV=$((HIGHEST_REV + 1))
+                 RELEASE_TAG="plex/v${VERSION}-r${NEXT_REV}"
+               else
+                 RELEASE_TAG="plex/v${VERSION}-r2"
+               fi
+               echo "Version exists, using revision: $RELEASE_TAG"
+             else
+               RELEASE_TAG="plex/v${VERSION}"
+               echo "New version: $RELEASE_TAG"
+             fi
+           fi
           
           if gh release view "$RELEASE_TAG" &>/dev/null; then
             echo "should_build=false" >> $GITHUB_OUTPUT

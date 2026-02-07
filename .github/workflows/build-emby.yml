@@ -53,26 +53,29 @@ jobs:
           VERSION="${{ steps.version.outputs.version }}"
           REVISION="${{ github.event.inputs.revision }}"
           
-          if [ -n "$REVISION" ]; then
-            RELEASE_TAG="emby/v${VERSION}-${REVISION}"
-            echo "手动指定修订: $RELEASE_TAG"
-          else
-            if gh release view "emby/v${VERSION}" &>/dev/null; then
-              HIGHEST_REV=$(gh release list --limit 100 | grep "emby/v${VERSION}" | \
-                sed -n 's/.*emby\/v'"${VERSION}"'-r\([0-9]*\).*/\1/p' | sort -n | tail -1)
-              
-              if [ -n "$HIGHEST_REV" ]; then
-                NEXT_REV=$((HIGHEST_REV + 1))
-                RELEASE_TAG="emby/v${VERSION}-r${NEXT_REV}"
-              else
-                RELEASE_TAG="emby/v${VERSION}-r2"
-              fi
-              echo "版本已存在，使用修订: $RELEASE_TAG"
-            else
-              RELEASE_TAG="emby/v${VERSION}"
-              echo "新版本: $RELEASE_TAG"
-            fi
-          fi
+           if [ -n "$REVISION" ]; then
+             RELEASE_TAG="emby/v${VERSION}-${REVISION}"
+             echo "手动指定修订: $RELEASE_TAG"
+           elif [ "${{ github.event_name }}" = "schedule" ]; then
+             RELEASE_TAG="emby/v${VERSION}"
+             echo "定时运行: 使用基础标签 $RELEASE_TAG"
+           else
+             if gh release view "emby/v${VERSION}" &>/dev/null; then
+               HIGHEST_REV=$(gh release list --limit 100 | grep "emby/v${VERSION}" | \
+                 sed -n 's/.*emby\/v'"${VERSION}"'-r\([0-9]*\).*/\1/p' | sort -n | tail -1)
+               
+               if [ -n "$HIGHEST_REV" ]; then
+                 NEXT_REV=$((HIGHEST_REV + 1))
+                 RELEASE_TAG="emby/v${VERSION}-r${NEXT_REV}"
+               else
+                 RELEASE_TAG="emby/v${VERSION}-r2"
+               fi
+               echo "版本已存在，使用修订: $RELEASE_TAG"
+             else
+               RELEASE_TAG="emby/v${VERSION}"
+               echo "新版本: $RELEASE_TAG"
+             fi
+           fi
           
           if gh release view "$RELEASE_TAG" &>/dev/null; then
             echo "should_build=false" >> $GITHUB_OUTPUT
