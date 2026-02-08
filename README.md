@@ -32,7 +32,15 @@ fnos-apps/
 ├── scripts/
 │   ├── build-fpk.sh     # 通用 fpk 打包脚本
 │   ├── new-app.sh       # 新应用脚手架
-│   └── ci/              # CI 共享脚本（版本判定/各应用构建）
+│   ├── apps/            # 各应用构建合约（meta.env, build.sh, get-latest-version.sh, release-notes.tpl）
+│   │   ├── plex/
+│   │   ├── emby/
+│   │   ├── qbittorrent/
+│   │   └── nginx/
+│   ├── lib/             # 共享构建工具库
+│   │   └── update-common.sh  # 应用构建通用函数
+│   └── ci/              # CI 辅助脚本
+│       └── resolve-release-tag.sh  # 版本标签判定（含 -r2/-r3 自动递增）
 └── .github/workflows/   # 入口工作流 + 可复用 workflow 模板
 ```
 
@@ -56,14 +64,14 @@ cd apps/nginx && ./update_nginx.sh
 - 所有应用最终打包统一使用 `scripts/build-fpk.sh`，避免重复实现与行为漂移。
 - CI 统一收敛到 `/.github/workflows/reusable-build-app.yml`，入口 workflow 仅负责触发与传参。
 - 版本发布标签判定统一使用 `scripts/ci/resolve-release-tag.sh`（包含 `-r2/-r3` 自动递增逻辑）。
-- 各应用构建步骤拆分到 `scripts/ci/build-*.sh`，降低 workflow 内联脚本复杂度。
+- 各应用构建步骤拆分到 `scripts/apps/<app>/build.sh`，降低 workflow 内联脚本复杂度。
 - `scripts/build-fpk.sh` 已增加打包前结构校验（manifest 关键字段、`cmd/config/ui`、图标文件）。
 
 ## 迁移与维护说明
 
 - 新增应用时，优先复用 `scripts/build-fpk.sh` 与 `/.github/workflows/reusable-build-app.yml`，避免再复制整段打包 YAML。
 - 如需调整发布标签策略，请只修改 `scripts/ci/resolve-release-tag.sh`。
-- 如需调整某个应用“下载/解包/组装 app.tgz”逻辑，请修改对应 `scripts/ci/build-<app>.sh`。
+- 如需调整某个应用"下载/解包/组装 app.tgz"逻辑，请修改对应 `scripts/apps/<app>/build.sh`。
 - `shared/cmd` 已补充 `config_init/config_callback` 入口，可用于配置变更后的服务重载。
 
 ## 开源透明

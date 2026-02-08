@@ -18,10 +18,20 @@ fnos-apps/
 ├── apps/
 │   ├── plex/            # Plex: port 32400, downloads .deb from plex.tv API
 │   ├── emby/            # Emby: port 8096, downloads .deb from GitHub Releases
-│   └── qbittorrent/     # qBittorrent: port 8085, downloads static binary. Most complex app.
+│   ├── qbittorrent/     # qBittorrent: port 8085, downloads static binary. Most complex app.
+│   └── nginx/           # Nginx: port 8888, reverse proxy and HTTP server
 ├── scripts/
 │   ├── build-fpk.sh     # Generic fpk packager (shared + app-specific → .fpk)
-│   └── new-app.sh       # Scaffold new app: ./scripts/new-app.sh <name> <display> <port>
+│   ├── new-app.sh       # Scaffold new app: ./scripts/new-app.sh <name> <display> <port>
+│   ├── apps/            # Per-app build contracts (meta.env, build.sh, get-latest-version.sh, release-notes.tpl)
+│   │   ├── plex/
+│   │   ├── emby/
+│   │   ├── qbittorrent/
+│   │   └── nginx/
+│   ├── lib/             # Shared build utilities
+│   │   └── update-common.sh  # Common functions for app builds
+│   └── ci/              # CI helper scripts
+│       └── resolve-release-tag.sh  # Version tag resolution with -r2/-r3 auto-increment
 └── .github/workflows/   # Per-app CI: check-version → build (x86+arm matrix) → release
 ```
 
@@ -35,7 +45,11 @@ fnos-apps/
 | App-specific service config | `apps/*/fnos/cmd/service-setup` | Sets SERVICE_COMMAND, PID/LOG paths |
 | App-specific overrides | `apps/*/fnos/cmd/` | Files here overlay shared/cmd/ in fpk |
 | Build locally | `apps/*/update_*.sh` | Downloads upstream, builds app.tgz + fpk |
-| CI/CD pipeline | `.github/workflows/build-*.yml` | 3-job: check-version → build (matrix) → release |
+| App build contract | `scripts/apps/<app>/` | meta.env, build.sh, get-latest-version.sh, release-notes.tpl |
+| Build utilities | `scripts/lib/update-common.sh` | Shared functions: info(), warn(), error(), cleanup trap |
+| Version tag resolution | `scripts/ci/resolve-release-tag.sh` | Determines release tag with -r2/-r3 auto-increment |
+| Generic fpk packager | `scripts/build-fpk.sh` | Unified packaging: shared + app-specific → .fpk |
+| CI/CD pipeline | `.github/workflows/reusable-build-app.yml` | Reusable workflow: check-version → build (matrix) → release |
 | App metadata | `apps/*/fnos/manifest` | Key=value: appname, version, port, checksum |
 | User/group permissions | `apps/*/fnos/config/privilege` | JSON: run-as user, extra groups (video/render for Plex) |
 | Port forwarding rules | `apps/*/fnos/*.sc` | fnOS firewall port config |
@@ -62,12 +76,11 @@ fnos-apps/
 - **NEVER hardcode architecture** — always use `uname -m` detection or `--arch` flag.
 - **DO NOT duplicate shared/cmd/ logic in app-specific cmd/** — only override what differs.
 - **DO NOT skip checksum** — `app.tgz` md5 must be written to manifest.
-- **qBittorrent has custom `installer` and `functions`** that override shared. Don't assume all apps use shared installer directly.
+- **DO NOT create per-app build scripts in scripts/ci/** — use `scripts/apps/<app>/build.sh` instead.
 
 ## UNIQUE STYLES
 
-- **qBittorrent is the outlier**: Has its own `cmd/installer` (79 lines) + `cmd/functions` (39 lines) + custom `wizard/uninstall`. Plex/Emby rely entirely on shared framework.
-- **qBittorrent ships pre-configured**: Hardcoded `admin/adminadmin` creds, Chinese locale, disabled CSRF/clickjacking for fnOS reverse proxy compat.
+- **qBittorrent is the outlier**: Ships pre-configured with hardcoded `admin/adminadmin` creds, Chinese locale, disabled CSRF/clickjacking for fnOS reverse proxy compat. Uses `service_postupgrade` hook for config initialization.
 - **Plex needs hardware transcoding groups**: `privilege` config adds `video` + `render` groups.
 - **Emby service launcher**: Unique env vars (`LD_LIBRARY_PATH`, `EMBY_DATA_PATH`).
 - **No tests**: Zero test infrastructure. Validation is manual + CI build success.
@@ -84,6 +97,7 @@ cd apps/plex && ./update_plex.sh                    # latest, auto-detect arch
 cd apps/plex && ./update_plex.sh --arch arm          # force ARM
 cd apps/emby && ./update_emby.sh
 cd apps/qbittorrent && ./update_qbittorrent.sh
+cd apps/nginx && ./update_nginx.sh
 
 # Generic fpk packager (used by CI)
 ./scripts/build-fpk.sh apps/plex app.tgz [version] [platform]
