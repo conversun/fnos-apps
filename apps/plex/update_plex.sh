@@ -2,7 +2,9 @@
 set -e
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
 PKG_DIR="$SCRIPT_DIR/fnos"
+BUILD_FPK_SCRIPT="$REPO_ROOT/scripts/build-fpk.sh"
 WORK_DIR="/tmp/plex_update_$$"
 PLEX_VERSION="${PLEX_VERSION:-latest}"
 ARCH="${ARCH:-}"
@@ -139,36 +141,17 @@ update_manifest() {
 build_fpk() {
     local fpk_name="plexmediaserver_${PLEX_VERSION}_${ARCH}.fpk"
     info "打包 $fpk_name..."
-    
-    local shared_dir="$SCRIPT_DIR/../../shared"
-    
-    mkdir -p "$WORK_DIR/package/cmd"
-    
-    cp "$WORK_DIR/app.tgz" "$WORK_DIR/package/"
-    
-    for f in "$shared_dir"/cmd/*; do
-        case "$(basename "$f")" in
-            *.md|*.MD) continue ;;
-        esac
-        cp "$f" "$WORK_DIR/package/cmd/"
-    done
-    [ -d "$PKG_DIR/cmd" ] && cp -a "$PKG_DIR"/cmd/* "$WORK_DIR/package/cmd/" 2>/dev/null || true
-    
-    cp -a "$PKG_DIR/config" "$WORK_DIR/package/"
-    
-    if [ -d "$PKG_DIR/wizard" ]; then
-        cp -a "$PKG_DIR/wizard" "$WORK_DIR/package/"
-    elif [ -d "$shared_dir/wizard" ]; then
-        cp -a "$shared_dir/wizard" "$WORK_DIR/package/"
+
+    local build_output
+    local built_name
+    build_output=$(cd "$SCRIPT_DIR" && "$BUILD_FPK_SCRIPT" "$SCRIPT_DIR" "$WORK_DIR/app.tgz" "$PLEX_VERSION" "$MANIFEST_PLATFORM") || error "打包失败"
+    echo "$build_output"
+    built_name=$(echo "$build_output" | tail -n 1)
+
+    if [ "$built_name" != "$fpk_name" ] && [ -f "$SCRIPT_DIR/$built_name" ]; then
+        mv -f "$SCRIPT_DIR/$built_name" "$SCRIPT_DIR/$fpk_name"
     fi
-    
-    cp "$PKG_DIR"/*.sc "$WORK_DIR/package/" 2>/dev/null || true
-    cp "$PKG_DIR"/ICON*.PNG "$WORK_DIR/package/"
-    cp "$PKG_DIR/manifest" "$WORK_DIR/package/"
-    
-    cd "$WORK_DIR/package"
-    tar -czf "$SCRIPT_DIR/$fpk_name" *
-    
+
     info "生成: $SCRIPT_DIR/$fpk_name ($(du -h "$SCRIPT_DIR/$fpk_name" | cut -f1))"
 }
 

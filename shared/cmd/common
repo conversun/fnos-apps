@@ -77,6 +77,14 @@ service_postupgrade()
 {
 echo "service_postupgrade"
 }
+service_preconfig()
+{
+echo "service_preconfig"
+}
+service_postconfig()
+{
+echo "service_postconfig"
+}
 
 check_docker()
 {
@@ -246,6 +254,20 @@ upgrade_callback ()
     log_step "upgrade_callback"
     call_func "service_restore" install_log
     call_func "service_postupgrade" install_log
+    exit 0
+}
+
+config_init ()
+{
+    log_step "config_init"
+    call_func "service_preconfig" install_log
+    exit 0
+}
+
+config_callback ()
+{
+    log_step "config_callback"
+    call_func "service_postconfig" install_log
     exit 0
 }
 

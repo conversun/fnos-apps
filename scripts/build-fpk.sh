@@ -27,10 +27,26 @@ NC='\033[0m'
 info() { echo -e "${GREEN}[INFO]${NC} $1"; }
 error() { echo -e "${RED}[ERROR]${NC} $1"; exit 1; }
 
+require_manifest_key() {
+    local key="$1"
+    grep -q "^${key}[[:space:]]*=" "$APP_DIR/fnos/manifest" || error "manifest missing key: ${key}"
+}
+
 [ -z "$APP_DIR" ] && error "Usage: $0 <app-dir> <app-tgz> [version] [platform]"
 [ -z "$APP_TGZ" ] && error "Usage: $0 <app-dir> <app-tgz> [version] [platform]"
 [ -d "$APP_DIR/fnos" ] || error "App directory not found: $APP_DIR/fnos"
 [ -f "$APP_TGZ" ] || error "app.tgz not found: $APP_TGZ"
+[ -d "$APP_DIR/fnos/cmd" ] || error "Missing directory: $APP_DIR/fnos/cmd"
+[ -d "$APP_DIR/fnos/config" ] || error "Missing directory: $APP_DIR/fnos/config"
+[ -d "$APP_DIR/fnos/ui" ] || error "Missing directory: $APP_DIR/fnos/ui"
+[ -f "$APP_DIR/fnos/ICON.PNG" ] || error "Missing icon: $APP_DIR/fnos/ICON.PNG"
+[ -f "$APP_DIR/fnos/ICON_256.PNG" ] || error "Missing icon: $APP_DIR/fnos/ICON_256.PNG"
+
+require_manifest_key "appname"
+require_manifest_key "version"
+require_manifest_key "display_name"
+require_manifest_key "service_port"
+require_manifest_key "source"
 
 # Read appname from manifest
 APPNAME=$(grep "^appname" "$APP_DIR/fnos/manifest" | awk -F'=' '{print $2}' | tr -d ' ')
@@ -108,6 +124,12 @@ FPK_NAME="${APPNAME}_${MANIFEST_VERSION}_${MANIFEST_PLATFORM:-x86}.fpk"
 
 # 11. Create fpk
 cd "$PKG_DIR"
+[ -f "app.tgz" ] || error "packaging validation failed: app.tgz missing"
+[ -f "manifest" ] || error "packaging validation failed: manifest missing"
+[ -d "cmd" ] || error "packaging validation failed: cmd missing"
+[ -d "config" ] || error "packaging validation failed: config missing"
+[ -f "ICON.PNG" ] || error "packaging validation failed: ICON.PNG missing"
+[ -f "ICON_256.PNG" ] || error "packaging validation failed: ICON_256.PNG missing"
 tar -czf "$OLDPWD/$FPK_NAME" *
 cd "$OLDPWD"
 

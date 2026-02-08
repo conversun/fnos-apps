@@ -36,3 +36,33 @@ LOG_FILE="${LOG_DIR}/service.log"
 
 SVC_BACKGROUND=y
 SVC_WRITE_PID=y
+
+service_postupgrade() {
+    log_step "qbittorrent_postupgrade"
+
+    # Symlink persistent config directory
+    if [ -d "${TRIM_PKGVAR}/config" ]; then
+        $RM "${TRIM_APPDEST}/conf" 2>&1 | install_log
+        $LN "${TRIM_PKGVAR}/config" "${TRIM_APPDEST}/conf" 2>&1 | install_log
+    fi
+
+    # Add default credentials if missing (upgrade from older versions)
+    local need_password_warning=false
+
+    if [ -f "${QBIT_CONF}" ]; then
+        if ! grep -q "WebUI\\\\Username" "${QBIT_CONF}"; then
+            sed -i '/WebUI\\Port/i\WebUI\\Username=admin' ${QBIT_CONF}
+            need_password_warning=true
+        fi
+
+        if ! grep -q "Password_PBKDF2" "${QBIT_CONF}"; then
+            sed -i '/WebUI\\Port/i\WebUI\\Password_PBKDF2=\"@ByteArray(xK2EwRvfGtxfF+Ot9v4WYQ==:bNStY\/6mFYYW8m\/Xm4xSbBjoR2tZNsLZ4KvdUzyCLEOg7tfpchVJucIK9Dwcp6Xe9DI4RwpoCPI9zhicTdtf5A==)\"' ${QBIT_CONF}
+            need_password_warning=true
+        fi
+    fi
+
+    if [ "$need_password_warning" = true ]; then
+        echo "默认用户名: admin，密码: adminadmin<br/>"
+        echo "请及时修改默认密码！Change default password NOW！！！"
+    fi
+}
