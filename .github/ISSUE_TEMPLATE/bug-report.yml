@@ -1,0 +1,54 @@
+name: Bug 反馈
+description: 报告应用安装或运行问题
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: app
+    attributes:
+      label: 相关应用
+      options:
+        - Plex
+        - Emby
+        - Jellyfin
+        - qBittorrent
+        - Gopeed
+        - ANI-RSS
+        - Nginx
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: 应用版本
+      placeholder: "例如：1.9.1"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: arch
+    attributes:
+      label: 设备架构
+      options:
+        - x86
+        - ARM
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 问题描述
+      description: 清晰描述遇到的问题
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 日志信息
+      description: "粘贴 `/var/log/apps/<app>.log` 中的相关日志"
+      render: shell
+    validations:
+      required: false

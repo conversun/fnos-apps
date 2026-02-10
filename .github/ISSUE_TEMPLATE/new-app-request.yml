@@ -1,0 +1,37 @@
+name: 新应用请求
+description: 请求添加新的 fnOS 应用
+title: "[App Request] "
+labels: ["app-request"]
+body:
+  - type: input
+    id: app-name
+    attributes:
+      label: 应用名称
+      placeholder: "例如：Jellyfin"
+    validations:
+      required: true
+
+  - type: input
+    id: app-url
+    attributes:
+      label: 相关网站
+      description: 官网或 GitHub 仓库地址
+      placeholder: "https://github.com/org/repo"
+    validations:
+      required: true
+
+  - type: input
+    id: app-port
+    attributes:
+      label: 默认 Web 端口
+      placeholder: "例如：8080"
+    validations:
+      required: true
+
+  - type: textarea
+    id: app-notes
+    attributes:
+      label: 补充说明
+      placeholder: "可选：应用简介、特殊依赖、默认账号密码等"
+    validations:
+      required: false

@@ -111,6 +111,15 @@ cd apps/ani-rss && ./update_ani-rss.sh
 - 修订版发布（`-r2`、`-r3`）说明：修订版仅包含打包修复，如当前版本运行正常无需更新；修订版需先卸载再重新安装
 - 本地构建产物统一输出到 `dist/` 目录
 
+## 反馈与请求
+
+- **请求新应用**：[提交 App Request](https://github.com/conversun/fnos-apps/issues/new?template=new-app-request.yml)
+- **报告问题**：[提交 Bug 反馈](https://github.com/conversun/fnos-apps/issues/new?template=bug-report.yml)
+
+## 图标来源
+
+应用图标来自 [Dashboard Icons](https://dashboardicons.com)，基于 MIT 协议开源。
+
 ## 开源透明
 
 本项目完全开源，仅从官方渠道下载原版软件并重新打包，**无任何后门或修改**。构建脚本和 CI 流程公开透明，欢迎审查。
