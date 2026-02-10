@@ -37,7 +37,7 @@ else
   if gh release view "${BASE_TAG}" &>/dev/null; then
     HIGHEST_REV=$(
       gh release list --limit 200 --json tagName -q '.[].tagName' | \
-        grep "^${BASE_TAG}-r" | \
+        { grep "^${BASE_TAG}-r" || true; } | \
         sed -n "s/.*-r\([0-9]*\)$/\1/p" | sort -n | tail -1
     )
     if [ -n "${HIGHEST_REV}" ]; then
