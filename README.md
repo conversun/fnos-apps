@@ -6,7 +6,11 @@
 
 面向飞牛 fnOS 的第三方应用打包仓库。项目会自动跟踪上游版本并构建可直接安装的 `.fpk` 包。
 
-项目变更记录请查看 [CHANGELOG.md](CHANGELOG.md)。
+## 反馈与请求
+
+- 新应用请求：[Open App Request](https://github.com/conversun/fnos-apps/issues/new?template=new-app-request.yml)
+- 问题反馈：[Open Bug Report](https://github.com/conversun/fnos-apps/issues/new?template=bug-report.yml)
+
 
 ## 支持应用
 
@@ -78,10 +82,9 @@ fnos-apps/
 - 标签策略由 `scripts/ci/resolve-release-tag.sh` 管理，支持 `-r2/-r3` 修订版自动递增
 - 日常构建由定时任务和手动触发驱动，不由普通 push 触发
 
-## 反馈与请求
+## 变更记录
 
-- 新应用请求：[Open App Request](https://github.com/conversun/fnos-apps/issues/new?template=new-app-request.yml)
-- 问题反馈：[Open Bug Report](https://github.com/conversun/fnos-apps/issues/new?template=bug-report.yml)
+项目变更记录请查看 [CHANGELOG.md](CHANGELOG.md)。
 
 ## 图标来源
 
