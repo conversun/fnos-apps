@@ -82,10 +82,7 @@ cd apps/nginx && ./update_nginx.sh
 
 为提升安全性，所有应用（Plex、Emby、qBittorrent、Nginx）均已从 `root` 改为以独立用户身份运行。
 
-**已安装用户升级须知：**
-- 升级后需手动为应用数据目录添加对应用户的读写权限
-- 各应用运行用户：Plex → `plex`，Emby → `EmbyServer`，qBittorrent → `qBittorrent`，Nginx → `nginxserver`
-- 示例：`chown -R plex:plex /var/apps/plexmediaserver/`（请根据实际安装路径调整）
+升级时自动修正数据目录权限，无需手动操作。各应用运行用户：Plex → `plex`，Emby → `EmbyServer`，qBittorrent → `qBittorrent`，Nginx → `nginxserver`。
 
 **其他改进：**
 - 修复 Nginx 启动时 `could not open error log file` 错误

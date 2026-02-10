@@ -249,9 +249,22 @@ upgrade_init ()
     exit 0
 }
 
+fix_data_ownership ()
+{
+    if [ -n "${TRIM_USERNAME}" ] && [ -n "${TRIM_GROUPNAME}" ]; then
+        local owner="${TRIM_USERNAME}:${TRIM_GROUPNAME}"
+        for dir in "${TRIM_PKGVAR}" "${TRIM_PKGETC}" "${TRIM_PKGHOME}"; do
+            if [ -d "$dir" ]; then
+                chown -R "$owner" "$dir" 2>/dev/null || true
+            fi
+        done
+    fi
+}
+
 upgrade_callback ()
 {
     log_step "upgrade_callback"
+    call_func "fix_data_ownership" install_log
     call_func "service_restore" install_log
     call_func "service_postupgrade" install_log
     exit 0

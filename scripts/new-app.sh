@@ -132,6 +132,13 @@ cat > "$APP_DIR/fnos/ui/config" << EOF
 }
 EOF
 
+# CHANGELOG
+cat > "$APP_DIR/CHANGELOG.md" << 'EOF'
+## YYYY-MM-DD
+
+- 首次发布
+EOF
+
 # Placeholder README
 cat > "$APP_DIR/README.md" << EOF
 # $DISPLAY_NAME for fnOS
@@ -216,7 +223,7 @@ cat > "$SCRIPTS_APP_DIR/release-notes.tpl" << 'EOF'
 - 基于 $RELEASE_TITLE ${VERSION}
 - 平台: fnOS
 - 默认端口: ${DEFAULT_PORT}${REVISION_NOTE}
-
+${CHANGELOG}
 **国内镜像**:
 - [${FILE_PREFIX}_${VERSION}_x86.fpk](https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${RELEASE_TAG}/${FILE_PREFIX}_${VERSION}_x86.fpk)
 - [${FILE_PREFIX}_${VERSION}_arm.fpk](https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${RELEASE_TAG}/${FILE_PREFIX}_${VERSION}_arm.fpk)

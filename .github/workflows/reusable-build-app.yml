@@ -35,6 +35,7 @@ jobs:
       upstream_tag: ${{ steps.version.outputs.upstream_tag }}
       release_tag: ${{ steps.check.outputs.release_tag }}
       should_build: ${{ steps.check.outputs.should_build }}
+      fpk_version: ${{ steps.check.outputs.fpk_version }}
       file_prefix: ${{ steps.meta.outputs.file_prefix }}
       release_title: ${{ steps.meta.outputs.release_title }}
 
@@ -105,14 +106,21 @@ jobs:
         run: |
           APP="${{ inputs.app }}"
           VERSION="${{ needs.check-version.outputs.version }}"
+          FPK_VERSION="${{ needs.check-version.outputs.fpk_version }}"
           MANIFEST_PLATFORM="${{ matrix.manifest_platform }}"
+          FILE_PREFIX="${{ needs.check-version.outputs.file_prefix }}"
 
           bash "scripts/apps/${APP}/build.sh"
 
           ls -lh app.tgz
-          FPK_NAME=$(bash scripts/build-fpk.sh "apps/${APP}" app.tgz "${VERSION}" "${MANIFEST_PLATFORM}" | tail -n 1)
-          echo "Built: ${FPK_NAME}"
-          ls -lh "${FPK_NAME}"
+          bash scripts/build-fpk.sh "apps/${APP}" app.tgz "${VERSION}" "${MANIFEST_PLATFORM}"
+          FPK_BUILT="${FILE_PREFIX}_${VERSION}_${MANIFEST_PLATFORM}.fpk"
+          FPK_FINAL="${FILE_PREFIX}_${FPK_VERSION}_${MANIFEST_PLATFORM}.fpk"
+          if [ "$FPK_BUILT" != "$FPK_FINAL" ]; then
+            mv "$FPK_BUILT" "$FPK_FINAL"
+          fi
+          echo "Built: ${FPK_FINAL}"
+          ls -lh "${FPK_FINAL}"
         env:
           VERSION: ${{ needs.check-version.outputs.version }}
           FULL_VERSION: ${{ needs.check-version.outputs.full_version }}
@@ -126,7 +134,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: fpk-${{ matrix.arch }}
-          path: ${{ needs.check-version.outputs.file_prefix }}_${{ needs.check-version.outputs.version }}_${{ matrix.manifest_platform }}.fpk
+          path: ${{ needs.check-version.outputs.file_prefix }}_${{ needs.check-version.outputs.fpk_version }}_${{ matrix.manifest_platform }}.fpk
           retention-days: 1
 
   release:
@@ -147,6 +155,7 @@ jobs:
         run: |
           APP="${{ inputs.app }}"
           VERSION="${{ needs.check-version.outputs.version }}"
+          FPK_VERSION="${{ needs.check-version.outputs.fpk_version }}"
           FULL_VERSION="${{ needs.check-version.outputs.full_version }}"
           UPSTREAM_TAG="${{ needs.check-version.outputs.upstream_tag }}"
           RELEASE_TAG="${{ needs.check-version.outputs.release_tag }}"
@@ -161,7 +170,13 @@ jobs:
             REVISION_NOTE=""
           fi
 
-          export VERSION FULL_VERSION UPSTREAM_TAG RELEASE_TAG FILE_PREFIX REVISION_NOTE
+          CHANGELOG=""
+          CHANGELOG_FILE="apps/${APP}/CHANGELOG.md"
+          if [ -f "$CHANGELOG_FILE" ]; then
+            CHANGELOG=$(awk '/^## /{if(found) exit; found=1; next} found' "$CHANGELOG_FILE")
+          fi
+
+          export VERSION FPK_VERSION FULL_VERSION UPSTREAM_TAG RELEASE_TAG FILE_PREFIX REVISION_NOTE CHANGELOG
           NOTES=$(envsubst < "scripts/apps/${APP}/release-notes.tpl")
 
           gh release create "$RELEASE_TAG" \

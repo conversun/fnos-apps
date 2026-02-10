@@ -67,3 +67,26 @@ A plain text template file used to generate GitHub Release notes.
   - `${FILE_PREFIX}`: The prefix defined in `meta.env`.
   - `${REVISION_NOTE}`: Auto-generated note if this is a revision (e.g., `- **打包修订**: r2`).
 - **App-Specific Variables**: Any additional variables output by `get-latest-version.sh` or defined in `meta.env` can be used if supported by the dispatcher.
+  - `${CHANGELOG}`: Auto-extracted from `apps/{app}/CHANGELOG.md` (latest entry only).
+
+---
+
+## 5. `apps/{app}/CHANGELOG.md`
+
+Per-app changelog used to inject update notes into GitHub Release notes.
+
+- **Location**: `apps/{app}/CHANGELOG.md` (not in `scripts/apps/`).
+- **Format**: Markdown with `## YYYY-MM-DD` section headers. Latest entry first.
+- **CI Behavior**: The CI pipeline extracts the content between the first `## ` header and the second `## ` header (or EOF), and injects it as `${CHANGELOG}` into `release-notes.tpl`.
+
+Example:
+```markdown
+## 2026-02-10
+
+- ⚠️ 改为非 root 用户运行，提升安全性
+- 升级后需手动为数据目录添加对应用户的读写权限
+
+## 2026-01-15
+
+- 首次发布
+```
