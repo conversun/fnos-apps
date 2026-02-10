@@ -6,3 +6,6 @@ dist/
 # macOS
 .DS_Store
 icons/**
+
+# Agent workspace
+.sisyphus/
