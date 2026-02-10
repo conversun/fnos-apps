@@ -6,12 +6,6 @@
 
 面向飞牛 fnOS 的第三方应用打包仓库。项目会自动跟踪上游版本并构建可直接安装的 `.fpk` 包。
 
-## 反馈与请求
-
-- 新应用请求：[Open App Request](https://github.com/conversun/fnos-apps/issues/new?template=new-app-request.yml)
-- 问题反馈：[Open Bug Report](https://github.com/conversun/fnos-apps/issues/new?template=bug-report.yml)
-
-
 ## 支持应用
 
 | App | Port | Notes | Release |
@@ -23,6 +17,11 @@
 | [Gopeed](apps/gopeed/) | 9999 | 高速下载器，支持 HTTP/BT/Magnet | [Download](https://github.com/conversun/fnos-apps/releases?q=gopeed) |
 | [ANI-RSS](apps/ani-rss/) | 7789 | 动漫 RSS 工具，默认账号 `admin/admin` | [Download](https://github.com/conversun/fnos-apps/releases?q=ani-rss) |
 | [Nginx](apps/nginx/) | 8888 | HTTP 服务与反向代理 | [Download](https://github.com/conversun/fnos-apps/releases?q=nginx) |
+
+## 反馈与请求
+
+- 新应用请求：[Open App Request](https://github.com/conversun/fnos-apps/issues/new?template=new-app-request.yml)
+- 问题反馈：[Open Bug Report](https://github.com/conversun/fnos-apps/issues/new?template=bug-report.yml)
 
 ## 快速开始
 
