@@ -101,6 +101,11 @@ if [ -d "$APP_DIR/fnos/ui" ]; then
     cp -a "$APP_DIR/fnos/ui" "$PKG_DIR/"
 fi
 
+# 8a. Generate ui/images/256.png from ICON_256.PNG (avoid storing duplicates in repo)
+if [ -d "$PKG_DIR/ui/images" ] && [ -f "$PKG_DIR/ICON_256.PNG" ]; then
+    cp "$PKG_DIR/ICON_256.PNG" "$PKG_DIR/ui/images/256.png"
+fi
+
 # 9. Build manifest
 cp "$APP_DIR/fnos/manifest" "$PKG_DIR/manifest"
 
