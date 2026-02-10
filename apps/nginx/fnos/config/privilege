@@ -1,6 +1,6 @@
 {
     "defaults":{
-        "run-as": "user"
+        "run-as": "package"
     },
     "username": "nginxserver",
     "groupname": "nginxserver"
