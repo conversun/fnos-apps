@@ -1,6 +1,6 @@
 # fnOS Apps
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 ![Apps](https://img.shields.io/badge/apps-8-2ea44f)
 ![Platform](https://img.shields.io/badge/fnOS-third--party-orange)
 
