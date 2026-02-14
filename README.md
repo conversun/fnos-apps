@@ -1,7 +1,7 @@
 # fnOS Apps
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-![Apps](https://img.shields.io/badge/apps-9-2ea44f)
+![Apps](https://img.shields.io/badge/apps-18-2ea44f)
 ![Platform](https://img.shields.io/badge/fnOS-third--party-orange)
 
 面向飞牛 fnOS 的第三方应用打包仓库。项目会自动跟踪上游版本并构建可直接安装的 `.fpk` 包。
@@ -21,6 +21,15 @@
 | [ANI-RSS](apps/ani-rss/) | 7789 | 动漫 RSS 工具，默认账号 `admin/admin` | [Download](https://github.com/conversun/fnos-apps/releases?q=ani-rss) |
 | [Audiobookshelf](apps/audiobookshelf/) | 13378 | 有声书和播客服务器 | [Download](https://github.com/conversun/fnos-apps/releases?q=audiobookshelf) |
 | [Nginx](apps/nginx/) | 8888 | HTTP 服务与反向代理 | [Download](https://github.com/conversun/fnos-apps/releases?q=nginx) |
+| [Sun-Panel](apps/sun-panel/) | 3002 | 服务器/NAS导航面板 | [Download](https://github.com/conversun/fnos-apps/releases?q=sun-panel) |
+| [MoviePilot](apps/moviepilot/) | 3000 | 影视自动化管理 | [Download](https://github.com/conversun/fnos-apps/releases?q=moviepilot) |
+| [Navidrome](apps/navidrome/) | 4533 | 音乐流媒体服务器 | [Download](https://github.com/conversun/fnos-apps/releases?q=navidrome) |
+| [Kavita](apps/kavita/) | 5000 | 漫画/电子书阅读 | [Download](https://github.com/conversun/fnos-apps/releases?q=kavita) |
+| [OpenList](apps/openlist/) | 5244 | 文件列表/WebDAV | [Download](https://github.com/conversun/fnos-apps/releases?q=openlist) |
+| [tinyMediaManager](apps/tinymediamanager/) | 5800 | 影视元数据管理 | [Download](https://github.com/conversun/fnos-apps/releases?q=tinymediamanager) |
+| [Certimate](apps/certimate/) | 8090 | SSL证书管理 | [Download](https://github.com/conversun/fnos-apps/releases?q=certimate) |
+| [Syncthing](apps/syncthing/) | 8384 | 文件同步 | [Download](https://github.com/conversun/fnos-apps/releases?q=syncthing) |
+| [Vaultwarden](apps/vaultwarden/) | 8880 | 密码管理 | [Download](https://github.com/conversun/fnos-apps/releases?q=vaultwarden) |
 
 ## 反馈与请求
 
@@ -46,6 +55,15 @@ cd apps/gopeed && ./update_gopeed.sh
 cd apps/ani-rss && ./update_ani-rss.sh
 cd apps/audiobookshelf && ./update_audiobookshelf.sh
 cd apps/nginx && ./update_nginx.sh
+cd apps/sun-panel && ./update_sun-panel.sh
+cd apps/moviepilot && ./update_moviepilot.sh
+cd apps/navidrome && ./update_navidrome.sh
+cd apps/kavita && ./update_kavita.sh
+cd apps/openlist && ./update_openlist.sh
+cd apps/tinymediamanager && ./update_tinymediamanager.sh
+cd apps/certimate && ./update_certimate.sh
+cd apps/syncthing && ./update_syncthing.sh
+cd apps/vaultwarden && ./update_vaultwarden.sh
 ```
 
 构建产物统一输出到仓库根目录 `dist/`。

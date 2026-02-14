@@ -6,7 +6,7 @@
 
 ## OVERVIEW
 
-Monorepo packaging 8 third-party apps as `.fpk` installers for fnOS NAS. Pure bash — downloads upstream binaries, merges with shared lifecycle framework, outputs `.fpk` tarballs. Daily CI auto-syncs upstream versions.
+Monorepo packaging 18 third-party apps as `.fpk` installers for fnOS NAS. Pure bash — downloads upstream binaries, merges with shared lifecycle framework, outputs `.fpk` tarballs. Daily CI auto-syncs upstream versions.
 
 ## STRUCTURE
 
@@ -23,7 +23,16 @@ fnos-apps/
 │   ├── gopeed/          # Gopeed: port 9999, multi-protocol downloader
 │   ├── ani-rss/         # ANI-RSS: port 7789, anime RSS auto-download
 │   ├── audiobookshelf/  # Audiobookshelf: port 13378, audiobook/podcast server
-│   └── nginx/           # Nginx: port 8888, reverse proxy and HTTP server
+│   ├── nginx/           # Nginx: port 8888, reverse proxy and HTTP server
+│   ├── certimate/       # Certimate: port 8090, Go binary, SSL certificate manager
+│   ├── syncthing/       # Syncthing: port 8384, Go binary, P2P file sync
+│   ├── navidrome/       # Navidrome: port 4533, Go binary, music streaming
+│   ├── sun-panel/       # Sun-Panel: port 3002, Go+Vue binary, NAS dashboard
+│   ├── openlist/        # OpenList: port 5244, Go binary, file list/WebDAV
+│   ├── vaultwarden/     # Vaultwarden: port 8880, Rust binary, password manager
+│   ├── moviepilot/      # MoviePilot: port 3000, Python app, requires python312 runtime
+│   ├── kavita/          # Kavita: port 5000, .NET self-contained binary
+│   └── tinymediamanager/# tinyMediaManager: port 5800, Java app
 ├── scripts/
 │   ├── build-fpk.sh     # Generic fpk packager (shared + app-specific → .fpk)
 │   ├── new-app.sh       # Scaffold new app: ./scripts/new-app.sh <name> <display> <port>
@@ -95,6 +104,15 @@ fnos-apps/
 - **ANI-RSS**: Java-based — ships bundled JRE in app.tgz. Default creds `admin/admin`.
 - **Audiobookshelf**: Node.js-based — ships bundled runtime.
 - **Gopeed**: Single static binary — simplest app to package.
+- **Certimate**: Go single binary, SSL certificate automation via ACME protocol.
+- **Syncthing**: Go single binary, requires additional port 22000 (TCP/UDP) for sync protocol.
+- **Navidrome**: Go single binary, needs data-share for music library folder access.
+- **Sun-Panel**: Go+Vue embedded frontend, NAS navigation dashboard with multi-account support.
+- **OpenList**: Go single binary (AList community fork), file list and WebDAV server.
+- **Vaultwarden**: Rust single binary, requires ROCKET_PORT and DATA_FOLDER env vars.
+- **MoviePilot**: Python app, requires python312 runtime and venv. Most complex packaging.
+- **Kavita**: .NET self-contained binary (~100MB), includes runtime, no external deps.
+- **tinyMediaManager**: Java app, requires Java runtime (or bundled JRE if available).
 - **No tests**: Zero test infrastructure. Validation is manual + CI build success.
 - **No linting/formatting**: No shellcheck, no editorconfig. Scripts follow loose bash conventions.
 
@@ -114,6 +132,15 @@ cd apps/gopeed && ./update_gopeed.sh
 cd apps/ani-rss && ./update_ani-rss.sh
 cd apps/audiobookshelf && ./update_audiobookshelf.sh
 cd apps/nginx && ./update_nginx.sh
+cd apps/certimate && ./update_certimate.sh          # Go binary, SSL cert manager
+cd apps/syncthing && ./update_syncthing.sh          # Go binary, P2P sync
+cd apps/navidrome && ./update_navidrome.sh          # Go binary, music streaming
+cd apps/sun-panel && ./update_sun-panel.sh          # Go+Vue binary, NAS dashboard
+cd apps/openlist && ./update_openlist.sh            # Go binary, file list/WebDAV
+cd apps/vaultwarden && ./update_vaultwarden.sh      # Rust binary, password manager
+cd apps/moviepilot && ./update_moviepilot.sh        # Python app, needs python312
+cd apps/kavita && ./update_kavita.sh                # .NET self-contained binary
+cd apps/tinymediamanager && ./update_tinymediamanager.sh  # Java app
 
 # Generic fpk packager (used by CI)
 ./scripts/build-fpk.sh apps/plex app.tgz [version] [platform]
