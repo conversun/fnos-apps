@@ -217,6 +217,7 @@ install_callback ()
 uninstall_init ()
 {
     log_step "uninstall_init"
+    stop_daemon
     call_func "service_preuninst" install_log
     exit 0
 }

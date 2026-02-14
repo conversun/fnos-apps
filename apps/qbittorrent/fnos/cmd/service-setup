@@ -37,6 +37,15 @@ LOG_FILE="${LOG_DIR}/service.log"
 SVC_BACKGROUND=y
 SVC_WRITE_PID=y
 
+service_preuninst() {
+    # 兜底：按进程名确保 qbittorrent-nox 被完全终止
+    # stop_daemon 依赖 PID 文件，若 PID 文件丢失或过期则无法杀死进程
+    pkill -f "${QBIT_BIN}" 2>/dev/null || true
+    sleep 1
+    # 仍未退出则强制杀
+    pkill -9 -f "${QBIT_BIN}" 2>/dev/null || true
+}
+
 service_postupgrade() {
     log_step "qbittorrent_postupgrade"
 

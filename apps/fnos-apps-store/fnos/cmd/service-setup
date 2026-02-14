@@ -9,3 +9,10 @@ APP_DATA_DIR="${TRIM_PKGVAR}"
 SERVICE_COMMAND="$APP_DIR/store-server"
 SVC_BACKGROUND=y
 SVC_WRITE_PID=y
+
+service_preuninst() {
+    # 兜底：确保 store-server 进程被完全终止
+    pkill -f "store-server" 2>/dev/null || true
+    sleep 1
+    pkill -9 -f "store-server" 2>/dev/null || true
+}

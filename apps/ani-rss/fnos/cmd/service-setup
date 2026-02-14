@@ -9,3 +9,11 @@ APP_DATA_DIR="${TRIM_PKGVAR}"
 SERVICE_COMMAND="$APP_DIR/bin/ani-rss-server $APP_DATA_DIR"
 SVC_BACKGROUND=y
 SVC_WRITE_PID=y
+
+service_preuninst() {
+    # 兜底：确保 ani-rss Java 进程被完全终止
+    # 按 jar 名匹配，避免误杀其他 Java 应用
+    pkill -f "ani-rss-jar-with-dependencies.jar" 2>/dev/null || true
+    sleep 1
+    pkill -9 -f "ani-rss-jar-with-dependencies.jar" 2>/dev/null || true
+}

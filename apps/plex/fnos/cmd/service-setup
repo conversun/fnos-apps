@@ -10,3 +10,13 @@ APP_DATA_DIR=/var/apps/$APP_NAME/var
 SERVICE_COMMAND="$APP_DIR/bin/plex-server $APP_DATA_DIR"
 SVC_BACKGROUND=y
 SVC_WRITE_PID=y
+
+service_preuninst() {
+    # 兜底：确保 Plex 相关进程被完全终止
+    # Plex 会派生 Transcoder、Plug-in 等子进程，需一并清理
+    pkill -f "Plex Media Server" 2>/dev/null || true
+    sleep 1
+    pkill -9 -f "Plex Media Server" 2>/dev/null || true
+    pkill -9 -f "Plex Transcoder" 2>/dev/null || true
+    pkill -9 -f "Plex Plug-in" 2>/dev/null || true
+}

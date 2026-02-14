@@ -1,12 +1,12 @@
 # PROJECT KNOWLEDGE BASE
 
-**Generated:** 2026-02-06
-**Commit:** bb6e075
+**Generated:** 2026-02-13
+**Commit:** 4005051
 **Branch:** main
 
 ## OVERVIEW
 
-Monorepo packaging third-party apps (Plex, Emby, qBittorrent) as `.fpk` installers for fnOS NAS. Pure bash — downloads upstream binaries, merges with shared lifecycle framework, outputs `.fpk` tarballs. Daily CI auto-syncs upstream versions.
+Monorepo packaging 8 third-party apps as `.fpk` installers for fnOS NAS. Pure bash — downloads upstream binaries, merges with shared lifecycle framework, outputs `.fpk` tarballs. Daily CI auto-syncs upstream versions.
 
 ## STRUCTURE
 
@@ -18,7 +18,11 @@ fnos-apps/
 ├── apps/
 │   ├── plex/            # Plex: port 32400, downloads .deb from plex.tv API
 │   ├── emby/            # Emby: port 8096, downloads .deb from GitHub Releases
+│   ├── jellyfin/        # Jellyfin: port 8097, free media system
 │   ├── qbittorrent/     # qBittorrent: port 8085, downloads static binary. Most complex app.
+│   ├── gopeed/          # Gopeed: port 9999, multi-protocol downloader
+│   ├── ani-rss/         # ANI-RSS: port 7789, anime RSS auto-download
+│   ├── audiobookshelf/  # Audiobookshelf: port 13378, audiobook/podcast server
 │   └── nginx/           # Nginx: port 8888, reverse proxy and HTTP server
 ├── scripts/
 │   ├── build-fpk.sh     # Generic fpk packager (shared + app-specific → .fpk)
@@ -26,7 +30,11 @@ fnos-apps/
 │   ├── apps/            # Per-app build contracts (meta.env, build.sh, get-latest-version.sh, release-notes.tpl)
 │   │   ├── plex/
 │   │   ├── emby/
+│   │   ├── jellyfin/
 │   │   ├── qbittorrent/
+│   │   ├── gopeed/
+│   │   ├── ani-rss/
+│   │   ├── audiobookshelf/
 │   │   └── nginx/
 │   ├── lib/             # Shared build utilities
 │   │   └── update-common.sh  # Common functions for app builds
@@ -83,6 +91,10 @@ fnos-apps/
 - **qBittorrent is the outlier**: Ships pre-configured with hardcoded `admin/adminadmin` creds, Chinese locale, disabled CSRF/clickjacking for fnOS reverse proxy compat. Uses `service_postupgrade` hook for config initialization.
 - **Plex needs hardware transcoding groups**: `privilege` config adds `video` + `render` groups.
 - **Emby service launcher**: Unique env vars (`LD_LIBRARY_PATH`, `EMBY_DATA_PATH`).
+- **Jellyfin**: Similar to Emby — downloads .deb, needs `video` + `render` groups for transcoding.
+- **ANI-RSS**: Java-based — ships bundled JRE in app.tgz. Default creds `admin/admin`.
+- **Audiobookshelf**: Node.js-based — ships bundled runtime.
+- **Gopeed**: Single static binary — simplest app to package.
 - **No tests**: Zero test infrastructure. Validation is manual + CI build success.
 - **No linting/formatting**: No shellcheck, no editorconfig. Scripts follow loose bash conventions.
 
@@ -96,7 +108,11 @@ fnos-apps/
 cd apps/plex && ./update_plex.sh                    # latest, auto-detect arch
 cd apps/plex && ./update_plex.sh --arch arm          # force ARM
 cd apps/emby && ./update_emby.sh
+cd apps/jellyfin && ./update_jellyfin.sh
 cd apps/qbittorrent && ./update_qbittorrent.sh
+cd apps/gopeed && ./update_gopeed.sh
+cd apps/ani-rss && ./update_ani-rss.sh
+cd apps/audiobookshelf && ./update_audiobookshelf.sh
 cd apps/nginx && ./update_nginx.sh
 
 # Generic fpk packager (used by CI)
@@ -109,4 +125,4 @@ cd apps/nginx && ./update_nginx.sh
 - **CI skips if release tag exists** — idempotent. Won't rebuild existing versions.
 - **China mirror links** (ghfast.top) auto-included in release notes.
 - **fnOS runtime paths**: apps install to `/var/apps/{appname}/`, data to `TRIM_PKGVAR`, config to `TRIM_PKGETC`.
-- **Docker support**: `shared/cmd/common` has `check_docker()` for docker-compose apps — currently unused by all 3 apps.
+- **Docker support**: `shared/cmd/common` has `check_docker()` for docker-compose apps — currently unused by all 8 apps.

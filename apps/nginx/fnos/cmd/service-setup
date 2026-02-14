@@ -10,3 +10,11 @@ APP_DATA_DIR="${TRIM_PKGVAR}"
 SERVICE_COMMAND="$APP_DIR/bin/nginx-server $APP_DATA_DIR"
 SVC_BACKGROUND=y
 SVC_WRITE_PID=y
+
+service_preuninst() {
+    # 兜底：确保 nginx 主进程及 worker 被完全终止
+    # 匹配 app 专属配置路径，避免误杀系统 nginx
+    pkill -f "nginx.*${TRIM_PKGVAR}" 2>/dev/null || true
+    sleep 1
+    pkill -9 -f "nginx.*${TRIM_PKGVAR}" 2>/dev/null || true
+}
