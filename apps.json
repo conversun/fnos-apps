@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-02-13T09:58:20Z",
+  "generated_at": "2026-02-14T15:16:52Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -12,9 +12,9 @@
       "file_prefix": "ani-rss",
       "display_name": "ANI-RSS",
       "description": "动漫 RSS 自动追番、订阅、下载和刮削工具，支持自动识别季数集数和重命名。默认用户名admin，密码admin。",
-      "version": "2.5.3",
-      "fpk_version": "2.5.3",
-      "release_tag": "ani-rss/v2.5.3",
+      "version": "2.5.4",
+      "fpk_version": "2.5.4-r1",
+      "release_tag": "ani-rss/v2.5.4-r1",
       "service_port": 7789,
       "homepage_url": "https://github.com/wushuo894/ani-rss",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ani-rss/fnos/ICON_256.PNG",
@@ -22,7 +22,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-11T08:16:03Z"
+      "updated_at": "2026-02-14T14:37:46Z"
     },
     {
       "slug": "audiobookshelf",
@@ -31,8 +31,8 @@
       "display_name": "Audiobookshelf",
       "description": "自托管的有声书和播客服务器，支持多用户管理、进度同步和丰富的元数据管理。",
       "version": "2.32.1",
-      "fpk_version": "2.32.1",
-      "release_tag": "audiobookshelf/v2.32.1",
+      "fpk_version": "2.32.1-r1",
+      "release_tag": "audiobookshelf/v2.32.1-r1",
       "service_port": 13378,
       "homepage_url": "https://www.audiobookshelf.org",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/audiobookshelf/fnos/ICON_256.PNG",
@@ -40,7 +40,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-11T18:33:41Z"
+      "updated_at": "2026-02-14T14:39:17Z"
     },
     {
       "slug": "emby",
@@ -49,8 +49,8 @@
       "display_name": "Emby",
       "description": "EmbyServer是一款软件媒体系统，可让您控制媒体的管理和流式传输。可以通过多个应用程序将专用服务器中的媒体提供给最终用户设备。",
       "version": "4.9.3.0",
-      "fpk_version": "4.9.3.0-r2",
-      "release_tag": "emby/v4.9.3.0-r2",
+      "fpk_version": "4.9.3.0-r3",
+      "release_tag": "emby/v4.9.3.0-r3",
       "service_port": 8096,
       "homepage_url": "https://emby.media",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/emby/fnos/ICON_256.PNG",
@@ -58,7 +58,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-10T14:07:26Z"
+      "updated_at": "2026-02-14T14:38:36Z"
     },
     {
       "slug": "fnos-apps-store",
@@ -66,9 +66,9 @@
       "file_prefix": "fnos-apps-store",
       "display_name": "fnOS Apps",
       "description": "fnOS第三方应用中心，支持一键安装、更新和卸载来自conversun/fnos-apps的所有应用。",
-      "version": "1.0.0",
-      "fpk_version": "1.0.0",
-      "release_tag": "fnos-apps-store/v1.0.0",
+      "version": "1.1.0",
+      "fpk_version": "1.1.0-r1",
+      "release_tag": "fnos-apps-store/v1.1.0-r1",
       "service_port": 8011,
       "homepage_url": "https://github.com/conversun/fnos-store",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/fnos-apps-store/fnos/ICON_256.PNG",
@@ -76,7 +76,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-13T09:58:10Z"
+      "updated_at": "2026-02-14T15:15:59Z"
     },
     {
       "slug": "gopeed",
@@ -85,8 +85,8 @@
       "display_name": "Gopeed",
       "description": "Gopeed是一款支持HTTP、BitTorrent、Magnet等协议的高速下载器。",
       "version": "1.9.1",
-      "fpk_version": "1.9.1",
-      "release_tag": "gopeed/v1.9.1",
+      "fpk_version": "1.9.1-r1",
+      "release_tag": "gopeed/v1.9.1-r1",
       "service_port": 9999,
       "homepage_url": "https://gopeed.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/gopeed/fnos/ICON_256.PNG",
@@ -94,7 +94,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-10T14:06:03Z"
+      "updated_at": "2026-02-14T14:37:46Z"
     },
     {
       "slug": "jellyfin",
@@ -103,8 +103,8 @@
       "display_name": "Jellyfin",
       "description": "Jellyfin 是一款免费开源的媒体系统，让您管理和播放您的媒体内容。支持电影、电视剧、音乐等多种媒体类型的管理和流式传输。",
       "version": "10.11.6",
-      "fpk_version": "10.11.6",
-      "release_tag": "jellyfin/v10.11.6",
+      "fpk_version": "10.11.6-r1",
+      "release_tag": "jellyfin/v10.11.6-r1",
       "service_port": 8097,
       "homepage_url": "https://jellyfin.org",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/jellyfin/fnos/ICON_256.PNG",
@@ -112,7 +112,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-10T14:06:36Z"
+      "updated_at": "2026-02-14T14:38:20Z"
     },
     {
       "slug": "nginx",
@@ -121,8 +121,8 @@
       "display_name": "Nginx",
       "description": "Nginx是一个高性能的HTTP和反向代理服务器，也是一个IMAP/POP3/SMTP代理服务器。",
       "version": "1.28.2",
-      "fpk_version": "1.28.2-r1",
-      "release_tag": "nginx/v1.28.2-r1",
+      "fpk_version": "1.28.2-r2",
+      "release_tag": "nginx/v1.28.2-r2",
       "service_port": 8888,
       "homepage_url": "https://nginx.org",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/nginx/fnos/ICON_256.PNG",
@@ -130,7 +130,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-10T13:09:27Z"
+      "updated_at": "2026-02-14T14:37:46Z"
     },
     {
       "slug": "plex",
@@ -139,8 +139,8 @@
       "display_name": "Plex",
       "description": "Plex Media Server是一款强大的媒体服务器软件，可以管理和串流您的电影、电视剧、音乐和照片到任何设备。支持硬件转码、离线同步等高级功能。",
       "version": "1.43.0.10492",
-      "fpk_version": "1.43.0.10492",
-      "release_tag": "plex/v1.43.0.10492",
+      "fpk_version": "1.43.0.10492-r1",
+      "release_tag": "plex/v1.43.0.10492-r1",
       "service_port": 32400,
       "homepage_url": "https://www.plex.tv/media-server-downloads/",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/plex/fnos/ICON_256.PNG",
@@ -148,7 +148,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-12T08:14:52Z"
+      "updated_at": "2026-02-14T14:37:53Z"
     },
     {
       "slug": "qbittorrent",
@@ -157,8 +157,8 @@
       "display_name": "qBittorrent",
       "description": "qBittorrent是一个轻量级BitTorrent客户端，简单易用，功能强大。默认用户名admin，密码adminadmin。",
       "version": "5.1.4",
-      "fpk_version": "5.1.4-r1",
-      "release_tag": "qbittorrent/v5.1.4-r1",
+      "fpk_version": "5.1.4-r3",
+      "release_tag": "qbittorrent/v5.1.4-r3",
       "service_port": 8085,
       "homepage_url": "https://github.com/userdocs/qbittorrent-nox-static",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/qbittorrent/fnos/ICON_256.PNG",
@@ -166,7 +166,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-10T13:09:30Z"
+      "updated_at": "2026-02-14T14:37:35Z"
     }
   ]
 }
