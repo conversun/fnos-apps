@@ -1,0 +1,14 @@
+appname         = vaultwarden
+version         = 0.0.0
+display_name    = Vaultwarden
+platform        = x86
+maintainer      = Vaultwarden
+maintainer_url  = https://github.com/dani-garcia/vaultwarden
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = vaultwarden.Application
+service_port    = 8880
+desc            = 轻量级 Bitwarden 兼容密码管理服务器，使用 Rust 编写，支持自托管密码管理。
+source          = thirdparty
+checksum        = 

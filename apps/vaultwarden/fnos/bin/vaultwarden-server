@@ -1,0 +1,13 @@
+#!/bin/sh
+APP_DIR="${TRIM_APPDEST}"
+APP_DATA_DIR=$1
+
+# Vaultwarden environment variables
+export ROCKET_PORT="${TRIM_SERVICE_PORT}"
+export DATA_FOLDER="${APP_DATA_DIR}/data"
+
+# Create data directory if it doesn't exist
+mkdir -p "$DATA_FOLDER"
+
+cd "$APP_DIR" || exit 1
+exec ./vaultwarden
