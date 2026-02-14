@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "kavita.Application":
+        {
+            "title": "Kavita",
+            "desc": "Kavita Reading Server",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "5000",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

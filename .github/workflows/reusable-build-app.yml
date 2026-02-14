@@ -46,7 +46,7 @@ jobs:
       - name: Validate App Input
         run: |
           APP="${{ inputs.app }}"
-          VALID_APPS="plex emby qbittorrent nginx jellyfin ani-rss gopeed audiobookshelf fnos-apps-store"
+          VALID_APPS="plex emby qbittorrent nginx jellyfin ani-rss gopeed audiobookshelf fnos-apps-store kavita"
           if ! echo "$VALID_APPS" | grep -qw "$APP"; then
             echo "Invalid app: $APP. Must be one of: $VALID_APPS" >&2
             exit 1

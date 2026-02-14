@@ -1,0 +1,19 @@
+{
+    "port-config": {
+        "protocol-file": "Kavita.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "Kavita",
+                "permission": {
+                    "rw": [
+                        "kavita"
+                    ]
+                }
+            }
+        ]
+    },
+    "systemd-unit": {
+    }
+}

@@ -1,0 +1,15 @@
+#!/bin/sh
+APP_DIR="${TRIM_APPDEST}"
+APP_DATA_DIR=$1
+
+CONFIG_DIR="$APP_DATA_DIR/config"
+mkdir -p "$CONFIG_DIR"
+
+# Kavita stores data in config/ relative to working directory
+if [ ! -L "$APP_DIR/config" ]; then
+  rm -rf "$APP_DIR/config"
+  ln -sf "$CONFIG_DIR" "$APP_DIR/config"
+fi
+
+cd "$APP_DIR" || exit 1
+exec ./Kavita

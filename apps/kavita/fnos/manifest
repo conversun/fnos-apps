@@ -1,0 +1,14 @@
+appname         = kavita
+version         = 0.0.0
+display_name    = Kavita
+platform        = x86
+maintainer      = Kavita
+maintainer_url  = https://github.com/Kareadita/Kavita
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = kavita.Application
+service_port    = 5000
+desc            = 开源的漫画、轻小说和电子书阅读服务器
+source          = thirdparty
+checksum        = 
