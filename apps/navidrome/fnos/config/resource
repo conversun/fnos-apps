@@ -1,0 +1,19 @@
+{
+    "port-config": {
+        "protocol-file": "Navidrome.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "Navidrome",
+                "permission": {
+                    "rw": [
+                        "navidrome"
+                    ]
+                }
+            }
+        ]
+    },
+    "systemd-unit": {
+    }
+}

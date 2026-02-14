@@ -1,0 +1,14 @@
+appname         = navidrome
+version         = 0.60.3
+display_name    = Navidrome
+platform        = x86
+maintainer      = Navidrome
+maintainer_url  = https://www.navidrome.org
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = navidrome.Application
+service_port    = 4533
+desc            = 开源的个人音乐流媒体服务器,兼容 Subsonic/Airsonic API,支持多用户和移动端应用。
+source          = thirdparty
+checksum        = 

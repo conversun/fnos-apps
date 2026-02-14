@@ -1,0 +1,11 @@
+#!/bin/sh
+APP_DIR="${TRIM_APPDEST}"
+APP_DATA_DIR=$1
+
+# Navidrome 需要访问音乐文件夹
+MUSIC_DIR="${TRIM_PKGVAR}/music"
+mkdir -p "$MUSIC_DIR"
+mkdir -p "$APP_DATA_DIR/data"
+
+cd "$APP_DIR" || exit 1
+exec ./navidrome --datafolder "$APP_DATA_DIR/data" --port "${TRIM_SERVICE_PORT}" --musicfolder "$MUSIC_DIR"

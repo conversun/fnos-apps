@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "navidrome.Application":
+        {
+            "title": "Navidrome",
+            "desc": "Navidrome",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "4533",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}
