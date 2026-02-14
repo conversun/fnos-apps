@@ -1,0 +1,19 @@
+{
+    "port-config": {
+        "protocol-file": "moviepilot.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "moviepilot",
+                "permission": {
+                    "rw": [
+                        "moviepilot"
+                    ]
+                }
+            }
+        ]
+    },
+    "systemd-unit": {
+    }
+}

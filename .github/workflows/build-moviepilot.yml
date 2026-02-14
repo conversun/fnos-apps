@@ -1,0 +1,33 @@
+name: Build MoviePilot fnOS Package
+
+permissions:
+  contents: write
+
+on:
+  push:
+    paths:
+      - 'apps/moviepilot/**'
+      - 'shared/**'
+      - '!**/*.md'
+  schedule:
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version (leave empty for latest)'
+        required: false
+        default: ''
+      revision:
+        description: 'Revision suffix (e.g., r2 for re-release, leave empty for auto)'
+        required: false
+        default: ''
+
+jobs:
+  build:
+    uses: ./.github/workflows/reusable-build-app.yml
+    with:
+      app: moviepilot
+      version: ${{ github.event.inputs.version || '' }}
+      revision: ${{ github.event.inputs.revision || '' }}
+      event_name: ${{ github.event_name }}
+    secrets: inherit

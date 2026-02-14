@@ -1,0 +1,15 @@
+appname         = moviepilot
+version         = 0.0.0
+display_name    = MoviePilot
+platform        = x86
+maintainer      = jxxghp
+maintainer_url  = https://github.com/jxxghp/MoviePilot
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = moviepilot.Application
+service_port    = 3000
+install_dep_apps = python312
+desc            = 影视自动化管理工具，支持自动订阅、下载、整理和通知。首次启动通过 Web UI 配置。
+source          = thirdparty
+checksum        = 

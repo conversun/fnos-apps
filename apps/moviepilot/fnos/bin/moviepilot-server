@@ -1,0 +1,31 @@
+#!/bin/sh
+APP_DIR="${TRIM_APPDEST}"
+APP_DATA_DIR=$1
+
+# 使用 fnOS 系统 Python 运行时 (install_dep_apps=python312)
+if [ -d "/var/apps/python312/target/bin" ]; then
+    export PATH="/var/apps/python312/target/bin:$PATH"
+else
+    echo "错误: 未找到 Python 3.12 运行环境" >&2
+    exit 1
+fi
+
+# 激活虚拟环境
+VENV_DIR="$APP_DATA_DIR/venv"
+if [ ! -d "$VENV_DIR" ]; then
+    echo "错误: 虚拟环境未初始化，请重新安装应用" >&2
+    exit 1
+fi
+. "$VENV_DIR/bin/activate"
+
+# 配置环境变量
+export CONFIG_DIR="$APP_DATA_DIR/config"
+export PORT=3000
+export HOST=0.0.0.0
+export LANG=C.UTF-8
+export LC_ALL=C.UTF-8
+
+mkdir -p "$CONFIG_DIR"
+
+cd "$APP_DIR" || exit 1
+exec python3 app/main.py

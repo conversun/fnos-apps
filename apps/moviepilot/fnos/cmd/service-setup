@@ -1,0 +1,55 @@
+#!/bin/bash
+
+LOG_FILE="${TRIM_PKGVAR}/${TRIM_APPNAME}.log"
+PID_FILE="${TRIM_PKGVAR}/${TRIM_APPNAME}.pid"
+
+APP_DIR="${TRIM_APPDEST}"
+APP_DATA_DIR="${TRIM_PKGVAR}"
+
+SERVICE_COMMAND="$APP_DIR/bin/moviepilot-server $APP_DATA_DIR"
+SVC_BACKGROUND=y
+SVC_WRITE_PID=y
+
+# Python 运行时
+export PATH=/var/apps/python312/target/bin:$PATH
+
+VENV_DIR="${APP_DATA_DIR}/venv"
+
+_setup_venv() {
+    # 创建或更新 Python 虚拟环境并安装依赖
+    local _req="$APP_DIR/requirements.txt"
+    if [ ! -f "$_req" ]; then
+        install_log "requirements.txt not found, skipping venv setup"
+        return 0
+    fi
+
+    if [ ! -d "$VENV_DIR" ]; then
+        install_log "Creating Python virtual environment..."
+        python3 -m venv "$VENV_DIR" 2>&1 | install_log
+    fi
+
+    . "$VENV_DIR/bin/activate"
+    install_log "Installing Python dependencies (this may take several minutes)..."
+    pip install --upgrade pip 2>&1 | install_log
+    pip install -r "$_req" 2>&1 | install_log
+    deactivate
+}
+
+service_postinst() {
+    _setup_venv
+}
+
+service_postupgrade() {
+    _setup_venv
+}
+
+service_preuninst() {
+    # 确保 MoviePilot 进程被完全终止
+    pkill -f "moviepilot.*uvicorn" 2>/dev/null || true
+    sleep 1
+    pkill -9 -f "moviepilot.*uvicorn" 2>/dev/null || true
+}
+
+service_poststop() {
+    service_preuninst
+}

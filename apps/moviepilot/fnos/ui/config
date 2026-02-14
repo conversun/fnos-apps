@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "moviepilot.Application":
+        {
+            "title": "MoviePilot",
+            "desc": "MoviePilot",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "3000",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}
