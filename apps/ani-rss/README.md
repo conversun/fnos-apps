@@ -17,7 +17,7 @@
 ## 说明
 
 - 动漫 RSS 自动追番、订阅、下载和刮削工具
-- 内置 JRE 17 运行环境，无需额外安装 Java
+- 依赖 fnOS 系统 Java 17 运行环境 (`install_dep_apps=java-17-openjdk`)，安装时自动部署
 - 支持自动识别季数集数和重命名
 - 首次登录请及时修改默认密码
 
@@ -38,4 +38,3 @@
 ## Credits
 
 - [ani-rss](https://github.com/wushuo894/ani-rss) - Anime RSS Auto-Tracker
-- [Eclipse Temurin](https://adoptium.net/) - JRE 17 Runtime

@@ -9,6 +9,7 @@ distributor_url = https://github.com/conversun/fnos-apps
 desktop_uidir   = ui
 desktop_applaunchname = ani-rss.Application
 service_port    = 7789
+install_dep_apps = java-17-openjdk
 desc            = 动漫 RSS 自动追番、订阅、下载和刮削工具，支持自动识别季数集数和重命名。默认用户名admin，密码admin。
 source          = thirdparty
 checksum        = 

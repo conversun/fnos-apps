@@ -37,6 +37,18 @@ else
   OUT="${LOG_FILE}"
 fi
 
+# V1.1.8+: 向用户展示错误信息的 Dialog 对话框
+# 写入 TRIM_TEMP_LOGFILE 后 exit 1，系统前端会展示该错误
+error_exit()
+{
+    local msg="$1"
+    if [ -n "${TRIM_TEMP_LOGFILE:-}" ]; then
+        echo "$msg" > "${TRIM_TEMP_LOGFILE}"
+    fi
+    echo "ERROR: $msg" >&2
+    exit 1
+}
+
 validate_preinst()
 {
 echo "validate_preinst"

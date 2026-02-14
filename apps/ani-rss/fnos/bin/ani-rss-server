@@ -2,14 +2,24 @@
 APP_DIR="${TRIM_APPDEST}"
 APP_DATA_DIR=$1
 
-export JAVA_HOME="$APP_DIR/jre"
+# 优先使用 fnOS 系统 Java 运行时 (install_dep_apps=java-17-openjdk)
+# 回退到捆绑 JRE (兼容旧版 fpk)
+if [ -d "/var/apps/java-17-openjdk/target" ]; then
+    export JAVA_HOME="/var/apps/java-17-openjdk/target"
+elif [ -d "$APP_DIR/jre" ]; then
+    export JAVA_HOME="$APP_DIR/jre"
+else
+    echo "错误: 未找到 Java 运行环境" >&2
+    exit 1
+fi
+
 export PATH="$JAVA_HOME/bin:$PATH"
 export LANG=C.UTF-8
 export LC_ALL=C.UTF-8
 export CONFIG="$APP_DATA_DIR"
 
 cd "$APP_DIR" || exit 1
-exec "$JAVA_HOME/bin/java" \
+exec java \
   -Xms60m -Xmx512m -Xss256k \
   -Dfile.encoding=UTF-8 \
   -XX:+UseStringDeduplication \

@@ -14,11 +14,8 @@ APP_FPK_PREFIX="ani-rss"
 APP_HELP_VERSION_EXAMPLE="2.5.2"
 
 app_set_arch_vars() {
-    case "$ARCH" in
-        x86) JRE_ARCH="x64" ;;
-        arm) JRE_ARCH="aarch64" ;;
-    esac
-    info "JRE arch: $JRE_ARCH"
+    # JRE 不再捆绑，改用 fnOS 系统 Java 运行时 (install_dep_apps=java-17-openjdk)
+    :
 }
 
 app_show_help_examples() {
@@ -42,30 +39,24 @@ app_get_latest_version() {
 
 app_download() {
     local jar_url="https://github.com/wushuo894/ani-rss/releases/download/v${APP_VERSION}/ani-rss-jar-with-dependencies.jar"
-    local jre_url="https://api.adoptium.net/v3/binary/latest/17/ga/linux/${JRE_ARCH}/jre/hotspot/normal/eclipse"
 
     info "下载 JAR: $jar_url"
     mkdir -p "$WORK_DIR"
     curl -L -f -o "$WORK_DIR/ani-rss.jar" "$jar_url" || error "JAR 下载失败"
     info "JAR 下载完成: $(du -h "$WORK_DIR/ani-rss.jar" | cut -f1)"
 
-    info "下载 JRE 17 ($JRE_ARCH): $jre_url"
-    curl -L -f -o "$WORK_DIR/jre.tar.gz" "$jre_url" || error "JRE 下载失败"
-    info "JRE 下载完成: $(du -h "$WORK_DIR/jre.tar.gz" | cut -f1)"
+    # JRE 不再捆绑，改用 fnOS 系统 Java 运行时 (install_dep_apps=java-17-openjdk)
 }
 
 app_build_app_tgz() {
-    info "解压 JRE..."
-    cd "$WORK_DIR"
-    mkdir -p jre_extracted
-    tar -xzf jre.tar.gz -C jre_extracted --strip-components=1
-
     info "构建 app.tgz..."
+    cd "$WORK_DIR"
     local dst="$WORK_DIR/app_root"
-    mkdir -p "$dst/bin" "$dst/jre" "$dst/config" "$dst/ui/images"
+    mkdir -p "$dst/bin" "$dst/config" "$dst/ui/images"
 
     cp ani-rss.jar "$dst/ani-rss-jar-with-dependencies.jar"
-    cp -a jre_extracted/* "$dst/jre/"
+
+    # JRE 不再捆绑，使用 fnOS 系统 Java 运行时
 
     cp "$PKG_DIR/bin/ani-rss-server" "$dst/bin/ani-rss-server" 2>/dev/null || true
     chmod +x "$dst/bin/ani-rss-server" 2>/dev/null || true
