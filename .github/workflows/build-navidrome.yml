@@ -2,6 +2,7 @@ name: Build Navidrome fnOS Package
 
 permissions:
   contents: write
+  actions: write
 
 on:
   push:

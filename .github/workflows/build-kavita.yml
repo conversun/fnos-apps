@@ -2,6 +2,7 @@ name: Build Kavita fnOS Package
 
 permissions:
   contents: write
+  actions: write
 
 on:
   push:

@@ -2,6 +2,7 @@ name: Build ani-rss fnOS Package
 
 permissions:
   contents: write
+  actions: write
 
 on:
   schedule:

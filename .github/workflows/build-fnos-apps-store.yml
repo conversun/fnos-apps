@@ -2,6 +2,7 @@ name: Build fnOS Apps Store Package
 
 permissions:
   contents: write
+  actions: write
 
 on:
   workflow_dispatch:

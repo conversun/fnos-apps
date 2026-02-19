@@ -2,6 +2,7 @@ name: Build MoviePilot fnOS Package
 
 permissions:
   contents: write
+  actions: write
 
 on:
   push:
