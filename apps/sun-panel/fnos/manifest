@@ -1,0 +1,14 @@
+appname         = sun-panel
+version         = 0.0.0
+display_name    = Sun-Panel
+platform        = x86
+maintainer      = Sun-Panel
+maintainer_url  = https://doc.sun-panel.top/zh_cn
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = sun-panel.Application
+service_port    = 3002
+desc            = 服务器/NAS导航面板，支持多账户和Docker容器管理
+source          = thirdparty
+checksum        = 

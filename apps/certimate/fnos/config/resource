@@ -1,0 +1,19 @@
+{
+    "port-config": {
+        "protocol-file": "Certimate.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "Certimate",
+                "permission": {
+                    "rw": [
+                        "certimate"
+                    ]
+                }
+            }
+        ]
+    },
+    "systemd-unit": {
+    }
+}

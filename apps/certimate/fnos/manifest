@@ -1,0 +1,14 @@
+appname         = certimate
+version         = 0.4.17
+display_name    = Certimate
+platform        = x86
+maintainer      = Certimate
+maintainer_url  = https://github.com/certimate-go/certimate
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = certimate.Application
+service_port    = 8090
+desc            = SSL/TLS证书自动化管理工具，支持ACME协议自动申请和续签证书。
+source          = thirdparty
+checksum        = 

@@ -1,0 +1,8 @@
+#!/bin/sh
+APP_DIR="${TRIM_APPDEST}"
+APP_DATA_DIR=$1
+
+export HOME="$APP_DATA_DIR"
+
+cd "$APP_DIR" || exit 1
+exec ./syncthing serve --gui-address=0.0.0.0:${TRIM_SERVICE_PORT} --home="$APP_DATA_DIR" --no-browser

@@ -1,0 +1,14 @@
+appname         = syncthing
+version         = 0.0.0
+display_name    = Syncthing
+platform        = x86
+maintainer      = Syncthing
+maintainer_url  = https://syncthing.net
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = syncthing.Application
+service_port    = 8384
+desc            = 开源的文件同步工具，支持多设备间安全同步
+source          = thirdparty
+checksum        = 

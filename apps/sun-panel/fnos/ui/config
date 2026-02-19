@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "sun-panel.Application":
+        {
+            "title": "Sun-Panel",
+            "desc": "Sun-Panel",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "3002",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

@@ -1,0 +1,9 @@
+#!/bin/sh
+APP_DIR="${TRIM_APPDEST}"
+APP_DATA_DIR=$1
+
+CONF_DIR="$APP_DATA_DIR/conf"
+mkdir -p "$CONF_DIR"
+
+cd "$APP_DIR" || exit 1
+exec ./sun-panel -config-path "$CONF_DIR"

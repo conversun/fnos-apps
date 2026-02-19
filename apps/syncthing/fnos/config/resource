@@ -1,0 +1,19 @@
+{
+    "port-config": {
+        "protocol-file": "Syncthing.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "Syncthing",
+                "permission": {
+                    "rw": [
+                        "syncthing"
+                    ]
+                }
+            }
+        ]
+    },
+    "systemd-unit": {
+    }
+}

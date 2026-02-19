@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "certimate.Application":
+        {
+            "title": "Certimate",
+            "desc": "SSL Certificate Manager",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "8090",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}
