@@ -1,7 +1,7 @@
 # fnOS Apps
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-![Apps](https://img.shields.io/badge/apps-18-2ea44f)
+![Apps](https://img.shields.io/badge/apps-26-2ea44f)
 ![Platform](https://img.shields.io/badge/fnOS-third--party-orange)
 
 面向飞牛 fnOS 的第三方应用打包仓库。自动跟踪上游版本，构建可直接安装的 `.fpk` 包。
@@ -34,6 +34,7 @@
 | | App | 端口 | 说明 | 下载 |
 |:---:|---|---:|---|:---:|
 | <img src="apps/qbittorrent/fnos/ICON.PNG" width="28"> | [**qBittorrent**](apps/qbittorrent/) | `8085` | BitTorrent 客户端，默认账号 `admin/adminadmin` | [Release][r-qb] |
+| <img src="apps/transmission/fnos/ICON.PNG" width="28"> | [**Transmission**](apps/transmission/) | `9091` | 轻量级 BitTorrent 客户端 | [Release][r-transmission] |
 | <img src="apps/gopeed/fnos/ICON.PNG" width="28"> | [**Gopeed**](apps/gopeed/) | `9999` | 高速下载器，支持 HTTP/BT/Magnet | [Release][r-gopeed] |
 | <img src="apps/syncthing/fnos/ICON.PNG" width="28"> | [**Syncthing**](apps/syncthing/) | `8384` | 文件同步工具，P2P 架构 | [Release][r-syncthing] |
 
@@ -45,6 +46,7 @@
 | <img src="apps/audiobookshelf/fnos/ICON.PNG" width="28"> | [**Audiobookshelf**](apps/audiobookshelf/) | `13378` | 有声书和播客服务器 | [Release][r-abs] |
 | <img src="apps/moviepilot/fnos/ICON.PNG" width="28"> | [**MoviePilot**](apps/moviepilot/) | `3000` | 影视自动化管理 | [Release][r-mp] |
 | <img src="apps/openlist/fnos/ICON.PNG" width="28"> | [**OpenList**](apps/openlist/) | `5244` | 文件列表/WebDAV | [Release][r-openlist] |
+| <img src="apps/kodbox/fnos/ICON.PNG" width="28"> | [**KodBox**](apps/kodbox/) | `8500` | 私有云存储/在线文档协作 | [Release][r-kodbox] |
 
 ### 🔧 系统工具
 
@@ -54,6 +56,17 @@
 | <img src="apps/certimate/fnos/ICON.PNG" width="28"> | [**Certimate**](apps/certimate/) | `8090` | SSL 证书管理 | [Release][r-certimate] |
 | <img src="apps/vaultwarden/fnos/ICON.PNG" width="28"> | [**Vaultwarden**](apps/vaultwarden/) | `8880` | 密码管理（Bitwarden 兼容） | [Release][r-vw] |
 | <img src="apps/nginx/fnos/ICON.PNG" width="28"> | [**Nginx**](apps/nginx/) | `8888` | HTTP 服务与反向代理 | [Release][r-nginx] |
+| <img src="apps/gotify/fnos/ICON.PNG" width="28"> | [**Gotify**](apps/gotify/) | `8070` | 自托管推送通知服务 | [Release][r-gotify] |
+| <img src="apps/ddns-go/fnos/ICON.PNG" width="28"> | [**DDNS-GO**](apps/ddns-go/) | `9876` | 动态 DNS 解析客户端 | [Release][r-ddnsgo] |
+| <img src="apps/wolgoweb/fnos/ICON.PNG" width="28"> | [**WolGoWeb**](apps/wolgoweb/) | `9090` | 网络唤醒 (Wake-on-LAN) 管理 | [Release][r-wolgoweb] |
+| <img src="apps/adguardhome/fnos/ICON.PNG" width="28"> | [**AdGuardHome**](apps/adguardhome/) | `3080` | 全网广告拦截与 DNS 管理 | [Release][r-adguardhome] |
+
+### 🌐 浏览器
+
+| | App | 端口 | 说明 | 下载 |
+|:---:|---|---:|---|:---:|
+| <img src="apps/firefox/fnos/ICON.PNG" width="28"> | [**Firefox**](apps/firefox/) | `5801` | 远程浏览器，支持中文 | [Release][r-firefox] |
+| <img src="apps/chromium/fnos/ICON.PNG" width="28"> | [**Chromium**](apps/chromium/) | `5802` | 远程浏览器，支持中文 | [Release][r-chromium] |
 
 ## 反馈与请求
 
@@ -139,13 +152,21 @@ fnos-apps/
 [r-kavita]: https://github.com/conversun/fnos-apps/releases?q=kavita
 [r-tmm]: https://github.com/conversun/fnos-apps/releases?q=tinymediamanager
 [r-qb]: https://github.com/conversun/fnos-apps/releases?q=qbittorrent
+[r-transmission]: https://github.com/conversun/fnos-apps/releases?q=transmission
 [r-gopeed]: https://github.com/conversun/fnos-apps/releases?q=gopeed
 [r-syncthing]: https://github.com/conversun/fnos-apps/releases?q=syncthing
 [r-ani]: https://github.com/conversun/fnos-apps/releases?q=ani-rss
 [r-abs]: https://github.com/conversun/fnos-apps/releases?q=audiobookshelf
 [r-mp]: https://github.com/conversun/fnos-apps/releases?q=moviepilot
 [r-openlist]: https://github.com/conversun/fnos-apps/releases?q=openlist
+[r-kodbox]: https://github.com/conversun/fnos-apps/releases?q=kodbox
 [r-sunpanel]: https://github.com/conversun/fnos-apps/releases?q=sun-panel
 [r-certimate]: https://github.com/conversun/fnos-apps/releases?q=certimate
 [r-vw]: https://github.com/conversun/fnos-apps/releases?q=vaultwarden
 [r-nginx]: https://github.com/conversun/fnos-apps/releases?q=nginx
+[r-gotify]: https://github.com/conversun/fnos-apps/releases?q=gotify
+[r-ddnsgo]: https://github.com/conversun/fnos-apps/releases?q=ddns-go
+[r-wolgoweb]: https://github.com/conversun/fnos-apps/releases?q=wolgoweb
+[r-adguardhome]: https://github.com/conversun/fnos-apps/releases?q=adguardhome
+[r-firefox]: https://github.com/conversun/fnos-apps/releases?q=firefox
+[r-chromium]: https://github.com/conversun/fnos-apps/releases?q=chromium
