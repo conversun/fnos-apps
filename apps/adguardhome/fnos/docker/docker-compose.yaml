@@ -1,6 +1,6 @@
 services:
   adguardhome:
-    image: adguard/adguardhome:v${VERSION}
+    image: ${DOCKER_MIRROR-docker.conversun.com/docker.io/}adguard/adguardhome:v${VERSION}
     container_name: adguardhome
     ports:
       - "${TRIM_SERVICE_PORT}:3000"

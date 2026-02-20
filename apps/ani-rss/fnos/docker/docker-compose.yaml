@@ -1,6 +1,6 @@
 services:
   ani-rss:
-    image: wushuo894/ani-rss:v${VERSION}
+    image: ${DOCKER_MIRROR-docker.conversun.com/docker.io/}wushuo894/ani-rss:v${VERSION}
     container_name: ani-rss
     ports:
       - "${TRIM_SERVICE_PORT}:7789"

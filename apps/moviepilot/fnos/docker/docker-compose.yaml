@@ -1,6 +1,6 @@
 services:
   moviepilot:
-    image: jxxghp/moviepilot-v2:${VERSION}
+    image: ${DOCKER_MIRROR-docker.conversun.com/docker.io/}jxxghp/moviepilot-v2:${VERSION}
     container_name: moviepilot
     ports:
       - "${TRIM_SERVICE_PORT}:3000"
