@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-02-20T05:03:23Z",
+  "generated_at": "2026-02-20T15:54:51Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -13,8 +13,8 @@
       "display_name": "AdGuardHome",
       "description": "AdGuardHome 是一个网络范围的广告和跟踪器拦截 DNS 服务器，支持 DNS-over-HTTPS、DNS-over-TLS。",
       "version": "0.107.72",
-      "fpk_version": "0.107.72",
-      "release_tag": "adguardhome/v0.107.72",
+      "fpk_version": "0.107.72-r1",
+      "release_tag": "adguardhome/v0.107.72-r1",
       "service_port": 3080,
       "homepage_url": "https://adguard.com/adguard-home/overview.html",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/adguardhome/fnos/ICON_256.PNG",
@@ -22,7 +22,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-20T04:40:03Z",
+      "updated_at": "2026-02-20T15:54:47Z",
       "download_count": 2,
       "app_type": "docker"
     },
@@ -93,8 +93,8 @@
       "display_name": "Chromium",
       "description": "Chromium 浏览器的 Docker 容器版本，通过网页即可远程访问，内置中文字体支持。",
       "version": "26.02.3",
-      "fpk_version": "26.02.3",
-      "release_tag": "chromium/v26.02.3",
+      "fpk_version": "26.02.3-r1",
+      "release_tag": "chromium/v26.02.3-r1",
       "service_port": 5802,
       "homepage_url": "https://github.com/jlesage/docker-chromium",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/chromium/fnos/ICON_256.PNG",
@@ -102,8 +102,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-20T04:40:02Z",
-      "download_count": 0,
+      "updated_at": "2026-02-20T15:54:46Z",
+      "download_count": 3,
       "app_type": "docker"
     },
     {
@@ -143,7 +143,7 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:38:36Z",
-      "download_count": 182,
+      "download_count": 195,
       "app_type": "native"
     },
     {
@@ -153,8 +153,8 @@
       "display_name": "Firefox",
       "description": "Firefox 浏览器的 Docker 容器版本，通过网页即可远程访问，内置中文字体支持。",
       "version": "26.02.2",
-      "fpk_version": "26.02.2",
-      "release_tag": "firefox/v26.02.2",
+      "fpk_version": "26.02.2-r1",
+      "release_tag": "firefox/v26.02.2-r1",
       "service_port": 5801,
       "homepage_url": "https://github.com/jlesage/docker-firefox",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/firefox/fnos/ICON_256.PNG",
@@ -162,8 +162,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-20T04:40:10Z",
-      "download_count": 2,
+      "updated_at": "2026-02-20T15:54:40Z",
+      "download_count": 5,
       "app_type": "docker"
     },
     {
@@ -183,7 +183,7 @@
         "arm"
       ],
       "updated_at": "2026-02-20T03:34:03Z",
-      "download_count": 357,
+      "download_count": 399,
       "app_type": "native"
     },
     {
@@ -223,7 +223,7 @@
         "arm"
       ],
       "updated_at": "2026-02-20T04:40:04Z",
-      "download_count": 2,
+      "download_count": 3,
       "app_type": "native"
     },
     {
@@ -253,8 +253,8 @@
       "display_name": "Kavita",
       "description": "开源的漫画、轻小说和电子书阅读服务器",
       "version": "0.8.9",
-      "fpk_version": "0.8.9",
-      "release_tag": "kavita/v0.8.9",
+      "fpk_version": "0.8.9-r1",
+      "release_tag": "kavita/v0.8.9-r1",
       "service_port": 5000,
       "homepage_url": "https://github.com/Kareadita/Kavita",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/kavita/fnos/ICON_256.PNG",
@@ -262,8 +262,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-19T17:20:08Z",
-      "download_count": 2,
+      "updated_at": "2026-02-20T15:54:46Z",
+      "download_count": 3,
       "app_type": "docker"
     },
     {
@@ -273,8 +273,8 @@
       "display_name": "KodBox",
       "description": "KodBox (可道云) 是一个开源的私有云存储和文件管理平台，支持在线文档编辑和多人协作。",
       "version": "1.63",
-      "fpk_version": "1.63",
-      "release_tag": "kodbox/v1.63",
+      "fpk_version": "1.63-r1",
+      "release_tag": "kodbox/v1.63-r1",
       "service_port": 8500,
       "homepage_url": "https://kodcloud.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/kodbox/fnos/ICON_256.PNG",
@@ -282,7 +282,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-20T04:40:03Z",
+      "updated_at": "2026-02-20T15:54:46Z",
       "download_count": 2,
       "app_type": "docker"
     },
@@ -293,8 +293,8 @@
       "display_name": "MoviePilot",
       "description": "影视自动化管理工具,支持自动订阅、下载、整理和通知。首次启动通过 Web UI 配置。",
       "version": "2.9.11",
-      "fpk_version": "2.9.11",
-      "release_tag": "moviepilot/v2.9.11",
+      "fpk_version": "2.9.11-r1",
+      "release_tag": "moviepilot/v2.9.11-r1",
       "service_port": 3000,
       "homepage_url": "https://github.com/jxxghp/MoviePilot",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/moviepilot/fnos/ICON_256.PNG",
@@ -302,8 +302,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-19T17:19:57Z",
-      "download_count": 6,
+      "updated_at": "2026-02-20T15:54:44Z",
+      "download_count": 7,
       "app_type": "docker"
     },
     {
@@ -323,7 +323,7 @@
         "arm"
       ],
       "updated_at": "2026-02-20T05:03:13Z",
-      "download_count": 6,
+      "download_count": 10,
       "app_type": "native"
     },
     {
@@ -383,7 +383,7 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:37:53Z",
-      "download_count": 121,
+      "download_count": 124,
       "app_type": "native"
     },
     {
@@ -403,7 +403,7 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:37:35Z",
-      "download_count": 157,
+      "download_count": 162,
       "app_type": "native"
     },
     {
@@ -423,7 +423,7 @@
         "arm"
       ],
       "updated_at": "2026-02-19T17:20:02Z",
-      "download_count": 1,
+      "download_count": 2,
       "app_type": "native"
     },
     {
@@ -443,7 +443,7 @@
         "arm"
       ],
       "updated_at": "2026-02-19T17:20:02Z",
-      "download_count": 3,
+      "download_count": 4,
       "app_type": "native"
     },
     {
@@ -453,8 +453,8 @@
       "display_name": "tinyMediaManager",
       "description": "影视文件元数据管理工具，支持从 TheMovieDB、IMDb 刮削元数据，为 Kodi、Emby、Jellyfin、Plex 创建 NFO 文件，自动重命名和整理。含内置 JRE，通过虚拟显示运行。",
       "version": "5.2.7.1",
-      "fpk_version": "5.2.7.1",
-      "release_tag": "tinymediamanager/v5.2.7.1",
+      "fpk_version": "5.2.7.1-r1",
+      "release_tag": "tinymediamanager/v5.2.7.1-r1",
       "service_port": 5800,
       "homepage_url": "https://www.tinymediamanager.org",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/tinymediamanager/fnos/ICON_256.PNG",
@@ -462,8 +462,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-19T17:30:56Z",
-      "download_count": 1,
+      "updated_at": "2026-02-20T15:54:41Z",
+      "download_count": 3,
       "app_type": "docker"
     },
     {
@@ -473,8 +473,8 @@
       "display_name": "Transmission",
       "description": "Transmission 是一个轻量级的 BitTorrent 客户端，以简洁高效著称，支持 Web 远程管理。",
       "version": "4.1.0",
-      "fpk_version": "4.1.0-r0-ls330",
-      "release_tag": "transmission/v4.1.0-r0-ls330",
+      "fpk_version": "4.1.0-r0-ls330-r1",
+      "release_tag": "transmission/v4.1.0-r0-ls330-r1",
       "service_port": 9091,
       "homepage_url": "https://transmissionbt.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/transmission/fnos/ICON_256.PNG",
@@ -482,8 +482,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-20T04:40:03Z",
-      "download_count": 2,
+      "updated_at": "2026-02-20T15:54:41Z",
+      "download_count": 3,
       "app_type": "docker"
     },
     {
@@ -493,8 +493,8 @@
       "display_name": "Vaultwarden",
       "description": "轻量级 Bitwarden 兼容密码管理服务器，使用 Rust 编写，支持自托管密码管理。",
       "version": "1.35.3",
-      "fpk_version": "1.35.3",
-      "release_tag": "vaultwarden/v1.35.3",
+      "fpk_version": "1.35.3-r1",
+      "release_tag": "vaultwarden/v1.35.3-r1",
       "service_port": 8880,
       "homepage_url": "https://github.com/dani-garcia/vaultwarden",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/vaultwarden/fnos/ICON_256.PNG",
@@ -502,8 +502,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-19T17:30:36Z",
-      "download_count": 2,
+      "updated_at": "2026-02-20T15:54:47Z",
+      "download_count": 3,
       "app_type": "docker"
     },
     {
@@ -523,7 +523,7 @@
         "arm"
       ],
       "updated_at": "2026-02-20T04:40:09Z",
-      "download_count": 2,
+      "download_count": 3,
       "app_type": "native"
     }
   ]
