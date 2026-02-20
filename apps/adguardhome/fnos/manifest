@@ -1,0 +1,14 @@
+appname         = adguardhome
+version         = 0.0.0
+display_name    = AdGuardHome
+platform        = x86
+maintainer      = AdguardTeam
+maintainer_url  = https://github.com/AdguardTeam/AdGuardHome
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = adguardhome.Application
+service_port    = 3080
+desc            = AdGuardHome 是一个网络范围的广告和跟踪器拦截 DNS 服务器，支持 DNS-over-HTTPS、DNS-over-TLS。
+source          = thirdparty
+checksum        = 

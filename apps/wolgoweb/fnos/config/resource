@@ -1,0 +1,19 @@
+{
+    "port-config": {
+        "protocol-file": "WolGoWeb.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "WolGoWeb",
+                "permission": {
+                    "rw": [
+                        "wolgoweb"
+                    ]
+                }
+            }
+        ]
+    },
+    "systemd-unit": {
+    }
+}

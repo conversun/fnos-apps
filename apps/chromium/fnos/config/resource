@@ -1,0 +1,25 @@
+{
+    "port-config": {
+        "protocol-file": "Chromium.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "Chromium",
+                "permission": {
+                    "rw": [
+                        "chromium"
+                    ]
+                }
+            }
+        ]
+    },
+    "docker-project": {
+        "projects": [
+            {
+                "name": "chromium",
+                "path": "docker"
+            }
+        ]
+    }
+}

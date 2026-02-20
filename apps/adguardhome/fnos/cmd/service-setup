@@ -1,0 +1,6 @@
+#!/bin/bash
+
+service_postinst() {
+    mkdir -p "${TRIM_PKGVAR}/conf" 2>/dev/null || true
+    mkdir -p "${TRIM_PKGVAR}/work" 2>/dev/null || true
+}

@@ -4,7 +4,7 @@ on:
   workflow_call:
     inputs:
       app:
-        description: 'App slug: plex|emby|qbittorrent|nginx|jellyfin|ani-rss|gopeed|audiobookshelf|fnos-apps-store|kavita|tinymediamanager|moviepilot|navidrome|sun-panel|openlist|vaultwarden|certimate|syncthing'
+        description: 'App slug: plex|emby|qbittorrent|nginx|jellyfin|ani-rss|gopeed|audiobookshelf|fnos-apps-store|kavita|tinymediamanager|moviepilot|navidrome|sun-panel|openlist|vaultwarden|certimate|syncthing|gotify|ddns-go|wolgoweb|kodbox|adguardhome|transmission|firefox|chromium'
         required: true
         type: string
       version:
@@ -47,7 +47,7 @@ jobs:
       - name: Validate App Input
         run: |
           APP="${{ inputs.app }}"
-          VALID_APPS="plex emby qbittorrent nginx jellyfin ani-rss gopeed audiobookshelf fnos-apps-store kavita tinymediamanager moviepilot navidrome sun-panel openlist vaultwarden certimate syncthing"
+          VALID_APPS="plex emby qbittorrent nginx jellyfin ani-rss gopeed audiobookshelf fnos-apps-store kavita tinymediamanager moviepilot navidrome sun-panel openlist vaultwarden certimate syncthing gotify ddns-go wolgoweb kodbox adguardhome transmission firefox chromium"
           if ! echo "$VALID_APPS" | grep -qw "$APP"; then
             echo "Invalid app: $APP. Must be one of: $VALID_APPS" >&2
             exit 1

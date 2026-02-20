@@ -1,0 +1,17 @@
+services:
+  transmission:
+    image: linuxserver/transmission:${VERSION}
+    container_name: transmission
+    ports:
+      - "${TRIM_SERVICE_PORT}:9091"
+      - "51413:51413/tcp"
+      - "51413:51413/udp"
+    volumes:
+      - ${TRIM_PKGVAR}/config:/config
+      - ${TRIM_PKGVAR}/downloads:/downloads
+      - ${TRIM_PKGVAR}/watch:/watch
+    environment:
+      - PUID=${TRIM_UID}
+      - PGID=${TRIM_GID}
+      - TZ=Asia/Shanghai
+    restart: unless-stopped

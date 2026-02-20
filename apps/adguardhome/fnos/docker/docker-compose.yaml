@@ -1,0 +1,14 @@
+services:
+  adguardhome:
+    image: adguard/adguardhome:v${VERSION}
+    container_name: adguardhome
+    ports:
+      - "${TRIM_SERVICE_PORT}:3000"
+      - "53:53/tcp"
+      - "53:53/udp"
+    volumes:
+      - ${TRIM_PKGVAR}/conf:/opt/adguardhome/conf
+      - ${TRIM_PKGVAR}/work:/opt/adguardhome/work
+    environment:
+      - TZ=Asia/Shanghai
+    restart: unless-stopped

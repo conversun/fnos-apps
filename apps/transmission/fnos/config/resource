@@ -1,0 +1,25 @@
+{
+    "port-config": {
+        "protocol-file": "Transmission.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "Transmission",
+                "permission": {
+                    "rw": [
+                        "transmission"
+                    ]
+                }
+            }
+        ]
+    },
+    "docker-project": {
+        "projects": [
+            {
+                "name": "transmission",
+                "path": "docker"
+            }
+        ]
+    }
+}

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+service_postinst() {
+    mkdir -p "${TRIM_PKGVAR}/config" 2>/dev/null || true
+    mkdir -p "${TRIM_PKGVAR}/downloads" 2>/dev/null || true
+    mkdir -p "${TRIM_PKGVAR}/watch" 2>/dev/null || true
+}

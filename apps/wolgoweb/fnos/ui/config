@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "wolgoweb.Application":
+        {
+            "title": "WolGoWeb",
+            "desc": "WolGoWeb Wake-on-LAN",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "9090",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

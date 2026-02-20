@@ -1,0 +1,14 @@
+appname         = ddns-go
+version         = 0.0.0
+display_name    = DDNS-GO
+platform        = x86
+maintainer      = jeessy2
+maintainer_url  = https://github.com/jeessy2/ddns-go
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = ddns-go.Application
+service_port    = 9876
+desc            = DDNS-GO 是一个简单好用的 DDNS 工具，支持阿里云、腾讯云、Cloudflare 等多个 DNS 服务商。
+source          = thirdparty
+checksum        = 

@@ -1,0 +1,14 @@
+appname         = chromium
+version         = 0.0.0
+display_name    = Chromium
+platform        = x86
+maintainer      = jlesage
+maintainer_url  = https://github.com/jlesage/docker-chromium
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = chromium.Application
+service_port    = 5802
+desc            = Chromium 浏览器的 Docker 容器版本，通过网页即可远程访问，内置中文字体支持。
+source          = thirdparty
+checksum        = 

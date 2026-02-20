@@ -1,0 +1,18 @@
+services:
+  chromium:
+    image: jlesage/chromium:v${VERSION}
+    container_name: chromium
+    ports:
+      - "${TRIM_SERVICE_PORT}:5800"
+    volumes:
+      - ${TRIM_PKGVAR}/config:/config
+    environment:
+      - USER_ID=${TRIM_UID}
+      - GROUP_ID=${TRIM_GID}
+      - TZ=Asia/Shanghai
+      - LANG=zh_CN.UTF-8
+      - ENABLE_CJK_FONT=1
+      - DISPLAY_WIDTH=1280
+      - DISPLAY_HEIGHT=720
+      - KEEP_APP_RUNNING=1
+    restart: unless-stopped

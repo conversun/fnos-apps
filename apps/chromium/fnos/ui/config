@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "chromium.Application":
+        {
+            "title": "Chromium",
+            "desc": "Chromium Browser",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "5802",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

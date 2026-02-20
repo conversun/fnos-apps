@@ -1,0 +1,7 @@
+{
+    "defaults": {
+        "run-as": "package"
+    },
+    "username": "wolgoweb",
+    "groupname": "wolgoweb"
+}

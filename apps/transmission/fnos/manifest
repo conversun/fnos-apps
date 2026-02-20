@@ -1,0 +1,14 @@
+appname         = transmission
+version         = 0.0.0
+display_name    = Transmission
+platform        = x86
+maintainer      = Transmission
+maintainer_url  = https://transmissionbt.com
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = transmission.Application
+service_port    = 9091
+desc            = Transmission 是一个轻量级的 BitTorrent 客户端，以简洁高效著称，支持 Web 远程管理。
+source          = thirdparty
+checksum        = 

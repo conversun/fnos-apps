@@ -1,0 +1,14 @@
+appname         = gotify
+version         = 0.0.0
+display_name    = Gotify
+platform        = x86
+maintainer      = Gotify
+maintainer_url  = https://github.com/gotify/server
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = gotify.Application
+service_port    = 8070
+desc            = Gotify 是一个简单的自托管推送通知服务器，支持通过 REST API 发送和接收消息。
+source          = thirdparty
+checksum        = 

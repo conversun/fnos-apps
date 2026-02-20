@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "kodbox.Application":
+        {
+            "title": "KodBox",
+            "desc": "KodBox Cloud Storage",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "8500",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

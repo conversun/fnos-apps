@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "ddns-go.Application":
+        {
+            "title": "DDNS-GO",
+            "desc": "DDNS-GO Dynamic DNS Client",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "9876",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

@@ -1,0 +1,14 @@
+appname         = wolgoweb
+version         = 0.0.0
+display_name    = WolGoWeb
+platform        = x86
+maintainer      = xiaoxinpro
+maintainer_url  = https://github.com/xiaoxinpro/WolGoWeb
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = wolgoweb.Application
+service_port    = 9090
+desc            = WolGoWeb 是基于 Golang 的远程唤醒 WebAPI 工具，用于在局域网中通过网页唤醒主机。
+source          = thirdparty
+checksum        = 

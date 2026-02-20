@@ -1,0 +1,7 @@
+{
+    "defaults": {
+        "run-as": "package"
+    },
+    "username": "ddns-go",
+    "groupname": "ddns-go"
+}

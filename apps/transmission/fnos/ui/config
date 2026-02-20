@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "transmission.Application":
+        {
+            "title": "Transmission",
+            "desc": "Transmission BitTorrent Client",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "9091",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

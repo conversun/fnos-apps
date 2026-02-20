@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "adguardhome.Application":
+        {
+            "title": "AdGuardHome",
+            "desc": "AdGuardHome DNS Ad Blocker",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "3080",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

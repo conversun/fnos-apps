@@ -1,0 +1,19 @@
+{
+    "port-config": {
+        "protocol-file": "DDNS-GO.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "DDNS-GO",
+                "permission": {
+                    "rw": [
+                        "ddns-go"
+                    ]
+                }
+            }
+        ]
+    },
+    "systemd-unit": {
+    }
+}

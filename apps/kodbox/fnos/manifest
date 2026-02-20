@@ -1,0 +1,14 @@
+appname         = kodbox
+version         = 0.0.0
+display_name    = KodBox
+platform        = x86
+maintainer      = KodCloud
+maintainer_url  = https://kodcloud.com
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = kodbox.Application
+service_port    = 8500
+desc            = KodBox (可道云) 是一个开源的私有云存储和文件管理平台，支持在线文档编辑和多人协作。
+source          = thirdparty
+checksum        = 

@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "firefox.Application":
+        {
+            "title": "Firefox",
+            "desc": "Firefox Browser",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "5801",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

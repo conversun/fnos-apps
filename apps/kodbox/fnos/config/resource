@@ -1,0 +1,25 @@
+{
+    "port-config": {
+        "protocol-file": "KodBox.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "KodBox",
+                "permission": {
+                    "rw": [
+                        "kodbox"
+                    ]
+                }
+            }
+        ]
+    },
+    "docker-project": {
+        "projects": [
+            {
+                "name": "kodbox",
+                "path": "docker"
+            }
+        ]
+    }
+}

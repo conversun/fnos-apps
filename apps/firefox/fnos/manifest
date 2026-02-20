@@ -1,0 +1,14 @@
+appname         = firefox
+version         = 0.0.0
+display_name    = Firefox
+platform        = x86
+maintainer      = jlesage
+maintainer_url  = https://github.com/jlesage/docker-firefox
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = firefox.Application
+service_port    = 5801
+desc            = Firefox 浏览器的 Docker 容器版本，通过网页即可远程访问，内置中文字体支持。
+source          = thirdparty
+checksum        = 

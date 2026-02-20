@@ -1,0 +1,25 @@
+{
+    "port-config": {
+        "protocol-file": "Firefox.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "Firefox",
+                "permission": {
+                    "rw": [
+                        "firefox"
+                    ]
+                }
+            }
+        ]
+    },
+    "docker-project": {
+        "projects": [
+            {
+                "name": "firefox",
+                "path": "docker"
+            }
+        ]
+    }
+}

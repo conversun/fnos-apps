@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "gotify.Application":
+        {
+            "title": "Gotify",
+            "desc": "Gotify Push Notification Server",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "8070",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

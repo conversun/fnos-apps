@@ -1,0 +1,25 @@
+{
+    "port-config": {
+        "protocol-file": "AdGuardHome.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "AdGuardHome",
+                "permission": {
+                    "rw": [
+                        "adguardhome"
+                    ]
+                }
+            }
+        ]
+    },
+    "docker-project": {
+        "projects": [
+            {
+                "name": "adguardhome",
+                "path": "docker"
+            }
+        ]
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "port-config": {
+        "protocol-file": "Gotify.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "Gotify",
+                "permission": {
+                    "rw": [
+                        "gotify"
+                    ]
+                }
+            }
+        ]
+    },
+    "systemd-unit": {
+    }
+}
