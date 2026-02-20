@@ -18,6 +18,9 @@ parse_manifest() {
 echo "Fetching release list from ${REPO}..."
 ALL_RELEASES=$(gh release list --repo "$REPO" --limit 200 --json tagName,publishedAt)
 
+echo "Fetching download statistics..."
+DOWNLOAD_DATA=$(gh api "repos/${REPO}/releases" --paginate | jq '[.[] | {tag: .tag_name, downloads: ([.assets[].download_count] | add // 0)}]')
+
 NOW=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 
 APPS_JSON="[]"
@@ -64,6 +67,10 @@ for app_dir in "${REPO_ROOT}"/scripts/apps/*/; do
   release_tag=$(echo "$latest_release" | jq -r '.tagName')
   updated_at=$(echo "$latest_release" | jq -r '.publishedAt')
 
+  download_count=$(echo "$DOWNLOAD_DATA" | jq \
+    --arg prefix "${slug}/" \
+    '[.[] | select(.tag | startswith($prefix)) | .downloads] | add // 0')
+
   tag_version="${release_tag#${slug}/v}"
   version="${tag_version%%-r[0-9]*}"
   fpk_version="$tag_version"
@@ -83,6 +90,7 @@ for app_dir in "${REPO_ROOT}"/scripts/apps/*/; do
     --arg homepage_url "$HOMEPAGE_URL" \
     --arg icon_url "$icon_url" \
     --arg updated_at "$updated_at" \
+    --argjson download_count "$download_count" \
     '{
       slug: $slug,
       appname: $appname,
@@ -96,7 +104,8 @@ for app_dir in "${REPO_ROOT}"/scripts/apps/*/; do
       homepage_url: $homepage_url,
       icon_url: $icon_url,
       platforms: ["x86", "arm"],
-      updated_at: $updated_at
+      updated_at: $updated_at,
+      download_count: $download_count
     }')
 
   APPS_JSON=$(echo "$APPS_JSON" | jq --argjson app "$app_obj" '. + [$app]')
