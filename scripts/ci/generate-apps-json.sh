@@ -77,6 +77,11 @@ for app_dir in "${REPO_ROOT}"/scripts/apps/*/; do
 
   icon_url="https://raw.githubusercontent.com/${REPO}/main/apps/${slug}/fnos/ICON_256.PNG"
 
+  app_type="native"
+  if [ -f "${REPO_ROOT}/apps/${slug}/fnos/docker/docker-compose.yaml" ]; then
+    app_type="docker"
+  fi
+
   app_obj=$(jq -n \
     --arg slug "$slug" \
     --arg appname "$appname" \
@@ -91,6 +96,7 @@ for app_dir in "${REPO_ROOT}"/scripts/apps/*/; do
     --arg icon_url "$icon_url" \
     --arg updated_at "$updated_at" \
     --argjson download_count "$download_count" \
+    --arg app_type "$app_type" \
     '{
       slug: $slug,
       appname: $appname,
@@ -105,7 +111,8 @@ for app_dir in "${REPO_ROOT}"/scripts/apps/*/; do
       icon_url: $icon_url,
       platforms: ["x86", "arm"],
       updated_at: $updated_at,
-      download_count: $download_count
+      download_count: $download_count,
+      app_type: $app_type
     }')
 
   APPS_JSON=$(echo "$APPS_JSON" | jq --argjson app "$app_obj" '. + [$app]')
