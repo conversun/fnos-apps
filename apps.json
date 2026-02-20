@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-02-20T04:41:00Z",
+  "generated_at": "2026-02-20T05:03:23Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -23,7 +23,8 @@
         "arm"
       ],
       "updated_at": "2026-02-20T04:40:03Z",
-      "download_count": 0
+      "download_count": 2,
+      "app_type": "docker"
     },
     {
       "slug": "ani-rss",
@@ -42,7 +43,8 @@
         "arm"
       ],
       "updated_at": "2026-02-19T17:20:56Z",
-      "download_count": 98
+      "download_count": 98,
+      "app_type": "docker"
     },
     {
       "slug": "audiobookshelf",
@@ -61,7 +63,8 @@
         "arm"
       ],
       "updated_at": "2026-02-19T17:20:53Z",
-      "download_count": 17
+      "download_count": 17,
+      "app_type": "docker"
     },
     {
       "slug": "certimate",
@@ -80,7 +83,8 @@
         "arm"
       ],
       "updated_at": "2026-02-19T17:20:08Z",
-      "download_count": 1
+      "download_count": 1,
+      "app_type": "native"
     },
     {
       "slug": "chromium",
@@ -99,7 +103,8 @@
         "arm"
       ],
       "updated_at": "2026-02-20T04:40:02Z",
-      "download_count": 0
+      "download_count": 0,
+      "app_type": "docker"
     },
     {
       "slug": "ddns-go",
@@ -118,7 +123,8 @@
         "arm"
       ],
       "updated_at": "2026-02-20T04:40:10Z",
-      "download_count": 0
+      "download_count": 2,
+      "app_type": "native"
     },
     {
       "slug": "emby",
@@ -137,7 +143,8 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:38:36Z",
-      "download_count": 182
+      "download_count": 182,
+      "app_type": "native"
     },
     {
       "slug": "firefox",
@@ -156,7 +163,8 @@
         "arm"
       ],
       "updated_at": "2026-02-20T04:40:10Z",
-      "download_count": 0
+      "download_count": 2,
+      "app_type": "docker"
     },
     {
       "slug": "fnos-apps-store",
@@ -175,7 +183,8 @@
         "arm"
       ],
       "updated_at": "2026-02-20T03:34:03Z",
-      "download_count": 357
+      "download_count": 357,
+      "app_type": "native"
     },
     {
       "slug": "gopeed",
@@ -194,7 +203,8 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:37:46Z",
-      "download_count": 46
+      "download_count": 46,
+      "app_type": "native"
     },
     {
       "slug": "gotify",
@@ -213,7 +223,8 @@
         "arm"
       ],
       "updated_at": "2026-02-20T04:40:04Z",
-      "download_count": 0
+      "download_count": 2,
+      "app_type": "native"
     },
     {
       "slug": "jellyfin",
@@ -232,7 +243,8 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:38:20Z",
-      "download_count": 74
+      "download_count": 74,
+      "app_type": "native"
     },
     {
       "slug": "kavita",
@@ -251,7 +263,8 @@
         "arm"
       ],
       "updated_at": "2026-02-19T17:20:08Z",
-      "download_count": 2
+      "download_count": 2,
+      "app_type": "docker"
     },
     {
       "slug": "kodbox",
@@ -270,7 +283,8 @@
         "arm"
       ],
       "updated_at": "2026-02-20T04:40:03Z",
-      "download_count": 0
+      "download_count": 2,
+      "app_type": "docker"
     },
     {
       "slug": "moviepilot",
@@ -289,7 +303,8 @@
         "arm"
       ],
       "updated_at": "2026-02-19T17:19:57Z",
-      "download_count": 6
+      "download_count": 6,
+      "app_type": "docker"
     },
     {
       "slug": "navidrome",
@@ -298,8 +313,8 @@
       "display_name": "Navidrome",
       "description": "开源的个人音乐流媒体服务器,兼容 Subsonic/Airsonic API,支持多用户和移动端应用。",
       "version": "0.60.3",
-      "fpk_version": "0.60.3-r1",
-      "release_tag": "navidrome/v0.60.3-r1",
+      "fpk_version": "0.60.3-r2",
+      "release_tag": "navidrome/v0.60.3-r2",
       "service_port": 4533,
       "homepage_url": "https://www.navidrome.org",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/navidrome/fnos/ICON_256.PNG",
@@ -307,8 +322,9 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-19T17:20:04Z",
-      "download_count": 6
+      "updated_at": "2026-02-20T05:03:13Z",
+      "download_count": 6,
+      "app_type": "native"
     },
     {
       "slug": "nginx",
@@ -327,7 +343,8 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:37:46Z",
-      "download_count": 27
+      "download_count": 27,
+      "app_type": "native"
     },
     {
       "slug": "openlist",
@@ -346,7 +363,8 @@
         "arm"
       ],
       "updated_at": "2026-02-19T17:20:08Z",
-      "download_count": 0
+      "download_count": 0,
+      "app_type": "native"
     },
     {
       "slug": "plex",
@@ -365,7 +383,8 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:37:53Z",
-      "download_count": 121
+      "download_count": 121,
+      "app_type": "native"
     },
     {
       "slug": "qbittorrent",
@@ -384,7 +403,8 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:37:35Z",
-      "download_count": 157
+      "download_count": 157,
+      "app_type": "native"
     },
     {
       "slug": "sun-panel",
@@ -403,7 +423,8 @@
         "arm"
       ],
       "updated_at": "2026-02-19T17:20:02Z",
-      "download_count": 1
+      "download_count": 1,
+      "app_type": "native"
     },
     {
       "slug": "syncthing",
@@ -422,7 +443,8 @@
         "arm"
       ],
       "updated_at": "2026-02-19T17:20:02Z",
-      "download_count": 3
+      "download_count": 3,
+      "app_type": "native"
     },
     {
       "slug": "tinymediamanager",
@@ -441,7 +463,8 @@
         "arm"
       ],
       "updated_at": "2026-02-19T17:30:56Z",
-      "download_count": 1
+      "download_count": 1,
+      "app_type": "docker"
     },
     {
       "slug": "transmission",
@@ -460,7 +483,8 @@
         "arm"
       ],
       "updated_at": "2026-02-20T04:40:03Z",
-      "download_count": 0
+      "download_count": 2,
+      "app_type": "docker"
     },
     {
       "slug": "vaultwarden",
@@ -479,7 +503,8 @@
         "arm"
       ],
       "updated_at": "2026-02-19T17:30:36Z",
-      "download_count": 2
+      "download_count": 2,
+      "app_type": "docker"
     },
     {
       "slug": "wolgoweb",
@@ -498,7 +523,8 @@
         "arm"
       ],
       "updated_at": "2026-02-20T04:40:09Z",
-      "download_count": 0
+      "download_count": 2,
+      "app_type": "native"
     }
   ]
 }
