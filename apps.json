@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-02-20T17:32:39Z",
+  "generated_at": "2026-02-21T08:07:12Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -23,7 +23,7 @@
         "arm"
       ],
       "updated_at": "2026-02-20T15:54:47Z",
-      "download_count": 4,
+      "download_count": 5,
       "app_type": "docker",
       "category": "system"
     },
@@ -33,9 +33,9 @@
       "file_prefix": "ani-rss",
       "display_name": "ANI-RSS",
       "description": "动漫 RSS 自动追番、订阅、下载和刮削工具，支持自动识别季数集数和重命名。默认用户名admin，密码admin。",
-      "version": "2.5.7",
-      "fpk_version": "2.5.7-r2",
-      "release_tag": "ani-rss/v2.5.7-r2",
+      "version": "2.5.9",
+      "fpk_version": "2.5.9",
+      "release_tag": "ani-rss/v2.5.9",
       "service_port": 7789,
       "homepage_url": "https://github.com/wushuo894/ani-rss",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ani-rss/fnos/ICON_256.PNG",
@@ -43,8 +43,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-19T17:20:56Z",
-      "download_count": 103,
+      "updated_at": "2026-02-21T08:07:02Z",
+      "download_count": 106,
       "app_type": "docker",
       "category": "content"
     },
@@ -65,7 +65,7 @@
         "arm"
       ],
       "updated_at": "2026-02-19T17:20:53Z",
-      "download_count": 17,
+      "download_count": 18,
       "app_type": "docker",
       "category": "content"
     },
@@ -86,7 +86,7 @@
         "arm"
       ],
       "updated_at": "2026-02-19T17:20:08Z",
-      "download_count": 1,
+      "download_count": 3,
       "app_type": "native",
       "category": "system"
     },
@@ -107,7 +107,7 @@
         "arm"
       ],
       "updated_at": "2026-02-20T15:54:46Z",
-      "download_count": 6,
+      "download_count": 9,
       "app_type": "docker",
       "category": "browser"
     },
@@ -149,7 +149,7 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:38:36Z",
-      "download_count": 245,
+      "download_count": 251,
       "app_type": "native",
       "category": "media"
     },
@@ -170,7 +170,7 @@
         "arm"
       ],
       "updated_at": "2026-02-20T15:54:40Z",
-      "download_count": 7,
+      "download_count": 9,
       "app_type": "docker",
       "category": "browser"
     },
@@ -180,9 +180,9 @@
       "file_prefix": "fnos-apps-store",
       "display_name": "fnOS Apps",
       "description": "fnOS第三方应用中心，支持一键安装、更新和卸载来自conversun/fnos-apps的所有应用。",
-      "version": "1.2.2",
-      "fpk_version": "1.2.2",
-      "release_tag": "fnos-apps-store/v1.2.2",
+      "version": "1.2.1",
+      "fpk_version": "1.2.1",
+      "release_tag": "fnos-apps-store/v1.2.1",
       "service_port": 8011,
       "homepage_url": "https://github.com/conversun/fnos-store",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/fnos-apps-store/fnos/ICON_256.PNG",
@@ -190,8 +190,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-20T03:34:03Z",
-      "download_count": 416,
+      "updated_at": "2026-02-19T19:16:14Z",
+      "download_count": 388,
       "app_type": "native",
       "category": "store"
     },
@@ -233,7 +233,7 @@
         "arm"
       ],
       "updated_at": "2026-02-20T17:32:29Z",
-      "download_count": 3,
+      "download_count": 6,
       "app_type": "native",
       "category": "system"
     },
@@ -254,7 +254,7 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:38:20Z",
-      "download_count": 74,
+      "download_count": 77,
       "app_type": "native",
       "category": "media"
     },
@@ -275,7 +275,7 @@
         "arm"
       ],
       "updated_at": "2026-02-20T15:54:46Z",
-      "download_count": 5,
+      "download_count": 9,
       "app_type": "docker",
       "category": "media"
     },
@@ -317,7 +317,7 @@
         "arm"
       ],
       "updated_at": "2026-02-20T15:54:44Z",
-      "download_count": 7,
+      "download_count": 15,
       "app_type": "docker",
       "category": "content"
     },
@@ -338,7 +338,7 @@
         "arm"
       ],
       "updated_at": "2026-02-20T05:03:13Z",
-      "download_count": 10,
+      "download_count": 13,
       "app_type": "native",
       "category": "media"
     },
@@ -380,7 +380,7 @@
         "arm"
       ],
       "updated_at": "2026-02-19T17:20:08Z",
-      "download_count": 0,
+      "download_count": 8,
       "app_type": "native",
       "category": "content"
     },
@@ -401,7 +401,7 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:37:53Z",
-      "download_count": 127,
+      "download_count": 148,
       "app_type": "native",
       "category": "media"
     },
@@ -422,7 +422,7 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:37:35Z",
-      "download_count": 163,
+      "download_count": 168,
       "app_type": "native",
       "category": "download"
     },
@@ -443,7 +443,7 @@
         "arm"
       ],
       "updated_at": "2026-02-19T17:20:02Z",
-      "download_count": 2,
+      "download_count": 4,
       "app_type": "native",
       "category": "system"
     },
@@ -464,7 +464,7 @@
         "arm"
       ],
       "updated_at": "2026-02-19T17:20:02Z",
-      "download_count": 4,
+      "download_count": 5,
       "app_type": "native",
       "category": "download"
     },
@@ -485,7 +485,7 @@
         "arm"
       ],
       "updated_at": "2026-02-20T15:54:41Z",
-      "download_count": 3,
+      "download_count": 10,
       "app_type": "docker",
       "category": "media"
     },
@@ -506,7 +506,7 @@
         "arm"
       ],
       "updated_at": "2026-02-20T15:54:41Z",
-      "download_count": 3,
+      "download_count": 8,
       "app_type": "docker",
       "category": "download"
     },
@@ -527,7 +527,7 @@
         "arm"
       ],
       "updated_at": "2026-02-20T15:54:47Z",
-      "download_count": 5,
+      "download_count": 7,
       "app_type": "docker",
       "category": "system"
     },
@@ -548,7 +548,7 @@
         "arm"
       ],
       "updated_at": "2026-02-20T04:40:09Z",
-      "download_count": 3,
+      "download_count": 5,
       "app_type": "native",
       "category": "system"
     }
