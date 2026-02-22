@@ -37,9 +37,11 @@ require_manifest_key() {
 [ -d "$APP_DIR/fnos" ] || error "App directory not found: $APP_DIR/fnos"
 [ -f "$APP_TGZ" ] || error "app.tgz not found: $APP_TGZ"
 
-# Validate app.tgz is not a corrupted download (e.g., HTML error page saved as binary)
+# Validate app.tgz is not a corrupted download (skip for Docker-based apps)
 APP_TGZ_SIZE=$(stat -f%z "$APP_TGZ" 2>/dev/null || stat -c%s "$APP_TGZ" 2>/dev/null)
-[ "${APP_TGZ_SIZE:-0}" -ge 10240 ] || error "app.tgz too small (${APP_TGZ_SIZE} bytes) — likely a corrupted download"
+if [ ! -d "$APP_DIR/fnos/docker" ]; then
+    [ "${APP_TGZ_SIZE:-0}" -ge 10240 ] || error "app.tgz too small (${APP_TGZ_SIZE} bytes) — likely a corrupted download"
+fi
 [ -d "$APP_DIR/fnos/cmd" ] || error "Missing directory: $APP_DIR/fnos/cmd"
 [ -d "$APP_DIR/fnos/config" ] || error "Missing directory: $APP_DIR/fnos/config"
 [ -d "$APP_DIR/fnos/ui" ] || error "Missing directory: $APP_DIR/fnos/ui"
