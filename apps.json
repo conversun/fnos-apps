@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-02-22T10:35:51Z",
+  "generated_at": "2026-02-22T10:35:53Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -76,8 +76,8 @@
       "display_name": "Certimate",
       "description": "SSL/TLS证书自动化管理工具，支持ACME协议自动申请和续签证书。",
       "version": "0.4.17",
-      "fpk_version": "0.4.17",
-      "release_tag": "certimate/v0.4.17",
+      "fpk_version": "0.4.17-r1",
+      "release_tag": "certimate/v0.4.17-r1",
       "service_port": 8090,
       "homepage_url": "https://github.com/certimate-go/certimate",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/certimate/fnos/ICON_256.PNG",
@@ -85,7 +85,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-19T17:20:08Z",
+      "updated_at": "2026-02-22T10:35:51Z",
       "download_count": 5,
       "app_type": "native",
       "category": "system"
@@ -286,8 +286,8 @@
       "display_name": "KodBox",
       "description": "KodBox (可道云) 是一个开源的私有云存储和文件管理平台，支持在线文档编辑和多人协作。",
       "version": "1.63",
-      "fpk_version": "1.63-r1",
-      "release_tag": "kodbox/v1.63-r1",
+      "fpk_version": "1.63-r2",
+      "release_tag": "kodbox/v1.63-r2",
       "service_port": 8500,
       "homepage_url": "https://kodcloud.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/kodbox/fnos/ICON_256.PNG",
@@ -295,7 +295,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-20T15:54:46Z",
+      "updated_at": "2026-02-22T10:35:51Z",
       "download_count": 3,
       "app_type": "docker",
       "category": "content"
@@ -454,8 +454,8 @@
       "display_name": "Syncthing",
       "description": "开源的文件同步工具，支持多设备间安全同步",
       "version": "2.0.14",
-      "fpk_version": "2.0.14",
-      "release_tag": "syncthing/v2.0.14",
+      "fpk_version": "2.0.14-r1",
+      "release_tag": "syncthing/v2.0.14-r1",
       "service_port": 8384,
       "homepage_url": "https://syncthing.net",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/syncthing/fnos/ICON_256.PNG",
@@ -463,7 +463,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-19T17:20:02Z",
+      "updated_at": "2026-02-22T10:35:51Z",
       "download_count": 10,
       "app_type": "native",
       "category": "download"
@@ -496,8 +496,8 @@
       "display_name": "Transmission",
       "description": "Transmission 是一个轻量级的 BitTorrent 客户端，以简洁高效著称，支持 Web 远程管理。",
       "version": "4.1.0",
-      "fpk_version": "4.1.0-r0-ls330-r1",
-      "release_tag": "transmission/v4.1.0-r0-ls330-r1",
+      "fpk_version": "4.1.0-r0-ls330-r2",
+      "release_tag": "transmission/v4.1.0-r0-ls330-r2",
       "service_port": 9091,
       "homepage_url": "https://transmissionbt.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/transmission/fnos/ICON_256.PNG",
@@ -505,7 +505,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-20T15:54:41Z",
+      "updated_at": "2026-02-22T10:35:51Z",
       "download_count": 10,
       "app_type": "docker",
       "category": "download"
@@ -538,8 +538,8 @@
       "display_name": "WolGoWeb",
       "description": "WolGoWeb 是基于 Golang 的远程唤醒 WebAPI 工具，用于在局域网中通过网页唤醒主机。",
       "version": "1.7.71",
-      "fpk_version": "1.7.71",
-      "release_tag": "wolgoweb/v1.7.71",
+      "fpk_version": "1.7.71-r1",
+      "release_tag": "wolgoweb/v1.7.71-r1",
       "service_port": 9090,
       "homepage_url": "https://github.com/xiaoxinpro/WolGoWeb",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/wolgoweb/fnos/ICON_256.PNG",
@@ -547,7 +547,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-20T04:40:09Z",
+      "updated_at": "2026-02-22T10:35:51Z",
       "download_count": 8,
       "app_type": "native",
       "category": "system"
