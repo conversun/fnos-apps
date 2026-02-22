@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-02-22T08:07:38Z",
+  "generated_at": "2026-02-22T09:29:13Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -44,7 +44,7 @@
         "arm"
       ],
       "updated_at": "2026-02-22T08:07:28Z",
-      "download_count": 115,
+      "download_count": 117,
       "app_type": "docker",
       "category": "content"
     },
@@ -149,7 +149,7 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:38:36Z",
-      "download_count": 265,
+      "download_count": 266,
       "app_type": "native",
       "category": "media"
     },
@@ -191,7 +191,7 @@
         "arm"
       ],
       "updated_at": "2026-02-21T08:52:49Z",
-      "download_count": 454,
+      "download_count": 461,
       "app_type": "native",
       "category": "store"
     },
@@ -317,7 +317,7 @@
         "arm"
       ],
       "updated_at": "2026-02-20T15:54:44Z",
-      "download_count": 26,
+      "download_count": 27,
       "app_type": "docker",
       "category": "content"
     },
@@ -380,7 +380,7 @@
         "arm"
       ],
       "updated_at": "2026-02-19T17:20:08Z",
-      "download_count": 12,
+      "download_count": 13,
       "app_type": "native",
       "category": "content"
     },
@@ -401,7 +401,7 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:37:53Z",
-      "download_count": 158,
+      "download_count": 162,
       "app_type": "native",
       "category": "media"
     },
@@ -475,8 +475,8 @@
       "display_name": "tinyMediaManager",
       "description": "影视文件元数据管理工具，支持从 TheMovieDB、IMDb 刮削元数据，为 Kodi、Emby、Jellyfin、Plex 创建 NFO 文件，自动重命名和整理。含内置 JRE，通过虚拟显示运行。",
       "version": "5.2.7.1",
-      "fpk_version": "5.2.7.1-r1",
-      "release_tag": "tinymediamanager/v5.2.7.1-r1",
+      "fpk_version": "5.2.7.1-r2",
+      "release_tag": "tinymediamanager/v5.2.7.1-r2",
       "service_port": 5800,
       "homepage_url": "https://www.tinymediamanager.org",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/tinymediamanager/fnos/ICON_256.PNG",
@@ -484,7 +484,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-20T15:54:41Z",
+      "updated_at": "2026-02-22T09:29:04Z",
       "download_count": 14,
       "app_type": "docker",
       "category": "media"
