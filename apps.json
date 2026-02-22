@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-02-22T09:29:13Z",
+  "generated_at": "2026-02-22T10:35:51Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -13,8 +13,8 @@
       "display_name": "AdGuardHome",
       "description": "AdGuardHome 是一个网络范围的广告和跟踪器拦截 DNS 服务器，支持 DNS-over-HTTPS、DNS-over-TLS。",
       "version": "0.107.72",
-      "fpk_version": "0.107.72-r1",
-      "release_tag": "adguardhome/v0.107.72-r1",
+      "fpk_version": "0.107.72-r2",
+      "release_tag": "adguardhome/v0.107.72-r2",
       "service_port": 3080,
       "homepage_url": "https://adguard.com/adguard-home/overview.html",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/adguardhome/fnos/ICON_256.PNG",
@@ -22,7 +22,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-20T15:54:47Z",
+      "updated_at": "2026-02-22T10:35:46Z",
       "download_count": 9,
       "app_type": "docker",
       "category": "system"
@@ -97,8 +97,8 @@
       "display_name": "Chromium",
       "description": "Chromium 浏览器的 Docker 容器版本，通过网页即可远程访问，内置中文字体支持。",
       "version": "26.02.3",
-      "fpk_version": "26.02.3-r1",
-      "release_tag": "chromium/v26.02.3-r1",
+      "fpk_version": "26.02.3-r2",
+      "release_tag": "chromium/v26.02.3-r2",
       "service_port": 5802,
       "homepage_url": "https://github.com/jlesage/docker-chromium",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/chromium/fnos/ICON_256.PNG",
@@ -106,8 +106,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-20T15:54:46Z",
-      "download_count": 13,
+      "updated_at": "2026-02-22T10:35:42Z",
+      "download_count": 14,
       "app_type": "docker",
       "category": "browser"
     },
@@ -118,8 +118,8 @@
       "display_name": "DDNS-GO",
       "description": "DDNS-GO 是一个简单好用的 DDNS 工具，支持阿里云、腾讯云、Cloudflare 等多个 DNS 服务商。",
       "version": "6.15.0",
-      "fpk_version": "6.15.0",
-      "release_tag": "ddns-go/v6.15.0",
+      "fpk_version": "6.15.0-r1",
+      "release_tag": "ddns-go/v6.15.0-r1",
       "service_port": 9876,
       "homepage_url": "https://github.com/jeessy2/ddns-go",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ddns-go/fnos/ICON_256.PNG",
@@ -127,7 +127,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-20T04:40:10Z",
+      "updated_at": "2026-02-22T10:35:46Z",
       "download_count": 5,
       "app_type": "native",
       "category": "system"
@@ -160,8 +160,8 @@
       "display_name": "Firefox",
       "description": "Firefox 浏览器的 Docker 容器版本，通过网页即可远程访问，内置中文字体支持。",
       "version": "26.02.2",
-      "fpk_version": "26.02.2-r1",
-      "release_tag": "firefox/v26.02.2-r1",
+      "fpk_version": "26.02.2-r2",
+      "release_tag": "firefox/v26.02.2-r2",
       "service_port": 5801,
       "homepage_url": "https://github.com/jlesage/docker-firefox",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/firefox/fnos/ICON_256.PNG",
@@ -169,7 +169,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-20T15:54:40Z",
+      "updated_at": "2026-02-22T10:35:42Z",
       "download_count": 15,
       "app_type": "docker",
       "category": "browser"
@@ -191,7 +191,7 @@
         "arm"
       ],
       "updated_at": "2026-02-21T08:52:49Z",
-      "download_count": 461,
+      "download_count": 464,
       "app_type": "native",
       "category": "store"
     },
@@ -265,8 +265,8 @@
       "display_name": "Kavita",
       "description": "开源的漫画、轻小说和电子书阅读服务器",
       "version": "0.8.9",
-      "fpk_version": "0.8.9-r1",
-      "release_tag": "kavita/v0.8.9-r1",
+      "fpk_version": "0.8.9-r2",
+      "release_tag": "kavita/v0.8.9-r2",
       "service_port": 5000,
       "homepage_url": "https://github.com/Kareadita/Kavita",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/kavita/fnos/ICON_256.PNG",
@@ -274,8 +274,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-20T15:54:46Z",
-      "download_count": 17,
+      "updated_at": "2026-02-22T10:35:46Z",
+      "download_count": 18,
       "app_type": "docker",
       "category": "media"
     },
@@ -307,8 +307,8 @@
       "display_name": "MoviePilot",
       "description": "影视自动化管理工具,支持自动订阅、下载、整理和通知。首次启动通过 Web UI 配置。",
       "version": "2.9.11",
-      "fpk_version": "2.9.11-r1",
-      "release_tag": "moviepilot/v2.9.11-r1",
+      "fpk_version": "2.9.11-r2",
+      "release_tag": "moviepilot/v2.9.11-r2",
       "service_port": 3000,
       "homepage_url": "https://github.com/jxxghp/MoviePilot",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/moviepilot/fnos/ICON_256.PNG",
@@ -316,7 +316,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-20T15:54:44Z",
+      "updated_at": "2026-02-22T10:35:45Z",
       "download_count": 27,
       "app_type": "docker",
       "category": "content"
@@ -401,7 +401,7 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:37:53Z",
-      "download_count": 162,
+      "download_count": 163,
       "app_type": "native",
       "category": "media"
     },
@@ -433,8 +433,8 @@
       "display_name": "Sun-Panel",
       "description": "服务器/NAS导航面板，支持多账户和Docker容器管理",
       "version": "1.8.1",
-      "fpk_version": "1.8.1",
-      "release_tag": "sun-panel/v1.8.1",
+      "fpk_version": "1.8.1-r1",
+      "release_tag": "sun-panel/v1.8.1-r1",
       "service_port": 3002,
       "homepage_url": "https://doc.sun-panel.top/zh_cn",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/sun-panel/fnos/ICON_256.PNG",
@@ -442,7 +442,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-19T17:20:02Z",
+      "updated_at": "2026-02-22T10:35:47Z",
       "download_count": 10,
       "app_type": "native",
       "category": "system"
@@ -475,8 +475,8 @@
       "display_name": "tinyMediaManager",
       "description": "影视文件元数据管理工具，支持从 TheMovieDB、IMDb 刮削元数据，为 Kodi、Emby、Jellyfin、Plex 创建 NFO 文件，自动重命名和整理。含内置 JRE，通过虚拟显示运行。",
       "version": "5.2.7.1",
-      "fpk_version": "5.2.7.1-r2",
-      "release_tag": "tinymediamanager/v5.2.7.1-r2",
+      "fpk_version": "5.2.7.1-r3",
+      "release_tag": "tinymediamanager/v5.2.7.1-r3",
       "service_port": 5800,
       "homepage_url": "https://www.tinymediamanager.org",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/tinymediamanager/fnos/ICON_256.PNG",
@@ -484,8 +484,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-22T09:29:04Z",
-      "download_count": 14,
+      "updated_at": "2026-02-22T10:35:43Z",
+      "download_count": 16,
       "app_type": "docker",
       "category": "media"
     },
@@ -517,8 +517,8 @@
       "display_name": "Vaultwarden",
       "description": "轻量级 Bitwarden 兼容密码管理服务器，使用 Rust 编写，支持自托管密码管理。",
       "version": "1.35.3",
-      "fpk_version": "1.35.3-r1",
-      "release_tag": "vaultwarden/v1.35.3-r1",
+      "fpk_version": "1.35.3-r2",
+      "release_tag": "vaultwarden/v1.35.3-r2",
       "service_port": 8880,
       "homepage_url": "https://github.com/dani-garcia/vaultwarden",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/vaultwarden/fnos/ICON_256.PNG",
@@ -526,7 +526,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-20T15:54:47Z",
+      "updated_at": "2026-02-22T10:35:43Z",
       "download_count": 11,
       "app_type": "docker",
       "category": "system"
