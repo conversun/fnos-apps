@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-02-23T08:10:20Z",
+  "generated_at": "2026-02-23T08:14:44Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -96,9 +96,9 @@
       "file_prefix": "chromium",
       "display_name": "Chromium",
       "description": "Chromium 浏览器的 Docker 容器版本，通过网页即可远程访问，内置中文字体支持。",
-      "version": "26.02.3",
-      "fpk_version": "26.02.3-r2",
-      "release_tag": "chromium/v26.02.3-r2",
+      "version": "26.02.4",
+      "fpk_version": "26.02.4",
+      "release_tag": "chromium/v26.02.4",
       "service_port": 5802,
       "homepage_url": "https://github.com/jlesage/docker-chromium",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/chromium/fnos/ICON_256.PNG",
@@ -106,7 +106,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-22T10:35:42Z",
+      "updated_at": "2026-02-23T08:14:33Z",
       "download_count": 21,
       "app_type": "docker",
       "category": "browser"
