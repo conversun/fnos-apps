@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-02-23T08:14:44Z",
+  "generated_at": "2026-02-23T10:04:44Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -65,7 +65,7 @@
         "arm"
       ],
       "updated_at": "2026-02-19T17:20:53Z",
-      "download_count": 23,
+      "download_count": 24,
       "app_type": "docker",
       "category": "content"
     },
@@ -107,7 +107,7 @@
         "arm"
       ],
       "updated_at": "2026-02-23T08:14:33Z",
-      "download_count": 21,
+      "download_count": 23,
       "app_type": "docker",
       "category": "browser"
     },
@@ -170,7 +170,7 @@
         "arm"
       ],
       "updated_at": "2026-02-23T08:10:09Z",
-      "download_count": 26,
+      "download_count": 28,
       "app_type": "docker",
       "category": "browser"
     },
@@ -191,7 +191,7 @@
         "arm"
       ],
       "updated_at": "2026-02-21T08:52:49Z",
-      "download_count": 524,
+      "download_count": 528,
       "app_type": "native",
       "category": "store"
     },
@@ -317,7 +317,7 @@
         "arm"
       ],
       "updated_at": "2026-02-22T10:35:45Z",
-      "download_count": 37,
+      "download_count": 38,
       "app_type": "docker",
       "category": "content"
     },
@@ -338,7 +338,7 @@
         "arm"
       ],
       "updated_at": "2026-02-22T10:35:56Z",
-      "download_count": 19,
+      "download_count": 20,
       "app_type": "native",
       "category": "media"
     },
@@ -433,8 +433,8 @@
       "display_name": "Sun-Panel",
       "description": "服务器/NAS导航面板，支持多账户和Docker容器管理",
       "version": "1.8.1",
-      "fpk_version": "1.8.1-r1",
-      "release_tag": "sun-panel/v1.8.1-r1",
+      "fpk_version": "1.8.1-r2",
+      "release_tag": "sun-panel/v1.8.1-r2",
       "service_port": 3002,
       "homepage_url": "https://doc.sun-panel.top/zh_cn",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/sun-panel/fnos/ICON_256.PNG",
@@ -442,7 +442,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-22T10:35:47Z",
+      "updated_at": "2026-02-23T10:04:32Z",
       "download_count": 13,
       "app_type": "native",
       "category": "system"
