@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-02-24T14:25:24Z",
+  "generated_at": "2026-02-25T08:15:35Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -23,7 +23,7 @@
         "arm"
       ],
       "updated_at": "2026-02-22T10:35:46Z",
-      "download_count": 21,
+      "download_count": 25,
       "app_type": "docker",
       "category": "system"
     },
@@ -86,7 +86,7 @@
         "arm"
       ],
       "updated_at": "2026-02-22T10:35:51Z",
-      "download_count": 9,
+      "download_count": 10,
       "app_type": "native",
       "category": "system"
     },
@@ -107,7 +107,7 @@
         "arm"
       ],
       "updated_at": "2026-02-23T08:14:33Z",
-      "download_count": 39,
+      "download_count": 49,
       "app_type": "docker",
       "category": "browser"
     },
@@ -149,7 +149,7 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:38:36Z",
-      "download_count": 314,
+      "download_count": 317,
       "app_type": "native",
       "category": "media"
     },
@@ -170,7 +170,7 @@
         "arm"
       ],
       "updated_at": "2026-02-23T08:10:09Z",
-      "download_count": 41,
+      "download_count": 46,
       "app_type": "docker",
       "category": "browser"
     },
@@ -191,7 +191,7 @@
         "arm"
       ],
       "updated_at": "2026-02-21T08:52:49Z",
-      "download_count": 626,
+      "download_count": 687,
       "app_type": "native",
       "category": "store"
     },
@@ -212,7 +212,7 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:37:46Z",
-      "download_count": 50,
+      "download_count": 52,
       "app_type": "native",
       "category": "download"
     },
@@ -254,7 +254,7 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:38:20Z",
-      "download_count": 96,
+      "download_count": 97,
       "app_type": "native",
       "category": "media"
     },
@@ -275,7 +275,7 @@
         "arm"
       ],
       "updated_at": "2026-02-22T10:35:46Z",
-      "download_count": 43,
+      "download_count": 45,
       "app_type": "docker",
       "category": "media"
     },
@@ -296,7 +296,7 @@
         "arm"
       ],
       "updated_at": "2026-02-22T10:35:51Z",
-      "download_count": 7,
+      "download_count": 8,
       "app_type": "docker",
       "category": "content"
     },
@@ -306,9 +306,9 @@
       "file_prefix": "moviepilot",
       "display_name": "MoviePilot",
       "description": "影视自动化管理工具,支持自动订阅、下载、整理和通知。首次启动通过 Web UI 配置。",
-      "version": "2.9.11",
-      "fpk_version": "2.9.11-r2",
-      "release_tag": "moviepilot/v2.9.11-r2",
+      "version": "2.9.12",
+      "fpk_version": "2.9.12",
+      "release_tag": "moviepilot/v2.9.12",
       "service_port": 3000,
       "homepage_url": "https://github.com/jxxghp/MoviePilot",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/moviepilot/fnos/ICON_256.PNG",
@@ -316,8 +316,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-22T10:35:45Z",
-      "download_count": 56,
+      "updated_at": "2026-02-25T08:15:25Z",
+      "download_count": 66,
       "app_type": "docker",
       "category": "content"
     },
@@ -338,7 +338,7 @@
         "arm"
       ],
       "updated_at": "2026-02-22T10:35:56Z",
-      "download_count": 23,
+      "download_count": 24,
       "app_type": "native",
       "category": "media"
     },
@@ -380,7 +380,7 @@
         "arm"
       ],
       "updated_at": "2026-02-24T14:25:10Z",
-      "download_count": 0,
+      "download_count": 11,
       "app_type": "native",
       "category": "system"
     },
@@ -422,7 +422,7 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:37:53Z",
-      "download_count": 189,
+      "download_count": 198,
       "app_type": "native",
       "category": "media"
     },
@@ -443,7 +443,7 @@
         "arm"
       ],
       "updated_at": "2026-02-22T10:35:59Z",
-      "download_count": 221,
+      "download_count": 233,
       "app_type": "native",
       "category": "download"
     },
@@ -464,7 +464,7 @@
         "arm"
       ],
       "updated_at": "2026-02-23T10:04:32Z",
-      "download_count": 27,
+      "download_count": 31,
       "app_type": "native",
       "category": "system"
     },
@@ -506,7 +506,7 @@
         "arm"
       ],
       "updated_at": "2026-02-22T10:35:43Z",
-      "download_count": 39,
+      "download_count": 44,
       "app_type": "docker",
       "category": "media"
     },
@@ -527,7 +527,7 @@
         "arm"
       ],
       "updated_at": "2026-02-22T10:35:51Z",
-      "download_count": 16,
+      "download_count": 17,
       "app_type": "docker",
       "category": "download"
     },
@@ -548,7 +548,7 @@
         "arm"
       ],
       "updated_at": "2026-02-24T08:13:48Z",
-      "download_count": 21,
+      "download_count": 23,
       "app_type": "docker",
       "category": "system"
     },
