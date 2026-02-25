@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-02-25T08:15:35Z",
+  "generated_at": "2026-02-25T08:20:16Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -517,8 +517,8 @@
       "display_name": "Transmission",
       "description": "Transmission 是一个轻量级的 BitTorrent 客户端，以简洁高效著称，支持 Web 远程管理。",
       "version": "4.1.0",
-      "fpk_version": "4.1.0-r0-ls330-r2",
-      "release_tag": "transmission/v4.1.0-r0-ls330-r2",
+      "fpk_version": "4.1.0-r0-ls331",
+      "release_tag": "transmission/v4.1.0-r0-ls331",
       "service_port": 9091,
       "homepage_url": "https://transmissionbt.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/transmission/fnos/ICON_256.PNG",
@@ -526,7 +526,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-22T10:35:51Z",
+      "updated_at": "2026-02-25T08:20:07Z",
       "download_count": 17,
       "app_type": "docker",
       "category": "download"
