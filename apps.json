@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-02-25T08:20:16Z",
+  "generated_at": "2026-02-26T08:14:57Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -23,7 +23,7 @@
         "arm"
       ],
       "updated_at": "2026-02-22T10:35:46Z",
-      "download_count": 25,
+      "download_count": 28,
       "app_type": "docker",
       "category": "system"
     },
@@ -33,9 +33,9 @@
       "file_prefix": "ani-rss",
       "display_name": "ANI-RSS",
       "description": "动漫 RSS 自动追番、订阅、下载和刮削工具，支持自动识别季数集数和重命名。默认用户名admin，密码admin。",
-      "version": "2.5.10",
-      "fpk_version": "2.5.10",
-      "release_tag": "ani-rss/v2.5.10",
+      "version": "3.0.0",
+      "fpk_version": "3.0.0",
+      "release_tag": "ani-rss/v3.0.0",
       "service_port": 7789,
       "homepage_url": "https://github.com/wushuo894/ani-rss",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ani-rss/fnos/ICON_256.PNG",
@@ -43,7 +43,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-22T08:07:28Z",
+      "updated_at": "2026-02-26T08:14:46Z",
       "download_count": 126,
       "app_type": "docker",
       "category": "content"
@@ -65,7 +65,7 @@
         "arm"
       ],
       "updated_at": "2026-02-19T17:20:53Z",
-      "download_count": 26,
+      "download_count": 31,
       "app_type": "docker",
       "category": "content"
     },
@@ -107,7 +107,7 @@
         "arm"
       ],
       "updated_at": "2026-02-23T08:14:33Z",
-      "download_count": 49,
+      "download_count": 57,
       "app_type": "docker",
       "category": "browser"
     },
@@ -128,7 +128,7 @@
         "arm"
       ],
       "updated_at": "2026-02-22T10:35:46Z",
-      "download_count": 8,
+      "download_count": 9,
       "app_type": "native",
       "category": "system"
     },
@@ -149,7 +149,7 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:38:36Z",
-      "download_count": 317,
+      "download_count": 413,
       "app_type": "native",
       "category": "media"
     },
@@ -170,7 +170,7 @@
         "arm"
       ],
       "updated_at": "2026-02-23T08:10:09Z",
-      "download_count": 46,
+      "download_count": 50,
       "app_type": "docker",
       "category": "browser"
     },
@@ -191,7 +191,7 @@
         "arm"
       ],
       "updated_at": "2026-02-21T08:52:49Z",
-      "download_count": 687,
+      "download_count": 737,
       "app_type": "native",
       "category": "store"
     },
@@ -212,7 +212,7 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:37:46Z",
-      "download_count": 52,
+      "download_count": 53,
       "app_type": "native",
       "category": "download"
     },
@@ -233,7 +233,7 @@
         "arm"
       ],
       "updated_at": "2026-02-22T10:35:56Z",
-      "download_count": 12,
+      "download_count": 13,
       "app_type": "native",
       "category": "system"
     },
@@ -254,7 +254,7 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:38:20Z",
-      "download_count": 97,
+      "download_count": 110,
       "app_type": "native",
       "category": "media"
     },
@@ -275,7 +275,7 @@
         "arm"
       ],
       "updated_at": "2026-02-22T10:35:46Z",
-      "download_count": 45,
+      "download_count": 46,
       "app_type": "docker",
       "category": "media"
     },
@@ -317,7 +317,7 @@
         "arm"
       ],
       "updated_at": "2026-02-25T08:15:25Z",
-      "download_count": 66,
+      "download_count": 90,
       "app_type": "docker",
       "category": "content"
     },
@@ -338,7 +338,7 @@
         "arm"
       ],
       "updated_at": "2026-02-22T10:35:56Z",
-      "download_count": 24,
+      "download_count": 27,
       "app_type": "native",
       "category": "media"
     },
@@ -359,7 +359,7 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:37:46Z",
-      "download_count": 33,
+      "download_count": 35,
       "app_type": "native",
       "category": "system"
     },
@@ -380,7 +380,7 @@
         "arm"
       ],
       "updated_at": "2026-02-24T14:25:10Z",
-      "download_count": 11,
+      "download_count": 17,
       "app_type": "native",
       "category": "system"
     },
@@ -401,7 +401,7 @@
         "arm"
       ],
       "updated_at": "2026-02-22T10:35:58Z",
-      "download_count": 25,
+      "download_count": 29,
       "app_type": "native",
       "category": "content"
     },
@@ -422,7 +422,7 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:37:53Z",
-      "download_count": 198,
+      "download_count": 206,
       "app_type": "native",
       "category": "media"
     },
@@ -443,7 +443,7 @@
         "arm"
       ],
       "updated_at": "2026-02-22T10:35:59Z",
-      "download_count": 233,
+      "download_count": 251,
       "app_type": "native",
       "category": "download"
     },
@@ -464,7 +464,7 @@
         "arm"
       ],
       "updated_at": "2026-02-23T10:04:32Z",
-      "download_count": 31,
+      "download_count": 33,
       "app_type": "native",
       "category": "system"
     },
@@ -506,7 +506,7 @@
         "arm"
       ],
       "updated_at": "2026-02-22T10:35:43Z",
-      "download_count": 44,
+      "download_count": 50,
       "app_type": "docker",
       "category": "media"
     },
@@ -527,7 +527,7 @@
         "arm"
       ],
       "updated_at": "2026-02-25T08:20:07Z",
-      "download_count": 17,
+      "download_count": 29,
       "app_type": "docker",
       "category": "download"
     },
@@ -548,7 +548,7 @@
         "arm"
       ],
       "updated_at": "2026-02-24T08:13:48Z",
-      "download_count": 23,
+      "download_count": 25,
       "app_type": "docker",
       "category": "system"
     },
