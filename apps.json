@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-02-27T13:23:01Z",
+  "generated_at": "2026-02-27T13:23:05Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -13,8 +13,8 @@
       "display_name": "AdGuardHome",
       "description": "AdGuardHome 是一个网络范围的广告和跟踪器拦截 DNS 服务器，支持 DNS-over-HTTPS、DNS-over-TLS。",
       "version": "0.107.72",
-      "fpk_version": "0.107.72-r3",
-      "release_tag": "adguardhome/v0.107.72-r3",
+      "fpk_version": "0.107.72-r4",
+      "release_tag": "adguardhome/v0.107.72-r4",
       "service_port": 3080,
       "homepage_url": "https://adguard.com/adguard-home/overview.html",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/adguardhome/fnos/ICON_256.PNG",
@@ -22,7 +22,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-27T12:12:38Z",
+      "updated_at": "2026-02-27T13:23:03Z",
       "download_count": 30,
       "app_type": "docker",
       "category": "system"
@@ -76,8 +76,8 @@
       "display_name": "AutoBangumi",
       "description": "基于 RSS 的全自动追番下载整理工具，支持 Mikan 等数据源，自动下载并重命名为 Plex/Jellyfin 兼容格式。",
       "version": "3.2.4",
-      "fpk_version": "3.2.4-r1",
-      "release_tag": "auto-bangumi/v3.2.4-r1",
+      "fpk_version": "3.2.4-r2",
+      "release_tag": "auto-bangumi/v3.2.4-r2",
       "service_port": 7892,
       "homepage_url": "https://github.com/EstrellaXD/Auto_Bangumi",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/auto-bangumi/fnos/ICON_256.PNG",
@@ -85,7 +85,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-27T12:12:40Z",
+      "updated_at": "2026-02-27T13:23:00Z",
       "download_count": 4,
       "app_type": "docker",
       "category": "content"
@@ -212,7 +212,7 @@
         "arm"
       ],
       "updated_at": "2026-02-27T12:14:11Z",
-      "download_count": 848,
+      "download_count": 794,
       "app_type": "native",
       "category": "store"
     },
@@ -317,7 +317,7 @@
         "arm"
       ],
       "updated_at": "2026-02-27T13:22:52Z",
-      "download_count": 53,
+      "download_count": 50,
       "app_type": "docker",
       "category": "media"
     },
@@ -475,8 +475,8 @@
       "display_name": "OpenList",
       "description": "支持多种存储后端的文件列表/WebDAV 程序（AList 社区分支）",
       "version": "4.1.10",
-      "fpk_version": "4.1.10-r1",
-      "release_tag": "openlist/v4.1.10-r1",
+      "fpk_version": "4.1.10-r2",
+      "release_tag": "openlist/v4.1.10-r2",
       "service_port": 5244,
       "homepage_url": "https://github.com/OpenListTeam/OpenList",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/openlist/fnos/ICON_256.PNG",
@@ -484,7 +484,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-22T10:35:58Z",
+      "updated_at": "2026-02-27T13:23:03Z",
       "download_count": 31,
       "app_type": "native",
       "category": "content"
@@ -622,8 +622,8 @@
       "display_name": "Vaultwarden",
       "description": "轻量级 Bitwarden 兼容密码管理服务器，使用 Rust 编写，支持自托管密码管理。",
       "version": "1.35.4",
-      "fpk_version": "1.35.4-r1",
-      "release_tag": "vaultwarden/v1.35.4-r1",
+      "fpk_version": "1.35.4-r2",
+      "release_tag": "vaultwarden/v1.35.4-r2",
       "service_port": 8880,
       "homepage_url": "https://github.com/dani-garcia/vaultwarden",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/vaultwarden/fnos/ICON_256.PNG",
@@ -631,7 +631,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-27T12:12:34Z",
+      "updated_at": "2026-02-27T13:23:00Z",
       "download_count": 28,
       "app_type": "docker",
       "category": "system"
