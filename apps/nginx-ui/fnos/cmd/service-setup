@@ -11,12 +11,10 @@ SVC_BACKGROUND=y
 SVC_WRITE_PID=y
 
 service_preuninst() {
-    # 兜底：确保 nginx-ui 及其管理的 nginx 进程被完全终止
+    # 兜底：确保 nginx-ui 进程被完全终止
     pkill -f "nginx-ui" 2>/dev/null || true
-    pkill -f "nginx.*${TRIM_PKGVAR}" 2>/dev/null || true
     sleep 1
     pkill -9 -f "nginx-ui" 2>/dev/null || true
-    pkill -9 -f "nginx.*${TRIM_PKGVAR}" 2>/dev/null || true
 }
 
 service_poststop() {

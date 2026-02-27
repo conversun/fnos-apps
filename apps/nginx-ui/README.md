@@ -6,30 +6,34 @@
 
 从 [Releases](https://github.com/conversun/fnos-apps/releases?q=nginx-ui) 下载最新的 `.fpk` 文件。
 
+## 前置要求
+
+⚠️ **必须先安装 [Nginx](../nginx/) 应用**，Nginx UI 作为管理面板对接已安装的 Nginx 服务。
+
 ## 安装
 
-1. 根据设备架构下载对应的 `.fpk` 文件
-2. fnOS 应用管理 → 手动安装 → 上传
+1. 确认已安装并启动过 Nginx 应用
+2. 根据设备架构下载对应的 `.fpk` 文件
+3. fnOS 应用管理 → 手动安装 → 上传
 
 **访问地址**: `http://<NAS-IP>:9000`
 
 ## 说明
 
-- 内置 Nginx 引擎 + 可视化管理面板，无需额外安装 Nginx
+- 可视化管理面板，对接已安装的 Nginx 应用
 - 支持在线编辑 Nginx 配置并一键 Reload，无需 SSH
 - 支持 Let's Encrypt SSL 证书自动申请与续签
 - 支持反向代理、负载均衡等常用配置的可视化管理
 - 首次访问需注册管理员账号
-- Nginx 配置文件位于 `var/nginx.conf`
-- 默认网站根目录 `var/html/`
-- 日志目录 `var/logs/`
+- 与 Nginx 应用共用同一个系统用户 (`nginxserver`)
 
 ## 端口说明
 
 | 端口 | 用途 |
 |------|------|
 | 9000 | Nginx UI 管理面板 |
-| 8888 | Nginx HTTP 服务（默认，可在管理面板中修改） |
+
+> Nginx HTTP 服务端口由 Nginx 应用管理（默认 8888）。
 
 ## 本地构建
 

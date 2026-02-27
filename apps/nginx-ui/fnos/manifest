@@ -9,6 +9,6 @@ distributor_url = https://github.com/conversun/fnos-apps
 desktop_uidir   = ui
 desktop_applaunchname = nginx-ui.Application
 service_port    = 9000
-desc            = Nginx可视化管理面板，支持在线编辑配置、一键Reload、SSL证书管理，内置Nginx引擎。
+desc            = Nginx可视化管理面板，支持在线编辑配置、一键Reload、SSL证书管理。需搭配Nginx应用使用。
 source          = thirdparty
 checksum        = 

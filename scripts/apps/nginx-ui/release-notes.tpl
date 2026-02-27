@@ -1,7 +1,7 @@
 自动构建的 fnOS 安装包
 
 - 基于 [Nginx UI v${VERSION}](https://github.com/0xJacky/nginx-ui/releases/tag/v${VERSION})
-- 内置 [Nginx](https://nginx.org/) 最新稳定版引擎
+- 需搭配 [Nginx](https://github.com/conversun/fnos-apps/releases?q=nginx) 应用使用
 - 平台: fnOS
 - 管理面板端口: ${DEFAULT_PORT}${REVISION_NOTE}
 ${CHANGELOG}
