@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-02-27T08:09:41Z",
+  "generated_at": "2026-02-27T08:09:52Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -44,7 +44,7 @@
         "arm"
       ],
       "updated_at": "2026-02-26T08:14:46Z",
-      "download_count": 147,
+      "download_count": 131,
       "app_type": "docker",
       "category": "content"
     },
@@ -364,6 +364,27 @@
       "category": "media"
     },
     {
+      "slug": "memos",
+      "appname": "memos",
+      "file_prefix": "memos",
+      "display_name": "Memos",
+      "description": "轻量级自托管笔记服务,支持Markdown,适合个人知识管理和日常记录。",
+      "version": "0.26.2",
+      "fpk_version": "0.26.2",
+      "release_tag": "memos/v0.26.2",
+      "service_port": 5230,
+      "homepage_url": "https://www.usememos.com",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/memos/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-02-27T08:09:42Z",
+      "download_count": 0,
+      "app_type": "native",
+      "category": "content"
+    },
+    {
       "slug": "moviepilot",
       "appname": "moviepilot",
       "file_prefix": "moviepilot",
@@ -517,8 +538,8 @@
       "display_name": "Sun-Panel",
       "description": "服务器/NAS导航面板，支持多账户和Docker容器管理",
       "version": "1.8.1",
-      "fpk_version": "1.8.1-r2",
-      "release_tag": "sun-panel/v1.8.1-r2",
+      "fpk_version": "1.8.1-r3",
+      "release_tag": "sun-panel/v1.8.1-r3",
       "service_port": 3002,
       "homepage_url": "https://doc.sun-panel.top/zh_cn",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/sun-panel/fnos/ICON_256.PNG",
@@ -526,7 +547,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-23T10:04:32Z",
+      "updated_at": "2026-02-27T08:09:47Z",
       "download_count": 34,
       "app_type": "native",
       "category": "system"
