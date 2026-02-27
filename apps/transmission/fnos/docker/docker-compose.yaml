@@ -1,6 +1,6 @@
 services:
   transmission:
-    image: ${DOCKER_MIRROR-docker.conversun.com/docker.io/}linuxserver/transmission:${VERSION}
+    image: ${DOCKER_MIRROR}docker.io/linuxserver/transmission:${VERSION}
     container_name: transmission
     ports:
       - "${TRIM_SERVICE_PORT}:9091"

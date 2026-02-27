@@ -1,6 +1,6 @@
 services:
   auto-bangumi:
-    image: ${DOCKER_MIRROR-docker.conversun.com/ghcr.io/}estrellaxd/auto_bangumi:${VERSION}
+    image: ${DOCKER_MIRROR}ghcr.io/estrellaxd/auto_bangumi:${VERSION}
     container_name: auto-bangumi
     ports:
       - "${TRIM_SERVICE_PORT}:7892"

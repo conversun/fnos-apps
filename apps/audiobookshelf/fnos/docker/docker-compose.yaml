@@ -1,6 +1,6 @@
 services:
   audiobookshelf:
-    image: ${DOCKER_MIRROR-docker.conversun.com/docker.io/}advplyr/audiobookshelf:${VERSION}
+    image: ${DOCKER_MIRROR}docker.io/advplyr/audiobookshelf:${VERSION}
     container_name: audiobookshelf
     ports:
       - "${TRIM_SERVICE_PORT}:80"

@@ -32,7 +32,7 @@ services:
     restart: unless-stopped
 
   immich-redis:
-    image: ${DOCKER_MIRROR-docker.conversun.com/docker.io/}valkey/valkey:8-bookworm
+    image: ${DOCKER_MIRROR}docker.io/valkey/valkey:8-bookworm
     container_name: immich-redis
     restart: unless-stopped
 

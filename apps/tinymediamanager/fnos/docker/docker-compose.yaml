@@ -1,6 +1,6 @@
 services:
   tinymediamanager:
-    image: ${DOCKER_MIRROR-docker.conversun.com/docker.io/}tinymediamanager/tinymediamanager:${VERSION}
+    image: ${DOCKER_MIRROR}docker.io/tinymediamanager/tinymediamanager:${VERSION}
     container_name: tinymediamanager
     ports:
       - "${TRIM_SERVICE_PORT}:4000"

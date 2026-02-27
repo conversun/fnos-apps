@@ -1,6 +1,6 @@
 services:
   kavita:
-    image: ${DOCKER_MIRROR-docker.conversun.com/docker.io/}jvmilazz0/kavita:${VERSION}
+    image: ${DOCKER_MIRROR}docker.io/jvmilazz0/kavita:${VERSION}
     container_name: kavita
     ports:
       - "${TRIM_SERVICE_PORT}:5000"

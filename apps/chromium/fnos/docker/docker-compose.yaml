@@ -1,6 +1,6 @@
 services:
   chromium:
-    image: ${DOCKER_MIRROR-docker.conversun.com/docker.io/}jlesage/chromium:v${VERSION}
+    image: ${DOCKER_MIRROR}docker.io/jlesage/chromium:v${VERSION}
     container_name: chromium
     ports:
       - "${TRIM_SERVICE_PORT}:5800"

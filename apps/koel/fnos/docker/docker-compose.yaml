@@ -1,6 +1,6 @@
 services:
   koel:
-    image: ${DOCKER_MIRROR-docker.conversun.com/docker.io/}phanan/koel:${VERSION}
+    image: ${DOCKER_MIRROR}docker.io/phanan/koel:${VERSION}
     container_name: koel
     ports:
       - "${TRIM_SERVICE_PORT}:80"

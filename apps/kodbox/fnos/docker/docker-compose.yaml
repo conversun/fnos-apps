@@ -1,6 +1,6 @@
 services:
   kodbox:
-    image: ${DOCKER_MIRROR-docker.conversun.com/docker.io/}kodcloud/kodbox:${VERSION}
+    image: ${DOCKER_MIRROR}docker.io/kodcloud/kodbox:${VERSION}
     container_name: kodbox
     ports:
       - "${TRIM_SERVICE_PORT}:80"

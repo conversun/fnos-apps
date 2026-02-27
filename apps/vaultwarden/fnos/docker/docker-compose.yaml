@@ -1,6 +1,6 @@
 services:
   vaultwarden:
-    image: ${DOCKER_MIRROR-docker.conversun.com/docker.io/}vaultwarden/server:${VERSION}
+    image: ${DOCKER_MIRROR}docker.io/vaultwarden/server:${VERSION}
     container_name: vaultwarden
     ports:
       - "${TRIM_SERVICE_PORT}:80"
