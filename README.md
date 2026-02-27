@@ -1,7 +1,7 @@
 # fnOS Apps
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-![Apps](https://img.shields.io/badge/apps-27-2ea44f)
+![Apps](https://img.shields.io/badge/apps-29-2ea44f)
 ![Platform](https://img.shields.io/badge/fnOS-third--party-orange)
 
 面向飞牛 fnOS 的第三方应用打包仓库。自动跟踪上游版本，构建可直接安装的 `.fpk` 包。
@@ -26,6 +26,8 @@
 | <img src="apps/emby/fnos/ICON.PNG" width="28"> | [**Emby**](apps/emby/) | `8096` | 媒体管理与流式传输 | [Release][r-emby] |
 | <img src="apps/jellyfin/fnos/ICON.PNG" width="28"> | [**Jellyfin**](apps/jellyfin/) | `8097` | 开源媒体系统，内置 FFmpeg | [Release][r-jellyfin] |
 | <img src="apps/navidrome/fnos/ICON.PNG" width="28"> | [**Navidrome**](apps/navidrome/) | `4533` | 音乐流媒体服务器 | [Release][r-navidrome] |
+| <img src="apps/koel/fnos/ICON.PNG" width="28"> | [**Koel**](apps/koel/) | `8060` | 个人音乐流媒体，默认账号 `admin@koel.dev/KoelIsCool` | [Release][r-koel] |
+| <img src="apps/immich/fnos/ICON.PNG" width="28"> | [**Immich**](apps/immich/) | `2283` | 自托管照片/视频备份，支持人脸识别 | [Release][r-immich] |
 | <img src="apps/kavita/fnos/ICON.PNG" width="28"> | [**Kavita**](apps/kavita/) | `5000` | 漫画/电子书阅读 | [Release][r-kavita] |
 | <img src="apps/tinymediamanager/fnos/ICON.PNG" width="28"> | [**tinyMediaManager**](apps/tinymediamanager/) | `5800` | 影视元数据管理 | [Release][r-tmm] |
 
@@ -43,6 +45,7 @@
 | | App | 端口 | 说明 | 下载 |
 |:---:|---|---:|---|:---:|
 | <img src="apps/ani-rss/fnos/ICON.PNG" width="28"> | [**ANI-RSS**](apps/ani-rss/) | `7789` | 动漫 RSS 自动追番，默认账号 `admin/admin` | [Release][r-ani] |
+| <img src="apps/auto-bangumi/fnos/ICON.PNG" width="28"> | [**AutoBangumi**](apps/auto-bangumi/) | `7892` | RSS 自动追番下载整理，默认账号 `admin/adminadmin` | [Release][r-ab] |
 | <img src="apps/audiobookshelf/fnos/ICON.PNG" width="28"> | [**Audiobookshelf**](apps/audiobookshelf/) | `13378` | 有声书和播客服务器 | [Release][r-abs] |
 | <img src="apps/moviepilot/fnos/ICON.PNG" width="28"> | [**MoviePilot**](apps/moviepilot/) | `3000` | 影视自动化管理 | [Release][r-mp] |
 | <img src="apps/openlist/fnos/ICON.PNG" width="28"> | [**OpenList**](apps/openlist/) | `5244` | 文件列表/WebDAV | [Release][r-openlist] |
@@ -172,3 +175,6 @@ fnos-apps/
 [r-adguardhome]: https://github.com/conversun/fnos-apps/releases?q=adguardhome
 [r-firefox]: https://github.com/conversun/fnos-apps/releases?q=firefox
 [r-chromium]: https://github.com/conversun/fnos-apps/releases?q=chromium
+[r-ab]: https://github.com/conversun/fnos-apps/releases?q=auto-bangumi
+[r-immich]: https://github.com/conversun/fnos-apps/releases?q=immich
+[r-koel]: https://github.com/conversun/fnos-apps/releases?q=koel

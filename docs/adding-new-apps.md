@@ -85,6 +85,8 @@ apps/<app>/fnos/
 └── ICON_256.PNG           # 应用大图标 (256x256)
 ```
 
+> **图标来源**: 优先从 [Dashboard Icons](https://dashboardicons.com/) 获取应用图标（MIT License）。该站点提供统一风格的高质量应用图标，可确保视觉一致性。如未收录，再从应用官方资源获取。
+
 #### Docker 容器模式
 ```
 apps/<app>/fnos/
@@ -529,7 +531,7 @@ jobs:
 ### 所有应用通用
 
 - [ ] **manifest**: `appname`、`display_name`、`service_port`、`desc` 是否填写完整？
-- [ ] **图标**: 是否包含 `ICON.PNG` (64x64) 和 `ICON_256.PNG` (256x256)？
+- [ ] **图标**: 是否包含 `ICON.PNG` (64x64) 和 `ICON_256.PNG` (256x256)？优先从 [Dashboard Icons](https://dashboardicons.com/) 获取。
 - [ ] **UI 图标**: `ui/images/64.png` 是否存在？（`256.png` 由 `build-fpk.sh` 自动从 `ICON_256.PNG` 复制）
 - [ ] **权限**: `config/privilege` 是否配置了正确的运行用户？
 - [ ] **端口**: `manifest` 中的 `service_port` 是否与应用默认端口一致？

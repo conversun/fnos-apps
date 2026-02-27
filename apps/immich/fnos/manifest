@@ -1,0 +1,14 @@
+appname         = immich
+version         = 0.0.0
+display_name    = Immich
+platform        = x86
+maintainer      = immich-app
+maintainer_url  = https://github.com/immich-app/immich
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = immich.Application
+service_port    = 2283
+desc            = 自托管照片和视频备份方案,支持人脸识别和智能搜索。
+source          = thirdparty
+checksum        = 

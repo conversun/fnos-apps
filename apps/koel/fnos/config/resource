@@ -1,0 +1,25 @@
+{
+    "port-config": {
+        "protocol-file": "Koel.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "koel",
+                "permission": {
+                    "rw": [
+                        "koel"
+                    ]
+                }
+            }
+        ]
+    },
+    "docker-project": {
+        "projects": [
+            {
+                "name": "koel",
+                "path": "docker"
+            }
+        ]
+    }
+}

@@ -1,0 +1,53 @@
+services:
+  immich-server:
+    image: ghcr.io/immich-app/immich-server:${VERSION}
+    container_name: immich
+    ports:
+      - "${TRIM_SERVICE_PORT}:2283"
+    volumes:
+      - ${UPLOAD_LOCATION:-${TRIM_PKGVAR}/upload}:/data
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      - TZ=Asia/Shanghai
+      - DB_HOSTNAME=immich-postgres
+      - DB_PORT=5432
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=${DB_PASSWORD:-immich}
+      - DB_DATABASE_NAME=immich
+      - REDIS_HOSTNAME=immich-redis
+    devices:
+      - /dev/dri:/dev/dri
+    depends_on:
+      - immich-redis
+      - immich-postgres
+    restart: unless-stopped
+
+  immich-machine-learning:
+    image: ghcr.io/immich-app/immich-machine-learning:${VERSION}
+    container_name: immich-ml
+    volumes:
+      - immich-model-cache:/cache
+    environment:
+      - TZ=Asia/Shanghai
+    restart: unless-stopped
+
+  immich-redis:
+    image: ${DOCKER_MIRROR-docker.conversun.com/docker.io/}valkey/valkey:8-bookworm
+    container_name: immich-redis
+    restart: unless-stopped
+
+  immich-postgres:
+    image: ghcr.io/immich-app/postgres:14-vectorchord0.4.3-pgvectors0.2.0
+    container_name: immich-postgres
+    environment:
+      - POSTGRES_PASSWORD=${DB_PASSWORD:-immich}
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=immich
+      - POSTGRES_INITDB_ARGS=--data-checksums
+    volumes:
+      - ${TRIM_PKGVAR}/postgres:/var/lib/postgresql/data
+    shm_size: 128mb
+    restart: unless-stopped
+
+volumes:
+  immich-model-cache:

@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "memos.Application":
+        {
+            "title": "Memos",
+            "desc": "Memos",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "5230",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

@@ -1,0 +1,14 @@
+appname         = memos
+version         = 0.26.1
+display_name    = Memos
+platform        = x86
+maintainer      = Memos
+maintainer_url  = https://github.com/usememos/memos
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = memos.Application
+service_port    = 5230
+desc            = 轻量级自托管笔记服务,支持Markdown,适合个人知识管理和日常记录。
+source          = thirdparty
+checksum        = 

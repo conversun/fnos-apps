@@ -1,0 +1,14 @@
+appname         = auto-bangumi
+version         = 0.0.0
+display_name    = AutoBangumi
+platform        = x86
+maintainer      = EstrellaXD
+maintainer_url  = https://github.com/EstrellaXD/Auto_Bangumi
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = auto-bangumi.Application
+service_port    = 7892
+desc            = 基于 RSS 的全自动追番下载整理工具，支持 Mikan 等数据源，自动下载并重命名为 Plex/Jellyfin 兼容格式。
+source          = thirdparty
+checksum        = 

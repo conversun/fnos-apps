@@ -1,0 +1,25 @@
+{
+    "port-config": {
+        "protocol-file": "AutoBangumi.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "AutoBangumi",
+                "permission": {
+                    "rw": [
+                        "auto-bangumi"
+                    ]
+                }
+            }
+        ]
+    },
+    "docker-project": {
+        "projects": [
+            {
+                "name": "auto-bangumi",
+                "path": "docker"
+            }
+        ]
+    }
+}

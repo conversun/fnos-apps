@@ -1,0 +1,25 @@
+{
+    "port-config": {
+        "protocol-file": "Immich.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "immich",
+                "permission": {
+                    "rw": [
+                        "immich"
+                    ]
+                }
+            }
+        ]
+    },
+    "docker-project": {
+        "projects": [
+            {
+                "name": "immich",
+                "path": "docker"
+            }
+        ]
+    }
+}

@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "immich.Application":
+        {
+            "title": "Immich",
+            "desc": "Immich",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "2283",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

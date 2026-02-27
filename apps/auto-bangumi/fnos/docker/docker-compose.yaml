@@ -1,0 +1,15 @@
+services:
+  auto-bangumi:
+    image: ${DOCKER_MIRROR-docker.conversun.com/ghcr.io/}estrellaxd/auto_bangumi:${VERSION}
+    container_name: auto-bangumi
+    ports:
+      - "${TRIM_SERVICE_PORT}:7892"
+    volumes:
+      - ${TRIM_PKGVAR}/config:/app/config
+      - ${TRIM_PKGVAR}/data:/app/data
+    environment:
+      - TZ=Asia/Shanghai
+      - PUID=${TRIM_UID:-1000}
+      - PGID=${TRIM_GID:-1000}
+      - UMASK=022
+    restart: unless-stopped

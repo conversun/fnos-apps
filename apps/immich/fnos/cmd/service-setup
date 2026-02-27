@@ -1,0 +1,49 @@
+#!/bin/bash
+# Immich Docker app — wizard integration + auto DB password
+
+service_postinst() {
+    local env_file="${TRIM_APPDEST}/docker/.env"
+    local need_env=false
+
+    : > "$env_file"
+
+    # Auto-generate DB password on first install
+    local db_pass_file="${TRIM_PKGVAR}/.db_password"
+    if [ ! -f "$db_pass_file" ]; then
+        head -c 32 /dev/urandom | base64 | tr -d '/+=' | head -c 24 > "$db_pass_file"
+        chmod 600 "$db_pass_file"
+    fi
+    local db_pass
+    db_pass=$(cat "$db_pass_file")
+    echo "DB_PASSWORD=${db_pass}" >> "$env_file"
+    need_env=true
+
+    # Write wizard upload dir if provided
+    if [ -n "${wizard_upload_dir}" ]; then
+        echo "UPLOAD_LOCATION=${wizard_upload_dir}" >> "$env_file"
+        mkdir -p "${wizard_upload_dir}" 2>/dev/null || true
+    fi
+
+    if [ "$need_env" = true ]; then
+        chmod 600 "$env_file"
+        install_log "Wrote docker .env with DB password and wizard values"
+    else
+        rm -f "$env_file"
+    fi
+
+    # Create default directories
+    mkdir -p "${TRIM_PKGVAR}/upload" "${TRIM_PKGVAR}/postgres" 2>/dev/null || true
+}
+
+service_preupgrade() {
+    if [ -f "${TRIM_APPDEST}/docker/.env" ]; then
+        cp "${TRIM_APPDEST}/docker/.env" "${TRIM_PKGVAR}/.env.bak"
+    fi
+}
+
+service_restore() {
+    if [ -f "${TRIM_PKGVAR}/.env.bak" ]; then
+        cp "${TRIM_PKGVAR}/.env.bak" "${TRIM_APPDEST}/docker/.env"
+        rm -f "${TRIM_PKGVAR}/.env.bak"
+    fi
+}

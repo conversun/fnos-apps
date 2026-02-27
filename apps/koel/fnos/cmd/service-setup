@@ -1,0 +1,51 @@
+#!/bin/bash
+# Koel Docker app — wizard integration + auto APP_KEY generation
+
+service_postinst() {
+    local env_file="${TRIM_APPDEST}/docker/.env"
+    local need_env=false
+
+    : > "$env_file"
+
+    # Auto-generate APP_KEY on first install (Koel requires this)
+    local key_file="${TRIM_PKGVAR}/.app_key"
+    if [ ! -f "$key_file" ]; then
+        local raw_key
+        raw_key=$(head -c 32 /dev/urandom | base64)
+        echo "base64:${raw_key}" > "$key_file"
+        chmod 600 "$key_file"
+    fi
+    local app_key
+    app_key=$(cat "$key_file")
+    echo "KOEL_APP_KEY=${app_key}" >> "$env_file"
+    need_env=true
+
+    # Write wizard music dir if provided
+    if [ -n "${wizard_music_dir}" ]; then
+        echo "MUSIC_DIR=${wizard_music_dir}" >> "$env_file"
+        mkdir -p "${wizard_music_dir}" 2>/dev/null || true
+    fi
+
+    if [ "$need_env" = true ]; then
+        chmod 600 "$env_file"
+        install_log "Wrote docker .env with APP_KEY and wizard values"
+    else
+        rm -f "$env_file"
+    fi
+
+    # Create default directories
+    mkdir -p "${TRIM_PKGVAR}/music" "${TRIM_PKGVAR}/database" "${TRIM_PKGVAR}/covers" "${TRIM_PKGVAR}/search-indexes" 2>/dev/null || true
+}
+
+service_preupgrade() {
+    if [ -f "${TRIM_APPDEST}/docker/.env" ]; then
+        cp "${TRIM_APPDEST}/docker/.env" "${TRIM_PKGVAR}/.env.bak"
+    fi
+}
+
+service_restore() {
+    if [ -f "${TRIM_PKGVAR}/.env.bak" ]; then
+        cp "${TRIM_PKGVAR}/.env.bak" "${TRIM_APPDEST}/docker/.env"
+        rm -f "${TRIM_PKGVAR}/.env.bak"
+    fi
+}

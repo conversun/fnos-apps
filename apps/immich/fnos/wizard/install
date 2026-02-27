@@ -1,0 +1,25 @@
+[
+    {
+        "stepTitle": "基本说明",
+        "items": [
+            {
+                "type": "tips",
+                "helpText": "Immich 是自托管的照片和视频备份方案，支持人脸识别、智能搜索和时间线浏览。<br><br>应用包含 4 个服务容器（Web 服务、机器学习、PostgreSQL、Redis），首次启动需要较长时间拉取镜像。"
+            }
+        ]
+    },
+    {
+        "stepTitle": "目录设置",
+        "items": [
+            {
+                "type": "tips",
+                "helpText": "请填写 NAS 上的绝对路径（如 <code>/vol1/photos</code>）。<br>留空则使用应用默认数据目录。"
+            },
+            {
+                "type": "text",
+                "field": "wizard_upload_dir",
+                "label": "照片/视频上传目录"
+            }
+        ]
+    }
+]

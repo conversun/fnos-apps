@@ -1,0 +1,11 @@
+[
+    {
+        "stepTitle": "安装说明",
+        "items": [
+            {
+                "type": "tips",
+                "helpText": "AutoBangumi 是基于 RSS 的全自动追番下载整理工具。<br>默认账号: admin / adminadmin<br>需要配合 qBittorrent 使用。"
+            }
+        ]
+    }
+]

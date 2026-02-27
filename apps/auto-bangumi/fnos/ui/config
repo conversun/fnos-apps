@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "auto-bangumi.Application":
+        {
+            "title": "AutoBangumi",
+            "desc": "AutoBangumi",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "7892",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}
