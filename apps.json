@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-02-28T06:23:59Z",
+  "generated_at": "2026-02-28T06:24:16Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -13,8 +13,8 @@
       "display_name": "AdGuardHome",
       "description": "AdGuardHome 是一个网络范围的广告和跟踪器拦截 DNS 服务器，支持 DNS-over-HTTPS、DNS-over-TLS。",
       "version": "0.107.72",
-      "fpk_version": "0.107.72-r4",
-      "release_tag": "adguardhome/v0.107.72-r4",
+      "fpk_version": "0.107.72-r5",
+      "release_tag": "adguardhome/v0.107.72-r5",
       "service_port": 3080,
       "homepage_url": "https://adguard.com/adguard-home/overview.html",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/adguardhome/fnos/ICON_256.PNG",
@@ -22,7 +22,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-27T13:23:03Z",
+      "updated_at": "2026-02-28T06:24:08Z",
       "download_count": 33,
       "app_type": "docker",
       "category": "system"
@@ -76,8 +76,8 @@
       "display_name": "AutoBangumi",
       "description": "基于 RSS 的全自动追番下载整理工具，支持 Mikan 等数据源，自动下载并重命名为 Plex/Jellyfin 兼容格式。",
       "version": "3.2.4",
-      "fpk_version": "3.2.4-r2",
-      "release_tag": "auto-bangumi/v3.2.4-r2",
+      "fpk_version": "3.2.4-r3",
+      "release_tag": "auto-bangumi/v3.2.4-r3",
       "service_port": 7892,
       "homepage_url": "https://github.com/EstrellaXD/Auto_Bangumi",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/auto-bangumi/fnos/ICON_256.PNG",
@@ -85,7 +85,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-27T13:23:00Z",
+      "updated_at": "2026-02-28T06:24:06Z",
       "download_count": 6,
       "app_type": "docker",
       "category": "content"
@@ -97,8 +97,8 @@
       "display_name": "Certimate",
       "description": "SSL/TLS证书自动化管理工具，支持ACME协议自动申请和续签证书。",
       "version": "0.4.17",
-      "fpk_version": "0.4.17-r2",
-      "release_tag": "certimate/v0.4.17-r2",
+      "fpk_version": "0.4.17-r3",
+      "release_tag": "certimate/v0.4.17-r3",
       "service_port": 8090,
       "homepage_url": "https://github.com/certimate-go/certimate",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/certimate/fnos/ICON_256.PNG",
@@ -106,7 +106,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-27T13:23:00Z",
+      "updated_at": "2026-02-28T06:24:10Z",
       "download_count": 13,
       "app_type": "native",
       "category": "system"
@@ -118,8 +118,8 @@
       "display_name": "Chromium",
       "description": "Chromium 浏览器的 Docker 容器版本，通过网页即可远程访问，内置中文字体支持。",
       "version": "26.02.4",
-      "fpk_version": "26.02.4-r2",
-      "release_tag": "chromium/v26.02.4-r2",
+      "fpk_version": "26.02.4-r3",
+      "release_tag": "chromium/v26.02.4-r3",
       "service_port": 5802,
       "homepage_url": "https://github.com/jlesage/docker-chromium",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/chromium/fnos/ICON_256.PNG",
@@ -127,7 +127,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-27T13:22:54Z",
+      "updated_at": "2026-02-28T06:24:09Z",
       "download_count": 73,
       "app_type": "docker",
       "category": "browser"
@@ -181,8 +181,8 @@
       "display_name": "Firefox",
       "description": "Firefox 浏览器的 Docker 容器版本，通过网页即可远程访问，内置中文字体支持。",
       "version": "26.02.3",
-      "fpk_version": "26.02.3-r2",
-      "release_tag": "firefox/v26.02.3-r2",
+      "fpk_version": "26.02.3-r3",
+      "release_tag": "firefox/v26.02.3-r3",
       "service_port": 5801,
       "homepage_url": "https://github.com/jlesage/docker-firefox",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/firefox/fnos/ICON_256.PNG",
@@ -190,7 +190,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-27T13:22:46Z",
+      "updated_at": "2026-02-28T06:24:12Z",
       "download_count": 68,
       "app_type": "docker",
       "category": "browser"
@@ -265,8 +265,8 @@
       "display_name": "Immich",
       "description": "自托管照片和视频备份方案,支持人脸识别和智能搜索。",
       "version": "2.5.6",
-      "fpk_version": "2.5.6-r2",
-      "release_tag": "immich/v2.5.6-r2",
+      "fpk_version": "2.5.6-r3",
+      "release_tag": "immich/v2.5.6-r3",
       "service_port": 2283,
       "homepage_url": "https://github.com/immich-app/immich",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/immich/fnos/ICON_256.PNG",
@@ -274,7 +274,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-27T13:22:49Z",
+      "updated_at": "2026-02-28T06:24:08Z",
       "download_count": 12,
       "app_type": "docker",
       "category": "media"
@@ -307,8 +307,8 @@
       "display_name": "Kavita",
       "description": "开源的漫画、轻小说和电子书阅读服务器",
       "version": "0.8.9",
-      "fpk_version": "0.8.9-r4",
-      "release_tag": "kavita/v0.8.9-r4",
+      "fpk_version": "0.8.9-r5",
+      "release_tag": "kavita/v0.8.9-r5",
       "service_port": 5000,
       "homepage_url": "https://github.com/Kareadita/Kavita",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/kavita/fnos/ICON_256.PNG",
@@ -316,8 +316,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-27T13:22:52Z",
-      "download_count": 53,
+      "updated_at": "2026-02-28T06:24:04Z",
+      "download_count": 68,
       "app_type": "docker",
       "category": "media"
     },
@@ -328,8 +328,8 @@
       "display_name": "KodBox",
       "description": "KodBox (可道云) 是一个开源的私有云存储和文件管理平台，支持在线文档编辑和多人协作。",
       "version": "1.63",
-      "fpk_version": "1.63-r4",
-      "release_tag": "kodbox/v1.63-r4",
+      "fpk_version": "1.63-r5",
+      "release_tag": "kodbox/v1.63-r5",
       "service_port": 8500,
       "homepage_url": "https://kodcloud.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/kodbox/fnos/ICON_256.PNG",
@@ -337,8 +337,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-27T13:22:50Z",
-      "download_count": 9,
+      "updated_at": "2026-02-28T06:24:07Z",
+      "download_count": 11,
       "app_type": "docker",
       "category": "content"
     },
@@ -349,8 +349,8 @@
       "display_name": "Koel",
       "description": "个人音乐流媒体服务器,支持在线播放本地音乐库。默认账号 admin@koel.dev / KoelIsCool",
       "version": "8.3.0",
-      "fpk_version": "8.3.0-r2",
-      "release_tag": "koel/v8.3.0-r2",
+      "fpk_version": "8.3.0-r3",
+      "release_tag": "koel/v8.3.0-r3",
       "service_port": 8060,
       "homepage_url": "https://github.com/koel/koel",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/koel/fnos/ICON_256.PNG",
@@ -358,7 +358,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-27T13:22:40Z",
+      "updated_at": "2026-02-28T06:24:13Z",
       "download_count": 12,
       "app_type": "docker",
       "category": "media"
@@ -370,8 +370,8 @@
       "display_name": "Memos",
       "description": "轻量级自托管笔记服务,支持Markdown,适合个人知识管理和日常记录。",
       "version": "0.26.2",
-      "fpk_version": "0.26.2-r1",
-      "release_tag": "memos/v0.26.2-r1",
+      "fpk_version": "0.26.2-r2",
+      "release_tag": "memos/v0.26.2-r2",
       "service_port": 5230,
       "homepage_url": "https://www.usememos.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/memos/fnos/ICON_256.PNG",
@@ -379,7 +379,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-27T13:22:40Z",
+      "updated_at": "2026-02-28T06:24:08Z",
       "download_count": 6,
       "app_type": "native",
       "category": "content"
@@ -412,8 +412,8 @@
       "display_name": "Navidrome",
       "description": "开源的个人音乐流媒体服务器,兼容 Subsonic/Airsonic API,支持多用户和移动端应用。",
       "version": "0.60.3",
-      "fpk_version": "0.60.3-r4",
-      "release_tag": "navidrome/v0.60.3-r4",
+      "fpk_version": "0.60.3-r5",
+      "release_tag": "navidrome/v0.60.3-r5",
       "service_port": 4533,
       "homepage_url": "https://www.navidrome.org",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/navidrome/fnos/ICON_256.PNG",
@@ -421,7 +421,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-27T13:22:47Z",
+      "updated_at": "2026-02-28T06:24:11Z",
       "download_count": 36,
       "app_type": "native",
       "category": "media"
@@ -538,8 +538,8 @@
       "display_name": "Sun-Panel",
       "description": "服务器/NAS导航面板，支持多账户和Docker容器管理",
       "version": "1.8.1",
-      "fpk_version": "1.8.1-r4",
-      "release_tag": "sun-panel/v1.8.1-r4",
+      "fpk_version": "1.8.1-r5",
+      "release_tag": "sun-panel/v1.8.1-r5",
       "service_port": 3002,
       "homepage_url": "https://doc.sun-panel.top/zh_cn",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/sun-panel/fnos/ICON_256.PNG",
@@ -547,7 +547,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-27T13:22:51Z",
+      "updated_at": "2026-02-28T06:24:08Z",
       "download_count": 37,
       "app_type": "native",
       "category": "system"
@@ -580,8 +580,8 @@
       "display_name": "tinyMediaManager",
       "description": "影视文件元数据管理工具，支持从 TheMovieDB、IMDb 刮削元数据，为 Kodi、Emby、Jellyfin、Plex 创建 NFO 文件，自动重命名和整理。含内置 JRE，通过虚拟显示运行。",
       "version": "5.2.7.1",
-      "fpk_version": "5.2.7.1-r5",
-      "release_tag": "tinymediamanager/v5.2.7.1-r5",
+      "fpk_version": "5.2.7.1-r6",
+      "release_tag": "tinymediamanager/v5.2.7.1-r6",
       "service_port": 5800,
       "homepage_url": "https://www.tinymediamanager.org",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/tinymediamanager/fnos/ICON_256.PNG",
@@ -589,7 +589,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-27T13:22:49Z",
+      "updated_at": "2026-02-28T06:24:13Z",
       "download_count": 58,
       "app_type": "docker",
       "category": "media"
@@ -601,8 +601,8 @@
       "display_name": "Transmission",
       "description": "Transmission 是一个轻量级的 BitTorrent 客户端，以简洁高效著称，支持 Web 远程管理。",
       "version": "4.1.1",
-      "fpk_version": "4.1.1-r0-ls332-r2",
-      "release_tag": "transmission/v4.1.1-r0-ls332-r2",
+      "fpk_version": "4.1.1-r0-ls332-r3",
+      "release_tag": "transmission/v4.1.1-r0-ls332-r3",
       "service_port": 9091,
       "homepage_url": "https://transmissionbt.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/transmission/fnos/ICON_256.PNG",
@@ -610,7 +610,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-27T13:22:54Z",
+      "updated_at": "2026-02-28T06:24:04Z",
       "download_count": 31,
       "app_type": "docker",
       "category": "download"
@@ -643,8 +643,8 @@
       "display_name": "WolGoWeb",
       "description": "WolGoWeb 是基于 Golang 的远程唤醒 WebAPI 工具，用于在局域网中通过网页唤醒主机。",
       "version": "1.7.71",
-      "fpk_version": "1.7.71-r2",
-      "release_tag": "wolgoweb/v1.7.71-r2",
+      "fpk_version": "1.7.71-r3",
+      "release_tag": "wolgoweb/v1.7.71-r3",
       "service_port": 9090,
       "homepage_url": "https://github.com/xiaoxinpro/WolGoWeb",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/wolgoweb/fnos/ICON_256.PNG",
@@ -652,7 +652,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-27T13:22:42Z",
+      "updated_at": "2026-02-28T06:24:14Z",
       "download_count": 17,
       "app_type": "native",
       "category": "system"
