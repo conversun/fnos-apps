@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-02-28T06:24:21Z",
+  "generated_at": "2026-02-28T06:24:26Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -475,8 +475,8 @@
       "display_name": "OpenList",
       "description": "支持多种存储后端的文件列表/WebDAV 程序（AList 社区分支）",
       "version": "4.1.10",
-      "fpk_version": "4.1.10-r2",
-      "release_tag": "openlist/v4.1.10-r2",
+      "fpk_version": "4.1.10-r3",
+      "release_tag": "openlist/v4.1.10-r3",
       "service_port": 5244,
       "homepage_url": "https://github.com/OpenListTeam/OpenList",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/openlist/fnos/ICON_256.PNG",
@@ -484,7 +484,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-27T13:23:03Z",
+      "updated_at": "2026-02-28T06:24:21Z",
       "download_count": 37,
       "app_type": "native",
       "category": "content"
@@ -559,8 +559,8 @@
       "display_name": "Syncthing",
       "description": "开源的文件同步工具，支持多设备间安全同步",
       "version": "2.0.14",
-      "fpk_version": "2.0.14-r2",
-      "release_tag": "syncthing/v2.0.14-r2",
+      "fpk_version": "2.0.14-r3",
+      "release_tag": "syncthing/v2.0.14-r3",
       "service_port": 8384,
       "homepage_url": "https://syncthing.net",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/syncthing/fnos/ICON_256.PNG",
@@ -568,7 +568,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-27T13:22:56Z",
+      "updated_at": "2026-02-28T06:24:22Z",
       "download_count": 16,
       "app_type": "native",
       "category": "download"
