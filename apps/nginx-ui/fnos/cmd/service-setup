@@ -10,6 +10,18 @@ SERVICE_COMMAND="$APP_DIR/bin/nginx-ui-server $APP_DATA_DIR"
 SVC_BACKGROUND=y
 SVC_WRITE_PID=y
 
+# nginx binary (from .deb) has --error-log-path=/var/log/nginx/error.log compiled in.
+# Create the directory so nginx commands don't emit alerts.
+_ensure_nginx_log_dir() {
+    if [ ! -d /var/log/nginx ]; then
+        mkdir -p /var/log/nginx
+        chown nginxserver:nginxserver /var/log/nginx
+    fi
+}
+
+service_postinst() { _ensure_nginx_log_dir; }
+service_postupgrade() { _ensure_nginx_log_dir; }
+
 service_preuninst() {
     # 兜底：确保 nginx-ui 进程被完全终止
     pkill -f "nginx-ui" 2>/dev/null || true
