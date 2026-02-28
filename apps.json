@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-02-27T13:25:32Z",
+  "generated_at": "2026-02-28T06:23:59Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -23,7 +23,7 @@
         "arm"
       ],
       "updated_at": "2026-02-27T13:23:03Z",
-      "download_count": 30,
+      "download_count": 33,
       "app_type": "docker",
       "category": "system"
     },
@@ -44,7 +44,7 @@
         "arm"
       ],
       "updated_at": "2026-02-26T08:14:46Z",
-      "download_count": 131,
+      "download_count": 133,
       "app_type": "docker",
       "category": "content"
     },
@@ -86,7 +86,7 @@
         "arm"
       ],
       "updated_at": "2026-02-27T13:23:00Z",
-      "download_count": 4,
+      "download_count": 6,
       "app_type": "docker",
       "category": "content"
     },
@@ -107,7 +107,7 @@
         "arm"
       ],
       "updated_at": "2026-02-27T13:23:00Z",
-      "download_count": 11,
+      "download_count": 13,
       "app_type": "native",
       "category": "system"
     },
@@ -128,7 +128,7 @@
         "arm"
       ],
       "updated_at": "2026-02-27T13:22:54Z",
-      "download_count": 61,
+      "download_count": 73,
       "app_type": "docker",
       "category": "browser"
     },
@@ -170,7 +170,7 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:38:36Z",
-      "download_count": 443,
+      "download_count": 461,
       "app_type": "native",
       "category": "media"
     },
@@ -191,7 +191,7 @@
         "arm"
       ],
       "updated_at": "2026-02-27T13:22:46Z",
-      "download_count": 56,
+      "download_count": 68,
       "app_type": "docker",
       "category": "browser"
     },
@@ -212,7 +212,7 @@
         "arm"
       ],
       "updated_at": "2026-02-27T12:14:11Z",
-      "download_count": 794,
+      "download_count": 834,
       "app_type": "native",
       "category": "store"
     },
@@ -233,7 +233,7 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:37:46Z",
-      "download_count": 58,
+      "download_count": 63,
       "app_type": "native",
       "category": "download"
     },
@@ -254,7 +254,7 @@
         "arm"
       ],
       "updated_at": "2026-02-27T13:22:42Z",
-      "download_count": 13,
+      "download_count": 15,
       "app_type": "native",
       "category": "system"
     },
@@ -275,7 +275,7 @@
         "arm"
       ],
       "updated_at": "2026-02-27T13:22:49Z",
-      "download_count": 4,
+      "download_count": 12,
       "app_type": "docker",
       "category": "media"
     },
@@ -296,7 +296,7 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:38:20Z",
-      "download_count": 134,
+      "download_count": 138,
       "app_type": "native",
       "category": "media"
     },
@@ -317,7 +317,7 @@
         "arm"
       ],
       "updated_at": "2026-02-27T13:22:52Z",
-      "download_count": 50,
+      "download_count": 53,
       "app_type": "docker",
       "category": "media"
     },
@@ -359,7 +359,7 @@
         "arm"
       ],
       "updated_at": "2026-02-27T13:22:40Z",
-      "download_count": 2,
+      "download_count": 12,
       "app_type": "docker",
       "category": "media"
     },
@@ -380,7 +380,7 @@
         "arm"
       ],
       "updated_at": "2026-02-27T13:22:40Z",
-      "download_count": 3,
+      "download_count": 6,
       "app_type": "native",
       "category": "content"
     },
@@ -401,7 +401,7 @@
         "arm"
       ],
       "updated_at": "2026-02-27T13:22:40Z",
-      "download_count": 110,
+      "download_count": 114,
       "app_type": "docker",
       "category": "content"
     },
@@ -422,7 +422,7 @@
         "arm"
       ],
       "updated_at": "2026-02-27T13:22:47Z",
-      "download_count": 32,
+      "download_count": 36,
       "app_type": "native",
       "category": "media"
     },
@@ -443,7 +443,7 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:37:46Z",
-      "download_count": 36,
+      "download_count": 38,
       "app_type": "native",
       "category": "system"
     },
@@ -454,8 +454,8 @@
       "display_name": "Nginx UI",
       "description": "Nginx可视化管理面板，支持在线编辑配置、一键Reload、SSL证书管理。需搭配Nginx应用使用。",
       "version": "2.3.3",
-      "fpk_version": "2.3.3-r5",
-      "release_tag": "nginx-ui/v2.3.3-r5",
+      "fpk_version": "2.3.3-r6",
+      "release_tag": "nginx-ui/v2.3.3-r6",
       "service_port": 9000,
       "homepage_url": "https://github.com/0xJacky/nginx-ui",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/nginx-ui/fnos/ICON_256.PNG",
@@ -463,8 +463,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-27T13:25:21Z",
-      "download_count": 22,
+      "updated_at": "2026-02-28T06:23:50Z",
+      "download_count": 35,
       "app_type": "native",
       "category": "system"
     },
@@ -485,7 +485,7 @@
         "arm"
       ],
       "updated_at": "2026-02-27T13:23:03Z",
-      "download_count": 31,
+      "download_count": 37,
       "app_type": "native",
       "category": "content"
     },
@@ -506,7 +506,7 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:37:53Z",
-      "download_count": 224,
+      "download_count": 234,
       "app_type": "native",
       "category": "media"
     },
@@ -527,7 +527,7 @@
         "arm"
       ],
       "updated_at": "2026-02-22T10:35:59Z",
-      "download_count": 267,
+      "download_count": 271,
       "app_type": "native",
       "category": "download"
     },
@@ -569,7 +569,7 @@
         "arm"
       ],
       "updated_at": "2026-02-27T13:22:56Z",
-      "download_count": 13,
+      "download_count": 16,
       "app_type": "native",
       "category": "download"
     },
@@ -590,7 +590,7 @@
         "arm"
       ],
       "updated_at": "2026-02-27T13:22:49Z",
-      "download_count": 56,
+      "download_count": 58,
       "app_type": "docker",
       "category": "media"
     },
@@ -632,7 +632,7 @@
         "arm"
       ],
       "updated_at": "2026-02-27T13:23:00Z",
-      "download_count": 28,
+      "download_count": 33,
       "app_type": "docker",
       "category": "system"
     },
@@ -653,7 +653,7 @@
         "arm"
       ],
       "updated_at": "2026-02-27T13:22:42Z",
-      "download_count": 13,
+      "download_count": 17,
       "app_type": "native",
       "category": "system"
     }
