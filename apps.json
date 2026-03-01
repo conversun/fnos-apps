@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-03-01T08:07:02Z",
+  "generated_at": "2026-03-01T08:08:25Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -243,9 +243,9 @@
       "file_prefix": "gotify",
       "display_name": "Gotify",
       "description": "Gotify 是一个简单的自托管推送通知服务器，支持通过 REST API 发送和接收消息。",
-      "version": "2.9.0",
-      "fpk_version": "2.9.0-r4",
-      "release_tag": "gotify/v2.9.0-r4",
+      "version": "2.9.1",
+      "fpk_version": "2.9.1",
+      "release_tag": "gotify/v2.9.1",
       "service_port": 8070,
       "homepage_url": "https://gotify.net",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/gotify/fnos/ICON_256.PNG",
@@ -253,7 +253,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-28T06:24:16Z",
+      "updated_at": "2026-03-01T08:08:16Z",
       "download_count": 21,
       "app_type": "native",
       "category": "system"
@@ -527,7 +527,7 @@
         "arm"
       ],
       "updated_at": "2026-02-22T10:35:59Z",
-      "download_count": 295,
+      "download_count": 296,
       "app_type": "native",
       "category": "download"
     },
