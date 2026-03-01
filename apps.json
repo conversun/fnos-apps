@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-03-01T08:08:25Z",
+  "generated_at": "2026-03-01T08:12:43Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -75,9 +75,9 @@
       "file_prefix": "auto-bangumi",
       "display_name": "AutoBangumi",
       "description": "基于 RSS 的全自动追番下载整理工具，支持 Mikan 等数据源，自动下载并重命名为 Plex/Jellyfin 兼容格式。",
-      "version": "3.2.4",
-      "fpk_version": "3.2.4-r3",
-      "release_tag": "auto-bangumi/v3.2.4-r3",
+      "version": "3.2.6",
+      "fpk_version": "3.2.6",
+      "release_tag": "auto-bangumi/v3.2.6",
       "service_port": 7892,
       "homepage_url": "https://github.com/EstrellaXD/Auto_Bangumi",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/auto-bangumi/fnos/ICON_256.PNG",
@@ -85,7 +85,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-28T06:24:06Z",
+      "updated_at": "2026-03-01T08:12:34Z",
       "download_count": 15,
       "app_type": "docker",
       "category": "content"
@@ -212,7 +212,7 @@
         "arm"
       ],
       "updated_at": "2026-02-27T12:14:11Z",
-      "download_count": 934,
+      "download_count": 936,
       "app_type": "native",
       "category": "store"
     },
