@@ -7,6 +7,10 @@ services:
     volumes:
       - ${TRIM_PKGVAR}/config:/config
       - ${TRIM_PKGVAR}/core:/moviepilot
+      # MEDIA_DIR / DOWNLOAD_DIR come from .env (written by install wizard).
+      # These MUST match the directories used by your download client (e.g. qBittorrent),
+      # otherwise MoviePilot cannot find downloaded files for organizing.
+      # Defaults fall back to app-private dirs which other apps cannot access.
       - ${MEDIA_DIR:-${TRIM_PKGVAR}/media}:/media
       - ${DOWNLOAD_DIR:-${TRIM_PKGVAR}/downloads}:/downloads
     environment:

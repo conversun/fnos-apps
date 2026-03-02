@@ -22,17 +22,19 @@
         "items": [
             {
                 "type": "tips",
-                "helpText": "请填写 NAS 上的绝对路径（如 <code>/vol1/media</code>）。<br>留空则使用应用默认数据目录，安装后可在应用设置中修改。"
+                "helpText": "MoviePilot 需要访问下载工具（如 qBittorrent）的下载目录和媒体库目录，才能完成自动整理和刮削。<br><br><b>请确保填写的路径与下载工具实际使用的目录一致</b>，否则 MoviePilot 将无法找到已下载的文件。<br><br>路径填写 NAS 上的绝对路径，例如 <code>/vol1/downloads</code>、<code>/vol1/media</code>。<br>留空将使用应用私有数据目录（其他应用无法访问，不推荐）。"
             },
             {
                 "type": "text",
                 "field": "wizard_media_dir",
-                "label": "媒体库目录（电影/剧集）"
+                "label": "媒体库目录（电影/剧集）",
+                "placeholder": "/vol1/media"
             },
             {
                 "type": "text",
                 "field": "wizard_download_dir",
-                "label": "下载目录"
+                "label": "下载目录（与下载工具保持一致）",
+                "placeholder": "/vol1/downloads"
             }
         ]
     }
