@@ -12,9 +12,10 @@ SVC_WRITE_PID=y
 
 service_preuninst() {
     # 兜底：确保 rclone 进程被完全终止
-    pkill -f "rclone" 2>/dev/null || true
+    # 使用 -x 精确匹配进程名，避免误杀 appcenter-cli 等包含 "rclone" 参数的进程
+    pkill -x "rclone" 2>/dev/null || true
     sleep 1
-    pkill -9 -f "rclone" 2>/dev/null || true
+    pkill -9 -x "rclone" 2>/dev/null || true
 }
 
 service_poststop() {

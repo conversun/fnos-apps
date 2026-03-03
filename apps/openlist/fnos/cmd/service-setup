@@ -12,9 +12,10 @@ SVC_WRITE_PID=y
 
 service_preuninst() {
     # 兜底：确保 openlist 进程被完全终止
-    pkill -f "openlist" 2>/dev/null || true
+    # 使用 -x 精确匹配进程名，避免误杀 appcenter-cli 等包含 "openlist" 参数的进程
+    pkill -x "openlist" 2>/dev/null || true
     sleep 1
-    pkill -9 -f "openlist" 2>/dev/null || true
+    pkill -9 -x "openlist" 2>/dev/null || true
 }
 
 service_poststop() {

@@ -12,9 +12,10 @@ SVC_WRITE_PID=y
 
 service_preuninst() {
     # 兜底：确保 certimate 进程被完全终止
-    pkill -f "certimate" 2>/dev/null || true
+    # 使用 -x 精确匹配进程名，避免误杀 appcenter-cli 等包含 "certimate" 参数的进程
+    pkill -x "certimate" 2>/dev/null || true
     sleep 1
-    pkill -9 -f "certimate" 2>/dev/null || true
+    pkill -9 -x "certimate" 2>/dev/null || true
 }
 
 service_poststop() {

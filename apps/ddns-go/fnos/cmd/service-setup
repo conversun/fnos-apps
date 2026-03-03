@@ -11,9 +11,10 @@ SVC_BACKGROUND=y
 SVC_WRITE_PID=y
 
 service_preuninst() {
-    pkill -f "ddns-go" 2>/dev/null || true
+    # 使用 -x 精确匹配进程名，避免误杀 appcenter-cli 等包含 "ddns-go" 参数的进程
+    pkill -x "ddns-go" 2>/dev/null || true
     sleep 1
-    pkill -9 -f "ddns-go" 2>/dev/null || true
+    pkill -9 -x "ddns-go" 2>/dev/null || true
 }
 
 service_poststop() {
