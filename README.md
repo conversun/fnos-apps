@@ -1,7 +1,7 @@
 # fnOS Apps
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-![Apps](https://img.shields.io/badge/apps-29-2ea44f)
+![Apps](https://img.shields.io/badge/apps-54-2ea44f)
 ![Platform](https://img.shields.io/badge/fnOS-third--party-orange)
 
 面向飞牛 fnOS 的第三方应用打包仓库。自动跟踪上游版本，构建可直接安装的 `.fpk` 包。
@@ -30,6 +30,8 @@
 | <img src="apps/immich/fnos/ICON.PNG" width="28"> | [**Immich**](apps/immich/) | `2283` | 自托管照片/视频备份，支持人脸识别 | [Release][r-immich] |
 | <img src="apps/kavita/fnos/ICON.PNG" width="28"> | [**Kavita**](apps/kavita/) | `5000` | 漫画/电子书阅读 | [Release][r-kavita] |
 | <img src="apps/tinymediamanager/fnos/ICON.PNG" width="28"> | [**tinyMediaManager**](apps/tinymediamanager/) | `5800` | 影视元数据管理 | [Release][r-tmm] |
+| <img src="apps/photoprism/fnos/ICON.PNG" width="28"> | [**PhotoPrism**](apps/photoprism/) | `2342` | AI 驱动的照片管理 | [Release][r-photoprism] |
+| <img src="apps/jellyseerr/fnos/ICON.PNG" width="28"> | [**Jellyseerr**](apps/jellyseerr/) | `5055` | Jellyfin/Plex 媒体请求管理 | [Release][r-jellyseerr] |
 
 ### ⬇️ 下载工具
 
@@ -50,12 +52,32 @@
 | <img src="apps/moviepilot/fnos/ICON.PNG" width="28"> | [**MoviePilot**](apps/moviepilot/) | `3000` | 影视自动化管理 | [Release][r-mp] |
 | <img src="apps/openlist/fnos/ICON.PNG" width="28"> | [**OpenList**](apps/openlist/) | `5244` | 文件列表/WebDAV | [Release][r-openlist] |
 | <img src="apps/kodbox/fnos/ICON.PNG" width="28"> | [**KodBox**](apps/kodbox/) | `8500` | 私有云存储/在线文档协作 | [Release][r-kodbox] |
+| <img src="apps/chinesesubfinder/fnos/ICON.PNG" width="28"> | [**ChineseSubFinder**](apps/chinesesubfinder/) | `19035` | 中文字幕自动下载 | [Release][r-csf] |
+| <img src="apps/freshrss/fnos/ICON.PNG" width="28"> | [**FreshRSS**](apps/freshrss/) | `8082` | 自托管 RSS 阅读器 | [Release][r-freshrss] |
+| <img src="apps/miniflux/fnos/ICON.PNG" width="28"> | [**Miniflux**](apps/miniflux/) | `8084` | 极简 RSS 阅读器 | [Release][r-miniflux] |
+| <img src="apps/linkwarden/fnos/ICON.PNG" width="28"> | [**Linkwarden**](apps/linkwarden/) | `3005` | 协作式书签管理 | [Release][r-linkwarden] |
+| <img src="apps/wikijs/fnos/ICON.PNG" width="28"> | [**Wiki.js**](apps/wikijs/) | `3080` | 现代化 Wiki 引擎 | [Release][r-wikijs] |
+| <img src="apps/mealie/fnos/ICON.PNG" width="28"> | [**Mealie**](apps/mealie/) | `9925` | 食谱管理与膳食计划 | [Release][r-mealie] |
+| <img src="apps/paperless-ngx/fnos/ICON.PNG" width="28"> | [**Paperless-ngx**](apps/paperless-ngx/) | `8000` | 文档数字化管理，OCR 支持 | [Release][r-paperless] |
+
+### 🎵 *arr 媒体自动化
+
+| | App | 端口 | 说明 | 下载 |
+|:---:|---|---:|---|:---:|
+| <img src="apps/sonarr/fnos/ICON.PNG" width="28"> | [**Sonarr**](apps/sonarr/) | `8989` | 电视剧自动下载管理 | [Release][r-sonarr] |
+| <img src="apps/radarr/fnos/ICON.PNG" width="28"> | [**Radarr**](apps/radarr/) | `7878` | 电影自动下载管理 | [Release][r-radarr] |
+| <img src="apps/lidarr/fnos/ICON.PNG" width="28"> | [**Lidarr**](apps/lidarr/) | `8686` | 音乐自动下载管理 | [Release][r-lidarr] |
+| <img src="apps/readarr/fnos/ICON.PNG" width="28"> | [**Readarr**](apps/readarr/) | `8787` | 电子书自动下载管理 | [Release][r-readarr] |
+| <img src="apps/prowlarr/fnos/ICON.PNG" width="28"> | [**Prowlarr**](apps/prowlarr/) | `9696` | 索引器管理，整合 Sonarr/Radarr 等 | [Release][r-prowlarr] |
+| <img src="apps/bazarr/fnos/ICON.PNG" width="28"> | [**Bazarr**](apps/bazarr/) | `6767` | 字幕自动下载管理 | [Release][r-bazarr] |
 
 ### 🔧 系统工具
 
 | | App | 端口 | 说明 | 下载 |
 |:---:|---|---:|---|:---:|
 | <img src="apps/sun-panel/fnos/ICON.PNG" width="28"> | [**Sun-Panel**](apps/sun-panel/) | `3002` | 服务器/NAS 导航面板 | [Release][r-sunpanel] |
+| <img src="apps/homepage/fnos/ICON.PNG" width="28"> | [**Homepage**](apps/homepage/) | `3003` | 高度可定制的应用仪表盘 | [Release][r-homepage] |
+| <img src="apps/homarr/fnos/ICON.PNG" width="28"> | [**Homarr**](apps/homarr/) | `7575` | 服务器仪表盘与应用管理 | [Release][r-homarr] |
 | <img src="apps/certimate/fnos/ICON.PNG" width="28"> | [**Certimate**](apps/certimate/) | `8090` | SSL 证书管理 | [Release][r-certimate] |
 | <img src="apps/vaultwarden/fnos/ICON.PNG" width="28"> | [**Vaultwarden**](apps/vaultwarden/) | `8880` | 密码管理（Bitwarden 兼容） | [Release][r-vw] |
 | <img src="apps/nginx/fnos/ICON.PNG" width="28"> | [**Nginx**](apps/nginx/) | `8888` | HTTP 服务与反向代理 | [Release][r-nginx] |
@@ -64,6 +86,19 @@
 | <img src="apps/ddns-go/fnos/ICON.PNG" width="28"> | [**DDNS-GO**](apps/ddns-go/) | `9876` | 动态 DNS 解析客户端 | [Release][r-ddnsgo] |
 | <img src="apps/wolgoweb/fnos/ICON.PNG" width="28"> | [**WolGoWeb**](apps/wolgoweb/) | `9090` | 网络唤醒 (Wake-on-LAN) 管理 | [Release][r-wolgoweb] |
 | <img src="apps/adguardhome/fnos/ICON.PNG" width="28"> | [**AdGuardHome**](apps/adguardhome/) | `3080` | 全网广告拦截与 DNS 管理 | [Release][r-adguardhome] |
+| <img src="apps/uptime-kuma/fnos/ICON.PNG" width="28"> | [**Uptime Kuma**](apps/uptime-kuma/) | `3001` | 自托管服务监控 | [Release][r-uptimekuma] |
+| <img src="apps/beszel/fnos/ICON.PNG" width="28"> | [**Beszel**](apps/beszel/) | `18090` | 轻量级服务器监控 | [Release][r-beszel] |
+| <img src="apps/filebrowser/fnos/ICON.PNG" width="28"> | [**FileBrowser**](apps/filebrowser/) | `8089` | Web 文件管理器 | [Release][r-filebrowser] |
+| <img src="apps/stirling-pdf/fnos/ICON.PNG" width="28"> | [**Stirling-PDF**](apps/stirling-pdf/) | `18080` | 自托管 PDF 工具箱 | [Release][r-stirlingpdf] |
+| <img src="apps/actual-budget/fnos/ICON.PNG" width="28"> | [**Actual Budget**](apps/actual-budget/) | `5006` | 自托管个人财务管理 | [Release][r-actual] |
+| <img src="apps/lucky/fnos/ICON.PNG" width="28"> | [**Lucky**](apps/lucky/) | `16601` | DDNS/反向代理/端口转发多功能工具 | [Release][r-lucky] |
+
+### 🌐 网络工具
+
+| | App | 端口 | 说明 | 下载 |
+|:---:|---|---:|---|:---:|
+| <img src="apps/smartdns/fnos/ICON.PNG" width="28"> | [**SmartDNS**](apps/smartdns/) | `6580` | 本地 DNS 加速与优选 | [Release][r-smartdns] |
+| <img src="apps/mosdns/fnos/ICON.PNG" width="28"> | [**MosDNS**](apps/mosdns/) | `5353` | DNS 转发与分流 | [Release][r-mosdns] |
 
 ### 🌐 浏览器
 
@@ -123,15 +158,15 @@ fnos-apps/
 
 1. 在 `apps/<app>/` 完成 fnOS 清单和启动脚本
 2. 在 `scripts/apps/<app>/` 完成版本探测与 `app.tgz` 组装
-3. 新增 `.github/workflows/build-<app>.yml` 入口 workflow
-4. 将 app 名称加入 `reusable-build-app.yml` 的 `VALID_APPS`
+3. CI 自动发现新应用，无需手动创建 workflow 文件
 
 ## CI/CD 设计
 
+- 单一入口 `build-apps.yml` 自动发现 `apps/` 下所有应用，动态矩阵构建
 - 统一使用 `scripts/build-fpk.sh` 打包，减少各应用行为漂移
 - 统一使用 `reusable-build-app.yml` 实现版本检查、矩阵构建、发布
 - 标签策略由 `scripts/ci/resolve-release-tag.sh` 管理，支持 `-r2/-r3` 修订版自动递增
-- 日常构建由定时任务和手动触发驱动，不由普通 push 触发
+- 日常构建由定时任务和手动触发驱动，push 触发仅构建变更的应用
 
 ## 变更记录
 
@@ -178,3 +213,28 @@ fnos-apps/
 [r-ab]: https://github.com/conversun/fnos-apps/releases?q=auto-bangumi
 [r-immich]: https://github.com/conversun/fnos-apps/releases?q=immich
 [r-koel]: https://github.com/conversun/fnos-apps/releases?q=koel
+[r-photoprism]: https://github.com/conversun/fnos-apps/releases?q=photoprism
+[r-jellyseerr]: https://github.com/conversun/fnos-apps/releases?q=jellyseerr
+[r-csf]: https://github.com/conversun/fnos-apps/releases?q=chinesesubfinder
+[r-freshrss]: https://github.com/conversun/fnos-apps/releases?q=freshrss
+[r-miniflux]: https://github.com/conversun/fnos-apps/releases?q=miniflux
+[r-linkwarden]: https://github.com/conversun/fnos-apps/releases?q=linkwarden
+[r-wikijs]: https://github.com/conversun/fnos-apps/releases?q=wikijs
+[r-mealie]: https://github.com/conversun/fnos-apps/releases?q=mealie
+[r-paperless]: https://github.com/conversun/fnos-apps/releases?q=paperless-ngx
+[r-sonarr]: https://github.com/conversun/fnos-apps/releases?q=sonarr
+[r-radarr]: https://github.com/conversun/fnos-apps/releases?q=radarr
+[r-lidarr]: https://github.com/conversun/fnos-apps/releases?q=lidarr
+[r-readarr]: https://github.com/conversun/fnos-apps/releases?q=readarr
+[r-prowlarr]: https://github.com/conversun/fnos-apps/releases?q=prowlarr
+[r-bazarr]: https://github.com/conversun/fnos-apps/releases?q=bazarr
+[r-homepage]: https://github.com/conversun/fnos-apps/releases?q=homepage
+[r-homarr]: https://github.com/conversun/fnos-apps/releases?q=homarr
+[r-uptimekuma]: https://github.com/conversun/fnos-apps/releases?q=uptime-kuma
+[r-beszel]: https://github.com/conversun/fnos-apps/releases?q=beszel
+[r-filebrowser]: https://github.com/conversun/fnos-apps/releases?q=filebrowser
+[r-stirlingpdf]: https://github.com/conversun/fnos-apps/releases?q=stirling-pdf
+[r-actual]: https://github.com/conversun/fnos-apps/releases?q=actual-budget
+[r-lucky]: https://github.com/conversun/fnos-apps/releases?q=lucky
+[r-smartdns]: https://github.com/conversun/fnos-apps/releases?q=smartdns
+[r-mosdns]: https://github.com/conversun/fnos-apps/releases?q=mosdns
