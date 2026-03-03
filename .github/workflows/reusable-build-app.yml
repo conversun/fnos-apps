@@ -181,6 +181,9 @@ jobs:
           TITLE_PREFIX="${{ needs.check-version.outputs.release_title }}"
           FILE_PREFIX="${{ needs.check-version.outputs.file_prefix }}"
 
+          # Source meta.env for template variables (DEFAULT_PORT, etc.)
+          source "scripts/apps/${APP}/meta.env"
+
           if [[ "$RELEASE_TAG" != "$APP/v$VERSION" ]]; then
             REVISION_NOTE="
           - **打包修订**: ${RELEASE_TAG##*-}
@@ -195,7 +198,7 @@ jobs:
             CHANGELOG=$(awk '/^## /{if(found) exit; found=1; next} found' "$CHANGELOG_FILE")
           fi
 
-          export VERSION FPK_VERSION FULL_VERSION UPSTREAM_TAG RELEASE_TAG FILE_PREFIX REVISION_NOTE CHANGELOG
+          export VERSION FPK_VERSION FULL_VERSION UPSTREAM_TAG RELEASE_TAG FILE_PREFIX REVISION_NOTE CHANGELOG DEFAULT_PORT
           NOTES=$(envsubst < "scripts/apps/${APP}/release-notes.tpl")
 
           gh release create "$RELEASE_TAG" \
