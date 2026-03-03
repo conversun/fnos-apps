@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-03-03T19:24:00Z",
+  "generated_at": "2026-03-03T19:24:13Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -414,8 +414,8 @@
       "display_name": "Frigate",
       "description": "AI 视频监控系统，支持实时物体检测和录像管理。",
       "version": "0.17.0",
-      "fpk_version": "0.17.0",
-      "release_tag": "frigate/v0.17.0",
+      "fpk_version": "0.17.0-r1",
+      "release_tag": "frigate/v0.17.0-r1",
       "service_port": 8971,
       "homepage_url": "https://frigate.video",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/frigate/fnos/ICON_256.PNG",
@@ -423,7 +423,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-03T15:01:51Z",
+      "updated_at": "2026-03-03T19:24:02Z",
       "download_count": 0,
       "app_type": "docker",
       "category": "media"
