@@ -6,7 +6,7 @@
             "desc": "Nginx Web Management Panel",
             "icon": "images/{0}.png",
             "type": "url",
-            "port": "9000",
+            "port": "8889",
             "protocol": "http",
             "url": "/",
             "allUsers": true

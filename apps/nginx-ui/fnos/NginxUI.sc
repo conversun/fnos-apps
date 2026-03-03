@@ -2,5 +2,5 @@
 title="Nginx UI"
 desc="Nginx UI Web Management Panel"
 port_forward="yes"
-src.ports="9000/tcp"
-dst.ports="9000/tcp"
+src.ports="8889/tcp"
+dst.ports="8889/tcp"
