@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-03-03T13:34:23Z",
+  "generated_at": "2026-03-03T13:37:10Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -89,6 +89,27 @@
       "download_count": 43,
       "app_type": "docker",
       "category": "content"
+    },
+    {
+      "slug": "beszel",
+      "appname": "beszel",
+      "file_prefix": "beszel",
+      "display_name": "Beszel",
+      "description": "轻量级服务器监控工具，支持 Docker 容器资源监控",
+      "version": "0.18.4",
+      "fpk_version": "0.18.4",
+      "release_tag": "beszel/v0.18.4",
+      "service_port": 18090,
+      "homepage_url": "https://github.com/henrygd/beszel",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/beszel/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-03-03T13:37:00Z",
+      "download_count": 0,
+      "app_type": "native",
+      "category": "system"
     },
     {
       "slug": "certimate",
