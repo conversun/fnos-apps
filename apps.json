@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-03-03T08:19:39Z",
+  "generated_at": "2026-03-03T08:23:08Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -201,9 +201,9 @@
       "file_prefix": "fnos-apps-store",
       "display_name": "fnOS Apps",
       "description": "fnOS第三方应用中心，支持一键安装、更新和卸载来自conversun/fnos-apps的所有应用。",
-      "version": "1.4.2",
-      "fpk_version": "1.4.2-r1",
-      "release_tag": "fnos-apps-store/v1.4.2-r1",
+      "version": "1.4.3",
+      "fpk_version": "1.4.3",
+      "release_tag": "fnos-apps-store/v1.4.3",
       "service_port": 8011,
       "homepage_url": "https://github.com/conversun/fnos-store",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/fnos-apps-store/fnos/ICON_256.PNG",
@@ -211,7 +211,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-03T08:19:23Z",
+      "updated_at": "2026-03-03T08:22:57Z",
       "download_count": 1123,
       "app_type": "native",
       "category": "store"
@@ -444,7 +444,7 @@
         "arm"
       ],
       "updated_at": "2026-03-03T08:05:40Z",
-      "download_count": 0,
+      "download_count": 2,
       "app_type": "docker",
       "category": "content"
     },
@@ -507,7 +507,7 @@
         "arm"
       ],
       "updated_at": "2026-03-03T08:06:02Z",
-      "download_count": 44,
+      "download_count": 46,
       "app_type": "native",
       "category": "content"
     },
@@ -591,7 +591,7 @@
         "arm"
       ],
       "updated_at": "2026-03-03T08:05:40Z",
-      "download_count": 0,
+      "download_count": 2,
       "app_type": "docker",
       "category": "content"
     },
@@ -633,7 +633,7 @@
         "arm"
       ],
       "updated_at": "2026-03-03T08:05:53Z",
-      "download_count": 31,
+      "download_count": 33,
       "app_type": "native",
       "category": "download"
     },
