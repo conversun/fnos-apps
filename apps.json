@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-03-03T18:47:16Z",
+  "generated_at": "2026-03-03T18:47:24Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -245,8 +245,8 @@
       "display_name": "Cloudreve",
       "description": "国产云盘系统，支持多种存储策略和离线下载。",
       "version": "4.14.1",
-      "fpk_version": "4.14.1",
-      "release_tag": "cloudreve/v4.14.1",
+      "fpk_version": "4.14.1-r1",
+      "release_tag": "cloudreve/v4.14.1-r1",
       "service_port": 5212,
       "homepage_url": "https://cloudreve.org",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/cloudreve/fnos/ICON_256.PNG",
@@ -254,7 +254,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-03T15:01:53Z",
+      "updated_at": "2026-03-03T18:47:18Z",
       "download_count": 0,
       "app_type": "native",
       "category": "system"
@@ -435,8 +435,8 @@
       "display_name": "Gitea",
       "description": "轻量级 Git 代码托管服务器，提供代码仓库、Issue 追踪和 CI/CD。",
       "version": "1.25.4",
-      "fpk_version": "1.25.4",
-      "release_tag": "gitea/v1.25.4",
+      "fpk_version": "1.25.4-r1",
+      "release_tag": "gitea/v1.25.4-r1",
       "service_port": 3003,
       "homepage_url": "https://gitea.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/gitea/fnos/ICON_256.PNG",
@@ -444,7 +444,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-03T15:02:00Z",
+      "updated_at": "2026-03-03T18:47:18Z",
       "download_count": 0,
       "app_type": "native",
       "category": "system"
@@ -498,8 +498,8 @@
       "display_name": "Grafana",
       "description": "可视化监控仪表盘，支持 Prometheus、Loki 等多种数据源。",
       "version": "12.4.0",
-      "fpk_version": "12.4.0",
-      "release_tag": "grafana/v12.4.0",
+      "fpk_version": "12.4.0-r1",
+      "release_tag": "grafana/v12.4.0-r1",
       "service_port": 3010,
       "homepage_url": "https://grafana.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/grafana/fnos/ICON_256.PNG",
@@ -507,7 +507,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-03T15:02:21Z",
+      "updated_at": "2026-03-03T18:47:14Z",
       "download_count": 7,
       "app_type": "native",
       "category": "system"
@@ -760,7 +760,7 @@
         "arm"
       ],
       "updated_at": "2026-02-28T06:24:13Z",
-      "download_count": 54,
+      "download_count": 33,
       "app_type": "docker",
       "category": "media"
     },
@@ -951,7 +951,7 @@
         "arm"
       ],
       "updated_at": "2026-03-03T18:47:09Z",
-      "download_count": 43,
+      "download_count": 25,
       "app_type": "native",
       "category": "content"
     },
@@ -1132,8 +1132,8 @@
       "display_name": "Ntfy",
       "description": "自托管的推送通知服务器，支持 HTTP 接口发送通知到手机和桌面。",
       "version": "2.17.0",
-      "fpk_version": "2.17.0",
-      "release_tag": "ntfy/v2.17.0",
+      "fpk_version": "2.17.0-r1",
+      "release_tag": "ntfy/v2.17.0-r1",
       "service_port": 2586,
       "homepage_url": "https://ntfy.sh",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ntfy/fnos/ICON_256.PNG",
@@ -1141,7 +1141,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-03T15:02:03Z",
+      "updated_at": "2026-03-03T18:47:13Z",
       "download_count": 0,
       "app_type": "native",
       "category": "system"
@@ -1174,8 +1174,8 @@
       "display_name": "OpenList",
       "description": "支持多种存储后端的文件列表/WebDAV 程序（AList 社区分支）",
       "version": "4.1.10",
-      "fpk_version": "4.1.10-r4",
-      "release_tag": "openlist/v4.1.10-r4",
+      "fpk_version": "4.1.10-r5",
+      "release_tag": "openlist/v4.1.10-r5",
       "service_port": 5244,
       "homepage_url": "https://github.com/OpenListTeam/OpenList",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/openlist/fnos/ICON_256.PNG",
@@ -1183,7 +1183,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-03T08:06:02Z",
+      "updated_at": "2026-03-03T18:47:18Z",
       "download_count": 53,
       "app_type": "native",
       "category": "content"
