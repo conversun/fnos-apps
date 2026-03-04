@@ -22,7 +22,48 @@ mv "node-v${NODE_VERSION}-linux-x64" node
 
 echo "==> Installing openclaw ${VERSION}..."
 export PATH="$(pwd)/node/bin:${PATH}"
-npm install -g --prefix ./openclaw_global "openclaw@${VERSION}"
+# Prevent playwright from downloading browser binaries (~300MB)
+export PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
+npm install -g --prefix ./openclaw_global "openclaw@${VERSION}" \
+  --omit=dev --no-audit --no-fund
+
+echo "==> Size before optimization: $(du -sh ./openclaw_global | cut -f1)"
+
+OC_MODULES="./openclaw_global/lib/node_modules"
+
+# 1) Remove sharp prebuilt binaries for non-linux-x64 platforms
+echo "==> Removing non-linux-x64 sharp prebuilds..."
+find "${OC_MODULES}" -path "*/@img/sharp-*" -maxdepth 4 -type d \
+  ! -name "*linux-x64*" -exec rm -rf {} + 2>/dev/null || true
+
+# 2) Remove TypeScript declarations, source maps, and documentation
+echo "==> Removing unnecessary files (.d.ts, .map, docs)..."
+find "${OC_MODULES}" -type f \( \
+  -name "*.d.ts" -o -name "*.d.mts" -o -name "*.d.cts" \
+  -o -name "*.map" \
+  -o -name "*.md" -o -name "*.markdown" \
+  -o -name "LICENSE*" -o -name "LICENCE*" \
+  -o -name "CHANGELOG*" -o -name "HISTORY*" -o -name "CHANGES*" -o -name "AUTHORS*" \
+  -o -name "Makefile" -o -name "Gruntfile*" -o -name "Gulpfile*" \
+  -o -name ".npmignore" -o -name ".eslintrc*" -o -name ".prettierrc*" \
+  -o -name ".editorconfig" -o -name ".gitattributes" \
+  -o -name "tsconfig*.json" -o -name "tslint.json" -o -name ".tsbuildinfo" \
+\) -delete 2>/dev/null || true
+
+# 3) Remove test, docs, example, and CI directories
+echo "==> Removing test/docs/example directories..."
+find "${OC_MODULES}" -type d \( \
+  -name "test" -o -name "tests" -o -name "__tests__" \
+  -o -name "spec" -o -name "specs" \
+  -o -name "docs" -o -name "doc" -o -name "documentation" \
+  -o -name "examples" -o -name "example" -o -name "samples" \
+  -o -name ".github" -o -name ".vscode" -o -name ".idea" \
+  -o -name "coverage" -o -name ".nyc_output" \
+  -o -name "benchmark" -o -name "benchmarks" \
+  -o -name "man" \
+\) -exec rm -rf {} + 2>/dev/null || true
+
+echo "==> Size after optimization: $(du -sh ./openclaw_global | cut -f1)"
 
 echo "==> Building app.tgz..."
 mkdir -p app_root/server app_root/ui
