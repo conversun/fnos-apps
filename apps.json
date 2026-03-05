@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-03-05T08:07:22Z",
+  "generated_at": "2026-03-05T08:26:06Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -111,6 +111,27 @@
       "app_type": "docker",
       "category": "system",
       "post_install_note": "AppFlowy Cloud 需要配合 AppFlowy 客户端使用。"
+    },
+    {
+      "slug": "audiobookshelf",
+      "appname": "audiobookshelf",
+      "file_prefix": "audiobookshelf",
+      "display_name": "Audiobookshelf",
+      "description": "自托管的有声书和播客服务器，支持多用户管理、进度同步和丰富的元数据管理。",
+      "version": "2.32.1",
+      "fpk_version": "2.32.1-r2",
+      "release_tag": "audiobookshelf/v2.32.1-r2",
+      "service_port": 13378,
+      "homepage_url": "https://www.audiobookshelf.org",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/audiobookshelf/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-02-19T17:20:53Z",
+      "download_count": 39,
+      "app_type": "docker",
+      "category": "content"
     },
     {
       "slug": "auto-bangumi",
@@ -234,7 +255,7 @@
         "arm"
       ],
       "updated_at": "2026-03-03T19:22:03Z",
-      "download_count": 159,
+      "download_count": 160,
       "app_type": "docker",
       "category": "browser"
     },
@@ -300,6 +321,27 @@
       "download_count": 4,
       "app_type": "docker",
       "category": "system"
+    },
+    {
+      "slug": "emby",
+      "appname": "embyserver",
+      "file_prefix": "embyserver",
+      "display_name": "Emby",
+      "description": "EmbyServer是一款软件媒体系统，可让您控制媒体的管理和流式传输。可以通过多个应用程序将专用服务器中的媒体提供给最终用户设备。",
+      "version": "4.9.3.0",
+      "fpk_version": "4.9.3.0-r3",
+      "release_tag": "emby/v4.9.3.0-r3",
+      "service_port": 8096,
+      "homepage_url": "https://emby.media",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/emby/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-02-14T14:38:36Z",
+      "download_count": 574,
+      "app_type": "native",
+      "category": "media"
     },
     {
       "slug": "ente",
@@ -382,7 +424,7 @@
         "arm"
       ],
       "updated_at": "2026-03-03T19:22:37Z",
-      "download_count": 1519,
+      "download_count": 1520,
       "app_type": "native",
       "category": "store"
     },
@@ -445,7 +487,7 @@
         "arm"
       ],
       "updated_at": "2026-03-03T19:23:07Z",
-      "download_count": 17,
+      "download_count": 18,
       "app_type": "native",
       "category": "system"
     },
@@ -739,7 +781,7 @@
         "arm"
       ],
       "updated_at": "2026-03-03T19:21:59Z",
-      "download_count": 104,
+      "download_count": 105,
       "app_type": "docker",
       "category": "media"
     },
@@ -781,7 +823,7 @@
         "arm"
       ],
       "updated_at": "2026-03-05T08:06:53Z",
-      "download_count": 36,
+      "download_count": 38,
       "app_type": "docker",
       "category": "media"
     },
@@ -1057,7 +1099,7 @@
         "arm"
       ],
       "updated_at": "2026-03-05T08:06:51Z",
-      "download_count": 6,
+      "download_count": 8,
       "app_type": "docker",
       "category": "system"
     },
@@ -1099,7 +1141,7 @@
         "arm"
       ],
       "updated_at": "2026-03-05T08:06:53Z",
-      "download_count": 5,
+      "download_count": 7,
       "app_type": "docker",
       "category": "system",
       "post_install_note": "NetBird 客户端容器使用 host 网络模式运行。"
@@ -1124,6 +1166,27 @@
       "download_count": 7,
       "app_type": "docker",
       "category": "content"
+    },
+    {
+      "slug": "nginx",
+      "appname": "nginxserver",
+      "file_prefix": "nginxserver",
+      "display_name": "Nginx",
+      "description": "Nginx是一个高性能的HTTP和反向代理服务器，也是一个IMAP/POP3/SMTP代理服务器。",
+      "version": "1.28.2",
+      "fpk_version": "1.28.2-r2",
+      "release_tag": "nginx/v1.28.2-r2",
+      "service_port": 8888,
+      "homepage_url": "https://nginx.org",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/nginx/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-02-14T14:37:46Z",
+      "download_count": 44,
+      "app_type": "native",
+      "category": "system"
     },
     {
       "slug": "nginx-ui",
@@ -1226,7 +1289,7 @@
         "arm"
       ],
       "updated_at": "2026-03-05T08:07:02Z",
-      "download_count": 4,
+      "download_count": 6,
       "app_type": "docker",
       "category": "system"
     },
@@ -1271,6 +1334,27 @@
       "download_count": 11,
       "app_type": "docker",
       "category": "system"
+    },
+    {
+      "slug": "plex",
+      "appname": "plexmediaserver",
+      "file_prefix": "plexmediaserver",
+      "display_name": "Plex",
+      "description": "Plex Media Server是一款强大的媒体服务器软件，可以管理和串流您的电影、电视剧、音乐和照片到任何设备。支持硬件转码、离线同步等高级功能。",
+      "version": "1.43.0.10492",
+      "fpk_version": "1.43.0.10492-r1",
+      "release_tag": "plex/v1.43.0.10492-r1",
+      "service_port": 32400,
+      "homepage_url": "https://www.plex.tv/media-server-downloads/",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/plex/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-02-14T14:37:53Z",
+      "download_count": 319,
+      "app_type": "native",
+      "category": "media"
     },
     {
       "slug": "prometheus",
@@ -1478,7 +1562,7 @@
         "arm"
       ],
       "updated_at": "2026-03-03T19:22:56Z",
-      "download_count": 29,
+      "download_count": 32,
       "app_type": "native",
       "category": "system"
     },
@@ -1583,7 +1667,7 @@
         "arm"
       ],
       "updated_at": "2026-03-03T19:21:20Z",
-      "download_count": 59,
+      "download_count": 60,
       "app_type": "native",
       "category": "download"
     },
