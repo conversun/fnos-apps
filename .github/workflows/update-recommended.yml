@@ -1,0 +1,114 @@
+name: Update recommended versions
+
+on:
+  schedule:
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-recommended:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Update recommended.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -u
+
+          apps=$(jq -c '.apps[] | select(.github_repo != null and .github_repo != "")' recommended.json)
+
+          if [ -z "$apps" ]; then
+            echo "No apps with github_repo found in recommended.json"
+            exit 0
+          fi
+
+          while IFS= read -r app; do
+            [ -n "$app" ] || continue
+
+            repo=$(jq -r '.github_repo' <<< "$app")
+            current_version=$(jq -r '.latest_version // ""' <<< "$app")
+            api_url="https://api.github.com/repos/$repo/releases/latest"
+
+            response_file=$(mktemp)
+            http_code=$(curl -sS \
+              -H "Authorization: Bearer $GITHUB_TOKEN" \
+              -H "Accept: application/vnd.github+json" \
+              -o "$response_file" \
+              -w '%{http_code}' \
+              "$api_url")
+
+            if [ "$http_code" = "404" ]; then
+              echo "Skip $repo: no latest release"
+              rm -f "$response_file"
+              continue
+            fi
+
+            if [ "$http_code" != "200" ]; then
+              echo "Skip $repo: GitHub API returned HTTP $http_code"
+              rm -f "$response_file"
+              continue
+            fi
+
+            tag=$(jq -r '.tag_name // empty' "$response_file")
+            published_at=$(jq -r '.published_at // empty' "$response_file")
+            rm -f "$response_file"
+
+            if [ -z "$tag" ] || [ -z "$published_at" ]; then
+              echo "Skip $repo: missing tag_name or published_at"
+              continue
+            fi
+
+            version=$(jq -nr --arg tag "$tag" '$tag | ltrimstr("v")')
+
+            if [ -z "$version" ]; then
+              echo "Skip $repo: normalized version is empty"
+              continue
+            fi
+
+            if [ "$version" = "$current_version" ]; then
+              echo "$repo already at $version"
+              continue
+            fi
+
+            tmp_file=$(mktemp)
+            jq \
+              --arg repo "$repo" \
+              --arg version "$version" \
+              --arg updated_at "$published_at" \
+              '(.apps) |= map(
+                if .github_repo == $repo then
+                  .latest_version = $version | .updated_at = $updated_at
+                else
+                  .
+                end
+              )' recommended.json > "$tmp_file"
+
+            mv "$tmp_file" recommended.json
+            echo "Updated $repo: $current_version -> $version"
+          done <<< "$apps"
+
+      - name: Detect changes
+        id: changes
+        run: |
+          if git diff --quiet -- recommended.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No recommended.json changes"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git diff -- recommended.json
+          fi
+
+      - name: Commit recommended.json updates
+        if: steps.changes.outputs.changed == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'chore: update recommended versions [skip ci]'
+          file_pattern: recommended.json
