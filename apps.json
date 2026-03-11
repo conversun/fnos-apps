@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-03-11T17:38:36Z",
+  "generated_at": "2026-03-11T17:38:44Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -34,8 +34,8 @@
       "display_name": "AdGuardHome",
       "description": "AdGuardHome 是一个网络范围的广告和跟踪器拦截 DNS 服务器，支持 DNS-over-HTTPS、DNS-over-TLS。",
       "version": "0.107.73",
-      "fpk_version": "0.107.73",
-      "release_tag": "adguardhome/v0.107.73",
+      "fpk_version": "0.107.73-r1",
+      "release_tag": "adguardhome/v0.107.73-r1",
       "service_port": 3080,
       "homepage_url": "https://adguard.com/adguard-home/overview.html",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/adguardhome/fnos/ICON_256.PNG",
@@ -43,7 +43,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T06:52:50Z",
+      "updated_at": "2026-03-11T17:38:36Z",
       "download_count": 10,
       "app_type": "docker",
       "category": "system"
@@ -76,8 +76,8 @@
       "display_name": "ANI-RSS",
       "description": "动漫 RSS 自动追番、订阅、下载和刮削工具，支持自动识别季数集数和重命名。默认用户名admin，密码admin。",
       "version": "3.0.8",
-      "fpk_version": "3.0.8",
-      "release_tag": "ani-rss/v3.0.8",
+      "fpk_version": "3.0.8-r1",
+      "release_tag": "ani-rss/v3.0.8-r1",
       "service_port": 7789,
       "homepage_url": "https://github.com/wushuo894/ani-rss",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ani-rss/fnos/ICON_256.PNG",
@@ -85,7 +85,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T08:09:17Z",
+      "updated_at": "2026-03-11T17:38:35Z",
       "download_count": 102,
       "app_type": "docker",
       "category": "content"
@@ -371,8 +371,8 @@
       "display_name": "DPanel",
       "description": "轻量级 Docker 可视化管理面板，支持容器管理和镜像操作。",
       "version": "1.9.3.1",
-      "fpk_version": "1.9.3.1",
-      "release_tag": "dpanel/v1.9.3.1",
+      "fpk_version": "1.9.3.1-r1",
+      "release_tag": "dpanel/v1.9.3.1-r1",
       "service_port": 8807,
       "homepage_url": "https://github.com/donknap/dpanel",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/dpanel/fnos/ICON_256.PNG",
@@ -380,7 +380,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T08:08:18Z",
+      "updated_at": "2026-03-11T17:38:42Z",
       "download_count": 19,
       "app_type": "docker",
       "category": "system"
@@ -582,8 +582,8 @@
       "display_name": "FreshRSS",
       "description": "自托管 RSS 阅读器，支持 Google Reader API 和第三方客户端",
       "version": "1.28.1",
-      "fpk_version": "1.28.1",
-      "release_tag": "freshrss/v1.28.1",
+      "fpk_version": "1.28.1-r1",
+      "release_tag": "freshrss/v1.28.1-r1",
       "service_port": 8180,
       "homepage_url": "https://freshrss.org",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/freshrss/fnos/ICON_256.PNG",
@@ -591,7 +591,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T08:09:00Z",
+      "updated_at": "2026-03-11T17:38:37Z",
       "download_count": 6,
       "app_type": "docker",
       "category": "content"
@@ -1022,9 +1022,9 @@
       "file_prefix": "koodo-reader",
       "display_name": "Koodo Reader",
       "description": "开源电子书阅读器，支持 EPUB、PDF、Mobi 等格式，跨平台同步阅读进度。",
-      "version": "null",
-      "fpk_version": "null",
-      "release_tag": "koodo-reader/vnull",
+      "version": "2.3.0",
+      "fpk_version": "2.3.0",
+      "release_tag": "koodo-reader/v2.3.0",
       "service_port": 8930,
       "homepage_url": "https://github.com/koodo-reader/koodo-reader",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/koodo-reader/fnos/ICON_256.PNG",
@@ -1032,7 +1032,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T08:08:24Z",
+      "updated_at": "2026-03-11T17:38:35Z",
       "download_count": 14,
       "app_type": "docker",
       "category": "content"
@@ -1214,8 +1214,8 @@
       "display_name": "Medusa",
       "description": "电视剧自动化下载管理工具，支持自动搜索和下载新剧集。",
       "version": "1.0.25",
-      "fpk_version": "1.0.25",
-      "release_tag": "medusa/v1.0.25",
+      "fpk_version": "1.0.25-r1",
+      "release_tag": "medusa/v1.0.25-r1",
       "service_port": 8081,
       "homepage_url": "https://github.com/pymedusa/Medusa",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/medusa/fnos/ICON_256.PNG",
@@ -1223,7 +1223,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T08:08:19Z",
+      "updated_at": "2026-03-11T17:38:42Z",
       "download_count": 36,
       "app_type": "docker",
       "category": "media"
@@ -1719,9 +1719,9 @@
       "file_prefix": "pihole",
       "display_name": "Pi-hole",
       "description": "全网广告拦截工具，通过 DNS 过滤广告和追踪器。",
-      "version": "null",
-      "fpk_version": "null",
-      "release_tag": "pihole/vnull",
+      "version": "2026.02.0",
+      "fpk_version": "2026.02.0-r1",
+      "release_tag": "pihole/v2026.02.0-r1",
       "service_port": 8053,
       "homepage_url": "https://pi-hole.net",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/pihole/fnos/ICON_256.PNG",
@@ -1729,7 +1729,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T06:52:31Z",
+      "updated_at": "2026-03-11T17:38:36Z",
       "download_count": 14,
       "app_type": "docker",
       "category": "system"
@@ -2308,8 +2308,8 @@
       "display_name": "Wizarr",
       "description": "Plex/Jellyfin 用户邀请管理工具，简化媒体库共享流程。",
       "version": "2026.2.1",
-      "fpk_version": "2026.2.1",
-      "release_tag": "wizarr/v2026.2.1",
+      "fpk_version": "2026.2.1-r1",
+      "release_tag": "wizarr/v2026.2.1-r1",
       "service_port": 5690,
       "homepage_url": "https://github.com/wizarrrr/wizarr",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/wizarr/fnos/ICON_256.PNG",
@@ -2317,7 +2317,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T08:09:08Z",
+      "updated_at": "2026-03-11T17:38:36Z",
       "download_count": 4,
       "app_type": "docker",
       "category": "media"
