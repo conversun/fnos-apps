@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-03-11T08:08:42Z",
+  "generated_at": "2026-03-11T08:08:54Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -266,8 +266,8 @@
       "display_name": "ClamAV",
       "description": "开源杀毒引擎，提供文件扫描和病毒检测服务。",
       "version": "1.5.2",
-      "fpk_version": "1.5.2-r1",
-      "release_tag": "clamav/v1.5.2-r1",
+      "fpk_version": "1.5.2",
+      "release_tag": "clamav/v1.5.2",
       "service_port": 3310,
       "homepage_url": "https://github.com/Cisco-Talos/clamav",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/clamav/fnos/ICON_256.PNG",
@@ -275,7 +275,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T06:52:30Z",
+      "updated_at": "2026-03-11T08:08:45Z",
       "download_count": 13,
       "app_type": "docker",
       "category": "system"
@@ -413,8 +413,8 @@
       "display_name": "Ente",
       "description": "端到端加密照片备份和存储服务，Google Photos 的隐私替代方案。",
       "version": "photos-v1.3.22",
-      "fpk_version": "photos-v1.3.22-r1",
-      "release_tag": "ente/vphotos-v1.3.22-r1",
+      "fpk_version": "photos-v1.3.22",
+      "release_tag": "ente/vphotos-v1.3.22",
       "service_port": 8510,
       "homepage_url": "https://ente.io",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ente/fnos/ICON_256.PNG",
@@ -422,7 +422,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T06:51:49Z",
+      "updated_at": "2026-03-11T08:08:49Z",
       "download_count": 24,
       "app_type": "docker",
       "category": "system",
@@ -540,8 +540,8 @@
       "display_name": "Frigate",
       "description": "AI 视频监控系统，支持实时物体检测和录像管理。",
       "version": "0.17.0",
-      "fpk_version": "0.17.0-r1",
-      "release_tag": "frigate/v0.17.0-r1",
+      "fpk_version": "0.17.0",
+      "release_tag": "frigate/v0.17.0",
       "service_port": 8971,
       "homepage_url": "https://frigate.video",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/frigate/fnos/ICON_256.PNG",
@@ -549,7 +549,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T06:52:19Z",
+      "updated_at": "2026-03-11T08:08:48Z",
       "download_count": 9,
       "app_type": "docker",
       "category": "media"
@@ -1108,8 +1108,8 @@
       "display_name": "Mattermost",
       "description": "企业级即时通讯平台，Slack 的开源替代方案。",
       "version": "11.4.2",
-      "fpk_version": "11.4.2-r1",
-      "release_tag": "mattermost/v11.4.2-r1",
+      "fpk_version": "11.4.2",
+      "release_tag": "mattermost/v11.4.2",
       "service_port": 8065,
       "homepage_url": "https://mattermost.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/mattermost/fnos/ICON_256.PNG",
@@ -1117,7 +1117,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T06:52:03Z",
+      "updated_at": "2026-03-11T08:08:45Z",
       "download_count": 9,
       "app_type": "docker",
       "category": "system",
@@ -1278,8 +1278,8 @@
       "display_name": "n8n",
       "description": "可视化工作流自动化工具，支持连接数百种服务和 API。",
       "version": "2.11.2",
-      "fpk_version": "2.11.2-r1",
-      "release_tag": "n8n/v2.11.2-r1",
+      "fpk_version": "2.11.2",
+      "release_tag": "n8n/v2.11.2",
       "service_port": 5678,
       "homepage_url": "https://n8n.io",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/n8n/fnos/ICON_256.PNG",
@@ -1287,7 +1287,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T06:51:51Z",
+      "updated_at": "2026-03-11T08:08:43Z",
       "download_count": 28,
       "app_type": "docker",
       "category": "system"
@@ -1720,8 +1720,8 @@
       "display_name": "Puter",
       "description": "开源云桌面环境,在浏览器中提供完整的桌面体验,支持文件管理和应用生态。",
       "version": "2.5.1",
-      "fpk_version": "2.5.1-r1",
-      "release_tag": "puter/v2.5.1-r1",
+      "fpk_version": "2.5.1",
+      "release_tag": "puter/v2.5.1",
       "service_port": 4100,
       "homepage_url": "https://puter.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/puter/fnos/ICON_256.PNG",
@@ -1729,7 +1729,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T06:52:20Z",
+      "updated_at": "2026-03-11T08:08:50Z",
       "download_count": 45,
       "app_type": "docker",
       "category": "system"
@@ -1846,8 +1846,8 @@
       "display_name": "Rocket.Chat",
       "description": "开源团队协作通讯平台,支持即时消息、音视频通话和文件共享。",
       "version": "8.2.0",
-      "fpk_version": "8.2.0-r1",
-      "release_tag": "rocketchat/v8.2.0-r1",
+      "fpk_version": "8.2.0",
+      "release_tag": "rocketchat/v8.2.0",
       "service_port": 3003,
       "homepage_url": "https://rocket.chat",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/rocketchat/fnos/ICON_256.PNG",
@@ -1855,7 +1855,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T06:52:04Z",
+      "updated_at": "2026-03-11T08:08:52Z",
       "download_count": 6,
       "app_type": "docker",
       "category": "content"
@@ -1993,8 +1993,8 @@
       "display_name": "Sunshine",
       "description": "游戏串流服务器，配合 Moonlight 客户端实现远程游戏。",
       "version": "null",
-      "fpk_version": "null-r1",
-      "release_tag": "sunshine/vnull-r1",
+      "fpk_version": "null",
+      "release_tag": "sunshine/vnull",
       "service_port": 47990,
       "homepage_url": "https://docs.lizardbyte.dev/projects/sunshine/",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/sunshine/fnos/ICON_256.PNG",
@@ -2002,7 +2002,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T06:51:53Z",
+      "updated_at": "2026-03-11T08:08:50Z",
       "download_count": 15,
       "app_type": "docker",
       "category": "system"
@@ -2140,8 +2140,8 @@
       "display_name": "Vaultwarden",
       "description": "轻量级 Bitwarden 兼容密码管理服务器，使用 Rust 编写，支持自托管密码管理。",
       "version": "1.35.4",
-      "fpk_version": "1.35.4-r1",
-      "release_tag": "vaultwarden/v1.35.4-r1",
+      "fpk_version": "1.35.4",
+      "release_tag": "vaultwarden/v1.35.4",
       "service_port": 8880,
       "homepage_url": "https://github.com/dani-garcia/vaultwarden",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/vaultwarden/fnos/ICON_256.PNG",
@@ -2149,7 +2149,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T06:51:52Z",
+      "updated_at": "2026-03-11T08:08:44Z",
       "download_count": 24,
       "app_type": "docker",
       "category": "system"
