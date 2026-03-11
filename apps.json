@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-03-11T06:51:56Z",
+  "generated_at": "2026-03-11T06:52:06Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -76,8 +76,8 @@
       "display_name": "ANI-RSS",
       "description": "动漫 RSS 自动追番、订阅、下载和刮削工具，支持自动识别季数集数和重命名。默认用户名admin，密码admin。",
       "version": "3.0.8",
-      "fpk_version": "3.0.8",
-      "release_tag": "ani-rss/v3.0.8",
+      "fpk_version": "3.0.8-r1",
+      "release_tag": "ani-rss/v3.0.8-r1",
       "service_port": 7789,
       "homepage_url": "https://github.com/wushuo894/ani-rss",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ani-rss/fnos/ICON_256.PNG",
@@ -85,7 +85,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-09T08:08:39Z",
+      "updated_at": "2026-03-11T06:51:59Z",
       "download_count": 102,
       "app_type": "docker",
       "category": "content"
@@ -97,8 +97,8 @@
       "display_name": "AppFlowy",
       "description": "开源 Notion 替代品，支持自托管的协作文档平台。",
       "version": "0.9.64",
-      "fpk_version": "0.9.64",
-      "release_tag": "appflowy/v0.9.64",
+      "fpk_version": "0.9.64-r1",
+      "release_tag": "appflowy/v0.9.64-r1",
       "service_port": 8500,
       "homepage_url": "https://appflowy.io",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/appflowy/fnos/ICON_256.PNG",
@@ -106,7 +106,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-03T15:02:02Z",
+      "updated_at": "2026-03-11T06:52:04Z",
       "download_count": 25,
       "app_type": "docker",
       "category": "system",
@@ -307,9 +307,9 @@
       "file_prefix": "copyparty",
       "display_name": "CopyParty",
       "description": "轻量级文件共享服务器，支持拖拽上传、WebDAV 和搜索。",
-      "version": "1.20.11",
-      "fpk_version": "1.20.11",
-      "release_tag": "copyparty/v1.20.11",
+      "version": "1.20.12",
+      "fpk_version": "1.20.12",
+      "release_tag": "copyparty/v1.20.12",
       "service_port": 3923,
       "homepage_url": "https://github.com/9001/copyparty",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/copyparty/fnos/ICON_256.PNG",
@@ -317,7 +317,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-09T08:08:38Z",
+      "updated_at": "2026-03-11T06:52:04Z",
       "download_count": 4,
       "app_type": "docker",
       "category": "content"
@@ -1024,8 +1024,8 @@
       "display_name": "Linkwarden",
       "description": "协作式书签管理器，支持网页存档和标签分类",
       "version": "2.13.5",
-      "fpk_version": "2.13.5",
-      "release_tag": "linkwarden/v2.13.5",
+      "fpk_version": "2.13.5-r1",
+      "release_tag": "linkwarden/v2.13.5-r1",
       "service_port": 3050,
       "homepage_url": "https://linkwarden.app",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/linkwarden/fnos/ICON_256.PNG",
@@ -1033,7 +1033,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-08T08:04:12Z",
+      "updated_at": "2026-03-11T06:51:58Z",
       "download_count": 10,
       "app_type": "docker",
       "category": "content"
@@ -1045,8 +1045,8 @@
       "display_name": "LocalAI",
       "description": "本地 AI 模型推理服务器，兼容 OpenAI API 接口。",
       "version": "3.12.1",
-      "fpk_version": "3.12.1",
-      "release_tag": "localai/v3.12.1",
+      "fpk_version": "3.12.1-r1",
+      "release_tag": "localai/v3.12.1-r1",
       "service_port": 8180,
       "homepage_url": "https://localai.io",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/localai/fnos/ICON_256.PNG",
@@ -1054,7 +1054,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-08T08:03:56Z",
+      "updated_at": "2026-03-11T06:52:02Z",
       "download_count": 12,
       "app_type": "docker",
       "category": "system"
@@ -1108,8 +1108,8 @@
       "display_name": "Mattermost",
       "description": "企业级即时通讯平台，Slack 的开源替代方案。",
       "version": "11.4.2",
-      "fpk_version": "11.4.2",
-      "release_tag": "mattermost/v11.4.2",
+      "fpk_version": "11.4.2-r1",
+      "release_tag": "mattermost/v11.4.2-r1",
       "service_port": 8065,
       "homepage_url": "https://mattermost.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/mattermost/fnos/ICON_256.PNG",
@@ -1117,7 +1117,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-03T15:02:02Z",
+      "updated_at": "2026-03-11T06:52:03Z",
       "download_count": 9,
       "app_type": "docker",
       "category": "system",
@@ -1172,8 +1172,8 @@
       "display_name": "MelodyHub",
       "description": "Web 音乐搜索与下载服务，基于 lx-music 核心，支持多平台音源聚合搜索、服务器端下载和歌曲管理。",
       "version": "1.1.0",
-      "fpk_version": "1.1.0",
-      "release_tag": "melody-hub/v1.1.0",
+      "fpk_version": "1.1.0-r1",
+      "release_tag": "melody-hub/v1.1.0-r1",
       "service_port": 3006,
       "homepage_url": "https://github.com/gefl24/melody-hub",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/melody-hub/fnos/ICON_256.PNG",
@@ -1181,7 +1181,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-09T08:52:07Z",
+      "updated_at": "2026-03-11T06:51:56Z",
       "download_count": 156,
       "app_type": "docker",
       "category": "media"
@@ -1363,8 +1363,8 @@
       "display_name": "Nextcloud",
       "description": "开源私有云存储平台,支持文件同步、在线文档协作和日历联系人管理。",
       "version": "33.0.0",
-      "fpk_version": "33.0.0",
-      "release_tag": "nextcloud/v33.0.0",
+      "fpk_version": "33.0.0-r1",
+      "release_tag": "nextcloud/v33.0.0-r1",
       "service_port": 8082,
       "homepage_url": "https://nextcloud.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/nextcloud/fnos/ICON_256.PNG",
@@ -1372,7 +1372,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-03T08:05:40Z",
+      "updated_at": "2026-03-11T06:52:04Z",
       "download_count": 17,
       "app_type": "docker",
       "category": "content"
@@ -1846,8 +1846,8 @@
       "display_name": "Rocket.Chat",
       "description": "开源团队协作通讯平台,支持即时消息、音视频通话和文件共享。",
       "version": "8.2.0",
-      "fpk_version": "8.2.0",
-      "release_tag": "rocketchat/v8.2.0",
+      "fpk_version": "8.2.0-r1",
+      "release_tag": "rocketchat/v8.2.0-r1",
       "service_port": 3003,
       "homepage_url": "https://rocket.chat",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/rocketchat/fnos/ICON_256.PNG",
@@ -1855,7 +1855,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-08T08:03:44Z",
+      "updated_at": "2026-03-11T06:52:04Z",
       "download_count": 6,
       "app_type": "docker",
       "category": "content"
@@ -2035,8 +2035,8 @@
       "display_name": "Tailscale",
       "description": "Tailscale VPN 客户端，零配置组建安全私有网络，支持远程访问 NAS。",
       "version": "1.94.2",
-      "fpk_version": "1.94.2",
-      "release_tag": "tailscale/v1.94.2",
+      "fpk_version": "1.94.2-r1",
+      "release_tag": "tailscale/v1.94.2-r1",
       "service_port": 8088,
       "homepage_url": "https://github.com/tailscale/tailscale",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/tailscale/fnos/ICON_256.PNG",
@@ -2044,7 +2044,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-08T18:04:44Z",
+      "updated_at": "2026-03-11T06:52:04Z",
       "download_count": 10,
       "app_type": "docker",
       "category": "system"
