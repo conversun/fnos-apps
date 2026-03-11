@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-03-11T08:38:53Z",
+  "generated_at": "2026-03-11T09:14:37Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -487,7 +487,7 @@
         "arm"
       ],
       "updated_at": "2026-03-08T08:03:44Z",
-      "download_count": 545,
+      "download_count": 547,
       "app_type": "native",
       "category": "store"
     },
@@ -708,8 +708,8 @@
       "display_name": "Home Assistant",
       "description": "开源智能家居中枢平台，支持数千种智能设备的自动化控制。",
       "version": "2026.3.1",
-      "fpk_version": "2026.3.1",
-      "release_tag": "homeassistant/v2026.3.1",
+      "fpk_version": "2026.3.1-r1",
+      "release_tag": "homeassistant/v2026.3.1-r1",
       "service_port": 8123,
       "homepage_url": "https://www.home-assistant.io",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/homeassistant/fnos/ICON_256.PNG",
@@ -717,7 +717,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T08:08:39Z",
+      "updated_at": "2026-03-11T09:14:24Z",
       "download_count": 41,
       "app_type": "docker",
       "category": "system"
@@ -1667,7 +1667,7 @@
         "arm"
       ],
       "updated_at": "2026-03-08T08:04:31Z",
-      "download_count": 71,
+      "download_count": 72,
       "app_type": "native",
       "category": "media"
     },
