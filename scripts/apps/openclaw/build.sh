@@ -1,6 +1,9 @@
 #!/bin/bash
 set -euo pipefail
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "${SCRIPT_DIR}/../../.." && pwd)"
+
 VERSION="${VERSION:-}"
 ARCH="${ARCH:-x86_64}"
 
@@ -62,7 +65,7 @@ find "${OC_MODULES}" -type d \( \
   -o -name "coverage" -o -name ".nyc_output" \
   -o -name "benchmark" -o -name "benchmarks" \
   -o -name "man" \
-\) ! -path "*/dist/doc" -exec rm -rf {} + 2>/dev/null || true
+\) ! -path "*/dist/doc" ! -path "*/openclaw/docs" -exec rm -rf {} + 2>/dev/null || true
 
 echo "==> Size after optimization: $(du -sh ./openclaw_global | cut -f1)"
 
@@ -78,13 +81,13 @@ cp node/LICENSE app_root/server/node/
 cp -r openclaw_global app_root/server/
 
 # Copy iframe-proxy.js
-if [ -f "../../../apps/openclaw/server/iframe-proxy.js" ]; then
-  cp "../../../apps/openclaw/server/iframe-proxy.js" app_root/server/
+if [ -f "${REPO_ROOT}/apps/openclaw/server/iframe-proxy.js" ]; then
+  cp "${REPO_ROOT}/apps/openclaw/server/iframe-proxy.js" app_root/server/
 fi
 
 # Copy UI files
-if [ -d "../../../apps/openclaw/fnos/ui" ]; then
-  cp -r ../../../apps/openclaw/fnos/ui/* app_root/ui/
+if [ -d "${REPO_ROOT}/apps/openclaw/fnos/ui" ]; then
+  cp -r "${REPO_ROOT}/apps/openclaw/fnos/ui/"* app_root/ui/
 fi
 
 cd app_root
