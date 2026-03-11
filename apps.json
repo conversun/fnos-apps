@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-03-11T17:38:15Z",
+  "generated_at": "2026-03-11T17:38:27Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -392,8 +392,8 @@
       "display_name": "Duplicati",
       "description": "加密备份工具，支持增量备份到云存储和本地。",
       "version": "2.2.0.3_stable_2026-01-06",
-      "fpk_version": "2.2.0.3_stable_2026-01-06",
-      "release_tag": "duplicati/v2.2.0.3_stable_2026-01-06",
+      "fpk_version": "2.2.0.3_stable_2026-01-06-r1",
+      "release_tag": "duplicati/v2.2.0.3_stable_2026-01-06-r1",
       "service_port": 8200,
       "homepage_url": "https://duplicati.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/duplicati/fnos/ICON_256.PNG",
@@ -401,7 +401,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T08:08:33Z",
+      "updated_at": "2026-03-11T17:38:15Z",
       "download_count": 28,
       "app_type": "docker",
       "category": "system"
@@ -792,8 +792,8 @@
       "display_name": "Homepage",
       "description": "高度可定制的应用仪表盘，支持 100+ 服务集成",
       "version": "1.10.1",
-      "fpk_version": "1.10.1",
-      "release_tag": "homepage/v1.10.1",
+      "fpk_version": "1.10.1-r1",
+      "release_tag": "homepage/v1.10.1-r1",
       "service_port": 3003,
       "homepage_url": "https://gethomepage.dev",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/homepage/fnos/ICON_256.PNG",
@@ -801,7 +801,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T08:07:55Z",
+      "updated_at": "2026-03-11T17:38:22Z",
       "download_count": 7,
       "app_type": "docker",
       "category": "system"
@@ -917,9 +917,9 @@
       "file_prefix": "jellystat",
       "display_name": "Jellystat",
       "description": "Jellyfin 媒体服务器的使用统计和监控面板。",
-      "version": "1.1.8",
-      "fpk_version": "1.1.8",
-      "release_tag": "jellystat/v1.1.8",
+      "version": "null",
+      "fpk_version": "null",
+      "release_tag": "jellystat/vnull",
       "service_port": 3004,
       "homepage_url": "https://github.com/CyferShepard/Jellystat",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/jellystat/fnos/ICON_256.PNG",
@@ -927,7 +927,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T08:09:18Z",
+      "updated_at": "2026-03-11T17:38:22Z",
       "download_count": 8,
       "app_type": "docker",
       "category": "media"
@@ -1087,8 +1087,8 @@
       "display_name": "Linkwarden",
       "description": "协作式书签管理器，支持网页存档和标签分类",
       "version": "2.13.5",
-      "fpk_version": "2.13.5",
-      "release_tag": "linkwarden/v2.13.5",
+      "fpk_version": "2.13.5-r1",
+      "release_tag": "linkwarden/v2.13.5-r1",
       "service_port": 3050,
       "homepage_url": "https://linkwarden.app",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/linkwarden/fnos/ICON_256.PNG",
@@ -1096,7 +1096,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T08:08:20Z",
+      "updated_at": "2026-03-11T17:38:20Z",
       "download_count": 10,
       "app_type": "docker",
       "category": "content"
@@ -1277,8 +1277,8 @@
       "display_name": "Miniflux",
       "description": "极简 RSS 阅读器，Go 编写，性能优异",
       "version": "2.2.17",
-      "fpk_version": "2.2.17",
-      "release_tag": "miniflux/v2.2.17",
+      "fpk_version": "2.2.17-r1",
+      "release_tag": "miniflux/v2.2.17-r1",
       "service_port": 8190,
       "homepage_url": "https://miniflux.app",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/miniflux/fnos/ICON_256.PNG",
@@ -1286,7 +1286,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T08:08:10Z",
+      "updated_at": "2026-03-11T17:38:14Z",
       "download_count": 6,
       "app_type": "docker",
       "category": "content"
@@ -1699,8 +1699,8 @@
       "display_name": "PhotoPrism",
       "description": "AI 驱动的照片管理工具，支持人脸识别和地图浏览",
       "version": "260305",
-      "fpk_version": "260305",
-      "release_tag": "photoprism/v260305",
+      "fpk_version": "260305-r1",
+      "release_tag": "photoprism/v260305-r1",
       "service_port": 2342,
       "homepage_url": "https://photoprism.app",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/photoprism/fnos/ICON_256.PNG",
@@ -1708,7 +1708,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T08:08:18Z",
+      "updated_at": "2026-03-11T17:38:16Z",
       "download_count": 34,
       "app_type": "docker",
       "category": "content"
@@ -2077,8 +2077,8 @@
       "display_name": "Sunshine",
       "description": "游戏串流服务器，配合 Moonlight 客户端实现远程游戏。",
       "version": "null",
-      "fpk_version": "null",
-      "release_tag": "sunshine/vnull",
+      "fpk_version": "null-r1",
+      "release_tag": "sunshine/vnull-r1",
       "service_port": 47990,
       "homepage_url": "https://docs.lizardbyte.dev/projects/sunshine/",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/sunshine/fnos/ICON_256.PNG",
@@ -2086,7 +2086,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T08:08:50Z",
+      "updated_at": "2026-03-11T17:38:16Z",
       "download_count": 15,
       "app_type": "docker",
       "category": "system"
@@ -2203,8 +2203,8 @@
       "display_name": "Transmission",
       "description": "Transmission 是一个轻量级的 BitTorrent 客户端，以简洁高效著称，支持 Web 远程管理。",
       "version": "4.1.1",
-      "fpk_version": "4.1.1-r1-ls334",
-      "release_tag": "transmission/v4.1.1-r1-ls334",
+      "fpk_version": "4.1.1-r1-ls334-r1",
+      "release_tag": "transmission/v4.1.1-r1-ls334-r1",
       "service_port": 9091,
       "homepage_url": "https://transmissionbt.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/transmission/fnos/ICON_256.PNG",
@@ -2212,7 +2212,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T06:52:36Z",
+      "updated_at": "2026-03-11T17:38:14Z",
       "download_count": 38,
       "app_type": "docker",
       "category": "download"
@@ -2287,8 +2287,8 @@
       "display_name": "Wiki.js",
       "description": "强大的自托管知识库/Wiki 系统，支持 Markdown 和多种编辑器",
       "version": "2.5.277",
-      "fpk_version": "2.5.277",
-      "release_tag": "wikijs/v2.5.277",
+      "fpk_version": "2.5.277-r1",
+      "release_tag": "wikijs/v2.5.277-r1",
       "service_port": 3100,
       "homepage_url": "https://js.wiki",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/wikijs/fnos/ICON_256.PNG",
@@ -2296,7 +2296,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T08:09:19Z",
+      "updated_at": "2026-03-11T17:38:20Z",
       "download_count": 13,
       "app_type": "docker",
       "category": "content"
