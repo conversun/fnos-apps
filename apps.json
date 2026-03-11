@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-03-11T17:37:52Z",
+  "generated_at": "2026-03-11T17:38:03Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -97,8 +97,8 @@
       "display_name": "AppFlowy",
       "description": "开源 Notion 替代品，支持自托管的协作文档平台。",
       "version": "0.9.64",
-      "fpk_version": "0.9.64",
-      "release_tag": "appflowy/v0.9.64",
+      "fpk_version": "0.9.64-r1",
+      "release_tag": "appflowy/v0.9.64-r1",
       "service_port": 8500,
       "homepage_url": "https://appflowy.io",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/appflowy/fnos/ICON_256.PNG",
@@ -106,7 +106,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T08:09:23Z",
+      "updated_at": "2026-03-11T17:37:56Z",
       "download_count": 25,
       "app_type": "docker",
       "category": "system",
@@ -519,8 +519,8 @@
       "display_name": "Firefox",
       "description": "Firefox 浏览器的 Docker 容器版本，通过网页即可远程访问，内置中文字体支持。",
       "version": "26.02.3",
-      "fpk_version": "26.02.3",
-      "release_tag": "firefox/v26.02.3",
+      "fpk_version": "26.02.3-r1",
+      "release_tag": "firefox/v26.02.3-r1",
       "service_port": 5801,
       "homepage_url": "https://github.com/jlesage/docker-firefox",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/firefox/fnos/ICON_256.PNG",
@@ -528,7 +528,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T08:08:33Z",
+      "updated_at": "2026-03-11T17:37:59Z",
       "download_count": 58,
       "app_type": "docker",
       "category": "browser"
@@ -812,9 +812,9 @@
       "file_prefix": "immich",
       "display_name": "Immich",
       "description": "自托管照片和视频备份方案,支持人脸识别和智能搜索。",
-      "version": "2.5.6",
-      "fpk_version": "2.5.6",
-      "release_tag": "immich/v2.5.6",
+      "version": "null",
+      "fpk_version": "null",
+      "release_tag": "immich/vnull",
       "service_port": 2283,
       "homepage_url": "https://github.com/immich-app/immich",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/immich/fnos/ICON_256.PNG",
@@ -822,7 +822,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T08:08:29Z",
+      "updated_at": "2026-03-11T17:37:53Z",
       "download_count": 65,
       "app_type": "docker",
       "category": "media"
@@ -960,8 +960,8 @@
       "display_name": "KodBox",
       "description": "KodBox (可道云) 是一个开源的私有云存储和文件管理平台，支持在线文档编辑和多人协作。",
       "version": "1.63",
-      "fpk_version": "1.63",
-      "release_tag": "kodbox/v1.63",
+      "fpk_version": "1.63-r1",
+      "release_tag": "kodbox/v1.63-r1",
       "service_port": 8500,
       "homepage_url": "https://kodcloud.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/kodbox/fnos/ICON_256.PNG",
@@ -969,7 +969,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T08:08:41Z",
+      "updated_at": "2026-03-11T17:37:58Z",
       "download_count": 12,
       "app_type": "docker",
       "category": "content"
@@ -1171,8 +1171,8 @@
       "display_name": "Mattermost",
       "description": "企业级即时通讯平台，Slack 的开源替代方案。",
       "version": "11.4.2",
-      "fpk_version": "11.4.2",
-      "release_tag": "mattermost/v11.4.2",
+      "fpk_version": "11.4.2-r1",
+      "release_tag": "mattermost/v11.4.2-r1",
       "service_port": 8065,
       "homepage_url": "https://mattermost.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/mattermost/fnos/ICON_256.PNG",
@@ -1180,7 +1180,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T08:08:45Z",
+      "updated_at": "2026-03-11T17:37:52Z",
       "download_count": 9,
       "app_type": "docker",
       "category": "system",
@@ -1426,8 +1426,8 @@
       "display_name": "Nextcloud",
       "description": "开源私有云存储平台,支持文件同步、在线文档协作和日历联系人管理。",
       "version": "33.0.0",
-      "fpk_version": "33.0.0",
-      "release_tag": "nextcloud/v33.0.0",
+      "fpk_version": "33.0.0-r1",
+      "release_tag": "nextcloud/v33.0.0-r1",
       "service_port": 8082,
       "homepage_url": "https://nextcloud.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/nextcloud/fnos/ICON_256.PNG",
@@ -1435,7 +1435,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T08:09:22Z",
+      "updated_at": "2026-03-11T17:37:53Z",
       "download_count": 17,
       "app_type": "docker",
       "category": "content"
@@ -1573,8 +1573,8 @@
       "display_name": "Ombi",
       "description": "媒体请求管理工具，用户可请求添加电影/电视剧到 Plex/Jellyfin。",
       "version": "4.53.4",
-      "fpk_version": "4.53.4",
-      "release_tag": "ombi/v4.53.4",
+      "fpk_version": "4.53.4-r1",
+      "release_tag": "ombi/v4.53.4-r1",
       "service_port": 3579,
       "homepage_url": "https://github.com/Ombi-app/Ombi",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ombi/fnos/ICON_256.PNG",
@@ -1582,7 +1582,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T08:08:31Z",
+      "updated_at": "2026-03-11T17:37:54Z",
       "download_count": 2,
       "app_type": "docker",
       "category": "media"
