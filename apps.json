@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-03-11T17:28:00Z",
+  "generated_at": "2026-03-11T17:37:19Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -119,8 +119,8 @@
       "display_name": "Audiobookshelf",
       "description": "自托管的有声书和播客服务器，支持多用户管理、进度同步和丰富的元数据管理。",
       "version": "2.32.1",
-      "fpk_version": "2.32.1",
-      "release_tag": "audiobookshelf/v2.32.1",
+      "fpk_version": "2.32.1-r1",
+      "release_tag": "audiobookshelf/v2.32.1-r1",
       "service_port": 13378,
       "homepage_url": "https://www.audiobookshelf.org",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/audiobookshelf/fnos/ICON_256.PNG",
@@ -128,7 +128,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T08:09:19Z",
+      "updated_at": "2026-03-11T17:37:09Z",
       "download_count": 4,
       "app_type": "docker",
       "category": "content"
@@ -1319,8 +1319,8 @@
       "display_name": "MoviePilot",
       "description": "影视自动化管理工具,支持自动订阅、下载、整理和通知。首次启动通过 Web UI 配置。",
       "version": "2.9.14",
-      "fpk_version": "2.9.14",
-      "release_tag": "moviepilot/v2.9.14",
+      "fpk_version": "2.9.14-r1",
+      "release_tag": "moviepilot/v2.9.14-r1",
       "service_port": 3000,
       "homepage_url": "https://github.com/jxxghp/MoviePilot",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/moviepilot/fnos/ICON_256.PNG",
@@ -1328,7 +1328,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T08:09:04Z",
+      "updated_at": "2026-03-11T17:36:58Z",
       "download_count": 133,
       "app_type": "docker",
       "category": "content",
