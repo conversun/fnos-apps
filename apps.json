@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-03-11T06:52:50Z",
+  "generated_at": "2026-03-11T06:52:59Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -33,9 +33,9 @@
       "file_prefix": "adguardhome",
       "display_name": "AdGuardHome",
       "description": "AdGuardHome 是一个网络范围的广告和跟踪器拦截 DNS 服务器，支持 DNS-over-HTTPS、DNS-over-TLS。",
-      "version": "0.107.72",
-      "fpk_version": "0.107.72",
-      "release_tag": "adguardhome/v0.107.72",
+      "version": "0.107.73",
+      "fpk_version": "0.107.73",
+      "release_tag": "adguardhome/v0.107.73",
       "service_port": 3080,
       "homepage_url": "https://adguard.com/adguard-home/overview.html",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/adguardhome/fnos/ICON_256.PNG",
@@ -43,7 +43,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-08T08:04:32Z",
+      "updated_at": "2026-03-11T06:52:50Z",
       "download_count": 9,
       "app_type": "docker",
       "category": "system"
@@ -519,8 +519,8 @@
       "display_name": "FreshRSS",
       "description": "自托管 RSS 阅读器，支持 Google Reader API 和第三方客户端",
       "version": "1.28.1",
-      "fpk_version": "1.28.1",
-      "release_tag": "freshrss/v1.28.1",
+      "fpk_version": "1.28.1-r1",
+      "release_tag": "freshrss/v1.28.1-r1",
       "service_port": 8180,
       "homepage_url": "https://freshrss.org",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/freshrss/fnos/ICON_256.PNG",
@@ -528,7 +528,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-08T08:04:07Z",
+      "updated_at": "2026-03-11T06:52:56Z",
       "download_count": 6,
       "app_type": "docker",
       "category": "content"
@@ -960,8 +960,8 @@
       "display_name": "Koodo Reader",
       "description": "开源电子书阅读器，支持 EPUB、PDF、Mobi 等格式，跨平台同步阅读进度。",
       "version": "2.3.0",
-      "fpk_version": "2.3.0",
-      "release_tag": "koodo-reader/v2.3.0",
+      "fpk_version": "2.3.0-r1",
+      "release_tag": "koodo-reader/v2.3.0-r1",
       "service_port": 8930,
       "homepage_url": "https://github.com/koodo-reader/koodo-reader",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/koodo-reader/fnos/ICON_256.PNG",
@@ -969,7 +969,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-10T08:07:01Z",
+      "updated_at": "2026-03-11T06:52:52Z",
       "download_count": 13,
       "app_type": "docker",
       "category": "content"
@@ -1867,8 +1867,8 @@
       "display_name": "SABnzbd",
       "description": "Usenet 二进制新闻组下载客户端，支持自动解压和后处理。",
       "version": "4.5.5",
-      "fpk_version": "4.5.5",
-      "release_tag": "sabnzbd/v4.5.5",
+      "fpk_version": "4.5.5-r1",
+      "release_tag": "sabnzbd/v4.5.5-r1",
       "service_port": 8780,
       "homepage_url": "https://github.com/sabnzbd/sabnzbd",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/sabnzbd/fnos/ICON_256.PNG",
@@ -1876,7 +1876,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-08T18:04:43Z",
+      "updated_at": "2026-03-11T06:52:54Z",
       "download_count": 6,
       "app_type": "docker",
       "category": "download"
@@ -2077,8 +2077,8 @@
       "display_name": "tinyMediaManager",
       "description": "影视文件元数据管理工具，支持从 TheMovieDB、IMDb 刮削元数据，为 Kodi、Emby、Jellyfin、Plex 创建 NFO 文件，自动重命名和整理。含内置 JRE，通过虚拟显示运行。",
       "version": "5.2.8",
-      "fpk_version": "5.2.8",
-      "release_tag": "tinymediamanager/v5.2.8",
+      "fpk_version": "5.2.8-r1",
+      "release_tag": "tinymediamanager/v5.2.8-r1",
       "service_port": 5800,
       "homepage_url": "https://www.tinymediamanager.org",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/tinymediamanager/fnos/ICON_256.PNG",
@@ -2086,7 +2086,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-08T08:03:33Z",
+      "updated_at": "2026-03-11T06:52:54Z",
       "download_count": 44,
       "app_type": "docker",
       "category": "media"
@@ -2119,8 +2119,8 @@
       "display_name": "Uptime Kuma",
       "description": "简洁美观的服务监控工具，支持多种监控类型和告警通知",
       "version": "2.2.1",
-      "fpk_version": "2.2.1",
-      "release_tag": "uptime-kuma/v2.2.1",
+      "fpk_version": "2.2.1-r1",
+      "release_tag": "uptime-kuma/v2.2.1-r1",
       "service_port": 3001,
       "homepage_url": "https://github.com/louislam/uptime-kuma",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/uptime-kuma/fnos/ICON_256.PNG",
@@ -2128,7 +2128,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-10T08:07:05Z",
+      "updated_at": "2026-03-11T06:52:54Z",
       "download_count": 46,
       "app_type": "docker",
       "category": "system"
