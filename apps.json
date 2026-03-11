@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-03-11T17:37:44Z",
+  "generated_at": "2026-03-11T17:37:52Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -329,8 +329,8 @@
       "display_name": "CopyParty",
       "description": "轻量级文件共享服务器，支持拖拽上传、WebDAV 和搜索。",
       "version": "1.20.12",
-      "fpk_version": "1.20.12",
-      "release_tag": "copyparty/v1.20.12",
+      "fpk_version": "1.20.12-r1",
+      "release_tag": "copyparty/v1.20.12-r1",
       "service_port": 3923,
       "homepage_url": "https://github.com/9001/copyparty",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/copyparty/fnos/ICON_256.PNG",
@@ -338,7 +338,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T06:52:04Z",
+      "updated_at": "2026-03-11T17:37:50Z",
       "download_count": 7,
       "app_type": "docker",
       "category": "content"
@@ -897,8 +897,8 @@
       "display_name": "Jellyseerr",
       "description": "媒体请求管理工具，家庭成员可请求想看的影视并自动下载",
       "version": "2.7.3",
-      "fpk_version": "2.7.3",
-      "release_tag": "jellyseerr/v2.7.3",
+      "fpk_version": "2.7.3-r1",
+      "release_tag": "jellyseerr/v2.7.3-r1",
       "service_port": 5055,
       "homepage_url": "https://github.com/Fallenbagel/jellyseerr",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/jellyseerr/fnos/ICON_256.PNG",
@@ -906,7 +906,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T08:08:38Z",
+      "updated_at": "2026-03-11T17:37:46Z",
       "download_count": 3,
       "app_type": "docker",
       "category": "content"
@@ -1193,8 +1193,8 @@
       "display_name": "Mealie",
       "description": "自托管食谱管理工具，支持网页导入和家庭共享",
       "version": "3.12.0",
-      "fpk_version": "3.12.0",
-      "release_tag": "mealie/v3.12.0",
+      "fpk_version": "3.12.0-r1",
+      "release_tag": "mealie/v3.12.0-r1",
       "service_port": 9925,
       "homepage_url": "https://mealie.io",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/mealie/fnos/ICON_256.PNG",
@@ -1202,7 +1202,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T08:08:17Z",
+      "updated_at": "2026-03-11T17:37:43Z",
       "download_count": 32,
       "app_type": "docker",
       "category": "content"
@@ -1972,8 +1972,8 @@
       "display_name": "Seerr",
       "description": "影视媒体请求管理工具，支持 Plex/Jellyfin/Emby，Overseerr 的社区分支。",
       "version": "3.1.0",
-      "fpk_version": "3.1.0",
-      "release_tag": "seerr/v3.1.0",
+      "fpk_version": "3.1.0-r1",
+      "release_tag": "seerr/v3.1.0-r1",
       "service_port": 5055,
       "homepage_url": "https://github.com/seerr-team/seerr",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/seerr/fnos/ICON_256.PNG",
@@ -1981,7 +1981,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T08:09:19Z",
+      "updated_at": "2026-03-11T17:37:44Z",
       "download_count": 6,
       "app_type": "docker",
       "category": "media"
@@ -2161,8 +2161,8 @@
       "display_name": "Tautulli",
       "description": "Plex 使用统计和监控工具，追踪观看历史和服务器性能。",
       "version": "2.16.1",
-      "fpk_version": "2.16.1",
-      "release_tag": "tautulli/v2.16.1",
+      "fpk_version": "2.16.1-r1",
+      "release_tag": "tautulli/v2.16.1-r1",
       "service_port": 8181,
       "homepage_url": "https://tautulli.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/tautulli/fnos/ICON_256.PNG",
@@ -2170,7 +2170,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T08:08:21Z",
+      "updated_at": "2026-03-11T17:37:47Z",
       "download_count": 8,
       "app_type": "docker",
       "category": "media"
