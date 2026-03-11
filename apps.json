@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-03-11T09:14:37Z",
+  "generated_at": "2026-03-11T17:27:51Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -44,7 +44,7 @@
         "arm"
       ],
       "updated_at": "2026-03-11T06:52:50Z",
-      "download_count": 9,
+      "download_count": 10,
       "app_type": "docker",
       "category": "system"
     },
@@ -192,7 +192,7 @@
         "arm"
       ],
       "updated_at": "2026-03-03T13:37:00Z",
-      "download_count": 38,
+      "download_count": 39,
       "app_type": "native",
       "category": "system"
     },
@@ -213,7 +213,7 @@
         "arm"
       ],
       "updated_at": "2026-03-04T08:05:43Z",
-      "download_count": 30,
+      "download_count": 31,
       "app_type": "native",
       "category": "system"
     },
@@ -234,7 +234,7 @@
         "arm"
       ],
       "updated_at": "2026-03-03T13:38:30Z",
-      "download_count": 41,
+      "download_count": 43,
       "app_type": "native",
       "category": "content"
     },
@@ -281,6 +281,27 @@
       "category": "system"
     },
     {
+      "slug": "cloudflared",
+      "appname": "cloudflared",
+      "file_prefix": "cloudflared",
+      "display_name": "Cloudflare Tunnel",
+      "description": "Cloudflare 内网穿透隧道，通过 Web 界面管理 Tunnel Token 配置",
+      "version": "2026.3.0",
+      "fpk_version": "2026.3.0",
+      "release_tag": "cloudflared/v2026.3.0",
+      "service_port": 14333,
+      "homepage_url": "https://github.com/WisdomSky/Cloudflared-web",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/cloudflared/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-03-11T17:27:42Z",
+      "download_count": 0,
+      "app_type": "docker",
+      "category": "system"
+    },
+    {
       "slug": "cloudreve",
       "appname": "cloudreve",
       "file_prefix": "cloudreve",
@@ -297,7 +318,7 @@
         "arm"
       ],
       "updated_at": "2026-03-08T08:03:50Z",
-      "download_count": 9,
+      "download_count": 11,
       "app_type": "native",
       "category": "system"
     },
@@ -339,7 +360,7 @@
         "arm"
       ],
       "updated_at": "2026-03-08T08:04:33Z",
-      "download_count": 8,
+      "download_count": 10,
       "app_type": "native",
       "category": "system"
     },
@@ -386,6 +407,27 @@
       "category": "system"
     },
     {
+      "slug": "easytier",
+      "appname": "easytier",
+      "file_prefix": "easytier",
+      "display_name": "EasyTier",
+      "description": "简单安全的去中心化异地组网方案，支持 Web 管理和子网代理",
+      "version": "2.4.5",
+      "fpk_version": "2.4.5",
+      "release_tag": "easytier/v2.4.5",
+      "service_port": 11211,
+      "homepage_url": "https://github.com/EasyTier/EasyTier",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/easytier/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-03-11T17:27:45Z",
+      "download_count": 0,
+      "app_type": "native",
+      "category": "system"
+    },
+    {
       "slug": "emby",
       "appname": "embyserver",
       "file_prefix": "embyserver",
@@ -402,7 +444,7 @@
         "arm"
       ],
       "updated_at": "2026-03-08T08:04:43Z",
-      "download_count": 110,
+      "download_count": 112,
       "app_type": "native",
       "category": "media"
     },
@@ -423,10 +465,31 @@
         "arm"
       ],
       "updated_at": "2026-03-11T08:08:49Z",
-      "download_count": 24,
+      "download_count": 26,
       "app_type": "docker",
       "category": "system",
       "post_install_note": "首次启动会初始化 PostgreSQL 和 MinIO，请耐心等待。"
+    },
+    {
+      "slug": "ezbookkeeping",
+      "appname": "ezbookkeeping",
+      "file_prefix": "ezbookkeeping",
+      "display_name": "EZBookkeeping",
+      "description": "轻量级个人记账应用，支持多币种、多账户和预算管理",
+      "version": "1.3.2",
+      "fpk_version": "1.3.2",
+      "release_tag": "ezbookkeeping/v1.3.2",
+      "service_port": 8580,
+      "homepage_url": "https://github.com/mayswind/ezbookkeeping",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ezbookkeeping/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-03-11T17:27:45Z",
+      "download_count": 0,
+      "app_type": "native",
+      "category": "system"
     },
     {
       "slug": "filebrowser",
@@ -445,7 +508,7 @@
         "arm"
       ],
       "updated_at": "2026-03-07T08:02:23Z",
-      "download_count": 48,
+      "download_count": 49,
       "app_type": "native",
       "category": "system"
     },
@@ -487,7 +550,7 @@
         "arm"
       ],
       "updated_at": "2026-03-08T08:03:44Z",
-      "download_count": 547,
+      "download_count": 624,
       "app_type": "native",
       "category": "store"
     },
@@ -613,7 +676,7 @@
         "arm"
       ],
       "updated_at": "2026-03-09T08:08:45Z",
-      "download_count": 40,
+      "download_count": 47,
       "app_type": "native",
       "category": "download"
     },
@@ -634,7 +697,7 @@
         "arm"
       ],
       "updated_at": "2026-03-08T08:03:31Z",
-      "download_count": 9,
+      "download_count": 10,
       "app_type": "native",
       "category": "system"
     },
@@ -708,8 +771,8 @@
       "display_name": "Home Assistant",
       "description": "开源智能家居中枢平台，支持数千种智能设备的自动化控制。",
       "version": "2026.3.1",
-      "fpk_version": "2026.3.1-r1",
-      "release_tag": "homeassistant/v2026.3.1-r1",
+      "fpk_version": "2026.3.1",
+      "release_tag": "homeassistant/v2026.3.1",
       "service_port": 8123,
       "homepage_url": "https://www.home-assistant.io",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/homeassistant/fnos/ICON_256.PNG",
@@ -717,7 +780,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T09:14:24Z",
+      "updated_at": "2026-03-11T17:27:43Z",
       "download_count": 41,
       "app_type": "docker",
       "category": "system"
@@ -865,7 +928,7 @@
         "arm"
       ],
       "updated_at": "2026-03-11T08:09:18Z",
-      "download_count": 4,
+      "download_count": 8,
       "app_type": "docker",
       "category": "media"
     },
@@ -970,7 +1033,7 @@
         "arm"
       ],
       "updated_at": "2026-03-11T08:08:24Z",
-      "download_count": 13,
+      "download_count": 14,
       "app_type": "docker",
       "category": "content"
     },
@@ -1013,7 +1076,7 @@
         "arm"
       ],
       "updated_at": "2026-03-08T08:04:37Z",
-      "download_count": 37,
+      "download_count": 39,
       "app_type": "native",
       "category": "content"
     },
@@ -1097,7 +1160,7 @@
         "arm"
       ],
       "updated_at": "2026-03-08T08:04:04Z",
-      "download_count": 12,
+      "download_count": 13,
       "app_type": "native",
       "category": "system"
     },
@@ -1245,7 +1308,7 @@
         "arm"
       ],
       "updated_at": "2026-03-08T08:04:19Z",
-      "download_count": 13,
+      "download_count": 14,
       "app_type": "native",
       "category": "system"
     },
@@ -1457,7 +1520,7 @@
         "arm"
       ],
       "updated_at": "2026-03-11T08:08:23Z",
-      "download_count": 2,
+      "download_count": 4,
       "app_type": "docker",
       "category": "system"
     },
@@ -1562,7 +1625,7 @@
         "arm"
       ],
       "updated_at": "2026-03-09T08:11:09Z",
-      "download_count": 502,
+      "download_count": 543,
       "app_type": "native",
       "category": "system"
     },
@@ -1605,6 +1668,27 @@
       ],
       "updated_at": "2026-03-11T08:38:43Z",
       "download_count": 25,
+      "app_type": "docker",
+      "category": "system"
+    },
+    {
+      "slug": "penpot",
+      "appname": "penpot",
+      "file_prefix": "penpot",
+      "display_name": "Penpot",
+      "description": "开源设计和原型工具，Figma 的自托管替代方案，支持团队协作",
+      "version": "2.13.3",
+      "fpk_version": "2.13.3",
+      "release_tag": "penpot/v2.13.3",
+      "service_port": 9001,
+      "homepage_url": "https://github.com/penpot/penpot",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/penpot/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-03-11T17:27:37Z",
+      "download_count": 0,
       "app_type": "docker",
       "category": "system"
     },
@@ -1667,7 +1751,7 @@
         "arm"
       ],
       "updated_at": "2026-03-08T08:04:31Z",
-      "download_count": 72,
+      "download_count": 73,
       "app_type": "native",
       "category": "media"
     },
@@ -1751,7 +1835,7 @@
         "arm"
       ],
       "updated_at": "2026-03-08T08:03:31Z",
-      "download_count": 65,
+      "download_count": 77,
       "app_type": "native",
       "category": "download"
     },
@@ -1772,7 +1856,7 @@
         "arm"
       ],
       "updated_at": "2026-03-03T13:39:10Z",
-      "download_count": 34,
+      "download_count": 38,
       "app_type": "native",
       "category": "content"
     },
@@ -1793,7 +1877,7 @@
         "arm"
       ],
       "updated_at": "2026-03-07T08:02:27Z",
-      "download_count": 44,
+      "download_count": 51,
       "app_type": "native",
       "category": "download"
     },
@@ -1919,7 +2003,7 @@
         "arm"
       ],
       "updated_at": "2026-03-08T08:03:32Z",
-      "download_count": 5,
+      "download_count": 7,
       "app_type": "native",
       "category": "system"
     },
@@ -1940,7 +2024,7 @@
         "arm"
       ],
       "updated_at": "2026-03-03T13:39:10Z",
-      "download_count": 29,
+      "download_count": 30,
       "app_type": "native",
       "category": "content"
     },
@@ -1982,7 +2066,7 @@
         "arm"
       ],
       "updated_at": "2026-03-08T08:04:35Z",
-      "download_count": 21,
+      "download_count": 24,
       "app_type": "native",
       "category": "system"
     },
@@ -2008,6 +2092,27 @@
       "category": "system"
     },
     {
+      "slug": "surveyking",
+      "appname": "surveyking",
+      "file_prefix": "surveyking",
+      "display_name": "SurveyKing",
+      "description": "开源问卷调查和在线考试系统，支持多种题型、逻辑跳转和数据导出",
+      "version": "1.9.0",
+      "fpk_version": "1.9.0",
+      "release_tag": "surveyking/v1.9.0",
+      "service_port": 1991,
+      "homepage_url": "https://github.com/anji-plus/survey",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/surveyking/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-03-11T17:27:38Z",
+      "download_count": 0,
+      "app_type": "docker",
+      "category": "system"
+    },
+    {
       "slug": "syncthing",
       "appname": "syncthing",
       "file_prefix": "syncthing",
@@ -2024,7 +2129,7 @@
         "arm"
       ],
       "updated_at": "2026-03-08T08:03:43Z",
-      "download_count": 15,
+      "download_count": 21,
       "app_type": "native",
       "category": "download"
     },
