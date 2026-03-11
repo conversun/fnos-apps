@@ -1,6 +1,6 @@
 services:
   librechat:
-    image: ${DOCKER_MIRROR}ghcr.io/danny-avila/librechat:${VERSION}
+    image: ${DOCKER_MIRROR}ghcr.io/danny-avila/librechat:v${VERSION}
     container_name: librechat
     depends_on:
       - librechat-mongo
