@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-03-11T06:52:33Z",
+  "generated_at": "2026-03-11T06:52:41Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -371,8 +371,8 @@
       "display_name": "Duplicati",
       "description": "加密备份工具，支持增量备份到云存储和本地。",
       "version": "2.2.0.3_stable_2026-01-06",
-      "fpk_version": "2.2.0.3_stable_2026-01-06",
-      "release_tag": "duplicati/v2.2.0.3_stable_2026-01-06",
+      "fpk_version": "2.2.0.3_stable_2026-01-06-r1",
+      "release_tag": "duplicati/v2.2.0.3_stable_2026-01-06-r1",
       "service_port": 8200,
       "homepage_url": "https://duplicati.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/duplicati/fnos/ICON_256.PNG",
@@ -380,7 +380,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-08T08:04:26Z",
+      "updated_at": "2026-03-11T06:52:39Z",
       "download_count": 28,
       "app_type": "docker",
       "category": "system"
@@ -1130,8 +1130,8 @@
       "display_name": "Mealie",
       "description": "自托管食谱管理工具，支持网页导入和家庭共享",
       "version": "3.12.0",
-      "fpk_version": "3.12.0",
-      "release_tag": "mealie/v3.12.0",
+      "fpk_version": "3.12.0-r1",
+      "release_tag": "mealie/v3.12.0-r1",
       "service_port": 9925,
       "homepage_url": "https://mealie.io",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/mealie/fnos/ICON_256.PNG",
@@ -1139,7 +1139,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-08T08:03:30Z",
+      "updated_at": "2026-03-11T06:52:39Z",
       "download_count": 32,
       "app_type": "docker",
       "category": "content"
@@ -1214,8 +1214,8 @@
       "display_name": "Miniflux",
       "description": "极简 RSS 阅读器，Go 编写，性能优异",
       "version": "2.2.17",
-      "fpk_version": "2.2.17",
-      "release_tag": "miniflux/v2.2.17",
+      "fpk_version": "2.2.17-r1",
+      "release_tag": "miniflux/v2.2.17-r1",
       "service_port": 8190,
       "homepage_url": "https://miniflux.app",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/miniflux/fnos/ICON_256.PNG",
@@ -1223,7 +1223,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-08T08:03:56Z",
+      "updated_at": "2026-03-11T06:52:38Z",
       "download_count": 6,
       "app_type": "docker",
       "category": "content"
@@ -1256,8 +1256,8 @@
       "display_name": "MoviePilot",
       "description": "影视自动化管理工具,支持自动订阅、下载、整理和通知。首次启动通过 Web UI 配置。",
       "version": "2.9.13",
-      "fpk_version": "2.9.13",
-      "release_tag": "moviepilot/v2.9.13",
+      "fpk_version": "2.9.13-r1",
+      "release_tag": "moviepilot/v2.9.13-r1",
       "service_port": 3000,
       "homepage_url": "https://github.com/jxxghp/MoviePilot",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/moviepilot/fnos/ICON_256.PNG",
@@ -1265,7 +1265,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-08T08:04:22Z",
+      "updated_at": "2026-03-11T06:52:33Z",
       "download_count": 133,
       "app_type": "docker",
       "category": "content",
@@ -2098,8 +2098,8 @@
       "display_name": "Transmission",
       "description": "Transmission 是一个轻量级的 BitTorrent 客户端，以简洁高效著称，支持 Web 远程管理。",
       "version": "4.1.1",
-      "fpk_version": "4.1.1-r1-ls333",
-      "release_tag": "transmission/v4.1.1-r1-ls333",
+      "fpk_version": "4.1.1-r1-ls334",
+      "release_tag": "transmission/v4.1.1-r1-ls334",
       "service_port": 9091,
       "homepage_url": "https://transmissionbt.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/transmission/fnos/ICON_256.PNG",
@@ -2107,7 +2107,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-08T08:04:06Z",
+      "updated_at": "2026-03-11T06:52:36Z",
       "download_count": 38,
       "app_type": "docker",
       "category": "download"
