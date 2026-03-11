@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-03-11T06:52:41Z",
+  "generated_at": "2026-03-11T06:52:50Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -350,8 +350,8 @@
       "display_name": "DPanel",
       "description": "轻量级 Docker 可视化管理面板，支持容器管理和镜像操作。",
       "version": "1.9.3.1",
-      "fpk_version": "1.9.3.1",
-      "release_tag": "dpanel/v1.9.3.1",
+      "fpk_version": "1.9.3.1-r1",
+      "release_tag": "dpanel/v1.9.3.1-r1",
       "service_port": 8807,
       "homepage_url": "https://github.com/donknap/dpanel",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/dpanel/fnos/ICON_256.PNG",
@@ -359,7 +359,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-08T18:04:44Z",
+      "updated_at": "2026-03-11T06:52:40Z",
       "download_count": 19,
       "app_type": "docker",
       "category": "system"
@@ -687,8 +687,8 @@
       "display_name": "Homarr",
       "description": "可视化应用仪表盘，深度集成 *arr 套件状态展示",
       "version": "1.55.0",
-      "fpk_version": "1.55.0",
-      "release_tag": "homarr/v1.55.0",
+      "fpk_version": "1.55.0-r1",
+      "release_tag": "homarr/v1.55.0-r1",
       "service_port": 7575,
       "homepage_url": "https://homarr.dev",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/homarr/fnos/ICON_256.PNG",
@@ -696,7 +696,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-07T08:02:11Z",
+      "updated_at": "2026-03-11T06:52:47Z",
       "download_count": 21,
       "app_type": "docker",
       "category": "system"
@@ -1405,8 +1405,8 @@
       "display_name": "Nginx Proxy Manager",
       "description": "图形化反向代理管理工具，支持 SSL 证书自动申请和续期。",
       "version": "2.14.0",
-      "fpk_version": "2.14.0",
-      "release_tag": "nginx-proxy-manager/v2.14.0",
+      "fpk_version": "2.14.0-r1",
+      "release_tag": "nginx-proxy-manager/v2.14.0-r1",
       "service_port": 81,
       "homepage_url": "https://github.com/NginxProxyManager/nginx-proxy-manager",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/nginx-proxy-manager/fnos/ICON_256.PNG",
@@ -1414,7 +1414,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-08T18:04:43Z",
+      "updated_at": "2026-03-11T06:52:40Z",
       "download_count": 4,
       "app_type": "docker",
       "category": "system"
@@ -1951,8 +1951,8 @@
       "display_name": "Stirling-PDF",
       "description": "功能强大的本地 PDF 工具箱，支持合并、拆分、OCR 等操作",
       "version": "2.7.0",
-      "fpk_version": "2.7.0",
-      "release_tag": "stirling-pdf/v2.7.0",
+      "fpk_version": "2.7.0-r1",
+      "release_tag": "stirling-pdf/v2.7.0-r1",
       "service_port": 18080,
       "homepage_url": "https://stirlingpdf.io",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/stirling-pdf/fnos/ICON_256.PNG",
@@ -1960,7 +1960,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-07T08:02:16Z",
+      "updated_at": "2026-03-11T06:52:47Z",
       "download_count": 64,
       "app_type": "docker",
       "category": "system"
