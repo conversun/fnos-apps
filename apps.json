@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-03-12T08:11:42Z",
+  "generated_at": "2026-03-12T08:38:26Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -97,8 +97,8 @@
       "display_name": "AppFlowy",
       "description": "开源 Notion 替代品，支持自托管的协作文档平台。",
       "version": "0.9.64",
-      "fpk_version": "0.9.64",
-      "release_tag": "appflowy/v0.9.64",
+      "fpk_version": "0.9.64-r1",
+      "release_tag": "appflowy/v0.9.64-r1",
       "service_port": 8501,
       "homepage_url": "https://appflowy.io",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/appflowy/fnos/ICON_256.PNG",
@@ -106,7 +106,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-12T08:09:43Z",
+      "updated_at": "2026-03-12T08:38:01Z",
       "download_count": 25,
       "app_type": "docker",
       "category": "content",
@@ -255,7 +255,7 @@
         "arm"
       ],
       "updated_at": "2026-03-03T13:38:30Z",
-      "download_count": 44,
+      "download_count": 45,
       "app_type": "native",
       "category": "automation"
     },
@@ -381,7 +381,7 @@
         "arm"
       ],
       "updated_at": "2026-03-12T08:09:39Z",
-      "download_count": 12,
+      "download_count": 14,
       "app_type": "native",
       "category": "system"
     },
@@ -434,8 +434,8 @@
       "display_name": "EasyTier",
       "description": "简单安全的去中心化异地组网方案，支持 Web 管理和子网代理",
       "version": "2.4.5",
-      "fpk_version": "2.4.5",
-      "release_tag": "easytier/v2.4.5",
+      "fpk_version": "2.4.5-r1",
+      "release_tag": "easytier/v2.4.5-r1",
       "service_port": 11210,
       "homepage_url": "https://github.com/EasyTier/EasyTier",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/easytier/fnos/ICON_256.PNG",
@@ -443,7 +443,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T17:27:45Z",
+      "updated_at": "2026-03-12T08:38:08Z",
       "download_count": 1,
       "app_type": "native",
       "category": "network"
@@ -571,7 +571,7 @@
         "arm"
       ],
       "updated_at": "2026-03-11T20:14:10Z",
-      "download_count": 636,
+      "download_count": 650,
       "app_type": "native",
       "category": "store"
     },
@@ -1065,8 +1065,8 @@
       "display_name": "LibreChat",
       "description": "AI 聊天界面，支持 OpenAI、Anthropic 等多种 AI 模型。",
       "version": "0.8.3",
-      "fpk_version": "0.8.3",
-      "release_tag": "librechat/v0.8.3",
+      "fpk_version": "0.8.3-r1",
+      "release_tag": "librechat/v0.8.3-r1",
       "service_port": 3085,
       "homepage_url": "https://librechat.ai",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/librechat/fnos/ICON_256.PNG",
@@ -1074,7 +1074,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T19:31:02Z",
+      "updated_at": "2026-03-12T08:38:00Z",
       "download_count": 21,
       "app_type": "docker",
       "category": "ai",
@@ -1129,8 +1129,8 @@
       "display_name": "LocalAI",
       "description": "本地 AI 模型推理服务器，兼容 OpenAI API 接口。",
       "version": "3.12.1",
-      "fpk_version": "3.12.1",
-      "release_tag": "localai/v3.12.1",
+      "fpk_version": "3.12.1-r1",
+      "release_tag": "localai/v3.12.1-r1",
       "service_port": 8185,
       "homepage_url": "https://localai.io",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/localai/fnos/ICON_256.PNG",
@@ -1138,7 +1138,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-12T08:10:03Z",
+      "updated_at": "2026-03-12T08:37:59Z",
       "download_count": 12,
       "app_type": "docker",
       "category": "ai"
@@ -1340,8 +1340,8 @@
       "display_name": "MosDNS",
       "description": "DNS 分流工具，国内域名走国内 DNS、国外走加密 DNS",
       "version": "5.3.4",
-      "fpk_version": "5.3.4",
-      "release_tag": "mosdns/v5.3.4",
+      "fpk_version": "5.3.4-r1",
+      "release_tag": "mosdns/v5.3.4-r1",
       "service_port": 5354,
       "homepage_url": "https://github.com/IrineSistworking/mosdns",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/mosdns/fnos/ICON_256.PNG",
@@ -1349,7 +1349,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-08T08:04:19Z",
+      "updated_at": "2026-03-12T08:38:02Z",
       "download_count": 16,
       "app_type": "native",
       "category": "network"
@@ -1793,7 +1793,7 @@
         "arm"
       ],
       "updated_at": "2026-03-08T08:04:31Z",
-      "download_count": 79,
+      "download_count": 83,
       "app_type": "native",
       "category": "media"
     },
@@ -1919,7 +1919,7 @@
         "arm"
       ],
       "updated_at": "2026-03-07T08:02:27Z",
-      "download_count": 53,
+      "download_count": 55,
       "app_type": "native",
       "category": "download"
     },
@@ -2329,8 +2329,8 @@
       "display_name": "Wiki.js",
       "description": "强大的自托管知识库/Wiki 系统，支持 Markdown 和多种编辑器",
       "version": "2.5.277",
-      "fpk_version": "2.5.277",
-      "release_tag": "wikijs/v2.5.277",
+      "fpk_version": "2.5.277-r1",
+      "release_tag": "wikijs/v2.5.277-r1",
       "service_port": 3110,
       "homepage_url": "https://js.wiki",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/wikijs/fnos/ICON_256.PNG",
@@ -2338,7 +2338,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-12T08:09:33Z",
+      "updated_at": "2026-03-12T08:38:03Z",
       "download_count": 13,
       "app_type": "docker",
       "category": "content"
@@ -2371,8 +2371,8 @@
       "display_name": "WolGoWeb",
       "description": "WolGoWeb 是基于 Golang 的远程唤醒 WebAPI 工具，用于在局域网中通过网页唤醒主机。",
       "version": "1.7.71",
-      "fpk_version": "1.7.71",
-      "release_tag": "wolgoweb/v1.7.71",
+      "fpk_version": "1.7.71-r1",
+      "release_tag": "wolgoweb/v1.7.71-r1",
       "service_port": 9095,
       "homepage_url": "https://github.com/xiaoxinpro/WolGoWeb",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/wolgoweb/fnos/ICON_256.PNG",
@@ -2380,7 +2380,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-08T08:04:20Z",
+      "updated_at": "2026-03-12T08:38:03Z",
       "download_count": 11,
       "app_type": "native",
       "category": "system"
