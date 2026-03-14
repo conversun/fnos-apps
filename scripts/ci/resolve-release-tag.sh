@@ -27,25 +27,41 @@ emit_output() {
 
 BASE_TAG="${APP_SLUG}/v${VERSION}"
 
+# Find all existing releases for this version (base tag and any -rN revisions).
+# Cleanup step deletes old revisions, so we must check both base and -rN to
+# detect whether this version has ever been released.
+EXISTING_TAGS=$(
+  gh release list --limit 200 --json tagName -q '.[].tagName' | \
+    { grep -E "^${BASE_TAG}(-r[0-9]+)?$" || true; }
+)
+
 if [ -n "${REVISION}" ]; then
   RELEASE_TAG="${BASE_TAG}-${REVISION}"
   echo "Manual revision specified: ${RELEASE_TAG}"
 elif [ "${EVENT_NAME}" = "schedule" ]; then
+  if [ -n "${EXISTING_TAGS}" ]; then
+    # Version already released (possibly as -rN after cleanup deleted base).
+    # Schedule builds are for NEW upstream versions only — skip.
+    echo "Scheduled run: version ${VERSION} already released (${EXISTING_TAGS}), skipping"
+    emit_output "release_tag" "${BASE_TAG}"
+    emit_output "should_build" "false"
+    emit_output "fpk_version" "${VERSION}"
+    exit 0
+  fi
   RELEASE_TAG="${BASE_TAG}"
-  echo "Scheduled run: using base tag ${RELEASE_TAG}"
+  echo "Scheduled run: new version ${RELEASE_TAG}"
 else
-  if gh release view "${BASE_TAG}" &>/dev/null; then
+  if [ -n "${EXISTING_TAGS}" ]; then
     HIGHEST_REV=$(
-      gh release list --limit 200 --json tagName -q '.[].tagName' | \
-        { grep "^${BASE_TAG}-r" || true; } | \
+      echo "${EXISTING_TAGS}" | \
         sed -n "s/.*-r\([0-9]*\)$/\1/p" | sort -n | tail -1
     )
     if [ -n "${HIGHEST_REV}" ]; then
       NEXT_REV=$((HIGHEST_REV + 1))
-      RELEASE_TAG="${BASE_TAG}-r${NEXT_REV}"
     else
-      RELEASE_TAG="${BASE_TAG}-r1"
+      NEXT_REV=1
     fi
+    RELEASE_TAG="${BASE_TAG}-r${NEXT_REV}"
     echo "Version exists, using revision: ${RELEASE_TAG}"
   else
     RELEASE_TAG="${BASE_TAG}"
