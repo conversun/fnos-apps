@@ -87,8 +87,8 @@
       "description": "硬盘 S.M.A.R.T. 健康数据采集器，配合 Scrutiny 面板使用",
       "source_url": "https://github.com/jianyun8023/fnos-scrutiny-collector/releases",
       "github_repo": "jianyun8023/fnos-scrutiny-collector",
-      "latest_version": "1.46.1",
-      "updated_at": "2026-03-13T21:45:42Z"
+      "latest_version": "1.46.4",
+      "updated_at": "2026-03-14T21:41:54Z"
     },
     {
       "name": "fn-fan",
@@ -159,8 +159,8 @@
       "description": "抖音/TikTok 数据采集与备份工具，提供 Web 管理界面",
       "source_url": "https://github.com/wangZeKaihhhh/f2_web_app/releases",
       "github_repo": "wangZeKaihhhh/f2_web_app",
-      "latest_version": "0.2.4",
-      "updated_at": "2026-03-13T18:02:54Z"
+      "latest_version": "0.2.5",
+      "updated_at": "2026-03-14T16:54:56Z"
     }
   ]
 }
