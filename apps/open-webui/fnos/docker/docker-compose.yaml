@@ -10,5 +10,6 @@ services:
       - OLLAMA_BASE_URL=http://172.17.0.1:11434
       - WEBUI_SECRET_KEY=fnos-secret-key
       - ENABLE_SIGNUP=true
+      - HF_ENDPOINT=https://hf-mirror.com
       - TZ=Asia/Shanghai
     restart: unless-stopped
