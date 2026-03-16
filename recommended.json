@@ -15,8 +15,8 @@
       "description": "BT 反吸血工具，自动封禁异常上传的吸血客户端",
       "source_url": "https://github.com/liumingye/fnos_fpk/releases/tag/v1.0.0",
       "github_repo": "PBH-BTN/PeerBanHelper",
-      "latest_version": "9.3.8",
-      "updated_at": "2026-02-28T19:01:52Z"
+      "latest_version": "9.3.9",
+      "updated_at": "2026-03-15T17:40:30Z"
     },
     {
       "name": "bilisync",
@@ -87,8 +87,8 @@
       "description": "硬盘 S.M.A.R.T. 健康数据采集器，配合 Scrutiny 面板使用",
       "source_url": "https://github.com/jianyun8023/fnos-scrutiny-collector/releases",
       "github_repo": "jianyun8023/fnos-scrutiny-collector",
-      "latest_version": "1.46.4",
-      "updated_at": "2026-03-14T21:41:54Z"
+      "latest_version": "1.47.1",
+      "updated_at": "2026-03-15T21:41:50Z"
     },
     {
       "name": "fn-fan",
