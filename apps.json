@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-03-18T08:10:27Z",
+  "generated_at": "2026-03-18T16:00:31Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -276,7 +276,7 @@
         "arm"
       ],
       "updated_at": "2026-03-15T09:37:08Z",
-      "download_count": 111,
+      "download_count": 115,
       "app_type": "docker",
       "category": "browser"
     },
@@ -339,7 +339,7 @@
         "arm"
       ],
       "updated_at": "2026-03-15T09:36:18Z",
-      "download_count": 24,
+      "download_count": 26,
       "app_type": "native",
       "category": "download"
     },
@@ -402,7 +402,7 @@
         "arm"
       ],
       "updated_at": "2026-03-15T09:35:30Z",
-      "download_count": 23,
+      "download_count": 25,
       "app_type": "docker",
       "category": "system"
     },
@@ -444,7 +444,7 @@
         "arm"
       ],
       "updated_at": "2026-03-15T09:37:05Z",
-      "download_count": 7,
+      "download_count": 8,
       "app_type": "native",
       "category": "network"
     },
@@ -486,7 +486,7 @@
         "arm"
       ],
       "updated_at": "2026-03-18T08:09:57Z",
-      "download_count": 31,
+      "download_count": 33,
       "app_type": "docker",
       "category": "media",
       "post_install_note": "首次启动会初始化 PostgreSQL 和 MinIO，请耐心等待。"
@@ -529,7 +529,7 @@
         "arm"
       ],
       "updated_at": "2026-03-15T09:36:32Z",
-      "download_count": 68,
+      "download_count": 69,
       "app_type": "native",
       "category": "download"
     },
@@ -550,7 +550,7 @@
         "arm"
       ],
       "updated_at": "2026-03-15T09:36:39Z",
-      "download_count": 185,
+      "download_count": 189,
       "app_type": "docker",
       "category": "browser"
     },
@@ -560,9 +560,9 @@
       "file_prefix": "fnos-apps-store",
       "display_name": "fnOS Apps",
       "description": "fnOS第三方应用中心，支持一键安装、更新和卸载来自conversun/fnos-apps的所有应用。",
-      "version": "1.7.3",
-      "fpk_version": "1.7.3",
-      "release_tag": "fnos-apps-store/v1.7.3",
+      "version": "1.7.4",
+      "fpk_version": "1.7.4",
+      "release_tag": "fnos-apps-store/v1.7.4",
       "service_port": 8011,
       "homepage_url": "https://github.com/conversun/fnos-store",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/fnos-apps-store/fnos/ICON_256.PNG",
@@ -570,7 +570,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-16T07:47:36Z",
+      "updated_at": "2026-03-18T16:00:12Z",
       "download_count": 1078,
       "app_type": "native",
       "category": "store"
@@ -1224,7 +1224,7 @@
         "arm"
       ],
       "updated_at": "2026-03-15T09:37:00Z",
-      "download_count": 3,
+      "download_count": 4,
       "app_type": "docker",
       "category": "ai"
     },
@@ -1604,7 +1604,7 @@
         "arm"
       ],
       "updated_at": "2026-03-16T01:17:24Z",
-      "download_count": 13,
+      "download_count": 18,
       "app_type": "native",
       "category": "system"
     },
@@ -1625,7 +1625,7 @@
         "arm"
       ],
       "updated_at": "2026-03-18T08:09:51Z",
-      "download_count": 43,
+      "download_count": 46,
       "app_type": "docker",
       "category": "ai"
     },
@@ -1667,7 +1667,7 @@
         "arm"
       ],
       "updated_at": "2026-03-15T09:36:03Z",
-      "download_count": 22,
+      "download_count": 24,
       "app_type": "docker",
       "category": "ai"
     },
@@ -1919,7 +1919,7 @@
         "arm"
       ],
       "updated_at": "2026-03-03T13:39:10Z",
-      "download_count": 59,
+      "download_count": 69,
       "app_type": "native",
       "category": "automation"
     },
@@ -2003,7 +2003,7 @@
         "arm"
       ],
       "updated_at": "2026-03-17T08:11:05Z",
-      "download_count": 17,
+      "download_count": 20,
       "app_type": "docker",
       "category": "system"
     },
@@ -2066,7 +2066,7 @@
         "arm"
       ],
       "updated_at": "2026-03-15T09:37:04Z",
-      "download_count": 32,
+      "download_count": 34,
       "app_type": "native",
       "category": "network"
     },
