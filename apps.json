@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-03-18T16:08:42Z",
+  "generated_at": "2026-03-18T16:57:49Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -1398,6 +1398,27 @@
       "category": "system"
     },
     {
+      "slug": "nanobot",
+      "appname": "nanobot",
+      "file_prefix": "nanobot",
+      "display_name": "Nanobot",
+      "description": "超轻量 AI 智能体框架，99% 更少代码量，支持多模型多通道，Web 管理面板，默认密码 admin/nanobot",
+      "version": "0.1.4.post5",
+      "fpk_version": "0.1.4.post5",
+      "release_tag": "nanobot/v0.1.4.post5",
+      "service_port": 18780,
+      "homepage_url": "https://github.com/HKUDS/nanobot",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/nanobot/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-03-18T16:57:14Z",
+      "download_count": 0,
+      "app_type": "docker",
+      "category": "ai"
+    },
+    {
       "slug": "navidrome",
       "appname": "navidrome",
       "file_prefix": "navidrome",
@@ -1775,6 +1796,27 @@
       "download_count": 34,
       "app_type": "docker",
       "category": "media"
+    },
+    {
+      "slug": "picoclaw",
+      "appname": "picoclaw",
+      "file_prefix": "picoclaw",
+      "display_name": "PicoClaw",
+      "description": "超轻量 AI 智能体框架，Go 编写，10MB 内存占用，支持多模型多通道智能自动化",
+      "version": "0.2.3",
+      "fpk_version": "0.2.3",
+      "release_tag": "picoclaw/v0.2.3",
+      "service_port": 18790,
+      "homepage_url": "https://github.com/sipeed/picoclaw",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/picoclaw/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-03-18T16:57:25Z",
+      "download_count": 0,
+      "app_type": "native",
+      "category": "ai"
     },
     {
       "slug": "pihole",
