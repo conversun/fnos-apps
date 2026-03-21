@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-03-20T08:08:57Z",
+  "generated_at": "2026-03-21T08:03:34Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -65,7 +65,7 @@
         "arm"
       ],
       "updated_at": "2026-03-18T16:06:57Z",
-      "download_count": 14,
+      "download_count": 15,
       "app_type": "native",
       "category": "download"
     },
@@ -75,9 +75,9 @@
       "file_prefix": "ani-rss",
       "display_name": "ANI-RSS",
       "description": "动漫 RSS 自动追番、订阅、下载和刮削工具，支持自动识别季数集数和重命名。默认用户名admin，密码admin。",
-      "version": "3.0.15",
-      "fpk_version": "3.0.15",
-      "release_tag": "ani-rss/v3.0.15",
+      "version": "3.0.16",
+      "fpk_version": "3.0.16",
+      "release_tag": "ani-rss/v3.0.16",
       "service_port": 7789,
       "homepage_url": "https://github.com/wushuo894/ani-rss",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ani-rss/fnos/ICON_256.PNG",
@@ -85,7 +85,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-20T08:08:13Z",
+      "updated_at": "2026-03-21T08:03:02Z",
       "download_count": 102,
       "app_type": "docker",
       "category": "content"
@@ -213,7 +213,7 @@
         "arm"
       ],
       "updated_at": "2026-03-18T16:06:04Z",
-      "download_count": 7,
+      "download_count": 9,
       "app_type": "native",
       "category": "media"
     },
@@ -318,7 +318,7 @@
         "arm"
       ],
       "updated_at": "2026-03-18T16:07:22Z",
-      "download_count": 13,
+      "download_count": 14,
       "app_type": "docker",
       "category": "network"
     },
@@ -486,7 +486,7 @@
         "arm"
       ],
       "updated_at": "2026-03-18T16:07:50Z",
-      "download_count": 46,
+      "download_count": 48,
       "app_type": "docker",
       "category": "media",
       "post_install_note": "首次启动会初始化 PostgreSQL 和 MinIO，请耐心等待。"
@@ -529,7 +529,7 @@
         "arm"
       ],
       "updated_at": "2026-03-18T16:07:09Z",
-      "download_count": 69,
+      "download_count": 80,
       "app_type": "native",
       "category": "download"
     },
@@ -655,7 +655,7 @@
         "arm"
       ],
       "updated_at": "2026-03-18T16:07:29Z",
-      "download_count": 6,
+      "download_count": 7,
       "app_type": "native",
       "category": "system"
     },
@@ -770,9 +770,9 @@
       "file_prefix": "homarr",
       "display_name": "Homarr",
       "description": "可视化应用仪表盘，深度集成 *arr 套件状态展示",
-      "version": "1.56.0",
-      "fpk_version": "1.56.0-r2",
-      "release_tag": "homarr/v1.56.0-r2",
+      "version": "1.56.1",
+      "fpk_version": "1.56.1",
+      "release_tag": "homarr/v1.56.1",
       "service_port": 7575,
       "homepage_url": "https://homarr.dev",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/homarr/fnos/ICON_256.PNG",
@@ -780,7 +780,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-18T16:06:20Z",
+      "updated_at": "2026-03-21T08:03:02Z",
       "download_count": 21,
       "app_type": "docker",
       "category": "system"
@@ -791,9 +791,9 @@
       "file_prefix": "homeassistant",
       "display_name": "Home Assistant",
       "description": "开源智能家居中枢平台，支持数千种智能设备的自动化控制。",
-      "version": "2026.3.2",
-      "fpk_version": "2026.3.2-r1",
-      "release_tag": "homeassistant/v2026.3.2-r1",
+      "version": "2026.3.3",
+      "fpk_version": "2026.3.3",
+      "release_tag": "homeassistant/v2026.3.3",
       "service_port": 8123,
       "homepage_url": "https://www.home-assistant.io",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/homeassistant/fnos/ICON_256.PNG",
@@ -801,7 +801,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-18T16:06:29Z",
+      "updated_at": "2026-03-21T08:03:07Z",
       "download_count": 42,
       "app_type": "docker",
       "category": "system"
@@ -875,9 +875,9 @@
       "file_prefix": "jackett",
       "display_name": "Jackett",
       "description": "Torrent 索引器代理，为 Sonarr/Radarr 等工具提供统一的搜索接口。",
-      "version": "0.24.1419",
-      "fpk_version": "0.24.1419",
-      "release_tag": "jackett/v0.24.1419",
+      "version": "0.24.1427",
+      "fpk_version": "0.24.1427",
+      "release_tag": "jackett/v0.24.1427",
       "service_port": 9117,
       "homepage_url": "https://github.com/Jackett/Jackett",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/jackett/fnos/ICON_256.PNG",
@@ -885,7 +885,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-20T08:08:28Z",
+      "updated_at": "2026-03-21T08:03:14Z",
       "download_count": 18,
       "app_type": "native",
       "category": "automation"
@@ -1064,9 +1064,9 @@
       "file_prefix": "librechat",
       "display_name": "LibreChat",
       "description": "AI 聊天界面，支持 OpenAI、Anthropic 等多种 AI 模型。",
-      "version": "0.8.3",
-      "fpk_version": "0.8.3-r2",
-      "release_tag": "librechat/v0.8.3-r2",
+      "version": "0.8.4",
+      "fpk_version": "0.8.4",
+      "release_tag": "librechat/v0.8.4",
       "service_port": 3085,
       "homepage_url": "https://librechat.ai",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/librechat/fnos/ICON_256.PNG",
@@ -1074,7 +1074,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-18T16:06:08Z",
+      "updated_at": "2026-03-21T08:03:05Z",
       "download_count": 21,
       "app_type": "docker",
       "category": "ai",
@@ -1139,7 +1139,7 @@
         "arm"
       ],
       "updated_at": "2026-03-18T16:06:36Z",
-      "download_count": 16,
+      "download_count": 24,
       "app_type": "docker",
       "category": "ai"
     },
@@ -1213,9 +1213,9 @@
       "file_prefix": "maxkb",
       "display_name": "MaxKB",
       "description": "企业级智能体平台，支持 RAG 知识库、工作流引擎和多模型对话。",
-      "version": "2.7.0",
-      "fpk_version": "2.7.0",
-      "release_tag": "maxkb/v2.7.0",
+      "version": "2.7.1",
+      "fpk_version": "2.7.1",
+      "release_tag": "maxkb/v2.7.1",
       "service_port": 8083,
       "homepage_url": "https://github.com/1Panel-dev/MaxKB",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/maxkb/fnos/ICON_256.PNG",
@@ -1223,7 +1223,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-19T08:08:52Z",
+      "updated_at": "2026-03-21T08:03:02Z",
       "download_count": 4,
       "app_type": "docker",
       "category": "ai"
@@ -1414,7 +1414,7 @@
         "arm"
       ],
       "updated_at": "2026-03-18T16:57:14Z",
-      "download_count": 75,
+      "download_count": 81,
       "app_type": "docker",
       "category": "ai"
     },
@@ -1456,7 +1456,7 @@
         "arm"
       ],
       "updated_at": "2026-03-18T16:07:49Z",
-      "download_count": 17,
+      "download_count": 20,
       "app_type": "docker",
       "category": "network",
       "post_install_note": "NetBird 客户端容器使用 host 网络模式运行。"
@@ -1740,9 +1740,9 @@
       "file_prefix": "paperless-ngx",
       "display_name": "Paperless-ngx",
       "description": "文档 OCR 扫描与归档管理系统，将纸质文件数字化并智能分类",
-      "version": "2.20.11",
-      "fpk_version": "2.20.11-r1",
-      "release_tag": "paperless-ngx/v2.20.11-r1",
+      "version": "2.20.12",
+      "fpk_version": "2.20.12",
+      "release_tag": "paperless-ngx/v2.20.12",
       "service_port": 8000,
       "homepage_url": "https://docs.paperless-ngx.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/paperless-ngx/fnos/ICON_256.PNG",
@@ -1750,7 +1750,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-18T16:07:52Z",
+      "updated_at": "2026-03-21T08:03:00Z",
       "download_count": 25,
       "app_type": "docker",
       "category": "content"
@@ -1814,7 +1814,7 @@
         "arm"
       ],
       "updated_at": "2026-03-18T16:57:25Z",
-      "download_count": 45,
+      "download_count": 54,
       "app_type": "native",
       "category": "ai"
     },
@@ -1835,7 +1835,7 @@
         "arm"
       ],
       "updated_at": "2026-03-18T16:07:09Z",
-      "download_count": 15,
+      "download_count": 21,
       "app_type": "docker",
       "category": "network"
     },
@@ -2454,9 +2454,9 @@
       "file_prefix": "zeroclaw",
       "display_name": "ZeroClaw",
       "description": "轻量级 AI 智能体运行时，Rust 编写，<5MB 内存占用，支持多模型多通道自主智能体工作流",
-      "version": "0.5.2",
-      "fpk_version": "0.5.2",
-      "release_tag": "zeroclaw/v0.5.2",
+      "version": "0.5.4",
+      "fpk_version": "0.5.4",
+      "release_tag": "zeroclaw/v0.5.4",
       "service_port": 42617,
       "homepage_url": "https://github.com/zeroclaw-labs/zeroclaw",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/zeroclaw/fnos/ICON_256.PNG",
@@ -2464,8 +2464,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-20T08:08:19Z",
-      "download_count": 21,
+      "updated_at": "2026-03-21T08:03:07Z",
+      "download_count": 38,
       "app_type": "native",
       "category": "ai"
     }
