@@ -6,8 +6,8 @@
       "description": "开源 AI Agent 运行时，支持 Windows/Mac/Linux/fnOS 一键部署。配置复杂不建议新手使用，建议使用 sophnet.com 快速体验，或使用 MaxKB",
       "source_url": "https://blog.910501.xyz/archives/openclaw",
       "github_repo": "cline/cline",
-      "latest_version": "3.74.0",
-      "updated_at": "2026-03-19T02:31:20Z"
+      "latest_version": "3.75.0",
+      "updated_at": "2026-03-20T23:27:16Z"
     },
     {
       "name": "peerbanhelper",
