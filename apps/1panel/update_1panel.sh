@@ -11,7 +11,7 @@ APP_VERSION_VAR="ONEPANEL_VERSION"
 APP_VERSION="${ONEPANEL_VERSION:-latest}"
 APP_DEPS=(curl tar)
 APP_FPK_PREFIX="1panel"
-APP_HELP_VERSION_EXAMPLE="1.10.0"
+APP_HELP_VERSION_EXAMPLE="2.1.7"
 
 app_set_arch_vars() {
     case "$ARCH" in
@@ -23,28 +23,26 @@ app_set_arch_vars() {
 
 app_show_help_examples() {
     cat << EOF
-  $0 --arch x86 1.10.0      # 指定版本，x86 架构
-  $0 1.10.0                 # 指定版本，自动检测架构
+  $0 --arch x86 2.1.7       # 指定版本，x86 架构
+  $0 2.1.7                  # 指定版本，自动检测架构
 EOF
 }
 
 app_get_latest_version() {
     info "获取最新版本信息..."
 
-    local tag
-    tag=$(curl -sL "https://api.github.com/repos/1Panel-dev/1Panel/releases/latest" 2>/dev/null | \
-        grep '"tag_name":' | sed -E 's/.*"v?([^"]+)".*/\1/')
-
     if [ "$APP_VERSION" = "latest" ]; then
-        APP_VERSION="$tag"
+        local cdn_version
+        cdn_version=$(curl -sL "https://resource.1panel.pro/v2/stable/latest" 2>/dev/null)
+        APP_VERSION=$(echo "$cdn_version" | sed 's/^v//')
     fi
 
-    [ -z "$APP_VERSION" ] && error "无法获取版本信息，请手动指定: $0 1.10.0"
+    [ -z "$APP_VERSION" ] && error "无法获取版本信息，请手动指定: $0 2.1.7"
     info "目标版本: $APP_VERSION"
 }
 
 app_download() {
-    local download_url="https://resource.1panel.pro/1panel/package/stable/${APP_VERSION}/release/1panel-${APP_VERSION}-linux-${ZIP_ARCH}.tar.gz"
+    local download_url="https://resource.1panel.pro/v2/stable/v${APP_VERSION}/release/1panel-v${APP_VERSION}-linux-${ZIP_ARCH}.tar.gz"
 
     info "下载 ($ARCH): $download_url"
     mkdir -p "$WORK_DIR"
