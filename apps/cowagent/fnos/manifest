@@ -1,0 +1,15 @@
+appname         = cowagent
+version         = 0.0.0
+display_name    = CowAgent
+platform        = x86
+maintainer      = zhayujie
+maintainer_url  = https://github.com/zhayujie/chatgpt-on-wechat
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = cowagent.Application
+service_port    = 9899
+checkport       = false
+desc            = AI 超级助手，支持微信/飞书/钉钉/QQ/Web 等多平台接入，基于大语言模型的智能对话。
+source          = thirdparty
+checksum        = 

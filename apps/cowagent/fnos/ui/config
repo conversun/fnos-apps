@@ -1,0 +1,14 @@
+{
+    ".url": {
+        "cowagent.Application": {
+            "title": "CowAgent",
+            "desc": "CowAgent AI Assistant",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "9899",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

@@ -1,0 +1,11 @@
+services:
+  cowagent:
+    image: ${DOCKER_MIRROR}docker.io/zhayujie/chatgpt-on-wechat:${VERSION}
+    container_name: cowagent
+    ports:
+      - "${TRIM_SERVICE_PORT}:9899"
+    volumes:
+      - ${TRIM_PKGVAR:?}/data:/app/data
+    environment:
+      - TZ=Asia/Shanghai
+    restart: unless-stopped

@@ -1,0 +1,25 @@
+{
+    "port-config": {
+        "protocol-file": "CoPaw.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "CoPaw",
+                "permission": {
+                    "rw": [
+                        "copaw"
+                    ]
+                }
+            }
+        ]
+    },
+    "docker-project": {
+        "projects": [
+            {
+                "name": "copaw",
+                "path": "docker"
+            }
+        ]
+    }
+}

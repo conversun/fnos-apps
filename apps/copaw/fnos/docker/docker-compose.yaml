@@ -1,0 +1,11 @@
+services:
+  copaw:
+    image: ${DOCKER_MIRROR}docker.io/agentscope/copaw:${VERSION}
+    container_name: copaw
+    ports:
+      - "${TRIM_SERVICE_PORT}:8088"
+    volumes:
+      - ${TRIM_PKGVAR:?}/data:/app/working
+    environment:
+      - TZ=Asia/Shanghai
+    restart: unless-stopped

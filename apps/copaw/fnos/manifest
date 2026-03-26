@@ -1,0 +1,15 @@
+appname         = copaw
+version         = 0.0.0
+display_name    = CoPaw
+platform        = x86
+maintainer      = AgentScope
+maintainer_url  = https://github.com/agentscope-ai/CoPaw
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = copaw.Application
+service_port    = 8088
+checkport       = false
+desc            = 基于 AgentScope 的个人 AI 助手工作站，支持多渠道聊天、本地大模型和定时任务。
+source          = thirdparty
+checksum        = 

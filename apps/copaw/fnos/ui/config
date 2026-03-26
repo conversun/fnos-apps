@@ -1,0 +1,14 @@
+{
+    ".url": {
+        "copaw.Application": {
+            "title": "CoPaw",
+            "desc": "CoPaw AI Assistant",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "8088",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

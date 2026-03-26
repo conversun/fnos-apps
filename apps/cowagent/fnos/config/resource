@@ -1,0 +1,25 @@
+{
+    "port-config": {
+        "protocol-file": "CowAgent.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "CowAgent",
+                "permission": {
+                    "rw": [
+                        "cowagent"
+                    ]
+                }
+            }
+        ]
+    },
+    "docker-project": {
+        "projects": [
+            {
+                "name": "cowagent",
+                "path": "docker"
+            }
+        ]
+    }
+}
