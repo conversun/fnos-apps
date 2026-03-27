@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-03-26T16:50:17Z",
+  "generated_at": "2026-03-27T08:12:09Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -360,7 +360,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:49:59Z",
-      "download_count": 0,
+      "download_count": 11,
       "app_type": "docker",
       "category": "ai"
     },
@@ -402,7 +402,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:50:01Z",
-      "download_count": 0,
+      "download_count": 20,
       "app_type": "docker",
       "category": "ai"
     },
@@ -444,7 +444,7 @@
         "arm"
       ],
       "updated_at": "2026-03-24T08:11:21Z",
-      "download_count": 76,
+      "download_count": 79,
       "app_type": "docker",
       "category": "system"
     },
@@ -875,9 +875,9 @@
       "file_prefix": "immich",
       "display_name": "Immich",
       "description": "自托管照片和视频备份方案,支持人脸识别和智能搜索。",
-      "version": "2.6.2",
-      "fpk_version": "2.6.2-r1",
-      "release_tag": "immich/v2.6.2-r1",
+      "version": "2.6.3",
+      "fpk_version": "2.6.3",
+      "release_tag": "immich/v2.6.3",
       "service_port": 2283,
       "homepage_url": "https://github.com/immich-app/immich",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/immich/fnos/ICON_256.PNG",
@@ -885,7 +885,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-26T16:23:55Z",
+      "updated_at": "2026-03-27T08:11:35Z",
       "download_count": 70,
       "app_type": "docker",
       "category": "media"
@@ -917,9 +917,9 @@
       "file_prefix": "jackett",
       "display_name": "Jackett",
       "description": "Torrent 索引器代理，为 Sonarr/Radarr 等工具提供统一的搜索接口。",
-      "version": "0.24.1465",
-      "fpk_version": "0.24.1465-r1",
-      "release_tag": "jackett/v0.24.1465-r1",
+      "version": "0.24.1470",
+      "fpk_version": "0.24.1470",
+      "release_tag": "jackett/v0.24.1470",
       "service_port": 9117,
       "homepage_url": "https://github.com/Jackett/Jackett",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/jackett/fnos/ICON_256.PNG",
@@ -927,7 +927,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-26T16:25:21Z",
+      "updated_at": "2026-03-27T08:11:55Z",
       "download_count": 45,
       "app_type": "native",
       "category": "automation"
@@ -1191,9 +1191,9 @@
       "file_prefix": "loki",
       "display_name": "Loki",
       "description": "轻量级日志聚合系统，Grafana 生态的日志解决方案。",
-      "version": "3.6.8",
-      "fpk_version": "3.6.8-r1",
-      "release_tag": "loki/v3.6.8-r1",
+      "version": "3.7.0",
+      "fpk_version": "3.7.0",
+      "release_tag": "loki/v3.7.0",
       "service_port": 3100,
       "homepage_url": "https://grafana.com/oss/loki/",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/loki/fnos/ICON_256.PNG",
@@ -1201,7 +1201,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-26T16:24:12Z",
+      "updated_at": "2026-03-27T08:11:48Z",
       "download_count": 11,
       "app_type": "native",
       "category": "system"
@@ -1635,9 +1635,9 @@
       "file_prefix": "ntfy",
       "display_name": "Ntfy",
       "description": "自托管的推送通知服务器，支持 HTTP 接口发送通知到手机和桌面。",
-      "version": "2.19.2",
-      "fpk_version": "2.19.2-r2",
-      "release_tag": "ntfy/v2.19.2-r2",
+      "version": "2.20.0",
+      "fpk_version": "2.20.0",
+      "release_tag": "ntfy/v2.20.0",
       "service_port": 2586,
       "homepage_url": "https://ntfy.sh",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ntfy/fnos/ICON_256.PNG",
@@ -1645,7 +1645,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-26T16:23:49Z",
+      "updated_at": "2026-03-27T08:11:46Z",
       "download_count": 18,
       "app_type": "native",
       "category": "system"
@@ -1688,7 +1688,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:24:10Z",
-      "download_count": 70,
+      "download_count": 78,
       "app_type": "docker",
       "category": "ai"
     },
@@ -1719,9 +1719,9 @@
       "file_prefix": "open-webui",
       "display_name": "Open WebUI",
       "description": "AI 对话界面，支持连接 Ollama、OpenAI 等多种大语言模型。",
-      "version": "0.8.11",
-      "fpk_version": "0.8.11-r1",
-      "release_tag": "open-webui/v0.8.11-r1",
+      "version": "0.8.12",
+      "fpk_version": "0.8.12",
+      "release_tag": "open-webui/v0.8.12",
       "service_port": 8080,
       "homepage_url": "https://github.com/open-webui/open-webui",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/open-webui/fnos/ICON_256.PNG",
@@ -1729,8 +1729,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-26T16:24:26Z",
-      "download_count": 78,
+      "updated_at": "2026-03-27T08:11:37Z",
+      "download_count": 86,
       "app_type": "docker",
       "category": "ai"
     },
@@ -1856,7 +1856,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:23:28Z",
-      "download_count": 108,
+      "download_count": 109,
       "app_type": "native",
       "category": "ai"
     },
@@ -2496,9 +2496,9 @@
       "file_prefix": "zeroclaw",
       "display_name": "ZeroClaw",
       "description": "轻量级 AI 智能体运行时，Rust 编写，<5MB 内存占用，支持多模型多通道自主智能体工作流",
-      "version": "0.6.3",
-      "fpk_version": "0.6.3",
-      "release_tag": "zeroclaw/v0.6.3",
+      "version": "0.6.5",
+      "fpk_version": "0.6.5",
+      "release_tag": "zeroclaw/v0.6.5",
       "service_port": 42617,
       "homepage_url": "https://github.com/zeroclaw-labs/zeroclaw",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/zeroclaw/fnos/ICON_256.PNG",
@@ -2506,7 +2506,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-26T16:24:30Z",
+      "updated_at": "2026-03-27T08:11:49Z",
       "download_count": 60,
       "app_type": "native",
       "category": "ai"
