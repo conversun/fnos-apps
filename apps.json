@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-04-01T08:24:34Z",
+  "generated_at": "2026-04-01T08:26:00Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -107,7 +107,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:24:47Z",
-      "download_count": 25,
+      "download_count": 27,
       "app_type": "docker",
       "category": "content",
       "post_install_note": "AppFlowy Cloud 需要配合 AppFlowy 客户端使用。"
@@ -1740,9 +1740,9 @@
       "file_prefix": "openclaw",
       "display_name": "OpenClaw AI 网关",
       "description": "AI 智能体 Gateway 网关，支持 Telegram、Discord、WhatsApp 等多渠道接入",
-      "version": "2026.3.28",
-      "fpk_version": "2026.3.28",
-      "release_tag": "openclaw/v2026.3.28",
+      "version": "2026.3.31",
+      "fpk_version": "2026.3.31",
+      "release_tag": "openclaw/v2026.3.31",
       "service_port": 18789,
       "homepage_url": "https://docs.openclaw.ai/",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/openclaw/fnos/ICON_256.PNG",
@@ -1750,7 +1750,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-29T08:09:06Z",
+      "updated_at": "2026-04-01T08:25:45Z",
       "download_count": 543,
       "app_type": "native",
       "category": "ai"
