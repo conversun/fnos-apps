@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-04-06T16:22:51Z",
+  "generated_at": "2026-04-06T16:49:12Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -23,7 +23,7 @@
         "arm"
       ],
       "updated_at": "2026-04-06T08:27:16Z",
-      "download_count": 24,
+      "download_count": 25,
       "app_type": "docker",
       "category": "system"
     },
@@ -76,8 +76,8 @@
       "display_name": "ANI-RSS",
       "description": "动漫 RSS 自动追番、订阅、下载和刮削工具，支持自动识别季数集数和重命名。默认用户名admin，密码admin。",
       "version": "3.0.22",
-      "fpk_version": "3.0.22-r1",
-      "release_tag": "ani-rss/v3.0.22-r1",
+      "fpk_version": "3.0.22-r2",
+      "release_tag": "ani-rss/v3.0.22-r2",
       "service_port": 7789,
       "homepage_url": "https://github.com/wushuo894/ani-rss",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ani-rss/fnos/ICON_256.PNG",
@@ -85,7 +85,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-04-06T16:22:04Z",
+      "updated_at": "2026-04-06T16:48:56Z",
       "download_count": 102,
       "app_type": "docker",
       "category": "content"
@@ -287,8 +287,8 @@
       "display_name": "ClamAV",
       "description": "开源杀毒引擎，提供文件扫描和病毒检测服务。",
       "version": "1.5.2",
-      "fpk_version": "1.5.2-r4",
-      "release_tag": "clamav/v1.5.2-r4",
+      "fpk_version": "1.5.2-r5",
+      "release_tag": "clamav/v1.5.2-r5",
       "service_port": 3310,
       "homepage_url": "https://github.com/Cisco-Talos/clamav",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/clamav/fnos/ICON_256.PNG",
@@ -296,7 +296,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-04-06T16:22:00Z",
+      "updated_at": "2026-04-06T16:48:53Z",
       "download_count": 24,
       "app_type": "docker",
       "category": "system"
@@ -1403,8 +1403,8 @@
       "display_name": "MoviePilot",
       "description": "影视自动化管理工具,支持自动订阅、下载、整理和通知。首次启动通过 Web UI 配置。",
       "version": "2.9.25",
-      "fpk_version": "2.9.25-r1",
-      "release_tag": "moviepilot/v2.9.25-r1",
+      "fpk_version": "2.9.25-r2",
+      "release_tag": "moviepilot/v2.9.25-r2",
       "service_port": 3000,
       "homepage_url": "https://github.com/jxxghp/MoviePilot",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/moviepilot/fnos/ICON_256.PNG",
@@ -1412,7 +1412,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-04-06T16:21:59Z",
+      "updated_at": "2026-04-06T16:48:50Z",
       "download_count": 133,
       "app_type": "docker",
       "category": "content",
@@ -1856,7 +1856,7 @@
         "arm"
       ],
       "updated_at": "2026-04-03T08:13:30Z",
-      "download_count": 194,
+      "download_count": 195,
       "app_type": "native",
       "category": "ai"
     },
@@ -2339,7 +2339,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:24:16Z",
-      "download_count": 59,
+      "download_count": 61,
       "app_type": "docker",
       "category": "media"
     },
