@@ -1,10 +1,31 @@
 #!/bin/bash
 # ANI-RSS Docker app — wizard integration
 
+COMPOSE_FILE="${TRIM_APPDEST}/docker/docker-compose.yaml"
+PORT_SAVE="${TRIM_PKGVAR}/.port"
+DOWNLOAD_DIR_SAVE="${TRIM_PKGVAR}/.download_dir"
+
+apply_port() {
+    local port="$1"
+    [ -z "$port" ] && return
+    sed -i 's/"[^"]*:7789"/"'"${port}"':7789"/' "$COMPOSE_FILE"
+    echo "${port}" > "$PORT_SAVE"
+    install_log "Patched docker-compose.yaml: port=${port}"
+}
+
+apply_download_dir() {
+    local dir="$1"
+    [ -z "$dir" ] && return
+    sed -i 's|^      - .*:/downloads$|      - '"${dir}"':/downloads|' "$COMPOSE_FILE"
+    echo "${dir}" > "$DOWNLOAD_DIR_SAVE"
+    install_log "Patched docker-compose.yaml: download_dir=${dir}"
+}
+
 service_postinst() {
     if [ -n "${wizard_download_dir}" ]; then
         local env_file="${TRIM_APPDEST}/docker/.env"
         echo "DOWNLOAD_DIR=${wizard_download_dir}" > "$env_file"
+        apply_download_dir "${wizard_download_dir}"
         mkdir -p "${wizard_download_dir}" 2>/dev/null || true
         install_log "Wrote docker .env: DOWNLOAD_DIR=${wizard_download_dir}"
     fi
@@ -25,20 +46,12 @@ service_restore() {
     fi
 }
 
-COMPOSE_FILE="${TRIM_APPDEST}/docker/docker-compose.yaml"
-PORT_SAVE="${TRIM_PKGVAR}/.port"
-
-apply_port() {
-    local port="$1"
-    [ -z "$port" ] && return
-    sed -i 's/"[^"]*:7789"/"'"${port}"':7789"/' "$COMPOSE_FILE"
-    echo "${port}" > "$PORT_SAVE"
-    install_log "Patched docker-compose.yaml: port=${port}"
-}
-
 service_postupgrade() {
     if [ -f "$PORT_SAVE" ]; then
         apply_port "$(cat "$PORT_SAVE")"
+    fi
+    if [ -f "$DOWNLOAD_DIR_SAVE" ]; then
+        apply_download_dir "$(cat "$DOWNLOAD_DIR_SAVE")"
     fi
 }
 
