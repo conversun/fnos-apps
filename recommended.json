@@ -78,8 +78,8 @@
       "description": "Grafana 官方数据采集代理，收集日志、指标和链路追踪数据",
       "source_url": "https://github.com/jianyun8023/fnos-alloy/releases",
       "github_repo": "jianyun8023/fnos-alloy",
-      "latest_version": "1.15.0",
-      "updated_at": "2026-03-30T21:46:49Z"
+      "latest_version": "1.15.1",
+      "updated_at": "2026-04-14T21:48:06Z"
     },
     {
       "name": "scrutiny-collector",
