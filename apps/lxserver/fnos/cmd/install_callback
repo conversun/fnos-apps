@@ -1,0 +1,41 @@
+#!/bin/bash
+
+export PATH=/var/apps/nodejs_v24/target/bin:$PATH
+export HOME="${TRIM_PKGVAR}"
+DATA_DIR="${TRIM_DATA_SHARE_PATHS%%:*}"
+APP_DIR="${TRIM_APPDEST}/server"
+LOG_FILE="${TRIM_PKGVAR}/info.log"
+
+log_msg() {
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - $1" >> ${LOG_FILE}
+}
+
+# 1. 创建数据目录
+mkdir -p "${DATA_DIR}/data" "${DATA_DIR}/logs"
+
+# 2. 安装生产依赖（编译原生模块）
+log_msg "Installing dependencies..."
+cd "${APP_DIR}" && npm install --omit=dev --no-audit --no-fund 2>&1 | tee -a ${LOG_FILE}
+
+# 3. 生成 config.js（向导传入的密码写入）
+if [ ! -f "${DATA_DIR}/config.js" ]; then
+    PLAYER_PWD="${wizard_player_password:-123456}"
+    ADMIN_PWD="${wizard_admin_password:-123456}"
+    cat > "${DATA_DIR}/config.js" << CONF
+module.exports = {
+  "serverName": "lxserver",
+  "bindIP": "0.0.0.0",
+  "port": 17000,
+  "frontend.password": "${ADMIN_PWD}",
+  "player.enableAuth": true,
+  "player.password": "${PLAYER_PWD}",
+  "player.path": "/music",
+  "disableTelemetry": true,
+  "proxy.enabled": false,
+  "subsonic.enable": false
+}
+CONF
+    log_msg "Config generated at ${DATA_DIR}/config.js"
+fi
+
+exit 0

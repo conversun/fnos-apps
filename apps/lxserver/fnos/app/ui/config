@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "levis.lxserver.Application":
+        {
+            "title": "LX Music Player",
+            "desc": "LX Music Web 播放器",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "17000",
+            "protocol": "http",
+            "url": "/music",
+            "allUsers": true
+        }
+    }
+}
