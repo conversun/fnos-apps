@@ -15,8 +15,8 @@
       "description": "BT 反吸血工具，自动封禁异常上传的吸血客户端",
       "source_url": "https://github.com/liumingye/fnos_fpk/releases/tag/v1.0.0",
       "github_repo": "PBH-BTN/PeerBanHelper",
-      "latest_version": "9.3.10",
-      "updated_at": "2026-03-30T13:04:59Z"
+      "latest_version": "9.3.11",
+      "updated_at": "2026-04-19T10:05:54Z"
     },
     {
       "name": "bilisync",
