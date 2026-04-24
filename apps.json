@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-04-24T08:37:06Z",
+  "generated_at": "2026-04-24T08:37:22Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -917,9 +917,9 @@
       "file_prefix": "jackett",
       "display_name": "Jackett",
       "description": "Torrent 索引器代理，为 Sonarr/Radarr 等工具提供统一的搜索接口。",
-      "version": "0.24.1731",
-      "fpk_version": "0.24.1731",
-      "release_tag": "jackett/v0.24.1731",
+      "version": "0.24.1736",
+      "fpk_version": "0.24.1736",
+      "release_tag": "jackett/v0.24.1736",
       "service_port": 9117,
       "homepage_url": "https://github.com/Jackett/Jackett",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/jackett/fnos/ICON_256.PNG",
@@ -927,7 +927,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-04-23T08:31:51Z",
+      "updated_at": "2026-04-24T08:37:05Z",
       "download_count": 62,
       "app_type": "native",
       "category": "automation"
