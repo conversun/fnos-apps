@@ -1,0 +1,31 @@
+[
+    {
+        "stepTitle": "LX Music Player",
+        "items": [
+            {
+                "type": "tips",
+                "helpText": "聚合多平台音乐搜索与在线播放的 Web 播放器。首次安装需联网下载依赖，可能需要几分钟。"
+            },
+            {
+                "type": "password",
+                "field": "wizard_player_password",
+                "label": "播放器访问密码",
+                "initValue": "123456",
+                "rules": [
+                    { "required": true, "message": "请设置播放器密码" },
+                    { "min": 4, "message": "密码至少4位" }
+                ]
+            },
+            {
+                "type": "password",
+                "field": "wizard_admin_password",
+                "label": "管理控制台密码",
+                "initValue": "123456",
+                "rules": [
+                    { "required": true, "message": "请设置管理密码" },
+                    { "min": 4, "message": "密码至少4位" }
+                ]
+            }
+        ]
+    }
+]
