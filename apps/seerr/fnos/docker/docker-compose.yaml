@@ -1,6 +1,6 @@
 services:
   seerr:
-    image: ${DOCKER_MIRROR}docker.io/seerrteam/seerr:${VERSION}
+    image: ${DOCKER_MIRROR}docker.io/seerr/seerr:v${VERSION}
     container_name: seerr
     ports:
       - "${TRIM_SERVICE_PORT}:5055"
