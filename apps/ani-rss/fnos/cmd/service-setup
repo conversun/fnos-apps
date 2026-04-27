@@ -1,23 +1,30 @@
 #!/bin/bash
 # ANI-RSS Docker app — wizard integration
 
-COMPOSE_FILE="${TRIM_APPDEST}/docker/docker-compose.yaml"
-PORT_SAVE="${TRIM_PKGVAR}/.port"
-DOWNLOAD_DIR_SAVE="${TRIM_PKGVAR}/.download_dir"
+# NOTE: Do not pre-compute paths from TRIM_* at script source time.
+# This file is sourced by `installer` BEFORE `load_variables_from_file`
+# populates TRIM_APPDEST / TRIM_PKGVAR, so any top-level expansion would
+# evaluate to a broken path like "/docker/docker-compose.yaml". Resolve
+# the paths inside each function instead, so they expand at call time when
+# the install variables have been loaded into the environment.
 
 apply_port() {
     local port="$1"
     [ -z "$port" ] && return
-    sed -i 's/"[^"]*:7789"/"'"${port}"':7789"/' "$COMPOSE_FILE"
-    echo "${port}" > "$PORT_SAVE"
+    local compose_file="${TRIM_APPDEST}/docker/docker-compose.yaml"
+    local port_save="${TRIM_PKGVAR}/.port"
+    sed -i 's/"[^"]*:7789"/"'"${port}"':7789"/' "$compose_file"
+    echo "${port}" > "$port_save"
     install_log "Patched docker-compose.yaml: port=${port}"
 }
 
 apply_download_dir() {
     local dir="$1"
     [ -z "$dir" ] && return
-    sed -i 's|^      - .*:/downloads$|      - '"${dir}"':/downloads|' "$COMPOSE_FILE"
-    echo "${dir}" > "$DOWNLOAD_DIR_SAVE"
+    local compose_file="${TRIM_APPDEST}/docker/docker-compose.yaml"
+    local dir_save="${TRIM_PKGVAR}/.download_dir"
+    sed -i 's|^      - .*:/downloads$|      - '"${dir}"':/downloads|' "$compose_file"
+    echo "${dir}" > "$dir_save"
     install_log "Patched docker-compose.yaml: download_dir=${dir}"
 }
 
@@ -47,11 +54,13 @@ service_restore() {
 }
 
 service_postupgrade() {
-    if [ -f "$PORT_SAVE" ]; then
-        apply_port "$(cat "$PORT_SAVE")"
+    local port_save="${TRIM_PKGVAR}/.port"
+    local dir_save="${TRIM_PKGVAR}/.download_dir"
+    if [ -f "$port_save" ]; then
+        apply_port "$(cat "$port_save")"
     fi
-    if [ -f "$DOWNLOAD_DIR_SAVE" ]; then
-        apply_download_dir "$(cat "$DOWNLOAD_DIR_SAVE")"
+    if [ -f "$dir_save" ]; then
+        apply_download_dir "$(cat "$dir_save")"
     fi
 }
 
