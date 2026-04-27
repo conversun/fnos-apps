@@ -1,0 +1,19 @@
+[
+    {
+        "stepTitle": "登录信息",
+        "items": [
+            {
+                "type": "tips",
+                "helpText": "OpenList（AList 社区分支）是文件列表 / WebDAV 程序，支持挂载阿里云盘、百度网盘、OneDrive、Cloudreve 等多种存储后端。"
+            },
+            {
+                "type": "tips",
+                "helpText": "<b>默认账号：</b><code>admin</code><br><b>初始密码：</b>程序在<b>首次启动时随机生成</b>，并<b>仅在启动日志中打印一次</b>，无法事后查询（数据库中只保留哈希）。"
+            },
+            {
+                "type": "tips",
+                "helpText": "<b>查看初始密码（仅首次启动有效）：</b><br>SSH 登录飞牛 NAS 后执行：<br><code>grep -i 'initial password' /vol1/@appdata/openlist/openlist.log</code><br><br><b>忘记密码 / 想自定义密码：</b><br>1. 在飞牛「应用中心」停止 OpenList<br>2. SSH 执行下面任一命令：<br>　• 重置为随机密码：<code>/var/apps/openlist/openlist admin random --data /vol1/@appdata/openlist</code><br>　• 设置自定义密码：<code>/var/apps/openlist/openlist admin set 你的新密码 --data /vol1/@appdata/openlist</code><br>3. 重新启动 OpenList，使用新密码登录"
+            }
+        ]
+    }
+]
