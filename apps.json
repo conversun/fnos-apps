@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-04-26T08:24:25Z",
+  "generated_at": "2026-04-27T08:46:23Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -23,7 +23,7 @@
         "arm"
       ],
       "updated_at": "2026-04-06T08:27:16Z",
-      "download_count": 57,
+      "download_count": 58,
       "app_type": "docker",
       "category": "system"
     },
@@ -44,7 +44,7 @@
         "arm"
       ],
       "updated_at": "2026-04-17T08:29:15Z",
-      "download_count": 41,
+      "download_count": 43,
       "app_type": "docker",
       "category": "system"
     },
@@ -65,7 +65,7 @@
         "arm"
       ],
       "updated_at": "2026-04-20T08:40:02Z",
-      "download_count": 91,
+      "download_count": 96,
       "app_type": "native",
       "category": "download"
     },
@@ -75,9 +75,9 @@
       "file_prefix": "ani-rss",
       "display_name": "ANI-RSS",
       "description": "动漫 RSS 自动追番、订阅、下载和刮削工具，支持自动识别季数集数和重命名。默认用户名admin，密码admin。",
-      "version": "3.1.6",
-      "fpk_version": "3.1.6",
-      "release_tag": "ani-rss/v3.1.6",
+      "version": "3.1.7",
+      "fpk_version": "3.1.7",
+      "release_tag": "ani-rss/v3.1.7",
       "service_port": 7789,
       "homepage_url": "https://github.com/wushuo894/ani-rss",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ani-rss/fnos/ICON_256.PNG",
@@ -85,7 +85,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-04-25T08:15:40Z",
+      "updated_at": "2026-04-27T08:45:56Z",
       "download_count": 102,
       "app_type": "docker",
       "category": "content"
@@ -192,7 +192,7 @@
         "arm"
       ],
       "updated_at": "2026-04-06T08:27:22Z",
-      "download_count": 50,
+      "download_count": 51,
       "app_type": "native",
       "category": "system"
     },
@@ -276,7 +276,7 @@
         "arm"
       ],
       "updated_at": "2026-04-12T08:13:27Z",
-      "download_count": 354,
+      "download_count": 360,
       "app_type": "docker",
       "category": "browser"
     },
@@ -412,9 +412,9 @@
       "file_prefix": "ddns-go",
       "display_name": "DDNS-GO",
       "description": "DDNS-GO 是一个简单好用的 DDNS 工具，支持阿里云、腾讯云、Cloudflare 等多个 DNS 服务商。",
-      "version": "6.16.10",
-      "fpk_version": "6.16.10",
-      "release_tag": "ddns-go/v6.16.10",
+      "version": "6.16.12",
+      "fpk_version": "6.16.12",
+      "release_tag": "ddns-go/v6.16.12",
       "service_port": 9876,
       "homepage_url": "https://github.com/jeessy2/ddns-go",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ddns-go/fnos/ICON_256.PNG",
@@ -422,7 +422,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-04-21T08:31:31Z",
+      "updated_at": "2026-04-27T08:46:05Z",
       "download_count": 29,
       "app_type": "native",
       "category": "system"
@@ -444,7 +444,7 @@
         "arm"
       ],
       "updated_at": "2026-04-07T08:21:53Z",
-      "download_count": 140,
+      "download_count": 141,
       "app_type": "docker",
       "category": "system"
     },
@@ -571,7 +571,7 @@
         "arm"
       ],
       "updated_at": "2026-04-11T08:09:10Z",
-      "download_count": 147,
+      "download_count": 150,
       "app_type": "native",
       "category": "download"
     },
@@ -613,7 +613,7 @@
         "arm"
       ],
       "updated_at": "2026-04-07T08:21:47Z",
-      "download_count": 3109,
+      "download_count": 3168,
       "app_type": "native",
       "category": "store"
     },
@@ -697,7 +697,7 @@
         "arm"
       ],
       "updated_at": "2026-04-25T08:15:49Z",
-      "download_count": 27,
+      "download_count": 28,
       "app_type": "native",
       "category": "system"
     },
@@ -886,7 +886,7 @@
         "arm"
       ],
       "updated_at": "2026-04-14T08:29:38Z",
-      "download_count": 210,
+      "download_count": 221,
       "app_type": "docker",
       "category": "media"
     },
@@ -917,9 +917,9 @@
       "file_prefix": "jackett",
       "display_name": "Jackett",
       "description": "Torrent 索引器代理，为 Sonarr/Radarr 等工具提供统一的搜索接口。",
-      "version": "0.24.1779",
-      "fpk_version": "0.24.1779",
-      "release_tag": "jackett/v0.24.1779",
+      "version": "0.24.1787",
+      "fpk_version": "0.24.1787",
+      "release_tag": "jackett/v0.24.1787",
       "service_port": 9117,
       "homepage_url": "https://github.com/Jackett/Jackett",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/jackett/fnos/ICON_256.PNG",
@@ -927,7 +927,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-04-26T08:23:46Z",
+      "updated_at": "2026-04-27T08:46:08Z",
       "download_count": 62,
       "app_type": "native",
       "category": "automation"
@@ -949,7 +949,7 @@
         "arm"
       ],
       "updated_at": "2026-04-06T08:28:05Z",
-      "download_count": 496,
+      "download_count": 505,
       "app_type": "native",
       "category": "media"
     },
@@ -1075,7 +1075,7 @@
         "arm"
       ],
       "updated_at": "2026-04-24T08:36:49Z",
-      "download_count": 47,
+      "download_count": 49,
       "app_type": "docker",
       "category": "media"
     },
@@ -1096,7 +1096,7 @@
         "arm"
       ],
       "updated_at": "2026-04-19T08:16:31Z",
-      "download_count": 77,
+      "download_count": 78,
       "app_type": "docker",
       "category": "media"
     },
@@ -1181,7 +1181,7 @@
         "arm"
       ],
       "updated_at": "2026-04-07T08:21:40Z",
-      "download_count": 65,
+      "download_count": 67,
       "app_type": "docker",
       "category": "ai"
     },
@@ -1329,7 +1329,7 @@
         "arm"
       ],
       "updated_at": "2026-04-08T08:21:17Z",
-      "download_count": 400,
+      "download_count": 405,
       "app_type": "docker",
       "category": "media"
     },
@@ -1392,7 +1392,7 @@
         "arm"
       ],
       "updated_at": "2026-04-11T08:09:10Z",
-      "download_count": 29,
+      "download_count": 30,
       "app_type": "native",
       "category": "network"
     },
@@ -1402,9 +1402,9 @@
       "file_prefix": "moviepilot",
       "display_name": "MoviePilot",
       "description": "影视自动化管理工具,支持自动订阅、下载、整理和通知。首次启动通过 Web UI 配置。",
-      "version": "2.10.5",
-      "fpk_version": "2.10.5",
-      "release_tag": "moviepilot/v2.10.5",
+      "version": "2.10.6",
+      "fpk_version": "2.10.6",
+      "release_tag": "moviepilot/v2.10.6",
       "service_port": 3000,
       "homepage_url": "https://github.com/jxxghp/MoviePilot",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/moviepilot/fnos/ICON_256.PNG",
@@ -1412,7 +1412,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-04-25T08:15:42Z",
+      "updated_at": "2026-04-27T08:45:57Z",
       "download_count": 133,
       "app_type": "docker",
       "category": "content",
@@ -1456,7 +1456,7 @@
         "arm"
       ],
       "updated_at": "2026-03-28T08:08:12Z",
-      "download_count": 373,
+      "download_count": 378,
       "app_type": "docker",
       "category": "ai"
     },
@@ -1477,7 +1477,7 @@
         "arm"
       ],
       "updated_at": "2026-04-13T08:37:09Z",
-      "download_count": 136,
+      "download_count": 138,
       "app_type": "native",
       "category": "media"
     },
@@ -1625,7 +1625,7 @@
         "arm"
       ],
       "updated_at": "2026-04-13T08:37:03Z",
-      "download_count": 11,
+      "download_count": 13,
       "app_type": "docker",
       "category": "system"
     },
@@ -1782,9 +1782,9 @@
       "file_prefix": "paperless-ngx",
       "display_name": "Paperless-ngx",
       "description": "文档 OCR 扫描与归档管理系统，将纸质文件数字化并智能分类",
-      "version": "2.20.14",
-      "fpk_version": "2.20.14",
-      "release_tag": "paperless-ngx/v2.20.14",
+      "version": "2.20.15",
+      "fpk_version": "2.20.15",
+      "release_tag": "paperless-ngx/v2.20.15",
       "service_port": 8000,
       "homepage_url": "https://docs.paperless-ngx.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/paperless-ngx/fnos/ICON_256.PNG",
@@ -1792,7 +1792,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-04-15T08:29:50Z",
+      "updated_at": "2026-04-27T08:45:58Z",
       "download_count": 40,
       "app_type": "docker",
       "category": "content"
@@ -1877,7 +1877,7 @@
         "arm"
       ],
       "updated_at": "2026-04-25T08:15:48Z",
-      "download_count": 70,
+      "download_count": 71,
       "app_type": "docker",
       "category": "network"
     },
@@ -1898,7 +1898,7 @@
         "arm"
       ],
       "updated_at": "2026-04-11T08:09:33Z",
-      "download_count": 234,
+      "download_count": 246,
       "app_type": "native",
       "category": "media"
     },
@@ -1940,7 +1940,7 @@
         "arm"
       ],
       "updated_at": "2026-04-05T08:08:36Z",
-      "download_count": 80,
+      "download_count": 81,
       "app_type": "native",
       "category": "automation"
     },
@@ -2003,7 +2003,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:24:36Z",
-      "download_count": 227,
+      "download_count": 228,
       "app_type": "native",
       "category": "automation"
     },
@@ -2024,7 +2024,7 @@
         "arm"
       ],
       "updated_at": "2026-04-20T08:39:58Z",
-      "download_count": 76,
+      "download_count": 82,
       "app_type": "native",
       "category": "download"
     },
@@ -2129,7 +2129,7 @@
         "arm"
       ],
       "updated_at": "2026-04-16T08:29:16Z",
-      "download_count": 98,
+      "download_count": 100,
       "app_type": "docker",
       "category": "media"
     },
@@ -2192,7 +2192,7 @@
         "arm"
       ],
       "updated_at": "2026-04-25T08:15:47Z",
-      "download_count": 84,
+      "download_count": 86,
       "app_type": "docker",
       "category": "system"
     },
@@ -2276,7 +2276,7 @@
         "arm"
       ],
       "updated_at": "2026-04-10T08:27:06Z",
-      "download_count": 56,
+      "download_count": 57,
       "app_type": "native",
       "category": "download"
     },
@@ -2297,7 +2297,7 @@
         "arm"
       ],
       "updated_at": "2026-03-28T08:08:16Z",
-      "download_count": 158,
+      "download_count": 160,
       "app_type": "docker",
       "category": "network"
     },
@@ -2339,7 +2339,7 @@
         "arm"
       ],
       "updated_at": "2026-04-16T08:29:15Z",
-      "download_count": 112,
+      "download_count": 115,
       "app_type": "docker",
       "category": "media"
     },
