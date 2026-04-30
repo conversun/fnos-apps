@@ -1,0 +1,16 @@
+appname         = levis.lxserver
+version         = 0.0.0
+display_name    = LX Music Player
+platform        = x86
+maintainer      = XCQ0607
+maintainer_url  = https://github.com/XCQ0607/lxserver
+distributor     = harbiu317
+distributor_url = https://github.com/harbiu317/lxserver
+desktop_uidir   = ui
+desktop_applaunchname = levis.lxserver.Application
+service_port    = 17000
+checkport       = false
+desc            = 聚合多平台音乐搜索与在线播放的 Web 播放器，支持自定义源、歌词显示、缓存管理、LX Music 同步。
+source          = thirdparty
+install_dep_apps = nodejs_v24
+checksum        =

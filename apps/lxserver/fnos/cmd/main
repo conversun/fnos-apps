@@ -1,0 +1,100 @@
+#!/bin/bash
+
+LOG_FILE="${TRIM_PKGVAR}/info.log"
+PID_FILE="${TRIM_PKGVAR}/app.pid"
+
+export PATH=/var/apps/nodejs_v24/target/bin:$PATH
+DATA_DIR="${TRIM_DATA_SHARE_PATHS%%:*}"
+
+SERVER_DIR="${TRIM_APPDEST}/server"
+CMD="cd ${SERVER_DIR} && NODE_ENV=production \
+  PORT=17000 \
+  BIND_IP=0.0.0.0 \
+  DATA_PATH=${DATA_DIR}/data \
+  LOG_PATH=${DATA_DIR}/logs \
+  CONFIG_PATH=${DATA_DIR}/config.js \
+  STATIC_PATH=${SERVER_DIR}/public \
+  node ${SERVER_DIR}/index.js"
+
+log_msg() {
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - $1" >> ${LOG_FILE}
+}
+
+start_process() {
+    if status; then
+        return 0
+    fi
+    log_msg "Starting lxserver ..."
+    bash -c "${CMD}" >> ${LOG_FILE} 2>&1 &
+    printf "%s" "$!" > ${PID_FILE}
+    return 0
+}
+
+stop_process() {
+    log_msg "Stopping lxserver ..."
+    if [ -r "${PID_FILE}" ]; then
+        pid=$(head -n 1 "${PID_FILE}" | tr -d '[:space:]')
+        log_msg "pid=${pid}"
+        if ! check_process "${pid}"; then
+            rm -f "${PID_FILE}"
+            return
+        fi
+        log_msg "send TERM signal to PID:${pid}..."
+        kill -TERM ${pid} >> ${LOG_FILE} 2>&1
+        local count=0
+        while check_process "${pid}" && [ $count -lt 10 ]; do
+            sleep 1
+            count=$((count + 1))
+            log_msg "waiting process terminal... (${count}s/10s)"
+        done
+        if check_process "${pid}"; then
+            log_msg "send KILL signal to PID:${pid}..."
+            kill -KILL "${pid}"
+            sleep 1
+            rm -f "${PID_FILE}"
+        else
+            log_msg "process killed... "
+        fi
+    fi
+    return 0
+}
+
+check_process() {
+    local pid=$1
+    if kill -0 "${pid}" 2>/dev/null; then
+        return 0
+    else
+        return 1
+    fi
+}
+
+status() {
+    if [ -f "${PID_FILE}" ]; then
+        pid=$(head -n 1 "${PID_FILE}" | tr -d '[:space:]')
+        if check_process "${pid}"; then
+            return 0
+        else
+            rm -f "${PID_FILE}"
+        fi
+    fi
+    return 1
+}
+
+case $1 in
+start)
+    start_process
+    ;;
+stop)
+    stop_process
+    ;;
+status)
+    if status; then
+        exit 0
+    else
+        exit 3
+    fi
+    ;;
+*)
+    exit 1
+    ;;
+esac
