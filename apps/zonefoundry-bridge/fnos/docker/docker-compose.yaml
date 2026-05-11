@@ -1,0 +1,13 @@
+services:
+  zonefoundry-bridge:
+    image: ${DOCKER_MIRROR}docker.io/zonefoundry/bridge:${VERSION}
+    container_name: zonefoundry-bridge
+    network_mode: host
+    volumes:
+      - ${TRIM_PKGVAR:?}/data:/app/data
+    environment:
+      - TZ=Asia/Shanghai
+      - ZF_RELAY_URL=wss://relay.zonefoundry.dev/ws
+      - ZF_AGENT_LABEL=fnos-bridge
+      - ZF_TOKEN=${ZF_TOKEN:-}
+    restart: unless-stopped

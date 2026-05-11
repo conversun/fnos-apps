@@ -1,0 +1,21 @@
+[
+    {
+        "stepTitle": "ZoneFoundry Bridge",
+        "items": [
+            {
+                "type": "tips",
+                "helpText": "ZoneFoundry Bridge 以客户端模式运行，将家中 Sonos 音箱接入 ZoneFoundry 云端中继。<br><br>该容器使用 host 网络模式（Sonos LAN UPnP/SSDP 发现需要），不映射独立端口。"
+            },
+            {
+                "type": "tips",
+                "helpText": "请先在 ZoneFoundry App / 网页 (zonefoundry.dev) 注册账号，进入「设置 → Bridge Token」复制 token 后填入下方。留空也可，后续可手动编辑 docker/.env。"
+            },
+            {
+                "type": "text",
+                "field": "wizard_token",
+                "label": "ZoneFoundry Token",
+                "placeholder": "zf-xxxxxxxxxxxxxxxx"
+            }
+        ]
+    }
+]

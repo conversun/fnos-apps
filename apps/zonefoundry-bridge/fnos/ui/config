@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "zonefoundry-bridge.Application":
+        {
+            "title": "ZoneFoundry Bridge",
+            "desc": "ZoneFoundry Bridge",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "18790",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

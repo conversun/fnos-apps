@@ -1,0 +1,25 @@
+{
+    "port-config": {
+        "protocol-file": "ZoneFoundryBridge.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "ZoneFoundryBridge",
+                "permission": {
+                    "rw": [
+                        "zonefoundry-bridge"
+                    ]
+                }
+            }
+        ]
+    },
+    "docker-project": {
+        "projects": [
+            {
+                "name": "zonefoundry-bridge",
+                "path": "docker"
+            }
+        ]
+    }
+}

@@ -1,0 +1,21 @@
+#!/bin/bash
+set -e
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "${SCRIPT_DIR}/meta.env"
+
+VERSION="${VERSION:-latest}"
+WORK_DIR=$(mktemp -d)
+trap "rm -rf $WORK_DIR" EXIT
+
+mkdir -p "${WORK_DIR}/docker"
+cp "${SCRIPT_DIR}/../../../apps/zonefoundry-bridge/fnos/docker/docker-compose.yaml" "${WORK_DIR}/docker/"
+sed "s/\${VERSION}/${VERSION}/g" "${WORK_DIR}/docker/docker-compose.yaml" > "${WORK_DIR}/docker/docker-compose.yaml.tmp"
+mv "${WORK_DIR}/docker/docker-compose.yaml.tmp" "${WORK_DIR}/docker/docker-compose.yaml"
+
+cp -a "${SCRIPT_DIR}/../../../apps/zonefoundry-bridge/fnos/ui" "${WORK_DIR}/ui"
+
+cd "${WORK_DIR}"
+tar czf "${SCRIPT_DIR}/../../../app.tgz" docker/ ui/
+
+echo "Built app.tgz for zonefoundry-bridge ${VERSION}"

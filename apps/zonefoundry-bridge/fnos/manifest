@@ -1,0 +1,15 @@
+appname         = zonefoundry-bridge
+version         = 0.0.0
+display_name    = ZoneFoundry Bridge
+platform        = x86
+maintainer      = ZoneFoundry
+maintainer_url  = https://zonefoundry.dev
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = zonefoundry-bridge.Application
+service_port    = 18790
+checkport       = false
+desc            = ZoneFoundry 自建桥接，连接家中 Sonos 与 ZoneFoundry 云端中继，远程通过语音 / IM / 网页操控 Sonos 音箱。
+source          = thirdparty
+checksum        =

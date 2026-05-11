@@ -1,0 +1,7 @@
+{
+    "defaults": {
+        "run-as": "package"
+    },
+    "username": "zonefoundry-bridge",
+    "groupname": "zonefoundry-bridge"
+}

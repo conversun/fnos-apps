@@ -1,0 +1,11 @@
+[
+    {
+        "stepTitle": "安装说明",
+        "items": [
+            {
+                "type": "tips",
+                "helpText": "ZoneFoundry Bridge 装好后会自动连接 wss://relay.zonefoundry.dev/ws，并在局域网内自动发现 Sonos 音箱。<br><br>填好 Token 后请到 ZoneFoundry App 检查「Bridge 状态」是否变为「在线」。"
+            }
+        ]
+    }
+]
