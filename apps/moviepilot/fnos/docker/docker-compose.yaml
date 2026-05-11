@@ -18,7 +18,11 @@ services:
       - PUID=${TRIM_UID}
       - PGID=${TRIM_GID}
       - UMASK=022
-      - PORT=3000
+      # v2 架构：NGINX_PORT=Web 入口(须与下方 ports 的容器端口一致)，PORT=后端 API(默认 3001)。
+      # 切勿把 PORT 设为 3000，否则会与 nginx 抢端口或导致代理无法命中 Python，登录等 API 会失败。
+      - NGINX_PORT=3000
+      - PORT=3001
       - GITHUB_PROXY=https://gh-proxy.com/
+      - SUPERUSER=admin
       - SUPERUSER_PASSWORD=${SUPERUSER_PASSWORD:-password}
     restart: unless-stopped
