@@ -2,14 +2,6 @@ log:
   level: info
 
 plugins:
-  - tag: main_sequence
-    type: sequence
-    args:
-      - matches:
-          - qname &./cn_domains.txt
-        exec: $forward_cn
-      - exec: $forward_global
-
   - tag: forward_cn
     type: forward
     args:
@@ -24,6 +16,20 @@ plugins:
       upstreams:
         - addr: https://1.1.1.1/dns-query
         - addr: https://8.8.8.8/dns-query
+
+  - tag: cn_matcher
+    type: domain_set
+    args:
+      files:
+        - "./cn_domains.txt"
+
+  - tag: main_sequence
+    type: sequence
+    args:
+      - matches:
+          - qname $cn_matcher
+        exec: $forward_cn
+      - exec: $forward_global
 
   - tag: udp_server
     type: udp_server

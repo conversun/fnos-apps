@@ -1,0 +1,5 @@
+{
+    "type": "tcp",
+    "startup_timeout_seconds": 15,
+    "note": "mosdns is a DNS resolver (UDP+TCP on 5354), no HTTP endpoint"
+}
