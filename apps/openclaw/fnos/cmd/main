@@ -213,6 +213,11 @@ stop_process() {
     # 兜底清理
     pkill -f "openclaw.*gateway" 2>/dev/null || true  # pkill-f-ok
     pkill -f "iframe-proxy" 2>/dev/null || true  # pkill-f-ok
+    # bare 'openclaw' process spawned by 'openclaw gateway' wrapper survives the
+    # 'openclaw.*gateway' pattern (its comm is just 'openclaw'). kill it by name.
+    pkill -x "openclaw" 2>/dev/null || true
+    sleep 1
+    pkill -9 -x "openclaw" 2>/dev/null || true
 
     log_msg "${APP_NAME} 已停止"
 }

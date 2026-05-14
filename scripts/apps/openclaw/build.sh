@@ -5,15 +5,23 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "${SCRIPT_DIR}/../../.." && pwd)"
 
 VERSION="${VERSION:-}"
-ARCH="${ARCH:-x86_64}"
+TARBALL_ARCH="${TARBALL_ARCH:-${DEB_ARCH:-amd64}}"
 
 [ -z "$VERSION" ] && { echo "VERSION is required" >&2; exit 1; }
 
-echo "==> Building OpenClaw ${VERSION} for ${ARCH}"
+echo "==> Building OpenClaw ${VERSION} for ${TARBALL_ARCH}"
 
 # Node.js 22 LTS version
 NODE_VERSION="22.14.0"
-NODE_TARBALL="node-v${NODE_VERSION}-linux-x64.tar.xz"
+
+# Map CI arch names to Node.js tarball arch names
+case "${TARBALL_ARCH}" in
+    amd64) NODE_LINUX_ARCH="x64" ;;
+    arm64) NODE_LINUX_ARCH="arm64" ;;
+    *) echo "Unsupported arch: ${TARBALL_ARCH}" >&2; exit 1 ;;
+esac
+
+NODE_TARBALL="node-v${NODE_VERSION}-linux-${NODE_LINUX_ARCH}.tar.xz"
 NODE_URL="https://nodejs.org/dist/v${NODE_VERSION}/${NODE_TARBALL}"
 
 echo "==> Downloading Node.js ${NODE_VERSION}..."
@@ -21,7 +29,7 @@ curl -fL -o "${NODE_TARBALL}" "${NODE_URL}"
 
 echo "==> Extracting Node.js..."
 tar -xf "${NODE_TARBALL}"
-mv "node-v${NODE_VERSION}-linux-x64" node
+mv "node-v${NODE_VERSION}-linux-${NODE_LINUX_ARCH}" node
 
 echo "==> Installing openclaw ${VERSION}..."
 export PATH="$(pwd)/node/bin:${PATH}"
@@ -34,10 +42,10 @@ echo "==> Size before optimization: $(du -sh ./openclaw_global | cut -f1)"
 
 OC_MODULES="./openclaw_global/lib/node_modules"
 
-# 1) Remove sharp prebuilt binaries for non-linux-x64 platforms
-echo "==> Removing non-linux-x64 sharp prebuilds..."
+# 1) Remove sharp prebuilt binaries for non-target platforms
+echo "==> Removing non-linux-${NODE_LINUX_ARCH} sharp prebuilds..."
 find "${OC_MODULES}" -path "*/@img/sharp-*" -maxdepth 4 -type d \
-  ! -name "*linux-x64*" -exec rm -rf {} + 2>/dev/null || true
+  ! -name "*linux-${NODE_LINUX_ARCH}*" -exec rm -rf {} + 2>/dev/null || true
 
 # 2) Remove TypeScript declarations, source maps, and documentation
 echo "==> Removing unnecessary files (.d.ts, .map, docs)..."
