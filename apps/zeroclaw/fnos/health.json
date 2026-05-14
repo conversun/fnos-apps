@@ -1,0 +1,9 @@
+{
+    "type": "http",
+    "path": "/health",
+    "expect_status": [200],
+    "startup_timeout_seconds": 30,
+    "post_install_warmup_seconds": 5,
+    "skip_arch": [],
+    "note": "zeroclaw advertises /health on the gateway port; / has no handler"
+}
