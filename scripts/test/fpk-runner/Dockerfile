@@ -10,7 +10,7 @@ RUN apt-get update -y && apt-get install -y --no-install-recommends \
         rsync file jq \
         python3 python3-yaml \
         iproute2 net-tools netcat-openbsd \
-        sudo \
+        sudo libicu74 \
     && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /vol1/@appcenter /vol1/@appdata /vol1/@appconf \
