@@ -127,8 +127,15 @@ check_manifest_values() {
         fi
     fi
 
-    if [ "$appname" != "$slug" ]; then
-        fail "$slug: manifest.appname='$appname' does not match directory name"
+    local meta_env file_prefix expected_appname
+    meta_env="$(scripts_app_dir "$slug")/meta.env"
+    file_prefix=""
+    if [ -f "$meta_env" ]; then
+        file_prefix="$(grep -E '^FILE_PREFIX=' "$meta_env" | head -1 | cut -d= -f2- | tr -d '"' || true)"
+    fi
+    expected_appname="${file_prefix:-$slug}"
+    if [ "$appname" != "$expected_appname" ]; then
+        fail "$slug: manifest.appname='$appname' != expected '$expected_appname' (FILE_PREFIX from meta.env, fallback to slug)"
         ok=0
     fi
 
