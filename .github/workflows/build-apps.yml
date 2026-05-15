@@ -97,6 +97,7 @@ jobs:
                   MATRIX=$(echo "$APPS" | jq -R -s -c 'split("\n") | map(select(. != ""))')
                 fi
               fi
+            fi
           fi
 
           echo "matrix=$MATRIX" >> "$GITHUB_OUTPUT"
