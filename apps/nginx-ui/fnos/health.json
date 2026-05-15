@@ -1,0 +1,5 @@
+{
+    "type": "skip",
+    "skip_arch": [],
+    "note": "nginx-ui requires the separate Nginx app pre-installed at /var/apps/nginxserver and crashes on startup otherwise. The single-app L3 sandbox cannot satisfy this inter-app dependency. Verified manually on real fnOS when Nginx is co-installed. Health check skipped by design."
+}
