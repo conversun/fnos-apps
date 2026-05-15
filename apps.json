@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-15T08:47:08Z",
+  "generated_at": "2026-05-15T08:47:31Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -1424,8 +1424,8 @@
       "display_name": "MoviePilot",
       "description": "影视自动化管理工具,支持自动订阅、下载、整理和通知。首次启动通过 Web UI 配置。",
       "version": "2.11.3",
-      "fpk_version": "2.11.3-r1",
-      "release_tag": "moviepilot/v2.11.3-r1",
+      "fpk_version": "2.11.3-r99",
+      "release_tag": "moviepilot/v2.11.3-r99",
       "service_port": 3000,
       "homepage_url": "https://github.com/jxxghp/MoviePilot",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/moviepilot/fnos/ICON_256.PNG",
@@ -1433,7 +1433,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-15T08:30:29Z",
+      "updated_at": "2026-05-15T08:47:13Z",
       "download_count": 133,
       "app_type": "docker",
       "category": "content",
