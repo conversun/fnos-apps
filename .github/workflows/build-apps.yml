@@ -43,14 +43,27 @@ jobs:
         run: |
           EVENT="${{ github.event_name }}"
 
+          # Distributor-built apps (no scripts/apps/<slug>/meta.env) are released by an
+          # external repo and are not built here. Filter them out of every matrix path.
+          buildable_only() {
+            while IFS= read -r app; do
+              [ -f "scripts/apps/$app/meta.env" ] && echo "$app"
+            done
+          }
+
           all_apps() {
-            ls -d apps/*/ 2>/dev/null | xargs -n1 basename | jq -R -s -c 'split("\n") | map(select(. != ""))'
+            ls -d apps/*/ 2>/dev/null | xargs -n1 basename | buildable_only \
+              | jq -R -s -c 'split("\n") | map(select(. != ""))'
           }
 
           if [ "$EVENT" = "workflow_dispatch" ]; then
             APP="${{ inputs.app }}"
             if [ ! -d "apps/$APP" ]; then
               echo "::error::App '$APP' not found in apps/ directory"
+              exit 1
+            fi
+            if [ ! -f "scripts/apps/$APP/meta.env" ]; then
+              echo "::error::App '$APP' is distributor-built (no scripts/apps/$APP/meta.env) — released by external repo, cannot build here"
               exit 1
             fi
             MATRIX="[\"$APP\"]"
@@ -69,7 +82,7 @@ jobs:
                 # shared framework changed — rebuild all apps
                 MATRIX=$(all_apps)
               else
-                APPS=$(echo "$CHANGED" | grep '^apps/' | cut -d/ -f2 | sort -u | grep -v '^$' || true)
+                APPS=$(echo "$CHANGED" | grep '^apps/' | cut -d/ -f2 | sort -u | grep -v '^$' | buildable_only || true)
                 if [ -z "$APPS" ]; then
                   MATRIX="[]"
                 else

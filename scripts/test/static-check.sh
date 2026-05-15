@@ -370,6 +370,13 @@ run_health_schema_subcheck() {
 check_one_app() {
     local slug="$1"
     note "── $slug ──"
+    # Distributor-built apps (no local scripts/apps/<slug>/meta.env) are released by
+    # an external repo and follow their own conventions. Skip — not in scope for this
+    # repo's static contract checks.
+    if [ ! -f "$(repo_root)/scripts/apps/$slug/meta.env" ]; then
+        info "$slug: skipped (distributor-built — no scripts/apps/$slug/meta.env)"
+        return 0
+    fi
     check_app_dir_layout "$slug" || return 0
     check_icons_nonempty "$slug" || true
     check_manifest_keys  "$slug" || true
