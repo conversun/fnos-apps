@@ -16,5 +16,9 @@ services:
       - DISPLAY_WIDTH=1280
       - DISPLAY_HEIGHT=720
       - KEEP_APP_RUNNING=1
+      # VNC_PASSWORD is read from .env (written by wizard at install time).
+      # When set, both noVNC web access and VNC client connections require auth.
+      # Empty value preserves prior no-auth behavior (recommended only on isolated networks).
+      - VNC_PASSWORD=${VNC_PASSWORD:-}
     shm_size: "2gb"
     restart: unless-stopped

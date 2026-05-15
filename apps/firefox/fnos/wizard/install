@@ -1,0 +1,20 @@
+[
+    {
+        "stepTitle": "Firefox 设置",
+        "items": [
+            {
+                "type": "tips",
+                "helpText": "Firefox 通过浏览器（noVNC）远程访问。<b>默认无密码</b>，任何能访问端口的人都可以使用此 Firefox 浏览你的内网。<b>强烈建议在下方设置访问密码</b>。"
+            },
+            {
+                "type": "tips",
+                "helpText": "<b>关于密码的几点说明：</b><br>1. 密码用于 noVNC 网页访问和 VNC 客户端连接（同一密码）<br>2. 留空则不启用密码（保持原有行为，<b>仅推荐内网隔离环境</b>）<br>3. <b>密码最多 8 位有效</b>（VNC 协议限制，超长部分被截断）<br>4. 安装后修改密码：编辑 <code>/var/apps/firefox/docker/.env</code> 后重启应用"
+            },
+            {
+                "type": "password",
+                "field": "wizard_password",
+                "label": "访问密码（留空则不启用）"
+            }
+        ]
+    }
+]

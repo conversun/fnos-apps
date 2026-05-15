@@ -1,8 +1,36 @@
 #!/bin/bash
 
 service_postinst() {
+    local env_file="${TRIM_APPDEST}/docker/.env"
+
     mkdir -p "${TRIM_PKGVAR}/config" 2>/dev/null || true
     mkdir -p "${TRIM_PKGVAR}/fonts" 2>/dev/null || true
+
+    # Write .env only when user supplied a wizard password.
+    # jlesage/firefox uses VNC_PASSWORD to require auth on both VNC clients and
+    # the noVNC web entry. Leaving blank preserves the historical no-auth behavior.
+    : > "$env_file"
+    if [ -n "${wizard_password}" ]; then
+        echo "VNC_PASSWORD=${wizard_password}" >> "$env_file"
+        chmod 600 "$env_file"
+        install_log "Wrote docker .env: VNC_PASSWORD set (length=${#wizard_password})"
+    else
+        rm -f "$env_file"
+        install_log "No wizard password supplied; Firefox runs without VNC auth"
+    fi
+}
+
+service_preupgrade() {
+    if [ -f "${TRIM_APPDEST}/docker/.env" ]; then
+        cp "${TRIM_APPDEST}/docker/.env" "${TRIM_PKGVAR}/.env.bak"
+    fi
+}
+
+service_restore() {
+    if [ -f "${TRIM_PKGVAR}/.env.bak" ]; then
+        cp "${TRIM_PKGVAR}/.env.bak" "${TRIM_APPDEST}/docker/.env"
+        rm -f "${TRIM_PKGVAR}/.env.bak"
+    fi
 }
 
 COMPOSE_FILE="${TRIM_APPDEST}/docker/docker-compose.yaml"
