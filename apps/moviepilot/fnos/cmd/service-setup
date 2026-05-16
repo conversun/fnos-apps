@@ -5,14 +5,8 @@
 # values or with empty values that let the compose-side defaults take over.
 
 service_postinst() {
-    local env_file="${TRIM_APPDEST}/docker/.env"
-
-    # Always write .env (env_file directive in compose.yaml requires it).
-    # SUPERUSER_PASSWORD must be supplied here (was previously via environment:
-    # interpolation which silently lost wizard value because env_file does not
-    # feed Compose-time interpolation). Default 'password' preserves original
-    # behavior when wizard left blank.
-    : > "$env_file"
+    # Apply wizard-specified directories (compose volumes section uses
+    # ${MEDIA_DIR:-...} / ${DOWNLOAD_DIR:-...} which are sed-patched here).
     if [ -n "${wizard_media_dir}" ]; then
         apply_media_dir "${wizard_media_dir}"
         mkdir -p "${wizard_media_dir}" 2>/dev/null || true
@@ -21,13 +15,6 @@ service_postinst() {
         apply_download_dir "${wizard_download_dir}"
         mkdir -p "${wizard_download_dir}" 2>/dev/null || true
     fi
-    if [ -n "${wizard_password}" ]; then
-        echo "SUPERUSER_PASSWORD=${wizard_password}" >> "$env_file"
-    else
-        echo "SUPERUSER_PASSWORD=password" >> "$env_file"
-    fi
-    chmod 600 "$env_file"
-    install_log "Wrote docker .env (wizard values applied where supplied)"
 
     # Create default directories and fix ownership for PUID/PGID
     mkdir -p "${TRIM_PKGVAR}/config" "${TRIM_PKGVAR}/core" "${TRIM_PKGVAR}/media" "${TRIM_PKGVAR}/downloads" 2>/dev/null || true
@@ -35,15 +22,23 @@ service_postinst() {
 }
 
 service_preupgrade() {
-    if [ -f "${TRIM_APPDEST}/docker/.env" ]; then
-        cp "${TRIM_APPDEST}/docker/.env" "${TRIM_PKGVAR}/.env.bak"
+    # Backup persisted values for restore after upgrade
+    if [ -f "$MEDIA_DIR_SAVE" ]; then
+        cp "$MEDIA_DIR_SAVE" "${TRIM_PKGVAR}/.media_dir.bak"
+    fi
+    if [ -f "$DOWNLOAD_DIR_SAVE" ]; then
+        cp "$DOWNLOAD_DIR_SAVE" "${TRIM_PKGVAR}/.download_dir.bak"
     fi
 }
 
 service_restore() {
-    if [ -f "${TRIM_PKGVAR}/.env.bak" ]; then
-        cp "${TRIM_PKGVAR}/.env.bak" "${TRIM_APPDEST}/docker/.env"
-        rm -f "${TRIM_PKGVAR}/.env.bak"
+    if [ -f "${TRIM_PKGVAR}/.media_dir.bak" ]; then
+        apply_media_dir "$(cat "${TRIM_PKGVAR}/.media_dir.bak")"
+        rm -f "${TRIM_PKGVAR}/.media_dir.bak"
+    fi
+    if [ -f "${TRIM_PKGVAR}/.download_dir.bak" ]; then
+        apply_download_dir "$(cat "${TRIM_PKGVAR}/.download_dir.bak")"
+        rm -f "${TRIM_PKGVAR}/.download_dir.bak"
     fi
 }
 
@@ -82,34 +77,14 @@ apply_port() {
 }
 
 service_postupgrade() {
-    local env_file="${TRIM_APPDEST}/docker/.env"
-
     if [ -f "$PORT_SAVE" ]; then
         apply_port "$(cat "$PORT_SAVE")"
     fi
-
-    # MEDIA_DIR: prefer persisted save file; fall back to migrating from .env
-    # for users upgrading from earlier broken revisions that wrote to .env only.
     if [ -f "$MEDIA_DIR_SAVE" ]; then
         apply_media_dir "$(cat "$MEDIA_DIR_SAVE")"
-    elif [ -f "$env_file" ]; then
-        local mv
-        mv="$(grep -E '^MEDIA_DIR=' "$env_file" | head -1 | cut -d= -f2-)"
-        if [ -n "$mv" ]; then
-            install_log "Migrating MEDIA_DIR from .env (legacy): $mv"
-            apply_media_dir "$mv"
-        fi
     fi
-
     if [ -f "$DOWNLOAD_DIR_SAVE" ]; then
         apply_download_dir "$(cat "$DOWNLOAD_DIR_SAVE")"
-    elif [ -f "$env_file" ]; then
-        local dv
-        dv="$(grep -E '^DOWNLOAD_DIR=' "$env_file" | head -1 | cut -d= -f2-)"
-        if [ -n "$dv" ]; then
-            install_log "Migrating DOWNLOAD_DIR from .env (legacy): $dv"
-            apply_download_dir "$dv"
-        fi
     fi
 }
 

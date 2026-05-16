@@ -7,32 +7,16 @@ services:
     volumes:
       - ${TRIM_PKGVAR:?}/config:/config
       - ${TRIM_PKGVAR:?}/core:/moviepilot
-      # MEDIA_DIR / DOWNLOAD_DIR come from .env (written by install wizard).
-      # These MUST match the directories used by your download client (e.g. qBittorrent),
-      # otherwise MoviePilot cannot find downloaded files for organizing.
-      # Defaults fall back to app-private dirs which other apps cannot access.
       - ${MEDIA_DIR:-${TRIM_PKGVAR:?}/media}:/media
       - ${DOWNLOAD_DIR:-${TRIM_PKGVAR:?}/downloads}:/downloads
-    # Explicit env_file directive so the wizard-written .env actually reaches
-    # docker compose. fnOS framework invokes \`docker compose\` from a cwd that
-    # does NOT auto-discover compose-file-directory \`.env\`. Without this
-    # directive, SUPERUSER_PASSWORD / MEDIA_DIR / DOWNLOAD_DIR set by the wizard
-    # were silently ignored (same plumbing bug fixed in firefox/chromium #146).
-    # service_postinst ALWAYS writes .env to ensure this file exists.
-    env_file:
-      - .env
     environment:
       - TZ=Asia/Shanghai
       - PUID=${TRIM_UID}
       - PGID=${TRIM_GID}
       - UMASK=022
-      # v2 架构：NGINX_PORT=Web 入口(须与下方 ports 的容器端口一致)，PORT=后端 API(默认 3001)。
-      # 切勿把 PORT 设为 3000，否则会与 nginx 抢端口或导致代理无法命中 Python，登录等 API 会失败。
       - NGINX_PORT=3000
       - PORT=3001
       - GITHUB_PROXY=https://gh-proxy.com/
       - SUPERUSER=admin
-      # SUPERUSER_PASSWORD is supplied via env_file (seed = 'password',
-      # service_postinst overwrites with wizard value). Do NOT add it to environment:
-      # — environment: overrides env_file and would shadow the wizard value.
+      - SUPERUSER_PASSWORD=${wizard_password:-password}
     restart: unless-stopped
