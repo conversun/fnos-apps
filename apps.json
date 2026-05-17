@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-17T08:40:12Z",
+  "generated_at": "2026-05-17T14:35:32Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -339,7 +339,7 @@
         "arm"
       ],
       "updated_at": "2026-05-17T08:39:36Z",
-      "download_count": 75,
+      "download_count": 78,
       "app_type": "docker",
       "category": "network"
     },
@@ -360,7 +360,7 @@
         "arm"
       ],
       "updated_at": "2026-05-10T08:34:16Z",
-      "download_count": 68,
+      "download_count": 69,
       "app_type": "native",
       "category": "download"
     },
@@ -571,7 +571,7 @@
         "arm"
       ],
       "updated_at": "2026-05-14T17:53:29Z",
-      "download_count": 34,
+      "download_count": 36,
       "app_type": "native",
       "category": "system"
     },
@@ -603,8 +603,8 @@
       "display_name": "Firefox",
       "description": "Firefox 浏览器的 Docker 容器版本，通过网页即可远程访问，内置中文字体支持。",
       "version": "26.03.1",
-      "fpk_version": "26.03.1-r100",
-      "release_tag": "firefox/v26.03.1-r100",
+      "fpk_version": "26.03.1-r101",
+      "release_tag": "firefox/v26.03.1-r101",
       "service_port": 5801,
       "homepage_url": "https://github.com/jlesage/docker-firefox",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/firefox/fnos/ICON_256.PNG",
@@ -612,7 +612,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-15T09:51:29Z",
+      "updated_at": "2026-05-17T14:35:16Z",
       "download_count": 458,
       "app_type": "docker",
       "category": "browser"
@@ -970,7 +970,7 @@
         "arm"
       ],
       "updated_at": "2026-04-06T08:28:05Z",
-      "download_count": 695,
+      "download_count": 697,
       "app_type": "native",
       "category": "media"
     },
@@ -1350,7 +1350,7 @@
         "arm"
       ],
       "updated_at": "2026-04-08T08:21:17Z",
-      "download_count": 579,
+      "download_count": 583,
       "app_type": "docker",
       "category": "media"
     },
@@ -1541,7 +1541,7 @@
         "arm"
       ],
       "updated_at": "2026-04-28T08:45:13Z",
-      "download_count": 61,
+      "download_count": 64,
       "app_type": "docker",
       "category": "system"
     },
@@ -1793,7 +1793,7 @@
         "arm"
       ],
       "updated_at": "2026-04-27T08:45:58Z",
-      "download_count": 78,
+      "download_count": 79,
       "app_type": "docker",
       "category": "content"
     },
@@ -1877,7 +1877,7 @@
         "arm"
       ],
       "updated_at": "2026-05-12T08:54:10Z",
-      "download_count": 116,
+      "download_count": 117,
       "app_type": "docker",
       "category": "network"
     },
@@ -1940,7 +1940,7 @@
         "arm"
       ],
       "updated_at": "2026-04-05T08:08:36Z",
-      "download_count": 390,
+      "download_count": 391,
       "app_type": "native",
       "category": "automation"
     },
@@ -2234,7 +2234,7 @@
         "arm"
       ],
       "updated_at": "2026-05-17T08:39:32Z",
-      "download_count": 26,
+      "download_count": 29,
       "app_type": "docker",
       "category": "media"
     },
@@ -2297,7 +2297,7 @@
         "arm"
       ],
       "updated_at": "2026-03-28T08:08:16Z",
-      "download_count": 224,
+      "download_count": 233,
       "app_type": "docker",
       "category": "network"
     },
