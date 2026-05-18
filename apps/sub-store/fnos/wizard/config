@@ -1,0 +1,17 @@
+[
+    {
+        "stepTitle": "Sub-Store",
+        "items": [
+            {
+                "type": "text",
+                "field": "wizard_port",
+                "label": "Web UI",
+                "initValue": "3001",
+                "rules": [
+                    { "required": true, "message": "Please enter the port number" },
+                    { "pattern": "^[0-9]+$", "message": "Port must be a number" }
+                ]
+            }
+        ]
+    }
+]

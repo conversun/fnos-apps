@@ -1,0 +1,13 @@
+services:
+  sub-store:
+    image: ${DOCKER_MIRROR}docker.io/xream/sub-store:${VERSION}
+    container_name: sub-store
+    ports:
+      - "${TRIM_SERVICE_PORT}:3001"
+    volumes:
+      - ${TRIM_PKGVAR:?}/data:/opt/app/data
+    environment:
+      - TZ=Asia/Shanghai
+      - SUB_STORE_BACKEND_API_HOST=0.0.0.0
+      - SUB_STORE_FRONTEND_HOST=0.0.0.0
+    restart: unless-stopped

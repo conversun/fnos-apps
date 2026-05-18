@@ -1,0 +1,25 @@
+{
+    "port-config": {
+        "protocol-file": "Sub-Store.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "Sub-Store",
+                "permission": {
+                    "rw": [
+                        "sub-store"
+                    ]
+                }
+            }
+        ]
+    },
+    "docker-project": {
+        "projects": [
+            {
+                "name": "sub-store",
+                "path": "docker"
+            }
+        ]
+    }
+}

@@ -1,0 +1,15 @@
+appname         = sub-store
+version         = 0.0.0
+display_name    = Sub-Store
+platform        = x86
+maintainer      = Sub-Store Org
+maintainer_url  = https://github.com/sub-store-org/Sub-Store
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = sub-store.Application
+service_port    = 3001
+checkport       = false
+desc            = 订阅链接管理工具，支持 QX、Loon、Surge、Stash、Egern 和 Shadowrocket 等多种代理客户端的订阅聚合与转换。
+source          = thirdparty
+checksum        = 
