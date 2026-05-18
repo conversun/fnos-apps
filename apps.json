@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-17T14:45:44Z",
+  "generated_at": "2026-05-18T03:56:43Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -507,7 +507,7 @@
         "arm"
       ],
       "updated_at": "2026-05-13T08:57:19Z",
-      "download_count": 32,
+      "download_count": 33,
       "app_type": "native",
       "category": "network"
     },
@@ -571,7 +571,7 @@
         "arm"
       ],
       "updated_at": "2026-05-14T17:53:29Z",
-      "download_count": 36,
+      "download_count": 37,
       "app_type": "native",
       "category": "system"
     },
@@ -970,7 +970,7 @@
         "arm"
       ],
       "updated_at": "2026-04-06T08:28:05Z",
-      "download_count": 699,
+      "download_count": 706,
       "app_type": "native",
       "category": "media"
     },
@@ -1078,6 +1078,27 @@
       "download_count": 71,
       "app_type": "docker",
       "category": "media"
+    },
+    {
+      "slug": "komari",
+      "appname": "komari",
+      "file_prefix": "komari",
+      "display_name": "Komari",
+      "description": "轻量级自托管服务器监控工具，通过 Web 界面查看服务器状态，配合轻量 agent 采集数据。",
+      "version": "1.2.0",
+      "fpk_version": "1.2.0",
+      "release_tag": "komari/v1.2.0",
+      "service_port": 25774,
+      "homepage_url": "https://github.com/komari-monitor/komari",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/komari/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-05-18T03:56:28Z",
+      "download_count": 0,
+      "app_type": "docker",
+      "category": "system"
     },
     {
       "slug": "komga",
@@ -1350,7 +1371,7 @@
         "arm"
       ],
       "updated_at": "2026-04-08T08:21:17Z",
-      "download_count": 584,
+      "download_count": 588,
       "app_type": "docker",
       "category": "media"
     },
@@ -1371,7 +1392,7 @@
         "arm"
       ],
       "updated_at": "2026-04-29T08:42:07Z",
-      "download_count": 41,
+      "download_count": 47,
       "app_type": "native",
       "category": "content"
     },
@@ -1541,7 +1562,7 @@
         "arm"
       ],
       "updated_at": "2026-04-28T08:45:13Z",
-      "download_count": 64,
+      "download_count": 66,
       "app_type": "docker",
       "category": "system"
     },
@@ -1604,7 +1625,7 @@
         "arm"
       ],
       "updated_at": "2026-04-20T08:39:54Z",
-      "download_count": 44,
+      "download_count": 46,
       "app_type": "docker",
       "category": "system"
     },
@@ -1793,7 +1814,7 @@
         "arm"
       ],
       "updated_at": "2026-04-27T08:45:58Z",
-      "download_count": 80,
+      "download_count": 81,
       "app_type": "docker",
       "category": "content"
     },
@@ -1835,7 +1856,7 @@
         "arm"
       ],
       "updated_at": "2026-04-21T08:31:28Z",
-      "download_count": 44,
+      "download_count": 45,
       "app_type": "docker",
       "category": "media"
     },
@@ -1877,7 +1898,7 @@
         "arm"
       ],
       "updated_at": "2026-05-12T08:54:10Z",
-      "download_count": 117,
+      "download_count": 118,
       "app_type": "docker",
       "category": "network"
     },
@@ -1898,7 +1919,7 @@
         "arm"
       ],
       "updated_at": "2026-04-11T08:09:33Z",
-      "download_count": 410,
+      "download_count": 411,
       "app_type": "native",
       "category": "media"
     },
@@ -2197,6 +2218,27 @@
       "category": "system"
     },
     {
+      "slug": "sub-store",
+      "appname": "sub-store",
+      "file_prefix": "sub-store",
+      "display_name": "Sub-Store",
+      "description": "订阅链接管理工具，支持 QX、Loon、Surge、Stash、Egern 和 Shadowrocket 等多种代理客户端的订阅聚合与转换。",
+      "version": "2.23.13",
+      "fpk_version": "2.23.13",
+      "release_tag": "sub-store/v2.23.13",
+      "service_port": 3001,
+      "homepage_url": "https://github.com/sub-store-org/Sub-Store",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/sub-store/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-05-18T03:56:31Z",
+      "download_count": 0,
+      "app_type": "docker",
+      "category": "system"
+    },
+    {
       "slug": "sun-panel",
       "appname": "sun-panel",
       "file_prefix": "sun-panel",
@@ -2339,7 +2381,7 @@
         "arm"
       ],
       "updated_at": "2026-05-15T08:58:59Z",
-      "download_count": 151,
+      "download_count": 155,
       "app_type": "docker",
       "category": "media"
     },
