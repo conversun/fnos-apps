@@ -78,8 +78,8 @@
       "description": "硬盘 S.M.A.R.T. 健康数据采集器，配合 Scrutiny 面板使用",
       "source_url": "https://github.com/jianyun8023/fnos-scrutiny-collector/releases",
       "github_repo": "jianyun8023/fnos-scrutiny-collector",
-      "latest_version": "1.55.0",
-      "updated_at": "2026-05-15T21:50:52Z"
+      "latest_version": "1.57.0",
+      "updated_at": "2026-05-18T21:53:58Z"
     },
     {
       "name": "fn-fan",
