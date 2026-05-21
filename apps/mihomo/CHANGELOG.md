@@ -1,5 +1,13 @@
 ## 2026-05-21
 
+- v0.3.3: 修复 TUN 启动错误 `iptables: executable file not found in $PATH`
+  - fnOS 系统使用 nftables, mihomo auto-redirect 调 iptables 失败
+  - tun.auto-redirect 默认改为 false (仅在 NAS 当 LAN 旁路网关时才需要, NAS 自身应用透明代理不需要)
+  - 需要旁路网关功能的用户可在 MetaCubeXD 手动启用 + 装 iptables-legacy
+- bump fnos-mihomo-dashboard 至 v0.3.3
+
+## 2026-05-21
+
 - v0.3.2: 修复 v0.3.1 release 因漏 commit 文件导致 CI build fail
   - 完整功能与 v0.3.1 一致 (订阅完整透传 + fnOS 强制 override dns/tun/sniffer/profile/external-controller, tun.enable 默认 true)
 - bump fnos-mihomo-dashboard 至 v0.3.2
