@@ -4,7 +4,7 @@
         "items": [
             {
                 "type": "tips",
-                "helpText": "ZoneFoundry Bridge 装好后会自动连接 wss://relay.zonefoundry.dev/ws，并在局域网内自动发现 Sonos 音箱。<br><br>填好 Token 后请到 ZoneFoundry App 检查「Bridge 状态」是否变为「在线」。"
+                "helpText": "ZoneFoundry Bridge 装好后会自动连接 wss://relay.zonefoundry.dev/ws，并在局域网内自动发现 Sonos 音箱。<br><br><b>下一步</b>：打开 fnOS 应用列表里 ZoneFoundry Bridge 的「日志」标签，找一条形如「Setup code: <code>ZF-XXXX</code>」的高亮行，把那串码输入到 iOS app → 更多 → 桥接 → 右上 <b>+ → 输入设置码</b>。桥接会在 ~5 秒内自动出现在「在线」列表里。"
             }
         ]
     }

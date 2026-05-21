@@ -1,25 +1,33 @@
 services:
   zonefoundry-bridge:
-    image: ${DOCKER_MIRROR}docker.io/zonefoundry/bridge:${VERSION}
+    # Pin :latest (not ${VERSION}) so iOS 1-tap update works: bridge can pull
+    # a new image at runtime + recreate self via docker socket. Pinning a
+    # specific version locks the user out of 1-tap updates because container
+    # restart reuses the cached image hash bound at create time.
+    image: ${DOCKER_MIRROR}docker.io/zonefoundry/bridge:latest
     container_name: zonefoundry-bridge
     network_mode: host
+    pull_policy: always
+    user: "0:0"
+    # Sam r17 2026-05-13 BUG-20260512-33: Synology DSM and some fnOS releases
+    # apply AppArmor `docker-default` profile to containers, which blocks
+    # docker.sock connect even with correct UID/GID. Disable just for this
+    # container so the 1-tap self-update path can talk to the host daemon.
+    security_opt:
+      - apparmor:unconfined
     volumes:
       - ${TRIM_PKGVAR:?}/data:/app/data
-      # 1-tap self-update: lets the bridge pull its own image from
-      # Docker Hub when the user taps "升级" in the iOS app's Bridges
-      # screen. Remove this mount + the group_add entry below if you
-      # prefer to update manually via fnOS Apps.
+      # 1-tap self-update via iOS app's "升级" button. Bridge pulls its own
+      # new image from Docker Hub + recreates self via docker engine API
+      # (BUG-20260512-34). Remove this mount if you prefer manual fnOS
+      # updates only.
       - /var/run/docker.sock:/var/run/docker.sock
-    # 飞牛 fnOS / Debian 默认 docker 组 GID = 999. 让非 root 容器
-    # 用户 (UID 10001) 也能跟 docker socket 讲话.
-    group_add:
-      - "999"
     environment:
       - TZ=Asia/Shanghai
       - ZF_RELAY_URL=wss://relay.zonefoundry.dev/ws
       - ZF_AGENT_LABEL=fnos-bridge
-      # ZF_TOKEN literal default; service_postinst seds this line in-place when
-      # wizard supplies a token (fnOS reads docker-compose.yaml via Docker API,
-      # not \`docker compose\` CLI, so env_file is ignored).
-      - ZF_TOKEN=
+      # Sam r17 2026-05-12 BUG-20260512-28: ZF_PAIR_CODE intentionally OMITTED.
+      # With no pair code set, entrypoint.sh runs the bridge-initiated setup
+      # flow: container prints a 6-letter Setup code in its log, user enters
+      # it in iOS → More → Bridges → 输入设置码, bridge auto-pairs in ~5s.
     restart: unless-stopped
