@@ -1,5 +1,11 @@
 ## 2026-05-21
 
+- v0.3.2: 修复 v0.3.1 release 因漏 commit 文件导致 CI build fail
+  - 完整功能与 v0.3.1 一致 (订阅完整透传 + fnOS 强制 override dns/tun/sniffer/profile/external-controller, tun.enable 默认 true)
+- bump fnos-mihomo-dashboard 至 v0.3.2
+
+## 2026-05-21
+
 - v0.3.1: tun.enable 默认改为 true (旁路网关安装就是为了透明代理 LAN, 默认关闭违反核心场景)
   - 安装时 setcap 已授权, 默认开 TUN 立即可用
   - 用户不需要的话可在 MetaCubeXD 关闭
