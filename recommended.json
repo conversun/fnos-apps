@@ -78,8 +78,8 @@
       "description": "硬盘 S.M.A.R.T. 健康数据采集器，配合 Scrutiny 面板使用",
       "source_url": "https://github.com/jianyun8023/fnos-scrutiny-collector/releases",
       "github_repo": "jianyun8023/fnos-scrutiny-collector",
-      "latest_version": "1.58.2",
-      "updated_at": "2026-05-20T22:07:11Z"
+      "latest_version": "1.59.0",
+      "updated_at": "2026-05-22T21:52:05Z"
     },
     {
       "name": "fn-fan",
@@ -132,8 +132,8 @@
       "description": "轻量级 BT 下载客户端，ARM64 架构专用原生包",
       "source_url": "https://github.com/sushazhi/fnos-transmission/releases",
       "github_repo": "sushazhi/fnos-transmission",
-      "latest_version": "4.1.1",
-      "updated_at": "2026-02-21T14:02:36Z"
+      "latest_version": "4.1.1.1",
+      "updated_at": "2026-05-22T14:06:22Z"
     },
     {
       "name": "xunlei-arm",
