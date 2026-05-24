@@ -33,22 +33,42 @@ CDI_SPEC="/etc/cdi/nvidia.yaml"
 service_postinst() {
     install_log "开始安装 NVIDIA 驱动..."
 
-    # --- 1. Check prerequisites ---
-    local kernel_build="/lib/modules/$(uname -r)/build"
-    if [ ! -d "$kernel_build" ]; then
-        error_exit "未找到内核头文件。请先安装: apt install linux-headers-$(uname -r)"
+    # --- 1. Ensure build prerequisites are installed ---
+    # service_postinst 以 root 运行，按需自动安装缺失的编译依赖
+    local missing_pkgs=()
+    [ -d "/lib/modules/$(uname -r)/build" ] || missing_pkgs+=("linux-headers-$(uname -r)")
+    { command -v make &>/dev/null && command -v gcc &>/dev/null; } || missing_pkgs+=("build-essential")
+    command -v dkms &>/dev/null || missing_pkgs+=("dkms")
+
+    if [ ${#missing_pkgs[@]} -gt 0 ]; then
+        install_log "自动安装缺失的编译依赖: ${missing_pkgs[*]}"
+        DEBIAN_FRONTEND=noninteractive apt-get install -y "${missing_pkgs[@]}" 2>&1 | install_log \
+            || error_exit "编译依赖安装失败: ${missing_pkgs[*]}。请检查 apt 源后重试。"
     fi
 
-    if ! command -v make &>/dev/null || ! command -v gcc &>/dev/null; then
-        error_exit "未找到编译工具。请先安装: apt install build-essential"
+    # 验证安装后的状态
+    [ -d "/lib/modules/$(uname -r)/build" ] || error_exit "内核头文件仍不可用: linux-headers-$(uname -r)"
+    command -v make &>/dev/null && command -v gcc &>/dev/null || error_exit "编译工具仍不可用 (make/gcc)"
+    command -v dkms &>/dev/null || error_exit "DKMS 仍不可用"
+
+    # --- 2. Disable conflicting fnOS official driver alternatives ---
+    # fnOS 系统可能以 alternatives 机制提供自己的 nvidia 驱动,
+    # 该路径会被 modprobe 优先于 DKMS 加载,造成版本不一致。
+    local alt_link="/lib/modules/$(uname -r)/updates/trim/alternatives/nvidia-gpu"
+    if [ -L "$alt_link" ] || [ -e "$alt_link" ]; then
+        local backup_dir="${TRIM_PKGETC}/disabled-alternatives"
+        mkdir -p "$backup_dir"
+        install_log "发现飞牛官方 nvidia 模块替代项,移至备份: $alt_link"
+        mv "$alt_link" "$backup_dir/nvidia-gpu.$(date +%s)" || install_log "WARNING: 备份替代项失败"
+        depmod -a "$(uname -r)" 2>&1 | install_log
     fi
 
-    # --- 2. Clean up any previous broken NVIDIA installation ---
+    # --- 3. Clean up any previous broken NVIDIA installation ---
     install_log "清理旧的 NVIDIA 安装残留..."
     fuser -k /dev/nvidia* 2>/dev/null || true
     rmmod nvidia_uvm nvidia_drm nvidia_modeset nvidia 2>/dev/null || true
 
-    # --- 3. Run NVIDIA driver installer ---
+    # --- 4. Run NVIDIA driver installer ---
     local run_file
     run_file=$(ls "${DRIVER_DIR}"/NVIDIA-Linux-x86_64-*.run 2>/dev/null | head -1)
     if [ -z "$run_file" ] || [ ! -f "$run_file" ]; then
@@ -74,7 +94,7 @@ service_postinst() {
     fi
     install_log "NVIDIA 驱动安装成功: $(nvidia-smi --query-gpu=driver_version --format=csv,noheader 2>/dev/null)"
 
-    # --- 4. Install nvidia-container-toolkit ---
+    # --- 5. Install nvidia-container-toolkit ---
     if [ -d "$TOOLKIT_DEB_DIR" ]; then
         install_log "安装 nvidia-container-toolkit..."
 
@@ -102,7 +122,7 @@ service_postinst() {
         install_log "未找到 nvidia-container-toolkit 安装包，跳过"
     fi
 
-    # --- 5. Configure Docker GPU runtime ---
+    # --- 6. Configure Docker GPU runtime ---
     if command -v docker &>/dev/null && command -v nvidia-ctk &>/dev/null; then
         install_log "配置 Docker GPU 支持..."
 
@@ -124,7 +144,7 @@ service_postinst() {
         install_log "Docker 未安装或 nvidia-ctk 不可用，跳过 Docker GPU 配置"
     fi
 
-    # --- 6. Configure kernel module auto-loading ---
+    # --- 7. Configure kernel module auto-loading ---
     install_log "配置内核模块自动加载..."
     cat > "$MODULES_CONF" << 'MODULES_EOF'
 nvidia
@@ -133,7 +153,7 @@ nvidia-modeset
 nvidia-drm
 MODULES_EOF
 
-    # --- 7. Enable persistence mode ---
+    # --- 8. Enable persistence mode ---
     nvidia-smi -pm 1 2>/dev/null || true
     install_log "已启用 GPU Persistence Mode"
 

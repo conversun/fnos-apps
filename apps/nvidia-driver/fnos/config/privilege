@@ -1,7 +1,5 @@
 {
     "defaults": {
-        "run-as": "package"
-    },
-    "username": "nvidia-driver",
-    "groupname": "nvidia-driver"
+        "run-as": "root"
+    }
 }

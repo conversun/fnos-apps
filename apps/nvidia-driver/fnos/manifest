@@ -10,6 +10,6 @@ install_type    = root
 ctl_stop        = false
 service_port    = 0
 checkport       = false
-desc            = NVIDIA GPU 驱动程序（R580 LTS）与容器工具包，支持 Docker GPU 直通和硬件转码。
+desc            = NVIDIA GPU 驱动程序（R580 LTS）与容器工具包，支持 Docker GPU 直通和硬件转码。安装后请重启 NAS 以确保内核模块开机自动加载、飞牛系统服务重新识别 GPU。
 source          = thirdparty
 checksum        = 
