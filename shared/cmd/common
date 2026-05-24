@@ -8,14 +8,15 @@ TEE="/usr/bin/tee -a"
 RSYNC="/bin/rsync -avh"
 TAR="/bin/tar"
 
-# 数据路径安全检查：TRIM_PKGVAR 为空时会导致数据误写入系统盘根目录
+# 数据路径安全检查：TRIM_PKGVAR 为空或指向非应用数据路径时拒绝继续
 if [ -z "${TRIM_PKGVAR:-}" ]; then
     echo "ERROR: TRIM_PKGVAR 未设置，无法确定数据存储路径" >&2
     exit 1
 fi
 case "${TRIM_PKGVAR}" in
-    /vol*) ;;
-    *) echo "ERROR: TRIM_PKGVAR=${TRIM_PKGVAR} 不在数据卷上，拒绝继续" >&2; exit 1 ;;
+    /vol*) ;;                              # 普通应用：数据卷（fnOS 数据盘挂载点）
+    /usr/local/apps/@appdata/*) ;;          # root 安装应用：fnOS 系统盘上的应用数据路径
+    *) echo "ERROR: TRIM_PKGVAR=${TRIM_PKGVAR} 不是有效的应用数据路径，拒绝继续" >&2; exit 1 ;;
 esac
 # 确保数据目录存在
 /bin/mkdir -p "${TRIM_PKGVAR}" 2>/dev/null || true
