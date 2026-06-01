@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-31T08:58:45Z",
+  "generated_at": "2026-06-01T09:44:11Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -339,7 +339,7 @@
         "arm"
       ],
       "updated_at": "2026-05-28T09:07:05Z",
-      "download_count": 108,
+      "download_count": 112,
       "app_type": "docker",
       "category": "network"
     },
@@ -412,9 +412,9 @@
       "file_prefix": "cowagent",
       "display_name": "CowAgent",
       "description": "AI 超级助手，支持微信/飞书/钉钉/QQ/Web 等多平台接入，基于大语言模型的智能对话。",
-      "version": "2.0.9",
-      "fpk_version": "2.0.9-r1",
-      "release_tag": "cowagent/v2.0.9-r1",
+      "version": "2.1.0",
+      "fpk_version": "2.1.0",
+      "release_tag": "cowagent/v2.1.0",
       "service_port": 9899,
       "homepage_url": "https://github.com/zhayujie/chatgpt-on-wechat",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/cowagent/fnos/ICON_256.PNG",
@@ -422,7 +422,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-24T18:54:46Z",
+      "updated_at": "2026-06-01T09:43:32Z",
       "download_count": 190,
       "app_type": "docker",
       "category": "ai"
@@ -433,9 +433,9 @@
       "file_prefix": "ddns-go",
       "display_name": "DDNS-GO",
       "description": "DDNS-GO 是一个简单好用的 DDNS 工具，支持阿里云、腾讯云、Cloudflare 等多个 DNS 服务商。",
-      "version": "6.17.0",
-      "fpk_version": "6.17.0-r1",
-      "release_tag": "ddns-go/v6.17.0-r1",
+      "version": "6.17.1",
+      "fpk_version": "6.17.1",
+      "release_tag": "ddns-go/v6.17.1",
       "service_port": 9876,
       "homepage_url": "https://github.com/jeessy2/ddns-go",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ddns-go/fnos/ICON_256.PNG",
@@ -443,7 +443,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-24T18:55:34Z",
+      "updated_at": "2026-06-01T09:43:36Z",
       "download_count": 29,
       "app_type": "native",
       "category": "system"
@@ -538,9 +538,9 @@
       "file_prefix": "ente",
       "display_name": "Ente",
       "description": "端到端加密照片备份和存储服务，Google Photos 的隐私替代方案。",
-      "version": "latest-2026.05.31",
-      "fpk_version": "latest-2026.05.31",
-      "release_tag": "ente/vlatest-2026.05.31",
+      "version": "latest-2026.06.01",
+      "fpk_version": "latest-2026.06.01",
+      "release_tag": "ente/vlatest-2026.06.01",
       "service_port": 8510,
       "homepage_url": "https://ente.io",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ente/fnos/ICON_256.PNG",
@@ -548,7 +548,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-31T08:58:21Z",
+      "updated_at": "2026-06-01T09:43:36Z",
       "download_count": 60,
       "app_type": "docker",
       "category": "media",
@@ -560,9 +560,9 @@
       "file_prefix": "ezbookkeeping",
       "display_name": "EZBookkeeping",
       "description": "轻量级个人记账应用，支持多币种、多账户和预算管理",
-      "version": "1.5.0",
-      "fpk_version": "1.5.0-r3",
-      "release_tag": "ezbookkeeping/v1.5.0-r3",
+      "version": "1.5.1",
+      "fpk_version": "1.5.1",
+      "release_tag": "ezbookkeeping/v1.5.1",
       "service_port": 8580,
       "homepage_url": "https://github.com/mayswind/ezbookkeeping",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ezbookkeeping/fnos/ICON_256.PNG",
@@ -570,7 +570,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-24T18:55:17Z",
+      "updated_at": "2026-06-01T09:43:46Z",
       "download_count": 46,
       "app_type": "native",
       "category": "system"
@@ -676,7 +676,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:40Z",
-      "download_count": 40,
+      "download_count": 41,
       "app_type": "docker",
       "category": "content"
     },
@@ -802,7 +802,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:14Z",
-      "download_count": 41,
+      "download_count": 43,
       "app_type": "native",
       "category": "system"
     },
@@ -938,9 +938,9 @@
       "file_prefix": "jackett",
       "display_name": "Jackett",
       "description": "Torrent 索引器代理，为 Sonarr/Radarr 等工具提供统一的搜索接口。",
-      "version": "0.24.1985",
-      "fpk_version": "0.24.1985",
-      "release_tag": "jackett/v0.24.1985",
+      "version": "0.24.1996",
+      "fpk_version": "0.24.1996",
+      "release_tag": "jackett/v0.24.1996",
       "service_port": 9117,
       "homepage_url": "https://github.com/Jackett/Jackett",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/jackett/fnos/ICON_256.PNG",
@@ -948,7 +948,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-31T08:58:31Z",
+      "updated_at": "2026-06-01T09:43:48Z",
       "download_count": 111,
       "app_type": "native",
       "category": "automation"
@@ -1064,9 +1064,9 @@
       "file_prefix": "koel",
       "display_name": "Koel",
       "description": "个人音乐流媒体服务器,支持在线播放本地音乐库。默认账号 admin@koel.dev / KoelIsCool",
-      "version": "9.5.0",
-      "fpk_version": "9.5.0",
-      "release_tag": "koel/v9.5.0",
+      "version": "9.6.0",
+      "fpk_version": "9.6.0",
+      "release_tag": "koel/v9.6.0",
       "service_port": 8060,
       "homepage_url": "https://github.com/koel/koel",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/koel/fnos/ICON_256.PNG",
@@ -1074,7 +1074,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-30T08:45:23Z",
+      "updated_at": "2026-06-01T09:43:32Z",
       "download_count": 71,
       "app_type": "docker",
       "category": "media"
@@ -1148,9 +1148,9 @@
       "file_prefix": "librechat",
       "display_name": "LibreChat",
       "description": "AI 聊天界面，支持 OpenAI、Anthropic 等多种 AI 模型。",
-      "version": "0.8.5",
-      "fpk_version": "0.8.5-r1",
-      "release_tag": "librechat/v0.8.5-r1",
+      "version": "0.8.6",
+      "fpk_version": "0.8.6",
+      "release_tag": "librechat/v0.8.6",
       "service_port": 3085,
       "homepage_url": "https://librechat.ai",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/librechat/fnos/ICON_256.PNG",
@@ -1158,7 +1158,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-24T18:55:32Z",
+      "updated_at": "2026-06-01T09:43:35Z",
       "download_count": 72,
       "app_type": "docker",
       "category": "ai",
@@ -1381,9 +1381,9 @@
       "file_prefix": "memos",
       "display_name": "Memos",
       "description": "轻量级自托管笔记服务,支持Markdown,适合个人知识管理和日常记录。",
-      "version": "0.28.0",
-      "fpk_version": "0.28.0-r1",
-      "release_tag": "memos/v0.28.0-r1",
+      "version": "0.29.0",
+      "fpk_version": "0.29.0",
+      "release_tag": "memos/v0.29.0",
       "service_port": 5230,
       "homepage_url": "https://www.usememos.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/memos/fnos/ICON_256.PNG",
@@ -1391,7 +1391,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-24T18:54:32Z",
+      "updated_at": "2026-06-01T09:43:45Z",
       "download_count": 53,
       "app_type": "native",
       "category": "content"
@@ -1413,7 +1413,7 @@
         "arm"
       ],
       "updated_at": "2026-05-21T05:36:34Z",
-      "download_count": 92,
+      "download_count": 106,
       "app_type": "native",
       "category": "media"
     },
@@ -1423,9 +1423,9 @@
       "file_prefix": "mihomo",
       "display_name": "Mihomo",
       "description": "Clash.Meta 多协议代理 + MetaCubeXD 面板 (管理:9097 代理:7890)",
-      "version": "1.19.25",
-      "fpk_version": "1.19.25-r17",
-      "release_tag": "mihomo/v1.19.25-r17",
+      "version": "1.19.26",
+      "fpk_version": "1.19.26",
+      "release_tag": "mihomo/v1.19.26",
       "service_port": 9097,
       "homepage_url": "https://github.com/MetaCubeX/mihomo",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/mihomo/fnos/ICON_256.PNG",
@@ -1433,8 +1433,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-24T18:55:23Z",
-      "download_count": 141,
+      "updated_at": "2026-06-01T09:43:46Z",
+      "download_count": 152,
       "app_type": "native",
       "category": "network"
     },
@@ -1529,9 +1529,9 @@
       "file_prefix": "nanobot",
       "display_name": "Nanobot",
       "description": "超轻量 AI 智能体框架，99% 更少代码量，支持多模型多通道，Web 管理面板，默认密码 admin/nanobot",
-      "version": "0.2.0",
-      "fpk_version": "0.2.0-r1",
-      "release_tag": "nanobot/v0.2.0-r1",
+      "version": "0.2.1",
+      "fpk_version": "0.2.1",
+      "release_tag": "nanobot/v0.2.1",
       "service_port": 18780,
       "homepage_url": "https://github.com/HKUDS/nanobot",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/nanobot/fnos/ICON_256.PNG",
@@ -1539,7 +1539,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-24T18:54:38Z",
+      "updated_at": "2026-06-01T09:43:41Z",
       "download_count": 476,
       "app_type": "docker",
       "category": "ai"
@@ -1656,9 +1656,9 @@
       "file_prefix": "nginx-proxy-manager",
       "display_name": "Nginx Proxy Manager",
       "description": "图形化反向代理管理工具，支持 SSL 证书自动申请和续期。",
-      "version": "2.14.0",
-      "fpk_version": "2.14.0-r1",
-      "release_tag": "nginx-proxy-manager/v2.14.0-r1",
+      "version": "2.15.0",
+      "fpk_version": "2.15.0",
+      "release_tag": "nginx-proxy-manager/v2.15.0",
       "service_port": 81,
       "homepage_url": "https://github.com/NginxProxyManager/nginx-proxy-manager",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/nginx-proxy-manager/fnos/ICON_256.PNG",
@@ -1666,7 +1666,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-24T18:54:25Z",
+      "updated_at": "2026-06-01T09:43:41Z",
       "download_count": 53,
       "app_type": "docker",
       "category": "system"
@@ -1709,7 +1709,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:49Z",
-      "download_count": 40,
+      "download_count": 41,
       "app_type": "docker",
       "category": "system"
     },
@@ -2171,7 +2171,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:46Z",
-      "download_count": 71,
+      "download_count": 72,
       "app_type": "docker",
       "category": "system"
     },
@@ -2308,9 +2308,9 @@
       "file_prefix": "sub-store",
       "display_name": "Sub-Store",
       "description": "订阅链接管理工具，支持 QX、Loon、Surge、Stash、Egern 和 Shadowrocket 等多种代理客户端的订阅聚合与转换。",
-      "version": "2.23.30",
-      "fpk_version": "2.23.30",
-      "release_tag": "sub-store/v2.23.30",
+      "version": "2.23.34",
+      "fpk_version": "2.23.34",
+      "release_tag": "sub-store/v2.23.34",
       "service_port": 3001,
       "homepage_url": "https://github.com/sub-store-org/Sub-Store",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/sub-store/fnos/ICON_256.PNG",
@@ -2318,7 +2318,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-31T08:58:26Z",
+      "updated_at": "2026-06-01T09:43:37Z",
       "download_count": 36,
       "app_type": "docker",
       "category": "system"
@@ -2361,7 +2361,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:59Z",
-      "download_count": 34,
+      "download_count": 37,
       "app_type": "docker",
       "category": "media"
     },
@@ -2382,7 +2382,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:38Z",
-      "download_count": 28,
+      "download_count": 29,
       "app_type": "docker",
       "category": "system"
     },
@@ -2424,7 +2424,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:40Z",
-      "download_count": 264,
+      "download_count": 272,
       "app_type": "docker",
       "category": "network"
     },
@@ -2477,8 +2477,8 @@
       "display_name": "Transmission",
       "description": "Transmission 是一个轻量级的 BitTorrent 客户端，以简洁高效著称，支持 Web 远程管理。",
       "version": "4.1.1",
-      "fpk_version": "4.1.1-r1-ls345",
-      "release_tag": "transmission/v4.1.1-r1-ls345",
+      "fpk_version": "4.1.1-r1-ls346",
+      "release_tag": "transmission/v4.1.1-r1-ls346",
       "service_port": 9091,
       "homepage_url": "https://transmissionbt.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/transmission/fnos/ICON_256.PNG",
@@ -2486,7 +2486,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-27T09:02:15Z",
+      "updated_at": "2026-06-01T09:43:46Z",
       "download_count": 60,
       "app_type": "docker",
       "category": "download"
