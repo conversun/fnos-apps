@@ -132,8 +132,8 @@
       "description": "轻量级 BT 下载客户端，ARM64 架构专用原生包",
       "source_url": "https://github.com/sushazhi/fnos-transmission/releases",
       "github_repo": "sushazhi/fnos-transmission",
-      "latest_version": "4.1.1.1",
-      "updated_at": "2026-05-22T14:06:22Z"
+      "latest_version": "4.1.2",
+      "updated_at": "2026-06-04T12:25:18Z"
     },
     {
       "name": "xunlei-arm",
