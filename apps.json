@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-12T09:19:02Z",
+  "generated_at": "2026-06-13T09:00:26Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -538,9 +538,9 @@
       "file_prefix": "ente",
       "display_name": "Ente",
       "description": "端到端加密照片备份和存储服务，Google Photos 的隐私替代方案。",
-      "version": "latest-2026.06.12",
-      "fpk_version": "latest-2026.06.12",
-      "release_tag": "ente/vlatest-2026.06.12",
+      "version": "latest-2026.06.13",
+      "fpk_version": "latest-2026.06.13",
+      "release_tag": "ente/vlatest-2026.06.13",
       "service_port": 8510,
       "homepage_url": "https://ente.io",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ente/fnos/ICON_256.PNG",
@@ -548,7 +548,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-06-12T09:18:22Z",
+      "updated_at": "2026-06-13T08:59:56Z",
       "download_count": 60,
       "app_type": "docker",
       "category": "media",
@@ -581,9 +581,9 @@
       "file_prefix": "filebrowser",
       "display_name": "FileBrowser",
       "description": "轻量级网页文件管理器，支持文件上传、下载和分享",
-      "version": "2.63.14",
-      "fpk_version": "2.63.14",
-      "release_tag": "filebrowser/v2.63.14",
+      "version": "2.63.15",
+      "fpk_version": "2.63.15",
+      "release_tag": "filebrowser/v2.63.15",
       "service_port": 8082,
       "homepage_url": "https://filebrowser.org",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/filebrowser/fnos/ICON_256.PNG",
@@ -591,7 +591,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-06-08T09:28:51Z",
+      "updated_at": "2026-06-13T08:59:57Z",
       "download_count": 162,
       "app_type": "native",
       "category": "download"
@@ -634,7 +634,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:29Z",
-      "download_count": 4097,
+      "download_count": 4149,
       "app_type": "native",
       "category": "store"
     },
@@ -833,9 +833,9 @@
       "file_prefix": "homarr",
       "display_name": "Homarr",
       "description": "可视化应用仪表盘，深度集成 *arr 套件状态展示",
-      "version": "1.64.0",
-      "fpk_version": "1.64.0",
-      "release_tag": "homarr/v1.64.0",
+      "version": "1.65.0",
+      "fpk_version": "1.65.0",
+      "release_tag": "homarr/v1.65.0",
       "service_port": 7575,
       "homepage_url": "https://homarr.dev",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/homarr/fnos/ICON_256.PNG",
@@ -843,7 +843,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-06-06T08:49:42Z",
+      "updated_at": "2026-06-13T09:00:01Z",
       "download_count": 45,
       "app_type": "docker",
       "category": "system"
@@ -854,9 +854,9 @@
       "file_prefix": "homeassistant",
       "display_name": "Home Assistant",
       "description": "开源智能家居中枢平台，支持数千种智能设备的自动化控制。",
-      "version": "2026.6.2",
-      "fpk_version": "2026.6.2",
-      "release_tag": "homeassistant/v2026.6.2",
+      "version": "2026.6.3",
+      "fpk_version": "2026.6.3",
+      "release_tag": "homeassistant/v2026.6.3",
       "service_port": 8123,
       "homepage_url": "https://www.home-assistant.io",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/homeassistant/fnos/ICON_256.PNG",
@@ -864,7 +864,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-06-10T09:08:16Z",
+      "updated_at": "2026-06-13T09:00:09Z",
       "download_count": 164,
       "app_type": "docker",
       "category": "system"
@@ -938,9 +938,9 @@
       "file_prefix": "jackett",
       "display_name": "Jackett",
       "description": "Torrent 索引器代理，为 Sonarr/Radarr 等工具提供统一的搜索接口。",
-      "version": "0.24.2051",
-      "fpk_version": "0.24.2051",
-      "release_tag": "jackett/v0.24.2051",
+      "version": "0.24.2057",
+      "fpk_version": "0.24.2057",
+      "release_tag": "jackett/v0.24.2057",
       "service_port": 9117,
       "homepage_url": "https://github.com/Jackett/Jackett",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/jackett/fnos/ICON_256.PNG",
@@ -948,7 +948,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-06-12T09:18:30Z",
+      "updated_at": "2026-06-13T09:00:08Z",
       "download_count": 111,
       "app_type": "native",
       "category": "automation"
@@ -1012,7 +1012,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:21Z",
-      "download_count": 31,
+      "download_count": 32,
       "app_type": "docker",
       "category": "media"
     },
@@ -1033,7 +1033,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:27Z",
-      "download_count": 132,
+      "download_count": 133,
       "app_type": "docker",
       "category": "media"
     },
@@ -1413,7 +1413,7 @@
         "arm"
       ],
       "updated_at": "2026-05-21T05:36:34Z",
-      "download_count": 173,
+      "download_count": 176,
       "app_type": "native",
       "category": "media"
     },
@@ -1434,7 +1434,7 @@
         "arm"
       ],
       "updated_at": "2026-06-06T08:49:44Z",
-      "download_count": 482,
+      "download_count": 500,
       "app_type": "native",
       "category": "network"
     },
@@ -1571,9 +1571,9 @@
       "file_prefix": "netbird",
       "display_name": "NetBird",
       "description": "零信任 VPN 管理平台，提供简单的私有网络组建。",
-      "version": "0.72.3",
-      "fpk_version": "0.72.3",
-      "release_tag": "netbird/v0.72.3",
+      "version": "0.72.4",
+      "fpk_version": "0.72.4",
+      "release_tag": "netbird/v0.72.4",
       "service_port": 8820,
       "homepage_url": "https://netbird.io",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/netbird/fnos/ICON_256.PNG",
@@ -1581,7 +1581,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-06-11T09:22:57Z",
+      "updated_at": "2026-06-13T09:00:01Z",
       "download_count": 39,
       "app_type": "docker",
       "category": "network",
@@ -1709,7 +1709,7 @@
         "arm"
       ],
       "updated_at": "2026-06-10T09:08:19Z",
-      "download_count": 48,
+      "download_count": 50,
       "app_type": "docker",
       "category": "system"
     },
@@ -1761,9 +1761,9 @@
       "file_prefix": "ollama",
       "display_name": "Ollama",
       "description": "本地大语言模型运行引擎，支持 Llama、Mistral、Gemma 等开源模型。",
-      "version": "0.30.7",
-      "fpk_version": "0.30.7",
-      "release_tag": "ollama/v0.30.7",
+      "version": "0.30.8",
+      "fpk_version": "0.30.8",
+      "release_tag": "ollama/v0.30.8",
       "service_port": 11434,
       "homepage_url": "https://github.com/ollama/ollama",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ollama/fnos/ICON_256.PNG",
@@ -1771,7 +1771,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-06-09T09:01:55Z",
+      "updated_at": "2026-06-13T09:00:04Z",
       "download_count": 159,
       "app_type": "docker",
       "category": "ai"
@@ -1961,7 +1961,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:34Z",
-      "download_count": 743,
+      "download_count": 745,
       "app_type": "native",
       "category": "media"
     },
@@ -1982,7 +1982,7 @@
         "arm"
       ],
       "updated_at": "2026-05-29T09:02:57Z",
-      "download_count": 29,
+      "download_count": 31,
       "app_type": "native",
       "category": "system"
     },
@@ -2045,7 +2045,7 @@
         "arm"
       ],
       "updated_at": "2026-05-26T09:03:09Z",
-      "download_count": 440,
+      "download_count": 451,
       "app_type": "native",
       "category": "download"
     },
@@ -2213,7 +2213,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:41Z",
-      "download_count": 22,
+      "download_count": 25,
       "app_type": "docker",
       "category": "network",
       "post_install_note": "SakuraFrp 容器使用 host 网络模式运行。首次安装后，请通过远程管理面板创建并启动隧道。"
@@ -2403,7 +2403,7 @@
         "arm"
       ],
       "updated_at": "2026-05-14T12:57:56Z",
-      "download_count": 113,
+      "download_count": 115,
       "app_type": "native",
       "category": "download"
     },
@@ -2466,7 +2466,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:15Z",
-      "download_count": 198,
+      "download_count": 200,
       "app_type": "docker",
       "category": "media"
     },
