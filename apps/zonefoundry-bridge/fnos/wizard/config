@@ -8,13 +8,7 @@
             },
             {
                 "type": "tips",
-                "helpText": "请先在 ZoneFoundry App / 网页 (zonefoundry.dev) 注册账号，进入「设置 → Bridge Token」复制 token 后填入下方。留空也可，后续可手动编辑 docker/.env。"
-            },
-            {
-                "type": "text",
-                "field": "wizard_token",
-                "label": "ZoneFoundry Token",
-                "placeholder": "zf-xxxxxxxxxxxxxxxx"
+                "helpText": "<b>无需先打开 iOS app</b>：直接点 <b>下一步 → 启动</b>。容器首次启动会在日志里打印一个 6 位 <b>Setup code</b>（例如 <code>ZF-LMNO</code>）。<br><br>之后打开 ZoneFoundry iOS app → 更多 → 桥接 → 右上 <b>+ → 输入设置码</b>，把那串码输入即可。桥接会在 ~5 秒内自动配对完成，凭证持久化到 <code>${TRIM_PKGVAR}/data</code>，重启 fnOS 后无需重新输入。"
             }
         ]
     }
