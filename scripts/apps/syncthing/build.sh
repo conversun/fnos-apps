@@ -9,7 +9,7 @@ ZIP_ARCH="${ZIP_ARCH:-${DEB_ARCH:-amd64}}"
 echo "==> Building Syncthing ${VERSION} for ${ZIP_ARCH}"
 
 DOWNLOAD_URL="https://github.com/syncthing/syncthing/releases/download/v${VERSION}/syncthing-linux-${ZIP_ARCH}-v${VERSION}.tar.gz"
-curl -fL -o syncthing.tar.gz "$DOWNLOAD_URL"
+curl -fL --retry 3 --retry-delay 2 --retry-all-errors -o syncthing.tar.gz "$DOWNLOAD_URL"
 
 tar -xzf syncthing.tar.gz
 
