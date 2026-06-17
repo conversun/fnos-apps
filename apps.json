@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-17T05:48:23Z",
+  "generated_at": "2026-06-17T06:01:58Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -2392,9 +2392,9 @@
       "file_prefix": "syncthing",
       "display_name": "Syncthing",
       "description": "开源的文件同步工具，支持多设备间安全同步",
-      "version": "2.1.0",
-      "fpk_version": "2.1.0-r1",
-      "release_tag": "syncthing/v2.1.0-r1",
+      "version": "2.1.1",
+      "fpk_version": "2.1.1",
+      "release_tag": "syncthing/v2.1.1",
       "service_port": 8384,
       "homepage_url": "https://syncthing.net",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/syncthing/fnos/ICON_256.PNG",
@@ -2402,7 +2402,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-14T12:57:56Z",
+      "updated_at": "2026-06-17T06:01:41Z",
       "download_count": 119,
       "app_type": "native",
       "category": "download"
