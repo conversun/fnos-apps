@@ -1,6 +1,6 @@
 services:
   zonefoundry-bridge:
-    image: ${DOCKER_MIRROR}docker.io/zonefoundry/bridge:${VERSION}
+    image: ${DOCKER_MIRROR}docker.io/zonefoundry/bridge:v${VERSION}
     container_name: zonefoundry-bridge
     network_mode: host
     volumes:

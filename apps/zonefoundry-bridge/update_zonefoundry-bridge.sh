@@ -9,7 +9,7 @@ APP_NAME="zonefoundry-bridge"
 APP_DISPLAY_NAME="ZoneFoundry Bridge"
 APP_VERSION_VAR="ZONEFOUNDRY_BRIDGE_VERSION"
 APP_VERSION="${ZONEFOUNDRY_BRIDGE_VERSION:-latest}"
-APP_DEPS=(curl)
+APP_DEPS=(curl jq)
 APP_FPK_PREFIX="zonefoundry-bridge"
 APP_HELP_VERSION_EXAMPLE="0.1.14"
 
@@ -28,8 +28,10 @@ app_get_latest_version() {
 
     if [ "$APP_VERSION" = "latest" ]; then
         APP_VERSION=$(curl -sL "https://hub.docker.com/v2/repositories/zonefoundry/bridge/tags/?page_size=100" | \
-          grep -oE '"name":"[0-9]+\.[0-9]+\.[0-9]+"' | head -n1 | cut -d'"' -f4)
+          jq -r '.results[].name' | grep -E '^v?[0-9]+\.[0-9]+\.[0-9]+$' | sed 's/^v//' | sort -V | tail -1)
     fi
+    # Normalize a manually-supplied "v0.3.38" to bare "0.3.38" (auto-detect is already bare).
+    APP_VERSION="${APP_VERSION#v}"
 
     [ -z "$APP_VERSION" ] && error "无法获取版本信息，请手动指定: $0 0.1.14"
     info "目标版本: $APP_VERSION"
