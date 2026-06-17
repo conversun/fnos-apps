@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-16T09:43:21Z",
+  "generated_at": "2026-06-17T05:48:23Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -23,7 +23,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:44Z",
-      "download_count": 95,
+      "download_count": 97,
       "app_type": "native",
       "category": "system"
     },
@@ -234,7 +234,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:28Z",
-      "download_count": 29,
+      "download_count": 33,
       "app_type": "native",
       "category": "media"
     },
@@ -507,7 +507,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:27Z",
-      "download_count": 57,
+      "download_count": 60,
       "app_type": "native",
       "category": "network"
     },
@@ -634,7 +634,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:29Z",
-      "download_count": 4358,
+      "download_count": 4395,
       "app_type": "native",
       "category": "store"
     },
@@ -697,7 +697,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:21Z",
-      "download_count": 54,
+      "download_count": 56,
       "app_type": "docker",
       "category": "media"
     },
@@ -1096,7 +1096,7 @@
         "arm"
       ],
       "updated_at": "2026-06-11T09:22:53Z",
-      "download_count": 10,
+      "download_count": 12,
       "app_type": "docker",
       "category": "system"
     },
@@ -1265,7 +1265,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:45Z",
-      "download_count": 29,
+      "download_count": 42,
       "app_type": "native",
       "category": "system"
     },
@@ -1413,7 +1413,7 @@
         "arm"
       ],
       "updated_at": "2026-05-21T05:36:34Z",
-      "download_count": 192,
+      "download_count": 193,
       "app_type": "native",
       "category": "media"
     },
@@ -1434,7 +1434,7 @@
         "arm"
       ],
       "updated_at": "2026-06-06T08:49:44Z",
-      "download_count": 542,
+      "download_count": 554,
       "app_type": "native",
       "category": "network"
     },
@@ -1688,7 +1688,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:07Z",
-      "download_count": 55,
+      "download_count": 80,
       "app_type": "native",
       "category": "system"
     },
@@ -1961,7 +1961,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:34Z",
-      "download_count": 761,
+      "download_count": 765,
       "app_type": "native",
       "category": "media"
     },
@@ -2256,7 +2256,7 @@
         "arm"
       ],
       "updated_at": "2026-06-07T08:59:30Z",
-      "download_count": 75,
+      "download_count": 77,
       "app_type": "native",
       "category": "network"
     },
@@ -2319,7 +2319,7 @@
         "arm"
       ],
       "updated_at": "2026-06-16T09:42:54Z",
-      "download_count": 36,
+      "download_count": 42,
       "app_type": "docker",
       "category": "system"
     },
@@ -2361,7 +2361,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:59Z",
-      "download_count": 44,
+      "download_count": 46,
       "app_type": "docker",
       "category": "media"
     },
@@ -2529,7 +2529,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:45Z",
-      "download_count": 89,
+      "download_count": 92,
       "app_type": "docker",
       "category": "system"
     },
@@ -2634,7 +2634,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:52Z",
-      "download_count": 14,
+      "download_count": 16,
       "app_type": "native",
       "category": "system"
     },
@@ -2665,9 +2665,9 @@
       "file_prefix": "zonefoundry-bridge",
       "display_name": "ZoneFoundry Bridge",
       "description": "ZoneFoundry 自建桥接，连接家中 Sonos 与 ZoneFoundry 云端中继，远程通过语音 / IM / 网页操控 Sonos 音箱。",
-      "version": "0.1.9",
-      "fpk_version": "0.1.9-r102",
-      "release_tag": "zonefoundry-bridge/v0.1.9-r102",
+      "version": "0.3.39",
+      "fpk_version": "0.3.39",
+      "release_tag": "zonefoundry-bridge/v0.3.39",
       "service_port": 18790,
       "homepage_url": "https://zonefoundry.dev",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/zonefoundry-bridge/fnos/ICON_256.PNG",
@@ -2675,7 +2675,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-24T18:55:37Z",
+      "updated_at": "2026-06-17T05:48:08Z",
       "download_count": 11,
       "app_type": "docker",
       "category": "automation",
