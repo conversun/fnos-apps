@@ -1,6 +1,6 @@
 services:
   immich-server:
-    image: ghcr.io/immich-app/immich-server:${VERSION}
+    image: ghcr.io/immich-app/immich-server:release
     container_name: immich
     ports:
       - "${TRIM_SERVICE_PORT}:2283"
@@ -23,7 +23,7 @@ services:
     restart: unless-stopped
 
   immich-machine-learning:
-    image: ghcr.io/immich-app/immich-machine-learning:${VERSION}
+    image: ghcr.io/immich-app/immich-machine-learning:release
     container_name: immich-ml
     volumes:
       - immich-model-cache:/cache

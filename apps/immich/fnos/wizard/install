@@ -5,6 +5,10 @@
             {
                 "type": "tips",
                 "helpText": "Immich 是自托管的照片和视频备份方案，支持人脸识别、智能搜索和时间线浏览。<br><br>应用包含 4 个服务容器（Web 服务、机器学习、PostgreSQL、Redis），首次启动需要较长时间拉取镜像。"
+            },
+            {
+                "type": "tips",
+                "helpText": "<b>⚠️ 镜像拉取说明（中国大陆用户注意）：</b><br>Immich 需拉取 4 个镜像，其中 3 个托管在 <b>GitHub Container Registry (ghcr.io)</b>：<br>  • <code>ghcr.io/immich-app/immich-server:release</code><br>  • <code>ghcr.io/immich-app/immich-machine-learning:release</code><br>  • <code>ghcr.io/immich-app/postgres</code><br>  • <code>valkey/valkey</code>（Docker Hub）<br><br>Docker「镜像加速器」仅对 Docker Hub（docker.io）生效，<b>对 ghcr.io ⛔ 不生效</b>。<br>如拉取失败（manifest unknown / 拉取超时），请确保 NAS 能直连 ghcr.io（可配置网络代理），或在终端执行 <code>docker pull ghcr.io/immich-app/immich-server:release</code> 测试连通性。参考 issue <a href=\"https://github.com/conversun/fnos-apps/issues/175\">#175</a>。"
             }
         ]
     },

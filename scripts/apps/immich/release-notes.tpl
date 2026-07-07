@@ -1,6 +1,6 @@
 自动构建的 fnOS 安装包
 
-- 基于 [Immich ${VERSION}](https://github.com/immich-app/immich/releases/tag/v${VERSION})
+- 基于 [Immich](https://github.com/immich-app/immich/releases)（跟踪滚动 `:release` 标签）
 - 平台: fnOS
 - 默认端口: ${DEFAULT_PORT}${REVISION_NOTE}
 - 包含服务: immich-server, machine-learning, PostgreSQL (pgvector), Redis
