@@ -1,0 +1,15 @@
+services:
+  songloft:
+    image: ${DOCKER_MIRROR}docker.io/songloft/songloft:${VERSION}
+    container_name: songloft
+    ports:
+      - "${TRIM_SERVICE_PORT}:58091"
+    volumes:
+      - ${TRIM_PKGVAR:?}/music:/app/music
+      - ${TRIM_PKGVAR:?}/data:/app/data
+    environment:
+      - TZ=Asia/Shanghai
+      - LISTEN_PORT=58091
+      - ADMIN_USERNAME=${wizard_admin_username:-admin}
+      - ADMIN_PASSWORD=${wizard_admin_password:-admin}
+    restart: unless-stopped

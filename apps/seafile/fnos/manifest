@@ -1,0 +1,14 @@
+appname         = seafile
+version         = 0.0.0
+display_name    = Seafile
+platform        = x86
+maintainer      = Seafile Ltd.
+maintainer_url  = https://github.com/haiwen/seafile-docker
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = seafile.Application
+service_port    = 8002
+desc            = 开源文件同步与共享平台
+source          = thirdparty
+checksum        = 

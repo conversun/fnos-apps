@@ -1,0 +1,23 @@
+[
+    {
+        "stepTitle": "安装说明",
+        "items": [
+            {
+                "type": "tips",
+                "helpText": "Mail Archiver 是用于归档、搜索和导出 IMAP / Microsoft 365 邮箱的系统。应用包含 2 个容器：Mail Archiver 与 PostgreSQL。首次启动会拉取镜像并初始化数据库，可能需要数分钟。"
+            },
+            {
+                "type": "tips",
+                "helpText": "<b>镜像说明：</b><br>应用镜像 <code>s1t5/mailarchiver</code> 与数据库镜像 <code>postgres:17-alpine</code> 均来自 Docker Hub，支持 amd64 与 arm64。"
+            },
+            {
+                "type": "tips",
+                "helpText": "请在上一步设置管理员密码和数据库密码。fnOS 会在创建容器前将向导变量直接替换到 docker-compose 环境变量中；本应用不会使用 .env / env_file。"
+            },
+            {
+                "type": "tips",
+                "helpText": "Mail Archiver 自身只提供 HTTP。若通过公网访问，请在反向代理中配置 HTTPS。"
+            }
+        ]
+    }
+]

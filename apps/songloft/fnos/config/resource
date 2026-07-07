@@ -1,0 +1,25 @@
+{
+    "port-config": {
+        "protocol-file": "Songloft.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "Songloft",
+                "permission": {
+                    "rw": [
+                        "songloft"
+                    ]
+                }
+            }
+        ]
+    },
+    "docker-project": {
+        "projects": [
+            {
+                "name": "songloft",
+                "path": "docker"
+            }
+        ]
+    }
+}

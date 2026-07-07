@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "docsify.Application":
+        {
+            "title": "Docsify",
+            "desc": "Docsify",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "4001",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

@@ -1,0 +1,83 @@
+[
+    {
+        "stepTitle": "Mail Archiver",
+        "items": [
+            {
+                "type": "text",
+                "field": "wizard_port",
+                "label": "Web UI 端口",
+                "initValue": "5008",
+                "rules": [
+                    { "required": true, "message": "请输入端口号" },
+                    { "pattern": "^[0-9]+$", "message": "端口必须是数字" }
+                ]
+            },
+            {
+                "type": "text",
+                "field": "wizard_admin_username",
+                "label": "管理员用户名",
+                "initValue": "admin",
+                "rules": [
+                    { "required": true, "message": "请输入管理员用户名" }
+                ]
+            },
+            {
+                "type": "password",
+                "field": "wizard_admin_password",
+                "label": "管理员密码",
+                "initValue": "mailarchiver-admin-password",
+                "rules": [
+                    { "required": true, "message": "请输入管理员密码" }
+                ]
+            },
+            {
+                "type": "password",
+                "field": "wizard_db_password",
+                "label": "PostgreSQL 数据库密码",
+                "initValue": "mailarchiver-db-password",
+                "rules": [
+                    { "required": true, "message": "请输入数据库密码" }
+                ]
+            },
+            {
+                "type": "text",
+                "field": "wizard_timezone",
+                "label": "显示时区",
+                "initValue": "Asia/Shanghai",
+                "rules": [
+                    { "required": true, "message": "请输入 IANA 时区名称" }
+                ]
+            },
+            {
+                "type": "text",
+                "field": "wizard_oidc_enabled",
+                "label": "启用 OIDC (true/false，可选)",
+                "initValue": "false"
+            },
+            {
+                "type": "text",
+                "field": "wizard_oidc_authority",
+                "label": "OIDC Authority (可选)",
+                "initValue": ""
+            },
+            {
+                "type": "text",
+                "field": "wizard_oidc_client_id",
+                "label": "OIDC Client ID (可选)",
+                "initValue": ""
+            },
+            {
+                "type": "password",
+                "field": "wizard_oidc_client_secret",
+                "label": "OIDC Client Secret (可选)",
+                "initValue": ""
+            },
+            {
+                "type": "text",
+                "field": "wizard_oidc_display_name",
+                "label": "OIDC 显示名称 (可选)",
+                "initValue": "OIDC"
+            }
+        ]
+    }
+]

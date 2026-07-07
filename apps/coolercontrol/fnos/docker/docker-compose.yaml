@@ -1,0 +1,23 @@
+services:
+  coolercontrol:
+    image: ${DOCKER_MIRROR}docker.io/coolercontrol/coolercontrold:${VERSION}
+    container_name: coolercontrol
+    ports:
+      - "${TRIM_SERVICE_PORT}:11987"
+    volumes:
+      - ${TRIM_PKGVAR:?}/config:/etc/coolercontrol
+      - /sys/class/hwmon:/sys/class/hwmon:rw
+      - /dev:/dev:rw
+    environment:
+      - TZ=Asia/Shanghai
+      - CC_PORT=11987
+      - CC_HOST_IP4=0.0.0.0
+      - CC_HOST_IP6=::
+      - CC_TLS=OFF
+      - CC_DBUS=OFF
+      - CC_SERVICE_MANAGER=OFF
+    cap_add:
+      - SYS_ADMIN
+      - SYS_RAWIO
+    privileged: true
+    restart: unless-stopped

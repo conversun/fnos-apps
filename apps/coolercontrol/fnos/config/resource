@@ -1,0 +1,25 @@
+{
+    "port-config": {
+        "protocol-file": "CoolerControl.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "CoolerControl",
+                "permission": {
+                    "rw": [
+                        "coolercontrol"
+                    ]
+                }
+            }
+        ]
+    },
+    "docker-project": {
+        "projects": [
+            {
+                "name": "coolercontrol",
+                "path": "docker"
+            }
+        ]
+    }
+}

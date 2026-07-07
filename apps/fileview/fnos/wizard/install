@@ -1,0 +1,11 @@
+[
+    {
+        "stepTitle": "安装说明",
+        "items": [
+            {
+                "type": "tips",
+                "helpText": "Fileview 是在线文件预览服务，支持 Office、PDF、OFD、CAD、图片、代码文件等多种格式。安装后通过 Web UI 访问并按上游文档接入预览接口。"
+            }
+        ]
+    }
+]

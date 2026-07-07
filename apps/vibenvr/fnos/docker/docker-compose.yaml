@@ -1,0 +1,110 @@
+services:
+  frontend:
+    image: ${DOCKER_MIRROR}docker.io/spupuz/vibenvr-frontend:${VERSION}
+    container_name: vibenvr-frontend
+    ports:
+      - "${TRIM_SERVICE_PORT}:80"
+    volumes:
+      - ${TRIM_PKGVAR:?}/data:/data
+    environment:
+      - TZ=Asia/Shanghai
+    depends_on:
+      - backend
+    restart: unless-stopped
+    init: true
+    networks:
+      - vibe-network
+
+  backend:
+    image: ${DOCKER_MIRROR}docker.io/spupuz/vibenvr-backend:${VERSION}
+    container_name: vibenvr-backend
+    volumes:
+      - ${TRIM_PKGVAR:?}/data:/data
+    environment:
+      - POSTGRES_USER=vibenvr
+      - POSTGRES_PASSWORD=${wizard_postgres_password:-vibenvrpass}
+      - POSTGRES_DB=vibenvr
+      - DATABASE_URL=postgresql://vibenvr:${wizard_postgres_password:-vibenvrpass}@db:5432/vibenvr
+      - TZ=Asia/Shanghai
+      - SECRET_KEY=${wizard_secret_key:-vibe_secure_key_9823748923748923_change_in_prod}
+      - WEBHOOK_SECRET=${wizard_webhook_secret:-vibe_secure_key_9823748923748923_change_in_prod}
+      - ALLOWED_ORIGINS=${wizard_allowed_origins:-}
+      - COOKIE_SECURE=${wizard_cookie_secure:-auto}
+    depends_on:
+      db:
+        condition: service_healthy
+      engine:
+        condition: service_started
+    restart: unless-stopped
+    init: true
+    entrypoint: ["/bin/sh", "./entrypoint.sh"]
+    stop_grace_period: 30s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    networks:
+      - vibe-network
+
+  engine:
+    image: ${DOCKER_MIRROR}docker.io/spupuz/vibenvr-engine:${VERSION}
+    container_name: vibenvr-engine
+    expose:
+      - "8000"
+    volumes:
+      - ${TRIM_PKGVAR:?}/data:/var/lib/vibe/recordings
+    environment:
+      - BACKEND_URL=http://backend:5000
+      - TZ=Asia/Shanghai
+      - HW_ACCEL=true
+      - HW_ACCEL_TYPE=${wizard_hw_accel_type:-auto}
+      - WEBHOOK_SECRET=${wizard_webhook_secret:-vibe_secure_key_9823748923748923_change_in_prod}
+    devices:
+      - /dev/dri:/dev/dri
+    shm_size: "512mb"
+    entrypoint: ["/bin/sh", "./entrypoint.sh"]
+    stop_grace_period: 30s
+    security_opt:
+      - seccomp:unconfined
+      - apparmor:unconfined
+    privileged: true
+    restart: unless-stopped
+    init: true
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    networks:
+      - vibe-network
+
+  db:
+    image: ${DOCKER_MIRROR}docker.io/postgres:15-alpine
+    container_name: vibenvr-db
+    environment:
+      - POSTGRES_USER=vibenvr
+      - POSTGRES_PASSWORD=${wizard_postgres_password:-vibenvrpass}
+      - POSTGRES_DB=vibenvr
+      - TZ=Asia/Shanghai
+    volumes:
+      - ${TRIM_PKGVAR:?}/db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER:-vibenvr}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+    restart: unless-stopped
+    init: true
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    networks:
+      - vibe-network
+
+networks:
+  vibe-network:
+    driver: bridge

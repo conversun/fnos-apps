@@ -1,0 +1,67 @@
+#!/bin/bash
+
+LOG_FILE="${TRIM_PKGVAR}/${TRIM_APPNAME}.log"
+PID_FILE="${TRIM_PKGVAR}/${TRIM_APPNAME}.pid"
+
+APP_DIR="${TRIM_APPDEST}"
+APP_DATA_DIR="${TRIM_PKGVAR}"
+CONFIG_FILE="${TRIM_PKGETC}/feigram.env"
+
+SERVICE_COMMAND="$APP_DIR/bin/feigram-server $APP_DATA_DIR"
+SVC_BACKGROUND=y
+SVC_WRITE_PID=y
+SVC_WAIT_TIMEOUT=30
+
+write_feigram_config() {
+    mkdir -p "${TRIM_PKGETC}" "${TRIM_PKGVAR}/data" "${TRIM_PKGVAR}/data/downloads" 2>/dev/null || true
+    {
+        printf 'APP_PORT=%s\n' "${wizard_app_port:-${TRIM_SERVICE_PORT:-3088}}"
+        printf 'PUBLIC_BASE_URL=%s\n' "${wizard_public_base_url:-http://127.0.0.1:${TRIM_SERVICE_PORT:-3088}}"
+        printf 'APP_PASSWORD=%s\n' "${wizard_app_password:-}"
+        printf 'TELEGRAM_API_ID=%s\n' "${wizard_telegram_api_id:-}"
+        printf 'TELEGRAM_API_HASH=%s\n' "${wizard_telegram_api_hash:-}"
+    } > "${CONFIG_FILE}"
+    chmod 600 "${CONFIG_FILE}" 2>/dev/null || true
+}
+
+load_feigram_config() {
+    [ -f "${CONFIG_FILE}" ] || write_feigram_config
+    while IFS='=' read -r key value; do
+        case "$key" in
+            APP_PORT|PUBLIC_BASE_URL|APP_PASSWORD|TELEGRAM_API_ID|TELEGRAM_API_HASH)
+                export "$key=$value"
+                ;;
+        esac
+    done < "${CONFIG_FILE}"
+}
+
+service_postinst() {
+    write_feigram_config
+}
+
+service_postconfig() {
+    write_feigram_config
+}
+
+service_prestart() {
+    load_feigram_config
+}
+
+service_preuninst() {
+    if [ -f "${PID_FILE}" ]; then
+        while read -r pid; do
+            [ -n "$pid" ] || continue
+            kill "$pid" 2>/dev/null || true
+        done < "${PID_FILE}"
+        sleep 1
+        while read -r pid; do
+            [ -n "$pid" ] || continue
+            kill -9 "$pid" 2>/dev/null || true
+        done < "${PID_FILE}"
+        rm -f "${PID_FILE}"
+    fi
+}
+
+service_poststop() {
+    rm -f "${PID_FILE}"
+}

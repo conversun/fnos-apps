@@ -1,0 +1,14 @@
+appname         = msf
+version         = 0.0.0
+display_name    = MSF
+platform        = x86
+maintainer      = scoltzero
+maintainer_url  = https://github.com/scoltzero/msf
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = msf.Application
+service_port    = 7777
+desc            = MosDNS + Mihomo DNS 分流与透明代理管理面板
+source          = thirdparty
+checksum        = 

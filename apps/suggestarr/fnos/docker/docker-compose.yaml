@@ -1,0 +1,13 @@
+services:
+  suggestarr:
+    image: ${DOCKER_MIRROR}docker.io/ciuse99/suggestarr:${VERSION}
+    container_name: suggestarr
+    ports:
+      - "${TRIM_SERVICE_PORT}:5000"
+    volumes:
+      - ${TRIM_PKGVAR:?}/config_files:/app/config/config_files
+    environment:
+      - TZ=Asia/Shanghai
+      - LOG_LEVEL=info
+      - SUGGESTARR_PORT=5000
+    restart: unless-stopped

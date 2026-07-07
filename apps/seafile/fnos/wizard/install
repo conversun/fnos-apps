@@ -1,0 +1,79 @@
+[
+    {
+        "stepTitle": "基本说明",
+        "items": [
+            {
+                "type": "tips",
+                "helpText": "Seafile 是开源文件同步与共享平台。本安装包按官方 Docker 部署 Seafile、MariaDB 和 Memcached 共 3 个容器，仅将 Web 服务映射到主机端口 <code>8002</code>。"
+            },
+            {
+                "type": "tips",
+                "helpText": "Seafile 镜像 <code>seafileltd/seafile-mc</code> 当前提供 amd64 与 arm64 manifest，本应用支持 x86 和 arm 双架构。首次启动会初始化数据库和管理员账号，可能需要数分钟。"
+            }
+        ]
+    },
+    {
+        "stepTitle": "管理员与访问地址",
+        "items": [
+            {
+                "type": "text",
+                "field": "wizard_admin_email",
+                "label": "管理员邮箱",
+                "initValue": "admin@example.com",
+                "rules": [
+                    { "required": true, "message": "请输入管理员邮箱" }
+                ]
+            },
+            {
+                "type": "password",
+                "field": "wizard_admin_password",
+                "label": "管理员密码",
+                "initValue": "seafile_admin_please_change",
+                "rules": [
+                    { "required": true, "message": "请输入管理员密码" }
+                ]
+            },
+            {
+                "type": "text",
+                "field": "wizard_server_hostname",
+                "label": "访问域名或 NAS-IP:端口",
+                "initValue": "localhost:8002",
+                "rules": [
+                    { "required": true, "message": "请输入访问地址，例如 192.168.1.10:8002" }
+                ]
+            }
+        ]
+    },
+    {
+        "stepTitle": "数据库与密钥",
+        "items": [
+            {
+                "type": "password",
+                "field": "wizard_mysql_root_password",
+                "label": "MariaDB root 密码",
+                "initValue": "seafile_root_please_change",
+                "rules": [
+                    { "required": true, "message": "请输入 MariaDB root 密码" }
+                ]
+            },
+            {
+                "type": "password",
+                "field": "wizard_mysql_password",
+                "label": "Seafile 数据库密码",
+                "initValue": "seafile_db_please_change",
+                "rules": [
+                    { "required": true, "message": "请输入 Seafile 数据库密码" }
+                ]
+            },
+            {
+                "type": "password",
+                "field": "wizard_jwt_private_key",
+                "label": "JWT 私钥（至少 32 位）",
+                "initValue": "fnos_seafile_jwt_private_key_change_me_0123456789",
+                "rules": [
+                    { "required": true, "message": "请输入 JWT 私钥" }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,47 @@
+[
+    {
+        "stepTitle": "Seafile 设置",
+        "items": [
+            {
+                "type": "tips",
+                "helpText": "修改这些值后，fnOS 会在重新创建容器前把向导变量直接替换进 docker-compose.yaml。请不要在容器创建后用 .env 或脚本注入密钥。"
+            },
+            {
+                "type": "text",
+                "field": "wizard_admin_email",
+                "label": "管理员邮箱",
+                "initValue": "admin@example.com"
+            },
+            {
+                "type": "password",
+                "field": "wizard_admin_password",
+                "label": "管理员密码",
+                "initValue": "seafile_admin_please_change"
+            },
+            {
+                "type": "text",
+                "field": "wizard_server_hostname",
+                "label": "访问域名或 NAS-IP:端口",
+                "initValue": "localhost:8002"
+            },
+            {
+                "type": "password",
+                "field": "wizard_mysql_root_password",
+                "label": "MariaDB root 密码",
+                "initValue": "seafile_root_please_change"
+            },
+            {
+                "type": "password",
+                "field": "wizard_mysql_password",
+                "label": "Seafile 数据库密码",
+                "initValue": "seafile_db_please_change"
+            },
+            {
+                "type": "password",
+                "field": "wizard_jwt_private_key",
+                "label": "JWT 私钥",
+                "initValue": "fnos_seafile_jwt_private_key_change_me_0123456789"
+            }
+        ]
+    }
+]

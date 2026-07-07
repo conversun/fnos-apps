@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "daidai-panel.Application":
+        {
+            "title": "Daidai Panel",
+            "desc": "Cron and script scheduler panel",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "5701",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

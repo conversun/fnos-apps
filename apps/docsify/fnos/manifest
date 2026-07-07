@@ -1,0 +1,14 @@
+appname         = docsify
+version         = 0.0.0
+display_name    = Docsify
+platform        = x86
+maintainer      = docsifyjs
+maintainer_url  = https://github.com/docsifyjs/docsify
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = docsify.Application
+service_port    = 4001
+desc            = 轻量级 Markdown 文档站点服务
+source          = thirdparty
+checksum        = 

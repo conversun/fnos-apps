@@ -1,0 +1,15 @@
+appname         = vibenvr
+version         = 0.0.0
+display_name    = VibeNVR
+platform        = x86
+maintainer      = spupuz
+maintainer_url  = https://github.com/spupuz/VibeNVR
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = vibenvr.Application
+service_port    = 8087
+checkport       = false
+desc            = AI 网络视频录像机，支持摄像头管理、录像与硬件加速转码。
+source          = thirdparty
+checksum        = 

@@ -1,0 +1,48 @@
+[
+  {
+    "stepTitle": "Feigram 配置",
+    "items": [
+      {
+        "type": "tips",
+        "helpText": "Feigram 是第三方非官方 Telegram 客户端。建议在 my.telegram.org 注册并填写自己的 api_id 与 api_hash；留空时会使用上游默认值。"
+      },
+      {
+        "type": "text",
+        "field": "wizard_app_port",
+        "label": "访问端口",
+        "initValue": "3088",
+        "rules": [
+          { "required": true, "message": "请输入访问端口" }
+        ]
+      },
+      {
+        "type": "text",
+        "field": "wizard_public_base_url",
+        "label": "公开访问地址",
+        "initValue": "http://127.0.0.1:3088",
+        "helpText": "局域网可填写 http://飞牛IP:3088；公网部署建议使用 HTTPS。"
+      },
+      {
+        "type": "password",
+        "field": "wizard_app_password",
+        "label": "应用访问密码",
+        "initValue": "",
+        "helpText": "可选；也可首次打开后在 Feigram 内创建管理员账户。"
+      },
+      {
+        "type": "text",
+        "field": "wizard_telegram_api_id",
+        "label": "Telegram api_id",
+        "initValue": "",
+        "helpText": "推荐从 https://my.telegram.org 获取自己的 api_id。"
+      },
+      {
+        "type": "password",
+        "field": "wizard_telegram_api_hash",
+        "label": "Telegram api_hash",
+        "initValue": "",
+        "helpText": "推荐从 https://my.telegram.org 获取自己的 api_hash。"
+      }
+    ]
+  }
+]

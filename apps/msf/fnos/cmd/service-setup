@@ -1,0 +1,40 @@
+#!/bin/bash
+
+LOG_FILE="${TRIM_PKGVAR}/${TRIM_APPNAME}.log"
+PID_FILE="${TRIM_PKGVAR}/${TRIM_APPNAME}.pid"
+
+APP_DIR="${TRIM_APPDEST}"
+APP_DATA_DIR="${TRIM_PKGVAR}"
+
+SERVICE_COMMAND="$APP_DIR/bin/msf-server $APP_DATA_DIR"
+SVC_BACKGROUND=y
+SVC_WRITE_PID=y
+SVC_WAIT_TIMEOUT=30
+
+service_postinst() {
+    mkdir -p "${TRIM_PKGVAR}" 2>/dev/null || true
+}
+
+service_postupgrade() {
+    service_postinst
+}
+
+service_preuninst() {
+    if [ -x "${TRIM_APPDEST}/msf" ]; then
+        "${TRIM_APPDEST}/msf" stop --config "${TRIM_PKGVAR}" --timeout 20s --force \
+            >> "${LOG_FILE}" 2>&1 || true
+    fi
+    local pid
+    for pid_file in "${TRIM_PKGVAR}/msf.pid" "${PID_FILE}"; do
+        [ -f "$pid_file" ] || continue
+        pid="$(cat "$pid_file" 2>/dev/null || true)"
+        case "$pid" in
+            ''|*[!0-9]*) rm -f "$pid_file" 2>/dev/null || true ;;
+            *) kill "$pid" 2>/dev/null || true ;;
+        esac
+    done
+}
+
+service_poststop() {
+    service_preuninst
+}

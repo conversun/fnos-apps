@@ -1,0 +1,18 @@
+#!/bin/bash
+FILE_PATH="${TRIM_APPDEST}/docker/docker-compose.yaml"
+is_docker_running () {
+    DOCKER_NAME=""
+    if [ -f "$FILE_PATH" ]; then
+        DOCKER_NAME=$(cat $FILE_PATH | grep "container_name" | awk -F ':' '{print $2}' | xargs)
+    fi
+    if [ -n "$DOCKER_NAME" ]; then
+        docker inspect $DOCKER_NAME | grep -q "\"Status\": \"running\"," || exit 1
+        return
+    fi
+}
+case $1 in
+start) exit 0 ;;
+stop) exit 0 ;;
+status) if is_docker_running; then exit 0; else exit 3; fi ;;
+*) exit 1 ;;
+esac

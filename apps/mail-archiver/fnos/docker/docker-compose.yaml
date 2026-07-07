@@ -1,0 +1,59 @@
+services:
+  mail-archiver:
+    image: ${DOCKER_MIRROR}docker.io/s1t5/mailarchiver:${VERSION}
+    container_name: mail-archiver
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "${TRIM_SERVICE_PORT}:5000"
+    volumes:
+      - ${TRIM_PKGVAR:?}/data:/app/DataProtection-Keys
+      - ${TRIM_PKGVAR:?}/logs:/app/logs
+      - ${TRIM_PKGVAR:?}/import:/data/import
+    environment:
+      - TZ=Asia/Shanghai
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ConnectionStrings__DefaultConnection=Host=postgres;Database=MailArchiver;Username=mailuser;Password=${wizard_db_password:-mailarchiver-db-password};
+      - Authentication__Username=${wizard_admin_username:-admin}
+      - Authentication__Password=${wizard_admin_password:-mailarchiver-admin-password}
+      - Authentication__SessionTimeoutMinutes=60
+      - Authentication__CookieName=MailArchiverAuth
+      - Authentication__CookieSameSite=Lax
+      - TimeZone__DisplayTimeZoneId=${wizard_timezone:-Asia/Shanghai}
+      - LocalImport__AllowedPaths__0=/data/import
+      - MailSync__IntervalMinutes=15
+      - MailSync__TimeoutMinutes=60
+      - MailSync__ConnectionTimeoutSeconds=180
+      - MailSync__CommandTimeoutSeconds=300
+      - Upload__MaxFileSizeGB=10
+      - Upload__KeepAliveTimeoutHours=4
+      - Upload__RequestHeadersTimeoutHours=2
+      - View__DefaultToPlainText=true
+      - View__BlockExternalResources=false
+      - OAuth__Enabled=${wizard_oidc_enabled:-false}
+      - OAuth__Authority=${wizard_oidc_authority:-}
+      - OAuth__ClientId=${wizard_oidc_client_id:-}
+      - OAuth__ClientSecret=${wizard_oidc_client_secret:-}
+      - OAuth__DisplayName=${wizard_oidc_display_name:-OIDC}
+      - OAuth__DisablePasswordLogin=false
+      - OAuth__AutoRedirect=false
+      - OAuth__AutoApproveUsers=false
+    restart: unless-stopped
+
+  postgres:
+    image: ${DOCKER_MIRROR}docker.io/postgres:17-alpine
+    container_name: mail-archiver-postgres
+    environment:
+      POSTGRES_DB: MailArchiver
+      POSTGRES_USER: mailuser
+      POSTGRES_PASSWORD: ${wizard_db_password:-mailarchiver-db-password}
+    volumes:
+      - ${TRIM_PKGVAR:?}/db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mailuser -d MailArchiver"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    restart: unless-stopped

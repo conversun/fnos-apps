@@ -1,0 +1,14 @@
+appname         = next-ai-draw-io
+version         = 0.0.0
+display_name    = Next AI Draw.io
+platform        = x86
+maintainer      = Next AI Draw.io contributors
+maintainer_url  = https://github.com/chadkunsman/next-ai-draw-io
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = next-ai-draw-io.Application
+service_port    = 3007
+desc            = 基于大语言模型的 draw.io 图表生成与编辑工具
+source          = thirdparty
+checksum        = 

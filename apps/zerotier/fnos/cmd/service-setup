@@ -1,0 +1,11 @@
+#!/bin/bash
+
+service_postinst() {
+    mkdir -p "${TRIM_PKGVAR}/ztnet" \
+             "${TRIM_PKGVAR}/zerotier" \
+             "${TRIM_PKGVAR}/postgres" 2>/dev/null || true
+}
+
+service_postupgrade() {
+    service_postinst
+}

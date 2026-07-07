@@ -1,0 +1,14 @@
+appname         = feigram
+version         = 0.0.0
+display_name    = Feigram
+platform        = x86
+maintainer      = g-star1024
+maintainer_url  = https://github.com/g-star1024/Feigram-Public
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = feigram.Application
+service_port    = 3088
+desc            = 非官方 Telegram Web 客户端，支持多账号、聊天、媒体预览和下载缓存
+source          = thirdparty
+checksum        = 

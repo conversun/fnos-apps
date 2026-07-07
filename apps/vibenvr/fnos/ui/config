@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "vibenvr.Application":
+        {
+            "title": "VibeNVR",
+            "desc": "AI NVR video surveillance",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "8087",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

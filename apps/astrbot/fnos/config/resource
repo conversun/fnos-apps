@@ -1,0 +1,25 @@
+{
+    "port-config": {
+        "protocol-file": "AstrBot.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "AstrBot",
+                "permission": {
+                    "rw": [
+                        "astrbot"
+                    ]
+                }
+            }
+        ]
+    },
+    "docker-project": {
+        "projects": [
+            {
+                "name": "astrbot",
+                "path": "docker"
+            }
+        ]
+    }
+}

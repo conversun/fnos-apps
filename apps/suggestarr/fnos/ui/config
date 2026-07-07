@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "suggestarr.Application":
+        {
+            "title": "SuggestArr",
+            "desc": "Automated media recommendations for Seerr",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "5007",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

@@ -1,0 +1,21 @@
+#!/bin/sh
+APP_DIR="${TRIM_APPDEST}"
+APP_DATA_DIR=$1
+
+DATA_DIR="${APP_DATA_DIR}/data"
+DOWNLOAD_DIR="${DATA_DIR}/downloads"
+
+mkdir -p "$DATA_DIR" "$DOWNLOAD_DIR"
+
+export APP_PORT="${APP_PORT:-${TRIM_SERVICE_PORT:-3088}}"
+export FEIGRAM_APP_URL="http://127.0.0.1:${APP_PORT}"
+export PUBLIC_BASE_URL="${PUBLIC_BASE_URL:-http://127.0.0.1:${APP_PORT}}"
+export DATA_DIR
+export DOWNLOAD_DIR
+export LOG_FILE="${LOG_FILE:-${APP_DATA_DIR}/feigram.log}"
+export APP_EDITION="Feigram fnOS Client Edition"
+export APP_VERSION="${APP_VERSION:-0.0.0}"
+export NODE_ENV="production"
+
+cd "$APP_DIR/server" || exit 1
+exec "$APP_DIR/bin/node" src/index.js

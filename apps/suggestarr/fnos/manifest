@@ -1,0 +1,15 @@
+appname         = suggestarr
+version         = 0.0.0
+display_name    = SuggestArr
+platform        = x86
+maintainer      = SuggestArr
+maintainer_url  = https://github.com/giuseppe99barchetta/SuggestArr
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = suggestarr.Application
+service_port    = 5007
+checkport       = false
+desc            = 基于观影记录自动向 Seerr/Jellyseerr 请求相似影视内容
+source          = thirdparty
+checksum        = 

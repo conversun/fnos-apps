@@ -1,0 +1,14 @@
+{
+    ".url": {
+        "msf.Application": {
+            "title": "MSF",
+            "desc": "MosDNS + Mihomo management panel",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "7777",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

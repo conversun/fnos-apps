@@ -1,0 +1,25 @@
+{
+    "port-config": {
+        "protocol-file": "SuggestArr.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "SuggestArr",
+                "permission": {
+                    "rw": [
+                        "suggestarr"
+                    ]
+                }
+            }
+        ]
+    },
+    "docker-project": {
+        "projects": [
+            {
+                "name": "suggestarr",
+                "path": "docker"
+            }
+        ]
+    }
+}

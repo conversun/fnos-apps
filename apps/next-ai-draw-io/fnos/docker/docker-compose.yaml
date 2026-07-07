@@ -1,0 +1,15 @@
+services:
+  next-ai-draw-io:
+    image: ghcr.io/dayuanjiang/next-ai-draw-io:${VERSION}
+    container_name: next-ai-draw-io
+    ports:
+      - "${TRIM_SERVICE_PORT}:3000"
+    environment:
+      - TZ=Asia/Shanghai
+      - AI_PROVIDER=${wizard_ai_provider:-openai}
+      - AI_MODEL=${wizard_ai_model:-gpt-4o}
+      - OPENAI_API_KEY=${wizard_openai_api_key:-}
+      - OPENAI_BASE_URL=${wizard_openai_base_url:-https://api.openai.com/v1}
+      - ACCESS_CODE_LIST=${wizard_access_code:-}
+      - NEXT_PUBLIC_DRAWIO_BASE_URL=${wizard_drawio_base_url:-https://embed.diagrams.net}
+    restart: unless-stopped

@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "coolercontrol.Application":
+        {
+            "title": "CoolerControl",
+            "desc": "Fan and cooling control",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "11987",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "port-config": {
+        "protocol-file": "Daidai Panel.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "Daidai Panel",
+                "permission": {
+                    "rw": [
+                        "daidai-panel"
+                    ]
+                }
+            }
+        ]
+    },
+    "docker-project": {
+        "projects": [
+            {
+                "name": "daidai-panel",
+                "path": "docker"
+            }
+        ]
+    }
+}

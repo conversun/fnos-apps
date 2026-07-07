@@ -1,0 +1,14 @@
+appname         = astrbot
+version         = 0.0.0
+display_name    = AstrBot
+platform        = x86
+maintainer      = AstrBotDevs
+maintainer_url  = https://github.com/AstrBotDevs/AstrBot
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = astrbot.Application
+service_port    = 6185
+desc            = 多平台 LLM 聊天机器人框架，支持 Web 管理面板和插件扩展。
+source          = thirdparty
+checksum        = 

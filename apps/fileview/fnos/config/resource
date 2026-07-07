@@ -1,0 +1,25 @@
+{
+    "port-config": {
+        "protocol-file": "Fileview.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "Fileview",
+                "permission": {
+                    "rw": [
+                        "fileview"
+                    ]
+                }
+            }
+        ]
+    },
+    "docker-project": {
+        "projects": [
+            {
+                "name": "fileview",
+                "path": "docker"
+            }
+        ]
+    }
+}

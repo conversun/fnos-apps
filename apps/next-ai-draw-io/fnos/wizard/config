@@ -1,0 +1,51 @@
+[
+    {
+        "stepTitle": "Next AI Draw.io",
+        "items": [
+            {
+                "type": "text",
+                "field": "wizard_port",
+                "label": "Web UI 端口",
+                "initValue": "3007",
+                "rules": [
+                    { "required": true, "message": "请输入端口号" },
+                    { "pattern": "^[0-9]+$", "message": "端口必须是数字" }
+                ]
+            },
+            {
+                "type": "text",
+                "field": "wizard_ai_provider",
+                "label": "AI 提供商",
+                "initValue": "openai"
+            },
+            {
+                "type": "text",
+                "field": "wizard_ai_model",
+                "label": "AI 模型",
+                "initValue": "gpt-4o"
+            },
+            {
+                "type": "password",
+                "field": "wizard_openai_api_key",
+                "label": "OpenAI API Key"
+            },
+            {
+                "type": "text",
+                "field": "wizard_openai_base_url",
+                "label": "OpenAI Base URL",
+                "initValue": "https://api.openai.com/v1"
+            },
+            {
+                "type": "password",
+                "field": "wizard_access_code",
+                "label": "访问密码（推荐）"
+            },
+            {
+                "type": "text",
+                "field": "wizard_drawio_base_url",
+                "label": "draw.io 嵌入地址",
+                "initValue": "https://embed.diagrams.net"
+            }
+        ]
+    }
+]

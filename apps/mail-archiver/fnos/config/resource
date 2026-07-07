@@ -1,0 +1,25 @@
+{
+    "port-config": {
+        "protocol-file": "Mail Archiver.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "Mail Archiver",
+                "permission": {
+                    "rw": [
+                        "mail-archiver"
+                    ]
+                }
+            }
+        ]
+    },
+    "docker-project": {
+        "projects": [
+            {
+                "name": "mail-archiver",
+                "path": "docker"
+            }
+        ]
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "defaults": {
+        "run-as": "package"
+    },
+    "username": "daidai-panel",
+    "groupname": "daidai-panel"
+}

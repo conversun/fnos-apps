@@ -1,0 +1,11 @@
+services:
+  fileview:
+    image: ${DOCKER_MIRROR}docker.io/basemetas/fileview:${VERSION}
+    container_name: fileview
+    ports:
+      - "${TRIM_SERVICE_PORT}:80"
+    volumes:
+      - ${TRIM_PKGVAR:?}/data:/data
+    environment:
+      - TZ=Asia/Shanghai
+    restart: unless-stopped

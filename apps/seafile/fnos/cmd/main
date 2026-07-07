@@ -1,0 +1,17 @@
+#!/bin/bash
+
+containers=(seafile seafile-mysql seafile-memcached)
+
+is_docker_running() {
+    local name
+    for name in "${containers[@]}"; do
+        docker inspect "$name" | grep -q '"Status": "running",' || return 1
+    done
+}
+
+case "$1" in
+start) exit 0 ;;
+stop) exit 0 ;;
+status) if is_docker_running; then exit 0; else exit 3; fi ;;
+*) exit 1 ;;
+esac

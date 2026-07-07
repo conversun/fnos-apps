@@ -1,0 +1,56 @@
+[
+    {
+        "stepTitle": "ZeroTier",
+        "items": [
+            {
+                "type": "tips",
+                "helpText": "ZeroTier 使用 ZTNET Web UI + PostgreSQL + zerotier-one 三容器部署。首次注册的 ZTNET 用户会自动成为管理员。"
+            },
+            {
+                "type": "text",
+                "field": "wizard_port",
+                "label": "Web UI 端口",
+                "initValue": "3008",
+                "rules": [
+                    { "required": true, "message": "请输入端口号" },
+                    { "pattern": "^[0-9]+$", "message": "端口必须是数字" }
+                ]
+            },
+            {
+                "type": "text",
+                "field": "wizard_nextauth_url",
+                "label": "访问地址 NEXTAUTH_URL",
+                "initValue": "http://localhost:3008",
+                "rules": [
+                    { "required": true, "message": "请输入包含 http:// 或 https:// 的访问地址" },
+                    { "pattern": "^https?://.+", "message": "请输入有效 URL，例如 http://192.168.1.100:3008" }
+                ]
+            },
+            {
+                "type": "password",
+                "field": "wizard_nextauth_secret",
+                "label": "NEXTAUTH_SECRET",
+                "initValue": "ztnet-nextauth-secret-change-me",
+                "rules": [
+                    { "required": true, "message": "请输入会话密钥" }
+                ]
+            },
+            {
+                "type": "password",
+                "field": "wizard_postgres_password",
+                "label": "PostgreSQL 数据库密码",
+                "initValue": "ztnet-postgres-password",
+                "rules": [
+                    { "required": true, "message": "请输入数据库密码" }
+                ]
+            },
+            {
+                "type": "password",
+                "field": "wizard_zt_secret",
+                "label": "ZeroTier 控制器 Token（可选）",
+                "initValue": "",
+                "placeholder": "留空则读取内置 zerotier-one 的 authtoken.secret"
+            }
+        ]
+    }
+]

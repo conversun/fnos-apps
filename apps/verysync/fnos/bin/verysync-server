@@ -1,0 +1,19 @@
+#!/bin/sh
+APP_DIR="${TRIM_APPDEST}"
+APP_DATA_DIR=$1
+
+DATA_DIR="$APP_DATA_DIR/data"
+mkdir -p "$DATA_DIR"
+
+export HOME="$APP_DATA_DIR"
+export VSHOMEDIR="$DATA_DIR"
+export VSGUIADDRESS="0.0.0.0:${TRIM_SERVICE_PORT}"
+export VSNORESTART="1"
+
+cd "$APP_DIR" || exit 1
+exec ./verysync \
+    -no-browser \
+    -no-restart \
+    -logflags=0 \
+    -gui-address "0.0.0.0:${TRIM_SERVICE_PORT}" \
+    -home "$DATA_DIR"

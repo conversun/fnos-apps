@@ -1,0 +1,25 @@
+{
+    "port-config": {
+        "protocol-file": "ZeroTier.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "ZeroTier",
+                "permission": {
+                    "rw": [
+                        "zerotier"
+                    ]
+                }
+            }
+        ]
+    },
+    "docker-project": {
+        "projects": [
+            {
+                "name": "zerotier",
+                "path": "docker"
+            }
+        ]
+    }
+}

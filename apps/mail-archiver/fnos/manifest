@@ -1,0 +1,14 @@
+appname         = mail-archiver
+version         = 0.0.0
+display_name    = Mail Archiver
+platform        = x86
+maintainer      = s1t5
+maintainer_url  = https://github.com/s1t5/mail-archiver
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = mail-archiver.Application
+service_port    = 5008
+desc            = IMAP/Microsoft 365 邮件归档、搜索与导出系统
+source          = thirdparty
+checksum        = 

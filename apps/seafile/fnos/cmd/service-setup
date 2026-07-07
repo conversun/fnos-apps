@@ -1,0 +1,8 @@
+#!/bin/bash
+
+service_postinst() {
+    mkdir -p \
+        "${TRIM_PKGVAR}/seafile-data" \
+        "${TRIM_PKGVAR}/mysql" \
+        2>/dev/null || true
+}

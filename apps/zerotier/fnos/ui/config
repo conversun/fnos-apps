@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "zerotier.Application":
+        {
+            "title": "ZeroTier",
+            "desc": "ZeroTier Controller Web UI",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "3008",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

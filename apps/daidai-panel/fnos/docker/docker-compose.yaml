@@ -1,0 +1,16 @@
+services:
+  daidai-panel:
+    image: ${DOCKER_MIRROR}docker.io/linzixuanzz/daidai-panel:${VERSION}
+    container_name: daidai-panel
+    ports:
+      - "${TRIM_SERVICE_PORT}:5700"
+    volumes:
+      - ${TRIM_PKGVAR:?}/data:/app/Dumb-Panel
+    environment:
+      - TZ=Asia/Shanghai
+      - DATA_DIR=/app/Dumb-Panel
+      - PANEL_PORT=5700
+      - SERVER_PORT=5701
+      - CONTAINER_NAME=daidai-panel
+      - IMAGE_NAME=linzixuanzz/daidai-panel:${VERSION}
+    restart: unless-stopped

@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "songloft.Application":
+        {
+            "title": "Songloft",
+            "desc": "Self-hosted music server",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "58091",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

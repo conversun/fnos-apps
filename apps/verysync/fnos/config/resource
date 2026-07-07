@@ -1,0 +1,19 @@
+{
+    "port-config": {
+        "protocol-file": "Verysync.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "Verysync",
+                "permission": {
+                    "rw": [
+                        "verysync"
+                    ]
+                }
+            }
+        ]
+    },
+    "systemd-unit": {
+    }
+}

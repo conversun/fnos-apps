@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "fileview.Application":
+        {
+            "title": "Fileview",
+            "desc": "Online file preview service",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "9000",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

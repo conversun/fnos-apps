@@ -1,0 +1,14 @@
+appname         = daidai-panel
+version         = 0.0.0
+display_name    = Daidai Panel
+platform        = x86
+maintainer      = linzixuanzz
+maintainer_url  = https://github.com/linzixuanzz/daidai-panel
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = daidai-panel.Application
+service_port    = 5701
+desc            = 轻量现代的定时任务与脚本管理面板
+source          = thirdparty
+checksum        = 

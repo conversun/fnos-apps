@@ -1,0 +1,13 @@
+[
+  {
+    "stepTitle": "卸载 Feigram",
+    "items": [
+      {
+        "type": "checkbox",
+        "field": "wizard_delete_data",
+        "label": "同时删除 Feigram 数据（账户、Telegram session、缓存与下载记录）",
+        "initValue": false
+      }
+    ]
+  }
+]

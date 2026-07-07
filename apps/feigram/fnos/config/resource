@@ -1,0 +1,19 @@
+{
+    "port-config": {
+        "protocol-file": "Feigram.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "Feigram",
+                "permission": {
+                    "rw": [
+                        "feigram"
+                    ]
+                }
+            }
+        ]
+    },
+    "systemd-unit": {
+    }
+}

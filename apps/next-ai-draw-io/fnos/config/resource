@@ -1,0 +1,25 @@
+{
+    "port-config": {
+        "protocol-file": "Next-AI-Draw-io.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "next-ai-draw-io",
+                "permission": {
+                    "rw": [
+                        "next-ai-draw-io"
+                    ]
+                }
+            }
+        ]
+    },
+    "docker-project": {
+        "projects": [
+            {
+                "name": "next-ai-draw-io",
+                "path": "docker"
+            }
+        ]
+    }
+}

@@ -1,0 +1,14 @@
+{
+    ".url": {
+        "feigram.Application": {
+            "title": "Feigram",
+            "desc": "Unofficial Telegram client for fnOS",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "3088",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

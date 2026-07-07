@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "mail-archiver.Application":
+        {
+            "title": "Mail Archiver",
+            "desc": "Email archiving and search system",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "5008",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

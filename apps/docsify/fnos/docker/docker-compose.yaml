@@ -1,0 +1,11 @@
+services:
+  docsify:
+    image: ${DOCKER_MIRROR}docker.io/nginxinc/nginx-unprivileged:${VERSION}
+    container_name: docsify
+    ports:
+      - "${TRIM_SERVICE_PORT}:8080"
+    volumes:
+      - ${TRIM_PKGVAR:?}/docs:/usr/share/nginx/html:ro
+    environment:
+      - TZ=Asia/Shanghai
+    restart: unless-stopped

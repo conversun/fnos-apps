@@ -1,0 +1,14 @@
+{
+    ".url": {
+        "next-ai-draw-io.Application": {
+            "title": "Next AI Draw.io",
+            "desc": "AI-powered draw.io diagram generator",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "3007",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

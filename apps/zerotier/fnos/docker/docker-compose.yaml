@@ -1,0 +1,71 @@
+services:
+  ztnet:
+    image: ${DOCKER_MIRROR}docker.io/sinamics/ztnet:${VERSION}
+    container_name: ztnet
+    working_dir: /app
+    depends_on:
+      - postgres
+      - zerotier
+    ports:
+      - "${TRIM_SERVICE_PORT}:3000"
+    volumes:
+      - ${TRIM_PKGVAR:?}/ztnet:/app/data
+      - ${TRIM_PKGVAR:?}/zerotier:/var/lib/zerotier-one
+    environment:
+      - TZ=Asia/Shanghai
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PORT=5432
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=${wizard_postgres_password:-ztnet-postgres-password}
+      - POSTGRES_DB=ztnet
+      - NEXTAUTH_URL=${wizard_nextauth_url:-http://localhost:3008}
+      - NEXTAUTH_SECRET=${wizard_nextauth_secret:-ztnet-nextauth-secret-change-me}
+      - NEXTAUTH_URL_INTERNAL=http://ztnet:3000
+      - ZT_ADDR=http://zerotier:9993
+      - ZT_SECRET=${wizard_zt_secret:-}
+    networks:
+      - app-network
+    restart: unless-stopped
+
+  postgres:
+    image: ${DOCKER_MIRROR}docker.io/postgres:15.2-alpine
+    container_name: zerotier-postgres
+    volumes:
+      - ${TRIM_PKGVAR:?}/postgres:/var/lib/postgresql/data
+    environment:
+      - TZ=Asia/Shanghai
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=${wizard_postgres_password:-ztnet-postgres-password}
+      - POSTGRES_DB=ztnet
+    networks:
+      - app-network
+    restart: unless-stopped
+
+  zerotier:
+    image: ${DOCKER_MIRROR}docker.io/zyclonite/zerotier:1.14.2
+    hostname: zerotier
+    container_name: zerotier
+    volumes:
+      - ${TRIM_PKGVAR:?}/zerotier:/var/lib/zerotier-one
+    cap_add:
+      - NET_ADMIN
+      - SYS_ADMIN
+    devices:
+      - /dev/net/tun:/dev/net/tun
+    ports:
+      - "9993:9993/udp"
+    environment:
+      - TZ=Asia/Shanghai
+      - ZT_OVERRIDE_LOCAL_CONF=true
+      - ZT_ALLOW_MANAGEMENT_FROM=172.31.255.0/29
+    networks:
+      - app-network
+    restart: unless-stopped
+
+networks:
+  app-network:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.31.255.0/29

@@ -1,0 +1,35 @@
+[
+    {
+        "stepTitle": "Songloft",
+        "items": [
+            {
+                "type": "text",
+                "field": "wizard_port",
+                "label": "Web UI",
+                "initValue": "58091",
+                "rules": [
+                    { "required": true, "message": "Please enter the port number" },
+                    { "pattern": "^[0-9]+$", "message": "Port must be a number" }
+                ]
+            },
+            {
+                "type": "text",
+                "field": "wizard_admin_username",
+                "label": "管理员用户名",
+                "initValue": "admin",
+                "rules": [
+                    { "required": true, "message": "Please enter the admin username" }
+                ]
+            },
+            {
+                "type": "password",
+                "field": "wizard_admin_password",
+                "label": "管理员密码",
+                "initValue": "admin",
+                "rules": [
+                    { "required": true, "message": "Please enter the admin password" }
+                ]
+            }
+        ]
+    }
+]

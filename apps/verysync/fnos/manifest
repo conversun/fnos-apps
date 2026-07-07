@@ -1,0 +1,14 @@
+appname         = verysync
+version         = 0.0.0
+display_name    = Verysync
+platform        = x86
+maintainer      = Verysync
+maintainer_url  = https://www.verysync.com/
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = verysync.Application
+service_port    = 8666
+desc            = 微力同步文件同步工具
+source          = thirdparty
+checksum        = 

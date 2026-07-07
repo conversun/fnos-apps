@@ -1,0 +1,35 @@
+[
+    {
+        "stepTitle": "VibeNVR 设置",
+        "items": [
+            {
+                "type": "tips",
+                "helpText": "VibeNVR 通过 Docker Compose 管理 4 个容器。修改安全参数后，fnOS 会按新的环境变量重新创建容器。"
+            },
+            {
+                "type": "password",
+                "field": "wizard_postgres_password",
+                "label": "PostgreSQL 密码",
+                "initValue": "vibenvrpass"
+            },
+            {
+                "type": "password",
+                "field": "wizard_secret_key",
+                "label": "后端 SECRET_KEY",
+                "initValue": "vibe_secure_key_9823748923748923_change_in_prod"
+            },
+            {
+                "type": "password",
+                "field": "wizard_webhook_secret",
+                "label": "引擎 WEBHOOK_SECRET",
+                "initValue": "vibe_secure_key_9823748923748923_change_in_prod"
+            },
+            {
+                "type": "text",
+                "field": "wizard_hw_accel_type",
+                "label": "硬件加速类型",
+                "initValue": "auto"
+            }
+        ]
+    }
+]

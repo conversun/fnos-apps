@@ -1,0 +1,14 @@
+appname         = songloft
+version         = 0.0.0
+display_name    = Songloft
+platform        = x86
+maintainer      = songloft-org
+maintainer_url  = https://github.com/songloft-org/songloft
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = songloft.Application
+service_port    = 58091
+desc            = 自托管音乐服务器，支持本地音乐管理与 Web 播放
+source          = thirdparty
+checksum        = 

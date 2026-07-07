@@ -1,0 +1,17 @@
+#!/bin/bash
+is_container_running() {
+    local name="$1"
+    docker inspect "$name" 2>/dev/null | grep -q '"Status": "running",'
+}
+
+case $1 in
+start) exit 0 ;;
+stop) exit 0 ;;
+status)
+    if is_container_running ztnet && is_container_running zerotier-postgres && is_container_running zerotier; then
+        exit 0
+    fi
+    exit 3
+    ;;
+*) exit 1 ;;
+esac

@@ -1,0 +1,19 @@
+[
+    {
+        "stepTitle": "使用说明",
+        "items": [
+            {
+                "type": "tips",
+                "helpText": "MSF 是 MosDNS + Mihomo DNS 分流、透明代理和组件管理面板。安装后通过 <code>http://&lt;fnOS主机IP&gt;:7777</code> 打开 WebUI，并按初始化向导完成配置。"
+            },
+            {
+                "type": "tips",
+                "helpText": "MSF 初始化后会按配置管理 MosDNS、Mihomo、nftables、ip rule / ip route，并可能监听 DNS 53 等系统端口；本包按上游 fnOS FPK 要求以 root 权限运行。"
+            },
+            {
+                "type": "tips",
+                "helpText": "如需让局域网客户端使用 DNS 分流 / Fake-IP / 透明代理，请按上游路由器接入文档在主路由配置 DNS 和静态路由。"
+            }
+        ]
+    }
+]

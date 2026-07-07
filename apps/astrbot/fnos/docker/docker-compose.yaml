@@ -1,0 +1,13 @@
+services:
+  astrbot:
+    image: ${DOCKER_MIRROR}docker.io/soulter/astrbot:v${VERSION}
+    container_name: astrbot
+    ports:
+      - "${TRIM_SERVICE_PORT}:6185"
+    volumes:
+      - ${TRIM_PKGVAR:?}/data:/AstrBot/data
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+    environment:
+      - TZ=Asia/Shanghai
+    restart: unless-stopped

@@ -1,0 +1,14 @@
+appname         = fileview
+version         = 0.0.0
+display_name    = Fileview
+platform        = x86
+maintainer      = BaseMetas
+maintainer_url  = https://github.com/basemetas/fileview
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = fileview.Application
+service_port    = 9000
+desc            = 新一代通用型在线文件预览引擎，支持 Office、PDF、OFD、CAD、图片、代码文件等格式。
+source          = thirdparty
+checksum        = 

@@ -1,0 +1,14 @@
+appname         = coolercontrol
+version         = 0.0.0
+display_name    = CoolerControl
+platform        = x86
+maintainer      = Guy Boldon
+maintainer_url  = https://github.com/codifryed/coolercontrol
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = coolercontrol.Application
+service_port    = 11987
+desc            = Linux 风扇与散热设备监控控制面板
+source          = thirdparty
+checksum        = 

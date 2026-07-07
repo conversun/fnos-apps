@@ -1,0 +1,9 @@
+{
+    "type": "http",
+    "path": "/",
+    "expect_status": [200, 301, 302, 401, 403],
+    "startup_timeout_seconds": 180,
+    "post_install_warmup_seconds": 0,
+    "skip_arch": [],
+    "note": "AstrBot Web 管理面板首次启动会生成随机初始密码，请查看容器日志。"
+}

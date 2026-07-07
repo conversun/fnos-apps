@@ -1,0 +1,49 @@
+#!/bin/bash
+
+service_postinst() {
+    local docs_dir="${TRIM_PKGVAR}/docs"
+
+    mkdir -p "$docs_dir" 2>/dev/null || true
+
+    if [ ! -f "$docs_dir/index.html" ]; then
+        cat > "$docs_dir/index.html" <<'EOF'
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Docsify</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+</head>
+<body>
+  <div id="app">加载文档中...</div>
+  <script>
+    window.$docsify = {
+      name: 'Docsify',
+      repo: '',
+      loadSidebar: false,
+      subMaxLevel: 2
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+</body>
+</html>
+EOF
+    fi
+
+    if [ ! -f "$docs_dir/README.md" ]; then
+        cat > "$docs_dir/README.md" <<'EOF'
+# Docsify on fnOS
+
+欢迎使用 Docsify 文档站点。
+
+将你的 Markdown 文档放入此应用的数据目录 `docs/` 下，Docsify 会在浏览器端实时渲染这些文档。
+
+## 开始使用
+
+- 编辑 `README.md` 作为首页
+- 添加更多 `.md` 文件并在文档中链接它们
+- 如需自定义主题或插件，请编辑 `index.html`
+EOF
+    fi
+}

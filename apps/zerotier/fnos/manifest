@@ -1,0 +1,14 @@
+appname         = zerotier
+version         = 0.0.0
+display_name    = ZeroTier
+platform        = x86
+maintainer      = Sinamics
+maintainer_url  = https://github.com/sinamics/ztnet
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = zerotier.Application
+service_port    = 3008
+desc            = ZeroTier 自托管控制器与 ZTNET Web 管理界面，支持可视化管理虚拟局域网。
+source          = thirdparty
+checksum        = 

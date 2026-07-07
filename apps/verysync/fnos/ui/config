@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "verysync.Application":
+        {
+            "title": "Verysync",
+            "desc": "P2P file synchronization",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "8666",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}
