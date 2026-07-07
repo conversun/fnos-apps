@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-07T07:08:24Z",
+  "generated_at": "2026-07-07T08:12:29Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -318,7 +318,7 @@
         "arm"
       ],
       "updated_at": "2026-07-03T09:00:06Z",
-      "download_count": 764,
+      "download_count": 765,
       "app_type": "docker",
       "category": "browser"
     },
@@ -381,7 +381,7 @@
         "arm"
       ],
       "updated_at": "2026-06-26T09:00:27Z",
-      "download_count": 123,
+      "download_count": 125,
       "app_type": "native",
       "category": "download"
     },
@@ -760,7 +760,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:29Z",
-      "download_count": 6207,
+      "download_count": 6210,
       "app_type": "native",
       "category": "store"
     },
@@ -1666,7 +1666,7 @@
         "arm"
       ],
       "updated_at": "2026-07-07T06:50:00Z",
-      "download_count": 0,
+      "download_count": 1,
       "app_type": "native",
       "category": "network"
     },
@@ -1782,9 +1782,9 @@
       "file_prefix": "next-ai-draw-io",
       "display_name": "Next AI Draw.io",
       "description": "基于大语言模型的 draw.io 图表生成与编辑工具",
-      "version": "latest",
-      "fpk_version": "latest",
-      "release_tag": "next-ai-draw-io/vlatest",
+      "version": "latest-2026.07.07",
+      "fpk_version": "latest-2026.07.07",
+      "release_tag": "next-ai-draw-io/vlatest-2026.07.07",
       "service_port": 3007,
       "homepage_url": "https://github.com/chadkunsman/next-ai-draw-io",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/next-ai-draw-io/fnos/ICON_256.PNG",
@@ -1792,7 +1792,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-07-07T06:50:01Z",
+      "updated_at": "2026-07-07T08:12:14Z",
       "download_count": 0,
       "app_type": "docker",
       "category": "ai"
@@ -1877,7 +1877,7 @@
         "arm"
       ],
       "updated_at": "2026-07-04T08:52:21Z",
-      "download_count": 175,
+      "download_count": 177,
       "app_type": "native",
       "category": "system"
     },
@@ -2213,7 +2213,7 @@
         "arm"
       ],
       "updated_at": "2026-06-23T09:01:48Z",
-      "download_count": 51,
+      "download_count": 52,
       "app_type": "docker",
       "category": "content"
     },
@@ -2234,7 +2234,7 @@
         "arm"
       ],
       "updated_at": "2026-06-16T09:42:49Z",
-      "download_count": 659,
+      "download_count": 660,
       "app_type": "native",
       "category": "download"
     },
@@ -2255,7 +2255,7 @@
         "arm"
       ],
       "updated_at": "2026-06-19T09:29:48Z",
-      "download_count": 121,
+      "download_count": 124,
       "app_type": "docker",
       "category": "system"
     },
@@ -2508,7 +2508,7 @@
         "arm"
       ],
       "updated_at": "2026-07-07T06:49:59Z",
-      "download_count": 0,
+      "download_count": 4,
       "app_type": "docker",
       "category": "media"
     },
@@ -2560,9 +2560,9 @@
       "file_prefix": "suggestarr",
       "display_name": "SuggestArr",
       "description": "基于观影记录自动向 Seerr/Jellyseerr 请求相似影视内容",
-      "version": "v2.9.1",
-      "fpk_version": "v2.9.1",
-      "release_tag": "suggestarr/vv2.9.1",
+      "version": "2.9.1",
+      "fpk_version": "2.9.1",
+      "release_tag": "suggestarr/v2.9.1",
       "service_port": 5007,
       "homepage_url": "https://github.com/giuseppe99barchetta/SuggestArr",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/suggestarr/fnos/ICON_256.PNG",
@@ -2570,7 +2570,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-07-07T06:50:02Z",
+      "updated_at": "2026-07-07T08:12:13Z",
       "download_count": 0,
       "app_type": "docker",
       "category": "media"
@@ -2802,7 +2802,7 @@
         "arm"
       ],
       "updated_at": "2026-07-07T07:08:06Z",
-      "download_count": 0,
+      "download_count": 2,
       "app_type": "native",
       "category": "download"
     },
@@ -2970,7 +2970,7 @@
         "arm"
       ],
       "updated_at": "2026-07-07T06:50:12Z",
-      "download_count": 0,
+      "download_count": 1,
       "app_type": "docker",
       "category": "network"
     },
