@@ -21,8 +21,11 @@ fi
 echo "==> Building Mihomo ${VERSION} for ${TARBALL_ARCH}"
 echo "    fnos-mihomo-dashboard ${DASHBOARD_VERSION}"
 
-# mihomo binary
-curl -fL -o mihomo.gz "https://github.com/MetaCubeX/mihomo/releases/download/v${VERSION}/mihomo-linux-${TARBALL_ARCH}-v${VERSION}.gz"
+# mihomo binary — x86-64 uses the `compatible` (GOAMD64=v1) build so it runs on ALL
+# x86-64 CPUs, incl. older NAS/J-series chips without v3 microarch support (issue #174).
+MIHOMO_ASSET="mihomo-linux-${TARBALL_ARCH}-v${VERSION}"
+[ "${TARBALL_ARCH}" = "amd64" ] && MIHOMO_ASSET="mihomo-linux-amd64-compatible-v${VERSION}"
+curl -fL -o mihomo.gz "https://github.com/MetaCubeX/mihomo/releases/download/v${VERSION}/${MIHOMO_ASSET}.gz"
 
 # metacubexd static (advanced-user escape hatch)
 curl -fL -o metacubexd.zip "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"

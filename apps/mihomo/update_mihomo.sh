@@ -61,7 +61,10 @@ app_get_latest_version() {
 app_download() {
     mkdir -p "$WORK_DIR"
 
-    local mihomo_url="https://github.com/MetaCubeX/mihomo/releases/download/v${APP_VERSION}/mihomo-linux-${TARBALL_ARCH}-v${APP_VERSION}.gz"
+    # x86-64: use the `compatible` (GOAMD64=v1) build for universal CPU compat (issue #174)
+    local mihomo_asset="mihomo-linux-${TARBALL_ARCH}-v${APP_VERSION}"
+    [ "${TARBALL_ARCH}" = "amd64" ] && mihomo_asset="mihomo-linux-amd64-compatible-v${APP_VERSION}"
+    local mihomo_url="https://github.com/MetaCubeX/mihomo/releases/download/v${APP_VERSION}/${mihomo_asset}.gz"
     info "下载 mihomo: $mihomo_url"
     curl -L -f -o "$WORK_DIR/mihomo.gz" "$mihomo_url" || error "下载 mihomo 失败"
 

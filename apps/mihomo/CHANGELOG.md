@@ -1,3 +1,10 @@
+## 2026-07-07
+
+- 【修复】x86 非 v3 微架构 CPU 无法运行 mihomo (issue #174)
+  - 根因: 原打包下载 `mihomo-linux-amd64-v${VERSION}` (GOAMD64=v3) 二进制, 在不支持 v3 微架构的老 NAS/J 系列芯片上直接崩溃
+  - x86/amd64 改用 `mihomo-linux-amd64-compatible-v${VERSION}` (GOAMD64=v1) 二进制, 兼容所有 x86-64 CPU
+  - arm64 不受影响 (无微架构分级)
+
 ## 2026-05-21
 
 - v0.3.6: 启停开关从顶部 pill 提升为 hero 控制卡 (用户反馈"太隐蔽")
