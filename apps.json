@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-11T08:32:29Z",
+  "generated_at": "2026-07-11T08:32:50Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -2160,9 +2160,9 @@
       "file_prefix": "prometheus",
       "display_name": "Prometheus",
       "description": "时序数据库和监控系统，支持灵活的查询语言和告警规则。",
-      "version": "3.13.0",
-      "fpk_version": "3.13.0",
-      "release_tag": "prometheus/v3.13.0",
+      "version": "3.13.1",
+      "fpk_version": "3.13.1",
+      "release_tag": "prometheus/v3.13.1",
       "service_port": 9090,
       "homepage_url": "https://prometheus.io",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/prometheus/fnos/ICON_256.PNG",
@@ -2170,7 +2170,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-07-02T09:00:19Z",
+      "updated_at": "2026-07-11T08:32:31Z",
       "download_count": 39,
       "app_type": "native",
       "category": "system"
