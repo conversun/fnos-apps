@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-13T09:01:22Z",
+  "generated_at": "2026-07-13T09:01:46Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -2265,9 +2265,9 @@
       "file_prefix": "radarr",
       "display_name": "Radarr",
       "description": "电影自动化管理工具，自动搜索、下载和整理电影",
-      "version": "6.2.1.10461",
-      "fpk_version": "6.2.1.10461",
-      "release_tag": "radarr/v6.2.1.10461",
+      "version": "6.3.0.10514",
+      "fpk_version": "6.3.0.10514",
+      "release_tag": "radarr/v6.3.0.10514",
       "service_port": 7878,
       "homepage_url": "https://radarr.video",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/radarr/fnos/ICON_256.PNG",
@@ -2275,7 +2275,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-06-10T09:08:55Z",
+      "updated_at": "2026-07-13T09:01:29Z",
       "download_count": 354,
       "app_type": "native",
       "category": "automation"
