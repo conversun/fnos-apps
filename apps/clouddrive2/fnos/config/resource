@@ -1,0 +1,25 @@
+{
+    "port-config": {
+        "protocol-file": "CloudDrive2.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "CloudDrive2",
+                "permission": {
+                    "rw": [
+                        "clouddrive2"
+                    ]
+                }
+            }
+        ]
+    },
+    "docker-project": {
+        "projects": [
+            {
+                "name": "clouddrive2",
+                "path": "docker"
+            }
+        ]
+    }
+}

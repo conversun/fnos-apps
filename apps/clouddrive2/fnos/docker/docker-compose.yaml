@@ -1,0 +1,19 @@
+services:
+  clouddrive2:
+    image: ${DOCKER_MIRROR}docker.io/cloudnas/clouddrive2:${VERSION}
+    container_name: clouddrive2
+    ports:
+      - "${TRIM_SERVICE_PORT}:19798"
+    volumes:
+      - ${TRIM_PKGVAR:?}/data:/CloudNAS:shared
+      - ${TRIM_PKGVAR:?}/config:/Config
+    environment:
+      - TZ=Asia/Shanghai
+      - CLOUDDRIVE_HOME=/Config
+    devices:
+      - /dev/fuse:/dev/fuse
+    pid: host
+    cap_add:
+      - SYS_ADMIN
+    privileged: true
+    restart: unless-stopped

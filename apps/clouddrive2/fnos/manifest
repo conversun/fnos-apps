@@ -1,0 +1,14 @@
+appname         = clouddrive2
+version         = 0.0.0
+display_name    = CloudDrive2
+platform        = x86
+maintainer      = CloudNAS
+maintainer_url  = https://www.clouddrive2.com
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = clouddrive2.Application
+service_port    = 19798
+desc            = 多网盘挂载与管理工具
+source          = thirdparty
+checksum        = 

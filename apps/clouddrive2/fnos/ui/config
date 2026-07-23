@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "clouddrive2.Application":
+        {
+            "title": "CloudDrive2",
+            "desc": "Multi-cloud drive mount tool",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "19798",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}
