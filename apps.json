@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-23T08:50:35Z",
+  "generated_at": "2026-07-23T13:11:52Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -76,8 +76,8 @@
       "display_name": "Alist",
       "description": "网盘聚合工具，支持挂载阿里云盘、百度网盘等多种网络存储到本地。",
       "version": "3.62.0",
-      "fpk_version": "3.62.0",
-      "release_tag": "alist/v3.62.0",
+      "fpk_version": "3.62.0-r1",
+      "release_tag": "alist/v3.62.0-r1",
       "service_port": 5246,
       "homepage_url": "https://github.com/AlistGo/alist",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/alist/fnos/ICON_256.PNG",
@@ -85,7 +85,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-07-14T08:41:25Z",
+      "updated_at": "2026-07-23T13:11:30Z",
       "download_count": 216,
       "app_type": "native",
       "category": "download"
@@ -260,6 +260,27 @@
       "category": "media"
     },
     {
+      "slug": "calibre-web",
+      "appname": "calibre-web",
+      "file_prefix": "calibre-web",
+      "display_name": "Calibre-Web",
+      "description": "Calibre 电子书库 Web 管理与在线阅读",
+      "version": "0.6.26",
+      "fpk_version": "0.6.26",
+      "release_tag": "calibre-web/v0.6.26",
+      "service_port": 8083,
+      "homepage_url": "https://github.com/janeczku/calibre-web",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/calibre-web/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-07-23T13:11:18Z",
+      "download_count": 0,
+      "app_type": "docker",
+      "category": ""
+    },
+    {
       "slug": "certimate",
       "appname": "certimate",
       "file_prefix": "certimate",
@@ -297,7 +318,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:40Z",
-      "download_count": 175,
+      "download_count": 176,
       "app_type": "native",
       "category": "automation"
     },
@@ -340,6 +361,27 @@
       ],
       "updated_at": "2026-07-02T08:59:57Z",
       "download_count": 41,
+      "app_type": "docker",
+      "category": "system"
+    },
+    {
+      "slug": "clouddrive2",
+      "appname": "clouddrive2",
+      "file_prefix": "clouddrive2",
+      "display_name": "CloudDrive2",
+      "description": "多网盘挂载与管理工具",
+      "version": "1.0.13",
+      "fpk_version": "1.0.13",
+      "release_tag": "clouddrive2/v1.0.13",
+      "service_port": 19798,
+      "homepage_url": "https://www.clouddrive2.com/",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/clouddrive2/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-07-23T13:11:17Z",
+      "download_count": 0,
       "app_type": "docker",
       "category": "system"
     },
@@ -612,7 +654,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:41Z",
-      "download_count": 778,
+      "download_count": 779,
       "app_type": "native",
       "category": "media"
     },
@@ -739,7 +781,7 @@
         "arm"
       ],
       "updated_at": "2026-07-15T08:44:16Z",
-      "download_count": 812,
+      "download_count": 815,
       "app_type": "docker",
       "category": "browser"
     },
@@ -834,8 +876,8 @@
       "display_name": "Gitea",
       "description": "轻量级 Git 代码托管服务器，提供代码仓库、Issue 追踪和 CI/CD。",
       "version": "1.27.0",
-      "fpk_version": "1.27.0",
-      "release_tag": "gitea/v1.27.0",
+      "fpk_version": "1.27.0-r1",
+      "release_tag": "gitea/v1.27.0-r1",
       "service_port": 3033,
       "homepage_url": "https://gitea.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/gitea/fnos/ICON_256.PNG",
@@ -843,7 +885,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-07-14T08:41:33Z",
+      "updated_at": "2026-07-23T13:11:29Z",
       "download_count": 126,
       "app_type": "native",
       "category": "system"
@@ -886,7 +928,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:40Z",
-      "download_count": 261,
+      "download_count": 262,
       "app_type": "native",
       "category": "download"
     },
@@ -907,7 +949,7 @@
         "arm"
       ],
       "updated_at": "2026-07-19T08:44:17Z",
-      "download_count": 37,
+      "download_count": 39,
       "app_type": "native",
       "category": "system"
     },
@@ -1096,7 +1138,7 @@
         "arm"
       ],
       "updated_at": "2026-06-07T09:00:22Z",
-      "download_count": 1142,
+      "download_count": 1157,
       "app_type": "native",
       "category": "media"
     },
@@ -1391,7 +1433,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:45Z",
-      "download_count": 461,
+      "download_count": 462,
       "app_type": "native",
       "category": "system"
     },
@@ -1476,7 +1518,7 @@
         "arm"
       ],
       "updated_at": "2026-06-27T08:51:37Z",
-      "download_count": 63,
+      "download_count": 64,
       "app_type": "docker",
       "category": "content"
     },
@@ -1666,7 +1708,7 @@
         "arm"
       ],
       "updated_at": "2026-07-21T08:50:17Z",
-      "download_count": 313,
+      "download_count": 320,
       "app_type": "native",
       "category": "network"
     },
@@ -1867,8 +1909,8 @@
       "display_name": "Nginx UI",
       "description": "Nginx可视化管理面板，内置Nginx引擎，支持在线编辑配置、一键Reload、SSL证书管理。",
       "version": "2.4.3",
-      "fpk_version": "2.4.3",
-      "release_tag": "nginx-ui/v2.4.3",
+      "fpk_version": "2.4.3-r1",
+      "release_tag": "nginx-ui/v2.4.3-r1",
       "service_port": 8889,
       "homepage_url": "https://github.com/0xJacky/nginx-ui",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/nginx-ui/fnos/ICON_256.PNG",
@@ -1876,7 +1918,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-07-21T08:50:32Z",
+      "updated_at": "2026-07-23T13:11:35Z",
       "download_count": 177,
       "app_type": "native",
       "category": "system"
@@ -1943,6 +1985,27 @@
       "download_count": 438,
       "app_type": "native",
       "category": "system"
+    },
+    {
+      "slug": "obsidian",
+      "appname": "obsidian",
+      "file_prefix": "obsidian",
+      "display_name": "Obsidian",
+      "description": "基于 Docker 的 Obsidian 个人知识库",
+      "version": "1.12.7",
+      "fpk_version": "1.12.7",
+      "release_tag": "obsidian/v1.12.7",
+      "service_port": 8080,
+      "homepage_url": "https://obsidian.md",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/obsidian/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-07-23T13:11:14Z",
+      "download_count": 0,
+      "app_type": "docker",
+      "category": "content"
     },
     {
       "slug": "ollama",
@@ -2192,7 +2255,7 @@
         "arm"
       ],
       "updated_at": "2026-07-23T08:50:05Z",
-      "download_count": 565,
+      "download_count": 576,
       "app_type": "native",
       "category": "automation"
     },
@@ -2234,7 +2297,7 @@
         "arm"
       ],
       "updated_at": "2026-07-08T08:49:14Z",
-      "download_count": 946,
+      "download_count": 950,
       "app_type": "native",
       "category": "download"
     },
@@ -2276,7 +2339,7 @@
         "arm"
       ],
       "updated_at": "2026-07-13T09:01:29Z",
-      "download_count": 397,
+      "download_count": 402,
       "app_type": "native",
       "category": "automation"
     },
@@ -2466,7 +2529,7 @@
         "arm"
       ],
       "updated_at": "2026-06-28T08:59:16Z",
-      "download_count": 210,
+      "download_count": 211,
       "app_type": "native",
       "category": "network"
     },
@@ -2508,7 +2571,7 @@
         "arm"
       ],
       "updated_at": "2026-07-23T08:49:42Z",
-      "download_count": 131,
+      "download_count": 132,
       "app_type": "docker",
       "category": "media"
     },
@@ -2781,7 +2844,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:45Z",
-      "download_count": 163,
+      "download_count": 165,
       "app_type": "docker",
       "category": "system"
     },
@@ -2844,7 +2907,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:32Z",
-      "download_count": 169,
+      "download_count": 170,
       "app_type": "docker",
       "category": "system"
     },
@@ -2865,7 +2928,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:20Z",
-      "download_count": 189,
+      "download_count": 190,
       "app_type": "docker",
       "category": "network"
     },
