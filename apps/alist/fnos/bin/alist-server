@@ -10,5 +10,11 @@ if [ -f "$CONFIG_FILE" ] && grep -q "__TRIM_SERVICE_PORT__" "$CONFIG_FILE"; then
     sed -i "s|__TRIM_SERVICE_PORT__|${TRIM_SERVICE_PORT:-5246}|g; s|__JWT_SECRET__|${JWT_SECRET}|g" "$CONFIG_FILE"
 fi
 
+# Keep existing configs aligned with the fnOS service port on every start
+if [ -f "$CONFIG_FILE" ] && ! grep -q "__TRIM_SERVICE_PORT__" "$CONFIG_FILE" \
+    && grep -q '^[[:space:]]*"http_port":[[:space:]]*[0-9-]' "$CONFIG_FILE"; then
+    sed -i "s|^\([[:space:]]*\"http_port\":[[:space:]]*\)[0-9-]*|\1${TRIM_SERVICE_PORT:-5246}|" "$CONFIG_FILE"
+fi
+
 cd "$APP_DIR" || exit 1
 exec ./alist server --data "$APP_DATA_DIR/data"
