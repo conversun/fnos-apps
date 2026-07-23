@@ -315,13 +315,16 @@ daemon_alive() {
 }
 
 probe_http() {
-    local port="$1" path="$2" timeout="$3" statuses="$4"
+    local port="$1" path="$2" timeout="$3" statuses="$4" scheme="${5:-http}"
     local deadline=$(( $(date +%s) + timeout ))
     local last_code=""
+    local tls_opt=()
+    [ "$scheme" = "https" ] && tls_opt=(-k)
     while [ "$(date +%s)" -lt "$deadline" ]; do
         last_code="$(curl -s -o /dev/null -w '%{http_code}' \
                      --max-time 5 \
-                     "http://127.0.0.1:${port}${path}" || echo "000")"
+                     "${tls_opt[@]}" \
+                     "$scheme://127.0.0.1:${port}${path}" || echo "000")"
         if echo "$statuses" | grep -qw "$last_code"; then
             log "HTTP $last_code from 127.0.0.1:${port}${path} (accepted)"
             return 0
@@ -361,12 +364,13 @@ probe_tcp() {
 cmd_probe() {
     load_state
     local hjson="${HEALTH_JSON:-}"
-    local type="http" path="/" port="$TRIM_SERVICE_PORT" timeout=60 warmup=0
-    local statuses="200 301 302 401 403"
+local type="http" path="/" port="$TRIM_SERVICE_PORT" timeout=60 warmup=0
+    local statuses="200 301 302 401 403" scheme="http"
 
     if [ -n "$hjson" ] && [ -f "$hjson" ]; then
         type="$(jq -r '.type // "http"' "$hjson")"
         path="$(jq -r '.path // "/"' "$hjson")"
+        scheme="$(jq -r '.scheme // "http"' "$hjson")"
         local p
         p="$(jq -r '.port // empty' "$hjson")"
         [ -n "$p" ] && port="$p"
@@ -389,7 +393,7 @@ cmd_probe() {
 
     log "Probing type=$type port=$port path=$path timeout=${timeout}s"
     case "$type" in
-        http) probe_http "$port" "$path" "$timeout" "$statuses" ;;
+        http) probe_http "$port" "$path" "$timeout" "$statuses" "$scheme" ;;
         tcp)  probe_tcp  "$port" "$timeout" ;;
         *)    die "unknown health.type='$type'" ;;
     esac

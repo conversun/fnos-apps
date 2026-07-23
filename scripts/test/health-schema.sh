@@ -97,6 +97,18 @@ validate_one() {
         fi
     fi
 
+    # 4b. Optional: scheme must be http or https (http probe type only).
+    local scheme
+    scheme="$(jq -r '.scheme // "http"' <"$health")"
+    if [ "$scheme" != "http" ] && [ "$scheme" != "https" ]; then
+        fail "$slug: scheme='$scheme' must be http or https"
+        return 1
+    fi
+    if [ "$scheme" = "https" ] && [ "$type" != "http" ]; then
+        fail "$slug: scheme=https is only meaningful with type=http"
+        return 1
+    fi
+
     # 5. Optional: startup_timeout_seconds in [1, 600].
     local timeout
     timeout="$(jq -r '.startup_timeout_seconds // 60' <"$health")"

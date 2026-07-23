@@ -62,6 +62,7 @@ crashes. We need an explicit health contract.
 | Field | Default |
 |---|---|
 | `type` | `"http"` |
+| `scheme` | `"http"` |
 | `path` | `"/"` |
 | `expect_status` | `[200, 301, 302, 401, 403]` |
 | `port` | `manifest.service_port` |
@@ -74,6 +75,17 @@ These defaults work for most well-behaved web apps. Override when the app
 deviates.
 
 ## Examples
+
+### obsidian — TLS-only web UI
+
+```json
+{
+  "type": "http",
+  "scheme": "https",
+  "expect_status": [200, 301, 302],
+  "note": "Obsidian serves HTTPS only on container port 3001."
+}
+```
 
 ### gopeed — vanilla Go HTTP server
 
