@@ -3,18 +3,11 @@ description: 报告应用安装或运行问题
 title: "[Bug] "
 labels: ["bug"]
 body:
-  - type: dropdown
+  - type: input
     id: app
     attributes:
       label: 相关应用
-      options:
-        - Plex
-        - Emby
-        - Jellyfin
-        - qBittorrent
-        - Gopeed
-        - ANI-RSS
-        - Nginx
+      description: 应用名（如 plex、jellyfin、navidrome）
     validations:
       required: true
 
