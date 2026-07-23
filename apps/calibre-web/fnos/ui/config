@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "calibre-web.Application":
+        {
+            "title": "Calibre-Web",
+            "desc": "Calibre 电子书库 Web 管理与在线阅读",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "8083",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

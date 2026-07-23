@@ -1,0 +1,7 @@
+{
+    "defaults": {
+        "run-as": "package"
+    },
+    "username": "calibre-web",
+    "groupname": "calibre-web"
+}

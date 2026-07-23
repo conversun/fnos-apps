@@ -1,0 +1,14 @@
+appname         = calibre-web
+version         = 0.0.0
+display_name    = Calibre-Web
+platform        = x86
+maintainer      = conversun
+maintainer_url  = https://github.com/conversun
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = calibre-web.Application
+service_port    = 8083
+desc            = Calibre 电子书库 Web 管理与在线阅读
+source          = thirdparty
+checksum        = 

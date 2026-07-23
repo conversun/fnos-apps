@@ -1,0 +1,14 @@
+services:
+  calibre-web:
+    image: ${DOCKER_MIRROR}docker.io/linuxserver/calibre-web:${VERSION}
+    container_name: calibre-web
+    ports:
+      - "${TRIM_SERVICE_PORT}:8083"
+    volumes:
+      - ${TRIM_PKGVAR:?}/data:/config
+      - ${TRIM_PKGVAR:?}/books:/books
+    environment:
+      - TZ=Asia/Shanghai
+      - PUID=${TRIM_UID}
+      - PGID=${TRIM_GID}
+    restart: unless-stopped

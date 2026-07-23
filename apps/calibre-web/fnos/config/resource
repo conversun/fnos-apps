@@ -1,0 +1,27 @@
+{
+    "port-config": {
+        "protocol-file": "Calibre-Web.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "Calibre-WebBooks",
+                "permission": {
+                    "rw": [
+                        "calibre-web"
+                    ]
+                }
+            }
+        ]
+    },
+    "systemd-unit": {
+    },
+    "docker-project": {
+        "projects": [
+            {
+                "name": "calibre-web",
+                "path": "docker"
+            }
+        ]
+    }
+}
