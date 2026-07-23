@@ -5,4 +5,6 @@ APP_DATA_DIR=$1
 mkdir -p "$APP_DATA_DIR/custom"
 
 cd "$APP_DIR" || exit 1
+export HOME="${TRIM_PKGHOME:-$APP_DATA_DIR}"
+export PATH="/usr/local/bin:/usr/bin:/bin:${PATH:-}"
 exec ./gitea web --port ${TRIM_SERVICE_PORT:-3033} --custom-path "$APP_DATA_DIR/custom" --work-path "$APP_DATA_DIR"
