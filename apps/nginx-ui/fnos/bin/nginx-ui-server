@@ -70,9 +70,9 @@ ConfigDir     = ${APP_DATA_DIR}
 ConfigPath    = ${NGINX_CONF}
 SbinPath      = ${NGINX_BIN}
 PIDPath       = ${NGINX_PID}
-TestConfigCmd = ${NGINX_BIN} -t -c ${NGINX_CONF}
-ReloadCmd     = ${NGINX_BIN} -c ${NGINX_CONF} -s reload
-RestartCmd    = ${NGINX_BIN} -c ${NGINX_CONF} -s reload
+TestConfigCmd  = ${NGINX_BIN} -t -c ${NGINX_CONF} -e ${NGINX_LOG_DIR}/error.log
+ReloadCmd      = ${NGINX_BIN} -c ${NGINX_CONF} -s reload -e ${NGINX_LOG_DIR}/error.log
+RestartCmd     = ${NGINX_BIN} -c ${NGINX_CONF} -s reload -e ${NGINX_LOG_DIR}/error.log
 
 [node]
 Name = fnOS
@@ -85,9 +85,9 @@ if [ -f "$APP_INI" ]; then
     sed -i "s|^SbinPath[[:space:]]*=.*|SbinPath        = ${NGINX_BIN}|" "$APP_INI"
     sed -i "s|^ConfigPath[[:space:]]*=.*|ConfigPath      = ${NGINX_CONF}|" "$APP_INI"
     sed -i "s|^PIDPath[[:space:]]*=.*|PIDPath         = ${NGINX_PID}|" "$APP_INI"
-    sed -i "s|^TestConfigCmd[[:space:]]*=.*|TestConfigCmd   = ${NGINX_BIN} -t -c ${NGINX_CONF}|" "$APP_INI"
-    sed -i "s|^ReloadCmd[[:space:]]*=.*|ReloadCmd       = ${NGINX_BIN} -c ${NGINX_CONF} -s reload|" "$APP_INI"
-    sed -i "s|^RestartCmd[[:space:]]*=.*|RestartCmd      = ${NGINX_BIN} -c ${NGINX_CONF} -s reload|" "$APP_INI"
+    sed -i "s|^TestConfigCmd[[:space:]]*=.*|TestConfigCmd   = ${NGINX_BIN} -t -c ${NGINX_CONF} -e ${NGINX_LOG_DIR}/error.log|" "$APP_INI"
+    sed -i "s|^ReloadCmd[[:space:]]*=.*|ReloadCmd       = ${NGINX_BIN} -c ${NGINX_CONF} -s reload -e ${NGINX_LOG_DIR}/error.log|" "$APP_INI"
+    sed -i "s|^RestartCmd[[:space:]]*=.*|RestartCmd      = ${NGINX_BIN} -c ${NGINX_CONF} -s reload -e ${NGINX_LOG_DIR}/error.log|" "$APP_INI"
 fi
 
 # Ensure nginx lib path is available
