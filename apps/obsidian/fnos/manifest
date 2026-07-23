@@ -1,0 +1,14 @@
+appname         = obsidian
+version         = 0.0.0
+display_name    = Obsidian
+platform        = x86
+maintainer      = conversun
+maintainer_url  = https://github.com/conversun
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = obsidian.Application
+service_port    = 8080
+desc            = 基于 Docker 的 Obsidian 个人知识库
+source          = thirdparty
+checksum        = 

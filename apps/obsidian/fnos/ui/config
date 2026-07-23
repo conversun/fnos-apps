@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "obsidian.Application":
+        {
+            "title": "Obsidian",
+            "desc": "个人知识库与笔记工具",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "8080",
+            "protocol": "https",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

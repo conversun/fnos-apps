@@ -1,0 +1,14 @@
+services:
+  obsidian:
+    image: ${DOCKER_MIRROR}docker.io/linuxserver/obsidian:${VERSION}
+    container_name: obsidian
+    ports:
+      - "${TRIM_SERVICE_PORT}:3001"
+    volumes:
+      - ${TRIM_PKGVAR}/data:/config
+    environment:
+      - TZ=Asia/Shanghai
+      - PUID=${TRIM_UID}
+      - PGID=${TRIM_GID}
+    shm_size: 1gb
+    restart: unless-stopped

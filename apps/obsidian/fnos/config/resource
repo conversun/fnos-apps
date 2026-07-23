@@ -1,0 +1,25 @@
+{
+    "port-config": {
+        "protocol-file": "Obsidian.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "Obsidian",
+                "permission": {
+                    "rw": [
+                        "obsidian"
+                    ]
+                }
+            }
+        ]
+    },
+    "docker-project": {
+        "projects": [
+            {
+                "name": "obsidian",
+                "path": "docker"
+            }
+        ]
+    }
+}
