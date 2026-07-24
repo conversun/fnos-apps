@@ -159,8 +159,8 @@
       "description": "社区维护的 fnOS 应用仓库，包含驱动、系统工具、桌面环境等 20+ 款应用",
       "source_url": "https://github.com/RROrg/fn-apps/releases",
       "github_repo": "RROrg/fn-apps",
-      "latest_version": "2026.07.08-2210",
-      "updated_at": "2026-07-08T14:13:03Z"
+      "latest_version": "2026.07.24-1229",
+      "updated_at": "2026-07-24T04:32:57Z"
     }
   ]
 }
