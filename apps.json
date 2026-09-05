@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-04T08:03:01Z",
+  "generated_at": "2026-09-05T08:03:05Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -65,7 +65,7 @@
         "arm"
       ],
       "updated_at": "2026-08-19T08:08:59Z",
-      "download_count": 105,
+      "download_count": 106,
       "app_type": "docker",
       "category": "system"
     },
@@ -107,7 +107,7 @@
         "arm"
       ],
       "updated_at": "2026-09-03T08:07:38Z",
-      "download_count": 140,
+      "download_count": 147,
       "app_type": "docker",
       "category": "content"
     },
@@ -139,9 +139,9 @@
       "file_prefix": "arcane",
       "display_name": "Arcane",
       "description": "现代化的 Docker 管理界面，可视化管理容器、镜像、Compose 项目与存储卷",
-      "version": "2.10.1",
-      "fpk_version": "2.10.1",
-      "release_tag": "arcane/v2.10.1",
+      "version": "2.10.2",
+      "fpk_version": "2.10.2",
+      "release_tag": "arcane/v2.10.2",
       "service_port": 3552,
       "homepage_url": "https://github.com/getarcaneapp/arcane",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/arcane/fnos/ICON_256.PNG",
@@ -149,7 +149,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-02T08:02:25Z",
+      "updated_at": "2026-09-05T08:02:36Z",
       "download_count": 46,
       "app_type": "docker",
       "category": "system"
@@ -171,7 +171,7 @@
         "arm"
       ],
       "updated_at": "2026-08-31T16:19:35Z",
-      "download_count": 41,
+      "download_count": 43,
       "app_type": "docker",
       "category": "download"
     },
@@ -297,7 +297,7 @@
         "arm"
       ],
       "updated_at": "2026-09-04T08:02:26Z",
-      "download_count": 92,
+      "download_count": 94,
       "app_type": "native",
       "category": "media"
     },
@@ -559,9 +559,9 @@
       "file_prefix": "daidai-panel",
       "display_name": "Daidai Panel",
       "description": "轻量现代的定时任务与脚本管理面板",
-      "version": "3.2.1",
-      "fpk_version": "3.2.1",
-      "release_tag": "daidai-panel/v3.2.1",
+      "version": "3.2.2",
+      "fpk_version": "3.2.2",
+      "release_tag": "daidai-panel/v3.2.2",
       "service_port": 5701,
       "homepage_url": "https://github.com/linzixuanzz/daidai-panel",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/daidai-panel/fnos/ICON_256.PNG",
@@ -569,7 +569,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-04T08:02:19Z",
+      "updated_at": "2026-09-05T08:02:36Z",
       "download_count": 58,
       "app_type": "docker",
       "category": "system"
@@ -591,7 +591,7 @@
         "arm"
       ],
       "updated_at": "2026-08-30T08:02:10Z",
-      "download_count": 52,
+      "download_count": 53,
       "app_type": "docker",
       "category": "content"
     },
@@ -601,9 +601,9 @@
       "file_prefix": "ddns-go",
       "display_name": "DDNS-GO",
       "description": "DDNS-GO 是一个简单好用的 DDNS 工具，支持阿里云、腾讯云、Cloudflare 等多个 DNS 服务商。",
-      "version": "6.17.6",
-      "fpk_version": "6.17.6",
-      "release_tag": "ddns-go/v6.17.6",
+      "version": "6.17.7",
+      "fpk_version": "6.17.7",
+      "release_tag": "ddns-go/v6.17.7",
       "service_port": 9876,
       "homepage_url": "https://github.com/jeessy2/ddns-go",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ddns-go/fnos/ICON_256.PNG",
@@ -611,7 +611,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-08-20T08:10:20Z",
+      "updated_at": "2026-09-05T08:02:33Z",
       "download_count": 68,
       "app_type": "native",
       "category": "system"
@@ -633,7 +633,7 @@
         "arm"
       ],
       "updated_at": "2026-09-03T08:07:43Z",
-      "download_count": 23,
+      "download_count": 24,
       "app_type": "docker",
       "category": "content"
     },
@@ -727,9 +727,9 @@
       "file_prefix": "ente",
       "display_name": "Ente",
       "description": "端到端加密照片备份和存储服务，Google Photos 的隐私替代方案。",
-      "version": "latest-2026.09.04",
-      "fpk_version": "latest-2026.09.04",
-      "release_tag": "ente/vlatest-2026.09.04",
+      "version": "latest-2026.09.05",
+      "fpk_version": "latest-2026.09.05",
+      "release_tag": "ente/vlatest-2026.09.05",
       "service_port": 8510,
       "homepage_url": "https://ente.io",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ente/fnos/ICON_256.PNG",
@@ -737,7 +737,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-04T08:02:18Z",
+      "updated_at": "2026-09-05T08:02:34Z",
       "download_count": 60,
       "app_type": "docker",
       "category": "media",
@@ -949,7 +949,7 @@
         "arm"
       ],
       "updated_at": "2026-08-30T08:02:25Z",
-      "download_count": 182,
+      "download_count": 185,
       "app_type": "native",
       "category": "system"
     },
@@ -1033,7 +1033,7 @@
         "arm"
       ],
       "updated_at": "2026-09-02T08:04:39Z",
-      "download_count": 217,
+      "download_count": 219,
       "app_type": "native",
       "category": "system"
     },
@@ -1148,9 +1148,9 @@
       "file_prefix": "immich",
       "display_name": "Immich",
       "description": "自托管照片和视频备份方案,支持人脸识别和智能搜索。",
-      "version": "release-2026.09.04",
-      "fpk_version": "release-2026.09.04",
-      "release_tag": "immich/vrelease-2026.09.04",
+      "version": "release-2026.09.05",
+      "fpk_version": "release-2026.09.05",
+      "release_tag": "immich/vrelease-2026.09.05",
       "service_port": 2283,
       "homepage_url": "https://github.com/immich-app/immich",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/immich/fnos/ICON_256.PNG",
@@ -1158,7 +1158,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-04T08:02:21Z",
+      "updated_at": "2026-09-05T08:02:33Z",
       "download_count": 475,
       "app_type": "docker",
       "category": "media"
@@ -1190,9 +1190,9 @@
       "file_prefix": "jackett",
       "display_name": "Jackett",
       "description": "Torrent 索引器代理，为 Sonarr/Radarr 等工具提供统一的搜索接口。",
-      "version": "0.24.2531",
-      "fpk_version": "0.24.2531",
-      "release_tag": "jackett/v0.24.2531",
+      "version": "0.24.2538",
+      "fpk_version": "0.24.2538",
+      "release_tag": "jackett/v0.24.2538",
       "service_port": 9117,
       "homepage_url": "https://github.com/Jackett/Jackett",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/jackett/fnos/ICON_256.PNG",
@@ -1200,7 +1200,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-04T08:02:32Z",
+      "updated_at": "2026-09-05T08:02:42Z",
       "download_count": 111,
       "app_type": "native",
       "category": "automation"
@@ -1738,9 +1738,9 @@
       "file_prefix": "miair-next",
       "display_name": "MiAir Next",
       "description": "将小米小爱音箱转换为 DLNA 与 AirPlay 接收器，提供 Web 管理后台",
-      "version": "0.5.7",
-      "fpk_version": "0.5.7",
-      "release_tag": "miair-next/v0.5.7",
+      "version": "0.5.11",
+      "fpk_version": "0.5.11",
+      "release_tag": "miair-next/v0.5.11",
       "service_port": 8300,
       "homepage_url": "https://github.com/deerwan/miair-next",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/miair-next/fnos/ICON_256.PNG",
@@ -1748,7 +1748,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-04T08:02:20Z",
+      "updated_at": "2026-09-05T08:02:39Z",
       "download_count": 77,
       "app_type": "docker",
       "category": "media"
@@ -1833,7 +1833,7 @@
         "arm"
       ],
       "updated_at": "2026-08-24T02:54:34Z",
-      "download_count": 383,
+      "download_count": 403,
       "app_type": "docker",
       "category": "content",
       "post_install_note": "请在 Web UI 中设置媒体库和下载目录，确保与下载工具（如 qBittorrent）使用的路径一致。"
@@ -1865,9 +1865,9 @@
       "file_prefix": "n8n",
       "display_name": "n8n",
       "description": "可视化工作流自动化工具，支持连接数百种服务和 API。",
-      "version": "2.37.9",
-      "fpk_version": "2.37.9",
-      "release_tag": "n8n/v2.37.9",
+      "version": "2.37.10",
+      "fpk_version": "2.37.10",
+      "release_tag": "n8n/v2.37.10",
       "service_port": 5678,
       "homepage_url": "https://n8n.io",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/n8n/fnos/ICON_256.PNG",
@@ -1875,7 +1875,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-04T08:02:24Z",
+      "updated_at": "2026-09-05T08:02:40Z",
       "download_count": 73,
       "app_type": "docker",
       "category": "system"
@@ -1971,9 +1971,9 @@
       "file_prefix": "next-ai-draw-io",
       "display_name": "Next AI Draw.io",
       "description": "基于大语言模型的 draw.io 图表生成与编辑工具",
-      "version": "latest-2026.09.04",
-      "fpk_version": "latest-2026.09.04",
-      "release_tag": "next-ai-draw-io/vlatest-2026.09.04",
+      "version": "latest-2026.09.05",
+      "fpk_version": "latest-2026.09.05",
+      "release_tag": "next-ai-draw-io/vlatest-2026.09.05",
       "service_port": 3007,
       "homepage_url": "https://github.com/chadkunsman/next-ai-draw-io",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/next-ai-draw-io/fnos/ICON_256.PNG",
@@ -1981,7 +1981,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-04T08:02:28Z",
+      "updated_at": "2026-09-05T08:02:43Z",
       "download_count": 21,
       "app_type": "docker",
       "category": "ai"
@@ -2150,7 +2150,7 @@
         "arm"
       ],
       "updated_at": "2026-08-22T08:05:00Z",
-      "download_count": 259,
+      "download_count": 264,
       "app_type": "docker",
       "category": "content"
     },
@@ -2255,7 +2255,7 @@
         "arm"
       ],
       "updated_at": "2026-08-31T15:31:33Z",
-      "download_count": 134,
+      "download_count": 154,
       "app_type": "docker",
       "category": "network"
     },
@@ -2538,9 +2538,9 @@
       "file_prefix": "rclone",
       "display_name": "Rclone",
       "description": "强大的云存储同步工具，支持 50+ 种存储后端的文件管理和同步。默认用户名admin，密码admin。",
-      "version": "1.75.0",
-      "fpk_version": "1.75.0-r3",
-      "release_tag": "rclone/v1.75.0-r3",
+      "version": "1.75.1",
+      "fpk_version": "1.75.1",
+      "release_tag": "rclone/v1.75.1",
       "service_port": 5572,
       "homepage_url": "https://rclone.org",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/rclone/fnos/ICON_256.PNG",
@@ -2548,7 +2548,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-08-17T08:46:59Z",
+      "updated_at": "2026-09-05T08:02:44Z",
       "download_count": 184,
       "app_type": "native",
       "category": "download"
@@ -2886,7 +2886,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T06:31:00Z",
-      "download_count": 6,
+      "download_count": 7,
       "app_type": "native",
       "category": "system"
     },
@@ -2928,7 +2928,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T09:51:16Z",
-      "download_count": 86,
+      "download_count": 94,
       "app_type": "docker",
       "category": "media"
     },
@@ -3022,9 +3022,9 @@
       "file_prefix": "transmission",
       "display_name": "Transmission",
       "description": "Transmission 是一个轻量级的 BitTorrent 客户端，以简洁高效著称，支持 Web 远程管理。",
-      "version": "latest-2026.09.04",
-      "fpk_version": "latest-2026.09.04",
-      "release_tag": "transmission/vlatest-2026.09.04",
+      "version": "latest-2026.09.05",
+      "fpk_version": "latest-2026.09.05",
+      "release_tag": "transmission/vlatest-2026.09.05",
       "service_port": 9091,
       "homepage_url": "https://transmissionbt.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/transmission/fnos/ICON_256.PNG",
@@ -3032,7 +3032,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-04T08:02:31Z",
+      "updated_at": "2026-09-05T08:02:42Z",
       "download_count": 61,
       "app_type": "docker",
       "category": "download"
@@ -3106,9 +3106,9 @@
       "file_prefix": "vibenvr",
       "display_name": "VibeNVR",
       "description": "AI 网络视频录像机，支持摄像头管理、录像与硬件加速转码。",
-      "version": "1.35.0",
-      "fpk_version": "1.35.0",
-      "release_tag": "vibenvr/v1.35.0",
+      "version": "1.35.1",
+      "fpk_version": "1.35.1",
+      "release_tag": "vibenvr/v1.35.1",
       "service_port": 8087,
       "homepage_url": "https://github.com/spupuz/VibeNVR",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/vibenvr/fnos/ICON_256.PNG",
@@ -3116,7 +3116,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-02T08:02:29Z",
+      "updated_at": "2026-09-05T08:02:41Z",
       "download_count": 51,
       "app_type": "docker",
       "category": "media"
@@ -3159,7 +3159,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T10:46:49Z",
-      "download_count": 257,
+      "download_count": 265,
       "app_type": "docker",
       "category": "network"
     },
@@ -3232,9 +3232,9 @@
       "file_prefix": "zeroclaw",
       "display_name": "ZeroClaw",
       "description": "轻量级 AI 智能体运行时，Rust 编写，<5MB 内存占用，支持多模型多通道自主智能体工作流",
-      "version": "0.8.4",
-      "fpk_version": "0.8.4-r3",
-      "release_tag": "zeroclaw/v0.8.4-r3",
+      "version": "0.8.5",
+      "fpk_version": "0.8.5",
+      "release_tag": "zeroclaw/v0.8.5",
       "service_port": 42617,
       "homepage_url": "https://github.com/zeroclaw-labs/zeroclaw",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/zeroclaw/fnos/ICON_256.PNG",
@@ -3242,7 +3242,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-08-17T08:46:55Z",
+      "updated_at": "2026-09-05T08:02:41Z",
       "download_count": 149,
       "app_type": "native",
       "category": "ai"
