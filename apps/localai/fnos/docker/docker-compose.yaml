@@ -1,6 +1,8 @@
 services:
   localai:
-    image: ${DOCKER_MIRROR}docker.io/localai/localai:${VERSION}-cpu
+    # LocalAI dropped the "-cpu" suffix: plain "vX.Y.Z" is the CPU build and
+    # "vX.Y.Z-gpu-*" the accelerated ones. "${VERSION}-cpu" tags no longer exist (#288-class).
+    image: ${DOCKER_MIRROR}docker.io/localai/localai:v${VERSION}
     container_name: localai
     ports:
       - "${TRIM_SERVICE_PORT}:8080"
