@@ -1,0 +1,15 @@
+appname         = rustdesk-server
+version         = 0.0.0
+display_name    = RustDesk Server
+platform        = x86
+maintainer      = Purslane Ltd.
+maintainer_url  = https://github.com/rustdesk/rustdesk-server
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = rustdesk-server.Application
+service_port    = 21116
+checkport       = false
+desc            = 开源远程桌面 RustDesk 的自建服务端（hbbs 信令 + hbbr 中继），让远程控制流量完全不经过第三方服务器；公钥位于应用数据目录，客户端填入 NAS 地址即可使用
+source          = thirdparty
+checksum        = 

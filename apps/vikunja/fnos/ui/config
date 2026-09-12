@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "vikunja.Application":
+        {
+            "title": "Vikunja",
+            "desc": "The to-do app to organize your life",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "3456",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "pocket-id.Application":
+        {
+            "title": "Pocket ID",
+            "desc": "OIDC / Passkey identity provider",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "1411",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

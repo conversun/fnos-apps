@@ -1,0 +1,19 @@
+#!/bin/bash
+
+LOG_FILE="${TRIM_PKGVAR}/${TRIM_APPNAME}.log"
+PID_FILE="${TRIM_PKGVAR}/${TRIM_APPNAME}.pid"
+
+APP_DIR="${TRIM_APPDEST}"
+APP_DATA_DIR="${TRIM_PKGVAR}"
+
+SERVICE_COMMAND="$APP_DIR/bin/vikunja-server $APP_DATA_DIR"
+SVC_BACKGROUND=y
+SVC_WRITE_PID=y
+
+service_postinst() {
+    mkdir -p "${TRIM_PKGVAR}/files" 2>/dev/null || true
+}
+
+service_poststop() {
+    pkill -f "^${APP_DIR}/vikunja" 2>/dev/null || true  # pkill-f-ok: anchored to the absolute install path
+}

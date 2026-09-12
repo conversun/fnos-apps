@@ -1,0 +1,7 @@
+#!/bin/sh
+APP_DIR="${TRIM_APPDEST}"
+APP_DATA_DIR=$1
+
+mkdir -p "$APP_DATA_DIR" 2>/dev/null || true
+cd "$APP_DIR" || exit 1
+exec ./frps -c "$APP_DATA_DIR/frps.toml"

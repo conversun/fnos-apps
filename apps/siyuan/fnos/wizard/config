@@ -1,0 +1,13 @@
+[
+    {
+        "stepTitle": "SiYuan 设置",
+        "items": [
+            {
+                "type": "password",
+                "field": "wizard_access_code",
+                "label": "浏览器访问口令（留空则不修改）",
+                "initValue": ""
+            }
+        ]
+    }
+]

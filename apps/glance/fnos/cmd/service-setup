@@ -1,0 +1,23 @@
+#!/bin/bash
+
+LOG_FILE="${TRIM_PKGVAR}/${TRIM_APPNAME}.log"
+PID_FILE="${TRIM_PKGVAR}/${TRIM_APPNAME}.pid"
+
+APP_DIR="${TRIM_APPDEST}"
+APP_DATA_DIR="${TRIM_PKGVAR}"
+
+SERVICE_COMMAND="$APP_DIR/bin/glance-server $APP_DATA_DIR"
+SVC_BACKGROUND=y
+SVC_WRITE_PID=y
+
+service_postinst() {
+    if [ ! -f "${TRIM_PKGVAR}/glance.yml" ]; then
+        sed "s/__PORT__/${TRIM_SERVICE_PORT:-9678}/" \
+            "${APP_DIR}/glance.yml.template" > "${TRIM_PKGVAR}/glance.yml" 2>/dev/null || true
+    fi
+    mkdir -p "${TRIM_PKGVAR}/cache" 2>/dev/null || true
+}
+
+service_poststop() {
+    pkill -f "^${APP_DIR}/glance" 2>/dev/null || true  # pkill-f-ok: anchored to the absolute install path
+}

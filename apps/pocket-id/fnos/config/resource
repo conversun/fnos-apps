@@ -1,0 +1,16 @@
+{
+    "data-share": {
+        "shares": [
+            {
+                "name": "Pocket ID",
+                "permission": {
+                    "rw": [
+                        "pocket-id"
+                    ]
+                }
+            }
+        ]
+    },
+    "systemd-unit": {
+    }
+}

@@ -1,0 +1,14 @@
+appname         = pocket-id
+version         = 0.0.0
+display_name    = Pocket ID
+platform        = x86
+maintainer      = Pocket ID
+maintainer_url  = https://github.com/pocket-id/pocket-id
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = pocket-id.Application
+service_port    = 1411
+desc            = 轻量 OIDC 单点登录/Passkey 身份提供方：为 Jellyfin、Immich、Nginx Proxy Manager 等自托管应用提供「指纹/Passkey 免密码」统一登录，无需暴露密码
+source          = thirdparty
+checksum        = 

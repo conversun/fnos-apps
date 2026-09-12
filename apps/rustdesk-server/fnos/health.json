@@ -1,0 +1,6 @@
+{
+    "type": "skip",
+    "note": "hbbs/hbbr expose no HTTP listener; the RustDesk protocol ports (21115-21119) are the service surface.",
+    "skip_arch": [],
+    "startup_timeout_seconds": 30
+}

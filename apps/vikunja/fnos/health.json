@@ -1,0 +1,9 @@
+{
+    "type": "http",
+    "path": "/",
+    "expect_status": [200, 301, 302, 401, 403],
+    "startup_timeout_seconds": 60,
+    "post_install_warmup_seconds": 0,
+    "skip_arch": [],
+    "note": ""
+}

@@ -1,0 +1,14 @@
+appname         = glance
+version         = 0.0.0
+display_name    = Glance
+platform        = x86
+maintainer      = Glance
+maintainer_url  = https://github.com/glanceapp/glance
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = glance.Application
+service_port    = 9678
+desc            = 高颜值自托管仪表盘：一页聚合 RSS、书签、站点监控、Docker 状态、市场行情等数十种小组件
+source          = thirdparty
+checksum        = 

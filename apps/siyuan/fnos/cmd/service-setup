@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# fnOS creates the container BEFORE install hooks run, so the wizard's access
+# code reaches it only through compose substitution. Persist the chosen code
+# and replay it into the compose fallback on every (re)install/upgrade — the
+# same contract as the PORT_SAVE pattern (conversun/fnos-apps#146).
+COMPOSE_FILE="${TRIM_APPDEST}/docker/docker-compose.yaml"
+CODE_SAVE="${TRIM_PKGVAR}/.access_code"
+
+apply_access_code() {
+    local code="$1"
+    [ -z "$code" ] && return
+    sed -i 's|--accessAuthCode=[^"]*|--accessAuthCode='"${code}"'|' "$COMPOSE_FILE" 2>/dev/null || true
+    echo "${code}" > "$CODE_SAVE"
+    install_log "Patched docker-compose.yaml: accessAuthCode updated"
+}
+
+service_postinst() {
+    if [ -n "${wizard_access_code:-}" ]; then
+        echo "${wizard_access_code}" > "${CODE_SAVE}"
+    elif [ ! -f "${CODE_SAVE}" ]; then
+        echo "siyuan" > "${CODE_SAVE}"
+    fi
+    mkdir -p "${TRIM_PKGVAR}/workspace" 2>/dev/null || true
+}
+
+service_postupgrade() {
+    if [ -f "${CODE_SAVE}" ]; then
+        apply_access_code "$(cat "${CODE_SAVE}")"
+    fi
+}
+
+service_postconfig() {
+    if [ -n "${wizard_access_code:-}" ]; then
+        apply_access_code "${wizard_access_code}"
+    fi
+}

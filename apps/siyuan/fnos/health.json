@@ -1,0 +1,6 @@
+{
+    "type": "skip",
+    "note": "Docker app: the L3 runner has no Docker daemon; real proof is installing on a fnOS box.",
+    "skip_arch": [],
+    "startup_timeout_seconds": 30
+}

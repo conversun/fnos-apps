@@ -1,0 +1,21 @@
+server:
+  port: __PORT__
+  cache: /__CACHE__
+
+pages:
+  - name: Home
+    columns:
+      - size: full
+        widgets:
+          - type: bookmarks
+            groups:
+              - title: 常用
+                links:
+                  - title: fnOS 帮助中心
+                    url: https://help.fnnas.com
+                  - title: 应用中心项目
+                    url: https://github.com/conversun/fnos-apps
+          - type: monitor
+            sites:
+              - title: 本机 Glance
+                url: http://localhost:__PORT__

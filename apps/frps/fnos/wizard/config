@@ -1,0 +1,13 @@
+[
+    {
+        "stepTitle": "FRP Server",
+        "items": [
+            {
+                "type": "text",
+                "field": "wizard_frps_token",
+                "label": "鉴权 token（可留空，frpc 客户端需一致）",
+                "initValue": ""
+            }
+        ]
+    }
+]

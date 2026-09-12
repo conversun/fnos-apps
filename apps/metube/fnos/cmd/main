@@ -1,0 +1,21 @@
+#!/bin/bash
+FILE_PATH="${TRIM_APPDEST}/docker/docker-compose.yaml"
+
+is_docker_running() {
+    if [ ! -f "$FILE_PATH" ]; then
+        return 1
+    fi
+    docker inspect metube 2>/dev/null | grep -q "\"Status\": \"running\"," || exit 1
+}
+
+case $1 in
+start) exit 0 ;;
+stop) exit 0 ;;
+status) if is_docker_running; then exit 0; else exit 3; fi ;;
+log)
+    if [ -f "$FILE_PATH" ]; then
+        docker logs --tail "${2:-100}" metube 2>&1
+    fi
+    ;;
+*) exit 1 ;;
+esac

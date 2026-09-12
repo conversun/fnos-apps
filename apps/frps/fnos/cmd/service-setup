@@ -1,0 +1,52 @@
+#!/bin/bash
+
+LOG_FILE="${TRIM_PKGVAR}/${TRIM_APPNAME}.log"
+PID_FILE="${TRIM_PKGVAR}/${TRIM_APPNAME}.pid"
+
+APP_DIR="${TRIM_APPDEST}"
+APP_DATA_DIR="${TRIM_PKGVAR}"
+
+SERVICE_COMMAND="$APP_DIR/bin/frps-server $APP_DATA_DIR"
+SVC_BACKGROUND=y
+SVC_WRITE_PID=y
+
+write_default_config() {
+    [ -f "${TRIM_PKGVAR}/frps.toml" ] && return
+    local pwd_file="${TRIM_PKGVAR}/.dashboard_password"
+    local dash_pwd
+    dash_pwd=$(head -c 16 /dev/urandom | od -An -tx1 | tr -d ' \n' | head -c 12)
+    echo "${dash_pwd}" > "$pwd_file"
+    chmod 600 "$pwd_file" 2>/dev/null || true
+    cat > "${TRIM_PKGVAR}/frps.toml" <<EOF
+bindAddr = "0.0.0.0"
+bindPort = 7000
+
+# Web 管理面板
+webServer.addr = "0.0.0.0"
+webServer.port = 7500
+webServer.user = "admin"
+webServer.password = "${dash_pwd}"
+
+# 如需鉴权，取消注释并填写 token（frpc 客户端需一致）
+# auth.token = "your-token"
+EOF
+    install_log "Generated frps.toml (dashboard admin / $(cat "$pwd_file"))"
+}
+
+service_postinst() {
+    write_default_config
+    if [ -n "${wizard_frps_token:-}" ]; then
+        sed -i "s|^# auth.token = .*|auth.token = \"${wizard_frps_token}\"|" "${TRIM_PKGVAR}/frps.toml" 2>/dev/null || true
+    fi
+}
+
+service_postconfig() {
+    if [ -n "${wizard_frps_token:-}" ]; then
+        sed -i "s|^auth.token = .*|auth.token = \"${wizard_frps_token}\"|" "${TRIM_PKGVAR}/frps.toml" 2>/dev/null || true
+        sed -i "s|^# auth.token = .*|auth.token = \"${wizard_frps_token}\"|" "${TRIM_PKGVAR}/frps.toml" 2>/dev/null || true
+    fi
+}
+
+service_poststop() {
+    pkill -f "^${APP_DIR}/frps" 2>/dev/null || true  # pkill-f-ok: anchored to the absolute install path
+}

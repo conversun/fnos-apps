@@ -1,0 +1,12 @@
+services:
+  metube:
+    image: ${DOCKER_MIRROR}docker.io/alexta69/metube:latest
+    container_name: metube
+    ports:
+      - "${TRIM_SERVICE_PORT}:8081"
+    volumes:
+      - ${TRIM_PKGVAR:?}/downloads:/downloads
+    environment:
+      - TZ=Asia/Shanghai
+      - OUTPUT_TEMPLATE=%(title).200s [%(id)s].%(ext)s
+    restart: unless-stopped

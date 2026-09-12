@@ -74,6 +74,7 @@
 | <img src="apps/transmission/fnos/ICON.PNG" width="28"> | **Transmission** | `9091` | 轻量级 BitTorrent 客户端 | [官网](https://transmissionbt.com) | [Release][r-transmission] |
 | <img src="apps/aria2-next/fnos/ICON.PNG" width="28"> | **Aria2 Next** | `6800` | 活跃维护的 aria2 分支下载引擎（RPC，无内置网页，配 AriaNg 使用） | [GitHub](https://github.com/AnInsomniacy/aria2-next) | [Release][r-aria2-next] |
 | <img src="apps/gopeed/fnos/ICON.PNG" width="28"> | **Gopeed** | `9999` | 高速下载器，支持 HTTP/BT/Magnet | [官网](https://gopeed.com) | [Release][r-gopeed] |
+| <img src="apps/metube/fnos/ICON.PNG" width="28"> | **MeTube** | `8281` | 网页版 yt-dlp：粘链接即下，支持上千站点 | [GitHub](https://github.com/alexta69/metube) | [Release][r-metube] |
 | <img src="apps/syncthing/fnos/ICON.PNG" width="28"> | **Syncthing** | `8384` | 文件同步工具，P2P 架构 | [官网](https://syncthing.net) | [Release][r-syncthing] |
 | <img src="apps/alist/fnos/ICON.PNG" width="28"> | **Alist** | `5246` | 网盘聚合工具，挂载阿里云盘/百度盘等 | [GitHub](https://github.com/AlistGo/alist) | [Release][r-alist] |
 | <img src="apps/rclone/fnos/ICON.PNG" width="28"> | **Rclone** | `5572` | 云存储同步工具，支持 50+ 存储后端 | [官网](https://rclone.org) | [Release][r-rclone] |
@@ -85,6 +86,8 @@
 
 | | App | 端口 | 说明 | 来源 | 下载 |
 |:---:|---|---:|---|:---:|:---:|
+| <img src="apps/siyuan/fnos/ICON.PNG" width="28"> | **SiYuan 思源笔记** | `6806` | 块级编辑与双向链接知识库，内核服务器模式，网页端访问 | [官网](https://b3log.org/siyuan) | [Release][r-siyuan] |
+| <img src="apps/vikunja/fnos/ICON.PNG" width="28"> | **Vikunja** | `3456` | 待办清单与看板（列表/甘特/日历），配手机 App | [官网](https://vikunja.io) | [Release][r-vikunja] |
 | <img src="apps/ani-rss/fnos/ICON.PNG" width="28"> | **ANI-RSS** | `7789` | 动漫 RSS 自动追番，默认账号 `admin/admin` | [GitHub](https://github.com/wushuo894/ani-rss) | [Release][r-ani] |
 | <img src="apps/danmu-api/fnos/ICON.PNG" width="28"> | **Danmu API** | `9321` | 弹幕 API 服务器，兼容弹弹play 接口规范 | [GitHub](https://github.com/huangxd-/danmu_api) | [Release][r-danmu-api] |
 | <img src="apps/auto-bangumi/fnos/ICON.PNG" width="28"> | **AutoBangumi** | `7892` | RSS 自动追番下载整理，默认账号 `admin/adminadmin` | [GitHub](https://github.com/EstrellaXD/Auto_Bangumi) | [Release][r-ab] |
@@ -122,11 +125,13 @@
 | <img src="apps/sun-panel/fnos/ICON.PNG" width="28"> | **Sun-Panel** | `3002` | 服务器/NAS 导航面板 | [官网](https://doc.sun-panel.top/zh_cn) | [Release][r-sunpanel] |
 | <img src="apps/homepage/fnos/ICON.PNG" width="28"> | **Homepage** | `3003` | 高度可定制的应用仪表盘 | [官网](https://gethomepage.dev) | [Release][r-homepage] |
 | <img src="apps/homarr/fnos/ICON.PNG" width="28"> | **Homarr** | `7575` | 服务器仪表盘与应用管理 | [官网](https://homarr.dev) | [Release][r-homarr] |
+| <img src="apps/glance/fnos/ICON.PNG" width="28"> | **Glance** | `9678` | 高颜值聚合仪表盘：RSS/书签/监控/市场几十种小组件 | [GitHub](https://github.com/glanceapp/glance) | [Release][r-glance] |
 | <img src="apps/certimate/fnos/ICON.PNG" width="28"> | **Certimate** | `8090` | SSL 证书管理 | [GitHub](https://github.com/certimate-go/certimate) | [Release][r-certimate] |
 | <img src="apps/vaultwarden/fnos/ICON.PNG" width="28"> | **Vaultwarden** | `8880` | 密码管理（Bitwarden 兼容） | [GitHub](https://github.com/dani-garcia/vaultwarden) | [Release][r-vw] |
 | <img src="apps/nginx/fnos/ICON.PNG" width="28"> | **Nginx** | `8888` | HTTP 服务与反向代理 | [官网](https://nginx.org) | [Release][r-nginx] |
 | <img src="apps/nginx-ui/fnos/ICON.PNG" width="28"> | **Nginx UI** | `9000` | Nginx 可视化管理面板，内置 Nginx 引擎 | [GitHub](https://github.com/0xJacky/nginx-ui) | [Release][r-nginx-ui] |
 | <img src="apps/gotify/fnos/ICON.PNG" width="28"> | **Gotify** | `8070` | 自托管推送通知服务 | [官网](https://gotify.net) | [Release][r-gotify] |
+| <img src="apps/pocket-id/fnos/ICON.PNG" width="28"> | **Pocket ID** | `1411` | 轻量 OIDC/Passkey 单点登录，为自托管应用统一免密登录 | [GitHub](https://github.com/pocket-id/pocket-id) | [Release][r-pocket-id] |
 | <img src="apps/ddns-go/fnos/ICON.PNG" width="28"> | **DDNS-GO** | `9876` | 动态 DNS 解析客户端 | [GitHub](https://github.com/jeessy2/ddns-go) | [Release][r-ddnsgo] |
 | <img src="apps/wolgoweb/fnos/ICON.PNG" width="28"> | **WolGoWeb** | `9095` | 网络唤醒 (Wake-on-LAN) 管理 | [GitHub](https://github.com/xiaoxinpro/WolGoWeb) | [Release][r-wolgoweb] |
 | <img src="apps/adguardhome/fnos/ICON.PNG" width="28"> | **AdGuardHome** | `3080` | 全网广告拦截与 DNS 管理 | [官网](https://adguard.com/adguard-home/overview.html) | [Release][r-adguardhome] |
@@ -135,7 +140,10 @@
 | <img src="apps/filebrowser/fnos/ICON.PNG" width="28"> | **FileBrowser** | `8089` | Web 文件管理器 | [官网](https://filebrowser.org) | [Release][r-filebrowser] |
 | <img src="apps/stirling-pdf/fnos/ICON.PNG" width="28"> | **Stirling-PDF** | `18080` | 自托管 PDF 工具箱 | [官网](https://stirlingpdf.io) | [Release][r-stirlingpdf] |
 | <img src="apps/actual-budget/fnos/ICON.PNG" width="28"> | **Actual Budget** | `5006` | 自托管个人财务管理 | [官网](https://actualbudget.org) | [Release][r-actual] |
+| <img src="apps/homebox/fnos/ICON.PNG" width="28"> | **Homebox** | `7745` | 家庭物品资产管理与库存：位置/标签/保修归档 | [GitHub](https://github.com/sysadminsmedia/homebox) | [Release][r-homebox] |
 | <img src="apps/lucky/fnos/ICON.PNG" width="28"> | **Lucky** | `16601` | DDNS/反向代理/端口转发多功能工具 | [官网](https://lucky666.cn) | [Release][r-lucky] |
+| <img src="apps/frps/fnos/ICON.PNG" width="28"> | **FRP Server** | `7000` | 高性能内网穿透服务端 frps，Web 面板 7500 | [GitHub](https://github.com/fatedier/frp) | [Release][r-frps] |
+| <img src="apps/rustdesk-server/fnos/ICON.PNG" width="28"> | **RustDesk Server** | `21116` | 远程桌面自建服务端（hbbs+hbbr），流量不经第三方 | [官网](https://rustdesk.com) | [Release][r-rustdesk-server] |
 | <img src="apps/1panel/fnos/ICON.PNG" width="28"> | **1Panel** | `10086` | 开源服务器管理面板 | [官网](https://1panel.cn) | [Release][r-1panel] |
 | <img src="apps/grafana/fnos/ICON.PNG" width="28"> | **Grafana** | `3010` | 可视化监控仪表盘 | [官网](https://grafana.com) | [Release][r-grafana] |
 | <img src="apps/prometheus/fnos/ICON.PNG" width="28"> | **Prometheus** | `9090` | 时序数据库与监控系统 | [官网](https://prometheus.io) | [Release][r-prometheus] |
@@ -316,6 +324,14 @@ fnos-apps/
 [r-actual]: https://github.com/conversun/fnos-apps/releases?q=actual-budget
 [r-lucky]: https://github.com/conversun/fnos-apps/releases?q=lucky
 [r-aellus]: https://github.com/conversun/fnos-apps/releases?q=aellus
+[r-siyuan]: https://github.com/conversun/fnos-apps/releases?q=siyuan
+[r-vikunja]: https://github.com/conversun/fnos-apps/releases?q=vikunja
+[r-glance]: https://github.com/conversun/fnos-apps/releases?q=glance
+[r-frps]: https://github.com/conversun/fnos-apps/releases?q=frps
+[r-rustdesk-server]: https://github.com/conversun/fnos-apps/releases?q=rustdesk-server
+[r-pocket-id]: https://github.com/conversun/fnos-apps/releases?q=pocket-id
+[r-homebox]: https://github.com/conversun/fnos-apps/releases?q=homebox
+[r-metube]: https://github.com/conversun/fnos-apps/releases?q=metube
 [r-smartdns]: https://github.com/conversun/fnos-apps/releases?q=smartdns
 [r-mihomo]: https://github.com/conversun/fnos-apps/releases?q=mihomo
 [r-mosdns]: https://github.com/conversun/fnos-apps/releases?q=mosdns

@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "siyuan.Application":
+        {
+            "title": "SiYuan 思源笔记",
+            "desc": "Block-level notes and knowledge base",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "6806",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

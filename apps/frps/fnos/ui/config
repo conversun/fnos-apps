@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "frps.Application":
+        {
+            "title": "FRP Server",
+            "desc": "frps dashboard (admin, password in app log)",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "7500",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

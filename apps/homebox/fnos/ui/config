@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "homebox.Application":
+        {
+            "title": "Homebox",
+            "desc": "Home inventory & asset management",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "7745",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

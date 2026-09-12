@@ -1,0 +1,13 @@
+#!/bin/sh
+APP_DIR="${TRIM_APPDEST}"
+APP_DATA_DIR=$1
+
+export HBOX_WEB_PORT="${TRIM_SERVICE_PORT:-7745}"
+PEPPER_FILE="${APP_DATA_DIR}/.api_key_pepper"
+[ -s "$PEPPER_FILE" ] && export HBOX_AUTH_API_KEY_PEPPER=$(cat "$PEPPER_FILE")
+export HBOX_STORAGE_CONN_STRING="file://${APP_DATA_DIR}/homebox.db"
+export HBOX_STORAGE_PREFIX_PATH="${APP_DATA_DIR}/.data"
+
+mkdir -p "$APP_DATA_DIR/.data" 2>/dev/null || true
+cd "$APP_DIR" || exit 1
+exec ./homebox

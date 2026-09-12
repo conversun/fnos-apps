@@ -1,0 +1,20 @@
+services:
+  siyuan:
+    image: ${DOCKER_MIRROR}docker.io/b3log/siyuan:v${VERSION}
+    container_name: siyuan
+    ports:
+      - "${TRIM_SERVICE_PORT}:6806"
+    volumes:
+      - ${TRIM_PKGVAR:?}/workspace:/siyuan/workspace
+    environment:
+      - PUID=${TRIM_UID}
+      - PGID=${TRIM_GID}
+      - TZ=Asia/Shanghai
+    # The kernel reads HOME from the container user the entrypoint provisions;
+    # in-container it is writable, which the bare-metal packaging cannot rely on.
+    command:
+      - "serve"
+      - "--workspace=/siyuan/workspace"
+      - "--accessAuthCode=${wizard_access_code:-siyuan}"
+      - "--lang=zh-CN"
+    restart: unless-stopped

@@ -1,0 +1,26 @@
+#!/bin/bash
+
+LOG_FILE="${TRIM_PKGVAR}/${TRIM_APPNAME}.log"
+PID_FILE="${TRIM_PKGVAR}/${TRIM_APPNAME}.pid"
+
+APP_DIR="${TRIM_APPDEST}"
+APP_DATA_DIR="${TRIM_PKGVAR}"
+
+SERVICE_COMMAND="$APP_DIR/bin/pocket-id-server $APP_DATA_DIR"
+SVC_BACKGROUND=y
+SVC_WRITE_PID=y
+
+service_postinst() {
+    # ENCRYPTION_KEY must be stable across restarts (it encrypts stored client
+    # secrets) — generate once, persist in the data dir.
+    local key_file="${TRIM_PKGVAR}/.encryption_key"
+    if [ ! -s "$key_file" ]; then
+        head -c 32 /dev/urandom | od -An -tx1 | tr -d ' \n' > "$key_file"
+        chmod 600 "$key_file" 2>/dev/null || true
+    fi
+    mkdir -p "${TRIM_PKGVAR}/data" 2>/dev/null || true
+}
+
+service_poststop() {
+    pkill -f "^${APP_DIR}/pocket-id" 2>/dev/null || true  # pkill-f-ok: anchored to the absolute install path
+}

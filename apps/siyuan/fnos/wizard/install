@@ -1,0 +1,17 @@
+[
+    {
+        "stepTitle": "SiYuan 访问口令",
+        "items": [
+            {
+                "type": "password",
+                "field": "wizard_access_code",
+                "label": "浏览器访问口令",
+                "initValue": "siyuan",
+                "rules": [
+                    { "required": true, "message": "请输入访问口令" },
+                    { "min": 6, "message": "口令至少 6 位" }
+                ]
+            }
+        ]
+    }
+]

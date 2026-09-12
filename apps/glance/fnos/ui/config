@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "glance.Application":
+        {
+            "title": "Glance",
+            "desc": "Self-hosted dashboard",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "9678",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

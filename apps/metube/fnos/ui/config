@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "metube.Application":
+        {
+            "title": "MeTube",
+            "desc": "Web GUI for yt-dlp",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "8281",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

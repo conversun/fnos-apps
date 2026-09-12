@@ -1,0 +1,14 @@
+appname         = vikunja
+version         = 0.0.0
+display_name    = Vikunja
+platform        = x86
+maintainer      = Vikunja
+maintainer_url  = https://vikunja.io
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = vikunja.Application
+service_port    = 3456
+desc            = 开源待办清单与项目看板（列表/看板/甘特/日历多视图），单文件运行、SQLite 存储，配手机 App 与 CalDAV 同步
+source          = thirdparty
+checksum        = 

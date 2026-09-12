@@ -1,0 +1,14 @@
+appname         = frps
+version         = 0.0.0
+display_name    = FRP Server
+platform        = x86
+maintainer      = fatedier
+maintainer_url  = https://github.com/fatedier/frp
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = frps.Application
+service_port    = 7000
+desc            = 高性能内网穿透服务端（frps）：配合 frpc 客户端将 NAS 或内网服务暴露到公网服务器，内置 Web 管理面板（7500 端口，初始密码见应用日志）
+source          = thirdparty
+checksum        = 

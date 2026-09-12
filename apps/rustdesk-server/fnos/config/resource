@@ -1,0 +1,19 @@
+{
+    "port-config": {
+        "protocol-file": "RustDeskServer.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "RustDeskServer",
+                "permission": {
+                    "rw": [
+                        "rustdesk-server"
+                    ]
+                }
+            }
+        ]
+    },
+    "systemd-unit": {
+    }
+}

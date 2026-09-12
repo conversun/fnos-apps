@@ -1,0 +1,14 @@
+appname         = homebox
+version         = 0.0.0
+display_name    = Homebox
+platform        = x86
+maintainer      = sysadminsmedia
+maintainer_url  = https://github.com/sysadminsmedia/homebox
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = homebox.Application
+service_port    = 7745
+desc            = 家庭物品资产管理与库存系统：登记家当、拍照归档、位置/标签/保修期管理，搬家与理赔好帮手
+source          = thirdparty
+checksum        = 

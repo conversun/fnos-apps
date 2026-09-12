@@ -1,0 +1,13 @@
+#!/bin/sh
+APP_DIR="${TRIM_APPDEST}"
+APP_DATA_DIR=$1
+
+export PORT="${TRIM_SERVICE_PORT:-1411}"
+KEY_FILE="${APP_DATA_DIR}/.encryption_key"
+if [ -s "$KEY_FILE" ]; then
+    export ENCRYPTION_KEY=$(cat "$KEY_FILE")
+fi
+
+mkdir -p "$APP_DATA_DIR/data" 2>/dev/null || true
+cd "$APP_DATA_DIR" || exit 1
+exec "$APP_DIR/pocket-id"

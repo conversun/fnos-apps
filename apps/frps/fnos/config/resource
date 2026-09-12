@@ -1,0 +1,19 @@
+{
+    "port-config": {
+        "protocol-file": "FRPS.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "FRPS",
+                "permission": {
+                    "rw": [
+                        "frps"
+                    ]
+                }
+            }
+        ]
+    },
+    "systemd-unit": {
+    }
+}

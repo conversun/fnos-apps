@@ -1,0 +1,3 @@
+#!/bin/sh
+cd "${TRIM_PKGVAR}/data" || exit 1
+exec "${TRIM_APPDEST}/hbbs" -r "$(hostname):21117"

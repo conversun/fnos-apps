@@ -1,0 +1,14 @@
+appname         = metube
+version         = 0.0.0
+display_name    = MeTube
+platform        = x86
+maintainer      = alexta69
+maintainer_url  = https://github.com/alexta69/metube
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = metube.Application
+service_port    = 8281
+desc            = 网页版 yt-dlp 下载器：粘贴链接即下，支持 YouTube/B 站等上千站点、多任务队列与音视频格式选择，文件自动落盘到 NAS
+source          = thirdparty
+checksum        = 

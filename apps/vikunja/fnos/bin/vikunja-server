@@ -1,0 +1,15 @@
+#!/bin/sh
+APP_DIR="${TRIM_APPDEST}"
+APP_DATA_DIR=$1
+
+PORT="${TRIM_SERVICE_PORT:-3456}"
+export VIKUNJA_SERVICE_INTERFACE=":${PORT}"
+export VIKUNJA_SERVICE_PUBLICURL="http://localhost:${PORT}"
+export VIKUNJA_DATABASE_TYPE=sqlite
+export VIKUNJA_DATABASE_PATH="${APP_DATA_DIR}/vikunja.db"
+export VIKUNJA_FILES_BASEPATH="${APP_DATA_DIR}/files"
+export VIKUNJA_DATABASE_MAXOPENCONNECTIONS=1
+
+mkdir -p "$APP_DATA_DIR/files" 2>/dev/null || true
+cd "$APP_DIR" || exit 1
+exec ./vikunja

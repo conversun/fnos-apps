@@ -1,0 +1,14 @@
+#!/bin/sh
+APP_DIR="${TRIM_APPDEST}"
+APP_DATA_DIR=$1
+
+CFG="$APP_DATA_DIR/glance.yml"
+PORT="${TRIM_SERVICE_PORT:-9678}"
+
+# Keep the listen port in lockstep with the fnOS service port on every start.
+if [ -f "$CFG" ]; then
+    sed -i "s/^  port: .*/  port: ${PORT}/" "$CFG"
+fi
+mkdir -p "$APP_DATA_DIR/cache" 2>/dev/null || true
+cd "$APP_DIR" || exit 1
+exec ./glance -config "$CFG"

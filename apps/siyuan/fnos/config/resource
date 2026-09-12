@@ -1,0 +1,25 @@
+{
+    "port-config": {
+        "protocol-file": "SiYuan.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "SiYuan",
+                "permission": {
+                    "rw": [
+                        "siyuan"
+                    ]
+                }
+            }
+        ]
+    },
+    "docker-project": {
+        "projects": [
+            {
+                "name": "siyuan",
+                "path": "docker"
+            }
+        ]
+    }
+}

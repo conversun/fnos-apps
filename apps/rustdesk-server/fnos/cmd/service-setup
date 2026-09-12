@@ -1,0 +1,26 @@
+#!/bin/bash
+
+LOG_FILE="${TRIM_PKGVAR}/${TRIM_APPNAME}.log"
+PID_FILE="${TRIM_PKGVAR}/${TRIM_APPNAME}.pid"
+
+APP_DIR="${TRIM_APPDEST}"
+
+# hbbs writes its keypair into the working directory — run both daemons from
+# the persistent data dir so the public key survives upgrades.
+SVC_CWD="${TRIM_PKGVAR}/data"
+SVC_BACKGROUND=y
+SVC_WRITE_PID=y
+
+# One SERVICE_COMMAND line per daemon: the framework starts each, tracks both
+# PIDs, and stop_daemon kills both.
+SERVICE_COMMAND="$APP_DIR/bin/hbbs-wrapper
+$APP_DIR/bin/hbbr-wrapper"
+
+service_postinst() {
+    mkdir -p "${SVC_CWD}" 2>/dev/null || true
+}
+
+service_poststop() {
+    pkill -f "^${APP_DIR}/hbbs" 2>/dev/null || true  # pkill-f-ok: anchored to the absolute install path
+    pkill -f "^${APP_DIR}/hbbr" 2>/dev/null || true  # pkill-f-ok: anchored to the absolute install path
+}

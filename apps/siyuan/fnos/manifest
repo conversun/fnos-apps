@@ -1,0 +1,14 @@
+appname         = siyuan
+version         = 0.0.0
+display_name    = SiYuan 思源笔记
+platform        = x86
+maintainer      = B3log
+maintainer_url  = https://b3log.org/siyuan
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = siyuan.Application
+service_port    = 6806
+desc            = 隐私优先的块级笔记与双向链接知识库（内核服务器模式），支持网页端访问、多端数据同步与 S3/WebDAV 备份
+source          = thirdparty
+checksum        = 
