@@ -165,6 +165,7 @@
 
 | | App | 端口 | 说明 | 来源 | 下载 |
 |:---:|---|---:|---|:---:|:---:|
+| <img src="apps/aellus/fnos/ICON.PNG" width="28"> | **Aellus** | `8000` | 局域网文件互传：浏览器访问即传即取，按设备归档、免配置 | [GitHub](https://github.com/YGQ8988/Aellus) | [Release][r-aellus] |
 | <img src="apps/smartdns/fnos/ICON.PNG" width="28"> | **SmartDNS** | `6580` | 本地 DNS 加速与优选 | [GitHub](https://github.com/pymumu/smartdns) | [Release][r-smartdns] |
 | <img src="apps/mosdns/fnos/ICON.PNG" width="28"> | **MosDNS** | `5354` | DNS 转发与分流 | [GitHub](https://github.com/IrineSistiana/mosdns) | [Release][r-mosdns] |
 | <img src="apps/pihole/fnos/ICON.PNG" width="28"> | **Pi-hole** | `8053` | 全网广告拦截 (DNS) | [官网](https://pi-hole.net) | [Release][r-pihole] |
@@ -314,6 +315,7 @@ fnos-apps/
 [r-stirlingpdf]: https://github.com/conversun/fnos-apps/releases?q=stirling-pdf
 [r-actual]: https://github.com/conversun/fnos-apps/releases?q=actual-budget
 [r-lucky]: https://github.com/conversun/fnos-apps/releases?q=lucky
+[r-aellus]: https://github.com/conversun/fnos-apps/releases?q=aellus
 [r-smartdns]: https://github.com/conversun/fnos-apps/releases?q=smartdns
 [r-mihomo]: https://github.com/conversun/fnos-apps/releases?q=mihomo
 [r-mosdns]: https://github.com/conversun/fnos-apps/releases?q=mosdns

@@ -1,0 +1,14 @@
+appname         = aellus
+version         = 0.0.0
+display_name    = Aellus
+platform        = x86
+maintainer      = 染洛凉
+maintainer_url  = https://github.com/YGQ8988/Aellus
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = aellus.Application
+service_port    = 8000
+desc            = 轻量局域网文件互传工具：手机 / 电脑浏览器访问 NAS 地址即可上传、浏览与下载文件，零配置、免流量、不经过中转服务器。文件按设备名归档、自动加时间戳防覆盖；删除与路径修改仅限本机（飞牛桌面打开）操作，远程设备只读，防误删。
+source          = thirdparty
+checksum        = 

@@ -1,0 +1,9 @@
+#!/bin/sh
+APP_DIR="${TRIM_APPDEST}"
+APP_DATA_DIR=$1
+
+# Keep all state (config, logs) under the app data dir.
+mkdir -p "$APP_DATA_DIR" 2>/dev/null || true
+
+cd "$APP_DIR" || exit 1
+exec ./aellus

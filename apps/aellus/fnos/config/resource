@@ -1,0 +1,18 @@
+{
+    "port-config": {
+        "protocol-file": "Aellus.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "aellus/drops"
+            }
+        ]
+    },
+    "api-scope": [
+        "trim.file.sharedAccess",
+        "trim.file.path"
+    ],
+    "systemd-unit": {
+    }
+}

@@ -1,0 +1,27 @@
+#!/bin/bash
+
+LOG_FILE="${TRIM_PKGVAR}/${TRIM_APPNAME}.log"
+PID_FILE="${TRIM_PKGVAR}/${TRIM_APPNAME}.pid"
+
+APP_DIR="${TRIM_APPDEST}"
+APP_DATA_DIR="${TRIM_PKGVAR}"
+
+# Aellus is fnOS-aware: it honors AELLUS_PORT for the listen port and
+# AELLUS_STRICT_PORT=1 to fail hard (instead of silently re-binding another
+# port) when the declared service port is taken, keeping the listener in
+# lockstep with the manifest. AELLUS_HEADLESS=1 disables desktop tray code.
+export AELLUS_PORT="${TRIM_SERVICE_PORT}"
+export AELLUS_STRICT_PORT=1
+export AELLUS_HEADLESS=1
+export AELLUS_LANG=zh
+
+SERVICE_COMMAND="$APP_DIR/bin/aellus-server $APP_DATA_DIR"
+SVC_BACKGROUND=y
+SVC_WRITE_PID=y
+
+service_poststop() {
+    # The framework kills the PID first; this sweeps any straggler that
+    # lost its PID file (crash before the PID write). Anchored to the exact
+    # binary path so an unrelated process is never matched.
+    pkill -f "^${APP_DIR}/aellus" 2>/dev/null || true  # pkill-f-ok: anchored to the absolute install path
+}
