@@ -26,10 +26,10 @@ mkdir -p "$WORK_DIR/app_root/bin" "$WORK_DIR/app_root/ui"
 cp "$WORK_DIR/aellus" "$WORK_DIR/app_root/aellus"
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-cp "${SCRIPT_DIR}/../../apps/aellus/fnos/bin/aellus-server" "$WORK_DIR/app_root/bin/aellus-server"
+cp "${SCRIPT_DIR}/../../../apps/aellus/fnos/bin/aellus-server" "$WORK_DIR/app_root/bin/aellus-server"
 chmod +x "$WORK_DIR/app_root/bin/aellus-server"
-cp -a "${SCRIPT_DIR}/../../apps/aellus/fnos/ui/"* "$WORK_DIR/app_root/ui/" 2>/dev/null || true
+cp -a "${SCRIPT_DIR}/../../../apps/aellus/fnos/ui/"* "$WORK_DIR/app_root/ui/" 2>/dev/null || true
 
 cd "$WORK_DIR/app_root"
-tar -czf "${SCRIPT_DIR}/../../app.tgz" .
+tar -czf "${SCRIPT_DIR}/../../../app.tgz" .
 echo "Built app.tgz for Aellus ${VERSION} (${UPSTREAM_ARCH})"
