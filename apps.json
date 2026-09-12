@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-12T08:02:43Z",
+  "generated_at": "2026-09-12T16:42:39Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -65,7 +65,7 @@
         "arm"
       ],
       "updated_at": "2026-08-19T08:08:59Z",
-      "download_count": 114,
+      "download_count": 116,
       "app_type": "docker",
       "category": "system"
     },
@@ -234,7 +234,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T09:51:16Z",
-      "download_count": 73,
+      "download_count": 78,
       "app_type": "docker",
       "category": "automation"
     },
@@ -297,7 +297,7 @@
         "arm"
       ],
       "updated_at": "2026-09-04T08:02:26Z",
-      "download_count": 111,
+      "download_count": 115,
       "app_type": "native",
       "category": "media"
     },
@@ -318,7 +318,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T06:22:13Z",
-      "download_count": 33,
+      "download_count": 36,
       "app_type": "docker",
       "category": ""
     },
@@ -402,7 +402,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:46:02Z",
-      "download_count": 42,
+      "download_count": 43,
       "app_type": "docker",
       "category": "system"
     },
@@ -423,7 +423,7 @@
         "arm"
       ],
       "updated_at": "2026-09-03T08:07:38Z",
-      "download_count": 233,
+      "download_count": 235,
       "app_type": "docker",
       "category": "system"
     },
@@ -465,7 +465,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T07:35:37Z",
-      "download_count": 159,
+      "download_count": 161,
       "app_type": "native",
       "category": "download"
     },
@@ -633,7 +633,7 @@
         "arm"
       ],
       "updated_at": "2026-09-03T08:07:43Z",
-      "download_count": 39,
+      "download_count": 42,
       "app_type": "docker",
       "category": "content"
     },
@@ -717,7 +717,7 @@
         "arm"
       ],
       "updated_at": "2026-09-09T08:03:54Z",
-      "download_count": 787,
+      "download_count": 800,
       "app_type": "native",
       "category": "media"
     },
@@ -886,7 +886,7 @@
         "arm"
       ],
       "updated_at": "2026-09-11T08:02:42Z",
-      "download_count": 61,
+      "download_count": 63,
       "app_type": "native",
       "category": "system"
     },
@@ -928,7 +928,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T06:23:08Z",
-      "download_count": 104,
+      "download_count": 106,
       "app_type": "docker",
       "category": "media"
     },
@@ -949,7 +949,7 @@
         "arm"
       ],
       "updated_at": "2026-08-30T08:02:25Z",
-      "download_count": 192,
+      "download_count": 194,
       "app_type": "native",
       "category": "system"
     },
@@ -1033,7 +1033,7 @@
         "arm"
       ],
       "updated_at": "2026-09-02T08:04:39Z",
-      "download_count": 225,
+      "download_count": 228,
       "app_type": "native",
       "category": "system"
     },
@@ -1054,7 +1054,7 @@
         "arm"
       ],
       "updated_at": "2026-08-18T08:08:07Z",
-      "download_count": 64,
+      "download_count": 66,
       "app_type": "docker",
       "category": "media"
     },
@@ -1075,7 +1075,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:45:57Z",
-      "download_count": 73,
+      "download_count": 76,
       "app_type": "native",
       "category": "network"
     },
@@ -1306,7 +1306,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T09:51:26Z",
-      "download_count": 126,
+      "download_count": 131,
       "app_type": "docker",
       "category": "content"
     },
@@ -1411,7 +1411,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T09:51:20Z",
-      "download_count": 15,
+      "download_count": 17,
       "app_type": "docker",
       "category": "content"
     },
@@ -1528,8 +1528,8 @@
       "display_name": "Lucky",
       "description": "网络工具箱，集成 DDNS、反向代理、HTTPS 证书、端口转发等功能",
       "version": "2.27.2",
-      "fpk_version": "2.27.2-r5",
-      "release_tag": "lucky/v2.27.2-r5",
+      "fpk_version": "2.27.2-r6",
+      "release_tag": "lucky/v2.27.2-r6",
       "service_port": 16601,
       "homepage_url": "https://lucky666.cn",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/lucky/fnos/ICON_256.PNG",
@@ -1537,7 +1537,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-08-17T06:24:30Z",
+      "updated_at": "2026-09-12T16:42:20Z",
       "download_count": 479,
       "app_type": "native",
       "category": "system"
@@ -1770,7 +1770,7 @@
         "arm"
       ],
       "updated_at": "2026-08-24T20:08:31Z",
-      "download_count": 1336,
+      "download_count": 1376,
       "app_type": "native",
       "category": "network"
     },
@@ -1833,7 +1833,7 @@
         "arm"
       ],
       "updated_at": "2026-08-24T02:54:34Z",
-      "download_count": 483,
+      "download_count": 494,
       "app_type": "docker",
       "category": "content",
       "post_install_note": "请在 Web UI 中设置媒体库和下载目录，确保与下载工具（如 qBittorrent）使用的路径一致。"
@@ -1939,7 +1939,7 @@
         "arm"
       ],
       "updated_at": "2026-09-04T08:02:24Z",
-      "download_count": 50,
+      "download_count": 53,
       "app_type": "docker",
       "category": "network",
       "post_install_note": "NetBird 客户端容器使用 host 网络模式运行。"
@@ -1961,7 +1961,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:46:19Z",
-      "download_count": 141,
+      "download_count": 144,
       "app_type": "docker",
       "category": "system"
     },
@@ -2024,7 +2024,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T06:23:55Z",
-      "download_count": 112,
+      "download_count": 119,
       "app_type": "native",
       "category": "system"
     },
@@ -2139,9 +2139,9 @@
       "file_prefix": "obsidian",
       "display_name": "Obsidian",
       "description": "基于 Docker 的 Obsidian 个人知识库",
-      "version": "1.13.8",
-      "fpk_version": "1.13.8",
-      "release_tag": "obsidian/v1.13.8",
+      "version": "1.13.7",
+      "fpk_version": "1.13.7-r3",
+      "release_tag": "obsidian/v1.13.7-r3",
       "service_port": 8080,
       "homepage_url": "https://obsidian.md",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/obsidian/fnos/ICON_256.PNG",
@@ -2149,7 +2149,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-08-22T08:05:00Z",
+      "updated_at": "2026-09-12T16:42:22Z",
       "download_count": 337,
       "app_type": "docker",
       "category": "content"
@@ -2255,7 +2255,7 @@
         "arm"
       ],
       "updated_at": "2026-08-31T15:31:33Z",
-      "download_count": 315,
+      "download_count": 329,
       "app_type": "docker",
       "category": "network"
     },
@@ -2465,7 +2465,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:46:58Z",
-      "download_count": 1119,
+      "download_count": 1129,
       "app_type": "native",
       "category": "download"
     },
@@ -2507,7 +2507,7 @@
         "arm"
       ],
       "updated_at": "2026-09-11T08:02:31Z",
-      "download_count": 48,
+      "download_count": 51,
       "app_type": "docker",
       "category": "system"
     },
@@ -2676,7 +2676,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T06:23:43Z",
-      "download_count": 21,
+      "download_count": 25,
       "app_type": "docker",
       "category": "content"
     },
@@ -2886,7 +2886,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T06:31:00Z",
-      "download_count": 8,
+      "download_count": 9,
       "app_type": "native",
       "category": "system"
     },
@@ -2928,7 +2928,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T09:51:16Z",
-      "download_count": 103,
+      "download_count": 106,
       "app_type": "docker",
       "category": "media"
     },
@@ -2959,9 +2959,9 @@
       "file_prefix": "tailscale",
       "display_name": "Tailscale",
       "description": "Tailscale VPN 客户端，零配置组建安全私有网络，支持远程访问 NAS。",
-      "version": "1.102.4",
-      "fpk_version": "1.102.4",
-      "release_tag": "tailscale/v1.102.4",
+      "version": "1.102.3",
+      "fpk_version": "1.102.3-r1",
+      "release_tag": "tailscale/v1.102.3-r1",
       "service_port": 8088,
       "homepage_url": "https://github.com/tailscale/tailscale",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/tailscale/fnos/ICON_256.PNG",
@@ -2969,7 +2969,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-11T08:02:40Z",
+      "updated_at": "2026-09-12T16:42:19Z",
       "download_count": 272,
       "app_type": "docker",
       "category": "network"
@@ -3096,7 +3096,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T06:24:39Z",
-      "download_count": 12,
+      "download_count": 15,
       "app_type": "native",
       "category": "download"
     },
@@ -3159,7 +3159,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T10:46:49Z",
-      "download_count": 282,
+      "download_count": 289,
       "app_type": "docker",
       "category": "network"
     },
@@ -3201,7 +3201,7 @@
         "arm"
       ],
       "updated_at": "2026-09-02T08:02:31Z",
-      "download_count": 61,
+      "download_count": 63,
       "app_type": "docker",
       "category": "media"
     },
@@ -3285,7 +3285,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T06:24:48Z",
-      "download_count": 33,
+      "download_count": 35,
       "app_type": "docker",
       "category": "automation",
       "post_install_note": "ZoneFoundry Bridge 客户端容器使用 host 网络模式运行。首次启动后到容器日志里找一行『Setup code: ZF-XXXX』，在 ZoneFoundry iOS app → 更多 → 桥接 → + → 输入设置码 中填入即可（~5 秒内自动配对完成）。"
