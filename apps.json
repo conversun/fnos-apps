@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-12T19:03:24Z",
+  "generated_at": "2026-09-12T19:04:54Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -992,6 +992,27 @@
       ],
       "updated_at": "2026-08-30T08:02:25Z",
       "download_count": 196,
+      "app_type": "native",
+      "category": "system"
+    },
+    {
+      "slug": "glance",
+      "appname": "glance",
+      "file_prefix": "glance",
+      "display_name": "Glance",
+      "description": "高颜值自托管仪表盘：一页聚合 RSS、书签、站点监控、Docker 状态、市场行情等数十种小组件",
+      "version": "0.8.6",
+      "fpk_version": "0.8.6",
+      "release_tag": "glance/v0.8.6",
+      "service_port": 9678,
+      "homepage_url": "https://github.com/glanceapp/glance",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/glance/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-09-12T19:04:38Z",
+      "download_count": 0,
       "app_type": "native",
       "category": "system"
     },
