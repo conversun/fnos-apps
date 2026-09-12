@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-12T16:43:13Z",
+  "generated_at": "2026-09-12T17:07:31Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -68,6 +68,27 @@
       "download_count": 116,
       "app_type": "docker",
       "category": "system"
+    },
+    {
+      "slug": "aellus",
+      "appname": "aellus",
+      "file_prefix": "aellus",
+      "display_name": "Aellus",
+      "description": "轻量局域网文件互传工具：手机 / 电脑浏览器访问 NAS 地址即可上传、浏览与下载文件，零配置、免流量、不经过中转服务器。文件按设备名归档、自动加时间戳防覆盖；删除与路径修改仅限本机（飞牛桌面打开）操作，远程设备只读，防误删。",
+      "version": "1.0.0",
+      "fpk_version": "1.0.0",
+      "release_tag": "aellus/v1.0.0",
+      "service_port": 8000,
+      "homepage_url": "https://github.com/YGQ8988/Aellus",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/aellus/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-09-12T17:06:56Z",
+      "download_count": 0,
+      "app_type": "native",
+      "category": "network"
     },
     {
       "slug": "alist",
@@ -854,9 +875,9 @@
       "file_prefix": "fnos-apps-store",
       "display_name": "fnOS Apps",
       "description": "fnOS第三方应用中心，支持一键安装、更新和卸载来自conversun/fnos-apps的所有应用。",
-      "version": "1.9.4",
-      "fpk_version": "1.9.4",
-      "release_tag": "fnos-apps-store/v1.9.4",
+      "version": "1.9.5",
+      "fpk_version": "1.9.5",
+      "release_tag": "fnos-apps-store/v1.9.5",
       "service_port": 8011,
       "homepage_url": "https://github.com/conversun/fnos-store",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/fnos-apps-store/fnos/ICON_256.PNG",
@@ -864,7 +885,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-08-31T15:33:16Z",
+      "updated_at": "2026-09-12T17:07:09Z",
       "download_count": 6290,
       "app_type": "native",
       "category": "store"
@@ -1770,7 +1791,7 @@
         "arm"
       ],
       "updated_at": "2026-08-24T20:08:31Z",
-      "download_count": 1376,
+      "download_count": 1377,
       "app_type": "native",
       "category": "network"
     },
@@ -2465,7 +2486,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:46:58Z",
-      "download_count": 1131,
+      "download_count": 1134,
       "app_type": "native",
       "category": "download"
     },
