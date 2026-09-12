@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-12T16:42:39Z",
+  "generated_at": "2026-09-12T16:43:13Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -1486,8 +1486,8 @@
       "display_name": "LocalAI",
       "description": "本地 AI 模型推理服务器，兼容 OpenAI API 接口。",
       "version": "4.9.0",
-      "fpk_version": "4.9.0",
-      "release_tag": "localai/v4.9.0",
+      "fpk_version": "4.9.0-r1",
+      "release_tag": "localai/v4.9.0-r1",
       "service_port": 8185,
       "homepage_url": "https://localai.io",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/localai/fnos/ICON_256.PNG",
@@ -1495,7 +1495,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-08-21T08:11:03Z",
+      "updated_at": "2026-09-12T16:42:55Z",
       "download_count": 91,
       "app_type": "docker",
       "category": "ai"
@@ -2465,7 +2465,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:46:58Z",
-      "download_count": 1129,
+      "download_count": 1131,
       "app_type": "native",
       "category": "download"
     },
