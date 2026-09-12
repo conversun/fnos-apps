@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-12T17:07:31Z",
+  "generated_at": "2026-09-12T19:03:24Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -65,7 +65,7 @@
         "arm"
       ],
       "updated_at": "2026-08-19T08:08:59Z",
-      "download_count": 116,
+      "download_count": 118,
       "app_type": "docker",
       "category": "system"
     },
@@ -86,7 +86,7 @@
         "arm"
       ],
       "updated_at": "2026-09-12T17:06:56Z",
-      "download_count": 0,
+      "download_count": 4,
       "app_type": "native",
       "category": "network"
     },
@@ -171,7 +171,7 @@
         "arm"
       ],
       "updated_at": "2026-09-12T08:02:15Z",
-      "download_count": 49,
+      "download_count": 50,
       "app_type": "docker",
       "category": "system"
     },
@@ -255,7 +255,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T09:51:16Z",
-      "download_count": 78,
+      "download_count": 80,
       "app_type": "docker",
       "category": "automation"
     },
@@ -318,7 +318,7 @@
         "arm"
       ],
       "updated_at": "2026-09-04T08:02:26Z",
-      "download_count": 115,
+      "download_count": 117,
       "app_type": "native",
       "category": "media"
     },
@@ -339,7 +339,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T06:22:13Z",
-      "download_count": 36,
+      "download_count": 38,
       "app_type": "docker",
       "category": ""
     },
@@ -423,7 +423,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:46:02Z",
-      "download_count": 43,
+      "download_count": 44,
       "app_type": "docker",
       "category": "system"
     },
@@ -444,7 +444,7 @@
         "arm"
       ],
       "updated_at": "2026-09-03T08:07:38Z",
-      "download_count": 235,
+      "download_count": 237,
       "app_type": "docker",
       "category": "system"
     },
@@ -486,7 +486,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T07:35:37Z",
-      "download_count": 161,
+      "download_count": 163,
       "app_type": "native",
       "category": "download"
     },
@@ -612,7 +612,7 @@
         "arm"
       ],
       "updated_at": "2026-09-12T08:02:11Z",
-      "download_count": 69,
+      "download_count": 71,
       "app_type": "docker",
       "category": "content"
     },
@@ -654,7 +654,7 @@
         "arm"
       ],
       "updated_at": "2026-09-03T08:07:43Z",
-      "download_count": 42,
+      "download_count": 44,
       "app_type": "docker",
       "category": "content"
     },
@@ -738,7 +738,7 @@
         "arm"
       ],
       "updated_at": "2026-09-09T08:03:54Z",
-      "download_count": 800,
+      "download_count": 802,
       "app_type": "native",
       "category": "media"
     },
@@ -907,7 +907,7 @@
         "arm"
       ],
       "updated_at": "2026-09-11T08:02:42Z",
-      "download_count": 63,
+      "download_count": 65,
       "app_type": "native",
       "category": "system"
     },
@@ -954,6 +954,27 @@
       "category": "media"
     },
     {
+      "slug": "frps",
+      "appname": "frps",
+      "file_prefix": "frps",
+      "display_name": "FRP Server",
+      "description": "高性能内网穿透服务端（frps）：配合 frpc 客户端将 NAS 或内网服务暴露到公网服务器，内置 Web 管理面板（7500 端口，初始密码见应用日志）",
+      "version": "0.71.0",
+      "fpk_version": "0.71.0",
+      "release_tag": "frps/v0.71.0",
+      "service_port": 7000,
+      "homepage_url": "https://github.com/fatedier/frp",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/frps/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-09-12T19:03:02Z",
+      "download_count": 0,
+      "app_type": "native",
+      "category": "network"
+    },
+    {
       "slug": "gitea",
       "appname": "gitea",
       "file_prefix": "gitea",
@@ -970,7 +991,7 @@
         "arm"
       ],
       "updated_at": "2026-08-30T08:02:25Z",
-      "download_count": 194,
+      "download_count": 196,
       "app_type": "native",
       "category": "system"
     },
@@ -1054,7 +1075,7 @@
         "arm"
       ],
       "updated_at": "2026-09-02T08:04:39Z",
-      "download_count": 228,
+      "download_count": 230,
       "app_type": "native",
       "category": "system"
     },
@@ -1075,7 +1096,7 @@
         "arm"
       ],
       "updated_at": "2026-08-18T08:08:07Z",
-      "download_count": 66,
+      "download_count": 67,
       "app_type": "docker",
       "category": "media"
     },
@@ -1096,7 +1117,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:45:57Z",
-      "download_count": 76,
+      "download_count": 78,
       "app_type": "native",
       "category": "network"
     },
@@ -1140,6 +1161,27 @@
       "updated_at": "2026-09-12T08:02:19Z",
       "download_count": 269,
       "app_type": "docker",
+      "category": "system"
+    },
+    {
+      "slug": "homebox",
+      "appname": "homebox",
+      "file_prefix": "homebox",
+      "display_name": "Homebox",
+      "description": "家庭物品资产管理与库存系统：登记家当、拍照归档、位置/标签/保修期管理，搬家与理赔好帮手",
+      "version": "0.26.2",
+      "fpk_version": "0.26.2",
+      "release_tag": "homebox/v0.26.2",
+      "service_port": 7745,
+      "homepage_url": "https://homebox.software",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/homebox/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-09-12T19:03:05Z",
+      "download_count": 0,
+      "app_type": "native",
       "category": "system"
     },
     {
@@ -1327,7 +1369,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T09:51:26Z",
-      "download_count": 131,
+      "download_count": 133,
       "app_type": "docker",
       "category": "content"
     },
@@ -1369,7 +1411,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T09:51:13Z",
-      "download_count": 58,
+      "download_count": 60,
       "app_type": "docker",
       "category": "system"
     },
@@ -1432,7 +1474,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T09:51:20Z",
-      "download_count": 17,
+      "download_count": 19,
       "app_type": "docker",
       "category": "content"
     },
@@ -1601,7 +1643,7 @@
         "arm"
       ],
       "updated_at": "2026-09-01T08:02:15Z",
-      "download_count": 19,
+      "download_count": 21,
       "app_type": "docker",
       "category": "content"
     },
@@ -1754,6 +1796,27 @@
       "category": "media"
     },
     {
+      "slug": "metube",
+      "appname": "metube",
+      "file_prefix": "metube",
+      "display_name": "MeTube",
+      "description": "网页版 yt-dlp 下载器：粘贴链接即下，支持 YouTube/B 站等上千站点、多任务队列与音视频格式选择，文件自动落盘到 NAS",
+      "version": "latest-2026.09.12",
+      "fpk_version": "latest-2026.09.12",
+      "release_tag": "metube/vlatest-2026.09.12",
+      "service_port": 8281,
+      "homepage_url": "https://github.com/alexta69/metube",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/metube/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-09-12T19:02:56Z",
+      "download_count": 0,
+      "app_type": "docker",
+      "category": "download"
+    },
+    {
       "slug": "miair-next",
       "appname": "miair-next",
       "file_prefix": "miair-next",
@@ -1791,7 +1854,7 @@
         "arm"
       ],
       "updated_at": "2026-08-24T20:08:31Z",
-      "download_count": 1377,
+      "download_count": 1383,
       "app_type": "native",
       "category": "network"
     },
@@ -1812,7 +1875,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:45:43Z",
-      "download_count": 51,
+      "download_count": 53,
       "app_type": "docker",
       "category": "content"
     },
@@ -1854,7 +1917,7 @@
         "arm"
       ],
       "updated_at": "2026-08-24T02:54:34Z",
-      "download_count": 494,
+      "download_count": 496,
       "app_type": "docker",
       "category": "content",
       "post_install_note": "请在 Web UI 中设置媒体库和下载目录，确保与下载工具（如 qBittorrent）使用的路径一致。"
@@ -1960,7 +2023,7 @@
         "arm"
       ],
       "updated_at": "2026-09-04T08:02:24Z",
-      "download_count": 53,
+      "download_count": 55,
       "app_type": "docker",
       "category": "network",
       "post_install_note": "NetBird 客户端容器使用 host 网络模式运行。"
@@ -1982,7 +2045,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:46:19Z",
-      "download_count": 144,
+      "download_count": 146,
       "app_type": "docker",
       "category": "system"
     },
@@ -2045,7 +2108,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T06:23:55Z",
-      "download_count": 119,
+      "download_count": 125,
       "app_type": "native",
       "category": "system"
     },
@@ -2276,7 +2339,7 @@
         "arm"
       ],
       "updated_at": "2026-08-31T15:31:33Z",
-      "download_count": 329,
+      "download_count": 330,
       "app_type": "docker",
       "category": "network"
     },
@@ -2407,6 +2470,27 @@
       "category": "media"
     },
     {
+      "slug": "pocket-id",
+      "appname": "pocket-id",
+      "file_prefix": "pocket-id",
+      "display_name": "Pocket ID",
+      "description": "轻量 OIDC 单点登录/Passkey 身份提供方：为 Jellyfin、Immich、Nginx Proxy Manager 等自托管应用提供「指纹/Passkey 免密码」统一登录，无需暴露密码",
+      "version": "2.14.0",
+      "fpk_version": "2.14.0",
+      "release_tag": "pocket-id/v2.14.0",
+      "service_port": 1411,
+      "homepage_url": "https://pocket-id.org",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/pocket-id/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-09-12T19:03:03Z",
+      "download_count": 0,
+      "app_type": "native",
+      "category": "system"
+    },
+    {
       "slug": "prometheus",
       "appname": "prometheus",
       "file_prefix": "prometheus",
@@ -2486,7 +2570,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:46:58Z",
-      "download_count": 1134,
+      "download_count": 1137,
       "app_type": "native",
       "category": "download"
     },
@@ -2528,7 +2612,7 @@
         "arm"
       ],
       "updated_at": "2026-09-11T08:02:31Z",
-      "download_count": 51,
+      "download_count": 53,
       "app_type": "docker",
       "category": "system"
     },
@@ -2638,6 +2722,27 @@
       "category": "system"
     },
     {
+      "slug": "rustdesk-server",
+      "appname": "rustdesk-server",
+      "file_prefix": "rustdesk-server",
+      "display_name": "RustDesk Server",
+      "description": "开源远程桌面 RustDesk 的自建服务端（hbbs 信令 + hbbr 中继），让远程控制流量完全不经过第三方服务器；公钥位于应用数据目录，客户端填入 NAS 地址即可使用",
+      "version": "1.1.16",
+      "fpk_version": "1.1.16",
+      "release_tag": "rustdesk-server/v1.1.16",
+      "service_port": 21116,
+      "homepage_url": "https://rustdesk.com",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/rustdesk-server/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-09-12T19:02:58Z",
+      "download_count": 0,
+      "app_type": "native",
+      "category": "network"
+    },
+    {
       "slug": "sabnzbd",
       "appname": "sabnzbd",
       "file_prefix": "sabnzbd",
@@ -2697,7 +2802,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T06:23:43Z",
-      "download_count": 25,
+      "download_count": 27,
       "app_type": "docker",
       "category": "content"
     },
@@ -2721,6 +2826,27 @@
       "download_count": 122,
       "app_type": "docker",
       "category": "media"
+    },
+    {
+      "slug": "siyuan",
+      "appname": "siyuan",
+      "file_prefix": "siyuan",
+      "display_name": "SiYuan 思源笔记",
+      "description": "隐私优先的块级笔记与双向链接知识库（内核服务器模式），支持网页端访问、多端数据同步与 S3/WebDAV 备份",
+      "version": "3.8.3",
+      "fpk_version": "3.8.3",
+      "release_tag": "siyuan/v3.8.3",
+      "service_port": 6806,
+      "homepage_url": "https://b3log.org/siyuan",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/siyuan/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-09-12T19:02:55Z",
+      "download_count": 0,
+      "app_type": "docker",
+      "category": "content"
     },
     {
       "slug": "smartdns",
@@ -2844,7 +2970,7 @@
         "arm"
       ],
       "updated_at": "2026-09-09T08:02:46Z",
-      "download_count": 16,
+      "download_count": 18,
       "app_type": "docker",
       "category": "media"
     },
@@ -2949,7 +3075,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T09:51:16Z",
-      "download_count": 106,
+      "download_count": 108,
       "app_type": "docker",
       "category": "media"
     },
@@ -3117,7 +3243,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T06:24:39Z",
-      "download_count": 15,
+      "download_count": 17,
       "app_type": "native",
       "category": "download"
     },
@@ -3141,6 +3267,27 @@
       "download_count": 51,
       "app_type": "docker",
       "category": "media"
+    },
+    {
+      "slug": "vikunja",
+      "appname": "vikunja",
+      "file_prefix": "vikunja",
+      "display_name": "Vikunja",
+      "description": "开源待办清单与项目看板（列表/看板/甘特/日历多视图），单文件运行、SQLite 存储，配手机 App 与 CalDAV 同步",
+      "version": "2.6.0",
+      "fpk_version": "2.6.0",
+      "release_tag": "vikunja/v2.6.0",
+      "service_port": 3456,
+      "homepage_url": "https://vikunja.io",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/vikunja/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-09-12T19:03:01Z",
+      "download_count": 0,
+      "app_type": "native",
+      "category": "content"
     },
     {
       "slug": "visor",
@@ -3180,7 +3327,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T10:46:49Z",
-      "download_count": 289,
+      "download_count": 291,
       "app_type": "docker",
       "category": "network"
     },
@@ -3222,7 +3369,7 @@
         "arm"
       ],
       "updated_at": "2026-09-02T08:02:31Z",
-      "download_count": 63,
+      "download_count": 65,
       "app_type": "docker",
       "category": "media"
     },
@@ -3285,7 +3432,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:46:36Z",
-      "download_count": 49,
+      "download_count": 50,
       "app_type": "docker",
       "category": "network"
     },
@@ -3306,7 +3453,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T06:24:48Z",
-      "download_count": 35,
+      "download_count": 37,
       "app_type": "docker",
       "category": "automation",
       "post_install_note": "ZoneFoundry Bridge 客户端容器使用 host 网络模式运行。首次启动后到容器日志里找一行『Setup code: ZF-XXXX』，在 ZoneFoundry iOS app → 更多 → 桥接 → + → 输入设置码 中填入即可（~5 秒内自动配对完成）。"
