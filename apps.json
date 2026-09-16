@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-16T08:04:41Z",
+  "generated_at": "2026-09-16T08:08:15Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -2959,9 +2959,9 @@
       "file_prefix": "sub-store",
       "display_name": "Sub-Store",
       "description": "订阅链接管理工具，支持 QX、Loon、Surge、Stash、Egern 和 Shadowrocket 等多种代理客户端的订阅聚合与转换。",
-      "version": "2.39.6",
-      "fpk_version": "2.39.6",
-      "release_tag": "sub-store/v2.39.6",
+      "version": "2.39.8",
+      "fpk_version": "2.39.8",
+      "release_tag": "sub-store/v2.39.8",
       "service_port": 3001,
       "homepage_url": "https://github.com/sub-store-org/Sub-Store",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/sub-store/fnos/ICON_256.PNG",
@@ -2969,7 +2969,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-12T08:02:17Z",
+      "updated_at": "2026-09-16T08:07:55Z",
       "download_count": 88,
       "app_type": "docker",
       "category": "system"
