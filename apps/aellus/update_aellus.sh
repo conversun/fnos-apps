@@ -15,7 +15,7 @@ APP_HELP_VERSION_EXAMPLE="1.0.0"
 
 app_set_arch_vars() {
     case "$ARCH" in
-        x86) UPSTREAM_ARCH="x86_64" ;;
+        x86) UPSTREAM_ARCH="x64" ;;
         arm) UPSTREAM_ARCH="arm64" ;;
     esac
     info "Upstream arch: $UPSTREAM_ARCH"
@@ -45,7 +45,7 @@ app_get_latest_version() {
 }
 
 app_download() {
-    local download_url="https://github.com/YGQ8988/Aellus/releases/download/${APP_VERSION}/aellus-linux-${UPSTREAM_ARCH}"
+    local download_url="https://github.com/YGQ8988/Aellus/releases/download/${APP_VERSION}/Aellus-${APP_VERSION}-linux-${UPSTREAM_ARCH}"
 
     info "下载 ($ARCH): $download_url"
     mkdir -p "$WORK_DIR"
