@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-19T08:02:45Z",
+  "generated_at": "2026-09-19T08:03:12Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -2033,9 +2033,9 @@
       "file_prefix": "netbird",
       "display_name": "NetBird",
       "description": "零信任 VPN 管理平台，提供简单的私有网络组建。",
-      "version": "0.78.2",
-      "fpk_version": "0.78.2",
-      "release_tag": "netbird/v0.78.2",
+      "version": "0.79.0",
+      "fpk_version": "0.79.0",
+      "release_tag": "netbird/v0.79.0",
       "service_port": 8820,
       "homepage_url": "https://netbird.io",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/netbird/fnos/ICON_256.PNG",
@@ -2043,7 +2043,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-15T08:02:41Z",
+      "updated_at": "2026-09-19T08:02:52Z",
       "download_count": 58,
       "app_type": "docker",
       "category": "network",
