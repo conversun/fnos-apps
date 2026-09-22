@@ -78,8 +78,8 @@
       "description": "硬盘 S.M.A.R.T. 健康数据采集器，配合 Scrutiny 面板使用",
       "source_url": "https://github.com/jianyun8023/fnos-scrutiny-collector/releases",
       "github_repo": "jianyun8023/fnos-scrutiny-collector",
-      "latest_version": "1.74.3",
-      "updated_at": "2026-09-16T23:45:30Z"
+      "latest_version": "1.75.1",
+      "updated_at": "2026-09-22T00:14:26Z"
     },
     {
       "name": "fn-fan",
@@ -159,8 +159,8 @@
       "description": "社区维护的 fnOS 应用仓库，包含驱动、系统工具、桌面环境等 20+ 款应用",
       "source_url": "https://github.com/RROrg/fn-apps/releases",
       "github_repo": "RROrg/fn-apps",
-      "latest_version": "2026.09.03-1659",
-      "updated_at": "2026-09-03T09:02:40Z"
+      "latest_version": "2026.09.21-1639",
+      "updated_at": "2026-09-21T08:42:50Z"
     }
   ]
 }
