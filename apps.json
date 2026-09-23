@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-23T08:03:34Z",
+  "generated_at": "2026-09-23T08:05:09Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -1653,9 +1653,9 @@
       "file_prefix": "mail-archiver",
       "display_name": "Mail Archiver",
       "description": "IMAP/Microsoft 365 邮件归档、搜索与导出系统",
-      "version": "2608.1",
-      "fpk_version": "2608.1",
-      "release_tag": "mail-archiver/v2608.1",
+      "version": "2609.1",
+      "fpk_version": "2609.1",
+      "release_tag": "mail-archiver/v2609.1",
       "service_port": 5008,
       "homepage_url": "https://github.com/s1t5/mail-archiver",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/mail-archiver/fnos/ICON_256.PNG",
@@ -1663,7 +1663,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-01T08:02:15Z",
+      "updated_at": "2026-09-23T08:04:47Z",
       "download_count": 25,
       "app_type": "docker",
       "category": "content"
