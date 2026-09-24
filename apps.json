@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-24T08:03:06Z",
+  "generated_at": "2026-09-24T08:03:31Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -2265,9 +2265,9 @@
       "file_prefix": "ollama",
       "display_name": "Ollama",
       "description": "本地大语言模型运行引擎，支持 Llama、Mistral、Gemma 等开源模型。",
-      "version": "0.34.3",
-      "fpk_version": "0.34.3",
-      "release_tag": "ollama/v0.34.3",
+      "version": "0.34.4",
+      "fpk_version": "0.34.4",
+      "release_tag": "ollama/v0.34.4",
       "service_port": 11434,
       "homepage_url": "https://github.com/ollama/ollama",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ollama/fnos/ICON_256.PNG",
@@ -2275,7 +2275,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-23T08:02:43Z",
+      "updated_at": "2026-09-24T08:03:12Z",
       "download_count": 159,
       "app_type": "docker",
       "category": "ai"
