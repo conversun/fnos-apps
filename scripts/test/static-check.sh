@@ -355,6 +355,21 @@ check_docker_compose_when_present() {
     debug "$slug: no YAML parser available (python3/yq), skipping compose lint"
 }
 
+# Without "docker-project" in config/resource, fnOS never registers the
+# compose project and the app installs but never starts (metube, #310).
+check_docker_project_resource() {
+    local slug="$1"
+    is_docker_app "$slug" || return 0
+    local resource
+    resource="$(app_dir "$slug")/fnos/config/resource"
+    [ -f "$resource" ] || { fail "$slug: docker app has no config/resource"; return 1; }
+    if ! grep -q '"docker-project"' "$resource"; then
+        fail "$slug: docker app missing \"docker-project\" in config/resource (app will install but never start)"
+        return 1
+    fi
+    pass "$slug: docker-project declared in config/resource"
+}
+
 run_health_schema_subcheck() {
     local slug="$1"
     local h
@@ -390,6 +405,7 @@ check_one_app() {
     check_service_setup_syntax "$slug" || true
     check_shellcheck_optional "$slug" || true
     check_docker_compose_when_present "$slug" || true
+    check_docker_project_resource "$slug" || true
     run_health_schema_subcheck "$slug" || true
 }
 

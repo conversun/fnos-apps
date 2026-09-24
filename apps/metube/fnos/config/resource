@@ -1,4 +1,7 @@
 {
+    "port-config": {
+        "protocol-file": "MeTube.sc"
+    },
     "data-share": {
         "shares": [
             {
@@ -11,6 +14,12 @@
             }
         ]
     },
-    "systemd-unit": {
+    "docker-project": {
+        "projects": [
+            {
+                "name": "metube",
+                "path": "docker"
+            }
+        ]
     }
 }
