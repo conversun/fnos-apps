@@ -116,18 +116,37 @@ jobs:
           FPK_VERSION="${{ needs.check-version.outputs.fpk_version }}"
           MANIFEST_PLATFORM="${{ matrix.manifest_platform }}"
           FILE_PREFIX="${{ needs.check-version.outputs.file_prefix }}"
-
-          bash "scripts/apps/${APP}/build.sh"
-
-          ls -lh app.tgz
-          bash scripts/build-fpk.sh "apps/${APP}" app.tgz "${VERSION}" "${MANIFEST_PLATFORM}"
-          FPK_BUILT="${FILE_PREFIX}_${VERSION}_${MANIFEST_PLATFORM}.fpk"
+          ARCH="${{ matrix.arch }}"
           FPK_FINAL="${FILE_PREFIX}_${FPK_VERSION}_${MANIFEST_PLATFORM}.fpk"
-          if [ "$FPK_BUILT" != "$FPK_FINAL" ]; then
-            mv "$FPK_BUILT" "$FPK_FINAL"
+
+          # Official-fpk passthrough: when meta.env declares OFFICIAL_FPK_REPO,
+          # the upstream's own fnOS package IS the artifact — download it per
+          # arch and skip local packaging entirely (upstream keeps it current
+          # and better integrated than a re-wrap could be).
+          source "scripts/apps/${APP}/meta.env"
+          ASSET_TEMPLATE=""
+          if [ -n "${OFFICIAL_FPK_REPO:-}" ]; then
+            ASSET_TEMPLATE="$(eval "echo \"\${OFFICIAL_FPK_ASSET_${ARCH}:-}\"")"
           fi
-          echo "Built: ${FPK_FINAL}"
-          ls -lh "${FPK_FINAL}"
+          if [ -n "${ASSET_TEMPLATE}" ]; then
+            ASSET="$(eval "echo \"${ASSET_TEMPLATE}\"")"
+            curl -fL --retry 3 --retry-delay 5 --connect-timeout 30 \
+              -o "${FPK_FINAL}" \
+              "https://github.com/${OFFICIAL_FPK_REPO}/releases/download/${VERSION}/${ASSET}"
+            echo "Official fpk passthrough: ${FPK_FINAL} <- ${OFFICIAL_FPK_REPO} ${VERSION} asset ${ASSET}"
+            ls -lh "${FPK_FINAL}"
+          else
+            bash "scripts/apps/${APP}/build.sh"
+
+            ls -lh app.tgz
+            bash scripts/build-fpk.sh "apps/${APP}" app.tgz "${VERSION}" "${MANIFEST_PLATFORM}"
+            FPK_BUILT="${FILE_PREFIX}_${VERSION}_${MANIFEST_PLATFORM}.fpk"
+            if [ "${FPK_BUILT}" != "${FPK_FINAL}" ]; then
+              mv "${FPK_BUILT}" "${FPK_FINAL}"
+            fi
+            echo "Built: ${FPK_FINAL}"
+            ls -lh "${FPK_FINAL}"
+          fi
         env:
           VERSION: ${{ needs.check-version.outputs.version }}
           FPK_VERSION: ${{ needs.check-version.outputs.fpk_version }}

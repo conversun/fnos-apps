@@ -1,6 +1,11 @@
 #!/bin/bash
 set -euo pipefail
 
+# SUPERSEDED by official-fpk passthrough: meta.env declares OFFICIAL_FPK_REPO,
+# so CI downloads the upstream Aellus-<v>-fnos-*.fpk directly and never runs
+# this script. Kept as the fallback path for pinned rebuilds of versions
+# predating official fpks, and to satisfy the build-contract static checks.
+
 VERSION="${VERSION:-}"
 
 # Upstream asset names have changed across releases:

@@ -6,7 +6,7 @@
             "desc": "LAN file drop — upload, browse and download from any browser",
             "icon": "images/{0}.png",
             "type": "url",
-            "port": "8000",
+            "port": "5115",
             "protocol": "http",
             "url": "/",
             "allUsers": true
