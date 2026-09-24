@@ -1,6 +1,6 @@
 services:
   metube:
-    image: ${DOCKER_MIRROR}docker.io/alexta69/metube:latest
+    image: ${DOCKER_MIRROR}docker.io/alexta69/metube:${VERSION}
     container_name: metube
     ports:
       - "${TRIM_SERVICE_PORT}:8081"
