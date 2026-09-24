@@ -23,6 +23,10 @@ emit_output() {
 
 [ -z "${APP_SLUG}" ] && error "APP_SLUG is required"
 [ -z "${VERSION}" ] && error "VERSION is required"
+# A "null" version means the upstream query failed (rate-limit JSON has no
+# .tag_name and jq -r emits the literal string). Fail loudly instead of
+# publishing a slug/vnull release (opensurge, #306).
+[ "${VERSION}" = "null" ] && error "VERSION resolved to 'null' — upstream query failed; refusing to release"
 [ -z "${EVENT_NAME}" ] && error "EVENT_NAME is required"
 
 BASE_TAG="${APP_SLUG}/v${VERSION}"
