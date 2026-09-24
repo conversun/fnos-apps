@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-23T08:05:09Z",
+  "generated_at": "2026-09-24T04:36:28Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -86,7 +86,7 @@
         "arm"
       ],
       "updated_at": "2026-09-12T17:06:56Z",
-      "download_count": 15,
+      "download_count": 22,
       "app_type": "native",
       "category": "network"
     },
@@ -276,7 +276,7 @@
         "arm"
       ],
       "updated_at": "2026-09-15T08:02:37Z",
-      "download_count": 81,
+      "download_count": 82,
       "app_type": "docker",
       "category": "automation"
     },
@@ -339,7 +339,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T06:22:13Z",
-      "download_count": 49,
+      "download_count": 50,
       "app_type": "docker",
       "category": ""
     },
@@ -738,7 +738,7 @@
         "arm"
       ],
       "updated_at": "2026-09-09T08:03:54Z",
-      "download_count": 990,
+      "download_count": 995,
       "app_type": "native",
       "category": "media"
     },
@@ -1201,7 +1201,7 @@
         "arm"
       ],
       "updated_at": "2026-09-12T19:03:05Z",
-      "download_count": 24,
+      "download_count": 25,
       "app_type": "native",
       "category": "system"
     },
@@ -1390,7 +1390,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T09:51:26Z",
-      "download_count": 147,
+      "download_count": 150,
       "app_type": "docker",
       "category": "content"
     },
@@ -1538,7 +1538,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:46:21Z",
-      "download_count": 209,
+      "download_count": 213,
       "app_type": "native",
       "category": "automation"
     },
@@ -1643,7 +1643,7 @@
         "arm"
       ],
       "updated_at": "2026-09-12T08:02:13Z",
-      "download_count": 36,
+      "download_count": 39,
       "app_type": "docker",
       "category": "media"
     },
@@ -1664,7 +1664,7 @@
         "arm"
       ],
       "updated_at": "2026-09-23T08:04:47Z",
-      "download_count": 25,
+      "download_count": 26,
       "app_type": "docker",
       "category": "content"
     },
@@ -1791,7 +1791,7 @@
         "arm"
       ],
       "updated_at": "2026-09-21T08:02:46Z",
-      "download_count": 63,
+      "download_count": 67,
       "app_type": "native",
       "category": "content"
     },
@@ -1822,9 +1822,9 @@
       "file_prefix": "metube",
       "display_name": "MeTube",
       "description": "网页版 yt-dlp 下载器：粘贴链接即下，支持 YouTube/B 站等上千站点、多任务队列与音视频格式选择，文件自动落盘到 NAS",
-      "version": "latest-2026.09.23",
-      "fpk_version": "latest-2026.09.23",
-      "release_tag": "metube/vlatest-2026.09.23",
+      "version": "latest-2026.09.24",
+      "fpk_version": "latest-2026.09.24",
+      "release_tag": "metube/vlatest-2026.09.24",
       "service_port": 8281,
       "homepage_url": "https://github.com/alexta69/metube",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/metube/fnos/ICON_256.PNG",
@@ -1832,7 +1832,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-23T08:03:13Z",
+      "updated_at": "2026-09-24T04:36:23Z",
       "download_count": 48,
       "app_type": "docker",
       "category": "download"
@@ -1854,7 +1854,7 @@
         "arm"
       ],
       "updated_at": "2026-09-06T08:02:08Z",
-      "download_count": 86,
+      "download_count": 89,
       "app_type": "docker",
       "category": "media"
     },
@@ -2129,7 +2129,7 @@
         "arm"
       ],
       "updated_at": "2026-09-16T08:02:44Z",
-      "download_count": 130,
+      "download_count": 132,
       "app_type": "native",
       "category": "system"
     },
@@ -2150,7 +2150,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:45:53Z",
-      "download_count": 119,
+      "download_count": 121,
       "app_type": "docker",
       "category": "system"
     },
@@ -2349,9 +2349,9 @@
       "file_prefix": "opensurge",
       "display_name": "OpenSurge",
       "description": "飞牛 NAS 专版透明代理与智能分流方案，基于 mihomo + dnsmasq + nftables，提供 TUN 模式、DHCP 服务器、DNS 劫持、每设备策略等功能。原生适配 fnOS 网络环境，开箱即用。",
-      "version": "null",
-      "fpk_version": "null",
-      "release_tag": "opensurge/vnull",
+      "version": "0.1.1",
+      "fpk_version": "0.1.1",
+      "release_tag": "opensurge/v0.1.1",
       "service_port": 61767,
       "homepage_url": "https://github.com/funchs/opensurge-fnos",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/opensurge/fnos/ICON_256.PNG",
@@ -2359,7 +2359,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-15T08:02:43Z",
+      "updated_at": "2026-08-31T15:31:33Z",
       "download_count": 577,
       "app_type": "docker",
       "category": "network"
@@ -2507,7 +2507,7 @@
         "arm"
       ],
       "updated_at": "2026-09-21T08:02:38Z",
-      "download_count": 25,
+      "download_count": 26,
       "app_type": "native",
       "category": "system"
     },
@@ -2591,7 +2591,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:46:58Z",
-      "download_count": 1261,
+      "download_count": 1271,
       "app_type": "native",
       "category": "download"
     },
@@ -2612,7 +2612,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T06:22:55Z",
-      "download_count": 207,
+      "download_count": 212,
       "app_type": "docker",
       "category": "system"
     },
@@ -2654,7 +2654,7 @@
         "arm"
       ],
       "updated_at": "2026-09-17T08:02:56Z",
-      "download_count": 418,
+      "download_count": 423,
       "app_type": "native",
       "category": "automation"
     },
@@ -3096,7 +3096,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T09:51:16Z",
-      "download_count": 156,
+      "download_count": 159,
       "app_type": "docker",
       "category": "media"
     },
@@ -3285,7 +3285,7 @@
         "arm"
       ],
       "updated_at": "2026-09-22T08:02:57Z",
-      "download_count": 52,
+      "download_count": 54,
       "app_type": "docker",
       "category": "media"
     },
@@ -3306,7 +3306,7 @@
         "arm"
       ],
       "updated_at": "2026-09-12T19:03:01Z",
-      "download_count": 28,
+      "download_count": 29,
       "app_type": "native",
       "category": "content"
     },
@@ -3453,7 +3453,7 @@
         "arm"
       ],
       "updated_at": "2026-09-23T08:02:53Z",
-      "download_count": 55,
+      "download_count": 56,
       "app_type": "docker",
       "category": "network"
     },
