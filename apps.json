@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-24T04:55:57Z",
+  "generated_at": "2026-09-24T06:48:29Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -86,7 +86,7 @@
         "arm"
       ],
       "updated_at": "2026-09-24T04:55:36Z",
-      "download_count": 22,
+      "download_count": 26,
       "app_type": "native",
       "category": "network"
     },
@@ -738,7 +738,7 @@
         "arm"
       ],
       "updated_at": "2026-09-09T08:03:54Z",
-      "download_count": 995,
+      "download_count": 998,
       "app_type": "native",
       "category": "media"
     },
@@ -1822,9 +1822,9 @@
       "file_prefix": "metube",
       "display_name": "MeTube",
       "description": "网页版 yt-dlp 下载器：粘贴链接即下，支持 YouTube/B 站等上千站点、多任务队列与音视频格式选择，文件自动落盘到 NAS",
-      "version": "latest-2026.09.24",
-      "fpk_version": "latest-2026.09.24",
-      "release_tag": "metube/vlatest-2026.09.24",
+      "version": "2026.09.23",
+      "fpk_version": "2026.09.23",
+      "release_tag": "metube/v2026.09.23",
       "service_port": 8281,
       "homepage_url": "https://github.com/alexta69/metube",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/metube/fnos/ICON_256.PNG",
@@ -1832,7 +1832,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-24T04:36:23Z",
+      "updated_at": "2026-09-24T06:48:09Z",
       "download_count": 48,
       "app_type": "docker",
       "category": "download"
@@ -3012,7 +3012,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:46:59Z",
-      "download_count": 56,
+      "download_count": 57,
       "app_type": "native",
       "category": "system"
     },
@@ -3306,7 +3306,7 @@
         "arm"
       ],
       "updated_at": "2026-09-12T19:03:01Z",
-      "download_count": 29,
+      "download_count": 32,
       "app_type": "native",
       "category": "content"
     },
