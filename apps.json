@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-27T17:06:33Z",
+  "generated_at": "2026-09-27T17:06:54Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -447,6 +447,27 @@
       "download_count": 50,
       "app_type": "docker",
       "category": "system"
+    },
+    {
+      "slug": "clash-for-fnos",
+      "appname": "clash-for-fnos",
+      "file_prefix": "clash-for-fnos",
+      "display_name": "Clash for fnos",
+      "description": "fnOS 原生 Clash/Mihomo 管理器（官方 fpk 直通）：从 fnOS 桌面直接管理 Mihomo 内核、代理节点、订阅配置、分流规则、连接与日志，支持 TUN 与系统代理。与商店内 mihomo / OpenSurge 定位互补，按场景选用",
+      "version": "1.2.2",
+      "fpk_version": "1.2.2",
+      "release_tag": "clash-for-fnos/v1.2.2",
+      "service_port": 0,
+      "homepage_url": "https://github.com/chenpingonline/Clash-for-fnos",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/clash-for-fnos/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-09-27T17:06:34Z",
+      "download_count": 0,
+      "app_type": "native",
+      "category": "network"
     },
     {
       "slug": "clouddrive2",
