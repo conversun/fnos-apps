@@ -133,9 +133,17 @@ jobs:
           TAG_PREFIX="${OFFICIAL_FPK_TAG_PREFIX:-}"
           if [ -n "${ASSET_TEMPLATE}" ]; then
             ASSET="$(eval "echo \"${ASSET_TEMPLATE}\"")"
-            curl -fL --retry 3 --retry-delay 5 --connect-timeout 30 \
+            # --retry alone does NOT retry a dropped mid-transfer connection
+            # (curl 18/56) — that is exactly how a 40 MB fpk once shipped
+            # truncated, so mirror gh-api.sh's --retry-all-errors and then
+            # verify the gzip stream actually completes.
+            curl -fL --retry 5 --retry-delay 5 --retry-all-errors --connect-timeout 30 \
               -o "${FPK_FINAL}" \
               "https://github.com/${OFFICIAL_FPK_REPO}/releases/download/${TAG_PREFIX}${VERSION}/${ASSET}"
+            if ! tar tzf "${FPK_FINAL}" >/dev/null 2>&1; then
+              echo "::error::Downloaded ${ASSET} failed gzip/tar integrity check (truncated?)"
+              exit 1
+            fi
             echo "Official fpk passthrough: ${FPK_FINAL} <- ${OFFICIAL_FPK_REPO} ${VERSION} asset ${ASSET}"
             ls -lh "${FPK_FINAL}"
           else
