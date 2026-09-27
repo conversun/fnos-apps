@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-27T08:03:06Z",
+  "generated_at": "2026-09-27T17:06:10Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -65,7 +65,7 @@
         "arm"
       ],
       "updated_at": "2026-08-19T08:08:59Z",
-      "download_count": 131,
+      "download_count": 132,
       "app_type": "docker",
       "category": "system"
     },
@@ -86,7 +86,7 @@
         "arm"
       ],
       "updated_at": "2026-09-24T06:58:43Z",
-      "download_count": 35,
+      "download_count": 37,
       "app_type": "native",
       "category": "network"
     },
@@ -255,7 +255,7 @@
         "arm"
       ],
       "updated_at": "2026-09-20T08:03:06Z",
-      "download_count": 96,
+      "download_count": 98,
       "app_type": "docker",
       "category": "automation"
     },
@@ -321,6 +321,27 @@
       "download_count": 135,
       "app_type": "native",
       "category": "media"
+    },
+    {
+      "slug": "blinko",
+      "appname": "blinko",
+      "file_prefix": "blinko",
+      "display_name": "Blinko",
+      "description": "自托管笔记与速记应用：支持 Markdown、双链、标签、全文搜索与 AI 整理，数据存在自己的 PostgreSQL 里；浏览器即用，移动端适配良好",
+      "version": "1.8.8",
+      "fpk_version": "1.8.8",
+      "release_tag": "blinko/v1.8.8",
+      "service_port": 1111,
+      "homepage_url": "https://github.com/blinko-space/blinko",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/blinko/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-09-27T17:05:54Z",
+      "download_count": 0,
+      "app_type": "docker",
+      "category": "content"
     },
     {
       "slug": "calibre-web",
@@ -423,7 +444,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:46:02Z",
-      "download_count": 49,
+      "download_count": 50,
       "app_type": "docker",
       "category": "system"
     },
@@ -738,7 +759,7 @@
         "arm"
       ],
       "updated_at": "2026-09-09T08:03:54Z",
-      "download_count": 1051,
+      "download_count": 1062,
       "app_type": "native",
       "category": "media"
     },
@@ -844,7 +865,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T09:51:14Z",
-      "download_count": 85,
+      "download_count": 86,
       "app_type": "docker",
       "category": "content"
     },
@@ -1201,7 +1222,7 @@
         "arm"
       ],
       "updated_at": "2026-09-12T19:03:05Z",
-      "download_count": 27,
+      "download_count": 29,
       "app_type": "native",
       "category": "system"
     },
@@ -1538,7 +1559,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:46:21Z",
-      "download_count": 235,
+      "download_count": 242,
       "app_type": "native",
       "category": "automation"
     },
@@ -1664,7 +1685,7 @@
         "arm"
       ],
       "updated_at": "2026-09-23T08:04:47Z",
-      "download_count": 27,
+      "download_count": 28,
       "app_type": "docker",
       "category": "content"
     },
@@ -1854,7 +1875,7 @@
         "arm"
       ],
       "updated_at": "2026-09-06T08:02:08Z",
-      "download_count": 92,
+      "download_count": 93,
       "app_type": "docker",
       "category": "media"
     },
@@ -1875,7 +1896,7 @@
         "arm"
       ],
       "updated_at": "2026-09-15T08:02:46Z",
-      "download_count": 1446,
+      "download_count": 1482,
       "app_type": "native",
       "category": "network"
     },
@@ -1896,7 +1917,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:45:43Z",
-      "download_count": 60,
+      "download_count": 61,
       "app_type": "docker",
       "category": "content"
     },
@@ -2174,6 +2195,27 @@
       "download_count": 177,
       "app_type": "native",
       "category": "system"
+    },
+    {
+      "slug": "nginx-web",
+      "appname": "nginx-web",
+      "file_prefix": "nginx-web",
+      "display_name": "nginx-web",
+      "description": "fnOS 桌面版 Nginx 管理器（官方 fpk 直通，standard 标准版）：可视化管理 HTTP/HTTPS 反代、TCP/UDP 转发、SSL 证书与访问统计；如需监听 1024 以下低端口请改装上游 full-ports 变体",
+      "version": "0.3.9",
+      "fpk_version": "0.3.9",
+      "release_tag": "nginx-web/v0.3.9",
+      "service_port": 0,
+      "homepage_url": "https://github.com/chenpingonline/nginx-web-fnos",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/nginx-web/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-09-27T17:06:01Z",
+      "download_count": 0,
+      "app_type": "native",
+      "category": "network"
     },
     {
       "slug": "node-red",
@@ -2591,7 +2633,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:46:58Z",
-      "download_count": 1295,
+      "download_count": 1300,
       "app_type": "native",
       "category": "download"
     },
@@ -2759,7 +2801,7 @@
         "arm"
       ],
       "updated_at": "2026-09-12T19:02:58Z",
-      "download_count": 43,
+      "download_count": 45,
       "app_type": "native",
       "category": "network"
     },
@@ -2970,7 +3012,7 @@
         "arm"
       ],
       "updated_at": "2026-09-27T08:02:27Z",
-      "download_count": 739,
+      "download_count": 843,
       "app_type": "docker",
       "category": "system"
     },
@@ -3096,7 +3138,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T09:51:16Z",
-      "download_count": 161,
+      "download_count": 163,
       "app_type": "docker",
       "category": "media"
     },
@@ -3327,7 +3369,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T09:51:21Z",
-      "download_count": 172,
+      "download_count": 173,
       "app_type": "docker",
       "category": "system"
     },
@@ -3348,7 +3390,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T10:46:49Z",
-      "download_count": 329,
+      "download_count": 331,
       "app_type": "docker",
       "category": "network"
     },
