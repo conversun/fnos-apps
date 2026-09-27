@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-27T08:02:35Z",
+  "generated_at": "2026-09-27T08:03:06Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -791,9 +791,9 @@
       "file_prefix": "feigram",
       "display_name": "Feigram",
       "description": "非官方 Telegram Web 客户端，支持多账号、聊天、媒体预览和下载缓存",
-      "version": "2.6.46",
-      "fpk_version": "2.6.46",
-      "release_tag": "feigram/v2.6.46",
+      "version": "2.6.47",
+      "fpk_version": "2.6.47",
+      "release_tag": "feigram/v2.6.47",
       "service_port": 3088,
       "homepage_url": "https://github.com/g-star1024/Feigram-Public",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/feigram/fnos/ICON_256.PNG",
@@ -801,7 +801,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-26T08:02:57Z",
+      "updated_at": "2026-09-27T08:02:44Z",
       "download_count": 283,
       "app_type": "native",
       "category": "content"
@@ -2076,9 +2076,9 @@
       "file_prefix": "next-ai-draw-io",
       "display_name": "Next AI Draw.io",
       "description": "基于大语言模型的 draw.io 图表生成与编辑工具",
-      "version": "latest-2026.09.26",
-      "fpk_version": "latest-2026.09.26",
-      "release_tag": "next-ai-draw-io/vlatest-2026.09.26",
+      "version": "latest-2026.09.27",
+      "fpk_version": "latest-2026.09.27",
+      "release_tag": "next-ai-draw-io/vlatest-2026.09.27",
       "service_port": 3007,
       "homepage_url": "https://github.com/chadkunsman/next-ai-draw-io",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/next-ai-draw-io/fnos/ICON_256.PNG",
@@ -2086,7 +2086,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-26T08:02:44Z",
+      "updated_at": "2026-09-27T08:02:36Z",
       "download_count": 21,
       "app_type": "docker",
       "category": "ai"
@@ -2591,7 +2591,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:46:58Z",
-      "download_count": 1288,
+      "download_count": 1295,
       "app_type": "native",
       "category": "download"
     },
