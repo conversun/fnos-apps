@@ -1,0 +1,27 @@
+services:
+  blinko:
+    image: ${DOCKER_MIRROR}docker.io/blinkospace/blinko:${VERSION}
+    container_name: blinko
+    depends_on:
+      - blinko-db
+    ports:
+      - "${TRIM_SERVICE_PORT}:1111"
+    environment:
+      - TZ=Asia/Shanghai
+      - NEXTAUTH_SECRET=fnos-blinko-nextauth-3d7a91
+      - DATABASE_URL=postgresql://blinko:fnos-blinko-db-5e82@blinko-db:5432/blinko
+    volumes:
+      - ${TRIM_PKGVAR:?}/data:/app/.blinko
+    restart: unless-stopped
+
+  blinko-db:
+    image: ${DOCKER_MIRROR}docker.io/library/postgres:14-alpine
+    container_name: blinko-db
+    environment:
+      - POSTGRES_USER=blinko
+      - POSTGRES_PASSWORD=fnos-blinko-db-5e82
+      - POSTGRES_DB=blinko
+      - TZ=Asia/Shanghai
+    volumes:
+      - ${TRIM_PKGVAR:?}/postgres:/var/lib/postgresql/data
+    restart: unless-stopped

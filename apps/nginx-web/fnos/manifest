@@ -1,0 +1,14 @@
+appname         = nginx-web
+version         = 0.0.0
+display_name    = nginx-web
+platform        = x86
+maintainer      = chenping
+maintainer_url  = https://github.com/chenpingonline/nginx-web-fnos
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = nginx-web.main
+service_port    = 0
+desc            = fnOS 桌面版 Nginx 管理器（官方 fpk 直通，standard 标准版）：可视化管理 HTTP/HTTPS 反代、TCP/UDP 转发、SSL 证书与访问统计；如需监听 1024 以下低端口请改装上游 full-ports 变体
+source          = thirdparty
+checksum        = 

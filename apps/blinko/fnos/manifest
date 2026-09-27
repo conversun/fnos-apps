@@ -1,0 +1,14 @@
+appname         = blinko
+version         = 0.0.0
+display_name    = Blinko
+platform        = x86
+maintainer      = blinko-space
+maintainer_url  = https://github.com/blinko-space/blinko
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = blinko.Application
+service_port    = 1111
+desc            = 自托管笔记与速记应用：支持 Markdown、双链、标签、全文搜索与 AI 整理，数据存在自己的 PostgreSQL 里；浏览器即用，移动端适配良好
+source          = thirdparty
+checksum        = 

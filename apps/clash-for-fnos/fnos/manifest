@@ -1,0 +1,14 @@
+appname         = clash-for-fnos
+version         = 0.0.0
+display_name    = Clash for fnos
+platform        = x86
+maintainer      = chenping
+maintainer_url  = https://github.com/chenpingonline/Clash-for-fnos
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = clash-for-fnos.main
+service_port    = 0
+desc            = fnOS 原生 Clash/Mihomo 管理器（官方 fpk 直通）：从 fnOS 桌面直接管理 Mihomo 内核、代理节点、订阅配置、分流规则、连接与日志，支持 TUN 与系统代理。与商店内 mihomo / OpenSurge 定位互补，按场景选用
+source          = thirdparty
+checksum        = 

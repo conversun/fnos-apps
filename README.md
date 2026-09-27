@@ -1,7 +1,7 @@
 # fnOS Apps
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-![Apps](https://img.shields.io/badge/apps-165-2ea44f)
+![Apps](https://img.shields.io/badge/apps-168-2ea44f)
 ![Platform](https://img.shields.io/badge/fnOS-third--party-orange)
 
 面向飞牛 fnOS 的第三方应用打包仓库。自动跟踪上游版本，构建可直接安装的 `.fpk` 包。
@@ -105,6 +105,7 @@
 | <img src="apps/appflowy/fnos/ICON.PNG" width="28"> | **AppFlowy** | `8501` | Notion 开源替代品，协作文档平台 | [官网](https://appflowy.io) | [Release][r-appflowy] |
 | <img src="apps/reactive-resume/fnos/ICON.PNG" width="28"> | **Reactive Resume** | `3200` | 在线简历制作工具 | [GitHub](https://github.com/AmruthPillworking/Reactive-Resume) | [Release][r-reactive-resume] |
 | <img src="apps/lanraragi/fnos/ICON.PNG" width="28"> | **LANraragi** | `3000` | 自托管漫画/存档管理服务器，自动元数据刮削 | [GitHub](https://github.com/Difegue/LANraragi) | [Release][r-lanraragi] |
+| <img src="apps/blinko/fnos/ICON.PNG" width="28"> | **Blinko** | `1111` | 自托管笔记与速记，Markdown/双链/标签/全文搜索/AI 整理 | [GitHub](https://github.com/blinko-space/blinko) | [Release][r-blinko] |
 
 ### 🎵 媒体自动化
 
@@ -185,6 +186,8 @@
 | <img src="apps/easytier/fnos/ICON.PNG" width="28"> | **EasyTier** | `11210` | 简单安全的去中心化异地组网方案，支持 Web 管理和子网代理 | [GitHub](https://github.com/EasyTier/EasyTier) | [Release][r-easytier] |
 | <img src="apps/mihomo/fnos/ICON.PNG" width="28"> | **Mihomo** | `9097` | Clash.Meta 内核 + MetaCubeXD dashboard，含开箱即用配置模板、TUN 模式与 LAN 混合代理 | [GitHub](https://github.com/MetaCubeX/mihomo) | [Release][r-mihomo] |
 | <img src="apps/opensurge/fnos/ICON.PNG" width="28"> | **OpenSurge** | `61767` | 旁路由透明代理网关（mihomo + dnsmasq + nftables），TUN 模式与按设备分流（另用 7890/53） | [GitHub](https://github.com/funchs/opensurge-fnos) | [Release][r-opensurge] |
+| <img src="apps/clash-for-fnos/fnos/ICON.PNG" width="28"> | **Clash for fnos** | `桌面` | fnOS 桌面原生 Clash/Mihomo 管理器（官方 fpk 直通），节点/订阅/规则/连接/TUN 一站管理 | [GitHub](https://github.com/chenpingonline/Clash-for-fnos) | [Release][r-clash-for-fnos] |
+| <img src="apps/nginx-web/fnos/ICON.PNG" width="28"> | **nginx-web** | `桌面` | fnOS 桌面版 Nginx 管理器（官方 fpk 直通），反代/转发/SSL 证书/访问统计 | [GitHub](https://github.com/chenpingonline/nginx-web-fnos) | [Release][r-nginx-web] |
 
 ### 🌐 浏览器
 
@@ -315,6 +318,7 @@ fnos-apps/
 [r-readarr]: https://github.com/conversun/fnos-apps/releases?q=readarr
 [r-prowlarr]: https://github.com/conversun/fnos-apps/releases?q=prowlarr
 [r-bazarr]: https://github.com/conversun/fnos-apps/releases?q=bazarr
+[r-blinko]: https://github.com/conversun/fnos-apps/releases?q=blinko
 [r-homepage]: https://github.com/conversun/fnos-apps/releases?q=homepage
 [r-homarr]: https://github.com/conversun/fnos-apps/releases?q=homarr
 [r-uptimekuma]: https://github.com/conversun/fnos-apps/releases?q=uptime-kuma
@@ -399,3 +403,5 @@ fnos-apps/
 [r-danmu-api]: https://github.com/conversun/fnos-apps/releases?q=danmu-api
 [r-aria2-next]: https://github.com/conversun/fnos-apps/releases?q=aria2-next
 [r-opensurge]: https://github.com/conversun/fnos-apps/releases?q=opensurge
+[r-clash-for-fnos]: https://github.com/conversun/fnos-apps/releases?q=clash-for-fnos
+[r-nginx-web]: https://github.com/conversun/fnos-apps/releases?q=nginx-web

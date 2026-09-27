@@ -1,0 +1,17 @@
+[
+    {
+        "stepTitle": "Blinko",
+        "items": [
+            {
+                "type": "text",
+                "field": "wizard_port",
+                "label": "Web 端口",
+                "initValue": "1111",
+                "rules": [
+                    { "required": true, "message": "请输入端口号" },
+                    { "pattern": "^[0-9]+$", "message": "端口必须是数字" }
+                ]
+            }
+        ]
+    }
+]

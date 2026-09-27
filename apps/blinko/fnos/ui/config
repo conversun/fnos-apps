@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "blinko.Application":
+        {
+            "title": "Blinko",
+            "desc": "Blinko",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "1111",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

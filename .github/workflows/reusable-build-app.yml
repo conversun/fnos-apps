@@ -128,11 +128,14 @@ jobs:
           if [ -n "${OFFICIAL_FPK_REPO:-}" ]; then
             ASSET_TEMPLATE="$(eval "echo \"\${OFFICIAL_FPK_ASSET_${ARCH}:-}\"")"
           fi
+          # Upstream release tags may carry a prefix aellus-style bare tags
+          # do not (e.g. chenpingonline/* tags are v-prefixed).
+          TAG_PREFIX="${OFFICIAL_FPK_TAG_PREFIX:-}"
           if [ -n "${ASSET_TEMPLATE}" ]; then
             ASSET="$(eval "echo \"${ASSET_TEMPLATE}\"")"
             curl -fL --retry 3 --retry-delay 5 --connect-timeout 30 \
               -o "${FPK_FINAL}" \
-              "https://github.com/${OFFICIAL_FPK_REPO}/releases/download/${VERSION}/${ASSET}"
+              "https://github.com/${OFFICIAL_FPK_REPO}/releases/download/${TAG_PREFIX}${VERSION}/${ASSET}"
             echo "Official fpk passthrough: ${FPK_FINAL} <- ${OFFICIAL_FPK_REPO} ${VERSION} asset ${ASSET}"
             ls -lh "${FPK_FINAL}"
           else

@@ -1,0 +1,25 @@
+{
+    "port-config": {
+        "protocol-file": "Blinko.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "Blinko",
+                "permission": {
+                    "rw": [
+                        "blinko"
+                    ]
+                }
+            }
+        ]
+    },
+    "docker-project": {
+        "projects": [
+            {
+                "name": "blinko",
+                "path": "docker"
+            }
+        ]
+    }
+}
