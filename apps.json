@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-27T17:13:10Z",
+  "generated_at": "2026-09-28T02:27:29Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -86,7 +86,7 @@
         "arm"
       ],
       "updated_at": "2026-09-24T06:58:43Z",
-      "download_count": 37,
+      "download_count": 42,
       "app_type": "native",
       "category": "network"
     },
@@ -339,7 +339,7 @@
         "arm"
       ],
       "updated_at": "2026-09-27T17:05:54Z",
-      "download_count": 0,
+      "download_count": 7,
       "app_type": "docker",
       "category": "content"
     },
@@ -465,7 +465,7 @@
         "arm"
       ],
       "updated_at": "2026-09-27T17:12:52Z",
-      "download_count": 0,
+      "download_count": 29,
       "app_type": "native",
       "category": "network"
     },
@@ -780,7 +780,7 @@
         "arm"
       ],
       "updated_at": "2026-09-09T08:03:54Z",
-      "download_count": 1062,
+      "download_count": 1066,
       "app_type": "native",
       "category": "media"
     },
@@ -912,6 +912,27 @@
       "category": "browser"
     },
     {
+      "slug": "fnmonitor",
+      "appname": "fnmonitor",
+      "file_prefix": "fnmonitor",
+      "display_name": "飞牛监控",
+      "description": "飞牛系统监控面板：CPU/内存/磁盘/网络/温度/风扇/Docker 一站监控，含流量与功耗统计、硬盘休眠保护与阵列卡物理盘健康（官方 fpk 直通）",
+      "version": "2.16.3",
+      "fpk_version": "2.16.3",
+      "release_tag": "fnmonitor/v2.16.3",
+      "service_port": 8777,
+      "homepage_url": "https://github.com/MisiteQ/fnmonitor",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/fnmonitor/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-09-28T02:21:55Z",
+      "download_count": 0,
+      "app_type": "native",
+      "category": "system"
+    },
+    {
       "slug": "fnos-apps-store",
       "appname": "fnos-apps-store",
       "file_prefix": "fnos-apps-store",
@@ -931,6 +952,48 @@
       "download_count": 6290,
       "app_type": "native",
       "category": "store"
+    },
+    {
+      "slug": "fnos-oidc-bridge",
+      "appname": "fnosoidcbridge",
+      "file_prefix": "fnosoidcbridge",
+      "display_name": "OIDC SSO Bridge",
+      "description": "为飞牛接入 OIDC 单点登录的认证桥接服务（官方 fpk 直通，需按上游文档配置反向代理后给第三方应用提供 OIDC 认证）",
+      "version": "0.7.1",
+      "fpk_version": "0.7.1",
+      "release_tag": "fnos-oidc-bridge/v0.7.1",
+      "service_port": 4223,
+      "homepage_url": "https://github.com/BeFortune/fnos-oidc-bridge",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/fnos-oidc-bridge/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-09-28T02:22:14Z",
+      "download_count": 0,
+      "app_type": "native",
+      "category": "system"
+    },
+    {
+      "slug": "fntv-plus",
+      "appname": "fntvplus",
+      "file_prefix": "fntvplus",
+      "display_name": "Fntv-Plus",
+      "description": "飞牛影视网页端增强（官方 fpk 直通）：沉浸式海报墙/轮播、B 站弹幕+自建源、豆瓣/Bangumi/Trakt 同步、跳过片头/播放记忆、TMDB 信息卡；经反向代理注入、不改动飞牛系统文件，卸载即还原",
+      "version": "1.0.1.224",
+      "fpk_version": "1.0.1.224",
+      "release_tag": "fntv-plus/v1.0.1.224",
+      "service_port": 22350,
+      "homepage_url": "https://github.com/YDMY007/Fntv-Plus-fpk",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/fntv-plus/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-09-28T02:22:17Z",
+      "download_count": 0,
+      "app_type": "native",
+      "category": "media"
     },
     {
       "slug": "forgejo",
@@ -1243,7 +1306,7 @@
         "arm"
       ],
       "updated_at": "2026-09-12T19:03:05Z",
-      "download_count": 29,
+      "download_count": 31,
       "app_type": "native",
       "category": "system"
     },
@@ -1580,7 +1643,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:46:21Z",
-      "download_count": 242,
+      "download_count": 243,
       "app_type": "native",
       "category": "automation"
     },
@@ -1603,6 +1666,27 @@
       "updated_at": "2026-09-10T08:02:39Z",
       "download_count": 95,
       "app_type": "docker",
+      "category": "content"
+    },
+    {
+      "slug": "litepan",
+      "appname": "LitePan",
+      "file_prefix": "LitePan",
+      "display_name": "LitePan",
+      "description": "多网盘聚合挂载与浏览（官方 fpk 直通，飞牛桌面访问）",
+      "version": "0.5.6",
+      "fpk_version": "0.5.6",
+      "release_tag": "litepan/v0.5.6",
+      "service_port": 0,
+      "homepage_url": "https://github.com/qilin-zhu/LitePan-fpk",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/litepan/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-09-28T02:22:08Z",
+      "download_count": 0,
+      "app_type": "native",
       "category": "content"
     },
     {
@@ -1917,7 +2001,7 @@
         "arm"
       ],
       "updated_at": "2026-09-15T08:02:46Z",
-      "download_count": 1482,
+      "download_count": 1483,
       "app_type": "native",
       "category": "network"
     },
@@ -2234,9 +2318,30 @@
         "arm"
       ],
       "updated_at": "2026-09-27T17:06:01Z",
-      "download_count": 0,
+      "download_count": 10,
       "app_type": "native",
       "category": "network"
+    },
+    {
+      "slug": "niupic",
+      "appname": "niupic",
+      "file_prefix": "niupic",
+      "display_name": "NiuPic",
+      "description": "图片素材检索与浏览（官方 fpk 直通）：数十万级图库流畅浏览、RAW/HEIC 等 39+ 相机格式、主题色筛选与视频封面，经飞牛桌面网关访问；上游仅发布 x86 包",
+      "version": "2.5.4",
+      "fpk_version": "2.5.4",
+      "release_tag": "niupic/v2.5.4",
+      "service_port": 0,
+      "homepage_url": "https://github.com/LiuFudi/NiuPic",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/niupic/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-09-28T02:22:26Z",
+      "download_count": 0,
+      "app_type": "native",
+      "category": "content"
     },
     {
       "slug": "node-red",
@@ -2617,6 +2722,27 @@
       "category": "automation"
     },
     {
+      "slug": "pushme-server",
+      "appname": "pushme-server",
+      "file_prefix": "pushme-server",
+      "display_name": "PushMe Server",
+      "description": "自托管消息推送服务端，配合 PushMe 客户端接收通知（官方 fpk 直通）",
+      "version": "1.0.0",
+      "fpk_version": "1.0.0",
+      "release_tag": "pushme-server/v1.0.0",
+      "service_port": 0,
+      "homepage_url": "https://github.com/yafoo/pushme-server",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/pushme-server/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-09-28T02:25:24Z",
+      "download_count": 0,
+      "app_type": "native",
+      "category": "system"
+    },
+    {
       "slug": "puter",
       "appname": "puter",
       "file_prefix": "puter",
@@ -2654,7 +2780,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:46:58Z",
-      "download_count": 1300,
+      "download_count": 1302,
       "app_type": "native",
       "category": "download"
     },
@@ -2717,7 +2843,7 @@
         "arm"
       ],
       "updated_at": "2026-09-17T08:02:56Z",
-      "download_count": 437,
+      "download_count": 438,
       "app_type": "native",
       "category": "automation"
     },
@@ -3033,7 +3159,7 @@
         "arm"
       ],
       "updated_at": "2026-09-27T08:02:27Z",
-      "download_count": 846,
+      "download_count": 934,
       "app_type": "docker",
       "category": "system"
     },
@@ -3390,7 +3516,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T09:51:21Z",
-      "download_count": 173,
+      "download_count": 174,
       "app_type": "docker",
       "category": "system"
     },
