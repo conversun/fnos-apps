@@ -1,0 +1,14 @@
+appname         = menote
+version         = 0.0.0
+display_name    = MeNote
+platform        = x86
+maintainer      = yafoo
+maintainer_url  = https://github.com/yafoo/menote
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = menote.main
+service_port    = 3107
+desc            = 轻量级个人笔记知识库：Markdown 笔记、分类管理、双向链接、知识图谱；内置 P2P 隧道，手机 App 无需公网 IP 直连 NAS 笔记服务，数据本地存储（官方 fpk 直通）
+source          = thirdparty
+checksum        = 

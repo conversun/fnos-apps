@@ -1,7 +1,7 @@
 # fnOS Apps
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-![Apps](https://img.shields.io/badge/apps-174-2ea44f)
+![Apps](https://img.shields.io/badge/apps-175-2ea44f)
 ![Platform](https://img.shields.io/badge/fnOS-third--party-orange)
 
 面向飞牛 fnOS 的第三方应用打包仓库。自动跟踪上游版本，构建可直接安装的 `.fpk` 包。
@@ -107,6 +107,7 @@
 | <img src="apps/reactive-resume/fnos/ICON.PNG" width="28"> | **Reactive Resume** | `3200` | 在线简历制作工具 | [GitHub](https://github.com/AmruthPillworking/Reactive-Resume) | [Release][r-reactive-resume] |
 | <img src="apps/lanraragi/fnos/ICON.PNG" width="28"> | **LANraragi** | `3000` | 自托管漫画/存档管理服务器，自动元数据刮削 | [GitHub](https://github.com/Difegue/LANraragi) | [Release][r-lanraragi] |
 | <img src="apps/blinko/fnos/ICON.PNG" width="28"> | **Blinko** | `1111` | 自托管笔记与速记，Markdown/双链/标签/全文搜索/AI 整理 | [GitHub](https://github.com/blinko-space/blinko) | [Release][r-blinko] |
+| <img src="apps/menote/fnos/ICON.PNG" width="28"> | **MeNote** | `3107` | 轻量笔记知识库（官方 fpk 直通）：Markdown/双链/知识图谱，P2P 隧道供手机直连 | [GitHub](https://github.com/yafoo/menote) | [Release][r-menote] |
 | <img src="apps/litepan/fnos/ICON.PNG" width="28"> | **LitePan** | `桌面` | 多网盘聚合挂载与浏览（官方 fpk 直通） | [GitHub](https://github.com/qilin-zhu/LitePan-fpk) | [Release][r-litepan] |
 | <img src="apps/niupic/fnos/ICON.PNG" width="28"> | **NiuPic 牛图** | `桌面` | 图片素材检索浏览（官方 fpk 直通）：数十万级图库、RAW/HEIC 支持；仅 x86 | [GitHub](https://github.com/LiuFudi/NiuPic) | [Release][r-niupic] |
 
@@ -414,6 +415,7 @@ fnos-apps/
 [r-fnmonitor]: https://github.com/conversun/fnos-apps/releases?q=fnmonitor
 [r-fnos-oidc-bridge]: https://github.com/conversun/fnos-apps/releases?q=fnos-oidc-bridge
 [r-pushme-server]: https://github.com/conversun/fnos-apps/releases?q=pushme-server
+[r-menote]: https://github.com/conversun/fnos-apps/releases?q=menote
 [r-fntv-plus]: https://github.com/conversun/fnos-apps/releases?q=fntv-plus
 [r-litepan]: https://github.com/conversun/fnos-apps/releases?q=litepan
 [r-niupic]: https://github.com/conversun/fnos-apps/releases?q=niupic
