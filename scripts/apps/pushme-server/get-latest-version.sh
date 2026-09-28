@@ -12,9 +12,12 @@ URL="https://github.com/yafoo/pushme-server/releases/download/${TAG}/pushme-serv
 # VERSION must be the fpk's INTERNAL manifest version: that is what the fnOS
 # daemon registers, and anything else would keep the store offering a
 # perpetual "update" that installs the same bytes.
+# tr also strips CR: the upstream manifest has CRLF line endings and an
+# invisible \r in VERSION once named an artifact ...1.0.0\r_arm.fpk, which
+# the artifact upload rejected.
 INTERNAL=$(curl -fsSL --retry 3 --retry-all-errors --connect-timeout 30 "$URL" \
   | tar xzO manifest 2>/dev/null \
-  | sed -n 's/^version[[:space:]]*= *//p' | head -1 | tr -d '"' || true)
+  | sed -n 's/^version[[:space:]]*= *//p' | head -1 | tr -d '"\r' || true)
 
 if [ -n "$INPUT_VERSION" ]; then
   VERSION="$INPUT_VERSION"
