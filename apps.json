@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-28T02:42:11Z",
+  "generated_at": "2026-09-28T03:26:50Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -339,7 +339,7 @@
         "arm"
       ],
       "updated_at": "2026-09-27T17:05:54Z",
-      "download_count": 7,
+      "download_count": 8,
       "app_type": "docker",
       "category": "content"
     },
@@ -465,7 +465,7 @@
         "arm"
       ],
       "updated_at": "2026-09-27T17:12:52Z",
-      "download_count": 30,
+      "download_count": 35,
       "app_type": "native",
       "category": "network"
     },
@@ -928,7 +928,7 @@
         "arm"
       ],
       "updated_at": "2026-09-28T02:21:55Z",
-      "download_count": 2,
+      "download_count": 6,
       "app_type": "native",
       "category": "system"
     },
@@ -970,7 +970,7 @@
         "arm"
       ],
       "updated_at": "2026-09-28T02:22:14Z",
-      "download_count": 2,
+      "download_count": 3,
       "app_type": "native",
       "category": "system"
     },
@@ -991,7 +991,7 @@
         "arm"
       ],
       "updated_at": "2026-09-28T02:22:17Z",
-      "download_count": 1,
+      "download_count": 2,
       "app_type": "native",
       "category": "media"
     },
@@ -1685,7 +1685,7 @@
         "arm"
       ],
       "updated_at": "2026-09-28T02:22:08Z",
-      "download_count": 2,
+      "download_count": 4,
       "app_type": "native",
       "category": "content"
     },
@@ -2339,7 +2339,7 @@
         "arm"
       ],
       "updated_at": "2026-09-28T02:22:26Z",
-      "download_count": 1,
+      "download_count": 2,
       "app_type": "native",
       "category": "content"
     },
@@ -2738,7 +2738,7 @@
         "arm"
       ],
       "updated_at": "2026-09-28T02:25:24Z",
-      "download_count": 0,
+      "download_count": 1,
       "app_type": "native",
       "category": "system"
     },
@@ -2780,7 +2780,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:46:58Z",
-      "download_count": 1303,
+      "download_count": 1306,
       "app_type": "native",
       "category": "download"
     },
@@ -2801,7 +2801,7 @@
         "arm"
       ],
       "updated_at": "2026-09-26T08:02:39Z",
-      "download_count": 223,
+      "download_count": 224,
       "app_type": "docker",
       "category": "system"
     },
@@ -3054,7 +3054,7 @@
         "arm"
       ],
       "updated_at": "2026-09-22T08:02:49Z",
-      "download_count": 31,
+      "download_count": 32,
       "app_type": "docker",
       "category": "content"
     },
@@ -3159,7 +3159,7 @@
         "arm"
       ],
       "updated_at": "2026-09-27T08:02:27Z",
-      "download_count": 936,
+      "download_count": 940,
       "app_type": "docker",
       "category": "system"
     },
@@ -3379,9 +3379,9 @@
       "file_prefix": "transmission",
       "display_name": "Transmission",
       "description": "Transmission 是一个轻量级的 BitTorrent 客户端，以简洁高效著称，支持 Web 远程管理。",
-      "version": "latest-2026.09.27",
-      "fpk_version": "latest-2026.09.27",
-      "release_tag": "transmission/vlatest-2026.09.27",
+      "version": "latest-2026.09.28",
+      "fpk_version": "latest-2026.09.28",
+      "release_tag": "transmission/vlatest-2026.09.28",
       "service_port": 9091,
       "homepage_url": "https://transmissionbt.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/transmission/fnos/ICON_256.PNG",
@@ -3389,7 +3389,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-27T08:02:23Z",
+      "updated_at": "2026-09-28T03:26:30Z",
       "download_count": 61,
       "app_type": "docker",
       "category": "download"
@@ -3516,7 +3516,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T09:51:21Z",
-      "download_count": 174,
+      "download_count": 179,
       "app_type": "docker",
       "category": "system"
     },
