@@ -174,7 +174,7 @@
 | <img src="apps/surface-battery/fnos/ICON.PNG" width="28"> | **Surface 电池驱动** | — | Microsoft Surface 电池驱动（Surface Aggregator），应用内按需编译安装，仅 x86 | [GitHub](https://github.com/xiowo/fnos_surface_battery_driver) | [Release][r-surface-battery] |
 | <img src="apps/fnmonitor/fnos/ICON.PNG" width="28"> | **fnmonitor 飞牛监控** | `8777` | 系统监控面板（官方 fpk 直通）：CPU/内存/磁盘/温度/风扇/Docker，流量功耗统计与硬盘休眠保护 | [GitHub](https://github.com/MisiteQ/fnmonitor) | [Release][r-fnmonitor] |
 | <img src="apps/fnos-oidc-bridge/fnos/ICON.PNG" width="28"> | **OIDC SSO Bridge** | `4223` | 飞牛 OIDC 单点登录桥接（官方 fpk 直通），为第三方应用提供统一认证 | [GitHub](https://github.com/BeFortune/fnos-oidc-bridge) | [Release][r-fnos-oidc-bridge] |
-| <img src="apps/pushme-server/fnos/ICON.PNG" width="28"> | **PushMe Server** | `桌面` | 自托管消息推送服务端（官方 fpk 直通） | [GitHub](https://github.com/yafoo/pushme-server) | [Release][r-pushme-server] |
+| <img src="apps/pushme-server/fnos/ICON.PNG" width="28"> | **PushMe Server** | `3010` | 自托管消息推送服务端（官方 fpk 直通），Web 面板/API 3010、MQTT/WebSocket 3100 | [GitHub](https://github.com/yafoo/pushme-server) | [Release][r-pushme-server] |
 
 ### 🌐 网络工具
 
