@@ -1,0 +1,14 @@
+appname         = fnmonitor
+version         = 0.0.0
+display_name    = 飞牛监控
+platform        = x86
+maintainer      = MisiteQ
+maintainer_url  = https://github.com/MisiteQ/fnmonitor
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = fnmonitor.main
+service_port    = 8777
+desc            = 飞牛系统监控面板：CPU/内存/磁盘/网络/温度/风扇/Docker 一站监控，含流量与功耗统计、硬盘休眠保护与阵列卡物理盘健康（官方 fpk 直通）
+source          = thirdparty
+checksum        = 

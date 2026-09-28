@@ -1,0 +1,14 @@
+appname         = LitePan
+version         = 0.0.0
+display_name    = LitePan
+platform        = x86
+maintainer      = qilin-zhu
+maintainer_url  = https://github.com/qilin-zhu/LitePan-fpk
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = litepan.main
+service_port    = 0
+desc            = 多网盘聚合挂载与浏览（官方 fpk 直通，飞牛桌面访问）
+source          = thirdparty
+checksum        = 

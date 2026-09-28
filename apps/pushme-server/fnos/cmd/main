@@ -1,0 +1,4 @@
+#!/bin/bash
+# Metadata-only app (official-fpk passthrough): this tree never ships — CI
+# downloads the upstream's own fnOS package. Stub kept for layout checks.
+exit 0

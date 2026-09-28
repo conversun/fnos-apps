@@ -1,0 +1,3 @@
+#!/bin/bash
+# Metadata-only app (official-fpk passthrough): nothing to set up locally.
+true

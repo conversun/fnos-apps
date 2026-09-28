@@ -1,7 +1,7 @@
 # fnOS Apps
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-![Apps](https://img.shields.io/badge/apps-168-2ea44f)
+![Apps](https://img.shields.io/badge/apps-174-2ea44f)
 ![Platform](https://img.shields.io/badge/fnOS-third--party-orange)
 
 面向飞牛 fnOS 的第三方应用打包仓库。自动跟踪上游版本，构建可直接安装的 `.fpk` 包。
@@ -65,6 +65,7 @@
 | <img src="apps/suwayomi/fnos/ICON.PNG" width="28"> | **Suwayomi** | `4567` | 免费开源漫画阅读服务器，支持多来源扩展 | [GitHub](https://github.com/Suwayomi/Suwayomi-Server) | [Release][r-suwayomi] |
 | <img src="apps/lyranest/fnos/ICON.PNG" width="28"> | **LyraNest** | `8080` | 律巢音乐：自托管多端音乐服务，共享曲库/歌单/播放队列，支持歌词偏移与离线下载 | [GitHub](https://github.com/WHWgogogo/LyraNest) | [Release][r-lyranest] |
 | <img src="apps/miair-next/fnos/ICON.PNG" width="28"> | **MiAir Next** | `8300` | 将小米小爱音箱转换为 DLNA 渲染器与 AirPlay 接收器，含 Web 管理后台 | [GitHub](https://github.com/deerwan/miair-next) | [Release][r-miair-next] |
+| <img src="apps/fntv-plus/fnos/ICON.PNG" width="28"> | **Fntv-Plus** | `22350` | 飞牛影视网页端增强（官方 fpk 直通）：海报墙/B站弹幕/豆瓣·Trakt 同步/跳片头，反代注入、卸载还原 | [GitHub](https://github.com/YDMY007/Fntv-Plus-fpk) | [Release][r-fntv-plus] |
 
 ### ⬇️ 下载工具
 
@@ -106,6 +107,8 @@
 | <img src="apps/reactive-resume/fnos/ICON.PNG" width="28"> | **Reactive Resume** | `3200` | 在线简历制作工具 | [GitHub](https://github.com/AmruthPillworking/Reactive-Resume) | [Release][r-reactive-resume] |
 | <img src="apps/lanraragi/fnos/ICON.PNG" width="28"> | **LANraragi** | `3000` | 自托管漫画/存档管理服务器，自动元数据刮削 | [GitHub](https://github.com/Difegue/LANraragi) | [Release][r-lanraragi] |
 | <img src="apps/blinko/fnos/ICON.PNG" width="28"> | **Blinko** | `1111` | 自托管笔记与速记，Markdown/双链/标签/全文搜索/AI 整理 | [GitHub](https://github.com/blinko-space/blinko) | [Release][r-blinko] |
+| <img src="apps/litepan/fnos/ICON.PNG" width="28"> | **LitePan** | `桌面` | 多网盘聚合挂载与浏览（官方 fpk 直通） | [GitHub](https://github.com/qilin-zhu/LitePan-fpk) | [Release][r-litepan] |
+| <img src="apps/niupic/fnos/ICON.PNG" width="28"> | **NiuPic 牛图** | `桌面` | 图片素材检索浏览（官方 fpk 直通）：数十万级图库、RAW/HEIC 支持；仅 x86 | [GitHub](https://github.com/LiuFudi/NiuPic) | [Release][r-niupic] |
 
 ### 🎵 媒体自动化
 
@@ -169,6 +172,9 @@
 | <img src="apps/nvidia-driver/fnos/ICON.PNG" width="28"> | **NVIDIA Driver** | — | NVIDIA GPU 驱动（R580 LTS）+ nvidia-container-toolkit，仅 x86 | [官网](https://www.nvidia.com/drivers) | [Release][r-nvidia-driver] |
 | <img src="apps/arcane/fnos/ICON.PNG" width="28"> | **Arcane** | `3552` | 现代化 Docker 管理界面，可视化管理容器、镜像、Compose 项目与存储卷 | [GitHub](https://github.com/getarcaneapp/arcane) | [Release][r-arcane] |
 | <img src="apps/surface-battery/fnos/ICON.PNG" width="28"> | **Surface 电池驱动** | — | Microsoft Surface 电池驱动（Surface Aggregator），应用内按需编译安装，仅 x86 | [GitHub](https://github.com/xiowo/fnos_surface_battery_driver) | [Release][r-surface-battery] |
+| <img src="apps/fnmonitor/fnos/ICON.PNG" width="28"> | **fnmonitor 飞牛监控** | `8777` | 系统监控面板（官方 fpk 直通）：CPU/内存/磁盘/温度/风扇/Docker，流量功耗统计与硬盘休眠保护 | [GitHub](https://github.com/MisiteQ/fnmonitor) | [Release][r-fnmonitor] |
+| <img src="apps/fnos-oidc-bridge/fnos/ICON.PNG" width="28"> | **OIDC SSO Bridge** | `4223` | 飞牛 OIDC 单点登录桥接（官方 fpk 直通），为第三方应用提供统一认证 | [GitHub](https://github.com/BeFortune/fnos-oidc-bridge) | [Release][r-fnos-oidc-bridge] |
+| <img src="apps/pushme-server/fnos/ICON.PNG" width="28"> | **PushMe Server** | `桌面` | 自托管消息推送服务端（官方 fpk 直通） | [GitHub](https://github.com/yafoo/pushme-server) | [Release][r-pushme-server] |
 
 ### 🌐 网络工具
 
@@ -405,3 +411,9 @@ fnos-apps/
 [r-opensurge]: https://github.com/conversun/fnos-apps/releases?q=opensurge
 [r-clash-for-fnos]: https://github.com/conversun/fnos-apps/releases?q=clash-for-fnos
 [r-nginx-web]: https://github.com/conversun/fnos-apps/releases?q=nginx-web
+[r-fnmonitor]: https://github.com/conversun/fnos-apps/releases?q=fnmonitor
+[r-fnos-oidc-bridge]: https://github.com/conversun/fnos-apps/releases?q=fnos-oidc-bridge
+[r-pushme-server]: https://github.com/conversun/fnos-apps/releases?q=pushme-server
+[r-fntv-plus]: https://github.com/conversun/fnos-apps/releases?q=fntv-plus
+[r-litepan]: https://github.com/conversun/fnos-apps/releases?q=litepan
+[r-niupic]: https://github.com/conversun/fnos-apps/releases?q=niupic

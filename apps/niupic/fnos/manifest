@@ -1,0 +1,14 @@
+appname         = niupic
+version         = 0.0.0
+display_name    = NiuPic
+platform        = x86
+maintainer      = LiuFudi
+maintainer_url  = https://github.com/LiuFudi/NiuPic
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = niupic.main
+service_port    = 0
+desc            = 图片素材检索与浏览（官方 fpk 直通）：数十万级图库流畅浏览、RAW/HEIC 等 39+ 相机格式、主题色筛选与视频封面，经飞牛桌面网关访问；上游仅发布 x86 包
+source          = thirdparty
+checksum        = 

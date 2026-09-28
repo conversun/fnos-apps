@@ -129,8 +129,13 @@ jobs:
             ASSET_TEMPLATE="$(eval "echo \"\${OFFICIAL_FPK_ASSET_${ARCH}:-}\"")"
           fi
           # Upstream release tags may carry a prefix aellus-style bare tags
-          # do not (e.g. chenpingonline/* tags are v-prefixed).
+          # do not (e.g. chenpingonline/* tags are v-prefixed), and some
+          # diverge from the fpk version entirely — those pin ${UPSTREAM_TAG}
+          # (the raw latest release tag, exported by get-latest-version.sh)
+          # via OFFICIAL_FPK_TAG_TEMPLATE.
           TAG_PREFIX="${OFFICIAL_FPK_TAG_PREFIX:-}"
+          TAG_TEMPLATE="${OFFICIAL_FPK_TAG_TEMPLATE:-\${TAG_PREFIX}\${VERSION}}"
+          TAG_REF="$(eval "echo \"${TAG_TEMPLATE}\"")"
           if [ -n "${ASSET_TEMPLATE}" ]; then
             ASSET="$(eval "echo \"${ASSET_TEMPLATE}\"")"
             # --retry alone does NOT retry a dropped mid-transfer connection
@@ -139,7 +144,7 @@ jobs:
             # verify the gzip stream actually completes.
             curl -fL --retry 5 --retry-delay 5 --retry-all-errors --connect-timeout 30 \
               -o "${FPK_FINAL}" \
-              "https://github.com/${OFFICIAL_FPK_REPO}/releases/download/${TAG_PREFIX}${VERSION}/${ASSET}"
+              "https://github.com/${OFFICIAL_FPK_REPO}/releases/download/${TAG_REF}/${ASSET}"
             if ! tar tzf "${FPK_FINAL}" >/dev/null 2>&1; then
               echo "::error::Downloaded ${ASSET} failed gzip/tar integrity check (truncated?)"
               exit 1

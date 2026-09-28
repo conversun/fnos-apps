@@ -1,0 +1,14 @@
+appname         = pushme-server
+version         = 0.0.0
+display_name    = PushMe Server
+platform        = x86
+maintainer      = yafoo
+maintainer_url  = https://github.com/yafoo/pushme-server
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = pushme-server.main
+service_port    = 0
+desc            = 自托管消息推送服务端，配合 PushMe 客户端接收通知（官方 fpk 直通）
+source          = thirdparty
+checksum        = 

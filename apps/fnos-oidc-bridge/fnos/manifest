@@ -1,0 +1,14 @@
+appname         = fnosoidcbridge
+version         = 0.0.0
+display_name    = OIDC SSO Bridge
+platform        = x86
+maintainer      = BeFortune
+maintainer_url  = https://github.com/BeFortune/fnos-oidc-bridge
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = fnos-oidc-bridge.main
+service_port    = 4223
+desc            = 为飞牛接入 OIDC 单点登录的认证桥接服务（官方 fpk 直通，需按上游文档配置反向代理后给第三方应用提供 OIDC 认证）
+source          = thirdparty
+checksum        = 

@@ -1,0 +1,14 @@
+appname         = fntvplus
+version         = 0.0.0
+display_name    = Fntv-Plus
+platform        = x86
+maintainer      = YDMY007
+maintainer_url  = https://github.com/YDMY007/Fntv-Plus-fpk
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = fntv-plus.main
+service_port    = 22350
+desc            = 飞牛影视网页端增强（官方 fpk 直通）：沉浸式海报墙/轮播、B 站弹幕+自建源、豆瓣/Bangumi/Trakt 同步、跳过片头/播放记忆、TMDB 信息卡；经反向代理注入、不改动飞牛系统文件，卸载即还原
+source          = thirdparty
+checksum        = 
