@@ -134,7 +134,13 @@ jobs:
           # (the raw latest release tag, exported by get-latest-version.sh)
           # via OFFICIAL_FPK_TAG_TEMPLATE.
           TAG_PREFIX="${OFFICIAL_FPK_TAG_PREFIX:-}"
-          TAG_TEMPLATE="${OFFICIAL_FPK_TAG_TEMPLATE:-\${TAG_PREFIX}\${VERSION}}"
+          TAG_TEMPLATE="${OFFICIAL_FPK_TAG_TEMPLATE:-}"
+          if [ -z "$TAG_TEMPLATE" ]; then
+            # Single-quoted literal: a nested ${VAR:-${A}${B}} default mangles
+            # the braces at parse time (CI-proven on 28edbde) and produces
+            # garbage download URLs.
+            TAG_TEMPLATE='${TAG_PREFIX}${VERSION}'
+          fi
           TAG_REF="$(eval "echo \"${TAG_TEMPLATE}\"")"
           if [ -n "${ASSET_TEMPLATE}" ]; then
             ASSET="$(eval "echo \"${ASSET_TEMPLATE}\"")"
