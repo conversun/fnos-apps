@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-28T05:08:16Z",
+  "generated_at": "2026-09-28T06:36:07Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -339,7 +339,7 @@
         "arm"
       ],
       "updated_at": "2026-09-27T17:05:54Z",
-      "download_count": 12,
+      "download_count": 16,
       "app_type": "docker",
       "category": "content"
     },
@@ -465,7 +465,7 @@
         "arm"
       ],
       "updated_at": "2026-09-27T17:12:52Z",
-      "download_count": 44,
+      "download_count": 49,
       "app_type": "native",
       "category": "network"
     },
@@ -991,7 +991,7 @@
         "arm"
       ],
       "updated_at": "2026-09-28T02:22:17Z",
-      "download_count": 5,
+      "download_count": 7,
       "app_type": "native",
       "category": "media"
     },
@@ -1643,7 +1643,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:46:21Z",
-      "download_count": 244,
+      "download_count": 248,
       "app_type": "native",
       "category": "automation"
     },
@@ -1685,7 +1685,7 @@
         "arm"
       ],
       "updated_at": "2026-09-28T02:22:08Z",
-      "download_count": 13,
+      "download_count": 16,
       "app_type": "native",
       "category": "content"
     },
@@ -1790,7 +1790,7 @@
         "arm"
       ],
       "updated_at": "2026-09-23T08:04:47Z",
-      "download_count": 28,
+      "download_count": 31,
       "app_type": "docker",
       "category": "content"
     },
@@ -1922,6 +1922,27 @@
       "category": "content"
     },
     {
+      "slug": "menote",
+      "appname": "menote",
+      "file_prefix": "menote",
+      "display_name": "MeNote",
+      "description": "轻量级个人笔记知识库：Markdown 笔记、分类管理、双向链接、知识图谱；内置 P2P 隧道，手机 App 无需公网 IP 直连 NAS 笔记服务，数据本地存储（官方 fpk 直通）",
+      "version": "1.0.0",
+      "fpk_version": "1.0.0",
+      "release_tag": "menote/v1.0.0",
+      "service_port": 3107,
+      "homepage_url": "https://github.com/yafoo/menote",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/menote/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-09-28T06:35:47Z",
+      "download_count": 0,
+      "app_type": "native",
+      "category": "content"
+    },
+    {
       "slug": "metatube",
       "appname": "metatube",
       "file_prefix": "metatube",
@@ -2001,7 +2022,7 @@
         "arm"
       ],
       "updated_at": "2026-09-15T08:02:46Z",
-      "download_count": 1486,
+      "download_count": 1487,
       "app_type": "native",
       "category": "network"
     },
@@ -2318,7 +2339,7 @@
         "arm"
       ],
       "updated_at": "2026-09-27T17:06:01Z",
-      "download_count": 15,
+      "download_count": 16,
       "app_type": "native",
       "category": "network"
     },
@@ -2738,7 +2759,7 @@
         "arm"
       ],
       "updated_at": "2026-09-28T05:07:58Z",
-      "download_count": 1,
+      "download_count": 4,
       "app_type": "native",
       "category": "system"
     },
@@ -2843,7 +2864,7 @@
         "arm"
       ],
       "updated_at": "2026-09-17T08:02:56Z",
-      "download_count": 440,
+      "download_count": 441,
       "app_type": "native",
       "category": "automation"
     },
@@ -2990,7 +3011,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T06:24:32Z",
-      "download_count": 178,
+      "download_count": 179,
       "app_type": "docker",
       "category": "network",
       "post_install_note": "SakuraFrp 容器使用 host 网络模式运行。首次安装后，请通过远程管理面板创建并启动隧道。"
@@ -3159,7 +3180,7 @@
         "arm"
       ],
       "updated_at": "2026-09-27T08:02:27Z",
-      "download_count": 956,
+      "download_count": 967,
       "app_type": "docker",
       "category": "system"
     },
@@ -3516,7 +3537,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T09:51:21Z",
-      "download_count": 179,
+      "download_count": 182,
       "app_type": "docker",
       "category": "system"
     },
