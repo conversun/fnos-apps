@@ -27,6 +27,12 @@ emit_output() {
 # .tag_name and jq -r emits the literal string). Fail loudly instead of
 # publishing a slug/vnull release (opensurge, #306).
 [ "${VERSION}" = "null" ] && error "VERSION resolved to 'null' — upstream query failed; refusing to release"
+# Control characters and other junk in a version (measured: an upstream fpk
+# manifest with CRLF endings smuggled a \r into VERSION) poison artifact
+# filenames. Fail loudly instead.
+case "${VERSION}" in
+  *[!A-Za-z0-9._+-]*) error "VERSION '${VERSION}' contains characters outside [A-Za-z0-9._+-]; refusing to release" ;;
+esac
 [ -z "${EVENT_NAME}" ] && error "EVENT_NAME is required"
 
 BASE_TAG="${APP_SLUG}/v${VERSION}"
