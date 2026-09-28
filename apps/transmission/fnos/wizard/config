@@ -5,11 +5,42 @@
             {
                 "type": "text",
                 "field": "wizard_port",
-                "label": "Web UI",
+                "label": "Web 端口",
                 "initValue": "9091",
                 "rules": [
-                    { "required": true, "message": "Please enter the port number" },
-                    { "pattern": "^[0-9]+$", "message": "Port must be a number" }
+                    {
+                        "required": true,
+                        "message": "请输入端口号"
+                    },
+                    {
+                        "pattern": "^[0-9]+$",
+                        "message": "端口必须是数字"
+                    }
+                ]
+            },
+            {
+                "type": "tips",
+                "helpText": "下载目录：留空使用应用数据目录下的 downloads；填写 NAS 上的绝对路径（如 <code>/vol1/downloads</code>）则直接挂载该目录。<br>网络模式：bridge 默认（端口映射，隔离安全）；host 主机网络（BT/DHT 直连、吞吐更高，此时 Web 界面固定使用 9091 端口、BT 端口 51413）。两项与端口一样持久化保存，升级自动重放，不再因升级丢失（issue #290）。"
+            },
+            {
+                "type": "text",
+                "field": "wizard_downloads_dir",
+                "label": "下载目录（可选，绝对路径）"
+            },
+            {
+                "type": "radio",
+                "field": "wizard_network_mode",
+                "label": "网络模式",
+                "initValue": "bridge",
+                "options": [
+                    {
+                        "label": "bridge（默认，端口映射）",
+                        "value": "bridge"
+                    },
+                    {
+                        "label": "host（主机网络，BT 性能优先）",
+                        "value": "host"
+                    }
                 ]
             }
         ]

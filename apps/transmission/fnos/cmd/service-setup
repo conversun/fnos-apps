@@ -1,22 +1,31 @@
 #!/bin/bash
 
-service_postinst() {
-    mkdir -p "${TRIM_PKGVAR}/config" 2>/dev/null || true
-    mkdir -p "${TRIM_PKGVAR}/downloads" 2>/dev/null || true
-    mkdir -p "${TRIM_PKGVAR}/watch" 2>/dev/null || true
-}
-
 COMPOSE_FILE="${TRIM_APPDEST}/docker/docker-compose.yaml"
 PORT_SAVE="${TRIM_PKGVAR}/.port"
 
 apply_port() {
     local port="$1"
     [ -z "$port" ] && return
-    sed -i 's/"[^"]*:9091"/"'"${port}"':9091"/' "$COMPOSE_FILE"
+    sed -i.bak 's/"[^"]*:9091"/"'"${port}"':9091"/' "$COMPOSE_FILE"
+    rm -f "${COMPOSE_FILE}.bak"
     echo "${port}" > "$PORT_SAVE"
     install_log "Patched docker-compose.yaml: port=${port}"
 }
 
+service_postinst() {
+    mkdir -p "${TRIM_PKGVAR}/config" 2>/dev/null || true
+    mkdir -p "${TRIM_PKGVAR}/downloads" 2>/dev/null || true
+    mkdir -p "${TRIM_PKGVAR}/watch" 2>/dev/null || true
+}
+
+# Storage location / network mode (#290) need NO hook machinery: the compose
+# references ${wizard_downloads_dir}/${wizard_network_mode} and fnOS
+# substitutes them at container-create from the wizard answers the daemon
+# saves (verified on fnOS 1.2.0203: params-bearing upgrades, no-param
+# upgrades reusing saved answers, and post-install config changes all reach
+# the recreated container). Hook-time sed can never make it in time — payload
+# extraction overwrites it before the create — and a network_mode sed would
+# even double the key against the substitution line.
 service_postupgrade() {
     if [ -f "$PORT_SAVE" ]; then
         apply_port "$(cat "$PORT_SAVE")"
@@ -27,4 +36,6 @@ service_postconfig() {
     if [ -n "${wizard_port:-}" ]; then
         apply_port "${wizard_port}"
     fi
+    # wizard_downloads_dir / wizard_network_mode are consumed by fnOS's own
+    # wizard-variable substitution at container-create — no sed needed here.
 }

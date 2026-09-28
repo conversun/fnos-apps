@@ -2,13 +2,19 @@ services:
   transmission:
     image: ${DOCKER_MIRROR}docker.io/linuxserver/transmission:latest
     container_name: transmission
+    # wizard vars are substituted by fnOS at container-create (issue #146),
+    # which is the ONLY channel that reaches the container built during an
+    # upgrade — hook-time sed patches are overwritten by payload extraction
+    # before the create. host+ports only warns (ports discarded), so the
+    # bridge default keeps the mapping and host mode drops it.
+    network_mode: ${wizard_network_mode:-bridge}
     ports:
       - "${TRIM_SERVICE_PORT}:9091"
       - "51413:51413/tcp"
       - "51413:51413/udp"
     volumes:
       - ${TRIM_PKGVAR:?}/config:/config
-      - ${TRIM_PKGVAR:?}/downloads:/downloads
+      - ${wizard_downloads_dir:-${TRIM_PKGVAR:?}/downloads}:/downloads
       - ${TRIM_PKGVAR:?}/watch:/watch
     environment:
       - PUID=${TRIM_UID}
