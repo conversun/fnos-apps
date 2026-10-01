@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-01T08:03:12Z",
+  "generated_at": "2026-10-01T08:03:34Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -959,9 +959,9 @@
       "file_prefix": "fnosoidcbridge",
       "display_name": "OIDC SSO Bridge",
       "description": "为飞牛接入 OIDC 单点登录的认证桥接服务（官方 fpk 直通，需按上游文档配置反向代理后给第三方应用提供 OIDC 认证）",
-      "version": "0.7.1",
-      "fpk_version": "0.7.1",
-      "release_tag": "fnos-oidc-bridge/v0.7.1",
+      "version": "0.7.2",
+      "fpk_version": "0.7.2",
+      "release_tag": "fnos-oidc-bridge/v0.7.2",
       "service_port": 4223,
       "homepage_url": "https://github.com/BeFortune/fnos-oidc-bridge",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/fnos-oidc-bridge/fnos/ICON_256.PNG",
@@ -969,7 +969,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-28T02:22:14Z",
+      "updated_at": "2026-10-01T08:03:21Z",
       "download_count": 8,
       "app_type": "native",
       "category": "system"
