@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-06T08:04:18Z",
+  "generated_at": "2026-10-06T08:04:42Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -1400,9 +1400,9 @@
       "file_prefix": "jellyfin",
       "display_name": "Jellyfin",
       "description": "Jellyfin 是一款免费开源的媒体系统，让您管理和播放您的媒体内容。支持电影、电视剧、音乐等多种媒体类型的管理和流式传输。",
-      "version": "12.1",
-      "fpk_version": "12.1",
-      "release_tag": "jellyfin/v12.1",
+      "version": "12.2",
+      "fpk_version": "12.2",
+      "release_tag": "jellyfin/v12.2",
       "service_port": 8097,
       "homepage_url": "https://jellyfin.org",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/jellyfin/fnos/ICON_256.PNG",
@@ -1410,7 +1410,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-15T08:03:14Z",
+      "updated_at": "2026-10-06T08:04:16Z",
       "download_count": 1189,
       "app_type": "native",
       "category": "media"
