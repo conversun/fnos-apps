@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-08T08:05:20Z",
+  "generated_at": "2026-10-08T08:05:44Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -727,9 +727,9 @@
       "file_prefix": "duplicati",
       "display_name": "Duplicati",
       "description": "加密备份工具，支持增量备份到云存储和本地。",
-      "version": "2.4.0.0_stable_2026-09-03",
-      "fpk_version": "2.4.0.0_stable_2026-09-03",
-      "release_tag": "duplicati/v2.4.0.0_stable_2026-09-03",
+      "version": "2.4.0.1_stable_2026-10-07",
+      "fpk_version": "2.4.0.1_stable_2026-10-07",
+      "release_tag": "duplicati/v2.4.0.1_stable_2026-10-07",
       "service_port": 8200,
       "homepage_url": "https://duplicati.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/duplicati/fnos/ICON_256.PNG",
@@ -737,7 +737,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-04T08:02:23Z",
+      "updated_at": "2026-10-08T08:05:23Z",
       "download_count": 91,
       "app_type": "docker",
       "category": "system"
@@ -1379,9 +1379,9 @@
       "file_prefix": "jackett",
       "display_name": "Jackett",
       "description": "Torrent 索引器代理，为 Sonarr/Radarr 等工具提供统一的搜索接口。",
-      "version": "0.24.2800",
-      "fpk_version": "0.24.2800",
-      "release_tag": "jackett/v0.24.2800",
+      "version": "0.24.2806",
+      "fpk_version": "0.24.2806",
+      "release_tag": "jackett/v0.24.2806",
       "service_port": 9117,
       "homepage_url": "https://github.com/Jackett/Jackett",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/jackett/fnos/ICON_256.PNG",
@@ -1389,7 +1389,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-10-07T08:03:50Z",
+      "updated_at": "2026-10-08T08:05:18Z",
       "download_count": 165,
       "app_type": "native",
       "category": "automation"
