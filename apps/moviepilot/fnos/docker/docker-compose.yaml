@@ -7,11 +7,9 @@ services:
     volumes:
       - ${TRIM_PKGVAR:?}/config:/config
       - ${TRIM_PKGVAR:?}/core:/moviepilot
-      # MEDIA_DIR / DOWNLOAD_DIR are sed-patched into the volume bindings by
-      # service_postinst when wizard provides them (fnOS doesn't process compose
-      # interpolation against env_file). Defaults fall back to app-private dirs.
-      - ${TRIM_PKGVAR:?}/media:/media
-      - ${TRIM_PKGVAR:?}/downloads:/downloads
+      # fnOS interpolates wizard values before creating the container.
+      - ${wizard_media_dir:-${TRIM_PKGVAR}/media}:/media
+      - ${wizard_download_dir:-${TRIM_PKGVAR}/downloads}:/downloads
     environment:
       - TZ=Asia/Shanghai
       - PUID=${TRIM_UID}
@@ -23,8 +21,5 @@ services:
       - PORT=3001
       - GITHUB_PROXY=https://gh-proxy.com/
       - SUPERUSER=admin
-      # SUPERUSER_PASSWORD: literal default; service_postinst seds this line
-      # in-place when wizard supplies a custom password (fnOS doesn't interpolate
-      # \`${VAR:-default}\` against env_file values).
-      - SUPERUSER_PASSWORD=password
+      - SUPERUSER_PASSWORD=${wizard_password:-password}
     restart: unless-stopped

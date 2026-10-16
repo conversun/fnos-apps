@@ -1,25 +1,25 @@
 #!/bin/bash
 # MoviePilot Docker app — wizard integration
 #
-# fnOS reads docker-compose.yaml through Docker API directly; it does NOT
-# invoke \`docker compose\` CLI, so \`env_file:\` and Compose-time interpolation
-# of \`${VAR:-default}\` do not work for wizard-supplied values. We sed-patch
-# the docker-compose.yaml in place for all wizard-driven values.
+# fnOS interpolates wizard values in compose before creating the container.
+# Persist first-install selections for the upgrade hooks; patching compose in
+# postinst is too late to change the container that fnOS has already created.
 
 service_postinst() {
     mkdir -p "${TRIM_PKGVAR}/config" "${TRIM_PKGVAR}/core" "${TRIM_PKGVAR}/media" "${TRIM_PKGVAR}/downloads" 2>/dev/null || true
     chown -R "${TRIM_UID}:${TRIM_GID}" "${TRIM_PKGVAR}/config" "${TRIM_PKGVAR}/core" "${TRIM_PKGVAR}/media" "${TRIM_PKGVAR}/downloads" 2>/dev/null || true
 
     if [ -n "${wizard_media_dir}" ]; then
-        apply_media_dir "${wizard_media_dir}"
+        printf '%s\n' "${wizard_media_dir}" > "$MEDIA_DIR_SAVE"
         mkdir -p "${wizard_media_dir}" 2>/dev/null || true
     fi
     if [ -n "${wizard_download_dir}" ]; then
-        apply_download_dir "${wizard_download_dir}"
+        printf '%s\n' "${wizard_download_dir}" > "$DOWNLOAD_DIR_SAVE"
         mkdir -p "${wizard_download_dir}" 2>/dev/null || true
     fi
     if [ -n "${wizard_password}" ]; then
-        apply_superuser_password "${wizard_password}"
+        printf '%s\n' "${wizard_password}" > "$SUPERUSER_PASSWORD_SAVE"
+        chmod 600 "$SUPERUSER_PASSWORD_SAVE"
     fi
 }
 
@@ -29,7 +29,7 @@ MEDIA_DIR_SAVE="${TRIM_PKGVAR}/.media_dir"
 DOWNLOAD_DIR_SAVE="${TRIM_PKGVAR}/.download_dir"
 SUPERUSER_PASSWORD_SAVE="${TRIM_PKGVAR}/.superuser_password"
 
-# All wizard values get sed-patched into docker-compose.yaml directly.
+# Restore saved settings into the new compose on upgrade.
 apply_media_dir() {
     local dir="$1"
     [ -z "$dir" ] && return
@@ -49,10 +49,10 @@ apply_download_dir() {
 apply_superuser_password() {
     local pw="$1"
     [ -z "$pw" ] && return
-    # Escape | for sed safety (passwords may contain it). Match the literal
+    # Escape backslash, & and | once for the sed replacement. Match the literal
     # SUPERUSER_PASSWORD line shipped in docker-compose.yaml.
     local escaped
-    escaped=$(printf '%s' "$pw" | sed 's:[\\&|]:\\\\&:g')
+    escaped=$(printf '%s' "$pw" | sed 's:[\\&|]:\\&:g')
     sed -i 's|^      - SUPERUSER_PASSWORD=.*|      - SUPERUSER_PASSWORD='"${escaped}"'|' "$COMPOSE_FILE"
     echo "${pw}" > "$SUPERUSER_PASSWORD_SAVE"
     chmod 600 "$SUPERUSER_PASSWORD_SAVE"
