@@ -9,7 +9,7 @@ APP_NAME="feigram"
 APP_DISPLAY_NAME="Feigram"
 APP_VERSION_VAR="FEIGRAM_VERSION"
 APP_VERSION="${FEIGRAM_VERSION:-latest}"
-APP_DEPS=(curl tar xz npm jq)
+APP_DEPS=(curl tar xz npm jq go)
 APP_FPK_PREFIX="feigram"
 APP_HELP_VERSION_EXAMPLE="2.0.19"
 

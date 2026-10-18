@@ -38,11 +38,19 @@ npm --prefix "${WORK_DIR}/source/client" ci
 npm --prefix "${WORK_DIR}/source/client" run build
 rm -rf "${WORK_DIR}/source/server/public"
 cp -R "${WORK_DIR}/source/client/dist" "${WORK_DIR}/source/server/public"
-npm --prefix "${WORK_DIR}/source/server" ci --omit=dev
+# Optional WebSocket accelerators ship x64 prebuilds, not Linux ARM binaries.
+npm --prefix "${WORK_DIR}/source/server" ci --omit=dev --omit=optional
 
 mkdir -p "${WORK_DIR}/app_root/bin" "${WORK_DIR}/app_root/ui" "${WORK_DIR}/app_root/server"
 cp "${WORK_DIR}/node/bin/node" "${WORK_DIR}/app_root/bin/node"
 chmod +x "${WORK_DIR}/app_root/bin/node"
+
+(
+    cd "${WORK_DIR}/source/downloader"
+    GOOS=linux GOARCH="${TARBALL_ARCH}" CGO_ENABLED=0 go build -trimpath \
+        -ldflags "-s -w -X main.version=${VERSION}" \
+        -o "${WORK_DIR}/app_root/bin/feigram-downloader" ./cmd/feigram-downloader
+)
 
 cp "${REPO_ROOT}/apps/feigram/fnos/bin/feigram-server" "${WORK_DIR}/app_root/bin/feigram-server"
 chmod +x "${WORK_DIR}/app_root/bin/feigram-server"

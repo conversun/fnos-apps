@@ -7,7 +7,9 @@ APP_DIR="${TRIM_APPDEST}"
 APP_DATA_DIR="${TRIM_PKGVAR}"
 CONFIG_FILE="${TRIM_PKGETC}/feigram.env"
 
-SERVICE_COMMAND="$APP_DIR/bin/feigram-server $APP_DATA_DIR"
+# The shared framework tracks and stops one PID per command.
+SERVICE_COMMAND="$APP_DIR/bin/feigram-server $APP_DATA_DIR
+$APP_DIR/bin/feigram-downloader"
 SVC_BACKGROUND=y
 SVC_WRITE_PID=y
 SVC_WAIT_TIMEOUT=30
@@ -44,7 +46,16 @@ service_postconfig() {
 }
 
 service_prestart() {
+    service_poststop
     load_feigram_config
+    export DATA_DIR="${APP_DATA_DIR}/data"
+    export DOWNLOAD_DIR="${DATA_DIR}/downloads"
+    export FEIGRAM_DOWNLOADER_PORT=3090
+    export FEIGRAM_DOWNLOADER_URL="http://127.0.0.1:${FEIGRAM_DOWNLOADER_PORT}"
+    export FEIGRAM_DOWNLOADER_DATA="${DATA_DIR}/downloader"
+    # Node generates app-secret; Go must use the same key for native sessions.
+    export FEIGRAM_DOWNLOADER_SECRET_FILE="${DATA_DIR}/app-secret"
+    mkdir -p "${DOWNLOAD_DIR}" "${FEIGRAM_DOWNLOADER_DATA}"
 }
 
 service_preuninst() {
@@ -63,5 +74,11 @@ service_preuninst() {
 }
 
 service_poststop() {
+    # A failed status check can discard the shared PID file; reap survivors too.
+    local pid
+    for pid in $(pgrep -f "^${APP_DIR}/bin/(node src/index\\.js|feigram-downloader)$"); do
+        kill -TERM "$pid" 2>/dev/null || true
+        wait_for_status 1 "${SVC_WAIT_TIMEOUT}" "$pid" || kill -KILL "$pid" 2>/dev/null || true
+    done
     rm -f "${PID_FILE}"
 }
