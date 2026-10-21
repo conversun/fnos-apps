@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-21T08:03:38Z",
+  "generated_at": "2026-10-21T08:04:34Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -769,9 +769,9 @@
       "file_prefix": "embyserver",
       "display_name": "Emby",
       "description": "EmbyServer是一款软件媒体系统，可让您控制媒体的管理和流式传输。可以通过多个应用程序将专用服务器中的媒体提供给最终用户设备。",
-      "version": "4.10.1.0",
-      "fpk_version": "4.10.1.0",
-      "release_tag": "emby/v4.10.1.0",
+      "version": "4.10.2.0",
+      "fpk_version": "4.10.2.0",
+      "release_tag": "emby/v4.10.2.0",
       "service_port": 8096,
       "homepage_url": "https://emby.media",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/emby/fnos/ICON_256.PNG",
@@ -779,7 +779,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-30T08:04:39Z",
+      "updated_at": "2026-10-21T08:04:14Z",
       "download_count": 1302,
       "app_type": "native",
       "category": "media"
@@ -3264,7 +3264,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T06:31:00Z",
-      "download_count": 51,
+      "download_count": 53,
       "app_type": "native",
       "category": "system"
     },
