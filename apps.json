@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-22T08:03:07Z",
+  "generated_at": "2026-10-22T08:03:28Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -2011,9 +2011,9 @@
       "file_prefix": "mihomo",
       "display_name": "Mihomo",
       "description": "Clash.Meta 多协议代理 + MetaCubeXD 面板 (管理:9097 代理:7890)",
-      "version": "1.19.32",
-      "fpk_version": "1.19.32",
-      "release_tag": "mihomo/v1.19.32",
+      "version": "1.19.33",
+      "fpk_version": "1.19.33",
+      "release_tag": "mihomo/v1.19.33",
       "service_port": 9097,
       "homepage_url": "https://github.com/MetaCubeX/mihomo",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/mihomo/fnos/ICON_256.PNG",
@@ -2021,7 +2021,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-10-01T08:02:49Z",
+      "updated_at": "2026-10-22T08:03:08Z",
       "download_count": 2142,
       "app_type": "native",
       "category": "network"
@@ -2685,9 +2685,9 @@
       "file_prefix": "pocket-id",
       "display_name": "Pocket ID",
       "description": "轻量 OIDC 单点登录/Passkey 身份提供方：为 Jellyfin、Immich、Nginx Proxy Manager 等自托管应用提供「指纹/Passkey 免密码」统一登录，无需暴露密码",
-      "version": "2.18.0",
-      "fpk_version": "2.18.0",
-      "release_tag": "pocket-id/v2.18.0",
+      "version": "2.19.1",
+      "fpk_version": "2.19.1",
+      "release_tag": "pocket-id/v2.19.1",
       "service_port": 1411,
       "homepage_url": "https://pocket-id.org",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/pocket-id/fnos/ICON_256.PNG",
@@ -2695,7 +2695,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-10-05T08:10:54Z",
+      "updated_at": "2026-10-22T08:03:04Z",
       "download_count": 73,
       "app_type": "native",
       "category": "system"
