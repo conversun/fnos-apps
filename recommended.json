@@ -69,8 +69,8 @@
       "description": "Grafana 官方数据采集代理，收集日志、指标和链路追踪数据",
       "source_url": "https://github.com/jianyun8023/fnos-alloy/releases",
       "github_repo": "jianyun8023/fnos-alloy",
-      "latest_version": "1.21.0",
-      "updated_at": "2026-10-20T00:30:35Z"
+      "latest_version": "1.21.1",
+      "updated_at": "2026-10-22T00:06:21Z"
     },
     {
       "name": "scrutiny-collector",
@@ -78,8 +78,8 @@
       "description": "硬盘 S.M.A.R.T. 健康数据采集器，配合 Scrutiny 面板使用",
       "source_url": "https://github.com/jianyun8023/fnos-scrutiny-collector/releases",
       "github_repo": "jianyun8023/fnos-scrutiny-collector",
-      "latest_version": "1.76.8",
-      "updated_at": "2026-10-21T00:02:58Z"
+      "latest_version": "1.76.9",
+      "updated_at": "2026-10-22T00:08:27Z"
     },
     {
       "name": "fn-fan",
