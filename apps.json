@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-23T08:03:13Z",
+  "generated_at": "2026-10-23T08:03:35Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -2170,7 +2170,7 @@
         "arm"
       ],
       "updated_at": "2026-09-25T08:03:19Z",
-      "download_count": 179,
+      "download_count": 191,
       "app_type": "native",
       "category": "media"
     },
@@ -2307,9 +2307,9 @@
       "file_prefix": "nginx-ui",
       "display_name": "Nginx UI",
       "description": "Nginx可视化管理面板，内置Nginx引擎，支持在线编辑配置、一键Reload、SSL证书管理。",
-      "version": "2.9.0",
-      "fpk_version": "2.9.0",
-      "release_tag": "nginx-ui/v2.9.0",
+      "version": "2.9.1",
+      "fpk_version": "2.9.1",
+      "release_tag": "nginx-ui/v2.9.1",
       "service_port": 8889,
       "homepage_url": "https://github.com/0xJacky/nginx-ui",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/nginx-ui/fnos/ICON_256.PNG",
@@ -2317,7 +2317,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-10-17T08:02:33Z",
+      "updated_at": "2026-10-23T08:03:08Z",
       "download_count": 177,
       "app_type": "native",
       "category": "system"
