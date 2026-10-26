@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-26T08:08:20Z",
+  "generated_at": "2026-10-26T08:08:41Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -2664,9 +2664,9 @@
       "file_prefix": "plexmediaserver",
       "display_name": "Plex",
       "description": "Plex Media Server是一款强大的媒体服务器软件，可以管理和串流您的电影、电视剧、音乐和照片到任何设备。支持硬件转码、离线同步等高级功能。",
-      "version": "1.43.5.11029",
-      "fpk_version": "1.43.5.11029",
-      "release_tag": "plex/v1.43.5.11029",
+      "version": "1.43.5.11079",
+      "fpk_version": "1.43.5.11079",
+      "release_tag": "plex/v1.43.5.11079",
       "service_port": 32400,
       "homepage_url": "https://www.plex.tv/media-server-downloads/",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/plex/fnos/ICON_256.PNG",
@@ -2674,7 +2674,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-10-21T08:02:53Z",
+      "updated_at": "2026-10-26T08:08:19Z",
       "download_count": 1271,
       "app_type": "native",
       "category": "media"
