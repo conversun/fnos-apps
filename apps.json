@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-27T08:03:52Z",
+  "generated_at": "2026-10-27T09:29:13Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -44,7 +44,7 @@
         "arm"
       ],
       "updated_at": "2026-10-03T08:02:41Z",
-      "download_count": 97,
+      "download_count": 98,
       "app_type": "docker",
       "category": "system"
     },
@@ -440,8 +440,7 @@
       "homepage_url": "https://github.com/Cisco-Talos/clamav",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/clamav/fnos/ICON_256.PNG",
       "platforms": [
-        "x86",
-        "arm"
+        "x86"
       ],
       "updated_at": "2026-08-17T08:46:02Z",
       "download_count": 105,
@@ -465,7 +464,7 @@
         "arm"
       ],
       "updated_at": "2026-10-24T08:02:50Z",
-      "download_count": 702,
+      "download_count": 708,
       "app_type": "native",
       "category": "network"
     },
@@ -528,7 +527,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T07:35:37Z",
-      "download_count": 244,
+      "download_count": 248,
       "app_type": "native",
       "category": "download"
     },
@@ -928,7 +927,7 @@
         "arm"
       ],
       "updated_at": "2026-10-23T08:02:46Z",
-      "download_count": 772,
+      "download_count": 774,
       "app_type": "native",
       "category": "system"
     },
@@ -987,11 +986,10 @@
       "homepage_url": "https://github.com/YDMY007/Fntv-Plus-fpk",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/fntv-plus/fnos/ICON_256.PNG",
       "platforms": [
-        "x86",
-        "arm"
+        "x86"
       ],
       "updated_at": "2026-09-28T02:22:17Z",
-      "download_count": 333,
+      "download_count": 334,
       "app_type": "native",
       "category": "media"
     },
@@ -1218,8 +1216,7 @@
       "homepage_url": "https://github.com/jlesage/docker-handbrake",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/handbrake/fnos/ICON_256.PNG",
       "platforms": [
-        "x86",
-        "arm"
+        "x86"
       ],
       "updated_at": "2026-09-23T08:02:35Z",
       "download_count": 103,
@@ -1306,7 +1303,7 @@
         "arm"
       ],
       "updated_at": "2026-10-24T08:02:55Z",
-      "download_count": 286,
+      "download_count": 287,
       "app_type": "native",
       "category": "system"
     },
@@ -1579,7 +1576,7 @@
         "arm"
       ],
       "updated_at": "2026-10-07T08:03:40Z",
-      "download_count": 178,
+      "download_count": 179,
       "app_type": "docker",
       "category": "media"
     },
@@ -1854,7 +1851,7 @@
         "arm"
       ],
       "updated_at": "2026-10-18T08:02:19Z",
-      "download_count": 72,
+      "download_count": 74,
       "app_type": "docker",
       "category": "content"
     },
@@ -1892,8 +1889,7 @@
       "homepage_url": "https://github.com/gefl24/melody-hub",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/melody-hub/fnos/ICON_256.PNG",
       "platforms": [
-        "x86",
-        "arm"
+        "x86"
       ],
       "updated_at": "2026-08-17T06:23:56Z",
       "download_count": 815,
@@ -1928,8 +1924,8 @@
       "display_name": "MeNote",
       "description": "轻量级个人笔记知识库：Markdown 笔记、分类管理、双向链接、知识图谱；内置 P2P 隧道，手机 App 无需公网 IP 直连 NAS 笔记服务，数据本地存储（官方 fpk 直通）",
       "version": "1.0.0",
-      "fpk_version": "1.0.0",
-      "release_tag": "menote/v1.0.0",
+      "fpk_version": "1.0.0-r1",
+      "release_tag": "menote/v1.0.0-r1",
       "service_port": 3107,
       "homepage_url": "https://github.com/yafoo/menote",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/menote/fnos/ICON_256.PNG",
@@ -1937,7 +1933,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-28T06:35:47Z",
+      "updated_at": "2026-10-27T09:28:53Z",
       "download_count": 65,
       "app_type": "native",
       "category": "content"
@@ -2170,7 +2166,7 @@
         "arm"
       ],
       "updated_at": "2026-09-25T08:03:19Z",
-      "download_count": 218,
+      "download_count": 219,
       "app_type": "native",
       "category": "media"
     },
@@ -2349,17 +2345,16 @@
       "file_prefix": "niupic",
       "display_name": "NiuPic",
       "description": "图片素材检索与浏览（官方 fpk 直通）：数十万级图库流畅浏览、RAW/HEIC 等 39+ 相机格式、主题色筛选与视频封面，经飞牛桌面网关访问；上游仅发布 x86 包",
-      "version": "2.6.0",
-      "fpk_version": "2.6.0",
-      "release_tag": "niupic/v2.6.0",
+      "version": "2.6.4",
+      "fpk_version": "2.6.4",
+      "release_tag": "niupic/v2.6.4",
       "service_port": 0,
       "homepage_url": "https://github.com/LiuFudi/NiuPic",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/niupic/fnos/ICON_256.PNG",
       "platforms": [
-        "x86",
-        "arm"
+        "x86"
       ],
-      "updated_at": "2026-09-30T08:03:03Z",
+      "updated_at": "2026-10-27T09:28:55Z",
       "download_count": 114,
       "app_type": "native",
       "category": "content"
@@ -2419,8 +2414,7 @@
       "homepage_url": "https://www.nvidia.com/drivers",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/nvidia-driver/fnos/ICON_256.PNG",
       "platforms": [
-        "x86",
-        "arm"
+        "x86"
       ],
       "updated_at": "2026-09-19T08:02:21Z",
       "download_count": 438,
@@ -2822,7 +2816,7 @@
         "arm"
       ],
       "updated_at": "2026-10-12T08:16:27Z",
-      "download_count": 377,
+      "download_count": 378,
       "app_type": "docker",
       "category": "system"
     },
@@ -3222,7 +3216,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:46:59Z",
-      "download_count": 116,
+      "download_count": 117,
       "app_type": "native",
       "category": "system"
     },
@@ -3243,7 +3237,7 @@
         "arm"
       ],
       "updated_at": "2026-09-15T08:02:44Z",
-      "download_count": 118,
+      "download_count": 119,
       "app_type": "docker",
       "category": "media"
     },
@@ -3260,8 +3254,7 @@
       "homepage_url": "https://github.com/xiowo/fnos_surface_battery_driver",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/surface-battery/fnos/ICON_256.PNG",
       "platforms": [
-        "x86",
-        "arm"
+        "x86"
       ],
       "updated_at": "2026-08-17T06:31:00Z",
       "download_count": 57,
@@ -3306,7 +3299,7 @@
         "arm"
       ],
       "updated_at": "2026-09-30T08:03:03Z",
-      "download_count": 305,
+      "download_count": 307,
       "app_type": "docker",
       "category": "media"
     },
@@ -3327,7 +3320,7 @@
         "arm"
       ],
       "updated_at": "2026-10-21T08:02:49Z",
-      "download_count": 196,
+      "download_count": 197,
       "app_type": "native",
       "category": "download"
     },
@@ -3348,7 +3341,7 @@
         "arm"
       ],
       "updated_at": "2026-10-21T08:02:49Z",
-      "download_count": 301,
+      "download_count": 303,
       "app_type": "docker",
       "category": "network"
     },
@@ -3390,7 +3383,7 @@
         "arm"
       ],
       "updated_at": "2026-10-05T08:11:29Z",
-      "download_count": 292,
+      "download_count": 293,
       "app_type": "docker",
       "category": "media"
     },
@@ -3491,8 +3484,7 @@
       "homepage_url": "https://github.com/spupuz/VibeNVR",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/vibenvr/fnos/ICON_256.PNG",
       "platforms": [
-        "x86",
-        "arm"
+        "x86"
       ],
       "updated_at": "2026-10-24T08:02:54Z",
       "download_count": 84,
