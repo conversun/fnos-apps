@@ -7,7 +7,14 @@ source "$SCRIPT_DIR/../../lib/gh-api.sh"
 
 INPUT_VERSION="${1:-}"
 
-TAG=$(gh_latest_tag "yafoo/menote") || { echo "Failed to resolve version for menote" >&2; exit 1; }
+RELEASE=$(gh_curl "https://api.github.com/repos/yafoo/menote/releases/latest") || { echo "Failed to resolve version for menote" >&2; exit 1; }
+# Releases may explicitly reuse an unchanged FPK (v2.1.2 links v2.1.0).
+# Follow only the latest release's own asset/link, never search older releases.
+TAG=$(printf '%s' "$RELEASE" | jq -er '
+  if any(.assets[]; .name == "menote.fpk") then .tag_name
+  else .body | capture("https://github\\.com/yafoo/menote/releases/download/(?<tag>[^/]+)/menote\\.fpk").tag
+  end
+') || { echo "Failed to resolve menote.fpk from the latest menote release" >&2; exit 1; }
 URL="https://github.com/yafoo/menote/releases/download/${TAG}/menote.fpk"
 # VERSION must be the fpk's INTERNAL manifest version: that is what the fnOS
 # daemon registers, and anything else would keep the store offering a
