@@ -49,13 +49,21 @@ jobs:
           # Distributor-built apps (no scripts/apps/<slug>/meta.env) are released by an
           # external repo and are not built here. Filter them out of every matrix path.
           buildable_only() {
+            local app pause_reason
             while IFS= read -r app; do
-              [ -f "scripts/apps/$app/meta.env" ] && echo "$app"
+              [ -f "scripts/apps/$app/meta.env" ] || continue
+              pause_reason=$(bash -c 'source "$1"; printf "%s" "${AUTO_UPDATE_DISABLED_REASON:-}"' \
+                -- "scripts/apps/$app/meta.env")
+              if [ -n "$pause_reason" ]; then
+                echo "::notice::${app} 自动构建已暂停：${pause_reason}" >&2
+                continue
+              fi
+              echo "$app"
             done
           }
 
           all_apps() {
-            ls -d apps/*/ 2>/dev/null | xargs -n1 basename | buildable_only \
+            printf '%s\n' apps/*/ | xargs -n1 basename | buildable_only \
               | jq -R -s -c 'split("\n") | map(select(. != ""))'
           }
 
