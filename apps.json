@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-27T09:29:57Z",
+  "generated_at": "2026-10-27T09:30:22Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -833,8 +833,8 @@
       "display_name": "Feigram",
       "description": "非官方 Telegram Web 客户端，支持多账号、聊天、媒体预览和下载缓存",
       "version": "2.6.51",
-      "fpk_version": "2.6.51",
-      "release_tag": "feigram/v2.6.51",
+      "fpk_version": "2.6.51-r1",
+      "release_tag": "feigram/v2.6.51-r1",
       "service_port": 3088,
       "homepage_url": "https://github.com/g-star1024/Feigram-Public",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/feigram/fnos/ICON_256.PNG",
@@ -842,7 +842,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-10-11T08:02:50Z",
+      "updated_at": "2026-10-27T09:30:00Z",
       "download_count": 384,
       "app_type": "native",
       "category": "content"
