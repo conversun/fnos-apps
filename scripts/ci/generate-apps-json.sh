@@ -42,6 +42,7 @@ for app_dir in "${REPO_ROOT}"/scripts/apps/*/; do
   HOMEPAGE_URL=""
   CATEGORY=""
   POST_INSTALL_NOTE=""
+  SUPPORTED_ARCH="x86 arm"
   source "${app_dir}/meta.env"
 
   manifest="${REPO_ROOT}/apps/${slug}/fnos/manifest"
@@ -120,6 +121,7 @@ for app_dir in "${REPO_ROOT}"/scripts/apps/*/; do
     --argjson download_count "$download_count" \
     --arg app_type "$app_type" \
     --arg category "$CATEGORY" \
+    --arg supported_arch "$SUPPORTED_ARCH" \
     --arg post_install_note "$POST_INSTALL_NOTE" \
     '{
       slug: $slug,
@@ -133,7 +135,7 @@ for app_dir in "${REPO_ROOT}"/scripts/apps/*/; do
       service_port: $service_port,
       homepage_url: $homepage_url,
       icon_url: $icon_url,
-      platforms: ["x86", "arm"],
+      platforms: ($supported_arch | split(" ") | map(select(. != ""))),
       updated_at: $updated_at,
       download_count: $download_count,
       app_type: $app_type,
