@@ -44,18 +44,35 @@ BASE_TAG="${APP_SLUG}/v${VERSION}"
 # Use git ls-remote which is the canonical source of truth for tags: it lists
 # EVERY tag in the remote without any pagination cap. Previous implementations
 # relied on \`gh release list --limit N\` which silently truncated once the repo
-# grew past N releases (300+ today). Falling back through gh release list keeps
-# us robust if a tag exists without its corresponding release.
+# grew past N releases (300+ today). Also include gh releases, but never treat
+# that capped list as proof of absence when the git query fails.
 #
 # Tag names contain regex-special chars (e.g. grafana/v13.0.1+security-01), so
 # we do EXACT string membership instead of grep -E to avoid false negatives.
+GIT_QUERY_OK=true
+if ! GIT_TAGS=$(
+  git ls-remote --tags origin "refs/tags/${BASE_TAG}" "refs/tags/${BASE_TAG}-r*" |
+    awk '{print $2}' | sed 's|^refs/tags/||' | sed 's|\^{}$||'
+); then
+  GIT_QUERY_OK=false
+  GIT_TAGS=""
+  echo "[WARN] 无法查询远程 git 标签" >&2
+fi
+if ! RELEASE_TAGS=$(gh release list --limit 1000 --json tagName -q ".[] | .tagName | select(startswith(\"${APP_SLUG}/v${VERSION}\"))"); then
+  RELEASE_TAGS=""
+  echo "[WARN] 无法查询 GitHub 发布列表" >&2
+fi
 EXISTING_TAGS=$(
-  {
-    git ls-remote --tags origin "refs/tags/${BASE_TAG}" "refs/tags/${BASE_TAG}-r*" 2>/dev/null | \
-      awk '{print $2}' | sed 's|^refs/tags/||' | sed 's|\^{}$||'
-    gh release list --limit 1000 --json tagName -q ".[] | .tagName | select(startswith(\"${APP_SLUG}/v${VERSION}\"))" 2>/dev/null
-  } | awk -v base="${BASE_TAG}" '$0==base || index($0, base"-r")==1' | sort -u
+  printf '%s\n' "${GIT_TAGS}" "${RELEASE_TAGS}" |
+    awk -v base="${BASE_TAG}" '$0==base || index($0, base"-r")==1' | sort -u
 )
+
+# Positive release evidence is enough to skip a scheduled build. Every build
+# or revision decision needs the complete git refs, including deleted releases.
+if [ "${GIT_QUERY_OK}" = false ] &&
+  { [ "${EVENT_NAME}" != "schedule" ] || [ -n "${REVISION}" ] || [ -z "${EXISTING_TAGS}" ]; }; then
+  error "远程 git 标签状态未知，拒绝发布"
+fi
 
 if [ -n "${REVISION}" ]; then
   RELEASE_TAG="${BASE_TAG}-${REVISION}"
