@@ -12,6 +12,13 @@ export JELLYFIN_WEB_DIR="$APP_DIR/jellyfin-web"
 export XDG_CACHE_HOME="$JELLYFIN_CACHE_DIR"
 export LD_LIBRARY_PATH="$APP_DIR/jellyfin-ffmpeg:$APP_DIR/jellyfin-ffmpeg/lib:${LD_LIBRARY_PATH:-}"
 
+# Keep libva and its drivers from the same fnOS media stack.
+# Let libva select the GPU driver; do not force Intel iHD on every device.
+if [ -d /usr/trim/lib/mediasrv/lib/dri ]; then
+  export LD_LIBRARY_PATH="/usr/trim/lib/mediasrv/lib:$LD_LIBRARY_PATH"
+  export LIBVA_DRIVERS_PATH="${LIBVA_DRIVERS_PATH:-/usr/trim/lib/mediasrv/lib/dri}"
+fi
+
 mkdir -p "$JELLYFIN_DATA_DIR" "$JELLYFIN_CONFIG_DIR" \
          "$JELLYFIN_CACHE_DIR" "$JELLYFIN_LOG_DIR"
 
