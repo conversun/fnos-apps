@@ -69,8 +69,8 @@
       "description": "Grafana 官方数据采集代理，收集日志、指标和链路追踪数据",
       "source_url": "https://github.com/jianyun8023/fnos-alloy/releases",
       "github_repo": "jianyun8023/fnos-alloy",
-      "latest_version": "1.20.1",
-      "updated_at": "2026-09-29T01:09:06Z"
+      "latest_version": "1.21.2",
+      "updated_at": "2026-10-23T00:04:35Z"
     },
     {
       "name": "scrutiny-collector",
@@ -78,8 +78,8 @@
       "description": "硬盘 S.M.A.R.T. 健康数据采集器，配合 Scrutiny 面板使用",
       "source_url": "https://github.com/jianyun8023/fnos-scrutiny-collector/releases",
       "github_repo": "jianyun8023/fnos-scrutiny-collector",
-      "latest_version": "1.76.6",
-      "updated_at": "2026-10-15T23:46:25Z"
+      "latest_version": "1.77.0",
+      "updated_at": "2026-10-25T23:28:24Z"
     },
     {
       "name": "fn-fan",
@@ -132,8 +132,8 @@
       "description": "轻量级 BT 下载客户端，ARM64 架构专用原生包",
       "source_url": "https://github.com/sushazhi/fnos-transmission/releases",
       "github_repo": "sushazhi/fnos-transmission",
-      "latest_version": "4.1.3.4",
-      "updated_at": "2026-09-26T14:15:35Z"
+      "latest_version": "4.1.4.0",
+      "updated_at": "2026-10-26T14:15:34Z"
     },
     {
       "name": "xunlei-arm",
