@@ -10,6 +10,17 @@
             "protocol": "http",
             "url": "/",
             "allUsers": true
+        },
+        "fnos-apps-store.Embedded":
+        {
+            "title": "fnOS Apps（桌面窗口）",
+            "desc": "在飞牛桌面窗口内打开。适用于 HTTP 访问；通过 HTTPS 域名访问飞牛时，请使用默认的 fnOS Apps 新页面入口。",
+            "icon": "images/{0}.png",
+            "type": "iframe",
+            "port": "8011",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
         }
     }
 }
