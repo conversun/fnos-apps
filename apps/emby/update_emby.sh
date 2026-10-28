@@ -79,7 +79,7 @@ app_build_app_tgz() {
     local dst="$WORK_DIR/app_root"
     mkdir -p "$dst"
 
-    cp -a "$src/bin" "$src/etc" "$src/extra" "$src/lib" "$src/licenses" "$src/share" "$src/system" "$dst/"
+    cp -a "$src/bin" "$src/etc" "$src/lib" "$src/licenses" "$src/share" "$src/system" "$dst/"
     mkdir -p "$dst/config" "$dst/ui/images"
 
     cp "$PKG_DIR/EmbyServer.sc" "$dst/" 2>/dev/null || true

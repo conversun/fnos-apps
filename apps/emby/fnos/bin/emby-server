@@ -4,12 +4,13 @@ APP_DIR="${TRIM_APPDEST}"
 APP_DATA_DIR=$1
 PID_FILE="$APP_DATA_DIR"/$APP_NAME.pid
 
-export AMDGPU_IDS=$APP_DIR/extra/share/libdrm/amdgpu.ids
+[ -f "$APP_DIR/share/libdrm/amdgpu.ids" ] && export AMDGPU_IDS_PATH="$APP_DIR/share/libdrm/amdgpu.ids"
 [ -z "$EMBY_DATA" ] && export EMBY_DATA="$APP_DATA_DIR"
 export FONTCONFIG_PATH=$APP_DIR/etc/fonts
-export LD_LIBRARY_PATH=$APP_DIR/lib:$APP_DIR/extra/lib
-export LIBVA_DRIVERS_PATH=$APP_DIR/extra/lib/dri
-export OCL_ICD_VENDORS=$APP_DIR/extra/etc/OpenCL/vendors
+export LD_LIBRARY_PATH="$APP_DIR/lib"
+# The ARM package does not bundle VAAPI drivers or OpenCL ICDs.
+[ -d "$APP_DIR/lib/dri" ] && export LIBVA_DRIVERS_PATH="$APP_DIR/lib/dri"
+[ -d "$APP_DIR/etc/OpenCL/vendors" ] && export OCL_ICD_VENDORS="$APP_DIR/etc/OpenCL/vendors"
 export PATH=$APP_DIR/bin:"$PATH"
 export PCI_IDS_PATH=$APP_DIR/share/hwdata/pci.ids
 export SSL_CERT_FILE=$APP_DIR/etc/ssl/certs/ca-certificates.crt
