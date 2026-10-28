@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-28T08:03:24Z",
+  "generated_at": "2026-10-28T08:03:48Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -2721,9 +2721,9 @@
       "file_prefix": "prowlarr",
       "display_name": "Prowlarr",
       "description": "索引器管理工具，集中管理和同步 Sonarr/Radarr 等应用的索引器",
-      "version": "2.6.5.5623",
-      "fpk_version": "2.6.5.5623",
-      "release_tag": "prowlarr/v2.6.5.5623",
+      "version": "2.7.0.5723",
+      "fpk_version": "2.7.0.5723",
+      "release_tag": "prowlarr/v2.7.0.5723",
       "service_port": 9696,
       "homepage_url": "https://prowlarr.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/prowlarr/fnos/ICON_256.PNG",
@@ -2731,7 +2731,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-17T08:02:59Z",
+      "updated_at": "2026-10-28T08:03:26Z",
       "download_count": 1000,
       "app_type": "native",
       "category": "automation"
