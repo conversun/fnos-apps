@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-29T02:28:23Z",
+  "generated_at": "2026-10-29T08:03:15Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -23,7 +23,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:06:32Z",
-      "download_count": 360,
+      "download_count": 362,
       "app_type": "native",
       "category": "system"
     },
@@ -44,7 +44,7 @@
         "arm"
       ],
       "updated_at": "2026-10-03T08:02:41Z",
-      "download_count": 101,
+      "download_count": 107,
       "app_type": "docker",
       "category": "system"
     },
@@ -65,7 +65,7 @@
         "arm"
       ],
       "updated_at": "2026-08-19T08:08:59Z",
-      "download_count": 206,
+      "download_count": 212,
       "app_type": "docker",
       "category": "system"
     },
@@ -75,9 +75,9 @@
       "file_prefix": "Aellus",
       "display_name": "Aellus·局域网传输",
       "description": "局域网文件互传工具（官方 fpk 直通版）：手机 / 电脑浏览器访问 NAS 地址即可上传、浏览与下载文件，零流量、不经中转服务器；保存目录在飞牛应用设置中授权，删除与路径修改仅限飞牛桌面内操作，远程设备只读防误删。",
-      "version": "1.0.5",
-      "fpk_version": "1.0.5",
-      "release_tag": "aellus/v1.0.5",
+      "version": "1.0.6",
+      "fpk_version": "1.0.6",
+      "release_tag": "aellus/v1.0.6",
       "service_port": 5115,
       "homepage_url": "https://github.com/YGQ8988/Aellus",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/aellus/fnos/ICON_256.PNG",
@@ -85,7 +85,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-10-05T08:10:49Z",
+      "updated_at": "2026-10-29T08:02:46Z",
       "download_count": 183,
       "app_type": "native",
       "category": "network"
@@ -149,7 +149,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T06:23:13Z",
-      "download_count": 103,
+      "download_count": 105,
       "app_type": "docker",
       "category": "content",
       "post_install_note": "AppFlowy Cloud 需要配合 AppFlowy 客户端使用。"
@@ -255,7 +255,7 @@
         "arm"
       ],
       "updated_at": "2026-10-25T08:02:27Z",
-      "download_count": 171,
+      "download_count": 177,
       "app_type": "docker",
       "category": "automation"
     },
@@ -276,7 +276,7 @@
         "arm"
       ],
       "updated_at": "2026-09-27T08:02:20Z",
-      "download_count": 138,
+      "download_count": 143,
       "app_type": "docker",
       "category": "automation"
     },
@@ -318,7 +318,7 @@
         "arm"
       ],
       "updated_at": "2026-09-26T08:02:39Z",
-      "download_count": 259,
+      "download_count": 265,
       "app_type": "native",
       "category": "media"
     },
@@ -339,7 +339,7 @@
         "arm"
       ],
       "updated_at": "2026-09-27T17:05:54Z",
-      "download_count": 87,
+      "download_count": 89,
       "app_type": "docker",
       "category": "content"
     },
@@ -360,7 +360,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T06:22:13Z",
-      "download_count": 127,
+      "download_count": 131,
       "app_type": "docker",
       "category": ""
     },
@@ -402,7 +402,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:46:28Z",
-      "download_count": 243,
+      "download_count": 245,
       "app_type": "native",
       "category": "automation"
     },
@@ -443,7 +443,7 @@
         "x86"
       ],
       "updated_at": "2026-08-17T08:46:02Z",
-      "download_count": 106,
+      "download_count": 111,
       "app_type": "docker",
       "category": "system"
     },
@@ -464,7 +464,7 @@
         "arm"
       ],
       "updated_at": "2026-10-24T08:02:50Z",
-      "download_count": 844,
+      "download_count": 871,
       "app_type": "native",
       "category": "network"
     },
@@ -495,9 +495,9 @@
       "file_prefix": "cloudflared",
       "display_name": "Cloudflare Tunnel",
       "description": "Cloudflare 内网穿透隧道，通过 Web 界面管理 Tunnel Token 配置",
-      "version": "2026.10.3",
-      "fpk_version": "2026.10.3",
-      "release_tag": "cloudflared/v2026.10.3",
+      "version": "2026.10.5",
+      "fpk_version": "2026.10.5",
+      "release_tag": "cloudflared/v2026.10.5",
       "service_port": 14333,
       "homepage_url": "https://github.com/WisdomSky/Cloudflared-web",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/cloudflared/fnos/ICON_256.PNG",
@@ -505,7 +505,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-10-22T08:02:42Z",
+      "updated_at": "2026-10-29T08:02:44Z",
       "download_count": 158,
       "app_type": "docker",
       "category": "network"
@@ -527,7 +527,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T07:35:37Z",
-      "download_count": 255,
+      "download_count": 260,
       "app_type": "native",
       "category": "download"
     },
@@ -590,7 +590,7 @@
         "arm"
       ],
       "updated_at": "2026-10-15T08:02:35Z",
-      "download_count": 69,
+      "download_count": 76,
       "app_type": "docker",
       "category": "download"
     },
@@ -674,7 +674,7 @@
         "arm"
       ],
       "updated_at": "2026-09-05T08:02:33Z",
-      "download_count": 129,
+      "download_count": 134,
       "app_type": "native",
       "category": "system"
     },
@@ -695,7 +695,7 @@
         "arm"
       ],
       "updated_at": "2026-10-16T08:02:42Z",
-      "download_count": 70,
+      "download_count": 81,
       "app_type": "docker",
       "category": "content"
     },
@@ -705,9 +705,9 @@
       "file_prefix": "dpanel",
       "display_name": "DPanel",
       "description": "轻量级 Docker 可视化管理面板，支持容器管理和镜像操作。",
-      "version": "1.11.1",
-      "fpk_version": "1.11.1",
-      "release_tag": "dpanel/v1.11.1",
+      "version": "1.11.2",
+      "fpk_version": "1.11.2",
+      "release_tag": "dpanel/v1.11.2",
       "service_port": 8807,
       "homepage_url": "https://github.com/donknap/dpanel",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/dpanel/fnos/ICON_256.PNG",
@@ -715,7 +715,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-10-10T08:02:25Z",
+      "updated_at": "2026-10-29T08:02:40Z",
       "download_count": 336,
       "app_type": "docker",
       "category": "system"
@@ -737,7 +737,7 @@
         "arm"
       ],
       "updated_at": "2026-10-08T08:05:23Z",
-      "download_count": 125,
+      "download_count": 130,
       "app_type": "docker",
       "category": "system"
     },
@@ -758,7 +758,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:46:32Z",
-      "download_count": 185,
+      "download_count": 189,
       "app_type": "native",
       "category": "network"
     },
@@ -789,9 +789,9 @@
       "file_prefix": "ente",
       "display_name": "Ente",
       "description": "端到端加密照片备份和存储服务，Google Photos 的隐私替代方案。",
-      "version": "latest-2026.10.28",
-      "fpk_version": "latest-2026.10.28",
-      "release_tag": "ente/vlatest-2026.10.28",
+      "version": "latest-2026.10.29",
+      "fpk_version": "latest-2026.10.29",
+      "release_tag": "ente/vlatest-2026.10.29",
       "service_port": 8510,
       "homepage_url": "https://ente.io",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ente/fnos/ICON_256.PNG",
@@ -799,7 +799,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-10-28T08:02:58Z",
+      "updated_at": "2026-10-29T08:02:40Z",
       "download_count": 60,
       "app_type": "docker",
       "category": "media",
@@ -864,7 +864,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:45:45Z",
-      "download_count": 246,
+      "download_count": 252,
       "app_type": "native",
       "category": "download"
     },
@@ -885,7 +885,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T09:51:14Z",
-      "download_count": 165,
+      "download_count": 167,
       "app_type": "docker",
       "category": "content"
     },
@@ -906,7 +906,7 @@
         "arm"
       ],
       "updated_at": "2026-09-23T08:02:34Z",
-      "download_count": 1192,
+      "download_count": 1209,
       "app_type": "docker",
       "category": "browser"
     },
@@ -969,7 +969,7 @@
         "arm"
       ],
       "updated_at": "2026-10-01T08:03:21Z",
-      "download_count": 85,
+      "download_count": 87,
       "app_type": "native",
       "category": "system"
     },
@@ -989,7 +989,7 @@
         "x86"
       ],
       "updated_at": "2026-09-28T02:22:17Z",
-      "download_count": 358,
+      "download_count": 360,
       "app_type": "native",
       "category": "media"
     },
@@ -1052,7 +1052,7 @@
         "arm"
       ],
       "updated_at": "2026-10-16T08:02:44Z",
-      "download_count": 133,
+      "download_count": 140,
       "app_type": "docker",
       "category": "media"
     },
@@ -1073,7 +1073,7 @@
         "arm"
       ],
       "updated_at": "2026-10-15T08:02:44Z",
-      "download_count": 161,
+      "download_count": 165,
       "app_type": "native",
       "category": "network"
     },
@@ -1115,7 +1115,7 @@
         "arm"
       ],
       "updated_at": "2026-10-16T08:02:50Z",
-      "download_count": 94,
+      "download_count": 99,
       "app_type": "native",
       "category": "system"
     },
@@ -1136,7 +1136,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T06:23:22Z",
-      "download_count": 118,
+      "download_count": 119,
       "app_type": "docker",
       "category": "system"
     },
@@ -1157,7 +1157,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:45:59Z",
-      "download_count": 380,
+      "download_count": 385,
       "app_type": "native",
       "category": "download"
     },
@@ -1178,7 +1178,7 @@
         "arm"
       ],
       "updated_at": "2026-09-16T08:03:12Z",
-      "download_count": 78,
+      "download_count": 84,
       "app_type": "native",
       "category": "system"
     },
@@ -1219,7 +1219,7 @@
         "x86"
       ],
       "updated_at": "2026-09-23T08:02:35Z",
-      "download_count": 106,
+      "download_count": 109,
       "app_type": "docker",
       "category": "media"
     },
@@ -1303,7 +1303,7 @@
         "arm"
       ],
       "updated_at": "2026-10-24T08:02:55Z",
-      "download_count": 300,
+      "download_count": 311,
       "app_type": "native",
       "category": "system"
     },
@@ -1334,9 +1334,9 @@
       "file_prefix": "immich",
       "display_name": "Immich",
       "description": "自托管照片和视频备份方案,支持人脸识别和智能搜索。",
-      "version": "release-2026.10.28",
-      "fpk_version": "release-2026.10.28",
-      "release_tag": "immich/vrelease-2026.10.28",
+      "version": "release-2026.10.29",
+      "fpk_version": "release-2026.10.29",
+      "release_tag": "immich/vrelease-2026.10.29",
       "service_port": 2283,
       "homepage_url": "https://github.com/immich-app/immich",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/immich/fnos/ICON_256.PNG",
@@ -1344,7 +1344,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-10-28T08:02:53Z",
+      "updated_at": "2026-10-29T08:02:43Z",
       "download_count": 475,
       "app_type": "docker",
       "category": "media"
@@ -1366,7 +1366,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:46:27Z",
-      "download_count": 89,
+      "download_count": 90,
       "app_type": "docker",
       "category": "system"
     },
@@ -1376,9 +1376,9 @@
       "file_prefix": "jackett",
       "display_name": "Jackett",
       "description": "Torrent 索引器代理，为 Sonarr/Radarr 等工具提供统一的搜索接口。",
-      "version": "0.24.2949",
-      "fpk_version": "0.24.2949",
-      "release_tag": "jackett/v0.24.2949",
+      "version": "0.24.2961",
+      "fpk_version": "0.24.2961",
+      "release_tag": "jackett/v0.24.2961",
       "service_port": 9117,
       "homepage_url": "https://github.com/Jackett/Jackett",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/jackett/fnos/ICON_256.PNG",
@@ -1386,7 +1386,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-10-28T08:03:08Z",
+      "updated_at": "2026-10-29T08:02:59Z",
       "download_count": 165,
       "app_type": "native",
       "category": "automation"
@@ -1429,7 +1429,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T06:23:08Z",
-      "download_count": 99,
+      "download_count": 101,
       "app_type": "docker",
       "category": "media"
     },
@@ -1450,7 +1450,7 @@
         "arm"
       ],
       "updated_at": "2026-09-09T08:02:37Z",
-      "download_count": 100,
+      "download_count": 105,
       "app_type": "docker",
       "category": "media"
     },
@@ -1471,7 +1471,7 @@
         "arm"
       ],
       "updated_at": "2026-08-29T08:01:59Z",
-      "download_count": 333,
+      "download_count": 340,
       "app_type": "docker",
       "category": "media"
     },
@@ -1492,7 +1492,7 @@
         "arm"
       ],
       "updated_at": "2026-10-16T08:02:51Z",
-      "download_count": 222,
+      "download_count": 230,
       "app_type": "docker",
       "category": "content"
     },
@@ -1534,7 +1534,7 @@
         "arm"
       ],
       "updated_at": "2026-10-26T08:07:49Z",
-      "download_count": 63,
+      "download_count": 64,
       "app_type": "docker",
       "category": "system"
     },
@@ -1576,7 +1576,7 @@
         "arm"
       ],
       "updated_at": "2026-10-07T08:03:40Z",
-      "download_count": 186,
+      "download_count": 192,
       "app_type": "docker",
       "category": "media"
     },
@@ -1597,7 +1597,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T09:51:20Z",
-      "download_count": 76,
+      "download_count": 78,
       "app_type": "docker",
       "category": "content"
     },
@@ -1640,7 +1640,7 @@
         "arm"
       ],
       "updated_at": "2026-10-26T08:08:10Z",
-      "download_count": 448,
+      "download_count": 454,
       "app_type": "native",
       "category": "automation"
     },
@@ -1661,7 +1661,7 @@
         "arm"
       ],
       "updated_at": "2026-09-10T08:02:39Z",
-      "download_count": 95,
+      "download_count": 100,
       "app_type": "docker",
       "category": "content"
     },
@@ -1682,7 +1682,7 @@
         "arm"
       ],
       "updated_at": "2026-10-03T08:02:50Z",
-      "download_count": 378,
+      "download_count": 385,
       "app_type": "native",
       "category": "content"
     },
@@ -1724,7 +1724,7 @@
         "arm"
       ],
       "updated_at": "2026-10-21T08:02:42Z",
-      "download_count": 73,
+      "download_count": 79,
       "app_type": "native",
       "category": "system"
     },
@@ -1734,9 +1734,9 @@
       "file_prefix": "lucky",
       "display_name": "Lucky",
       "description": "网络工具箱，集成 DDNS、反向代理、HTTPS 证书、端口转发等功能",
-      "version": "2.27.2",
-      "fpk_version": "2.27.2-r6",
-      "release_tag": "lucky/v2.27.2-r6",
+      "version": "3.5.0",
+      "fpk_version": "3.5.0",
+      "release_tag": "lucky/v3.5.0",
       "service_port": 16601,
       "homepage_url": "https://lucky666.cn",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/lucky/fnos/ICON_256.PNG",
@@ -1744,7 +1744,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-12T16:42:20Z",
+      "updated_at": "2026-10-29T08:02:50Z",
       "download_count": 479,
       "app_type": "native",
       "category": "system"
@@ -1766,7 +1766,7 @@
         "arm"
       ],
       "updated_at": "2026-10-21T08:02:37Z",
-      "download_count": 106,
+      "download_count": 114,
       "app_type": "docker",
       "category": "media"
     },
@@ -1787,7 +1787,7 @@
         "arm"
       ],
       "updated_at": "2026-10-12T08:16:32Z",
-      "download_count": 91,
+      "download_count": 95,
       "app_type": "docker",
       "category": "content"
     },
@@ -1830,7 +1830,7 @@
         "arm"
       ],
       "updated_at": "2026-10-22T08:02:43Z",
-      "download_count": 121,
+      "download_count": 123,
       "app_type": "docker",
       "category": "ai"
     },
@@ -1851,7 +1851,7 @@
         "arm"
       ],
       "updated_at": "2026-10-18T08:02:19Z",
-      "download_count": 77,
+      "download_count": 83,
       "app_type": "docker",
       "category": "content"
     },
@@ -1872,7 +1872,7 @@
         "arm"
       ],
       "updated_at": "2026-10-19T08:06:30Z",
-      "download_count": 276,
+      "download_count": 283,
       "app_type": "docker",
       "category": "automation"
     },
@@ -1913,7 +1913,7 @@
         "arm"
       ],
       "updated_at": "2026-09-21T08:02:46Z",
-      "download_count": 129,
+      "download_count": 135,
       "app_type": "native",
       "category": "content"
     },
@@ -1955,7 +1955,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:46:07Z",
-      "download_count": 691,
+      "download_count": 693,
       "app_type": "native",
       "category": "media"
     },
@@ -1986,9 +1986,9 @@
       "file_prefix": "miair-next",
       "display_name": "MiAir Next",
       "description": "将小米小爱音箱转换为 DLNA 与 AirPlay 接收器，提供 Web 管理后台",
-      "version": "0.8.0",
-      "fpk_version": "0.8.0",
-      "release_tag": "miair-next/v0.8.0",
+      "version": "0.10.0",
+      "fpk_version": "0.10.0",
+      "release_tag": "miair-next/v0.10.0",
       "service_port": 8300,
       "homepage_url": "https://github.com/deerwan/miair-next",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/miair-next/fnos/ICON_256.PNG",
@@ -1996,7 +1996,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-10-27T08:02:39Z",
+      "updated_at": "2026-10-29T08:02:46Z",
       "download_count": 200,
       "app_type": "docker",
       "category": "media"
@@ -2039,7 +2039,7 @@
         "arm"
       ],
       "updated_at": "2026-10-20T08:02:32Z",
-      "download_count": 99,
+      "download_count": 100,
       "app_type": "docker",
       "category": "content"
     },
@@ -2060,7 +2060,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:46:20Z",
-      "download_count": 171,
+      "download_count": 174,
       "app_type": "native",
       "category": "network"
     },
@@ -2103,7 +2103,7 @@
         "arm"
       ],
       "updated_at": "2026-10-12T08:16:34Z",
-      "download_count": 630,
+      "download_count": 638,
       "app_type": "native",
       "category": "network"
     },
@@ -2134,9 +2134,9 @@
       "file_prefix": "nanobot",
       "display_name": "Nanobot",
       "description": "超轻量 AI 智能体框架，99% 更少代码量，支持多模型多通道，Web 管理面板，默认密码 admin/nanobot",
-      "version": "0.3.5",
-      "fpk_version": "0.3.5",
-      "release_tag": "nanobot/v0.3.5",
+      "version": "0.4.0",
+      "fpk_version": "0.4.0",
+      "release_tag": "nanobot/v0.4.0",
       "service_port": 18780,
       "homepage_url": "https://github.com/HKUDS/nanobot",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/nanobot/fnos/ICON_256.PNG",
@@ -2144,7 +2144,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-16T08:02:46Z",
+      "updated_at": "2026-10-29T08:02:46Z",
       "download_count": 476,
       "app_type": "docker",
       "category": "ai"
@@ -2166,7 +2166,7 @@
         "arm"
       ],
       "updated_at": "2026-09-25T08:03:19Z",
-      "download_count": 236,
+      "download_count": 240,
       "app_type": "native",
       "category": "media"
     },
@@ -2219,9 +2219,9 @@
       "file_prefix": "next-ai-draw-io",
       "display_name": "Next AI Draw.io",
       "description": "基于大语言模型的 draw.io 图表生成与编辑工具",
-      "version": "latest-2026.10.28",
-      "fpk_version": "latest-2026.10.28",
-      "release_tag": "next-ai-draw-io/vlatest-2026.10.28",
+      "version": "latest-2026.10.29",
+      "fpk_version": "latest-2026.10.29",
+      "release_tag": "next-ai-draw-io/vlatest-2026.10.29",
       "service_port": 3007,
       "homepage_url": "https://github.com/chadkunsman/next-ai-draw-io",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/next-ai-draw-io/fnos/ICON_256.PNG",
@@ -2229,7 +2229,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-10-28T08:02:58Z",
+      "updated_at": "2026-10-29T08:02:46Z",
       "download_count": 28,
       "app_type": "docker",
       "category": "ai"
@@ -2272,7 +2272,7 @@
         "arm"
       ],
       "updated_at": "2026-10-15T08:02:41Z",
-      "download_count": 156,
+      "download_count": 169,
       "app_type": "native",
       "category": "system"
     },
@@ -2293,7 +2293,7 @@
         "arm"
       ],
       "updated_at": "2026-09-25T08:02:37Z",
-      "download_count": 170,
+      "download_count": 176,
       "app_type": "docker",
       "category": "system"
     },
@@ -2335,7 +2335,7 @@
         "arm"
       ],
       "updated_at": "2026-10-10T08:02:30Z",
-      "download_count": 132,
+      "download_count": 135,
       "app_type": "native",
       "category": "network"
     },
@@ -2355,7 +2355,7 @@
         "x86"
       ],
       "updated_at": "2026-10-27T09:28:55Z",
-      "download_count": 136,
+      "download_count": 140,
       "app_type": "native",
       "category": "content"
     },
@@ -2438,7 +2438,7 @@
         "arm"
       ],
       "updated_at": "2026-10-26T08:07:51Z",
-      "download_count": 348,
+      "download_count": 352,
       "app_type": "docker",
       "category": "content"
     },
@@ -2448,9 +2448,9 @@
       "file_prefix": "ollama",
       "display_name": "Ollama",
       "description": "本地大语言模型运行引擎，支持 Llama、Mistral、Gemma 等开源模型。",
-      "version": "0.40.12",
-      "fpk_version": "0.40.12",
-      "release_tag": "ollama/v0.40.12",
+      "version": "0.40.13",
+      "fpk_version": "0.40.13",
+      "release_tag": "ollama/v0.40.13",
       "service_port": 11434,
       "homepage_url": "https://github.com/ollama/ollama",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ollama/fnos/ICON_256.PNG",
@@ -2458,7 +2458,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-10-28T08:02:59Z",
+      "updated_at": "2026-10-29T08:02:45Z",
       "download_count": 159,
       "app_type": "docker",
       "category": "ai"
@@ -2480,7 +2480,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:46:21Z",
-      "download_count": 71,
+      "download_count": 76,
       "app_type": "docker",
       "category": "media"
     },
@@ -2543,7 +2543,7 @@
         "arm"
       ],
       "updated_at": "2026-08-31T15:31:33Z",
-      "download_count": 599,
+      "download_count": 603,
       "app_type": "docker",
       "category": "network"
     },
@@ -2585,7 +2585,7 @@
         "arm"
       ],
       "updated_at": "2026-10-27T08:02:38Z",
-      "download_count": 55,
+      "download_count": 62,
       "app_type": "docker",
       "category": "system"
     },
@@ -2606,7 +2606,7 @@
         "arm"
       ],
       "updated_at": "2026-10-08T08:04:55Z",
-      "download_count": 107,
+      "download_count": 113,
       "app_type": "docker",
       "category": "media"
     },
@@ -2627,7 +2627,7 @@
         "arm"
       ],
       "updated_at": "2026-08-31T15:21:52Z",
-      "download_count": 287,
+      "download_count": 292,
       "app_type": "native",
       "category": "ai"
     },
@@ -2648,7 +2648,7 @@
         "arm"
       ],
       "updated_at": "2026-10-18T08:02:20Z",
-      "download_count": 184,
+      "download_count": 192,
       "app_type": "docker",
       "category": "network"
     },
@@ -2690,7 +2690,7 @@
         "arm"
       ],
       "updated_at": "2026-10-22T08:03:04Z",
-      "download_count": 77,
+      "download_count": 82,
       "app_type": "native",
       "category": "system"
     },
@@ -2711,7 +2711,7 @@
         "arm"
       ],
       "updated_at": "2026-10-22T08:03:02Z",
-      "download_count": 60,
+      "download_count": 66,
       "app_type": "native",
       "category": "system"
     },
@@ -2753,7 +2753,7 @@
         "arm"
       ],
       "updated_at": "2026-09-28T05:07:58Z",
-      "download_count": 50,
+      "download_count": 51,
       "app_type": "native",
       "category": "system"
     },
@@ -2774,7 +2774,7 @@
         "arm"
       ],
       "updated_at": "2026-10-26T08:07:56Z",
-      "download_count": 83,
+      "download_count": 93,
       "app_type": "docker",
       "category": "content"
     },
@@ -2805,9 +2805,9 @@
       "file_prefix": "qinglong",
       "display_name": "QingLong",
       "description": "支持 Python/JavaScript/Shell/TypeScript 的定时任务管理面板",
-      "version": "2.23.0",
-      "fpk_version": "2.23.0",
-      "release_tag": "qinglong/v2.23.0",
+      "version": "2.24.0",
+      "fpk_version": "2.24.0",
+      "release_tag": "qinglong/v2.24.0",
       "service_port": 5700,
       "homepage_url": "https://github.com/whyour/qinglong",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/qinglong/fnos/ICON_256.PNG",
@@ -2815,7 +2815,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-10-12T08:16:27Z",
+      "updated_at": "2026-10-29T08:02:52Z",
       "download_count": 387,
       "app_type": "docker",
       "category": "system"
@@ -2837,7 +2837,7 @@
         "arm"
       ],
       "updated_at": "2026-10-23T08:02:50Z",
-      "download_count": 162,
+      "download_count": 168,
       "app_type": "docker",
       "category": "system"
     },
@@ -2858,7 +2858,7 @@
         "arm"
       ],
       "updated_at": "2026-09-17T08:02:56Z",
-      "download_count": 700,
+      "download_count": 706,
       "app_type": "native",
       "category": "automation"
     },
@@ -2879,7 +2879,7 @@
         "arm"
       ],
       "updated_at": "2026-10-10T08:02:38Z",
-      "download_count": 280,
+      "download_count": 287,
       "app_type": "native",
       "category": "download"
     },
@@ -2921,7 +2921,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T06:24:12Z",
-      "download_count": 268,
+      "download_count": 285,
       "app_type": "native",
       "category": "automation"
     },
@@ -2942,7 +2942,7 @@
         "arm"
       ],
       "updated_at": "2026-10-06T08:03:26Z",
-      "download_count": 123,
+      "download_count": 128,
       "app_type": "docker",
       "category": "system"
     },
@@ -2963,7 +2963,7 @@
         "arm"
       ],
       "updated_at": "2026-09-12T19:02:58Z",
-      "download_count": 130,
+      "download_count": 132,
       "app_type": "native",
       "category": "network"
     },
@@ -2984,7 +2984,7 @@
         "arm"
       ],
       "updated_at": "2026-09-09T08:02:44Z",
-      "download_count": 55,
+      "download_count": 60,
       "app_type": "docker",
       "category": "download"
     },
@@ -3005,7 +3005,7 @@
         "arm"
       ],
       "updated_at": "2026-10-24T08:03:02Z",
-      "download_count": 323,
+      "download_count": 329,
       "app_type": "docker",
       "category": "network",
       "post_install_note": "SakuraFrp 容器使用 host 网络模式运行。首次安装后，请通过远程管理面板创建并启动隧道。"
@@ -3027,7 +3027,7 @@
         "arm"
       ],
       "updated_at": "2026-10-13T08:07:31Z",
-      "download_count": 116,
+      "download_count": 122,
       "app_type": "docker",
       "category": "content"
     },
@@ -3048,7 +3048,7 @@
         "arm"
       ],
       "updated_at": "2026-10-22T08:02:57Z",
-      "download_count": 132,
+      "download_count": 138,
       "app_type": "docker",
       "category": "media"
     },
@@ -3058,9 +3058,9 @@
       "file_prefix": "siyuan",
       "display_name": "SiYuan 思源笔记",
       "description": "隐私优先的块级笔记与双向链接知识库（内核服务器模式），支持网页端访问、多端数据同步与 S3/WebDAV 备份",
-      "version": "3.8.8",
-      "fpk_version": "3.8.8",
-      "release_tag": "siyuan/v3.8.8",
+      "version": "3.8.9",
+      "fpk_version": "3.8.9",
+      "release_tag": "siyuan/v3.8.9",
       "service_port": 6806,
       "homepage_url": "https://b3log.org/siyuan",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/siyuan/fnos/ICON_256.PNG",
@@ -3068,7 +3068,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-10-20T08:02:37Z",
+      "updated_at": "2026-10-29T08:02:46Z",
       "download_count": 112,
       "app_type": "docker",
       "category": "content"
@@ -3090,7 +3090,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T06:24:17Z",
-      "download_count": 275,
+      "download_count": 281,
       "app_type": "native",
       "category": "network"
     },
@@ -3111,7 +3111,7 @@
         "arm"
       ],
       "updated_at": "2026-09-17T08:03:50Z",
-      "download_count": 446,
+      "download_count": 453,
       "app_type": "native",
       "category": "automation"
     },
@@ -3121,9 +3121,9 @@
       "file_prefix": "songloft",
       "display_name": "Songloft",
       "description": "自托管音乐服务器，支持本地音乐管理与 Web 播放",
-      "version": "2.13.5",
-      "fpk_version": "2.13.5",
-      "release_tag": "songloft/v2.13.5",
+      "version": "2.13.7",
+      "fpk_version": "2.13.7",
+      "release_tag": "songloft/v2.13.7",
       "service_port": 58091,
       "homepage_url": "https://github.com/songloft-org/songloft",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/songloft/fnos/ICON_256.PNG",
@@ -3131,7 +3131,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-10-21T08:02:47Z",
+      "updated_at": "2026-10-29T08:02:50Z",
       "download_count": 208,
       "app_type": "docker",
       "category": "media"
@@ -3216,7 +3216,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:46:59Z",
-      "download_count": 123,
+      "download_count": 126,
       "app_type": "native",
       "category": "system"
     },
@@ -3237,7 +3237,7 @@
         "arm"
       ],
       "updated_at": "2026-09-15T08:02:44Z",
-      "download_count": 121,
+      "download_count": 126,
       "app_type": "docker",
       "category": "media"
     },
@@ -3257,7 +3257,7 @@
         "x86"
       ],
       "updated_at": "2026-08-17T06:31:00Z",
-      "download_count": 70,
+      "download_count": 71,
       "app_type": "native",
       "category": "system"
     },
@@ -3278,7 +3278,7 @@
         "arm"
       ],
       "updated_at": "2026-08-28T11:43:35Z",
-      "download_count": 108,
+      "download_count": 115,
       "app_type": "docker",
       "category": "system"
     },
@@ -3299,7 +3299,7 @@
         "arm"
       ],
       "updated_at": "2026-09-30T08:03:03Z",
-      "download_count": 313,
+      "download_count": 319,
       "app_type": "docker",
       "category": "media"
     },
@@ -3320,7 +3320,7 @@
         "arm"
       ],
       "updated_at": "2026-10-21T08:02:49Z",
-      "download_count": 203,
+      "download_count": 210,
       "app_type": "native",
       "category": "download"
     },
@@ -3330,9 +3330,9 @@
       "file_prefix": "tailscale",
       "display_name": "Tailscale",
       "description": "Tailscale VPN 客户端，零配置组建安全私有网络，支持远程访问 NAS。",
-      "version": "1.104.2",
-      "fpk_version": "1.104.2",
-      "release_tag": "tailscale/v1.104.2",
+      "version": "1.104.4",
+      "fpk_version": "1.104.4",
+      "release_tag": "tailscale/v1.104.4",
       "service_port": 8088,
       "homepage_url": "https://github.com/tailscale/tailscale",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/tailscale/fnos/ICON_256.PNG",
@@ -3340,7 +3340,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-10-21T08:02:49Z",
+      "updated_at": "2026-10-29T08:02:49Z",
       "download_count": 323,
       "app_type": "docker",
       "category": "network"
@@ -3362,7 +3362,7 @@
         "arm"
       ],
       "updated_at": "2026-09-29T08:03:01Z",
-      "download_count": 60,
+      "download_count": 66,
       "app_type": "docker",
       "category": "media"
     },
@@ -3383,7 +3383,7 @@
         "arm"
       ],
       "updated_at": "2026-10-05T08:11:29Z",
-      "download_count": 299,
+      "download_count": 306,
       "app_type": "docker",
       "category": "media"
     },
@@ -3393,9 +3393,9 @@
       "file_prefix": "transmission",
       "display_name": "Transmission",
       "description": "Transmission 是一个轻量级的 BitTorrent 客户端，以简洁高效著称，支持 Web 远程管理。",
-      "version": "latest-2026.10.28",
-      "fpk_version": "latest-2026.10.28",
-      "release_tag": "transmission/vlatest-2026.10.28",
+      "version": "latest-2026.10.29",
+      "fpk_version": "latest-2026.10.29",
+      "release_tag": "transmission/vlatest-2026.10.29",
       "service_port": 9091,
       "homepage_url": "https://transmissionbt.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/transmission/fnos/ICON_256.PNG",
@@ -3403,7 +3403,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-10-28T08:03:01Z",
+      "updated_at": "2026-10-29T08:02:49Z",
       "download_count": 61,
       "app_type": "docker",
       "category": "download"
@@ -3446,7 +3446,7 @@
         "arm"
       ],
       "updated_at": "2026-10-06T08:03:25Z",
-      "download_count": 302,
+      "download_count": 310,
       "app_type": "docker",
       "category": "system"
     },
@@ -3467,7 +3467,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T06:24:39Z",
-      "download_count": 78,
+      "download_count": 80,
       "app_type": "native",
       "category": "download"
     },
@@ -3508,7 +3508,7 @@
         "arm"
       ],
       "updated_at": "2026-10-21T08:02:57Z",
-      "download_count": 141,
+      "download_count": 152,
       "app_type": "native",
       "category": "content"
     },
@@ -3529,7 +3529,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T09:51:21Z",
-      "download_count": 298,
+      "download_count": 300,
       "app_type": "docker",
       "category": "system"
     },
@@ -3550,7 +3550,7 @@
         "arm"
       ],
       "updated_at": "2026-10-25T08:02:36Z",
-      "download_count": 416,
+      "download_count": 423,
       "app_type": "docker",
       "category": "network"
     },
@@ -3571,7 +3571,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T06:24:33Z",
-      "download_count": 88,
+      "download_count": 89,
       "app_type": "docker",
       "category": "content"
     },
@@ -3592,7 +3592,7 @@
         "arm"
       ],
       "updated_at": "2026-10-13T08:07:28Z",
-      "download_count": 78,
+      "download_count": 84,
       "app_type": "docker",
       "category": "media"
     },
@@ -3613,7 +3613,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:46:42Z",
-      "download_count": 89,
+      "download_count": 91,
       "app_type": "native",
       "category": "system"
     },
@@ -3676,7 +3676,7 @@
         "arm"
       ],
       "updated_at": "2026-10-02T08:02:46Z",
-      "download_count": 66,
+      "download_count": 72,
       "app_type": "docker",
       "category": "automation",
       "post_install_note": "ZoneFoundry Bridge 客户端容器使用 host 网络模式运行。首次启动后到容器日志里找一行『Setup code: ZF-XXXX』，在 ZoneFoundry iOS app → 更多 → 桥接 → + → 输入设置码 中填入即可（~5 秒内自动配对完成）。"
