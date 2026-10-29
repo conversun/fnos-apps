@@ -6,8 +6,8 @@
       "description": "BT 反吸血工具，自动封禁异常上传的吸血客户端",
       "source_url": "https://github.com/liumingye/fnos_fpk/releases/tag/v1.0.0",
       "github_repo": "PBH-BTN/PeerBanHelper",
-      "latest_version": "9.5.1",
-      "updated_at": "2026-09-01T12:14:26Z"
+      "latest_version": "9.5.3",
+      "updated_at": "2026-10-28T13:12:10Z"
     },
     {
       "name": "bilisync",
@@ -69,8 +69,8 @@
       "description": "Grafana 官方数据采集代理，收集日志、指标和链路追踪数据",
       "source_url": "https://github.com/jianyun8023/fnos-alloy/releases",
       "github_repo": "jianyun8023/fnos-alloy",
-      "latest_version": "1.21.2",
-      "updated_at": "2026-10-23T00:04:35Z"
+      "latest_version": "1.21.3",
+      "updated_at": "2026-10-29T01:08:36Z"
     },
     {
       "name": "scrutiny-collector",
