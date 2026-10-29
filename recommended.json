@@ -161,6 +161,15 @@
       "github_repo": "RROrg/fn-apps",
       "latest_version": "2026.10.09-1908",
       "updated_at": "2026-10-09T11:11:45Z"
+    },
+    {
+      "name": "teleagent",
+      "display_name": "星辰超级智能体 (TeleAgent)",
+      "description": "中国电信自研星辰超级智能体，支持 AI 办公、文档生成、代码分析、网页调研与多模型调度",
+      "source_url": "https://github.com/mwh1987/fnos-teleagent/releases",
+      "github_repo": "mwh1987/fnos-teleagent",
+      "latest_version": "2.7.3",
+      "updated_at": "2026-10-25T03:07:25Z"
     }
   ]
 }
