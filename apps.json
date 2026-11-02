@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-02T08:03:15Z",
+  "generated_at": "2026-11-02T08:03:55Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -1083,9 +1083,9 @@
       "file_prefix": "gitea",
       "display_name": "Gitea",
       "description": "轻量级 Git 代码托管服务器，提供代码仓库、Issue 追踪和 CI/CD。",
-      "version": "28.2.0",
-      "fpk_version": "28.2.0",
-      "release_tag": "gitea/v28.2.0",
+      "version": "28.3.0",
+      "fpk_version": "28.3.0",
+      "release_tag": "gitea/v28.3.0",
       "service_port": 3033,
       "homepage_url": "https://gitea.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/gitea/fnos/ICON_256.PNG",
@@ -1093,7 +1093,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-10-19T08:06:28Z",
+      "updated_at": "2026-11-02T08:03:26Z",
       "download_count": 679,
       "app_type": "native",
       "category": "system"
@@ -1199,7 +1199,7 @@
         "arm"
       ],
       "updated_at": "2026-10-28T08:05:04Z",
-      "download_count": 696,
+      "download_count": 703,
       "app_type": "native",
       "category": "system"
     },
@@ -1324,7 +1324,7 @@
         "arm"
       ],
       "updated_at": "2026-10-24T08:02:49Z",
-      "download_count": 474,
+      "download_count": 480,
       "app_type": "docker",
       "category": "system"
     },
@@ -2303,9 +2303,9 @@
       "file_prefix": "nginx-ui",
       "display_name": "Nginx UI",
       "description": "Nginx可视化管理面板，内置Nginx引擎，支持在线编辑配置、一键Reload、SSL证书管理。",
-      "version": "2.9.3",
-      "fpk_version": "2.9.3",
-      "release_tag": "nginx-ui/v2.9.3",
+      "version": "2.9.4",
+      "fpk_version": "2.9.4",
+      "release_tag": "nginx-ui/v2.9.4",
       "service_port": 8889,
       "homepage_url": "https://github.com/0xJacky/nginx-ui",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/nginx-ui/fnos/ICON_256.PNG",
@@ -2313,7 +2313,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-10-30T08:02:44Z",
+      "updated_at": "2026-11-02T08:03:12Z",
       "download_count": 495,
       "app_type": "native",
       "category": "system"
