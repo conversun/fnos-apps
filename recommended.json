@@ -231,8 +231,8 @@
       "description": "网络网关，集成 DDNS、反向代理、证书与内网穿透",
       "source_url": "https://github.com/wangwanjie/gately/releases",
       "github_repo": "wangwanjie/gately",
-      "latest_version": "0.6.3",
-      "updated_at": "2026-11-02T11:14:51Z"
+      "latest_version": "0.6.3.5",
+      "updated_at": "2026-11-03T05:35:40Z"
     }
   ]
 }
