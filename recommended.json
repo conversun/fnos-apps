@@ -161,6 +161,78 @@
       "github_repo": "RROrg/fn-apps",
       "latest_version": "2026.10.09-1908",
       "updated_at": "2026-10-09T11:11:45Z"
+    },
+    {
+      "name": "openvpn-client",
+      "display_name": "OpenVPN 客户端",
+      "description": "原生 OpenVPN 客户端，提供 Web 管理与离线安装包",
+      "source_url": "https://github.com/IamAyang233/fnos-openvpn-client/releases",
+      "github_repo": "IamAyang233/fnos-openvpn-client",
+      "latest_version": "0.1.10",
+      "updated_at": "2026-08-14T15:11:04Z"
+    },
+    {
+      "name": "ztmesh",
+      "display_name": "ZeroTier 异地组网",
+      "description": "ZeroTier 虚拟局域网管理，支持托管路由与转发配置",
+      "source_url": "https://github.com/ybd156/fnos-ztmesh/releases",
+      "github_repo": "ybd156/fnos-ztmesh",
+      "latest_version": "2.1.1",
+      "updated_at": "2026-10-28T08:57:00Z"
+    },
+    {
+      "name": "fnsoar",
+      "display_name": "fnSoar",
+      "description": "原生 Mihomo 代理引擎，集成双面板与订阅管理",
+      "source_url": "https://github.com/huiikeung/fnsoar/releases",
+      "github_repo": "huiikeung/fnsoar",
+      "latest_version": "1.1.0",
+      "updated_at": "2026-10-08T03:43:25Z"
+    },
+    {
+      "name": "fn-opencode",
+      "display_name": "OpenCode for fnOS",
+      "description": "原生 OpenCode Web 服务，支持飞牛桌面窗口与独立应用用户",
+      "source_url": "https://github.com/HANSHOJIN/FN-OPENCODE/releases",
+      "github_repo": "HANSHOJIN/FN-OPENCODE",
+      "latest_version": "2.2.5-4",
+      "updated_at": "2026-10-31T01:50:00Z"
+    },
+    {
+      "name": "quarkdrive",
+      "display_name": "QuarkDrive",
+      "description": "夸克网盘扫码登录、文件浏览与 NAS 后台下载",
+      "source_url": "https://github.com/chenpingonline/quark-for-fnos/releases",
+      "github_repo": "chenpingonline/quark-for-fnos",
+      "latest_version": "0.1.17",
+      "updated_at": "2026-10-15T12:29:41Z"
+    },
+    {
+      "name": "rustfs-fnos",
+      "display_name": "RustFS",
+      "description": "S3 对象存储服务，提供飞牛安装包与 Web 控制台",
+      "source_url": "https://github.com/a10463981/rustfs-fnos/releases",
+      "github_repo": "a10463981/rustfs-fnos",
+      "latest_version": "1.0.4-2",
+      "updated_at": "2026-10-28T04:12:56Z"
+    },
+    {
+      "name": "teleagent",
+      "display_name": "星辰超级智能体 (TeleAgent)",
+      "description": "中国电信自研星辰超级智能体，支持 AI 办公、文档生成与多模型调度",
+      "source_url": "https://github.com/mwh1987/fnos-teleagent/releases",
+      "github_repo": "mwh1987/fnos-teleagent",
+      "latest_version": "3.0.0-rc.2",
+      "updated_at": "2026-11-02T18:00:15Z"
+    },
+    {
+      "name": "gately",
+      "display_name": "Gately",
+      "description": "网络网关，集成 DDNS、反向代理、证书与内网穿透",
+      "source_url": "https://github.com/wangwanjie/gately/releases",
+      "github_repo": "wangwanjie/gately",
+      "latest_version": "0.6.3",
+      "updated_at": "2026-11-02T11:14:51Z"
     }
   ]
 }
