@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-03T08:03:00Z",
+  "generated_at": "2026-11-03T08:03:26Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -1376,9 +1376,9 @@
       "file_prefix": "jackett",
       "display_name": "Jackett",
       "description": "Torrent 索引器代理，为 Sonarr/Radarr 等工具提供统一的搜索接口。",
-      "version": "0.24.2994",
-      "fpk_version": "0.24.2994",
-      "release_tag": "jackett/v0.24.2994",
+      "version": "0.24.3003",
+      "fpk_version": "0.24.3003",
+      "release_tag": "jackett/v0.24.3003",
       "service_port": 9117,
       "homepage_url": "https://github.com/Jackett/Jackett",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/jackett/fnos/ICON_256.PNG",
@@ -1386,7 +1386,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-11-02T08:03:09Z",
+      "updated_at": "2026-11-03T08:03:04Z",
       "download_count": 740,
       "app_type": "native",
       "category": "automation"
@@ -2219,9 +2219,9 @@
       "file_prefix": "next-ai-draw-io",
       "display_name": "Next AI Draw.io",
       "description": "基于大语言模型的 draw.io 图表生成与编辑工具",
-      "version": "latest-2026.11.02",
-      "fpk_version": "latest-2026.11.02",
-      "release_tag": "next-ai-draw-io/vlatest-2026.11.02",
+      "version": "latest-2026.11.03",
+      "fpk_version": "latest-2026.11.03",
+      "release_tag": "next-ai-draw-io/vlatest-2026.11.03",
       "service_port": 3007,
       "homepage_url": "https://github.com/chadkunsman/next-ai-draw-io",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/next-ai-draw-io/fnos/ICON_256.PNG",
@@ -2229,7 +2229,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-11-02T08:02:53Z",
+      "updated_at": "2026-11-03T08:02:58Z",
       "download_count": 572,
       "app_type": "docker",
       "category": "ai"
@@ -3644,9 +3644,9 @@
       "file_prefix": "zerotier",
       "display_name": "ZeroTier",
       "description": "ZeroTier 自托管控制器与 ZTNET Web 管理界面，支持可视化管理虚拟局域网。",
-      "version": "0.8.6",
-      "fpk_version": "0.8.6",
-      "release_tag": "zerotier/v0.8.6",
+      "version": "0.8.7",
+      "fpk_version": "0.8.7",
+      "release_tag": "zerotier/v0.8.7",
       "service_port": 3008,
       "homepage_url": "https://github.com/sinamics/ztnet",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/zerotier/fnos/ICON_256.PNG",
@@ -3654,7 +3654,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-10-24T08:03:03Z",
+      "updated_at": "2026-11-03T08:02:59Z",
       "download_count": 999,
       "app_type": "docker",
       "category": "network"
