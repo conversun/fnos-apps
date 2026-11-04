@@ -222,8 +222,8 @@
       "description": "中国电信自研星辰超级智能体，支持 AI 办公、文档生成与多模型调度",
       "source_url": "https://github.com/mwh1987/fnos-teleagent/releases",
       "github_repo": "mwh1987/fnos-teleagent",
-      "latest_version": "3.0.0-rc.2",
-      "updated_at": "2026-11-02T18:00:15Z"
+      "latest_version": "3.0.0-rc.4",
+      "updated_at": "2026-11-04T04:18:19Z"
     },
     {
       "name": "gately",
@@ -231,8 +231,8 @@
       "description": "网络网关，集成 DDNS、反向代理、证书与内网穿透",
       "source_url": "https://github.com/wangwanjie/gately/releases",
       "github_repo": "wangwanjie/gately",
-      "latest_version": "0.6.3.5",
-      "updated_at": "2026-11-03T05:35:40Z"
+      "latest_version": "0.6.4.1",
+      "updated_at": "2026-11-04T02:34:11Z"
     }
   ]
 }
