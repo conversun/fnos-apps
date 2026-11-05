@@ -1,0 +1,28 @@
+#!/bin/bash
+# fnsou install callback —— 以 root 运行（manifest: install_type="root"）。
+# 目的：把「应用进程到底能不能读 /vol1../vol10」的权限事实落到日志里，便于定位索引覆盖不到的分区。
+echo -e "$(date +'%Y/%m/%d %H:%M:%S')\t" $0 $*
+
+PKG_DIR="/var/apps/fnsou"
+SHARE_DIR="${PKG_DIR}/shares/fnsou"
+mkdir -p "${SHARE_DIR}"
+DBG="${SHARE_DIR}/perm-diag.log"
+
+{
+  echo "===== $(date +'%Y/%m/%d %H:%M:%S') install_callback (uid=$(id -u)) ====="
+  echo "--- id fnsou ---"
+  id fnsou 2>&1
+  echo "--- ls -ldn /vol* (host namespace) ---"
+  ls -ldn /vol* 2>&1 | head -40
+  echo "--- getfacl /vol1 /vol2 /vol3 ---"
+  for p in /vol1 /vol2 /vol3 /vol10; do
+    echo "[$p]"
+    (command -v getfacl >/dev/null 2>&1 && getfacl -p "$p" 2>&1 | head -12) || echo "getfacl not available"
+  done
+  echo "--- mount (vol/fuse) ---"
+  mount 2>/dev/null | grep -iE 'vol[0-9]|fuse' | head -30
+  echo "--- /usr/trim 下的沙箱/权限相关服务 ---"
+  ls /usr/trim/bin 2>/dev/null | head -30
+} >> "${DBG}" 2>&1
+
+exit 0
