@@ -78,8 +78,8 @@
       "description": "硬盘 S.M.A.R.T. 健康数据采集器，配合 Scrutiny 面板使用",
       "source_url": "https://github.com/jianyun8023/fnos-scrutiny-collector/releases",
       "github_repo": "jianyun8023/fnos-scrutiny-collector",
-      "latest_version": "1.79.2",
-      "updated_at": "2026-11-05T01:42:17Z"
+      "latest_version": "1.80.0",
+      "updated_at": "2026-11-06T01:44:20Z"
     },
     {
       "name": "fn-fan",
@@ -222,8 +222,8 @@
       "description": "中国电信自研星辰超级智能体，支持 AI 办公、文档生成与多模型调度",
       "source_url": "https://github.com/mwh1987/fnos-teleagent/releases",
       "github_repo": "mwh1987/fnos-teleagent",
-      "latest_version": "3.0.0.5",
-      "updated_at": "2026-11-04T19:21:43Z"
+      "latest_version": "3.0.0.6",
+      "updated_at": "2026-11-05T19:28:08Z"
     },
     {
       "name": "gately",
