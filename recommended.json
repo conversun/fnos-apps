@@ -195,8 +195,8 @@
       "description": "原生 OpenCode Web 服务，支持飞牛桌面窗口与独立应用用户",
       "source_url": "https://github.com/HANSHOJIN/FN-OPENCODE/releases",
       "github_repo": "HANSHOJIN/FN-OPENCODE",
-      "latest_version": "2.2.5-4",
-      "updated_at": "2026-10-31T01:50:00Z"
+      "latest_version": "2.2.6-1",
+      "updated_at": "2026-11-07T03:12:13Z"
     },
     {
       "name": "quarkdrive",
@@ -222,8 +222,8 @@
       "description": "中国电信自研星辰超级智能体，支持 AI 办公、文档生成与多模型调度",
       "source_url": "https://github.com/mwh1987/fnos-teleagent/releases",
       "github_repo": "mwh1987/fnos-teleagent",
-      "latest_version": "3.0.0.6",
-      "updated_at": "2026-11-05T19:28:08Z"
+      "latest_version": "3.0.0.7",
+      "updated_at": "2026-11-06T18:53:34Z"
     },
     {
       "name": "gately",
@@ -231,8 +231,8 @@
       "description": "网络网关，集成 DDNS、反向代理、证书与内网穿透",
       "source_url": "https://github.com/wangwanjie/gately/releases",
       "github_repo": "wangwanjie/gately",
-      "latest_version": "0.6.4.1",
-      "updated_at": "2026-11-04T02:34:11Z"
+      "latest_version": "0.6.5",
+      "updated_at": "2026-11-06T13:01:01Z"
     }
   ]
 }
