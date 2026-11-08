@@ -24,8 +24,8 @@
       "description": "自动签到框架，支持 HTTP 请求模板和定时任务",
       "source_url": "https://github.com/liumingye/fnos_fpk/releases/tag/v1.0.2",
       "github_repo": "qd-today/qd",
-      "latest_version": "20250803",
-      "updated_at": "2025-08-03T14:14:30Z"
+      "latest_version": "20261108",
+      "updated_at": "2026-11-07T19:09:15Z"
     },
     {
       "name": "onlyoffice",
@@ -78,8 +78,8 @@
       "description": "硬盘 S.M.A.R.T. 健康数据采集器，配合 Scrutiny 面板使用",
       "source_url": "https://github.com/jianyun8023/fnos-scrutiny-collector/releases",
       "github_repo": "jianyun8023/fnos-scrutiny-collector",
-      "latest_version": "1.80.0",
-      "updated_at": "2026-11-06T01:44:20Z"
+      "latest_version": "1.80.1",
+      "updated_at": "2026-11-08T00:52:06Z"
     },
     {
       "name": "fn-fan",
@@ -231,8 +231,8 @@
       "description": "网络网关，集成 DDNS、反向代理、证书与内网穿透",
       "source_url": "https://github.com/wangwanjie/gately/releases",
       "github_repo": "wangwanjie/gately",
-      "latest_version": "0.6.5",
-      "updated_at": "2026-11-06T13:01:01Z"
+      "latest_version": "0.6.5.1",
+      "updated_at": "2026-11-07T15:00:23Z"
     }
   ]
 }
