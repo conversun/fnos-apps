@@ -1,0 +1,6 @@
+{
+    "type": "skip",
+    "note": "Official-fpk passthrough: the shipped artifact is the upstream's own fnOS package, validated by the upstream's release pipeline.",
+    "skip_arch": [],
+    "startup_timeout_seconds": 30
+}

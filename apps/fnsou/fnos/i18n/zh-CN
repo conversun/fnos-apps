@@ -1,0 +1,3 @@
+[manifest]
+display_name="飞牛Everything"
+desc="飞牛 NAS 毫秒级文件名搜索工具。基于文件名 trigram 倒排索引，全存储空间即时子串搜索；支持扩展名、大小、时间、路径过滤，网页端在线预览与下载，低内存占用。"

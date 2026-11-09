@@ -1,0 +1,67 @@
+#!/bin/bash
+# fnsou start/stop/status script (fnOS package lifecycle)
+
+PKG_DIR="/var/apps/fnsou"
+APP_DIR="${TRIM_APPDEST}/app"
+BIN="${APP_DIR}/fnsou"
+SHARE_DIR="${PKG_DIR}/shares/fnsou"
+LOG_FILE="${SHARE_DIR}/fnsou.log"
+CFG_TPL="${APP_DIR}/config.template.json"
+CFG_FILE="${SHARE_DIR}/config.json"
+PID_FILE="${SHARE_DIR}/fnsou.pid"
+
+start_daemon() {
+    if pgrep -f "${BIN}" > /dev/null 2>&1; then
+        echo "fnsou is already running"
+        exit 0
+    fi
+    mkdir -p "${SHARE_DIR}"
+    if [ ! -f "${CFG_FILE}" ]; then
+        cp "${CFG_TPL}" "${CFG_FILE}"
+    fi
+    echo "auth_paths=${TRIM_DATA_ACCESSIBLE_PATHS:-none} share_paths=${TRIM_DATA_SHARE_PATHS:-none} run_user=${TRIM_RUN_USERNAME:-?}" >> "${LOG_FILE}"
+    nohup "${BIN}" -config "${CFG_FILE}" >> "${LOG_FILE}" 2>&1 &
+    echo $! > "${PID_FILE}"
+    echo "fnsou started"
+    exit 0
+}
+
+stop_daemon() {
+    if [ -f "${PID_FILE}" ]; then
+        kill -9 "$(cat "${PID_FILE}")" 2>/dev/null
+        rm -f "${PID_FILE}"
+    fi
+    pkill -9 -f "${BIN}" 2>/dev/null
+    echo "fnsou stopped"
+    exit 0
+}
+
+status_daemon() {
+    if pgrep -f "${BIN}" > /dev/null 2>&1; then
+        exit 0
+    else
+        exit 3
+    fi
+}
+
+case "$1" in
+    start)
+        start_daemon
+        ;;
+    stop)
+        stop_daemon
+        ;;
+    status)
+        status_daemon
+        ;;
+    log)
+        if [ -f "${LOG_FILE}" ]; then
+            tail -n 100 "${LOG_FILE}"
+        fi
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|status|log}"
+        exit 1
+        ;;
+esac
+

@@ -1,0 +1,3 @@
+[manifest]
+display_name="fnOS Everything"
+desc="Millisecond file name search for fnOS. Trigram inverted index over all storage spaces, instant substring search with extension, size, time and path filters, plus in-browser download."
