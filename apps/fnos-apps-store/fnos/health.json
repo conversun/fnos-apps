@@ -1,0 +1,4 @@
+{
+    "type": "skip",
+    "note": "Installed access uses the authenticated fnOS gateway and a Unix socket; there is no standalone TCP health port."
+}
