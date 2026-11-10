@@ -42,23 +42,16 @@ app_get_latest_version() {
 
 app_download() {
     local tarball_url="https://repo.jellyfin.org/files/server/linux/latest-stable/${TARBALL_ARCH}/jellyfin_${APP_VERSION}-${TARBALL_ARCH}.tar.gz"
-    local ffmpeg_base="https://repo.jellyfin.org/files/ffmpeg/linux/latest-7.x/${TARBALL_ARCH}"
-    local ffmpeg_file
-    if [ -n "${FFMPEG_PIN:-}" ]; then
-        ffmpeg_file="${FFMPEG_PIN}"
-    else
-        ffmpeg_file=$(curl -sL "$ffmpeg_base/" | grep -oE 'jellyfin-ffmpeg_[^"]*_portable_'${PORTABLE_SUFFIX}'-gpl\.tar\.\w+' | head -1)
-    fi
-    [ -z "$ffmpeg_file" ] && error "无法从 $ffmpeg_base/ 解析 ffmpeg portable 文件名"
-    local ffmpeg_url="${ffmpeg_base}/${ffmpeg_file}"
+    # shellcheck source=scripts/apps/jellyfin/ffmpeg.sh
+    source "$REPO_ROOT/scripts/apps/jellyfin/ffmpeg.sh"
 
     info "下载 ($ARCH): $tarball_url"
     mkdir -p "$WORK_DIR"
     curl -L -f -o "$WORK_DIR/jellyfin.tar.gz" "$tarball_url" || error "下载失败"
     info "下载完成: $(du -h "$WORK_DIR/jellyfin.tar.gz" | cut -f1)"
 
-    info "下载 jellyfin-ffmpeg portable: $ffmpeg_file"
-    curl -L -f -o "$WORK_DIR/jellyfin-ffmpeg-portable" "$ffmpeg_url" || error "ffmpeg 下载失败"
+    info "下载 jellyfin-ffmpeg portable: $FFMPEG_FILE"
+    curl -L -f -o "$WORK_DIR/jellyfin-ffmpeg-portable" "$FFMPEG_URL" || error "ffmpeg 下载失败"
     info "ffmpeg 下载完成: $(du -h "$WORK_DIR/jellyfin-ffmpeg-portable" | cut -f1)"
 }
 
