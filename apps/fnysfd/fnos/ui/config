@@ -1,0 +1,14 @@
+{
+    ".url": {
+        "fnysfd.Application": {
+            "title": "飞牛影视反代",
+            "desc": "原生 STRM 反代与预加载管理",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "protocol": "http",
+            "port": "28006",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

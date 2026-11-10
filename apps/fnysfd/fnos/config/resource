@@ -1,0 +1,16 @@
+{
+    "port-config": {
+        "protocol-file": "Fnysfd.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "fnysfd",
+                "permission": {
+                    "rw": ["fnysfd"]
+                }
+            }
+        ]
+    },
+    "systemd-unit": {}
+}

@@ -1,0 +1,19 @@
+#!/bin/sh
+set -eu
+
+case "$(uname -m)" in
+    x86_64|amd64) ;;
+    *) echo "飞牛影视反代原生包仅支持 x86_64，不支持 ARM。" >&2; exit 1 ;;
+esac
+
+umask 077
+mkdir -p "${TRIM_PKGVAR}/config" "${TRIM_PKGVAR}/logs"
+cd "${TRIM_PKGVAR}"
+
+# Keep upstream's optional Docker management disconnected in this native app.
+unset DOCKER_CONTEXT
+export DOCKER_HOST="unix://${TRIM_PKGVAR}/docker-disabled.sock"
+export FNTV_DASHBOARD_ADDR=":${TRIM_SERVICE_PORT:-28006}"
+
+# The dashboard HTML is embedded. Upstream creates the initial config itself.
+exec "${TRIM_APPDEST}/bin/fnysfd" -c "${TRIM_PKGVAR}/config/config.yaml"

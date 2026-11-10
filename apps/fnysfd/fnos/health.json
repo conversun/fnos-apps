@@ -1,0 +1,8 @@
+{
+    "type": "http",
+    "path": "/login",
+    "expect_status": [200],
+    "startup_timeout_seconds": 30,
+    "skip_arch": ["arm"],
+    "note": "原生 x86 包；上游 ARM 镜像实际包含 x86 二进制，暂不支持 ARM。"
+}

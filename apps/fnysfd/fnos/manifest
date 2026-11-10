@@ -1,0 +1,14 @@
+appname         = fnysfd
+version         = 3.4.1
+display_name    = 飞牛影视反代
+platform        = x86
+maintainer      = 544849412
+maintainer_url  = https://github.com/544849412/fnysfd
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = fnysfd.Application
+service_port    = 28006
+desc            = 飞牛影视 STRM 透明反代与预加载工具，原生运行；管理端口 28006，反代端口 28005，仅支持 x86。
+source          = thirdparty
+checksum        =

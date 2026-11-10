@@ -1,0 +1,8 @@
+#!/bin/bash
+
+LOG_FILE="${TRIM_PKGVAR}/fnysfd.log"
+PID_FILE="${TRIM_PKGVAR}/fnysfd.pid"
+SERVICE_COMMAND="${TRIM_APPDEST}/bin/fnysfd-server"
+SVC_CWD="${TRIM_PKGVAR}"
+SVC_BACKGROUND=y
+SVC_WRITE_PID=y
