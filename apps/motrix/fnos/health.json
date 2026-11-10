@@ -1,0 +1,4 @@
+{
+    "type": "skip",
+    "note": "Docker 应用需要在 fnOS 实机验证；L3 测试容器没有 Docker daemon。"
+}

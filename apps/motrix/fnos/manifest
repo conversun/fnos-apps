@@ -1,0 +1,15 @@
+appname         = motrix
+version         = 2.4.1
+display_name    = Motrix
+platform        = x86
+maintainer      = agalwood
+maintainer_url  = https://github.com/agalwood/Motrix
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = motrix.Application
+service_port    = 16800
+checkport       = false
+desc            = Motrix Server 网页下载管理器，支持 HTTP、FTP、磁力及 BT 下载。
+source          = thirdparty
+checksum        =

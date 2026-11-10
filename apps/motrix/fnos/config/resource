@@ -1,0 +1,13 @@
+{
+    "port-config": {
+        "protocol-file": "motrix.sc"
+    },
+    "docker-project": {
+        "projects": [
+            {
+                "name": "motrix",
+                "path": "docker"
+            }
+        ]
+    }
+}

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+service_postinst() {
+    mkdir -p "${TRIM_PKGVAR}/data"
+    chown 1000:1000 "${TRIM_PKGVAR}/data"
+    mkdir -p "${TRIM_PKGVAR}/downloads"
+    chown 1000:1000 "${TRIM_PKGVAR}/downloads"
+}

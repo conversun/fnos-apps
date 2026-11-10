@@ -1,0 +1,27 @@
+services:
+  motrix:
+    image: motrixapp/motrix-server:${VERSION}
+    container_name: motrix
+    init: true
+    read_only: true
+    user: "1000:1000"
+    security_opt:
+      - no-new-privileges:true
+    stop_grace_period: 2m
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=64m,mode=1777
+    ports:
+      - "${TRIM_SERVICE_PORT:-16800}:8080"
+      - "16801:16801"
+    environment:
+      MOTRIX_DATA_DIR: /data
+      MOTRIX_TEMP_DIR: /data/tmp
+      MOTRIX_PLUGIN_DIR: /data/plugins
+      MOTRIX_DEFAULT_SAVE_DIR: /downloads
+      MOTRIX_ALLOWED_SAVE_DIRS: /downloads
+      MOTRIX_MDXP_HOST: 0.0.0.0
+      MOTRIX_MDXP_PORT: "16801"
+    volumes:
+      - ${TRIM_PKGVAR}/data:/data
+      - ${TRIM_PKGVAR}/downloads:/downloads
+    restart: unless-stopped

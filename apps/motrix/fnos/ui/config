@@ -1,0 +1,14 @@
+{
+    ".url": {
+        "motrix.Application": {
+            "title": "Motrix",
+            "desc": "Motrix Server 网页下载管理器，支持 HTTP、FTP、磁力及 BT 下载。",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "16800",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}
