@@ -1,0 +1,14 @@
+{
+    ".url": {
+        "m3u-studio.Application": {
+            "title": "M3U Studio",
+            "desc": "IPTV 频道管理与订阅服务器，支持 M3U、TXT、台标及 EPG。",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "8324",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

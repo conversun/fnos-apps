@@ -1,0 +1,15 @@
+appname         = m3u-studio
+version         = 0.6.4
+display_name    = M3U Studio
+platform        = x86
+maintainer      = cachemiao
+maintainer_url  = https://github.com/cachemiao/m3u-studio
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = m3u-studio.Application
+service_port    = 8324
+checkport       = false
+desc            = IPTV 频道管理与订阅服务器，支持 M3U、TXT、台标及 EPG。
+source          = thirdparty
+checksum        =

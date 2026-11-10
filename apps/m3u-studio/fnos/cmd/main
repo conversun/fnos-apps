@@ -1,0 +1,9 @@
+#!/bin/bash
+case "$1" in
+    start|stop) exit 0 ;;
+    status)
+        [ "$(docker inspect --format '{{.State.Running}}' m3u-studio 2>/dev/null)" = true ] && exit 0
+        exit 3
+        ;;
+    *) exit 1 ;;
+esac

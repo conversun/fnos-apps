@@ -1,0 +1,20 @@
+services:
+  m3u-studio:
+    image: cachemiao/m3u-studio:${VERSION}
+    container_name: m3u-studio
+    ports:
+      - "${TRIM_SERVICE_PORT:-8324}:8324"
+    environment:
+      TZ: Asia/Shanghai
+    volumes:
+      - ${TRIM_PKGVAR}/data:/data
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    restart: unless-stopped

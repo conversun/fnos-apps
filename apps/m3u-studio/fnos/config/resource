@@ -1,0 +1,13 @@
+{
+    "port-config": {
+        "protocol-file": "m3u-studio.sc"
+    },
+    "docker-project": {
+        "projects": [
+            {
+                "name": "m3u-studio",
+                "path": "docker"
+            }
+        ]
+    }
+}
