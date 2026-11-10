@@ -1,0 +1,14 @@
+appname         = cloudreve-v4
+version         = 4.19.1
+display_name    = Cloudreve V4
+platform        = x86
+maintainer      = cloudreve
+maintainer_url  = https://github.com/cloudreve/cloudreve
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = cloudreve-v4.Application
+service_port    = 5213
+desc            = 独立安装的 Cloudreve V4 云盘，支持桌面同步，不迁移或修改 V3 数据。
+source          = thirdparty
+checksum        =

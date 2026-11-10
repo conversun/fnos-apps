@@ -1,0 +1,8 @@
+{
+    "type": "http",
+    "path": "/",
+    "expect_status": [
+        200
+    ],
+    "startup_timeout_seconds": 120
+}

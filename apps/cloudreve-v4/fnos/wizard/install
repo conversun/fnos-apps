@@ -1,0 +1,11 @@
+[
+    {
+        "stepTitle": "独立 Cloudreve V4",
+        "items": [
+            {
+                "type": "tips",
+                "helpText": "本应用使用独立数据目录和端口 5213，不升级或迁移现有 Cloudreve V3。首次打开网页注册账户，第一个账户为管理员。"
+            }
+        ]
+    }
+]

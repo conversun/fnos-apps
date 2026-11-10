@@ -1,0 +1,6 @@
+{
+    "port-config": {
+        "protocol-file": "cloudreve-v4.sc"
+    },
+    "systemd-unit": {}
+}

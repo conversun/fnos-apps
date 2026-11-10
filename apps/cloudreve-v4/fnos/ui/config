@@ -1,0 +1,14 @@
+{
+    ".url": {
+        "cloudreve-v4.Application": {
+            "title": "Cloudreve V4",
+            "desc": "独立 V4 云盘",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "5213",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

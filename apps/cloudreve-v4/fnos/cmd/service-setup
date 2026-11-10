@@ -1,0 +1,7 @@
+#!/bin/bash
+export LOG_FILE="${TRIM_PKGVAR}/${TRIM_APPNAME}.log"
+export PID_FILE="${TRIM_PKGVAR}/${TRIM_APPNAME}.pid"
+export SERVICE_COMMAND="${TRIM_APPDEST}/bin/cloudreve-v4-server"
+export SVC_BACKGROUND=y
+export SVC_WRITE_PID=y
+export SVC_WAIT_TIMEOUT=120

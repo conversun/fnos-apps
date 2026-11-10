@@ -1,0 +1,18 @@
+#!/bin/sh
+set -eu
+# V4 otherwise resolves relative paths against its replaceable executable directory.
+cd "${TRIM_PKGVAR}"
+mkdir -p data
+CONFIG_FILE="${TRIM_PKGVAR}/data/conf.ini"
+if [ ! -f "$CONFIG_FILE" ]; then
+    cat > "$CONFIG_FILE" <<EOF
+[System]
+Mode = master
+Listen = :${TRIM_SERVICE_PORT:-5213}
+
+[Database]
+Type = sqlite
+DBFile = ${TRIM_PKGVAR}/data/cloudreve.db
+EOF
+fi
+exec "${TRIM_APPDEST}/cloudreve" --use-working-dir -c "$CONFIG_FILE"
