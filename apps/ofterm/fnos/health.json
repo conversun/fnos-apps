@@ -1,0 +1,6 @@
+{
+    "type": "skip",
+    "note": "官方 FPK 直通；服务仅通过 fnOS 统一网关和 Unix Socket 运行，需在 fnOS 实机验证终端会话。",
+    "skip_arch": [],
+    "startup_timeout_seconds": 30
+}

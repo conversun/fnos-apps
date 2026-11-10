@@ -1,0 +1,19 @@
+{
+    ".url": {
+        "ofterm.Application": {
+            "title": "OFTerm",
+            "icon": "images/icon_{0}.png",
+            "type": "iframe",
+            "protocol": "",
+            "gatewayPrefix": "/app/ofterm",
+            "gatewaySocket": "ofterm.sock",
+            "url": "/app/ofterm/",
+            "allUsers": true,
+            "control": {
+                "fullUrlPerm": "hidden",
+                "pathPerm": "hidden",
+                "accessPerm": "readonly"
+            }
+        }
+    }
+}
