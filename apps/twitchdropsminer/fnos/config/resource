@@ -1,0 +1,13 @@
+{
+    "port-config": {
+        "protocol-file": "twitchdropsminer.sc"
+    },
+    "docker-project": {
+        "projects": [
+            {
+                "name": "twitchdropsminer",
+                "path": "docker"
+            }
+        ]
+    }
+}

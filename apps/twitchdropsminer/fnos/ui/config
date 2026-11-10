@@ -1,0 +1,14 @@
+{
+    ".url": {
+        "twitchdropsminer.Application": {
+            "title": "TwitchDropsMiner",
+            "desc": "Twitch 掉宝自动领取工具，提供网页控制台及浏览器登录。",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "8080",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

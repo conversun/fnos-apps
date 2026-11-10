@@ -1,0 +1,15 @@
+appname         = twitchdropsminer
+version         = 2.5.0
+display_name    = TwitchDropsMiner
+platform        = x86
+maintainer      = rangermix
+maintainer_url  = https://github.com/rangermix/TwitchDropsMiner
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = twitchdropsminer.Application
+service_port    = 8080
+checkport       = false
+desc            = Twitch 掉宝自动领取工具，提供网页控制台及浏览器登录。
+source          = thirdparty
+checksum        =

@@ -1,0 +1,15 @@
+services:
+  twitchdropsminer:
+    image: rangermix/twitch-drops-miner:${VERSION}
+    container_name: twitchdropsminer
+    init: true
+    stop_grace_period: 30s
+    shm_size: 256m
+    ports:
+      - "${TRIM_SERVICE_PORT:-8080}:8080"
+    environment:
+      TZ: ${wizard_timezone:-Asia/Shanghai}
+    volumes:
+      - ${TRIM_PKGVAR}/data:/app/data
+      - ${TRIM_PKGVAR}/logs:/app/logs
+    restart: unless-stopped

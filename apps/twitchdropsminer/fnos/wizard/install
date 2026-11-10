@@ -1,0 +1,23 @@
+[
+    {
+        "stepTitle": "时区设置",
+        "items": [
+            {
+                "type": "tips",
+                "helpText": "时区需与家庭网络所在地一致。首次进入网页后完成 Twitch 登录，可在设置中启用网页访问密码。"
+            },
+            {
+                "type": "text",
+                "field": "wizard_timezone",
+                "label": "时区",
+                "initValue": "Asia/Shanghai",
+                "rules": [
+                    {
+                        "required": true,
+                        "message": "请输入时区"
+                    }
+                ]
+            }
+        ]
+    }
+]
