@@ -1,0 +1,13 @@
+{
+    "port-config": {
+        "protocol-file": "arcreel.sc"
+    },
+    "docker-project": {
+        "projects": [
+            {
+                "name": "arcreel",
+                "path": "docker"
+            }
+        ]
+    }
+}

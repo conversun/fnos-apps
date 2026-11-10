@@ -1,0 +1,14 @@
+{
+    ".url": {
+        "arcreel.Application": {
+            "title": "ArcReel",
+            "desc": "自托管 AI 视频创作工作台，支持剧本、素材管理与视频生成。",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "1241",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

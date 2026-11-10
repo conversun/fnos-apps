@@ -1,0 +1,26 @@
+[
+    {
+        "stepTitle": "管理员密码",
+        "items": [
+            {
+                "type": "tips",
+                "helpText": "管理员用户名为 admin。安装后请在网页中配置 AI 服务商和 API 密钥。"
+            },
+            {
+                "type": "password",
+                "field": "wizard_password",
+                "label": "管理员密码（至少 8 位）",
+                "rules": [
+                    {
+                        "required": true,
+                        "message": "请输入管理员密码"
+                    },
+                    {
+                        "min": 8,
+                        "message": "密码至少 8 位"
+                    }
+                ]
+            }
+        ]
+    }
+]

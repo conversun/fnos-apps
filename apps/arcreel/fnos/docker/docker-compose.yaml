@@ -1,0 +1,25 @@
+services:
+  arcreel:
+    image: arcreel/arcreel:${VERSION}
+    container_name: arcreel
+    ports:
+      - "${TRIM_SERVICE_PORT:-1241}:1241"
+    environment:
+      TZ: Asia/Shanghai
+      AUTH_ENABLED: "true"
+      AUTH_USERNAME: admin
+      AUTH_PASSWORD: ${wizard_password}
+    security_opt:
+      - seccomp:unconfined
+      - apparmor:unconfined
+    cap_add:
+      - NET_ADMIN
+    volumes:
+      - ${TRIM_PKGVAR}/projects:/app/projects
+      - ${TRIM_PKGVAR}/claude_data:/root/.claude
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:1241/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    restart: unless-stopped

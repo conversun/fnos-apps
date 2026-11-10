@@ -1,0 +1,15 @@
+appname         = arcreel
+version         = 0.35.0
+display_name    = ArcReel
+platform        = x86
+maintainer      = ArcReel
+maintainer_url  = https://github.com/ArcReel/ArcReel
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = arcreel.Application
+service_port    = 1241
+checkport       = false
+desc            = 自托管 AI 视频创作工作台，支持剧本、素材管理与视频生成。
+source          = thirdparty
+checksum        =
