@@ -1,7 +1,7 @@
 # fnOS Apps
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-![Apps](https://img.shields.io/badge/apps-175-2ea44f)
+![Apps](https://img.shields.io/badge/apps-183-2ea44f)
 ![Platform](https://img.shields.io/badge/fnOS-third--party-orange)
 
 面向飞牛 fnOS 的第三方应用打包仓库。自动跟踪上游版本，构建可直接安装的 `.fpk` 包。
@@ -16,13 +16,15 @@
 
 | | App | 端口 | 说明 | 来源 | 下载 |
 |:---:|---|---:|---|:---:|:---:|
-| <img src="apps/fnos-apps-store/fnos/ICON.PNG" width="28"> | **fnOS Apps** | `8011` | 第三方应用中心，一键安装与更新 | [GitHub](https://github.com/conversun/fnos-store) | [Release][r-store] |
+| <img src="apps/fnos-apps-store/fnos/ICON.PNG" width="28"> | **fnOS Apps** | 飞牛网关 | 第三方应用中心，一键安装与更新，支持中英文和原生 / Docker 类型标记 | [GitHub](https://github.com/conversun/fnos-store) | [Release][r-store] |
 
 ### 🤖 AI
 
 | | App | 端口 | 说明 | 来源 | 下载 |
 |:---:|---|---:|---|:---:|:---:|
 | <img src="apps/copaw/fnos/ICON.PNG" width="28"> | **CoPaw** | `8088` | 基于 AgentScope 的个人 AI 助手工作站，支持多渠道聊天、本地大模型和定时任务 | [GitHub](https://github.com/agentscope-ai/CoPaw) | [Release][r-copaw] |
+| <img src="apps/arcreel/fnos/ICON.PNG" width="28"> | **ArcReel** | `1241` | Agent 驱动的 AI 视频创作工作台，安装时设置管理员密码 | [GitHub](https://github.com/ArcReel/ArcReel) | [Release][r-arcreel] |
+| <img src="apps/hermes-agent/fnos/ICON.PNG" width="28"> | **Hermes Agent** | `9119` | 支持工具、记忆和多渠道接入的 AI Agent，提供带密码登录的仪表板 | [GitHub](https://github.com/NousResearch/hermes-agent) | [Release][r-hermes-agent] |
 | <img src="apps/cowagent/fnos/ICON.PNG" width="28"> | **CowAgent** | `9899` | AI 超级助手，支持微信/飞书/钉钉/QQ/Web 等多平台接入，基于大语言模型的智能对话 | [GitHub](https://github.com/zhayujie/chatgpt-on-wechat) | [Release][r-cowagent] |
 | <img src="apps/zeroclaw/fnos/ICON.PNG" width="28"> | **ZeroClaw** | `42617` | 轻量级 AI 智能体运行时，Rust 编写，<5MB 内存占用 | [GitHub](https://github.com/zeroclaw-labs/zeroclaw) | [Release][r-zeroclaw] |
 | <img src="apps/picoclaw/fnos/ICON.PNG" width="28"> | **PicoClaw** | `18800` | 超轻量 AI 智能体框架，Go 编写，10MB 内存占用，WebUI 端口 18800（网关 18790） | [GitHub](https://github.com/sipeed/picoclaw) | [Release][r-picoclaw] |
@@ -41,6 +43,8 @@
 | <img src="apps/plex/fnos/ICON.PNG" width="28"> | **Plex** | `32400` | 媒体服务器，支持硬件转码 | [官网](https://www.plex.tv) | [Release][r-plex] |
 | <img src="apps/emby/fnos/ICON.PNG" width="28"> | **Emby** | `8096` | 媒体管理与流式传输 | [官网](https://emby.media) | [Release][r-emby] |
 | <img src="apps/jellyfin/fnos/ICON.PNG" width="28"> | **Jellyfin** | `8097` | 开源媒体系统，内置 FFmpeg | [官网](https://jellyfin.org) | [Release][r-jellyfin] |
+| <img src="apps/m3u-studio/fnos/ICON.PNG" width="28"> | **M3U Studio** | `8324` | IPTV 频道列表、台标和 EPG 编辑器，持久保存频道与账号数据 | [GitHub](https://github.com/cachemiao/m3u-studio) | [Release][r-m3u-studio] |
+| <img src="apps/fnysfd/fnos/ICON.PNG" width="28"> | **fnysfd** | `28006` | 飞牛影视原生反代服务，代理端口 `28005`；仅支持 x86，ARM 上游程序尚不兼容 | [GitHub](https://github.com/544849412/fnysfd) | [Release][r-fnysfd] |
 | <img src="apps/navidrome/fnos/ICON.PNG" width="28"> | **Navidrome** | `4533` | 音乐流媒体服务器 | [官网](https://www.navidrome.org) | [Release][r-navidrome] |
 | <img src="apps/koel/fnos/ICON.PNG" width="28"> | **Koel** | `8060` | 个人音乐流媒体，默认账号 `admin@koel.dev/KoelIsCool` | [GitHub](https://github.com/koel/koel) | [Release][r-koel] |
 | <img src="apps/immich/fnos/ICON.PNG" width="28"> | **Immich** | `2283` | 自托管照片/视频备份，支持人脸识别 | [GitHub](https://github.com/immich-app/immich) | [Release][r-immich] |
@@ -80,6 +84,8 @@
 | <img src="apps/alist/fnos/ICON.PNG" width="28"> | **Alist** | `5246` | 网盘聚合工具，挂载阿里云盘/百度盘等 | [GitHub](https://github.com/AlistGo/alist) | [Release][r-alist] |
 | <img src="apps/rclone/fnos/ICON.PNG" width="28"> | **Rclone** | `5572` | 云存储同步工具，支持 50+ 存储后端 | [官网](https://rclone.org) | [Release][r-rclone] |
 | <img src="apps/cloudreve/fnos/ICON.PNG" width="28"> | **Cloudreve** | `5212` | 国产云盘系统 | [官网](https://cloudreve.org) | [Release][r-cloudreve] |
+| <img src="apps/cloudreve-v4/fnos/ICON.PNG" width="28"> | **Cloudreve V4** | `5213` | 原生 V4 云盘，使用独立数据目录，可与 V3 并存；不自动转换 V3 数据 | [官网](https://cloudreve.org) | [Release][r-cloudreve-v4] |
+| <img src="apps/motrix/fnos/ICON.PNG" width="28"> | **Motrix** | `16800` | Motrix Server 下载管理器，提供网页界面及 MDXP 接口 `16801` | [GitHub](https://github.com/agalwood/Motrix) | [Release][r-motrix] |
 | <img src="apps/sabnzbd/fnos/ICON.PNG" width="28"> | **SABnzbd** | `8780` | Usenet 下载客户端 | [官网](https://sabnzbd.org) | [Release][r-sabnzbd] |
 | <img src="apps/copyparty/fnos/ICON.PNG" width="28"> | **CopyParty** | `3923` | 便携文件共享服务器 | [GitHub](https://github.com/9001/copyparty) | [Release][r-copyparty] |
 
@@ -115,6 +121,7 @@
 
 | | App | 端口 | 说明 | 来源 | 下载 |
 |:---:|---|---:|---|:---:|:---:|
+| <img src="apps/twitchdropsminer/fnos/ICON.PNG" width="28"> | **TwitchDropsMiner** | `8080` | Twitch Drops 自动领取工具，提供 Web 仪表板和内嵌登录浏览器 | [GitHub](https://github.com/rangermix/TwitchDropsMiner) | [Release][r-twitchdropsminer] |
 | <img src="apps/sonarr/fnos/ICON.PNG" width="28"> | **Sonarr** | `8989` | 电视剧自动下载管理 | [官网](https://sonarr.tv) | [Release][r-sonarr] |
 | <img src="apps/radarr/fnos/ICON.PNG" width="28"> | **Radarr** | `7878` | 电影自动下载管理 | [官网](https://radarr.video) | [Release][r-radarr] |
 | <img src="apps/lidarr/fnos/ICON.PNG" width="28"> | **Lidarr** | `8686` | 音乐自动下载管理 | [官网](https://lidarr.audio) | [Release][r-lidarr] |
@@ -127,6 +134,7 @@
 
 | | App | 端口 | 说明 | 来源 | 下载 |
 |:---:|---|---:|---|:---:|:---:|
+| <img src="apps/ofterm/fnos/ICON.PNG" width="28"> | **OFTerm** | 飞牛网关 | 飞牛原生终端，官方双架构 FPK 直通，支持标签页、分屏与配色 | [GitHub](https://github.com/melchior-voidwolf/ofterm) | [Release][r-ofterm] |
 | <img src="apps/sun-panel/fnos/ICON.PNG" width="28"> | **Sun-Panel** | `3002` | 服务器/NAS 导航面板 | [官网](https://doc.sun-panel.top/zh_cn) | [Release][r-sunpanel] |
 | <img src="apps/homepage/fnos/ICON.PNG" width="28"> | **Homepage** | `3003` | 高度可定制的应用仪表盘 | [官网](https://gethomepage.dev) | [Release][r-homepage] |
 | <img src="apps/homarr/fnos/ICON.PNG" width="28"> | **Homarr** | `7575` | 服务器仪表盘与应用管理 | [官网](https://homarr.dev) | [Release][r-homarr] |
@@ -419,3 +427,11 @@ fnos-apps/
 [r-fntv-plus]: https://github.com/conversun/fnos-apps/releases?q=fntv-plus
 [r-litepan]: https://github.com/conversun/fnos-apps/releases?q=litepan
 [r-niupic]: https://github.com/conversun/fnos-apps/releases?q=niupic
+[r-arcreel]: https://github.com/conversun/fnos-apps/releases?q=arcreel
+[r-cloudreve-v4]: https://github.com/conversun/fnos-apps/releases?q=cloudreve-v4
+[r-hermes-agent]: https://github.com/conversun/fnos-apps/releases?q=hermes-agent
+[r-fnysfd]: https://github.com/conversun/fnos-apps/releases?q=fnysfd
+[r-m3u-studio]: https://github.com/conversun/fnos-apps/releases?q=m3u-studio
+[r-motrix]: https://github.com/conversun/fnos-apps/releases?q=motrix
+[r-ofterm]: https://github.com/conversun/fnos-apps/releases?q=ofterm
+[r-twitchdropsminer]: https://github.com/conversun/fnos-apps/releases?q=twitchdropsminer
