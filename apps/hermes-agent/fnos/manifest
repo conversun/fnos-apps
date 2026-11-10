@@ -1,0 +1,15 @@
+appname         = hermes-agent
+version         = 0.23.1
+display_name    = Hermes Agent
+platform        = x86
+maintainer      = NousResearch
+maintainer_url  = https://github.com/NousResearch/hermes-agent
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = hermes-agent.Application
+service_port    = 9119
+checkport       = false
+desc            = Nous Research AI 智能体，提供网页管理、工具调用与消息网关。
+source          = thirdparty
+checksum        =

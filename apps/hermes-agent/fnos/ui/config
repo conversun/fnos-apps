@@ -1,0 +1,14 @@
+{
+    ".url": {
+        "hermes-agent.Application": {
+            "title": "Hermes Agent",
+            "desc": "Nous Research AI 智能体，提供网页管理、工具调用与消息网关。",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "9119",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

@@ -1,0 +1,17 @@
+services:
+  hermes-agent:
+    image: nousresearch/hermes-agent:v${VERSION}
+    container_name: hermes-agent
+    ports:
+      - "${TRIM_SERVICE_PORT:-9119}:9119"
+    environment:
+      TZ: Asia/Shanghai
+      HERMES_DASHBOARD: "true"
+      HERMES_DASHBOARD_HOST: 0.0.0.0
+      HERMES_DASHBOARD_PORT: "9119"
+      HERMES_DASHBOARD_BASIC_AUTH_USERNAME: admin
+      HERMES_DASHBOARD_BASIC_AUTH_PASSWORD: ${wizard_password}
+    volumes:
+      - ${TRIM_PKGVAR}/data:/opt/data
+    command: ["gateway", "run"]
+    restart: unless-stopped

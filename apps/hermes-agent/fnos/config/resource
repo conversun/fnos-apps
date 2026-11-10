@@ -1,0 +1,13 @@
+{
+    "port-config": {
+        "protocol-file": "hermes-agent.sc"
+    },
+    "docker-project": {
+        "projects": [
+            {
+                "name": "hermes-agent",
+                "path": "docker"
+            }
+        ]
+    }
+}
