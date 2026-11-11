@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-11T02:44:30Z",
+  "generated_at": "2026-11-11T03:12:16Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -86,7 +86,7 @@
         "arm"
       ],
       "updated_at": "2026-10-29T08:02:46Z",
-      "download_count": 1612,
+      "download_count": 1613,
       "app_type": "native",
       "category": "network"
     },
@@ -192,7 +192,7 @@
         "arm"
       ],
       "updated_at": "2026-11-11T02:43:09Z",
-      "download_count": 0,
+      "download_count": 4,
       "app_type": "docker",
       "category": "ai"
     },
@@ -234,7 +234,7 @@
         "arm"
       ],
       "updated_at": "2026-11-01T09:02:18Z",
-      "download_count": 1323,
+      "download_count": 1324,
       "app_type": "docker",
       "category": "ai"
     },
@@ -569,7 +569,7 @@
         "arm"
       ],
       "updated_at": "2026-11-11T02:43:17Z",
-      "download_count": 0,
+      "download_count": 4,
       "app_type": "native",
       "category": "download"
     },
@@ -784,6 +784,27 @@
       "category": "system"
     },
     {
+      "slug": "dynv6",
+      "appname": "dynv6",
+      "file_prefix": "dynv6",
+      "display_name": "Dynv6 管家",
+      "description": "dynv6 动态域名更新与 ACME 证书签发、续期、分发，通过飞牛网关访问并使用本地管理员鉴权（官方 FPK 直通）。",
+      "version": "1.0.2",
+      "fpk_version": "1.0.2",
+      "release_tag": "dynv6/v1.0.2",
+      "service_port": 8092,
+      "homepage_url": "https://github.com/wabisabi926/dynv6",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/dynv6/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-11-11T03:04:19Z",
+      "download_count": 0,
+      "app_type": "native",
+      "category": "network"
+    },
+    {
       "slug": "easytier",
       "appname": "easytier",
       "file_prefix": "easytier",
@@ -867,6 +888,27 @@
       "download_count": 1473,
       "app_type": "native",
       "category": "system"
+    },
+    {
+      "slug": "faststrm",
+      "appname": "faststrm",
+      "file_prefix": "faststrm",
+      "display_name": "FastStrm",
+      "description": "基于 115 生活事件生成 STRM，支持直链/代理路由、Emby 通知与可选反向代理（官方 FPK 直通）。",
+      "version": "1.5.8",
+      "fpk_version": "1.5.8",
+      "release_tag": "faststrm/v1.5.8",
+      "service_port": 8090,
+      "homepage_url": "https://github.com/wabisabi926/faststrm",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/faststrm/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-11-11T03:04:23Z",
+      "download_count": 0,
+      "app_type": "native",
+      "category": "media"
     },
     {
       "slug": "feigram",
@@ -1051,7 +1093,7 @@
         "x86"
       ],
       "updated_at": "2026-11-11T02:43:12Z",
-      "download_count": 0,
+      "download_count": 2,
       "app_type": "native",
       "category": "media"
     },
@@ -1177,7 +1219,7 @@
         "arm"
       ],
       "updated_at": "2026-11-08T08:02:14Z",
-      "download_count": 607,
+      "download_count": 608,
       "app_type": "native",
       "category": "system"
     },
@@ -1323,7 +1365,7 @@
         "arm"
       ],
       "updated_at": "2026-11-11T02:43:08Z",
-      "download_count": 0,
+      "download_count": 2,
       "app_type": "docker",
       "category": "ai"
     },
@@ -1765,7 +1807,7 @@
         "arm"
       ],
       "updated_at": "2026-10-03T08:02:50Z",
-      "download_count": 1331,
+      "download_count": 1332,
       "app_type": "native",
       "category": "content"
     },
@@ -1870,7 +1912,7 @@
         "arm"
       ],
       "updated_at": "2026-11-11T02:43:04Z",
-      "download_count": 0,
+      "download_count": 4,
       "app_type": "docker",
       "category": "media"
     },
@@ -2122,7 +2164,7 @@
         "arm"
       ],
       "updated_at": "2026-10-22T08:03:08Z",
-      "download_count": 2735,
+      "download_count": 2736,
       "app_type": "native",
       "category": "network"
     },
@@ -2185,7 +2227,7 @@
         "arm"
       ],
       "updated_at": "2026-11-11T02:43:06Z",
-      "download_count": 0,
+      "download_count": 2,
       "app_type": "docker",
       "category": "download"
     },
@@ -2584,7 +2626,7 @@
         "arm"
       ],
       "updated_at": "2026-11-11T02:43:11Z",
-      "download_count": 0,
+      "download_count": 2,
       "app_type": "native",
       "category": "system"
     },
@@ -3173,7 +3215,7 @@
         "arm"
       ],
       "updated_at": "2026-10-13T08:07:31Z",
-      "download_count": 559,
+      "download_count": 560,
       "app_type": "docker",
       "category": "content"
     },
@@ -3257,7 +3299,7 @@
         "arm"
       ],
       "updated_at": "2026-09-17T08:03:50Z",
-      "download_count": 531,
+      "download_count": 532,
       "app_type": "native",
       "category": "automation"
     },
@@ -3571,7 +3613,7 @@
         "arm"
       ],
       "updated_at": "2026-11-11T02:43:09Z",
-      "download_count": 0,
+      "download_count": 4,
       "app_type": "docker",
       "category": "automation"
     },
