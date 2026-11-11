@@ -12,6 +12,8 @@ on:
       - 'scripts/apps/**'
       - 'scripts/build-fpk.sh'
       - 'scripts/ci/**'
+      # Catalog generation does not change any FPK payload.
+      - '!scripts/ci/generate-apps-json.sh'
       - '!**/*.md'
   schedule:
     - cron: '0 8 * * *'
