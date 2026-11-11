@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-10T08:03:13Z",
+  "generated_at": "2026-11-11T02:44:30Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -23,7 +23,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:06:32Z",
-      "download_count": 397,
+      "download_count": 399,
       "app_type": "native",
       "category": "system"
     },
@@ -65,7 +65,7 @@
         "arm"
       ],
       "updated_at": "2026-11-04T08:02:40Z",
-      "download_count": 254,
+      "download_count": 255,
       "app_type": "docker",
       "category": "system"
     },
@@ -86,7 +86,7 @@
         "arm"
       ],
       "updated_at": "2026-10-29T08:02:46Z",
-      "download_count": 1611,
+      "download_count": 1612,
       "app_type": "native",
       "category": "network"
     },
@@ -107,7 +107,7 @@
         "arm"
       ],
       "updated_at": "2026-10-22T08:02:47Z",
-      "download_count": 1286,
+      "download_count": 1287,
       "app_type": "native",
       "category": "download"
     },
@@ -149,7 +149,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T06:23:13Z",
-      "download_count": 133,
+      "download_count": 134,
       "app_type": "docker",
       "category": "content",
       "post_install_note": "AppFlowy Cloud 需要配合 AppFlowy 客户端使用。"
@@ -171,9 +171,30 @@
         "arm"
       ],
       "updated_at": "2026-11-04T08:02:39Z",
-      "download_count": 938,
+      "download_count": 941,
       "app_type": "docker",
       "category": "system"
+    },
+    {
+      "slug": "arcreel",
+      "appname": "arcreel",
+      "file_prefix": "arcreel",
+      "display_name": "ArcReel",
+      "description": "自托管 AI 视频创作工作台，支持剧本、素材管理与视频生成。",
+      "version": "0.36.0",
+      "fpk_version": "0.36.0",
+      "release_tag": "arcreel/v0.36.0",
+      "service_port": 1241,
+      "homepage_url": "https://github.com/ArcReel/ArcReel",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/arcreel/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-11-11T02:43:09Z",
+      "download_count": 0,
+      "app_type": "docker",
+      "category": "ai"
     },
     {
       "slug": "aria2-next",
@@ -297,7 +318,7 @@
         "arm"
       ],
       "updated_at": "2026-10-23T08:02:44Z",
-      "download_count": 901,
+      "download_count": 903,
       "app_type": "native",
       "category": "system"
     },
@@ -360,7 +381,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T06:22:13Z",
-      "download_count": 159,
+      "download_count": 160,
       "app_type": "docker",
       "category": ""
     },
@@ -423,7 +444,7 @@
         "arm"
       ],
       "updated_at": "2026-10-28T08:02:54Z",
-      "download_count": 1365,
+      "download_count": 1367,
       "app_type": "docker",
       "category": "browser"
     },
@@ -464,7 +485,7 @@
         "arm"
       ],
       "updated_at": "2026-11-03T08:02:46Z",
-      "download_count": 1574,
+      "download_count": 1601,
       "app_type": "native",
       "category": "network"
     },
@@ -485,7 +506,7 @@
         "arm"
       ],
       "updated_at": "2026-10-18T08:02:11Z",
-      "download_count": 1623,
+      "download_count": 1624,
       "app_type": "docker",
       "category": "system"
     },
@@ -506,7 +527,7 @@
         "arm"
       ],
       "updated_at": "2026-10-31T08:02:43Z",
-      "download_count": 1304,
+      "download_count": 1305,
       "app_type": "docker",
       "category": "network"
     },
@@ -528,6 +549,27 @@
       ],
       "updated_at": "2026-08-17T07:35:37Z",
       "download_count": 282,
+      "app_type": "native",
+      "category": "download"
+    },
+    {
+      "slug": "cloudreve-v4",
+      "appname": "cloudreve-v4",
+      "file_prefix": "cloudreve-v4",
+      "display_name": "Cloudreve V4",
+      "description": "独立安装的 Cloudreve V4 云盘，支持桌面同步，不迁移或修改 V3 数据。",
+      "version": "4.19.1",
+      "fpk_version": "4.19.1",
+      "release_tag": "cloudreve-v4/v4.19.1",
+      "service_port": 5213,
+      "homepage_url": "https://cloudreve.org",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/cloudreve-v4/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-11-11T02:43:17Z",
+      "download_count": 0,
       "app_type": "native",
       "category": "download"
     },
@@ -569,7 +611,7 @@
         "arm"
       ],
       "updated_at": "2026-10-23T08:02:41Z",
-      "download_count": 980,
+      "download_count": 981,
       "app_type": "docker",
       "category": "ai"
     },
@@ -716,7 +758,7 @@
         "arm"
       ],
       "updated_at": "2026-10-29T08:02:40Z",
-      "download_count": 1980,
+      "download_count": 1988,
       "app_type": "docker",
       "category": "system"
     },
@@ -779,7 +821,7 @@
         "arm"
       ],
       "updated_at": "2026-10-29T02:25:02Z",
-      "download_count": 2051,
+      "download_count": 2055,
       "app_type": "native",
       "category": "media"
     },
@@ -843,7 +885,7 @@
         "arm"
       ],
       "updated_at": "2026-10-27T09:30:00Z",
-      "download_count": 1556,
+      "download_count": 1559,
       "app_type": "native",
       "category": "content"
     },
@@ -906,7 +948,7 @@
         "arm"
       ],
       "updated_at": "2026-09-23T08:02:34Z",
-      "download_count": 1904,
+      "download_count": 1908,
       "app_type": "docker",
       "category": "browser"
     },
@@ -937,17 +979,17 @@
       "file_prefix": "fnos-apps-store",
       "display_name": "fnOS Apps",
       "description": "fnOS第三方应用中心，支持一键安装、更新和卸载来自conversun/fnos-apps的所有应用。",
-      "version": "1.9.10",
-      "fpk_version": "1.9.10",
-      "release_tag": "fnos-apps-store/v1.9.10",
-      "service_port": 8011,
+      "version": "1.9.11",
+      "fpk_version": "1.9.11",
+      "release_tag": "fnos-apps-store/v1.9.11",
+      "service_port": 0,
       "homepage_url": "https://github.com/conversun/fnos-store",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/fnos-apps-store/fnos/ICON_256.PNG",
       "platforms": [
         "x86",
         "arm"
       ],
-      "updated_at": "2026-11-03T01:51:57Z",
+      "updated_at": "2026-11-11T02:43:12Z",
       "download_count": 6792,
       "app_type": "native",
       "category": "store"
@@ -989,7 +1031,27 @@
         "x86"
       ],
       "updated_at": "2026-09-28T02:22:17Z",
-      "download_count": 723,
+      "download_count": 732,
+      "app_type": "native",
+      "category": "media"
+    },
+    {
+      "slug": "fnysfd",
+      "appname": "fnysfd",
+      "file_prefix": "fnysfd",
+      "display_name": "飞牛影视反代",
+      "description": "飞牛影视 STRM 透明反代与预加载工具，原生运行；管理端口 28006，反代端口 28005，仅支持 x86。",
+      "version": "3.4.1",
+      "fpk_version": "3.4.1",
+      "release_tag": "fnysfd/v3.4.1",
+      "service_port": 28006,
+      "homepage_url": "https://github.com/544849412/fnysfd",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/fnysfd/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86"
+      ],
+      "updated_at": "2026-11-11T02:43:12Z",
+      "download_count": 0,
       "app_type": "native",
       "category": "media"
     },
@@ -1052,7 +1114,7 @@
         "arm"
       ],
       "updated_at": "2026-10-16T08:02:44Z",
-      "download_count": 1100,
+      "download_count": 1103,
       "app_type": "docker",
       "category": "media"
     },
@@ -1094,7 +1156,7 @@
         "arm"
       ],
       "updated_at": "2026-11-02T08:03:26Z",
-      "download_count": 1565,
+      "download_count": 1566,
       "app_type": "native",
       "category": "system"
     },
@@ -1157,7 +1219,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:45:59Z",
-      "download_count": 454,
+      "download_count": 469,
       "app_type": "native",
       "category": "download"
     },
@@ -1245,6 +1307,27 @@
       "category": "network"
     },
     {
+      "slug": "hermes-agent",
+      "appname": "hermes-agent",
+      "file_prefix": "hermes-agent",
+      "display_name": "Hermes Agent",
+      "description": "Nous Research AI 智能体，提供网页管理、工具调用与消息网关。",
+      "version": "0.23.1",
+      "fpk_version": "0.23.1",
+      "release_tag": "hermes-agent/v0.23.1",
+      "service_port": 9119,
+      "homepage_url": "https://github.com/NousResearch/hermes-agent",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/hermes-agent/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-11-11T02:43:08Z",
+      "download_count": 0,
+      "app_type": "docker",
+      "category": "ai"
+    },
+    {
       "slug": "homarr",
       "appname": "homarr",
       "file_prefix": "homarr",
@@ -1303,7 +1386,7 @@
         "arm"
       ],
       "updated_at": "2026-10-24T08:02:55Z",
-      "download_count": 1159,
+      "download_count": 1161,
       "app_type": "native",
       "category": "system"
     },
@@ -1324,7 +1407,7 @@
         "arm"
       ],
       "updated_at": "2026-10-24T08:02:49Z",
-      "download_count": 1431,
+      "download_count": 1432,
       "app_type": "docker",
       "category": "system"
     },
@@ -1398,8 +1481,8 @@
       "display_name": "Jellyfin",
       "description": "Jellyfin 是一款免费开源的媒体系统，让您管理和播放您的媒体内容。支持电影、电视剧、音乐等多种媒体类型的管理和流式传输。",
       "version": "12.4",
-      "fpk_version": "12.4-r1",
-      "release_tag": "jellyfin/v12.4-r1",
+      "fpk_version": "12.4-r2",
+      "release_tag": "jellyfin/v12.4-r2",
       "service_port": 8097,
       "homepage_url": "https://jellyfin.org",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/jellyfin/fnos/ICON_256.PNG",
@@ -1407,8 +1490,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-10-27T09:29:37Z",
-      "download_count": 2178,
+      "updated_at": "2026-11-11T02:44:10Z",
+      "download_count": 2185,
       "app_type": "native",
       "category": "media"
     },
@@ -1429,7 +1512,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T06:23:08Z",
-      "download_count": 130,
+      "download_count": 131,
       "app_type": "docker",
       "category": "media"
     },
@@ -1471,7 +1554,7 @@
         "arm"
       ],
       "updated_at": "2026-08-29T08:01:59Z",
-      "download_count": 367,
+      "download_count": 369,
       "app_type": "docker",
       "category": "media"
     },
@@ -1640,7 +1723,7 @@
         "arm"
       ],
       "updated_at": "2026-10-26T08:08:10Z",
-      "download_count": 967,
+      "download_count": 972,
       "app_type": "native",
       "category": "automation"
     },
@@ -1682,7 +1765,7 @@
         "arm"
       ],
       "updated_at": "2026-10-03T08:02:50Z",
-      "download_count": 1330,
+      "download_count": 1331,
       "app_type": "native",
       "category": "content"
     },
@@ -1703,7 +1786,7 @@
         "arm"
       ],
       "updated_at": "2026-10-24T08:03:02Z",
-      "download_count": 1391,
+      "download_count": 1392,
       "app_type": "docker",
       "category": "ai"
     },
@@ -1745,7 +1828,7 @@
         "arm"
       ],
       "updated_at": "2026-10-29T08:02:50Z",
-      "download_count": 931,
+      "download_count": 933,
       "app_type": "native",
       "category": "system"
     },
@@ -1767,6 +1850,27 @@
       ],
       "updated_at": "2026-10-21T08:02:37Z",
       "download_count": 1087,
+      "app_type": "docker",
+      "category": "media"
+    },
+    {
+      "slug": "m3u-studio",
+      "appname": "m3u-studio",
+      "file_prefix": "m3u-studio",
+      "display_name": "M3U Studio",
+      "description": "IPTV 频道管理与订阅服务器，支持 M3U、TXT、台标及 EPG。",
+      "version": "0.6.4",
+      "fpk_version": "0.6.4",
+      "release_tag": "m3u-studio/v0.6.4",
+      "service_port": 8324,
+      "homepage_url": "https://github.com/cachemiao/m3u-studio",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/m3u-studio/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-11-11T02:43:04Z",
+      "download_count": 0,
       "app_type": "docker",
       "category": "media"
     },
@@ -1830,7 +1934,7 @@
         "arm"
       ],
       "updated_at": "2026-10-22T08:02:43Z",
-      "download_count": 1032,
+      "download_count": 1033,
       "app_type": "docker",
       "category": "ai"
     },
@@ -1872,7 +1976,7 @@
         "arm"
       ],
       "updated_at": "2026-10-19T08:06:30Z",
-      "download_count": 731,
+      "download_count": 732,
       "app_type": "docker",
       "category": "automation"
     },
@@ -1892,7 +1996,7 @@
         "x86"
       ],
       "updated_at": "2026-08-17T06:23:56Z",
-      "download_count": 866,
+      "download_count": 870,
       "app_type": "docker",
       "category": "media"
     },
@@ -1934,7 +2038,7 @@
         "arm"
       ],
       "updated_at": "2026-10-27T09:28:53Z",
-      "download_count": 426,
+      "download_count": 428,
       "app_type": "native",
       "category": "content"
     },
@@ -1955,7 +2059,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:46:07Z",
-      "download_count": 807,
+      "download_count": 811,
       "app_type": "native",
       "category": "media"
     },
@@ -2018,7 +2122,7 @@
         "arm"
       ],
       "updated_at": "2026-10-22T08:03:08Z",
-      "download_count": 2714,
+      "download_count": 2735,
       "app_type": "native",
       "category": "network"
     },
@@ -2060,9 +2164,30 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:46:20Z",
-      "download_count": 215,
+      "download_count": 216,
       "app_type": "native",
       "category": "network"
+    },
+    {
+      "slug": "motrix",
+      "appname": "motrix",
+      "file_prefix": "motrix",
+      "display_name": "Motrix",
+      "description": "Motrix Server 网页下载管理器，支持 HTTP、FTP、磁力及 BT 下载。",
+      "version": "2.4.1",
+      "fpk_version": "2.4.1",
+      "release_tag": "motrix/v2.4.1",
+      "service_port": 16800,
+      "homepage_url": "https://github.com/agalwood/Motrix",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/motrix/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-11-11T02:43:06Z",
+      "download_count": 0,
+      "app_type": "docker",
+      "category": "download"
     },
     {
       "slug": "moviepilot",
@@ -2103,7 +2228,7 @@
         "arm"
       ],
       "updated_at": "2026-11-04T08:02:47Z",
-      "download_count": 1324,
+      "download_count": 1332,
       "app_type": "native",
       "category": "network"
     },
@@ -2166,7 +2291,7 @@
         "arm"
       ],
       "updated_at": "2026-09-25T08:03:19Z",
-      "download_count": 908,
+      "download_count": 912,
       "app_type": "native",
       "category": "media"
     },
@@ -2187,7 +2312,7 @@
         "arm"
       ],
       "updated_at": "2026-10-30T08:02:39Z",
-      "download_count": 1508,
+      "download_count": 1509,
       "app_type": "docker",
       "category": "network",
       "post_install_note": "NetBird 客户端容器使用 host 网络模式运行。"
@@ -2335,7 +2460,7 @@
         "arm"
       ],
       "updated_at": "2026-11-04T08:02:58Z",
-      "download_count": 1000,
+      "download_count": 1001,
       "app_type": "native",
       "category": "network"
     },
@@ -2355,7 +2480,7 @@
         "x86"
       ],
       "updated_at": "2026-10-27T09:28:55Z",
-      "download_count": 696,
+      "download_count": 697,
       "app_type": "native",
       "category": "content"
     },
@@ -2376,7 +2501,7 @@
         "arm"
       ],
       "updated_at": "2026-10-22T08:02:44Z",
-      "download_count": 883,
+      "download_count": 884,
       "app_type": "docker",
       "category": "system"
     },
@@ -2441,6 +2566,27 @@
       "download_count": 1392,
       "app_type": "docker",
       "category": "content"
+    },
+    {
+      "slug": "ofterm",
+      "appname": "ofterm",
+      "file_prefix": "ofterm",
+      "display_name": "OFTerm 终端",
+      "description": "飞牛原生终端，支持标签页、分屏和配色预设，通过统一网关与 Unix Socket 运行（官方 FPK 直通）。",
+      "version": "1.1.4",
+      "fpk_version": "1.1.4",
+      "release_tag": "ofterm/v1.1.4",
+      "service_port": 0,
+      "homepage_url": "https://github.com/melchior-voidwolf/ofterm",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ofterm/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-11-11T02:43:11Z",
+      "download_count": 0,
+      "app_type": "native",
+      "category": "system"
     },
     {
       "slug": "ollama",
@@ -2522,7 +2668,7 @@
         "arm"
       ],
       "updated_at": "2026-10-25T08:02:43Z",
-      "download_count": 1321,
+      "download_count": 1327,
       "app_type": "native",
       "category": "content"
     },
@@ -2543,7 +2689,7 @@
         "arm"
       ],
       "updated_at": "2026-08-31T15:31:33Z",
-      "download_count": 665,
+      "download_count": 670,
       "app_type": "docker",
       "category": "network"
     },
@@ -2627,7 +2773,7 @@
         "arm"
       ],
       "updated_at": "2026-08-31T15:21:52Z",
-      "download_count": 334,
+      "download_count": 336,
       "app_type": "native",
       "category": "ai"
     },
@@ -2669,7 +2815,7 @@
         "arm"
       ],
       "updated_at": "2026-10-26T08:08:19Z",
-      "download_count": 1530,
+      "download_count": 1531,
       "app_type": "native",
       "category": "media"
     },
@@ -2732,7 +2878,7 @@
         "arm"
       ],
       "updated_at": "2026-10-28T08:03:26Z",
-      "download_count": 1154,
+      "download_count": 1166,
       "app_type": "native",
       "category": "automation"
     },
@@ -2795,7 +2941,7 @@
         "arm"
       ],
       "updated_at": "2026-10-21T08:02:56Z",
-      "download_count": 2534,
+      "download_count": 2542,
       "app_type": "native",
       "category": "download"
     },
@@ -2816,7 +2962,7 @@
         "arm"
       ],
       "updated_at": "2026-10-29T08:02:52Z",
-      "download_count": 1599,
+      "download_count": 1600,
       "app_type": "docker",
       "category": "system"
     },
@@ -2858,7 +3004,7 @@
         "arm"
       ],
       "updated_at": "2026-09-17T08:02:56Z",
-      "download_count": 779,
+      "download_count": 787,
       "app_type": "native",
       "category": "automation"
     },
@@ -3111,7 +3257,7 @@
         "arm"
       ],
       "updated_at": "2026-09-17T08:03:50Z",
-      "download_count": 524,
+      "download_count": 531,
       "app_type": "native",
       "category": "automation"
     },
@@ -3237,7 +3383,7 @@
         "arm"
       ],
       "updated_at": "2026-09-15T08:02:44Z",
-      "download_count": 169,
+      "download_count": 170,
       "app_type": "docker",
       "category": "media"
     },
@@ -3278,7 +3424,7 @@
         "arm"
       ],
       "updated_at": "2026-08-28T11:43:35Z",
-      "download_count": 140,
+      "download_count": 141,
       "app_type": "docker",
       "category": "system"
     },
@@ -3320,7 +3466,7 @@
         "arm"
       ],
       "updated_at": "2026-10-21T08:02:49Z",
-      "download_count": 1220,
+      "download_count": 1223,
       "app_type": "native",
       "category": "download"
     },
@@ -3341,7 +3487,7 @@
         "arm"
       ],
       "updated_at": "2026-10-29T08:02:49Z",
-      "download_count": 1721,
+      "download_count": 1725,
       "app_type": "docker",
       "category": "network"
     },
@@ -3383,7 +3529,7 @@
         "arm"
       ],
       "updated_at": "2026-10-31T08:02:46Z",
-      "download_count": 1429,
+      "download_count": 1438,
       "app_type": "docker",
       "category": "media"
     },
@@ -3407,6 +3553,27 @@
       "download_count": 500,
       "app_type": "docker",
       "category": "download"
+    },
+    {
+      "slug": "twitchdropsminer",
+      "appname": "twitchdropsminer",
+      "file_prefix": "twitchdropsminer",
+      "display_name": "TwitchDropsMiner",
+      "description": "Twitch 掉宝自动领取工具，提供网页控制台及浏览器登录。",
+      "version": "2.5.0",
+      "fpk_version": "2.5.0",
+      "release_tag": "twitchdropsminer/v2.5.0",
+      "service_port": 8080,
+      "homepage_url": "https://github.com/rangermix/TwitchDropsMiner",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/twitchdropsminer/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-11-11T02:43:09Z",
+      "download_count": 0,
+      "app_type": "docker",
+      "category": "automation"
     },
     {
       "slug": "uptime-kuma",
@@ -3446,7 +3613,7 @@
         "arm"
       ],
       "updated_at": "2026-11-02T08:03:06Z",
-      "download_count": 859,
+      "download_count": 863,
       "app_type": "docker",
       "category": "system"
     },
@@ -3550,7 +3717,7 @@
         "arm"
       ],
       "updated_at": "2026-10-25T08:02:36Z",
-      "download_count": 861,
+      "download_count": 870,
       "app_type": "docker",
       "category": "network"
     },
@@ -3634,7 +3801,7 @@
         "arm"
       ],
       "updated_at": "2026-10-28T08:03:14Z",
-      "download_count": 926,
+      "download_count": 928,
       "app_type": "native",
       "category": "ai"
     },
