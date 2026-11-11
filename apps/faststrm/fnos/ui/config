@@ -1,0 +1,13 @@
+{
+    ".url": {
+        "faststrm.Application": {
+            "title": "FastStrm",
+            "icon": "images/icon_{0}.png",
+            "type": "url",
+            "protocol": "",
+            "port": "8090",
+            "url": "/",
+            "allUsers": false
+        }
+    }
+}

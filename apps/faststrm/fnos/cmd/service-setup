@@ -1,0 +1,4 @@
+#!/bin/bash
+# Local metadata must never be used to replace the upstream lifecycle.
+echo "[ERROR] FastStrm 必须使用上游官方 FPK；请通过官方 FPK 直通流程构建。" >&2
+exit 1

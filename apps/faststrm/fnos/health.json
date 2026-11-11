@@ -1,0 +1,6 @@
+{
+    "type": "skip",
+    "note": "官方 FPK 直通，保留上游生命周期与数据目录；需在 fnOS 实机验证管理员初始化、登录、配置持久化和卸载。",
+    "skip_arch": [],
+    "startup_timeout_seconds": 30
+}
