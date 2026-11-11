@@ -1,0 +1,18 @@
+{
+    ".url": {
+        "dynv6.Application": {
+            "title": "Dynv6 管家",
+            "icon": "images/ICON_{0}.PNG",
+            "type": "url",
+            "protocol": "",
+            "port": "8092",
+            "url": "/",
+            "control": {
+                "fullUrlPerm": "hidden",
+                "pathPerm": "hidden",
+                "accessPerm": "readonly"
+            },
+            "allUsers": false
+        }
+    }
+}

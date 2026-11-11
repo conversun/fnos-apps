@@ -1,0 +1,6 @@
+{
+    "type": "skip",
+    "note": "官方 FPK 直通；需在 fnOS 实机通过网关验证一次性令牌初始化、本地管理员登录与设置持久化。",
+    "skip_arch": [],
+    "startup_timeout_seconds": 30
+}

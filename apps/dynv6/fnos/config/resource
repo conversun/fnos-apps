@@ -1,0 +1,12 @@
+{
+    "data-share": {
+        "shares": [
+            {
+                "name": "dynv6/certs",
+                "permission": {
+                    "rw": ["dynv6"]
+                }
+            }
+        ]
+    }
+}

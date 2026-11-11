@@ -1,0 +1,15 @@
+appname         = dynv6
+version         = 1.0.2
+display_name    = Dynv6 管家
+platform        = x86
+maintainer      = wabisabi926
+maintainer_url  = https://github.com/wabisabi926/dynv6
+distributor     = wabisabi926
+distributor_url = https://github.com/wabisabi926/dynv6
+desktop_uidir   = ui
+desktop_applaunchname = dynv6.Application
+service_port    = 8092
+checkport       = true
+desc            = dynv6 动态域名更新与 ACME 证书签发、续期、分发，通过飞牛网关访问并使用本地管理员鉴权（官方 FPK 直通）。
+source          = thirdparty
+checksum        =
