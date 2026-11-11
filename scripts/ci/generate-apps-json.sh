@@ -148,12 +148,12 @@ done
 
 APPS_JSON=$(echo "$APPS_JSON" | jq 'sort_by(.slug)')
 
-jq -n \
+# Stream the catalog: Linux limits each individual exec argument to 128 KiB.
+printf '%s\n' "$APPS_JSON" | jq \
   --argjson schema_version 1 \
   --arg generated_at "$NOW" \
   --arg source_name "$REPO" \
   --arg source_url "https://github.com/${REPO}" \
-  --argjson apps "$APPS_JSON" \
   '{
     schema_version: $schema_version,
     generated_at: $generated_at,
@@ -161,7 +161,7 @@ jq -n \
       name: $source_name,
       url: $source_url
     },
-    apps: $apps
+    apps: .
   }' > "$OUTPUT"
 
 app_count=$(jq '.apps | length' "$OUTPUT")
