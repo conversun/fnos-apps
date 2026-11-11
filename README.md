@@ -1,7 +1,7 @@
 # fnOS Apps
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-![Apps](https://img.shields.io/badge/apps-183-2ea44f)
+![Apps](https://img.shields.io/badge/apps-185-2ea44f)
 ![Platform](https://img.shields.io/badge/fnOS-third--party-orange)
 
 面向飞牛 fnOS 的第三方应用打包仓库。自动跟踪上游版本，构建可直接安装的 `.fpk` 包。
@@ -45,6 +45,7 @@
 | <img src="apps/jellyfin/fnos/ICON.PNG" width="28"> | **Jellyfin** | `8097` | 开源媒体系统，内置 FFmpeg | [官网](https://jellyfin.org) | [Release][r-jellyfin] |
 | <img src="apps/m3u-studio/fnos/ICON.PNG" width="28"> | **M3U Studio** | `8324` | IPTV 频道列表、台标和 EPG 编辑器，持久保存频道与账号数据 | [GitHub](https://github.com/cachemiao/m3u-studio) | [Release][r-m3u-studio] |
 | <img src="apps/fnysfd/fnos/ICON.PNG" width="28"> | **fnysfd** | `28006` | 飞牛影视原生反代服务，代理端口 `28005`；仅支持 x86，ARM 上游程序尚不兼容 | [GitHub](https://github.com/544849412/fnysfd) | [Release][r-fnysfd] |
+| <img src="apps/faststrm/fnos/ICON.PNG" width="28"> | **FastStrm** | `8090` | 115 STRM 管理与直链代理，官方双架构 FPK；首次使用创建管理员，可选 Emby 反代默认关闭 | [GitHub](https://github.com/wabisabi926/faststrm) | [Release][r-faststrm] |
 | <img src="apps/navidrome/fnos/ICON.PNG" width="28"> | **Navidrome** | `4533` | 音乐流媒体服务器 | [官网](https://www.navidrome.org) | [Release][r-navidrome] |
 | <img src="apps/koel/fnos/ICON.PNG" width="28"> | **Koel** | `8060` | 个人音乐流媒体，默认账号 `admin@koel.dev/KoelIsCool` | [GitHub](https://github.com/koel/koel) | [Release][r-koel] |
 | <img src="apps/immich/fnos/ICON.PNG" width="28"> | **Immich** | `2283` | 自托管照片/视频备份，支持人脸识别 | [GitHub](https://github.com/immich-app/immich) | [Release][r-immich] |
@@ -190,6 +191,7 @@
 | | App | 端口 | 说明 | 来源 | 下载 |
 |:---:|---|---:|---|:---:|:---:|
 | <img src="apps/aellus/fnos/ICON.PNG" width="28"> | **Aellus** | `8000` | 局域网文件互传：浏览器访问即传即取，按设备归档、免配置 | [GitHub](https://github.com/YGQ8988/Aellus) | [Release][r-aellus] |
+| <img src="apps/dynv6/fnos/ICON.PNG" width="28"> | **Dynv6 管家** | `8092` | 动态域名与 ACME 证书管理，官方双架构 FPK；首次使用创建本地管理员 | [GitHub](https://github.com/wabisabi926/dynv6) | [Release][r-dynv6] |
 | <img src="apps/smartdns/fnos/ICON.PNG" width="28"> | **SmartDNS** | `6580` | 本地 DNS 加速与优选 | [GitHub](https://github.com/pymumu/smartdns) | [Release][r-smartdns] |
 | <img src="apps/mosdns/fnos/ICON.PNG" width="28"> | **MosDNS** | `5354` | DNS 转发与分流 | [GitHub](https://github.com/IrineSistiana/mosdns) | [Release][r-mosdns] |
 | <img src="apps/pihole/fnos/ICON.PNG" width="28"> | **Pi-hole** | `8053` | 全网广告拦截 (DNS) | [官网](https://pi-hole.net) | [Release][r-pihole] |
@@ -435,3 +437,5 @@ fnos-apps/
 [r-motrix]: https://github.com/conversun/fnos-apps/releases?q=motrix
 [r-ofterm]: https://github.com/conversun/fnos-apps/releases?q=ofterm
 [r-twitchdropsminer]: https://github.com/conversun/fnos-apps/releases?q=twitchdropsminer
+[r-faststrm]: https://github.com/conversun/fnos-apps/releases?q=faststrm
+[r-dynv6]: https://github.com/conversun/fnos-apps/releases?q=dynv6
