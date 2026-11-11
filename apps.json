@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-11T08:03:14Z",
+  "generated_at": "2026-11-11T08:05:07Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -297,7 +297,7 @@
         "arm"
       ],
       "updated_at": "2026-09-27T08:02:20Z",
-      "download_count": 675,
+      "download_count": 676,
       "app_type": "docker",
       "category": "automation"
     },
@@ -423,7 +423,7 @@
         "arm"
       ],
       "updated_at": "2026-08-17T08:46:28Z",
-      "download_count": 289,
+      "download_count": 290,
       "app_type": "native",
       "category": "automation"
     },
@@ -485,7 +485,7 @@
         "arm"
       ],
       "updated_at": "2026-11-03T08:02:46Z",
-      "download_count": 1607,
+      "download_count": 1608,
       "app_type": "native",
       "category": "network"
     },
@@ -1292,9 +1292,9 @@
       "file_prefix": "grafana",
       "display_name": "Grafana",
       "description": "可视化监控仪表盘，支持 Prometheus、Loki 等多种数据源。",
-      "version": "13.3.0",
-      "fpk_version": "13.3.0",
-      "release_tag": "grafana/v13.3.0",
+      "version": "13.3.1",
+      "fpk_version": "13.3.1",
+      "release_tag": "grafana/v13.3.1",
       "service_port": 3010,
       "homepage_url": "https://grafana.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/grafana/fnos/ICON_256.PNG",
@@ -1302,7 +1302,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-10-28T08:05:04Z",
+      "updated_at": "2026-11-11T08:04:45Z",
       "download_count": 1832,
       "app_type": "native",
       "category": "system"
@@ -2983,7 +2983,7 @@
         "arm"
       ],
       "updated_at": "2026-10-21T08:02:56Z",
-      "download_count": 2544,
+      "download_count": 2545,
       "app_type": "native",
       "category": "download"
     },
