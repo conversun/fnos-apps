@@ -24,8 +24,8 @@
       "description": "自动签到框架，支持 HTTP 请求模板和定时任务",
       "source_url": "https://github.com/liumingye/fnos_fpk/releases/tag/v1.0.2",
       "github_repo": "qd-today/qd",
-      "latest_version": "20250803",
-      "updated_at": "2025-08-03T14:14:30Z"
+      "latest_version": "20261108",
+      "updated_at": "2026-11-07T19:09:15Z"
     },
     {
       "name": "onlyoffice",
@@ -78,8 +78,8 @@
       "description": "硬盘 S.M.A.R.T. 健康数据采集器，配合 Scrutiny 面板使用",
       "source_url": "https://github.com/jianyun8023/fnos-scrutiny-collector/releases",
       "github_repo": "jianyun8023/fnos-scrutiny-collector",
-      "latest_version": "1.79.0",
-      "updated_at": "2026-11-01T00:19:16Z"
+      "latest_version": "1.80.1",
+      "updated_at": "2026-11-08T00:52:06Z"
     },
     {
       "name": "fn-fan",
@@ -195,8 +195,8 @@
       "description": "原生 OpenCode Web 服务，支持飞牛桌面窗口与独立应用用户",
       "source_url": "https://github.com/HANSHOJIN/FN-OPENCODE/releases",
       "github_repo": "HANSHOJIN/FN-OPENCODE",
-      "latest_version": "2.2.5-4",
-      "updated_at": "2026-10-31T01:50:00Z"
+      "latest_version": "2.2.6-1",
+      "updated_at": "2026-11-07T03:12:13Z"
     },
     {
       "name": "quarkdrive",
@@ -222,8 +222,8 @@
       "description": "中国电信自研星辰超级智能体，支持 AI 办公、文档生成与多模型调度",
       "source_url": "https://github.com/mwh1987/fnos-teleagent/releases",
       "github_repo": "mwh1987/fnos-teleagent",
-      "latest_version": "3.0.0-rc.2",
-      "updated_at": "2026-11-02T18:00:15Z"
+      "latest_version": "3.0.0.7",
+      "updated_at": "2026-11-06T18:53:34Z"
     },
     {
       "name": "gately",
@@ -231,8 +231,8 @@
       "description": "网络网关，集成 DDNS、反向代理、证书与内网穿透",
       "source_url": "https://github.com/wangwanjie/gately/releases",
       "github_repo": "wangwanjie/gately",
-      "latest_version": "0.6.3",
-      "updated_at": "2026-11-02T11:14:51Z"
+      "latest_version": "0.6.5.2",
+      "updated_at": "2026-11-08T14:17:52Z"
     }
   ]
 }
