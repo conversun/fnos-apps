@@ -37,7 +37,7 @@ bash apps/fnmedia-dl/update_fnmedia-dl.sh --arch arm main-v0.1.43
   这是通用检查对本仓库生命周期的要求；上游使用 `cmd/_common`，不应添加文件。
   L2 在此提前退出，未执行其后续检查；后续 checksum、版本、平台、
   生命周期与架构检查已单独完成。其平台/端口规则也不适用于此通用微应用。
-- 未访问 VM，未执行安装或浏览器验收；上述结果不代表运行时已通过。
+- 原始静态交付未访问 VM；后续主执行者的实际运行结果见文末。
 
 持久证据位于工作区父目录
 `.evidence/issues-356-357-20261117/`：`upstream/` 保存 Release JSON、
@@ -75,3 +75,16 @@ bash apps/fnmedia-dl/update_fnmedia-dl.sh --arch arm main-v0.1.43
    不把 service 卸载视为容器已自动删除。
 7. ARM 运行验证须另有真实 ARM fnOS 设备；x86 VM 不能证明 ARM 运行正常。
    测试结束关闭浏览器测试会话、停止所有测试服务，并按工作区规则关闭 VM。
+
+## 后续实际运行结果
+
+fnOS 1.2.0505 x86 上通过桌面图标认证进入管理页，连接独立的真实
+aria2 1.36.0，并派发自有 HTTP 小文件。任务页显示「已完成」、100.0%、
+60 B，实际文件 SHA256 与源文件一致。迅雷账号通道与 Docker 通道未配置；
+本次验收覆盖 aria2 通道。
+
+0.1.43 原包存在已复现的任务删除限制：对已完成任务点「删除」返回
+`aria2 HTTP 400`。原包 `repo/app/backends/aria2.py` 的 `delete`
+先调用 `aria2.remove`，再调用 `aria2.forceRemove`；这两个方法用于活动、
+等待或暂停的任务，已完成结果需要 `aria2.removeDownloadResult`。本轮通过后者清理了
+唯一自建任务。该上游限制仍存在，分发保持官方原包直通。
