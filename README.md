@@ -1,7 +1,7 @@
 # fnOS Apps
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-![Apps](https://img.shields.io/badge/apps-185-2ea44f)
+![Apps](https://img.shields.io/badge/apps-193-2ea44f)
 ![Platform](https://img.shields.io/badge/fnOS-third--party-orange)
 
 面向飞牛 fnOS 的第三方应用打包仓库。自动跟踪上游版本，构建可直接安装的 `.fpk` 包。
@@ -25,6 +25,7 @@
 | <img src="apps/copaw/fnos/ICON.PNG" width="28"> | **CoPaw** | `8088` | 基于 AgentScope 的个人 AI 助手工作站，支持多渠道聊天、本地大模型和定时任务 | [GitHub](https://github.com/agentscope-ai/CoPaw) | [Release][r-copaw] |
 | <img src="apps/arcreel/fnos/ICON.PNG" width="28"> | **ArcReel** | `1241` | Agent 驱动的 AI 视频创作工作台，安装时设置管理员密码 | [GitHub](https://github.com/ArcReel/ArcReel) | [Release][r-arcreel] |
 | <img src="apps/hermes-agent/fnos/ICON.PNG" width="28"> | **Hermes Agent** | `9119` | 支持工具、记忆和多渠道接入的 AI Agent，提供带密码登录的仪表板 | [GitHub](https://github.com/NousResearch/hermes-agent) | [Release][r-hermes-agent] |
+| <img src="apps/deepseek-harness/fnos/ICON.PNG" width="28"> | **DeepSeek Harness** | `28000` | 官方双架构 iframe FPK，保留 `dsh` 标识；依赖 Node.js 24 与 Bun，管理面板 `28001` | [GitHub](https://github.com/techysy/deepseek-harness-fnos) | [Release][r-deepseek-harness] |
 | <img src="apps/cowagent/fnos/ICON.PNG" width="28"> | **CowAgent** | `9899` | AI 超级助手，支持微信/飞书/钉钉/QQ/Web 等多平台接入，基于大语言模型的智能对话 | [GitHub](https://github.com/zhayujie/chatgpt-on-wechat) | [Release][r-cowagent] |
 | <img src="apps/zeroclaw/fnos/ICON.PNG" width="28"> | **ZeroClaw** | `42617` | 轻量级 AI 智能体运行时，Rust 编写，<5MB 内存占用 | [GitHub](https://github.com/zeroclaw-labs/zeroclaw) | [Release][r-zeroclaw] |
 | <img src="apps/picoclaw/fnos/ICON.PNG" width="28"> | **PicoClaw** | `18800` | 超轻量 AI 智能体框架，Go 编写，10MB 内存占用，WebUI 端口 18800（网关 18790） | [GitHub](https://github.com/sipeed/picoclaw) | [Release][r-picoclaw] |
@@ -44,6 +45,7 @@
 | <img src="apps/emby/fnos/ICON.PNG" width="28"> | **Emby** | `8096` | 媒体管理与流式传输 | [官网](https://emby.media) | [Release][r-emby] |
 | <img src="apps/jellyfin/fnos/ICON.PNG" width="28"> | **Jellyfin** | `8097` | 开源媒体系统，内置 FFmpeg | [官网](https://jellyfin.org) | [Release][r-jellyfin] |
 | <img src="apps/m3u-studio/fnos/ICON.PNG" width="28"> | **M3U Studio** | `8324` | IPTV 频道列表、台标和 EPG 编辑器，持久保存频道与账号数据 | [GitHub](https://github.com/cachemiao/m3u-studio) | [Release][r-m3u-studio] |
+| <img src="apps/gaps-2/fnos/ICON.PNG" width="28"> | **GAPS-2** | `4277` | 媒体库缺失影片扫描，保留加密配置与密钥；上游镜像仅支持 x86 | [GitHub](https://github.com/primetime43/GAPS-2) | [Release][r-gaps-2] |
 | <img src="apps/fnysfd/fnos/ICON.PNG" width="28"> | **fnysfd** | `28006` | 飞牛影视原生反代服务，代理端口 `28005`；仅支持 x86，ARM 上游程序尚不兼容 | [GitHub](https://github.com/544849412/fnysfd) | [Release][r-fnysfd] |
 | <img src="apps/faststrm/fnos/ICON.PNG" width="28"> | **FastStrm** | `8090` | 115 STRM 管理与直链代理，官方双架构 FPK；首次使用创建管理员，可选 Emby 反代默认关闭 | [GitHub](https://github.com/wabisabi926/faststrm) | [Release][r-faststrm] |
 | <img src="apps/navidrome/fnos/ICON.PNG" width="28"> | **Navidrome** | `4533` | 音乐流媒体服务器 | [官网](https://www.navidrome.org) | [Release][r-navidrome] |
@@ -87,6 +89,8 @@
 | <img src="apps/cloudreve/fnos/ICON.PNG" width="28"> | **Cloudreve** | `5212` | 国产云盘系统 | [官网](https://cloudreve.org) | [Release][r-cloudreve] |
 | <img src="apps/cloudreve-v4/fnos/ICON.PNG" width="28"> | **Cloudreve V4** | `5213` | 原生 V4 云盘，使用独立数据目录，可与 V3 并存；不自动转换 V3 数据 | [官网](https://cloudreve.org) | [Release][r-cloudreve-v4] |
 | <img src="apps/motrix/fnos/ICON.PNG" width="28"> | **Motrix** | `16800` | Motrix Server 下载管理器，提供网页界面及 MDXP 接口 `16801` | [GitHub](https://github.com/agalwood/Motrix) | [Release][r-motrix] |
+| <img src="apps/fnmedia-dl/fnos/ICON.PNG" width="28"> | **批量下载助手** | 飞牛网关 | fnmedia-dl 官方通用 FPK，派发任务至迅雷或 aria2；仅供个人非商业使用 | [GitHub](https://github.com/maglcal/fnmedia-dl) | [Release][r-fnmedia-dl] |
+| <img src="apps/peerbanhelper/fnos/ICON.PNG" width="28"> | **PeerBanHelper** | `9898` | BT 客户端异常连接识别与封禁，双架构 Docker，使用宿主网络 | [GitHub](https://github.com/PBH-BTN/PeerBanHelper) | [Release][r-peerbanhelper] |
 | <img src="apps/sabnzbd/fnos/ICON.PNG" width="28"> | **SABnzbd** | `8780` | Usenet 下载客户端 | [官网](https://sabnzbd.org) | [Release][r-sabnzbd] |
 | <img src="apps/copyparty/fnos/ICON.PNG" width="28"> | **CopyParty** | `3923` | 便携文件共享服务器 | [GitHub](https://github.com/9001/copyparty) | [Release][r-copyparty] |
 
@@ -96,6 +100,7 @@
 |:---:|---|---:|---|:---:|:---:|
 | <img src="apps/siyuan/fnos/ICON.PNG" width="28"> | **SiYuan 思源笔记** | `6806` | 块级编辑与双向链接知识库，内核服务器模式，网页端访问 | [官网](https://b3log.org/siyuan) | [Release][r-siyuan] |
 | <img src="apps/vikunja/fnos/ICON.PNG" width="28"> | **Vikunja** | `3456` | 待办清单与看板（列表/甘特/日历），配手机 App | [官网](https://vikunja.io) | [Release][r-vikunja] |
+| <img src="apps/fncal/fnos/ICON.PNG" width="28"> | **FnCal** | `5280` | 官方通用 FPK，日历、CalDAV 与 MCP；需 fnOS 1.2.0401+，ARM 的 MCP 年度摘要 PNG 回退 SVG | [GitHub](https://github.com/PaulCAI1593/FnCal) | [Release][r-fncal] |
 | <img src="apps/ani-rss/fnos/ICON.PNG" width="28"> | **ANI-RSS** | `7789` | 动漫 RSS 自动追番，默认账号 `admin/admin` | [GitHub](https://github.com/wushuo894/ani-rss) | [Release][r-ani] |
 | <img src="apps/danmu-api/fnos/ICON.PNG" width="28"> | **Danmu API** | `9321` | 弹幕 API 服务器，兼容弹弹play 接口规范 | [GitHub](https://github.com/huangxd-/danmu_api) | [Release][r-danmu-api] |
 | <img src="apps/auto-bangumi/fnos/ICON.PNG" width="28"> | **AutoBangumi** | `7892` | RSS 自动追番下载整理，默认账号 `admin/adminadmin` | [GitHub](https://github.com/EstrellaXD/Auto_Bangumi) | [Release][r-ab] |
@@ -136,6 +141,8 @@
 | | App | 端口 | 说明 | 来源 | 下载 |
 |:---:|---|---:|---|:---:|:---:|
 | <img src="apps/ofterm/fnos/ICON.PNG" width="28"> | **OFTerm** | 飞牛网关 | 飞牛原生终端，官方双架构 FPK 直通，支持标签页、分屏与配色 | [GitHub](https://github.com/melchior-voidwolf/ofterm) | [Release][r-ofterm] |
+| <img src="apps/fnvista/fnos/ICON.PNG" width="28"> | **飞牛视野 FnVista** | 飞牛桌面 | 官方通用 FPK，Bing 与照片壁纸、轮播和屏保；保留 `fnos-bing-wallpaper` 标识 | [GitHub](https://github.com/mclhm8182/FnVista) | [Release][r-fnvista] |
+| <img src="apps/cangzhou/fnos/ICON.PNG" width="28"> | **藏舟** | 飞牛网关 | Kopia 加密备份，已有双架构官方 FPK；本仓库分发尚待上游许可确认 | [GitHub](https://github.com/KnotDing/cangzhou) | 待授权发布 |
 | <img src="apps/sun-panel/fnos/ICON.PNG" width="28"> | **Sun-Panel** | `3002` | 服务器/NAS 导航面板 | [官网](https://doc.sun-panel.top/zh_cn) | [Release][r-sunpanel] |
 | <img src="apps/homepage/fnos/ICON.PNG" width="28"> | **Homepage** | `3003` | 高度可定制的应用仪表盘 | [官网](https://gethomepage.dev) | [Release][r-homepage] |
 | <img src="apps/homarr/fnos/ICON.PNG" width="28"> | **Homarr** | `7575` | 服务器仪表盘与应用管理 | [官网](https://homarr.dev) | [Release][r-homarr] |
@@ -191,6 +198,7 @@
 | | App | 端口 | 说明 | 来源 | 下载 |
 |:---:|---|---:|---|:---:|:---:|
 | <img src="apps/aellus/fnos/ICON.PNG" width="28"> | **Aellus** | `8000` | 局域网文件互传：浏览器访问即传即取，按设备归档、免配置 | [GitHub](https://github.com/YGQ8988/Aellus) | [Release][r-aellus] |
+| <img src="apps/flaresolverr/fnos/ICON.PNG" width="28"> | **FlareSolverr** | `8191` | 浏览器会话与网页请求 API，双架构 Docker，内置 Chromium | [GitHub](https://github.com/FlareSolverr/FlareSolverr) | [Release][r-flaresolverr] |
 | <img src="apps/dynv6/fnos/ICON.PNG" width="28"> | **Dynv6 管家** | `8092` | 动态域名与 ACME 证书管理，官方双架构 FPK；首次使用创建本地管理员 | [GitHub](https://github.com/wabisabi926/dynv6) | [Release][r-dynv6] |
 | <img src="apps/smartdns/fnos/ICON.PNG" width="28"> | **SmartDNS** | `6580` | 本地 DNS 加速与优选 | [GitHub](https://github.com/pymumu/smartdns) | [Release][r-smartdns] |
 | <img src="apps/mosdns/fnos/ICON.PNG" width="28"> | **MosDNS** | `5354` | DNS 转发与分流 | [GitHub](https://github.com/IrineSistiana/mosdns) | [Release][r-mosdns] |
@@ -439,3 +447,10 @@ fnos-apps/
 [r-twitchdropsminer]: https://github.com/conversun/fnos-apps/releases?q=twitchdropsminer
 [r-faststrm]: https://github.com/conversun/fnos-apps/releases?q=faststrm
 [r-dynv6]: https://github.com/conversun/fnos-apps/releases?q=dynv6
+[r-deepseek-harness]: https://github.com/conversun/fnos-apps/releases?q=deepseek-harness
+[r-fncal]: https://github.com/conversun/fnos-apps/releases?q=fncal
+[r-flaresolverr]: https://github.com/conversun/fnos-apps/releases?q=flaresolverr
+[r-peerbanhelper]: https://github.com/conversun/fnos-apps/releases?q=peerbanhelper
+[r-fnmedia-dl]: https://github.com/conversun/fnos-apps/releases?q=fnmedia-dl
+[r-fnvista]: https://github.com/conversun/fnos-apps/releases?q=fnvista
+[r-gaps-2]: https://github.com/conversun/fnos-apps/releases?q=gaps-2
