@@ -1,0 +1,13 @@
+{
+    "port-config": {
+        "protocol-file": "GAPS2.sc"
+    },
+    "docker-project": {
+        "projects": [
+            {
+                "name": "gaps-2",
+                "path": "docker"
+            }
+        ]
+    }
+}

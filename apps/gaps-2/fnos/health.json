@@ -1,0 +1,4 @@
+{
+    "type": "skip",
+    "note": "Docker 应用需在真实 fnOS 上验证安装、界面和加密配置持久化；L3 容器没有 Docker 守护进程。"
+}

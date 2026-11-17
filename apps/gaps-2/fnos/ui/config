@@ -1,0 +1,14 @@
+{
+    ".url": {
+        "gaps-2.Application": {
+            "title": "GAPS-2",
+            "desc": "查找媒体库中的缺失作品",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "4277",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

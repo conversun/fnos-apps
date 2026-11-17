@@ -1,0 +1,13 @@
+services:
+  gaps-2:
+    image: ${DOCKER_MIRROR}ghcr.io/primetime43/gaps-2:${VERSION}
+    container_name: gaps-2
+    ports:
+      - "${TRIM_SERVICE_PORT}:4277"
+    volumes:
+      - ${TRIM_PKGVAR:?}/data:/app/data
+    environment:
+      - TZ=Asia/Shanghai
+      - PUID=${TRIM_UID}
+      - PGID=${TRIM_GID}
+    restart: unless-stopped

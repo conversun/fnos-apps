@@ -1,0 +1,14 @@
+appname         = gaps-2
+version         = 0.0.0
+display_name    = GAPS-2
+platform        = x86
+maintainer      = primetime43
+maintainer_url  = https://github.com/primetime43/GAPS-2
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = gaps-2.Application
+service_port    = 4277
+desc            = 连接 Plex、Jellyfin 或 Emby，查找电影合集和电视剧系列中的缺失作品
+source          = thirdparty
+checksum        =

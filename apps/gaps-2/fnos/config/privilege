@@ -1,0 +1,7 @@
+{
+    "defaults": {
+        "run-as": "package"
+    },
+    "username": "gaps-2",
+    "groupname": "gaps-2"
+}
