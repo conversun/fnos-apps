@@ -1,0 +1,10 @@
+services:
+  flaresolverr:
+    image: ${DOCKER_MIRROR}ghcr.io/flaresolverr/flaresolverr:v${VERSION}
+    container_name: flaresolverr
+    ports:
+      - "${TRIM_SERVICE_PORT}:8191"
+    environment:
+      - TZ=Asia/Shanghai
+      - LOG_LEVEL=info
+    restart: unless-stopped

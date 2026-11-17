@@ -1,0 +1,14 @@
+appname         = flaresolverr
+version         = 0.0.0
+display_name    = FlareSolverr
+platform        = x86
+maintainer      = FlareSolverr
+maintainer_url  = https://github.com/FlareSolverr/FlareSolverr
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = flaresolverr.Application
+service_port    = 8191
+desc            = 基于浏览器的代理 API，供索引器等应用处理 Cloudflare 和 DDoS-GUARD 验证
+source          = thirdparty
+checksum        =

@@ -1,0 +1,13 @@
+{
+    "port-config": {
+        "protocol-file": "FlareSolverr.sc"
+    },
+    "docker-project": {
+        "projects": [
+            {
+                "name": "flaresolverr",
+                "path": "docker"
+            }
+        ]
+    }
+}

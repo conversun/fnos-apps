@@ -1,0 +1,14 @@
+{
+    ".url": {
+        "flaresolverr.Application": {
+            "title": "FlareSolverr",
+            "desc": "FlareSolverr 代理 API",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "8191",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}
