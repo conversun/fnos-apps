@@ -1,0 +1,11 @@
+{
+    ".url": {
+        "fnos-bing-wallpaper.main": {
+            "title": "飞牛视野",
+            "icon": "images/icon_{0}.png",
+            "type": "iframe",
+            "url": "/cgi/ThirdParty/fnos-bing-wallpaper/index.cgi/",
+            "allUsers": true
+        }
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "type": "skip",
+    "note": "官方 platform=all FPK 直通，无 TCP 端口；需在真实 fnOS 桌面验证 CGI 页面、Bing 壁纸、本地照片、轮播、升级、停止还原及卸载清理。",
+    "skip_arch": [],
+    "startup_timeout_seconds": 60
+}

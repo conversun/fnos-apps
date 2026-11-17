@@ -1,0 +1,17 @@
+appname         = fnos-bing-wallpaper
+version         = 1.0.1
+display_name    = 飞牛视野
+platform        = x86
+maintainer      = mclhm8182
+maintainer_url  = https://github.com/mclhm8182/FnVista
+distributor     = mclhm8182
+distributor_url = https://github.com/mclhm8182/FnVista
+desktop_uidir   = ui
+desktop_applaunchname = fnos-bing-wallpaper.main
+service_port    = 0
+checkport       = false
+install_type    = root
+disable_authorization_path = true
+desc            = Bing 每日壁纸、本地照片、壁纸轮换与屏保，支持恢复系统原始壁纸（官方 FPK 直通）。
+source          = thirdparty
+checksum        =
