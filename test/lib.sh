@@ -38,7 +38,7 @@ vm_root_args() {
     # `sudo bash <file>` — so the password (echo pipe -> sudo -S) and the script
     # source (the file) don't fight over stdin. Args follow the filename directly.
     sshpass -p "$FNOS_VM_PASS" ssh "${_SSH_OPTS[@]}" "$FNOS_VM_USER@$FNOS_VM_IP" \
-        "f=\$(mktemp); cat > \"\$f\"; echo '$FNOS_VM_PASS' | sudo -S -p '' bash \"\$f\"$q; rm -f \"\$f\"" 2>/dev/null
+        "f=\$(mktemp); cat > \"\$f\"; echo '$FNOS_VM_PASS' | sudo -S -p '' bash \"\$f\"$q; rc=\$?; rm -f \"\$f\"; exit \$rc"
 }
 
 # Resolve an app from apps.json. Prints TSV: appname<TAB>fpk_url<TAB>port<TAB>app_type
