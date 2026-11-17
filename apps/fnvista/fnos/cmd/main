@@ -1,0 +1,15 @@
+#!/bin/bash
+set -euo pipefail
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+# fnOS stops an enabled app before its uninstall callback. Upstream stop
+# restores and deletes the selected custom wallpaper even when the wizard
+# explicitly asks to keep it. Leave that decision to uninstall_callback.
+if [ "${1:-}" = stop ] && [ "${TRIM_APP_STATUS:-}" = UNINSTALL ]; then
+    bash "$SCRIPT_DIR/uninstall-quiesce"
+    rm -f /var/lib/fnos-wallpaper/last_startdate
+    exit 0
+fi
+
+exec bash "$SCRIPT_DIR/main_upstream" "$@"

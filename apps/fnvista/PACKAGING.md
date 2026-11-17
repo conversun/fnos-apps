@@ -41,6 +41,11 @@ ARCH=x86 VERSION=1.0.1-r1 OUTPUT_DIR=/absolute/output \
 
 ## 卸载次序
 
+fnOS 在卸载回调前以 `TRIM_APP_STATUS=UNINSTALL` 调用 `main stop`。
+上游的 stop 会无条件还原并删除自定义壁纸，导致向导选择保留也无效。
+本包在此阶段只停止应用写入，把是否还原交给卸载回调；其他 main 操作仍执行
+字节不变的上游入口，普通停用保留上游行为。
+
 1. 把已部署 CGI 重命名为 `index.cgi.fnvista-uninstall`，不修改字节，
    阻止旧页面发起新请求。仅 chmod 对 root 解释器不足以阻止读取。
    删除应用 cron；精确匹配应用脚本路径，暂停所有应用写入进程及子进程，
