@@ -1,0 +1,6 @@
+{
+    "type": "skip",
+    "note": "官方通用 FPK 直通；需在 fnOS ≥ 1.2.0401 实机验证 nodejs_v22、管理员向导、CalDAV 同步、MCP 审批及 ARM 年度总结原生模块兼容性。",
+    "skip_arch": [],
+    "startup_timeout_seconds": 30
+}

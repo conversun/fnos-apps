@@ -1,0 +1,16 @@
+appname         = FnCal
+version         = 0.8.34
+display_name    = FnCal
+platform        = x86
+maintainer      = PaulCAI1593
+maintainer_url  = https://github.com/PaulCAI1593/FnCal
+distributor     = PaulCAI1593
+distributor_url = https://paulcai1593.github.io/FnCal/
+desktop_uidir   = ui
+desktop_applaunchname = FnCal.main
+service_port    = 5280
+desc            = 本地优先的日历应用，自带 CalDAV 服务与 MCP 接入，AI 写入先提案再审批（官方通用 FPK 直通）。
+source          = thirdparty
+checksum        =
+os_min_version  = 1.2.0401
+install_dep_apps = nodejs_v22
