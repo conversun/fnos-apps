@@ -1,0 +1,22 @@
+{
+    ".url": {
+        "fnmedia-dl.main": {
+            "title": "批量下载助手",
+            "desc": "多通道下载 / 链接解析 / 任务管理",
+            "icon": "images/icon_{0}.png",
+            "type": "iframe",
+            "protocol": "http",
+            "port": "",
+            "url": "/app/fnmedia-dl/",
+            "allUsers": false,
+            "gatewaySocket": "fnmedia-dl.sock",
+            "gatewayPrefix": "/app/fnmedia-dl",
+            "control": {
+                "accessPerm": "readonly",
+                "portPerm": "hidden",
+                "pathPerm": "hidden",
+                "fullUrlPerm": "hidden"
+            }
+        }
+    }
+}

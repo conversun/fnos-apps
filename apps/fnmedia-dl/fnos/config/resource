@@ -1,0 +1,13 @@
+{
+    "api-scope": [],
+    "data-share": {
+        "shares": [
+            {
+                "name": "fnmedia-dl"
+            },
+            {
+                "name": "fnmedia-dl/downloads"
+            }
+        ]
+    }
+}

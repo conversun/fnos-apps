@@ -1,0 +1,6 @@
+{
+    "type": "skip",
+    "note": "官方 platform=all FPK 直通，无 TCP 端口；需在 fnOS 1.2.0+ 验证安装向导、Python 依赖、桌面 UDS 网关、任务派发、升级状态保留及卸载。",
+    "skip_arch": [],
+    "startup_timeout_seconds": 60
+}

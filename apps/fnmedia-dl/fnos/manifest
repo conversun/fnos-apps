@@ -1,0 +1,17 @@
+appname         = fnmedia-dl
+version         = 0.1.43
+display_name    = 批量下载助手
+platform        = x86
+maintainer      = 许诺
+maintainer_url  = https://github.com/maglcal/fnmedia-dl
+distributor     = 许诺
+distributor_url = https://github.com/maglcal/fnmedia-dl
+desktop_uidir   = ui
+desktop_applaunchname = fnmedia-dl.main
+service_port    = 0
+checkport       = false
+micro_app       = true
+os_min_version  = 1.2.0
+desc            = NAS 多通道下载任务管理，批量解析磁力、直链和种子，支持迅雷与 aria2（官方 FPK 直通，个人非商业使用）。
+source          = thirdparty
+checksum        =
