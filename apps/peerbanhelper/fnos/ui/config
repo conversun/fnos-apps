@@ -1,0 +1,14 @@
+{
+    ".url": {
+        "peerbanhelper.Application": {
+            "title": "PeerBanHelper",
+            "desc": "BT 客户端反吸血工具",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "9898",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

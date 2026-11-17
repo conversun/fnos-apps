@@ -1,0 +1,14 @@
+appname         = peerbanhelper
+version         = 0.0.0
+display_name    = PeerBanHelper
+platform        = x86
+maintainer      = PBH-BTN
+maintainer_url  = https://github.com/PBH-BTN/PeerBanHelper
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = peerbanhelper.Application
+service_port    = 9898
+desc            = 通过下载器 Web API 自动封禁吸血、异常和不受欢迎的 BT 客户端，支持自定义规则
+source          = thirdparty
+checksum        =

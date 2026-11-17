@@ -1,0 +1,6 @@
+{
+    "type": "skip",
+    "note": "Docker 应用，L3 测试容器没有 Docker 守护进程；需在 fnOS 上验证 Web UI、初始化和下载器连接。",
+    "skip_arch": [],
+    "startup_timeout_seconds": 120
+}

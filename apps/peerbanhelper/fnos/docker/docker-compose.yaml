@@ -1,0 +1,11 @@
+services:
+  peerbanhelper:
+    image: ${DOCKER_MIRROR}docker.io/ghostchu/peerbanhelper:v${VERSION}
+    container_name: peerbanhelper
+    network_mode: host
+    volumes:
+      - ${TRIM_PKGVAR:?}/data:/app/data
+    environment:
+      - TZ=Asia/Shanghai
+    stop_grace_period: 30s
+    restart: unless-stopped

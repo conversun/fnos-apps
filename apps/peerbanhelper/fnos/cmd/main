@@ -1,0 +1,11 @@
+#!/bin/bash
+
+case "$1" in
+    start|stop) exit 0 ;;
+    status)
+        [ "$(docker inspect -f '{{.State.Running}}' peerbanhelper 2>/dev/null)" = "true" ] && exit 0
+        exit 3
+        ;;
+    log) docker logs --tail "${2:-100}" peerbanhelper 2>&1 ;;
+    *) exit 1 ;;
+esac

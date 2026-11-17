@@ -1,0 +1,13 @@
+{
+    "port-config": {
+        "protocol-file": "PeerBanHelper.sc"
+    },
+    "docker-project": {
+        "projects": [
+            {
+                "name": "peerbanhelper",
+                "path": "docker"
+            }
+        ]
+    }
+}
