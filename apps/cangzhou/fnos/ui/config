@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "cangzhou.Application": {
+            "title": "藏舟",
+            "icon": "images/icon_{0}.png",
+            "type": "iframe",
+            "microApp": true,
+            "protocol": "",
+            "gatewayPrefix": "/app/cangzhou",
+            "gatewaySocket": "app.sock",
+            "url": "/app/cangzhou/",
+            "allUsers": false
+        }
+    }
+}

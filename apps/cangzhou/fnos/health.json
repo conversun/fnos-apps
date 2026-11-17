@@ -1,0 +1,6 @@
+{
+    "type": "skip",
+    "note": "官方 FPK 直通；需在 fnOS ≥ 1.1.3100 实机验证管理员网关、源目录授权及本地/WebDAV/SFTP 备份恢复，不提供独立 TCP 服务端口。",
+    "skip_arch": [],
+    "startup_timeout_seconds": 30
+}
