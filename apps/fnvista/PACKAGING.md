@@ -35,11 +35,9 @@ ARCH=x86 VERSION=1.0.1-r1 OUTPUT_DIR=/absolute/output \
 离线验证可用 `FNVISTA_UPSTREAM_FPK=/absolute/FnVista-1.0.1.fpk`，
 仍强制相同 checksum。`TMPDIR` 可指定自己的临时根，构建退出自动删除工作目录。
 
-本次交付仅支持专用本地完整 FPK 构建。现有通用 CI 在 `build.sh` 后
-无条件调用 shared 打包器，会覆盖本包的上游控制文件；它没有完整 FPK
-构建出口。在本次不允许修改共享脚本/工作流的范围内，移除官方直通配置，
-并在 `GITHUB_ACTIONS=true` 时明确失败，避免发布未适配包或二次错误打包。
-启用自动发布需要另行扩展 CI 合约，不属于本次本地修复。
+`BUILD_OUTPUT=fpk` 声明构建脚本直接生成完整 FPK。复用 CI 将输出目录设为
+工作目录并传入目标架构，保留本包的卸载适配器，不再调用 shared 打包器覆盖
+上游控制文件。其他应用仍按原有官方直通或 `app.tgz` 路径构建。
 
 ## 卸载次序
 

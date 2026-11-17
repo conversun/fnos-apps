@@ -158,10 +158,14 @@ jobs:
             echo "Official fpk passthrough: ${FPK_FINAL} <- ${OFFICIAL_FPK_REPO} ${VERSION} asset ${ASSET}"
             ls -lh "${FPK_FINAL}"
           else
-            bash "scripts/apps/${APP}/build.sh"
-
-            ls -lh app.tgz
-            bash scripts/build-fpk.sh "apps/${APP}" app.tgz "${VERSION}" "${MANIFEST_PLATFORM}"
+            if [ "${BUILD_OUTPUT:-}" = "fpk" ]; then
+              # Lifecycle-adapted packages already contain their complete FPK.
+              ARCH="$ARCH" OUTPUT_DIR="$PWD" bash "scripts/apps/${APP}/build.sh"
+            else
+              bash "scripts/apps/${APP}/build.sh"
+              ls -lh app.tgz
+              bash scripts/build-fpk.sh "apps/${APP}" app.tgz "${VERSION}" "${MANIFEST_PLATFORM}"
+            fi
             FPK_BUILT="${FILE_PREFIX}_${VERSION}_${MANIFEST_PLATFORM}.fpk"
             if [ "${FPK_BUILT}" != "${FPK_FINAL}" ]; then
               mv "${FPK_BUILT}" "${FPK_FINAL}"

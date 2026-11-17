@@ -6,12 +6,6 @@ REPO_ROOT="$(cd "$SCRIPT_DIR/../../.." && pwd)"
 # shellcheck source=./meta.env
 source "$SCRIPT_DIR/meta.env"
 
-# The generic CI step would repack this again with shared hooks and lose the
-# upstream controls. Keep that unsupported path explicit, rather than ship it.
-if [ "${GITHUB_ACTIONS:-false}" = true ]; then
-    echo "[ERROR] 飞牛视野需要专用完整 FPK 构建，通用 CI 二次打包不适用；请使用本地 update_fnvista.sh。" >&2
-    exit 1
-fi
 ARCH="${ARCH:-${1:-}}"
 case "$ARCH" in x86|arm) ;; *) echo "需要 ARCH=x86 或 arm" >&2; exit 1 ;; esac
 VERSION="$(bash "$SCRIPT_DIR/get-latest-version.sh" "${VERSION:-$UPSTREAM_VERSION}")"

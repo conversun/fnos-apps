@@ -141,7 +141,7 @@
 | | App | 端口 | 说明 | 来源 | 下载 |
 |:---:|---|---:|---|:---:|:---:|
 | <img src="apps/ofterm/fnos/ICON.PNG" width="28"> | **OFTerm** | 飞牛网关 | 飞牛原生终端，官方双架构 FPK 直通，支持标签页、分屏与配色 | [GitHub](https://github.com/melchior-voidwolf/ofterm) | [Release][r-ofterm] |
-| <img src="apps/fnvista/fnos/ICON.PNG" width="28"> | **飞牛视野 FnVista** | 飞牛桌面 | 官方通用 FPK，Bing 与照片壁纸、轮播和屏保；保留 `fnos-bing-wallpaper` 标识 | [GitHub](https://github.com/mclhm8182/FnVista) | [Release][r-fnvista] |
+| <img src="apps/fnvista/fnos/ICON.PNG" width="28"> | **飞牛视野 FnVista** | 飞牛桌面 | 保留官方通用载荷，适配卸载还原；Bing 与照片壁纸、轮播和屏保，标识 `fnos-bing-wallpaper` | [GitHub](https://github.com/mclhm8182/FnVista) | [Release][r-fnvista] |
 | <img src="apps/cangzhou/fnos/ICON.PNG" width="28"> | **藏舟** | 飞牛网关 | Kopia 加密备份，已有双架构官方 FPK；本仓库分发尚待上游许可确认 | [GitHub](https://github.com/KnotDing/cangzhou) | 待授权发布 |
 | <img src="apps/sun-panel/fnos/ICON.PNG" width="28"> | **Sun-Panel** | `3002` | 服务器/NAS 导航面板 | [官网](https://doc.sun-panel.top/zh_cn) | [Release][r-sunpanel] |
 | <img src="apps/homepage/fnos/ICON.PNG" width="28"> | **Homepage** | `3003` | 高度可定制的应用仪表盘 | [官网](https://gethomepage.dev) | [Release][r-homepage] |
