@@ -1,0 +1,14 @@
+appname         = dsh
+version         = 0.2.2-rc.3
+display_name    = DeepSeek Harness
+platform        = x86
+maintainer      = deepseek-ai
+maintainer_url  = https://github.com/deepseek-ai/deepseek-harness
+distributor     = techysy
+distributor_url = https://github.com/techysy/deepseek-harness-fnos
+desktop_uidir   = ui
+desktop_applaunchname = dsh.Application
+service_port    = 28000
+desc            = DeepSeek 官方 Agent 浏览器 UI 飞牛常驻应用，内置离线依赖与管理面板（官方 iframe FPK 直通）。
+source          = thirdparty
+checksum        =
