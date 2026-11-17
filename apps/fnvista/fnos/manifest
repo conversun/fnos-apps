@@ -1,5 +1,5 @@
 appname         = fnos-bing-wallpaper
-version         = 1.0.1
+version         = 1.0.1-r1
 display_name    = 飞牛视野
 platform        = x86
 maintainer      = mclhm8182
@@ -12,6 +12,6 @@ service_port    = 0
 checkport       = false
 install_type    = root
 disable_authorization_path = true
-desc            = Bing 每日壁纸、本地照片、壁纸轮换与屏保，支持恢复系统原始壁纸（官方 FPK 直通）。
+desc            = Bing 每日壁纸、本地照片、壁纸轮换与屏保；上游 1.0.1 原始载荷，本地 r1 卸载生命周期适配。
 source          = thirdparty
 checksum        =

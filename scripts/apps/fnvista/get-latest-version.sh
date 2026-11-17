@@ -2,18 +2,15 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-# shellcheck source=../../lib/gh-api.sh
-source "$SCRIPT_DIR/../../lib/gh-api.sh"
+# shellcheck source=./meta.env
+source "$SCRIPT_DIR/meta.env"
 
-TAG="${1:-}"
-if [ -z "$TAG" ]; then
-    TAG="$(gh_latest_tag "mclhm8182/FnVista")"
-fi
-VERSION="${TAG#v}"
-if ! [[ "$VERSION" =~ ^[0-9]+(\.[0-9]+)+$ ]]; then
-    echo "无法获取飞牛视野版本: $TAG" >&2
-    exit 1
-fi
+TAG="${1:-$UPSTREAM_VERSION}"
+VERSION="${UPSTREAM_VERSION}-${PACKAGING_REVISION}"
+case "${TAG#v}" in
+    "$UPSTREAM_VERSION"|"$VERSION") ;;
+    *) echo "未经适配验证的飞牛视野版本: $TAG" >&2; exit 1 ;;
+esac
 
 echo "VERSION=$VERSION"
 if [ -n "${GITHUB_OUTPUT:-}" ]; then

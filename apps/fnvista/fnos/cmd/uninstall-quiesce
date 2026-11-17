@@ -1,0 +1,99 @@
+#!/bin/bash
+set -euo pipefail
+
+# Withdraw the CGI entrypoint without changing its bytes. Removing execute bits
+# alone does not block an interpreter running as root. fnOS removes the target
+# after this hook; a failed uninstall needs reinstall before opening the UI.
+APP_DIR="${TRIM_APPDEST:-/var/apps/fnos-bing-wallpaper/target}"
+if [ -f "$APP_DIR/ui/index.cgi" ]; then
+    mv "$APP_DIR/ui/index.cgi" "$APP_DIR/ui/index.cgi.fnvista-uninstall"
+fi
+rm -f /etc/cron.d/fnos-bing-wallpaper
+python3 - "$APP_DIR" <<'PY'
+import os
+from pathlib import Path
+import signal
+import subprocess
+import sys
+import time
+
+app = Path(sys.argv[1]).resolve()
+scripts = (
+    "bing-wallpaper-daily.sh", "fnos-wallpaper-set.sh",
+    "fnos-wallpaper-watchdog.sh", "fnos-cron-update.sh",
+    "fnos-wallpaper-rotate.sh", "fnos-www-zip-patch.sh",
+    "fnos-survival-check.sh",
+)
+owned = {str(Path("/usr/local/sbin") / name) for name in scripts}
+owned.update(str(app / name) for name in scripts)
+owned.update(str(Path(sys.argv[1]) / name) for name in scripts)
+owned.add(str(app / "ui/index.cgi"))
+owned.add(str(Path(sys.argv[1]) / "ui/index.cgi"))
+owned.add("/var/apps/fnos-bing-wallpaper/target/ui/index.cgi")
+
+def snapshot() -> dict[int, tuple[int, str, str]]:
+    """Read the process tree using ps on both Linux and the local test host."""
+    rows = subprocess.check_output(
+        ["ps", "-eo", "pid=,ppid=,stat=,args="], text=True,
+    ).splitlines()
+    return {
+        int(fields[0]): (int(fields[1]), fields[2], fields[3])
+        for row in rows if len(fields := row.split(None, 3)) == 4
+    }
+
+def send(pid: int, sig: signal.Signals) -> None:
+    """A process may exit between the process snapshot and the signal."""
+    try:
+        os.kill(pid, sig)
+    except ProcessLookupError:
+        pass
+
+tree = snapshot()
+ancestors = {os.getpid()}
+parent = os.getppid()
+while parent in tree and parent not in ancestors:
+    ancestors.add(parent)
+    parent = tree[parent][0]
+victims = {
+    pid for pid, (_, _, args) in tree.items()
+    if pid not in ancestors and owned.intersection(args.split())
+}
+# Freeze writers first, then close the descendant set until nobody can fork.
+frozen: set[int] = set()
+deadline = time.monotonic() + 5
+while victims - frozen:
+    for pid in victims - frozen:
+        send(pid, signal.SIGSTOP)
+        frozen.add(pid)
+    while True:
+        tree = snapshot()
+        running = {
+            pid for pid in frozen if pid in tree
+            and not tree[pid][1].startswith(("T", "Z"))
+        }
+        if not running:
+            break
+        if time.monotonic() >= deadline:
+            sys.exit("无法暂停应用写入进程，取消恢复")
+        time.sleep(0.01)
+    victims.update(
+        pid for pid, (ppid, _, _) in tree.items()
+        if ppid in victims and pid not in ancestors
+    )
+for pid in victims:
+    send(pid, signal.SIGKILL)
+while True:
+    tree = snapshot()
+    running = {
+        pid for pid in victims if pid in tree
+        and not tree[pid][1].startswith("Z")
+    }
+    if not running:
+        break
+    if time.monotonic() >= deadline:
+        sys.exit("应用写入进程尚未退出，取消恢复")
+    time.sleep(0.01)
+print(f"已终止应用写入进程及子进程: {len(victims)}")
+PY
+# A cron-update job could have recreated it before being frozen.
+rm -f /etc/cron.d/fnos-bing-wallpaper

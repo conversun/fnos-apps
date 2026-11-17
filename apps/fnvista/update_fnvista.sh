@@ -3,8 +3,6 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
-# shellcheck source=../../scripts/apps/fnvista/meta.env
-source "$REPO_ROOT/scripts/apps/fnvista/meta.env"
 
 ARCH=""
 VERSION="${FNVISTA_VERSION:-latest}"
@@ -15,7 +13,7 @@ while [ "$#" -gt 0 ]; do
         --arch=*) ARCH="${1#*=}"; shift ;;
         -h|--help)
             echo "用法: $0 [--arch x86|arm] [版本号|latest]"
-            echo "下载原始官方 FPK 到 OUTPUT_DIR（默认 dist/），不重打包。"
+            echo "构建保留原始 app.tgz 的生命周期适配包到 OUTPUT_DIR（默认 dist/）。"
             exit 0
             ;;
         -*) echo "未知选项: $1" >&2; exit 1 ;;
@@ -30,8 +28,7 @@ if [ -z "$ARCH" ]; then
     esac
 fi
 case "$ARCH" in
-    x86) ASSET_TEMPLATE="$OFFICIAL_FPK_ASSET_x86" ;;
-    arm) ASSET_TEMPLATE="$OFFICIAL_FPK_ASSET_arm" ;;
+    x86|arm) ;;
     *) echo "不支持的架构: $ARCH" >&2; exit 1 ;;
 esac
 if [ "$VERSION" = latest ]; then
@@ -40,15 +37,5 @@ else
     VERSION="$(bash "$REPO_ROOT/scripts/apps/fnvista/get-latest-version.sh" "$VERSION")"
 fi
 VERSION="${VERSION#VERSION=}"
-ASSET="${ASSET_TEMPLATE//\$\{VERSION\}/$VERSION}"
-
-WORK_DIR="$(mktemp -d)"
-trap 'rm -rf "$WORK_DIR"' EXIT
-curl -fL --retry 5 --retry-delay 5 --retry-all-errors --connect-timeout 30 \
-    -o "$WORK_DIR/official.fpk" \
-    "https://github.com/${OFFICIAL_FPK_REPO}/releases/download/${OFFICIAL_FPK_TAG_PREFIX}${VERSION}/${ASSET}"
-tar tzf "$WORK_DIR/official.fpk" >/dev/null
-mkdir -p "$OUTPUT_DIR"
-FPK_FINAL="$OUTPUT_DIR/${FILE_PREFIX}_${VERSION}_${ARCH}.fpk"
-mv "$WORK_DIR/official.fpk" "$FPK_FINAL"
-echo "官方 FPK 已保存（未经修改）: $FPK_FINAL"
+export ARCH VERSION OUTPUT_DIR
+exec bash "$REPO_ROOT/scripts/apps/fnvista/build.sh"

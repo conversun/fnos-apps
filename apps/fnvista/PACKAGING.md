@@ -1,84 +1,125 @@
-# 飞牛视野 FnVista：官方 FPK 直通
+# 飞牛视野 FnVista：1.0.1-r1 本地生命周期适配
 
-对应 #356，上游：https://github.com/mclhm8182/FnVista 。
+上游为 mclhm8182/FnVista v1.0.1，应用标识仍为
+`fnos-bing-wallpaper`。本地版本 `1.0.1-r1` 修复标准卸载后遗留的两张
+webp 和前端 CSS/JS 注入；上游 1.0.1 在 fnOS 1.2.0505 的实际卸载
+返回成功，但完整文件比较确认这三项未恢复。手工还原不属于上游卸载成功。
 
-`scripts/apps/fnvista/meta.env` 使用现有 CI 官方 FPK 直通机制：
-版本 `1.0.1` 对应标签 `v1.0.1`、资产 `FnVista-1.0.1.fpk`。
-x86、ARM 均采用同一个 `platform=all` 包，保留上游生命周期、向导与桌面 CGI。
-输出前缀和应用标识均为 `fnos-bing-wallpaper`，与官方安装一致，
-目录名及发布标签命名空间仍是 `fnvista`。
+## 保留边界
 
-本目录 `fnos/` 仅供元数据、图标与 L1 检查使用，其 `platform=x86`、
-`service_port=0` 是本仓库元数据约定，不会写入下载的官方包。
-`build.sh` 和 `service-setup` 明确拒绝重打包。
+- 原始 `app.tgz` 整个压缩文件逐字节保留，不解包重建，不修改应用代码。
+  manifest 中的原始 MD5 checksum 因此保持不变，`platform=all` 保持不变。
+- 原始图标、权限、资源配置、安装/升级/配置/主入口及所有向导保持原样。
+- 原始 `cmd/uninstall_callback` 原样改名为 `cmd/uninstall_upstream`。
+  仅增加本地卸载入口、进程静止辅助脚本和 MIT LICENSE，修改 manifest 版本。
+- 不加入未使用的 shared `common`、`installer`，不修改通用 L2 检查。
+
+## 构建与版本
 
 ```bash
-bash apps/fnvista/update_fnvista.sh --arch x86
-bash apps/fnvista/update_fnvista.sh --arch arm v1.0.1
+OUTPUT_DIR=/absolute/output bash apps/fnvista/update_fnvista.sh --arch x86 v1.0.1
+OUTPUT_DIR=/absolute/output bash apps/fnvista/update_fnvista.sh --arch arm 1.0.1-r1
+# 同一个构建入口，也可直接调用：
+ARCH=x86 VERSION=1.0.1-r1 OUTPUT_DIR=/absolute/output \
+  bash scripts/apps/fnvista/build.sh
 ```
 
-可通过 `OUTPUT_DIR` 指定输出目录，通过 `FNVISTA_VERSION` 指定版本。
-上游是 MIT 许可，完整许可保存在本目录 `LICENSE`。
-上游 README 同时保留 pmxwxhn/fnos-bing-wallpaper 的 MIT 署名；
-发布说明保留作者与上游署名链接。官方 FPK 没有独立 LICENSE 文件，
-本实现不修改官方包以注入文件。
+两个输出都含原始通用载荷，仅文件名区分 x86/arm。
+`FNVISTA_VERSION` 也可选择本地版本；`latest` 表示最新已审核本地版本，
+不自动追踪未审核的新上游。resolver 接受 `1.0.1`、`v1.0.1`、
+`1.0.1-r1`、`v1.0.1-r1`，均解析为 `1.0.1-r1`。
+新上游需要重新审核生命周期后更新 `meta.env`，避免把旧适配器盲目套用。
 
-## 已完成的检查（2026-11-17）
+默认下载官方 FPK，并核对固定 SHA256：
+`1e9fb621c5deb50bb9bda13b85625956b4de40ac5e8f142123e115a0b2dab65d`。
+离线验证可用 `FNVISTA_UPSTREAM_FPK=/absolute/FnVista-1.0.1.fpk`，
+仍强制相同 checksum。`TMPDIR` 可指定自己的临时根，构建退出自动删除工作目录。
 
-- 实际下载构建 x86、ARM 均成功，两个输出逐字节等于官方资产。
-- SHA256 均为
-  `1e9fb621c5deb50bb9bda13b85625956b4de40ac5e8f142123e115a0b2dab65d`，
-  同时匹配 GitHub Release API digest 与官方 `SHA256SUMS`。
-- 官方 manifest：`appname=fnos-bing-wallpaper`、`version=1.0.1`、
-  `platform=all`、`install_type=root`、`checkport=false`，
-  无 service_port；`app.tgz` MD5 与 manifest 一致。
-- L1 与 fnmedia-dl 合计 24 项通过；新脚本的 ShellCheck（跟随 source）通过。
-  版本规范化、GITHUB_OUTPUT、非法版本/架构/选项拒绝、重打包拒绝通过。
-- 官方生命周期脚本 bash 语法、向导 JSON、权限/资源 JSON 均通过，
-  载荷为 shell/CGI，没有 ELF 架构绑定。
-- 原样运行 L2 在两个输出上均返回 1：缺少本仓库要求的
-  `cmd/common`、`cmd/installer`。官方包不依赖这些文件，不能通过修改安装包补齐。
-  L2 在此提前退出，后续步骤未运行；版本、平台、checksum、生命周期和架构
-  已单独核对。通用检查的平台/端口规则同样不适用于此桌面应用。
-- 未访问 VM，未执行安装或浏览器验收；运行时结果仍待主执行者验证。
+本次交付仅支持专用本地完整 FPK 构建。现有通用 CI 在 `build.sh` 后
+无条件调用 shared 打包器，会覆盖本包的上游控制文件；它没有完整 FPK
+构建出口。在本次不允许修改共享脚本/工作流的范围内，移除官方直通配置，
+并在 `GITHUB_ACTIONS=true` 时明确失败，避免发布未适配包或二次错误打包。
+启用自动发布需要另行扩展 CI 合约，不属于本次本地修复。
 
-持久证据位于工作区父目录
-`.evidence/issues-356-357-20261117/`，包括官方 Release JSON、许可、FPK、
-SHA256SUMS、四个构建产物、L1/L2/构建日志、`identity.json`、
-`architecture-audit.json`、`official-contracts.json`、`cli-checks.json`
-以及 `inspection/` 中的官方生命周期与配置文件。
+## 卸载次序
 
-## 交给主执行者的 VM / 浏览器场景
+1. 把已部署 CGI 重命名为 `index.cgi.fnvista-uninstall`，不修改字节，
+   阻止旧页面发起新请求。仅 chmod 对 root 解释器不足以阻止读取。
+   删除应用 cron；精确匹配应用脚本路径，暂停所有应用写入进程及子进程，
+   闭合进程树后终止并等待退出。不杀 nginx、cron 服务或其他应用。
+   随后再次删除可能被在途 cron-update 重建的应用 cron。
+2. 调用原始卸载钩子，保留其数据库、用户自定义图片和部署脚本清理行为。
+3. `wizard_restore=true`（含上游认可的真值，未设置时默认 true）时，
+   解锁两张 webp，从 `/var/lib/fnos-wallpaper/orig/` 直接复制
+   `wallpaper-1.webp.orig` 和 `thumb-1.webp.orig`，不转码。
+   缺备份、写入或解锁失败会明确返回非零。
+4. 无论是否恢复壁纸，只移除准确的
+   `<style id="fnos-bing-wp-css">...</style>` 和
+   `<script id="fnos-bing-wp-js">...</script>` 字节块。
+   同时清理 live `index.html` 和 `www.zip` 的 `index.html` 条目，
+   防止系统从还原源重新注入；其他 HTML 字节不变。
+   `wizard_restore=false` 不复制 webp、不调用额外数据库恢复。
 
-1. 使用可还原的真实 fnOS 桌面测试环境、管理员登录会话；先记录原壁纸截图，
-   备份用户壁纸偏好和相关系统资源。准备 curl、ffmpeg/ffprobe、Python 3、
-   cron/systemd、zip/unzip、postgres 用户与可访问的 `trim_sac` 数据库，
-   并确认 `/usr/trim/www/static/bg`、`/usr/trim/var/trim_sac/wallpaper`
-   及系统前端资源存在。网络需能访问 Bing 图片接口。
-   上游 manifest 未声明最低 fnOS 版本，不能仅凭打包结果声称某系统版本兼容。
-2. 经应用中心上传 `builds/fnos-bing-wallpaper_1.0.1_x86.fpk`。
-   确认以 root 安装；检查 `/usr/local/sbin/` 中官方脚本、
-   `/etc/cron.d/fnos-bing-wallpaper`、`/var/lib/fnos-wallpaper/`、
-   `/var/log/fnos-bing-wallpaper.log`。安装钩子还会调用
-   `fnos-www-zip-patch.sh` 修改 `/usr/trim/share/.restore/www.zip`
-   和相关前端文件，不能只按 README 的“桌面壁纸”描述验收。
-3. 从桌面「飞牛视野」图标打开
-   `/cgi/ThirdParty/fnos-bing-wallpaper/index.cgi/`，确认无需独立端口。
-   记录页面与桌面截图，点击每日精选中的一张图片，确认桌面随即更新、
-   浏览器会话不掉线。上传自有测试照片或选取 NAS 图片目录，确认加入壁纸池。
-   开启 30 秒轮播，观察至少两次更换，启动屏保并退出；
-   在桌面与手机宽度检查页面可操作。
-4. 修改运行时间并重开页面确认保存；检查 cron 含每日任务、14:30/21:00 补抓、
-   watchdog 与启用轮播时对应的任务。核对近期图片日期与去重，
-   Bing 失败时记录网络错误，不能把安装成功视为壁纸功能成功。
-5. 停止应用，确认 cron 删除、轮播进程结束、系统原壁纸恢复，
-   包括前端资源还原情况；再次启动确认任务和桌面功能恢复。
-   在可还原环境先装官方 `v1.0` 并保存照片、运行时间，
-   再上传本次包覆盖升级，确认 1.0.1、原配置与照片保留且 cron 不重复。
-6. 卸载向导保留默认“恢复飞牛系统原始壁纸”（`wizard_restore=true`），
-   确认桌面与壁纸数据库指针恢复、cron/轮播进程/部署脚本清理，
-   并核对 `www.zip` 及 live 前端恢复情况。上游默认保留
-   `/var/lib/fnos-wallpaper` 缓存/备份和日志，记录为预期保留数据。
-   不因“应用中心已卸载”就推断所有系统修改均已还原。
-7. ARM 运行验证须另有真实 ARM fnOS 设备；x86 VM 不覆盖该场景。
-   测试结束关闭浏览器测试会话、停止所有测试服务，并按工作区规则关闭 VM。
+原上游 stop 会调用恢复，不在本次修复范围内。测试 false 时不要预先 stop，
+应记录 fnOS 实际卸载是否额外调用 stop。
+照片、缓存、原始备份和日志沿用上游保留策略。
+失败卸载撤下的 CGI 需要重新安装后再打开 UI。
+依赖 bash、Python 3、ps、zip/unzip、chattr（存在时使用），应用原有依赖仍有效。
+
+## 验证与主执行者 VM 命令
+
+本地检查：
+
+```bash
+bash scripts/test/static-check.sh fnvista
+bash scripts/test/verify-fpk.sh /absolute/output/fnos-bing-wallpaper_1.0.1-r1_x86.fpk
+bash scripts/test/verify-fpk.sh /absolute/output/fnos-bing-wallpaper_1.0.1-r1_arm.fpk
+bash scripts/apps/fnvista/verify-repair.sh /absolute/FnVista-1.0.1.fpk /absolute/output
+```
+
+通用 L2 仍因上游不使用 `cmd/common`、`cmd/installer` 返回非零；
+不添加空文件规避。专用检查覆盖原始载荷/控制文件、MD5、版本、通用平台、
+两种文件名、HTML 字节删除和进程树终止。主执行者负责真实 VM QA；
+本次未访问 VM，也未声称浏览器、数据库或系统守护进程已通过实际验收。
+
+在主执行者已有 baseline/1379 文件快照和可恢复测试床上，分别全新安装本次
+x86 包、打开 CGI、实际换壁纸并开启轮播。先不要关闭旧页面，以覆盖旧 iframe
+和后台作业。确认版本为 `1.0.1-r1`，应用 identity 不变。
+每次均使用同一份安装前数据库偏好和系统文件快照作为独立预期。
+
+```bash
+# VM 上：记录安装前 3 个文件，并另存 DB 偏好和完整 www 快照。
+sha256sum /usr/trim/www/index.html \
+  /usr/trim/www/static/bg/wallpaper-1.webp \
+  /usr/trim/www/static/thumbnail_bg/wallpaper-1.webp
+
+# 卸载向导选择恢复后，或已停止服务以外的单独 hook 诊断：
+sudo env TRIM_APPDEST=/var/apps/fnos-bing-wallpaper/target \
+  TRIM_APPNAME=fnos-bing-wallpaper wizard_restore=true \
+  bash /var/apps/fnos-bing-wallpaper/cmd/uninstall_callback
+
+# 在独立重新安装、重新应用壁纸的周期，选择不恢复；不要先执行 stop：
+sudo env TRIM_APPDEST=/var/apps/fnos-bing-wallpaper/target \
+  TRIM_APPNAME=fnos-bing-wallpaper wizard_restore=false \
+  bash /var/apps/fnos-bing-wallpaper/cmd/uninstall_callback
+
+# 每个周期最后检查：
+ps -eo pid,ppid,args | grep -E 'fnos-wallpaper|bing-wallpaper|fnos-www-zip|fnos-survival|fnos-cron-update|fnos-bing-wallpaper'
+test ! -e /etc/cron.d/fnos-bing-wallpaper
+sha256sum /usr/trim/www/index.html \
+  /usr/trim/www/static/bg/wallpaper-1.webp \
+  /usr/trim/www/static/thumbnail_bg/wallpaper-1.webp
+unzip -p /usr/trim/share/.restore/www.zip index.html |
+  grep -E 'fnos-bing-wp-(css|js)'
+```
+
+上面的直接 hook 命令只是诊断路径，不能替代应用中心真实卸载。
+真实卸载用应用中心向导，分别选 true/false，并保存其命令输出和退出状态。
+true：两张 webp 和 HTML SHA 应与安装前精确一致，DB 偏好一致，完整
+1379 文件比较无非预期差异。false：两张 webp/当前 DB 偏好应与卸载前
+“已应用”快照一致，HTML 与 zip 中不再含两个注入块，照片/缓存仍在。
+两种场景都应无残留应用进程/cron/部署脚本，旧 iframe 请求应失败。
+继续观察至少两个 cron 周期并重新读取 live HTML 和 zip；
+在 fnOS 完整性守护重建后仍应无重新注入。系统可能因 webp 变化重启
+trim_nginx，记录重连而不要将之误认为卸载清理失败。
+最后按工作区规则关闭 VM。ARM 运行时仍需真实 ARM fnOS，x86 VM 不覆盖。

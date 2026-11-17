@@ -1,0 +1,61 @@
+#!/bin/bash
+set -euo pipefail
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+WORK_DIR="$(mktemp -d)"
+trap 'rm -rf "$WORK_DIR"' EXIT
+
+bash "$SCRIPT_DIR/uninstall-quiesce"
+# Keep upstream DB restoration and deployment cleanup unchanged.
+bash "$SCRIPT_DIR/uninstall_upstream" "$@"
+
+case "${wizard_restore:-true}" in
+    true|1|True|TRUE|on|On|ON)
+        for pair in \
+            "wallpaper-1.webp.orig:static/bg/wallpaper-1.webp" \
+            "thumb-1.webp.orig:static/thumbnail_bg/wallpaper-1.webp"; do
+            backup="/var/lib/fnos-wallpaper/orig/${pair%%:*}"
+            target="/usr/trim/www/${pair#*:}"
+            [ -f "$backup" ] || { echo "缺少原始壁纸备份: $backup" >&2; exit 1; }
+            for chattr in /usr/bin/chattr /usr/bin/chattrx /usr/sbin/chattr /sbin/chattr; do
+                if [ -x "$chattr" ]; then
+                    "$chattr" -ai "$target"
+                    break
+                fi
+            done
+            cp -p "$backup" "$target"
+        done
+        ;;
+esac
+
+# Strip only app-owned blocks, preserving every other byte. Also clean the
+# restore source: fnOS may extract it again after the live page was restored.
+ZIP=/usr/trim/share/.restore/www.zip
+if [ -f "$ZIP" ]; then
+    unzip -p "$ZIP" index.html > "$WORK_DIR/index.html"
+fi
+python3 - "$WORK_DIR/index.html" /usr/trim/www/index.html "$ZIP" <<'PY'
+from pathlib import Path
+import re
+import subprocess
+import sys
+
+def clean_html(path: Path) -> None:
+    """Remove only the two exact upstream injection blocks."""
+    original = path.read_bytes()
+    cleaned = original
+    for tag, marker in ((b"style", b"fnos-bing-wp-css"), (b"script", b"fnos-bing-wp-js")):
+        pattern = b"<" + tag + b' id="' + marker + b'">.*?</' + tag + b">"
+        cleaned = re.sub(pattern, b"", cleaned, flags=re.DOTALL)
+    if cleaned != original:
+        path.write_bytes(cleaned)
+
+archive_index = Path(sys.argv[1])
+if archive_index.exists():
+    clean_html(archive_index)
+    subprocess.run(["zip", "-q", sys.argv[3], "index.html"],
+                   cwd=archive_index.parent, check=True)
+# Clean the restore source before touching the live page so a subsequent fnOS
+# extraction cannot copy the old injected blocks back from that source.
+clean_html(Path(sys.argv[2]))
+PY
