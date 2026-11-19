@@ -213,8 +213,8 @@
       "description": "S3 对象存储服务，提供飞牛安装包与 Web 控制台",
       "source_url": "https://github.com/a10463981/rustfs-fnos/releases",
       "github_repo": "a10463981/rustfs-fnos",
-      "latest_version": "1.0.4-2",
-      "updated_at": "2026-10-28T04:12:56Z"
+      "latest_version": "1.0.4-4",
+      "updated_at": "2026-11-19T04:13:03Z"
     },
     {
       "name": "teleagent",
@@ -231,8 +231,8 @@
       "description": "网络网关，集成 DDNS、反向代理、证书与内网穿透",
       "source_url": "https://github.com/wangwanjie/gately/releases",
       "github_repo": "wangwanjie/gately",
-      "latest_version": "0.6.8.1",
-      "updated_at": "2026-11-17T12:27:36Z"
+      "latest_version": "0.6.8.2",
+      "updated_at": "2026-11-18T14:59:04Z"
     }
   ]
 }
