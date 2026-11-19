@@ -14,6 +14,8 @@ on:
       - 'scripts/ci/**'
       # Catalog generation does not change any FPK payload.
       - '!scripts/ci/generate-apps-json.sh'
+      # Release-tag policy has focused tests and does not rebuild app payloads.
+      - '!scripts/ci/resolve-release-tag.sh'
       - '!**/*.md'
   schedule:
     - cron: '0 8 * * *'
@@ -91,9 +93,10 @@ jobs:
               MATRIX=$(all_apps)
             else
               CHANGED=$(git diff --name-only "$BEFORE" "${{ github.sha }}" 2>/dev/null || true)
-              # scripts/build-fpk.sh or scripts/ci/** changes affect every app's
-              # packaging — rebuild all apps. Same as the shared/ check below.
-              if echo "$CHANGED" | grep -qE '^(shared/|scripts/build-fpk\.sh$|scripts/ci/)'; then
+              # Payload helpers affect every app. Release-tag policy alone
+              # changes release naming, so rebuild only changed apps for it.
+              if echo "$CHANGED" | grep -vFx 'scripts/ci/resolve-release-tag.sh' \
+                | grep -qE '^(shared/|scripts/build-fpk\.sh$|scripts/ci/)'; then
                 MATRIX=$(all_apps)
               else
                 # Collect apps that changed (apps/<slug>/...) AND apps whose

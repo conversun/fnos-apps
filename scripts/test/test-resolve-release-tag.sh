@@ -1,5 +1,5 @@
 #!/bin/bash
-# Behavioural tests for release decisions when either remote query fails.
+# Behavioural tests for release versioning and remote query failures.
 # Uses exported functions so the real resolver runs without network access.
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -38,7 +38,7 @@ run_case() {
         export -f git gh
         export GITHUB_OUTPUT="$SANDBOX/output"
         : > "$GITHUB_OUTPUT"
-        bash "$RESOLVER" ollama 0.40.11 "$event" "$revision"
+        bash "$RESOLVER" ollama "${VERSION_UNDER_TEST:-0.40.11}" "$event" "$revision"
     ) > "$SANDBOX/stdout" 2> "$SANDBOX/stderr" || actual_status=$?
 
     if [ "$actual_status" -eq "$expected_status" ]; then
@@ -73,6 +73,8 @@ run_case manual_union 0 0 "$BASE-r3" "$BASE-r5" workflow_dispatch "" 0 "$BASE-r6
 run_case explicit_revision 0 0 "$BASE" "$BASE" workflow_dispatch r8 0 "$BASE-r8" true 0.40.11-r8
 run_case explicit_existing 0 0 "$BASE-r8" "$BASE-r8" workflow_dispatch r8 0 "$BASE-r8" false 0.40.11-r8 0
 run_case exact_version 0 0 "$BASE"'0' "$BASE"'0' schedule "" 0 "$BASE" true 0.40.11
+VERSION_UNDER_TEST=0.40.11-r1 run_case upstream_revision_suffix \
+    0 0 "" "" push "" 0 "$BASE-r1" true 0.40.11-r1
 
 run_case release_failure_existing 0 1 "$BASE" "" schedule "" 0 "$BASE" false 0.40.11
 run_case release_failure_new 0 1 "" "" schedule "" 0 "$BASE" true 0.40.11

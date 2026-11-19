@@ -119,12 +119,8 @@ else
   SHOULD_BUILD="true"
 fi
 
-# fpk_version: version string for fpk filename (includes -rN if revision)
-if [[ "${RELEASE_TAG}" =~ -r[0-9]+$ ]]; then
-  FPK_VERSION="${VERSION}${BASH_REMATCH[0]}"
-else
-  FPK_VERSION="${VERSION}"
-fi
+# The selected tag already contains the complete version, including any revision.
+FPK_VERSION="${RELEASE_TAG#"${APP_SLUG}/v"}"
 
 emit_output "release_tag" "${RELEASE_TAG}"
 emit_output "should_build" "${SHOULD_BUILD}"
