@@ -1,0 +1,4 @@
+#!/bin/bash
+# Metadata only: never replace the upstream lifecycle with the shared framework.
+echo "[ERROR] 随言记账使用上游 FPK 直通发布，请下载开发者发布的完整原生包。" >&2
+exit 1

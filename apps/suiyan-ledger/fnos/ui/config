@@ -1,0 +1,14 @@
+{
+  ".url": {
+    "com.suiyan.ledger.main": {
+      "title": "随言记账",
+      "icon": "images/icon-{0}.png",
+      "type": "iframe",
+      "protocol": "",
+      "gatewayPrefix": "/app/com-suiyan-ledger",
+      "gatewaySocket": "app.sock",
+      "url": "/app/com-suiyan-ledger",
+      "allUsers": true
+    }
+  }
+}
