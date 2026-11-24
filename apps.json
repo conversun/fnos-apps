@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-24T08:03:47Z",
+  "generated_at": "2026-11-24T08:04:18Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -107,7 +107,7 @@
         "arm"
       ],
       "updated_at": "2026-10-22T08:02:47Z",
-      "download_count": 2953,
+      "download_count": 2965,
       "app_type": "native",
       "category": "download"
     },
@@ -485,7 +485,7 @@
         "arm"
       ],
       "updated_at": "2026-11-21T08:02:59Z",
-      "download_count": 3129,
+      "download_count": 3144,
       "app_type": "native",
       "category": "network"
     },
@@ -569,7 +569,7 @@
         "arm"
       ],
       "updated_at": "2026-11-11T02:43:17Z",
-      "download_count": 1277,
+      "download_count": 1289,
       "app_type": "native",
       "category": "download"
     },
@@ -1323,7 +1323,7 @@
         "arm"
       ],
       "updated_at": "2026-11-16T08:08:21Z",
-      "download_count": 2319,
+      "download_count": 2337,
       "app_type": "native",
       "category": "system"
     },
@@ -1553,7 +1553,7 @@
         "arm"
       ],
       "updated_at": "2026-10-24T08:02:55Z",
-      "download_count": 2592,
+      "download_count": 2614,
       "app_type": "native",
       "category": "system"
     },
@@ -1974,7 +1974,7 @@
         "arm"
       ],
       "updated_at": "2026-11-13T08:02:57Z",
-      "download_count": 2117,
+      "download_count": 2145,
       "app_type": "native",
       "category": "system"
     },
@@ -3055,9 +3055,9 @@
       "file_prefix": "prowlarr",
       "display_name": "Prowlarr",
       "description": "索引器管理工具，集中管理和同步 Sonarr/Radarr 等应用的索引器",
-      "version": "3.0.2.5780",
-      "fpk_version": "3.0.2.5780",
-      "release_tag": "prowlarr/v3.0.2.5780",
+      "version": "3.1.0.5799",
+      "fpk_version": "3.1.0.5799",
+      "release_tag": "prowlarr/v3.1.0.5799",
       "service_port": 9696,
       "homepage_url": "https://prowlarr.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/prowlarr/fnos/ICON_256.PNG",
@@ -3065,7 +3065,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-11-17T08:03:50Z",
+      "updated_at": "2026-11-24T08:03:55Z",
       "download_count": 2913,
       "app_type": "native",
       "category": "automation"
@@ -3129,7 +3129,7 @@
         "arm"
       ],
       "updated_at": "2026-10-21T08:02:56Z",
-      "download_count": 4073,
+      "download_count": 4098,
       "app_type": "native",
       "category": "download"
     },
