@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T08:03:51Z",
+  "generated_at": "2026-11-25T08:05:13Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -1417,9 +1417,9 @@
       "file_prefix": "grafana",
       "display_name": "Grafana",
       "description": "可视化监控仪表盘，支持 Prometheus、Loki 等多种数据源。",
-      "version": "13.3.1",
-      "fpk_version": "13.3.1",
-      "release_tag": "grafana/v13.3.1",
+      "version": "13.3.2",
+      "fpk_version": "13.3.2",
+      "release_tag": "grafana/v13.3.2",
       "service_port": 3010,
       "homepage_url": "https://grafana.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/grafana/fnos/ICON_256.PNG",
@@ -1427,7 +1427,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-11-11T08:04:45Z",
+      "updated_at": "2026-11-25T08:04:51Z",
       "download_count": 1832,
       "app_type": "native",
       "category": "system"
