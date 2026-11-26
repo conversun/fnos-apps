@@ -1,0 +1,12 @@
+{
+  "data-share": {
+    "shares": [
+      {
+        "name": "suiyan-data",
+        "permission": {
+          "rw": ["suiyan"]
+        }
+      }
+    ]
+  }
+}

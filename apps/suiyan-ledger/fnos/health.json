@@ -1,0 +1,6 @@
+{
+    "type": "skip",
+    "note": "上游 FPK 直通；依赖飞牛官方 Python 3.12 / Node.js v22，通过 Unix Socket 和飞牛统一网关运行，无独立 TCP 探测端口，需在 fnOS 实机验证。",
+    "skip_arch": ["arm"],
+    "startup_timeout_seconds": 60
+}
