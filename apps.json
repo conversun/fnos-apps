@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T02:29:49Z",
+  "generated_at": "2026-11-28T02:39:42Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -213,7 +213,7 @@
         "arm"
       ],
       "updated_at": "2026-11-24T08:03:20Z",
-      "download_count": 1539,
+      "download_count": 1540,
       "app_type": "docker",
       "category": "download"
     },
@@ -737,7 +737,7 @@
         "arm"
       ],
       "updated_at": "2026-11-19T02:40:46Z",
-      "download_count": 189,
+      "download_count": 190,
       "app_type": "native",
       "category": "ai"
     },
@@ -800,7 +800,7 @@
         "arm"
       ],
       "updated_at": "2026-11-26T08:03:07Z",
-      "download_count": 2602,
+      "download_count": 2603,
       "app_type": "docker",
       "category": "system"
     },
@@ -1105,9 +1105,9 @@
       "file_prefix": "fnos-apps-store",
       "display_name": "fnOS Apps",
       "description": "fnOS第三方应用中心，支持一键安装、更新和卸载来自conversun/fnos-apps的所有应用。",
-      "version": "1.9.11",
-      "fpk_version": "1.9.11",
-      "release_tag": "fnos-apps-store/v1.9.11",
+      "version": "1.9.12",
+      "fpk_version": "1.9.12",
+      "release_tag": "fnos-apps-store/v1.9.12",
       "service_port": 0,
       "homepage_url": "https://github.com/conversun/fnos-store",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/fnos-apps-store/fnos/ICON_256.PNG",
@@ -1115,7 +1115,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-11-11T02:43:12Z",
+      "updated_at": "2026-11-28T02:39:25Z",
       "download_count": 6927,
       "app_type": "native",
       "category": "store"
@@ -1595,7 +1595,7 @@
         "arm"
       ],
       "updated_at": "2026-11-27T08:03:03Z",
-      "download_count": 1040,
+      "download_count": 1041,
       "app_type": "docker",
       "category": "media"
     },
@@ -1637,7 +1637,7 @@
         "arm"
       ],
       "updated_at": "2026-11-27T08:03:06Z",
-      "download_count": 1572,
+      "download_count": 1573,
       "app_type": "native",
       "category": "automation"
     },
@@ -1805,7 +1805,7 @@
         "arm"
       ],
       "updated_at": "2026-11-24T08:03:20Z",
-      "download_count": 1553,
+      "download_count": 1554,
       "app_type": "docker",
       "category": "media"
     },
@@ -2437,7 +2437,7 @@
         "arm"
       ],
       "updated_at": "2026-11-22T08:02:44Z",
-      "download_count": 1827,
+      "download_count": 1828,
       "app_type": "docker",
       "category": "ai"
     },
@@ -3129,7 +3129,7 @@
         "arm"
       ],
       "updated_at": "2026-11-25T08:03:29Z",
-      "download_count": 5159,
+      "download_count": 5160,
       "app_type": "native",
       "category": "download"
     },
