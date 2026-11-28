@@ -1,0 +1,13 @@
+#!/bin/bash
+set -euo pipefail
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+# Upstream install_callback runs fnos-www-zip-patch.sh --check before it
+# creates /var/lib/fnos-wallpaper, and the patch script never creates it
+# either. On a fresh install the patch then fails to write its entry list,
+# original backups and failure marker, yet still exits 0 (#367). Create the
+# state and backup dirs first; mkdir -p is a no-op on reinstall/upgrade.
+mkdir -p /var/lib/fnos-wallpaper/orig
+
+exec bash "$SCRIPT_DIR/install_upstream" "$@"
