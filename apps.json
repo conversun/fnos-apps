@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T08:03:14Z",
+  "generated_at": "2026-11-28T08:03:36Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -1963,9 +1963,9 @@
       "file_prefix": "loki",
       "display_name": "Loki",
       "description": "轻量级日志聚合系统，Grafana 生态的日志解决方案。",
-      "version": "3.7.10",
-      "fpk_version": "3.7.10",
-      "release_tag": "loki/v3.7.10",
+      "version": "3.7.11",
+      "fpk_version": "3.7.11",
+      "release_tag": "loki/v3.7.11",
       "service_port": 3100,
       "homepage_url": "https://grafana.com/oss/loki/",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/loki/fnos/ICON_256.PNG",
@@ -1973,7 +1973,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-11-13T08:02:57Z",
+      "updated_at": "2026-11-28T08:03:16Z",
       "download_count": 4157,
       "app_type": "native",
       "category": "system"
