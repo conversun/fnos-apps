@@ -26,7 +26,7 @@
 | <img src="apps/arcreel/fnos/ICON.PNG" width="28"> | **ArcReel** | `1241` | Agent 驱动的 AI 视频创作工作台，安装时设置管理员密码 | [GitHub](https://github.com/ArcReel/ArcReel) | [Release][r-arcreel] |
 | <img src="apps/hermes-agent/fnos/ICON.PNG" width="28"> | **Hermes Agent** | `9119` | 支持工具、记忆和多渠道接入的 AI Agent，提供带密码登录的仪表板 | [GitHub](https://github.com/NousResearch/hermes-agent) | [Release][r-hermes-agent] |
 | <img src="apps/deepseek-harness/fnos/ICON.PNG" width="28"> | **DeepSeek Harness** | `28000` | 官方双架构 iframe FPK，保留 `dsh` 标识；依赖 Node.js 24 与 Bun，管理面板 `28001` | [GitHub](https://github.com/techysy/deepseek-harness-fnos) | [Release][r-deepseek-harness] |
-| <img src="apps/cowagent/fnos/ICON.PNG" width="28"> | **CowAgent** | `9899` | AI 超级助手，支持微信/飞书/钉钉/QQ/Web 等多平台接入，基于大语言模型的智能对话 | [GitHub](https://github.com/zhayujie/chatgpt-on-wechat) | [Release][r-cowagent] |
+| <img src="apps/cowagent/fnos/ICON.PNG" width="28"> | **CowAgent** | `9899` | AI 超级助手，支持微信/飞书/钉钉/QQ/Web 等多平台接入，基于大语言模型的智能对话 | [GitHub](https://github.com/zhayujie/CowAgent) | [Release][r-cowagent] |
 | <img src="apps/zeroclaw/fnos/ICON.PNG" width="28"> | **ZeroClaw** | `42617` | 轻量级 AI 智能体运行时，Rust 编写，<5MB 内存占用 | [GitHub](https://github.com/zeroclaw-labs/zeroclaw) | [Release][r-zeroclaw] |
 | <img src="apps/picoclaw/fnos/ICON.PNG" width="28"> | **PicoClaw** | `18800` | 超轻量 AI 智能体框架，Go 编写，10MB 内存占用，WebUI 端口 18800（网关 18790） | [GitHub](https://github.com/sipeed/picoclaw) | [Release][r-picoclaw] |
 | <img src="apps/nanobot/fnos/ICON.PNG" width="28"> | **Nanobot** | `18780` | 超轻量 AI 智能体，Web 管理面板，默认账号 `admin/nanobot` | [GitHub](https://github.com/HKUDS/nanobot) | [Release][r-nanobot] |

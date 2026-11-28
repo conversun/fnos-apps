@@ -27,7 +27,7 @@ app_get_latest_version() {
     info "获取最新版本信息..."
 
     if [ "$APP_VERSION" = "latest" ]; then
-        APP_VERSION=$(curl -sL "https://api.github.com/repos/zhayujie/chatgpt-on-wechat/releases/latest" | \
+        APP_VERSION=$(curl -sL "https://api.github.com/repos/zhayujie/CowAgent/releases/latest" | \
           jq -r '.tag_name' | sed 's/^v//')
     fi
 

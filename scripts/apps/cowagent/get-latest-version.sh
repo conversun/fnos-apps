@@ -7,7 +7,7 @@ source "$SCRIPT_DIR/../../lib/gh-api.sh"
 
 INPUT_VERSION="${1:-}"
 
-TAG=$(gh_latest_tag "zhayujie/chatgpt-on-wechat") || { echo "Failed to resolve version for cowagent" >&2; exit 1; }
+TAG=$(gh_latest_tag "zhayujie/CowAgent") || { echo "Failed to resolve version for cowagent" >&2; exit 1; }
 
 if [ -n "$INPUT_VERSION" ]; then
   VERSION="$INPUT_VERSION"
@@ -25,7 +25,7 @@ fi
 #   not found: manifest unknown
 # the same class of failure copaw hit in #140. Verify the tag, and fall back to
 # the newest published image tag rather than shipping an uninstallable package.
-DOCKER_IMAGE="zhayujie/chatgpt-on-wechat"
+DOCKER_IMAGE="zhayujie/cowagent"
 
 docker_tag_exists() {
   curl -sSL --fail "https://hub.docker.com/v2/repositories/${DOCKER_IMAGE}/tags/$1/" >/dev/null 2>&1

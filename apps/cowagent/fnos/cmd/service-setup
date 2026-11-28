@@ -1,11 +1,20 @@
 #!/bin/bash
 
-service_postinst() {
-    mkdir -p "${TRIM_PKGVAR}/data" 2>/dev/null || true
-}
-
 COMPOSE_FILE="${TRIM_APPDEST}/docker/docker-compose.yaml"
 PORT_SAVE="${TRIM_PKGVAR}/.port"
+
+# Upstream keeps its workspace in /home/agent/cow and config/logs/credentials
+# in /home/agent/.cow (#371). Packages up to 2.3.0 mounted /app/data instead,
+# so their console settings lived only in the container layer; the hooks run
+# as the package user without docker access and cannot migrate them, which is
+# why the release notes carry the manual backup steps.
+ensure_data_dirs() {
+    mkdir -p "${TRIM_PKGVAR}/cow" "${TRIM_PKGVAR}/cow-data" 2>/dev/null || true
+}
+
+service_postinst() {
+    ensure_data_dirs
+}
 
 apply_port() {
     local port="$1"
@@ -16,6 +25,7 @@ apply_port() {
 }
 
 service_postupgrade() {
+    ensure_data_dirs
     if [ -f "$PORT_SAVE" ]; then
         apply_port "$(cat "$PORT_SAVE")"
     fi
